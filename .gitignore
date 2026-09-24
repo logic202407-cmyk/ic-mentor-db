@@ -1,0 +1,24 @@
+# ── 抓取原始产物：只保留结构化名录 roster_*.json，其余全部排除 ──
+data/raw/*/*
+!data/raw/*/roster_*.json
+data/raw/*/roster_draft.json
+data/raw/lab_pages/
+data/raw/crossref/
+
+# ── 大体积中间产物（可由 tools/ 重跑生成）──
+data/processed/enriched_*.json
+data/processed/mentor_db.json
+data/processed/*_papers.json
+data/processed/name_variants.json
+data/processed/heuristics_all.json
+
+# ── 临时文件与系统文件 ──
+*.tmp
+*.log
+*.pyc
+__pycache__/
+.venv/
+node_modules/
+Thumbs.db
+desktop.ini
+.DS_Store

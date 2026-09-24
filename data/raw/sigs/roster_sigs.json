@@ -1,0 +1,518 @@
+{
+  "school": "清华大学深圳国际研究生院",
+  "school_key": "sigs",
+  "harvested_at": "2026-09-22",
+  "sources": [
+    "https://www.sigs.tsinghua.edu.cn/",
+    "https://www.sigs.tsinghua.edu.cn/7644/list.htm",
+    "https://www.sigs.tsinghua.edu.cn/_wp3services/generalQuery?queryObj=teacherHome",
+    "https://www.sigs.tsinghua.edu.cn/_upload/tpl/00/c8/200/template200/special_list/teacher_search/teacher_search.js",
+    "https://www.sigs.tsinghua.edu.cn/msp/main.htm",
+    "https://www.sigs.tsinghua.edu.cn/tx/main.htm",
+    "https://www.sigs.tsinghua.edu.cn/zs_458/main.htm",
+    "https://www.sigs.tsinghua.edu.cn/zzh1/main.htm",
+    "https://www.sigs.tsinghua.edu.cn/gzh/main.htm",
+    "https://www.sigs.tsinghua.edu.cn/hyx2/main.htm",
+    "https://www.sigs.tsinghua.edu.cn/fhg/main.htm",
+    "https://www.sigs.tsinghua.edu.cn/lht/main.htm",
+    "https://www.sigs.tsinghua.edu.cn/fhy/main.htm",
+    "https://www.sigs.tsinghua.edu.cn/gx/main.htm",
+    "https://www.sigs.tsinghua.edu.cn/zdh1/main.htm",
+    "https://www.sigs.tsinghua.edu.cn/Lieber/main.htm",
+    "https://www.sigs.tsinghua.edu.cn/lxh/main.htm",
+    "https://www.sigs.tsinghua.edu.cn/wxh/main.htm",
+    "https://www.sigs.tsinghua.edu.cn/zm/main.htm",
+    "https://www.sigs.tsinghua.edu.cn/dy/main.htm",
+    "https://www.sigs.tsinghua.edu.cn/dkc/main.htm",
+    "https://www.sigs.tsinghua.edu.cn/qx/main.htm",
+    "https://www.sigs.tsinghua.edu.cn/Mustafa  Al-Nuaimi/main.htm",
+    "https://www.sigs.tsinghua.edu.cn/tx1/main.htm",
+    "https://www.sigs.tsinghua.edu.cn/sj_6973/main.htm",
+    "https://www.sigs.tsinghua.edu.cn/zxp1/main.htm",
+    "https://www.sigs.tsinghua.edu.cn/dyh/main.htm",
+    "https://www.sigs.tsinghua.edu.cn/lzy/main.htm",
+    "https://www.sigs.tsinghua.edu.cn/Faisal/main.htm",
+    "https://www.sigs.tsinghua.edu.cn/Mohammadamin Ajdari/main.htm",
+    "https://www.sigs.tsinghua.edu.cn/ptr/main.htm",
+    "https://www.sigs.tsinghua.edu.cn/gt/main.htm"
+  ],
+  "coverage_note": "抓取范围：清华大学深圳国际研究生院官网「教育教学 → 师资队伍」全量名录（列表页 https://www.sigs.tsinghua.edu.cn/7644/list.htm ）。该页为 JS 动态渲染，实际数据由 /_wp3services/generalQuery?queryObj=teacherHome 接口返回；以 published=1 条件取到 270 条在职教师记录（与页面上「研究院/学部、导师信息、职称」筛选器口径一致），并逐一下载了 269 个个人主页，从中提取「研究领域/概况/荣誉奖项/学术兼职/主要项目/教学课程/研究生指导」等原文段落做方向判定。\n覆盖的院系（270 人在职名录包含的全部单位）：数据与信息研究院（74，含信息科学与技术学部、信息技术学科、先进制造学部、物流与交通学部、海洋工程研究院等双聘标注）、材料研究院（52）、海洋工程研究院（42）、生物医药与健康工程研究院（31）、环境与生态研究院（30）、未来人居研究院（12）、人文社会科学部（9）、创新管理研究院（7）、无/未标注（5）、能源与环境学部（1）。\n入库口径（按页面原文判定，符合其一即收）：集成电路设计/模拟与混合信号/射频毫米波/电源管理/数字与处理器与体系结构/AI加速器与智能芯片/存算一体与近存计算/EDA/半导体器件与工艺/光电与硅光芯片/MEMS与传感器芯片/通信基带与SoC/生物医疗电子。排除：纯算法与软件（如计算机视觉、大模型、网络、机器人、运筹优化）、纯材料化学与物理、电力系统与高电压、管理与人文。\n未收录但已核查的代表性人员（页面方向不符，非遗漏）：数据与信息研究院的计算机与AI方向教师（杨文明、廖庆敏、金欣、王好谦、夏树涛、江勇、王智、袁春、郑海涛、肖喜、吴志勇、杨余久、李秀、刘厚德、王学谦、陈鑫磊、于超、唐彦嵩、詹靖涛、王晓智、邓维建、高子琪、李唯嘉、黄儒麒、丁文伯、尹博、方可、孙兴、黄绍伦、陈伟坚、Ercan Engin Kuruoğlu、付昊桓、王力哲）；先进制造学部/数据与信息研究院的精密仪器与光学方向（倪凯、余泉、倪峙旭、马建设、周倩、程雪岷、苏萍、冯平法、冯峰、刘学平、弥胜利、曾龙）；生物医药与健康工程研究院的生物医学光学与生物材料方向（何永红、何宏辉、曾楠、孙树清、吴剑、陈晓东、徐晓敏、汪鸿章等）；材料研究院的电池/催化/二维材料方向（孙波、刘碧录、成会明、丘陵、雷钰等）；海洋工程研究院的电气工程与高电压方向（王黎明、贾志东、梅红伟、石立宝、张若兵、王希林、尹芳辉、沈欣炜、许银亮、曹彬等）。\n边界判定说明（页面原文偏交叉，已按“是否做电子硬件/器件/芯片”从宽收录并在 notes 中标注）：韩宇星（页面写“特定域计算与传感网络”）、李星辉（光刻机/半导体量测装备，非芯片设计本体）、钱翔与潘挺睿（微流控芯片/柔性传感，属 MEMS 与生物医疗电子交叉）、张德辉与 Charles M. Lieber（纳米电子器件/纳米生物电子）、关添（人工耳蜗/听觉康复电子设备）、Faisal Nadeem Khan（光纤通信网络，算法成分较高）、Mohammadamin Ajdari（页面明确写 computer architecture “from the bottom hardware layer”，按“数字/处理器/体系结构”收录）。若需更严格的“仅芯片设计”口径，可据此剔除。\n未抓到的部分及原因：① 清华-伯克利深圳学院（TBSI）独立站点 https://www.tbsi.edu.cn/ 抓取失败（域名连接被拒/无法解析），但 TBSI 师资已并入 SIGS 师资队伍统一发布（页面中出现“清华-伯克利深圳学院（TBSI）信息和数据科学首席教授”“TBSI 授课”等标注），故 TBSI 在职导师已通过 SIGS 名录覆盖；② 官网不存在名为“信息科学与技术学部”“集成电路与系统”的独立栏目，SIGS 现行为“研究院 + 学部标签”制（信息科学与技术学部、先进制造学部、物流与交通学部、能源与环境学部为学部标签，挂在研究院之下），相关教师已按名录的学部标签字段收录；③ 名录接口在 published=1 之外另返回 170 条未发布记录，经比对为退休/离职教师、双聘院士（如戴琼海、陆建华、吴建平、罗毅、黄翊东、常瑞华等）、清华本部双聘教授及“师资测试/测试人员/发布测试”等测试条目，均不在官网公开师资队伍中，故未收录；④ 尤政院士（/yzys/main.htm）在名录中存在，但个人页无任何研究领域/职称正文，按“不得推测”原则未收录；⑤ 个别教师个人主页「研究领域」栏为空（如潘挺睿），已改用「概况/荣誉奖项/学术兼职」原文判定。\n字段说明：name_en 依据名录中公开邮箱前缀还原拼音（页面本身未提供英文名时），无法还原的填 null；title、department、is_phd_advisor 分别取自名录的职称字段、研究院/学部字段、导师信息字段；research_keywords 与 notes 均摘自已抓取的个人主页原文。",
+  "faculty": [
+    {
+      "name_cn": "麦宋平",
+      "name_en": "Mai Songping",
+      "title": "副教授",
+      "department": "数据与信息研究院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "集成电路设计",
+        "专用集成电路(ASIC)",
+        "无线信能同传",
+        "植入式医疗电子",
+        "边缘智能系统"
+      ],
+      "homepage": "https://www.sigs.tsinghua.edu.cn/msp/main.htm",
+      "email": "mai.songping@sz.tsinghua.edu.cn",
+      "notes": "博士生导师；主讲《数字大规模集成电路》《低功耗集成电路设计》；曾在比利时IMEC、英国林肯大学访问；“动态令牌专用芯片”“植入式神经电刺激器”已产业化；深圳市高层次人才（地方级领军人才）"
+    },
+    {
+      "name_cn": "唐仙",
+      "name_en": "Tang Xian",
+      "title": "副教授",
+      "department": "信息科学与技术学部,数据与信息研究院",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "模拟集成电路",
+        "混合信号集成电路",
+        "电源管理芯片",
+        "无线充电芯片",
+        "超低功耗CMOS传感芯片"
+      ],
+      "homepage": "https://www.sigs.tsinghua.edu.cn/tx/main.htm",
+      "email": "tang.xian@sz.tsinghua.edu.cn",
+      "notes": "页面“导师信息”栏为“无”，《集成电路科学与工程》学科；主讲《集成电路设计基础》《电源管理集成电路》；IEEE Senior Member，曾任IEEE电路与系统学会深圳分会副主席；2012年获ISSCC Student Travel Grant"
+    },
+    {
+      "name_cn": "张盛",
+      "name_en": "Zhang Sheng",
+      "title": "副教授",
+      "department": "数据与信息研究院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "集成电路设计",
+        "近存计算/存储与计算系统芯片",
+        "CMOS图像传感器",
+        "微电子器件与工艺",
+        "物联网核心芯片"
+      ],
+      "homepage": "https://www.sigs.tsinghua.edu.cn/zs_458/main.htm",
+      "email": "zhangsh@sz.tsinghua.edu.cn",
+      "notes": "博士生导师；参与863“32位嵌入式MIPS 4KC微处理器芯片开发”；思特威电子科技、晶铁半导体联合创始人；企业横向课题《无线网络摄像机芯片技术研究》《CMOS图像传感器芯片及应用研究》"
+    },
+    {
+      "name_cn": "朱振华",
+      "name_en": "Zhu Zhenhua",
+      "title": "助理教授",
+      "department": "数据与信息研究院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "存算一体",
+        "近存计算",
+        "AI芯片架构",
+        "超节点智算系统",
+        "EDA/设计自动化"
+      ],
+      "homepage": "https://www.sigs.tsinghua.edu.cn/zzh1/main.htm",
+      "email": "zhuzhenhua@sz.tsinghua.edu.cn",
+      "notes": "博士生导师；清华电子系博士，HPCA 2025最佳论文荣誉提名、DATE 2023最佳论文提名；担任ICCAD/CASES/GLSVLSI/ISVLSI TPC；主持国家自然科学基金青年（C类）项目；参与科技部重点研发计划“存算一体高层次设计自动化工具”"
+    },
+    {
+      "name_cn": "耿子涵",
+      "name_en": "Geng Zihan",
+      "title": "副教授",
+      "department": "数据与信息研究院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "光计算芯片",
+        "雷达光芯片",
+        "计算成像",
+        "三维全息显示",
+        "超构光学器件"
+      ],
+      "homepage": "https://www.sigs.tsinghua.edu.cn/gzh/main.htm",
+      "email": "geng.zihan@sz.tsinghua.edu.cn",
+      "notes": "博士生导师；中国光学工程学会计算成像专委会、中国三维成像与显示专委会委员；Opto-Electronic Advances、Advanced Photonics Nexus编委；主持国家自然科学基金“面向超高速光脉冲神经拟态计算的全光积分触发机制及关键器件研究”"
+    },
+    {
+      "name_cn": "韩宇星",
+      "name_en": "Han Yuxing",
+      "title": "副教授",
+      "department": "数据与信息研究院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "特定域计算",
+        "传感网络",
+        "视频图像处理",
+        "未来网络",
+        "智慧农业"
+      ],
+      "homepage": "https://www.sigs.tsinghua.edu.cn/hyx2/main.htm",
+      "email": "yuxinghan@sz.tsinghua.edu.cn",
+      "notes": "博士生导师；国家高层次人才计划青年项目、广东省杰出青年基金；福布斯中国青年海归菁英100人；IEEE Senior Member；页面列“特定域计算与传感网络、视频图像处理”，属体系结构/专用计算方向"
+    },
+    {
+      "name_cn": "冯海刚",
+      "name_en": "Feng Haigang",
+      "title": "副研究员",
+      "department": "数据与信息研究院",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "低功耗无线通信",
+        "低功耗蓝牙",
+        "物联网设计",
+        "模拟电路",
+        "无线通信芯片"
+      ],
+      "homepage": "https://www.sigs.tsinghua.edu.cn/fhg/main.htm",
+      "email": "feng.haigang@sz.tsinghua.edu.cn",
+      "notes": "硕士生导师；学科为电子工程；近10年美国顶级公司工作经验，承担多项产品设计、测试和量产；主讲《模拟电路》；深圳市高层次人才、广东省高层次人才"
+    },
+    {
+      "name_cn": "李洪涛",
+      "name_en": "Li Hongtao",
+      "title": "副教授",
+      "department": "未标注（学科：电子科学与技术）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "异质集成芯片",
+        "化合物半导体光电器件",
+        "CPO/高速光互连",
+        "半导体激光器",
+        "光计算与高光谱芯片"
+      ],
+      "homepage": "https://www.sigs.tsinghua.edu.cn/lht/main.htm",
+      "email": "lihongtao@sz.tsinghua.edu.cn",
+      "notes": "博士生导师；名录中所属研究院栏标注为“无”（学科：电子科学与技术）；清华大学长聘副教授，国家高层次人才、国家重点研发计划项目负责人；2014年国家技术发明二等奖；清华电子系罗毅院士团队；课题组面向电子科学与技术、电子信息、光学工程、光电子、微电子招生"
+    },
+    {
+      "name_cn": "付红岩",
+      "name_en": "Fu Hongyan",
+      "title": "副教授",
+      "department": "信息技术学科,数据与信息研究院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "硅光子集成",
+        "光无线通信",
+        "LiDAR",
+        "超快光学",
+        "集成光子传感"
+      ],
+      "homepage": "https://www.sigs.tsinghua.edu.cn/fhy/main.htm",
+      "email": "hyfu@sz.tsinghua.edu.cn",
+      "notes": "博士生导师；Optica Senior & Life Member、IEEE Senior Member、SPIE Life Member；IEEE光子学会广东分会委员；深圳微纳技术学会理事；曾任华为中央研究院（2014/2015总裁嘉奖）"
+    },
+    {
+      "name_cn": "关迅",
+      "name_en": "Guan Xun",
+      "title": "副教授",
+      "department": "数据与信息研究院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "光纤通信",
+        "无线光通信",
+        "光子集成感知",
+        "光纤传感",
+        "光通感一体化"
+      ],
+      "homepage": "https://www.sigs.tsinghua.edu.cn/gx/main.htm",
+      "email": "xun.guan@sz.tsinghua.edu.cn",
+      "notes": "博士生导师；香港中文大学博士，加拿大拉瓦尔大学客座教授；2023可见光通信与光计算大会（VLCOC）程序委员会主席；深圳市“鹏城孔雀计划”人才"
+    },
+    {
+      "name_cn": "张德辉",
+      "name_en": "Zhang Dehui",
+      "title": "助理教授",
+      "department": "材料研究院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "纳米电子器件",
+        "智能纳米系统",
+        "低功耗传感与计算",
+        "存内/感算一体",
+        "纳米材料-器件协同设计"
+      ],
+      "homepage": "https://www.sigs.tsinghua.edu.cn/zdh1/main.htm",
+      "email": "dehui@sz.tsinghua.edu.cn",
+      "notes": "博士生导师；2026年8月入职，建立“物理智能纳米系统实验室”；密歇根大学博士，UCLA（段镶锋组）、UC Berkeley（Ali Javey组）博士后，兼劳伦斯伯克利国家实验室研究员；第一作者发表Science、Nature Biomedical Engineering等"
+    },
+    {
+      "name_cn": "Charles M. Lieber",
+      "name_en": null,
+      "title": "教授",
+      "department": "材料研究院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "纳米线电子器件",
+        "纳米生物电子",
+        "脑机接口",
+        "神经植入器件",
+        "纳米材料合成与组装"
+      ],
+      "homepage": "https://www.sigs.tsinghua.edu.cn/Lieber/main.htm",
+      "email": "cml@sz.tsinghua.edu.cn",
+      "notes": "博士生导师；美国国家科学院/医学院/艺术与科学院院士，中国科学院外籍院士；沃尔夫化学奖(2012)、Welch Award(2019)；IEEE Nanotechnology Pioneer Award(2013)；哈佛大学前化学与化学生物学系主任、University Professor"
+    },
+    {
+      "name_cn": "李星辉",
+      "name_en": "Li Xinghui",
+      "title": "副教授",
+      "department": "数据与信息研究院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "光栅干涉精密测量",
+        "光刻机/半导体量测",
+        "纳米制造",
+        "MEMS振镜三维重建",
+        "机器视觉检测"
+      ],
+      "homepage": "https://www.sigs.tsinghua.edu.cn/lxh/main.htm",
+      "email": "li.xinghui@sz.tsinghua.edu.cn",
+      "notes": "博士生导师；中国仪器仪表学会集成电路测量与仪器分会委员；主讲《Metrology in Semiconductor Industry》(半导体工业量测技术)；主持国家自然科学基金面上项目“面向极紫外光刻机的原子精度六自由度光栅测量”；全球前2%顶尖科学家"
+    },
+    {
+      "name_cn": "王晓浩",
+      "name_en": "Wang Xiaohao",
+      "title": "研究员",
+      "department": "先进制造学部,海洋工程研究院,数据与信息研究院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "MEMS",
+        "微流体器件与系统",
+        "传感器",
+        "MEMS能量采集",
+        "分析仪器/医疗器械"
+      ],
+      "homepage": "https://www.sigs.tsinghua.edu.cn/wxh/main.htm",
+      "email": "wang.xiaohao@sz.tsinghua.edu.cn",
+      "notes": "博士生导师；先进制造学部/海洋工程研究院/数据与信息研究院；中国微米纳米技术学会副理事长；2005年国家技术发明二等奖；主讲《MEMS AND ITS APPLICATION》《MICRO SENSORS》；已培养44名博士、99名硕士"
+    },
+    {
+      "name_cn": "张旻",
+      "name_en": "Zhang Min",
+      "title": "副研究员",
+      "department": "先进制造学部,数据与信息研究院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "MEMS/NEMS",
+        "柔性触觉传感",
+        "电子皮肤",
+        "MEMS高温传感器",
+        "可穿戴设备"
+      ],
+      "homepage": "https://www.sigs.tsinghua.edu.cn/zm/main.htm",
+      "email": "zhang.min@sz.tsinghua.edu.cn",
+      "notes": "博士生导师；《Sensors》《Advances in Mechanical Engineering》编委；中国微米纳米技术学会特种微纳器件与系统分会理事；深圳市微米纳米技术学会监事长；深圳市海外高层次人才B类"
+    },
+    {
+      "name_cn": "董瑛",
+      "name_en": "Dong Ying",
+      "title": "副研究员",
+      "department": "先进制造学部,数据与信息研究院",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "柔性传感器",
+        "柔性执行器",
+        "可穿戴健康监测",
+        "多传感器数据融合",
+        "柔性触觉交互"
+      ],
+      "homepage": "https://www.sigs.tsinghua.edu.cn/dy/main.htm",
+      "email": "dongy@tsinghua.edu.cn",
+      "notes": "硕士生导师；主讲《微机电系统技术及应用》《微纳米加工技术》《柔性传感技术及应用》"
+    },
+    {
+      "name_cn": "董恺琛",
+      "name_en": "Dong Kaichen",
+      "title": "副教授",
+      "department": "数据与信息研究院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "零功耗MEMS微传感器",
+        "纳米光子学",
+        "智能材料",
+        "莫尔光子学/声子学",
+        "AI-for-Science"
+      ],
+      "homepage": "https://www.sigs.tsinghua.edu.cn/dkc/main.htm",
+      "email": "dkc22@sz.tsinghua.edu.cn",
+      "notes": "博士生导师；2023年国家重点研发计划（青年科学家）项目首席；《麻省理工科技评论》全球“35岁以下35人”(2022)；国家级青年人才；清华大学深圳国际研究生院双螺旋中心副主任、深圳清华研究院智能无源热控技术研发中心主任"
+    },
+    {
+      "name_cn": "钱翔",
+      "name_en": "Qian Xiang",
+      "title": "副教授",
+      "department": "先进制造学部,数据与信息研究院",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "微流控芯片",
+        "MEMS工艺",
+        "芯片设计与工艺实现",
+        "质谱联用器件",
+        "生物医学检测"
+      ],
+      "homepage": "https://www.sigs.tsinghua.edu.cn/qx/main.htm",
+      "email": "qian.xiang@sz.tsinghua.edu.cn",
+      "notes": "硕士生导师；深圳市微米纳米技术学会理事；主讲《数字信号处理》；研究为微流控芯片的设计与工艺实现（MEMS/芯片加工方向）"
+    },
+    {
+      "name_cn": "Mustafa Al-Nuaimi",
+      "name_en": null,
+      "title": "助理教授",
+      "department": "数据与信息研究院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "微波毫米波超表面",
+        "天线设计",
+        "射频/微波电路",
+        "5G/6G移动网络",
+        "超材料"
+      ],
+      "homepage": "https://www.sigs.tsinghua.edu.cn/Mustafa  Al-Nuaimi/main.htm",
+      "email": "mustafa@sz.tsinghua.edu.cn",
+      "notes": "博士生导师；IEEE Senior Member、中国通信学会(CIC) Senior Member；英国皇家学会Newton International Fellow(2022)；东南大学博士（导师洪伟院士）；发表SCI/EI论文100余篇；课题组招收博士、硕士、博士后"
+    },
+    {
+      "name_cn": "田曦",
+      "name_en": "Tian Xi",
+      "title": "助理教授",
+      "department": "数据与信息研究院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "无线能量传输",
+        "射频/无线通信",
+        "无线传感",
+        "生物电子系统",
+        "医疗电子"
+      ],
+      "homepage": "https://www.sigs.tsinghua.edu.cn/tx1/main.htm",
+      "email": "tianxi@sz.tsinghua.edu.cn",
+      "notes": "博士生导师；2024年NSFC Early-Career Award（国家级重点人才计划青年项目）；第一/通讯作者在Nature Electronics发表3篇；成果被路透社、纽约时报等30余家媒体报道"
+    },
+    {
+      "name_cn": "宋健",
+      "name_en": "Song Jian",
+      "title": "教授",
+      "department": "数据与信息研究院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "无线通信",
+        "数字电视地面传输",
+        "可见光通信",
+        "数字电视SoC芯片",
+        "电子扫描天线"
+      ],
+      "homepage": "https://www.sigs.tsinghua.edu.cn/sj_6973/main.htm",
+      "email": "jsong@tsinghua.edu.cn",
+      "notes": "博士生导师；IEEE Fellow、IET Fellow、中国电子学会会士、中国通信学会会士；数字电视技术研究中心主任、数字电视国家工程实验室（北京）主任；2016年国家科技进步一等奖；参与核高基“数字电视高端SoC芯片”重大专项；2017年“万人计划”科技创新领军人才"
+    },
+    {
+      "name_cn": "张晓平",
+      "name_en": "Zhang Xiaoping",
+      "title": "清华大学鹏瑞教授",
+      "department": "数据与信息研究院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "信号处理",
+        "可见光通信与光计算",
+        "电子信息系统",
+        "物联网",
+        "机器学习/统计模型"
+      ],
+      "homepage": "https://www.sigs.tsinghua.edu.cn/zxp1/main.htm",
+      "email": "xiaoping.zhang@sz.tsinghua.edu.cn",
+      "notes": "博士生导师；加拿大工程院院士、加拿大工程研究院院士、IEEE Fellow；清华-伯克利深圳学院（TBSI）信息和数据科学首席教授；《IEEE信号处理专刊》主编；IEEE信号处理学会图像视频及多维信号处理技术委员会主席"
+    },
+    {
+      "name_cn": "董宇涵",
+      "name_en": "Dong Yuhan",
+      "title": "副教授",
+      "department": "信息科学与技术学部,数据与信息研究院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "无线通信与网络",
+        "智能传感器网络",
+        "机器学习与优化",
+        "人工智能与医疗",
+        "车路协同"
+      ],
+      "homepage": "https://www.sigs.tsinghua.edu.cn/dyh/main.htm",
+      "email": "dongyuhan@sz.tsinghua.edu.cn",
+      "notes": "博士生导师；IEEE Senior Member；2008年IEEE GLOBECOM最佳论文奖；2017年深圳市后备级高层次人才、2015年深圳市海外高层次人才；主讲《无线通信工程》《现代信息网络技术》"
+    },
+    {
+      "name_cn": "刘振宇",
+      "name_en": "Liu Zhenyu",
+      "title": "助理教授",
+      "department": "数据与信息研究院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "无线通信",
+        "网络定位与导航",
+        "物联网/传感器网络",
+        "去中心化推理与学习",
+        "信号处理"
+      ],
+      "homepage": "https://www.sigs.tsinghua.edu.cn/lzy/main.htm",
+      "email": "zhenyuliu@sz.tsinghua.edu.cn",
+      "notes": "博士生导师；MIT LIDS博士后(2022-2023)，MIT网络与统计方向博士；清华电子工程系本科（honor）与硕士"
+    },
+    {
+      "name_cn": "Faisal Nadeem Khan",
+      "name_en": "Faisal Khan",
+      "title": "副教授",
+      "department": "数据与信息研究院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "光纤通信网络",
+        "光纤传感系统",
+        "机器学习辅助光网络",
+        "光网络故障管理",
+        "数据传输质量预测"
+      ],
+      "homepage": "https://www.sigs.tsinghua.edu.cn/Faisal/main.htm",
+      "email": "faisal.khan@sz.tsinghua.edu.cn",
+      "notes": "博士生导师；主持国家自然科学基金项目“Machine learning-enabled faults management, transmission quality prediction, and performance monitoring in fiber-optic networks”；主讲《Data Communication Networks》"
+    },
+    {
+      "name_cn": "Mohammadamin Ajdari",
+      "name_en": null,
+      "title": "助理教授",
+      "department": "数据与信息研究院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "计算机体系结构",
+        "可扩展存储系统",
+        "机器学习基础设施/HPC架构",
+        "系统建模与仿真",
+        "硬件-系统软件协同"
+      ],
+      "homepage": "https://www.sigs.tsinghua.edu.cn/Mohammadamin Ajdari/main.htm",
+      "email": "majdari@sz.tsinghua.edu.cn",
+      "notes": "博士生导师；ASPLOS/MICRO/HPCA/SIGMETRICS等体系结构顶会论文14+篇；IEEE MICRO Top Picks Honorable Mention (2019)；HPCA 2019最佳论文提名"
+    },
+    {
+      "name_cn": "潘挺睿",
+      "name_en": "Pan Tingrui",
+      "title": "教授",
+      "department": "生物医药与健康工程研究院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "柔性离电传感",
+        "触觉智能",
+        "微流控芯片",
+        "医疗器械",
+        "具身智能感知"
+      ],
+      "homepage": "https://www.sigs.tsinghua.edu.cn/ptr/main.htm",
+      "email": "Tingrui@sz.tsinghua.edu.cn",
+      "notes": "博士生导师；清华大学长聘教授；美国医学与生物工程院(AIMBE)与英国皇家化学学会(RSC) Fellow；教育部长江学者讲座教授；国家级重大人才计划入选者；2011年国际首次提出柔性离电传感机理(FITS)；曾任加州大学戴维斯分校微纳制造中心(CNM²)主任"
+    },
+    {
+      "name_cn": "关添",
+      "name_en": "Guan Tian",
+      "title": "教授",
+      "department": "生物医药与健康工程研究院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "人工耳蜗/听觉康复电子",
+        "生物医学信号处理",
+        "耳声发射检测仪器",
+        "脑深部电刺激设备",
+        "医疗电子装置"
+      ],
+      "homepage": "https://www.sigs.tsinghua.edu.cn/gt/main.htm",
+      "email": "guantian@sz.tsinghua.edu.cn",
+      "notes": "博士生导师；研究集中在医疗过程与装置：语音处理算法、听觉系统建模检测和康复助听系统；耳声发射检测仪、人工耳蜗设备等项目的产业化转化；深圳市地方级/后备级高层次领军人才"
+    }
+  ]
+}

@@ -1,0 +1,3443 @@
+{
+ "school": "清华大学",
+ "school_key": "tsinghua",
+ "harvested_at": "2026-09-24",
+ "sources": [
+  "https://www.sic.tsinghua.edu.cn/szdw/jyry.htm",
+  "https://www.sic.tsinghua.edu.cn/szdw/jyry/2.htm",
+  "https://www.sic.tsinghua.edu.cn/szdw/jyry/1.htm",
+  "https://www.sic.tsinghua.edu.cn/szdw/jyry/ayjsjs/jcndzkxyjs.htm",
+  "https://www.sic.tsinghua.edu.cn/szdw/jyry/ayjsjs/jcdlsjysjzdhyjs.htm",
+  "https://www.sic.tsinghua.edu.cn/szdw/jyry/ayjsjs/jcdlzzyjs.htm",
+  "https://www.ee.tsinghua.edu.cn/ryqk/teacher/xxgdzyjs/js2.htm",
+  "https://www.ee.tsinghua.edu.cn/en/People2/Faculty.htm",
+  "http://web.ee.tsinghua.edu.cn/wangyu/zh_CN/index.htm",
+  "http://web.ee.tsinghua.edu.cn/yanghuazhong/zh_CN/index.htm",
+  "http://web.ee.tsinghua.edu.cn/liuyongpan/zh_CN/index.htm",
+  "http://web.ee.tsinghua.edu.cn/sunnan/zh_CN/index.htm",
+  "http://web.ee.tsinghua.edu.cn/luyan/zh_CN/index.htm",
+  "http://web.ee.tsinghua.edu.cn/chenyong/zh_CN/index.htm",
+  "http://web.ee.tsinghua.edu.cn/lidongmei/zh_CN/index.htm",
+  "http://web.ee.tsinghua.edu.cn/lixueqing/zh_CN/index.htm",
+  "http://web.ee.tsinghua.edu.cn/qiaofei/zh_CN/index.htm",
+  "http://web.ee.tsinghua.edu.cn/wangpengjun/zh_CN/index.htm",
+  "http://web.ee.tsinghua.edu.cn/yanshengen/zh_CN/index.htm",
+  "http://web.ee.tsinghua.edu.cn/yujincheng/zh_CN/index.htm",
+  "http://web.ee.tsinghua.edu.cn/zhangmilin/zh_CN/index.htm",
+  "http://web.ee.tsinghua.edu.cn/shuwen_deng/zh_CN/index.htm",
+  "http://web.ee.tsinghua.edu.cn/jiahongyang/zh_CN/index.htm",
+  "http://web.ee.tsinghua.edu.cn/zhongyi/zh_CN/index.htm",
+  "http://web.ee.tsinghua.edu.cn/jiangchen/zh_CN/index.htm",
+  "http://web.ee.tsinghua.edu.cn/chenwenhua/zh_CN/index.htm",
+  "http://web.ee.tsinghua.edu.cn/yangfan/zh_CN/index.htm",
+  "http://web.ee.tsinghua.edu.cn/xushenheng/zh_CN/index.htm",
+  "http://web.ee.tsinghua.edu.cn/liyue/zh_CN/index.htm",
+  "http://web.ee.tsinghua.edu.cn/luoyi/zh_CN/index.htm",
+  "http://web.ee.tsinghua.edu.cn/huangyidong/zh_CN/index.htm",
+  "http://web.ee.tsinghua.edu.cn/haozhibiao/zh_CN/index.htm",
+  "http://web.ee.tsinghua.edu.cn/sunzhangzheng/zh_CN/index.htm",
+  "http://web.ee.tsinghua.edu.cn/wanglai/zh_CN/index.htm",
+  "http://web.ee.tsinghua.edu.cn/xiongbing/zh_CN/index.htm",
+  "http://web.ee.tsinghua.edu.cn/liufang/zh_CN/index.htm",
+  "http://web.ee.tsinghua.edu.cn/zhangwei/zh_CN/index.htm",
+  "http://web.ee.tsinghua.edu.cn/cuikaiyu/zh_CN/index.htm",
+  "http://web.ee.tsinghua.edu.cn/huoli/zh_CN/index.htm",
+  "http://web.ee.tsinghua.edu.cn/fengxue/zh_CN/index.htm",
+  "http://web.ee.tsinghua.edu.cn/ganlin/zh_CN/index.htm",
+  "http://web.ee.tsinghua.edu.cn/linxing/zh_CN/index.htm",
+  "http://web.ee.tsinghua.edu.cn/liyongzhuo/zh_CN/index.htm",
+  "http://web.ee.tsinghua.edu.cn/sunhao/zh_CN/index.htm",
+  "https://web.ee.tsinghua.edu.cn/zhengjiyuan/zh_CN/index.htm",
+  "http://web.ee.tsinghua.edu.cn/wangjian/zh_CN/index.htm",
+  "http://web.ee.tsinghua.edu.cn/chenhongwei/zh_CN/index.htm",
+  "https://shengxingstars.github.io/www/index.html",
+  "http://web.ee.tsinghua.edu.cn/yangsigang/zh_CN/index.htm",
+  "https://web.ee.tsinghua.edu.cn/yuanzhiquan/zh_CN/index.htm",
+  "http://web.ee.tsinghua.edu.cn/wangjun/zh_CN/index.htm",
+  "https://www.cs.tsinghua.edu.cn/szzk/jzgml.htm",
+  "https://www.cs.tsinghua.edu.cn/szzk/jcrc.htm",
+  "https://www.cs.tsinghua.edu.cn/szzk/jxms.htm",
+  "https://www.cs.tsinghua.edu.cn/kxyj/kyfx.htm",
+  "https://www.cs.tsinghua.edu.cn/jgsz/yjssys/jsjkxyjsxznjsyxtsys.htm",
+  "https://www.cs.tsinghua.edu.cn/jgsz/jcysyjxb.htm",
+  "https://www.cs.tsinghua.edu.cn/csen/Faculty/Full_time_Faculty.htm",
+  "https://www.cs.tsinghua.edu.cn/csen/Research/Research_Areas/Computer_Systems.htm",
+  "https://www.cs.tsinghua.edu.cn/info/1107/3505.htm",
+  "https://www.cs.tsinghua.edu.cn/info/1107/3513.htm",
+  "https://www.cs.tsinghua.edu.cn/info/1107/3511.htm",
+  "https://www.cs.tsinghua.edu.cn/info/1107/6209.htm",
+  "https://www.cs.tsinghua.edu.cn/info/1107/3510.htm",
+  "https://www.cs.tsinghua.edu.cn/info/1107/3509.htm",
+  "https://www.cs.tsinghua.edu.cn/info/1107/3508.htm",
+  "https://www.cs.tsinghua.edu.cn/info/1107/5272.htm",
+  "https://www.cs.tsinghua.edu.cn/info/1107/3507.htm",
+  "https://www.cs.tsinghua.edu.cn/info/1107/5621.htm",
+  "https://www.cs.tsinghua.edu.cn/info/1107/3506.htm",
+  "https://www.cs.tsinghua.edu.cn/info/1108/3942.htm",
+  "https://www.cs.tsinghua.edu.cn/info/1108/3941.htm",
+  "https://www.cs.tsinghua.edu.cn/info/1108/7062.htm",
+  "https://www.cs.tsinghua.edu.cn/info/1108/3517.htm",
+  "https://www.cs.tsinghua.edu.cn/info/1108/3515.htm",
+  "https://www.cs.tsinghua.edu.cn/info/1108/7056.htm",
+  "https://www.cs.tsinghua.edu.cn/info/1114/6843.htm",
+  "https://www.cs.tsinghua.edu.cn/info/1114/3943.htm",
+  "https://www.cs.tsinghua.edu.cn/info/1257/5770.htm",
+  "https://www.cs.tsinghua.edu.cn/info/1111/4776.htm",
+  "https://www.cs.tsinghua.edu.cn/info/1111/2004.htm",
+  "https://www.cs.tsinghua.edu.cn/info/1131/5274.htm",
+  "https://www.cs.tsinghua.edu.cn/info/1132/3613.htm",
+  "https://www.cs.tsinghua.edu.cn/info/1122/6619.htm",
+  "https://www.cs.tsinghua.edu.cn/info/1127/3600.htm",
+  "https://www.cs.tsinghua.edu.cn/info/1126/3576.htm",
+  "https://www.cs.tsinghua.edu.cn/info/1126/3577.htm",
+  "https://www.cs.tsinghua.edu.cn/info/1126/3578.htm",
+  "https://www.cs.tsinghua.edu.cn/info/1126/3587.htm",
+  "https://www.au.tsinghua.edu.cn/szdw/lyys.htm",
+  "https://www.au.tsinghua.edu.cn/zsjy/bdmd.htm",
+  "https://www.au.tsinghua.edu.cn/szdw/jsdw1/ayjscz/kzyjcyjs.htm",
+  "https://www.au.tsinghua.edu.cn/szdw/jsdw1/ayjscz/xxclyjs.htm",
+  "https://www.au.tsinghua.edu.cn/szdw/jsdw1/ayjscz/xtgcyjs.htm",
+  "https://www.au.tsinghua.edu.cn/szdw/jsdw1/ayjscz/jcydzjsyjs.htm",
+  "https://www.au.tsinghua.edu.cn/szdw/jsdw1/ayjscz/dhykzyjs.htm",
+  "https://www.au.tsinghua.edu.cn/szdw/jsdw1/ayjscz/gyznyxtyjs.htm",
+  "https://www.au.tsinghua.edu.cn/szdw/jsdw1/ayjscz/nyrzkxyjs.htm",
+  "https://www.au.tsinghua.edu.cn/szdw/jsdw1/ayjscz/zdhsyjxzx.htm",
+  "https://www.au.tsinghua.edu.cn/info/1079/3239.htm",
+  "https://www.au.tsinghua.edu.cn/info/1079/3131.htm",
+  "https://www.au.tsinghua.edu.cn/info/1079/3240.htm",
+  "https://www.au.tsinghua.edu.cn/info/1079/3102.htm",
+  "https://www.au.tsinghua.edu.cn/info/1079/3241.htm",
+  "https://www.au.tsinghua.edu.cn/info/1079/3188.htm",
+  "https://www.au.tsinghua.edu.cn/info/1079/4192.htm",
+  "https://www.au.tsinghua.edu.cn/info/1081/3165.htm",
+  "https://www.au.tsinghua.edu.cn/info/1081/3199.htm",
+  "https://www.au.tsinghua.edu.cn/info/1081/3200.htm",
+  "https://www.au.tsinghua.edu.cn/info/1080/3225.htm",
+  "https://www.au.tsinghua.edu.cn/info/1080/3113.htm",
+  "https://www.au.tsinghua.edu.cn/info/1080/3223.htm",
+  "https://www.au.tsinghua.edu.cn/info/1080/3222.htm",
+  "https://www.au.tsinghua.edu.cn/info/1080/4368.htm",
+  "https://www.au.tsinghua.edu.cn/info/1080/3224.htm",
+  "https://www.au.tsinghua.edu.cn/info/1080/4225.htm",
+  "https://www.au.tsinghua.edu.cn/info/1080/3584.htm",
+  "https://www.au.tsinghua.edu.cn/info/1080/3652.htm",
+  "https://www.au.tsinghua.edu.cn/info/1075/4531.htm",
+  "https://www.au.tsinghua.edu.cn/info/1082/3226.htm",
+  "https://www.dpi.tsinghua.edu.cn/szrc/szgk.htm",
+  "https://www.dpi.tsinghua.edu.cn/szrc/jcrcc/ys.htm",
+  "https://www.dpi.tsinghua.edu.cn/szrc/jzjs.htm",
+  "https://www.dpi.tsinghua.edu.cn/jygl/zzjg.htm",
+  "https://www.dpi.tsinghua.edu.cn/info/1074/1902.htm",
+  "https://www.dpi.tsinghua.edu.cn/info/1074/1903.htm",
+  "https://www.dpi.tsinghua.edu.cn/info/1074/1901.htm",
+  "https://www.dpi.tsinghua.edu.cn/info/1074/1894.htm",
+  "https://faculty.dpi.tsinghua.edu.cn/teacher.jsp?urltype=tree.TreeTempUrl&wbtreeid=1052",
+  "https://faculty.dpi.tsinghua.edu.cn/system/resource/tsites/jmyq/advancesearch.jsp?collegeid=1069&pageindex=1&pagesize=1000&rankid=0&categoryid=1022&viewmode=8&viewid=1077542&siteOwner=2147142196&viewUniqueId=1077542&showlang=zh_CN&profilelen=3000",
+  "http://faculty.dpi.tsinghua.edu.cn/youzheng/zh_CN/index.htm",
+  "http://faculty.dpi.tsinghua.edu.cn/yexiongying/zh_CN/index.htm",
+  "http://faculty.dpi.tsinghua.edu.cn/dongyonggui/zh_CN/index.htm",
+  "http://faculty.dpi.tsinghua.edu.cn/zhurong/zh_CN/index.htm",
+  "http://faculty.dpi.tsinghua.edu.cn/shiluping/zh_CN/index.htm",
+  "http://faculty.dpi.tsinghua.edu.cn/zhaorong/zh_CN/index.htm",
+  "http://faculty.dpi.tsinghua.edu.cn/ruanyong/zh_CN/index.htm",
+  "http://faculty.dpi.tsinghua.edu.cn/xingfei/zh_CN/index.htm",
+  "http://faculty.dpi.tsinghua.edu.cn/wangchao/zh_CN/index.htm",
+  "http://faculty.dpi.tsinghua.edu.cn/wangxiaofeng/zh_CN/index.htm",
+  "http://faculty.dpi.tsinghua.edu.cn/zhanggaofei/zh_CN/index.htm",
+  "http://faculty.dpi.tsinghua.edu.cn/rendahai/zh_CN/index.htm",
+  "http://faculty.dpi.tsinghua.edu.cn/fengyanying/zh_CN/index.htm",
+  "http://faculty.dpi.tsinghua.edu.cn/wangpeng1/zh_CN/index.htm",
+  "http://faculty.dpi.tsinghua.edu.cn/lihuanglong/zh_CN/index.htm",
+  "http://faculty.dpi.tsinghua.edu.cn/denglei/zh_CN/index.htm",
+  "http://faculty.dpi.tsinghua.edu.cn/jixinglong/zh_CN/index.htm",
+  "http://faculty.dpi.tsinghua.edu.cn/zhaokaichun/zh_CN/index.htm",
+  "http://faculty.dpi.tsinghua.edu.cn/zhaojiahao/zh_CN/index.htm",
+  "http://faculty.dpi.tsinghua.edu.cn/wangwenhui/zh_CN/index.htm",
+  "http://faculty.dpi.tsinghua.edu.cn/liushiqiang/zh_CN/index.htm",
+  "http://faculty.dpi.tsinghua.edu.cn/yufangwen/zh_CN/index.htm",
+  "http://faculty.dpi.tsinghua.edu.cn/zhangrong/zh_CN/index.htm",
+  "http://faculty.dpi.tsinghua.edu.cn/hanfengtian/zh_CN/index.htm",
+  "http://faculty.dpi.tsinghua.edu.cn/zhoubin/zh_CN/index.htm",
+  "http://faculty.dpi.tsinghua.edu.cn/wuqiuping/zh_CN/index.htm",
+  "http://faculty.dpi.tsinghua.edu.cn/lidongmei1/zh_CN/index.htm",
+  "http://faculty.dpi.tsinghua.edu.cn/hexiaoxia/zh_CN/index.htm",
+  "http://faculty.dpi.tsinghua.edu.cn/guomeifeng/zh_CN/index.htm",
+  "http://faculty.dpi.tsinghua.edu.cn/weiqi/zh_CN/index.htm",
+  "http://faculty.dpi.tsinghua.edu.cn/liuyunfeng/zh_CN/index.htm",
+  "http://faculty.dpi.tsinghua.edu.cn/chenzhiyong/zh_CN/index.htm",
+  "http://faculty.dpi.tsinghua.edu.cn/zhangruixue/zh_CN/index.htm",
+  "http://faculty.dpi.tsinghua.edu.cn/houbo/zh_CN/index.htm",
+  "http://faculty.dpi.tsinghua.edu.cn/yangyuanmu/zh_CN/index.htm",
+  "http://faculty.dpi.tsinghua.edu.cn/qiaochang/zh_CN/index.htm",
+  "http://faculty.dpi.tsinghua.edu.cn/baochengying/zh_CN/index.htm",
+  "http://faculty.dpi.tsinghua.edu.cn/fuxing/zh_CN/index.htm",
+  "http://faculty.dpi.tsinghua.edu.cn/yangxing/zh_CN/index.htm",
+  "https://www.mse.tsinghua.edu.cn/",
+  "https://www.mse.tsinghua.edu.cn/szqk/jsdw1.htm",
+  "https://www.mse.tsinghua.edu.cn/szqk/lyys1.htm",
+  "https://www.mse.tsinghua.edu.cn/info/1024/1617.htm",
+  "https://www.mse.tsinghua.edu.cn/info/1024/1791.htm",
+  "https://www.mse.tsinghua.edu.cn/info/1024/1584.htm",
+  "https://www.mse.tsinghua.edu.cn/info/1024/1588.htm",
+  "https://www.mse.tsinghua.edu.cn/info/1024/1622.htm",
+  "https://www.mse.tsinghua.edu.cn/info/1024/1573.htm",
+  "https://www.mse.tsinghua.edu.cn/info/1024/1646.htm",
+  "https://www.mse.tsinghua.edu.cn/info/1024/1620.htm",
+  "https://www.mse.tsinghua.edu.cn/info/1024/1633.htm",
+  "https://www.mse.tsinghua.edu.cn/info/1024/1625.htm",
+  "https://www.mse.tsinghua.edu.cn/info/1024/1623.htm",
+  "https://www.mse.tsinghua.edu.cn/info/1024/1621.htm",
+  "https://www.mse.tsinghua.edu.cn/info/1024/1628.htm",
+  "https://www.mse.tsinghua.edu.cn/info/1024/1600.htm",
+  "https://www.mse.tsinghua.edu.cn/info/1024/1587.htm",
+  "https://www.phys.tsinghua.edu.cn/",
+  "https://www.phys.tsinghua.edu.cn/ry/jsfc/gk.htm",
+  "https://www.phys.tsinghua.edu.cn/ry/jsfc/apysx.htm",
+  "https://www.phys.tsinghua.edu.cn/ry/jsfc/azyfl.htm",
+  "https://www.phys.tsinghua.edu.cn/yjs1/dsjyjfx.htm",
+  "https://www.phys.tsinghua.edu.cn/gk/yjjg.htm",
+  "https://www.phys.tsinghua.edu.cn/kxyj/njtwl.htm",
+  "https://www.phys.tsinghua.edu.cn/kxyj/lzxx.htm",
+  "https://www.phys.tsinghua.edu.cn/kxyj/gk.htm",
+  "https://www.phys.tsinghua.edu.cn/info/1097/4453.htm",
+  "https://www.phys.tsinghua.edu.cn/info/1097/4465.htm",
+  "https://www.phys.tsinghua.edu.cn/info/1098/4216.htm",
+  "https://www.phys.tsinghua.edu.cn/info/1100/5066.htm",
+  "https://www.phys.tsinghua.edu.cn/info/1098/5118.htm",
+  "https://www.phys.tsinghua.edu.cn/info/1100/6021.htm",
+  "https://www.phys.tsinghua.edu.cn/info/1097/4464.htm",
+  "https://www.phys.tsinghua.edu.cn/info/1101/4250.htm",
+  "https://www.phys.tsinghua.edu.cn/info/1098/4212.htm",
+  "https://www.phys.tsinghua.edu.cn/info/1098/4695.htm",
+  "https://www.phys.tsinghua.edu.cn/info/1101/5441.htm",
+  "https://www.phys.tsinghua.edu.cn/info/1097/5601.htm",
+  "https://www.phys.tsinghua.edu.cn/info/1101/4551.htm",
+  "https://www.phys.tsinghua.edu.cn/info/1101/4243.htm",
+  "https://www.phys.tsinghua.edu.cn/info/1101/4261.htm",
+  "https://www.phys.tsinghua.edu.cn/info/1097/4458.htm",
+  "https://www.phys.tsinghua.edu.cn/info/1101/4246.htm",
+  "https://iiis.tsinghua.edu.cn/",
+  "https://iiis.tsinghua.edu.cn/rydw.htm",
+  "https://iiis.tsinghua.edu.cn/kxyj/ktzjs.htm",
+  "https://iiis.tsinghua.edu.cn/lzzx/zxjj.htm",
+  "https://iiis.tsinghua.edu.cn/rydw/qzjs/yaoqizhi.htm",
+  "https://iiis.tsinghua.edu.cn/rydw/qzjs/duanluming.htm",
+  "https://iiis.tsinghua.edu.cn/rydw/qzjs/maxiongfeng.htm",
+  "https://iiis.tsinghua.edu.cn/rydw/qzjs/sunluyan.htm",
+  "https://iiis.tsinghua.edu.cn/rydw/qzjs/dengdongling.htm",
+  "https://iiis.tsinghua.edu.cn/rydw/qzjs/gaomingyu.htm",
+  "https://iiis.tsinghua.edu.cn/rydw/qzjs/makaisheng.htm",
+  "https://iiis.tsinghua.edu.cn/rydw/qzjs/houpanyu.htm",
+  "https://iiis.tsinghua.edu.cn/rydw/qzjs/puyunfei.htm",
+  "https://iiis.tsinghua.edu.cn/rydw/qzjs/wukaiyu.htm",
+  "https://iiis.tsinghua.edu.cn/rydw/yjxl/songyipu.htm",
+  "https://iiis.tsinghua.edu.cn/rydw/yjxl/zhouzichao.htm",
+  "https://iiis.tsinghua.edu.cn/rydw/yjxl/changxiuying.htm",
+  "https://iiis.tsinghua.edu.cn/rydw/yjxl/heli.htm",
+  "https://iiis.tsinghua.edu.cn/rydw/yjxl/zhanghongyi.htm",
+  "https://iiis.tsinghua.edu.cn/rydw/yjxl/huangyuanyuan.htm",
+  "https://iiis.tsinghua.edu.cn/rydw/yjxl/jiangyue.htm",
+  "https://iiis.tsinghua.edu.cn/rydw/yjxl/liuyanqing.htm",
+  "https://iiis.tsinghua.edu.cn/rydw/yjxl/qibinxiang.htm",
+  "https://iiis.tsinghua.edu.cn/rydw/yjxl/wangweiting.htm",
+  "https://collegeai.tsinghua.edu.cn/",
+  "https://collegeai.tsinghua.edu.cn/rydw.htm",
+  "https://collegeai.tsinghua.edu.cn/kxyj/yjfx.htm",
+  "https://air.tsinghua.edu.cn/",
+  "https://air.tsinghua.edu.cn/airtd/yjtd.htm",
+  "https://air.tsinghua.edu.cn/kxyj/zhwl.htm",
+  "https://www.bnrist.tsinghua.edu.cn/szdw/jsdw.htm",
+  "https://www.bnrist.tsinghua.edu.cn/szdw/jcrc.htm",
+  "https://www.bnrist.tsinghua.edu.cn/szdw/lyys.htm",
+  "https://www.bnrist.tsinghua.edu.cn/kxyj/yjfx.htm",
+  "https://www.sic.tsinghua.edu.cn/info/1040/1567.htm",
+  "https://web.ee.tsinghua.edu.cn/wangyu/zh_CN/index.htm",
+  "https://www.ime.tsinghua.edu.cn/info/1038/1596.htm",
+  "https://www.ime.tsinghua.edu.cn/info/1022/1593.htm",
+  "https://www.ime.tsinghua.edu.cn/info/1015/1798.htm",
+  "https://www.ime.tsinghua.edu.cn/info/1032/1588.htm",
+  "https://www.ime.tsinghua.edu.cn/info/1027/1562.htm",
+  "https://web.ee.tsinghua.edu.cn/liuyongpan/zh_CN/index/2161/list/index.htm",
+  "https://dsp.ime.tsinghua.edu.cn/index.php?title=%E4%BD%95%E8%99%8E",
+  "https://web.ee.tsinghua.edu.cn/lixueqing/zh_CN/index.htm",
+  "https://web.ee.tsinghua.edu.cn/jiahongyang/zh_CN/index.htm",
+  "https://web.ee.tsinghua.edu.cn/qiaofei/zh_CN/index.htm",
+  "https://www.sic.tsinghua.edu.cn/info/1027/1577.htm",
+  "https://www.luvision.net/"
+ ],
+ "coverage_note": "覆盖范围（全部数据来自实际抓取的官方页面，未作任何推测或补全）：\n【1. 集成电路学院 sic.tsinghua.edu.cn】教研人员名录三页（szdw/jyry.htm、/2.htm、/1.htm）+ 三个研究所分页 + 讲席教授团组页，并逐人抓取 54 个个人详情页 → 收录 54 人（含讲席教授 Mark Neisser）。学院官方名录中已无魏少军（已转任产业界），李宇根/Woogeun Rhee 页面自述为 2025 年 8 月起 Adjunct Chair Professor（兼职，主业在成均馆大学），故未收录。\n【2. 电子工程系 ee.tsinghua.edu.cn】从在职教师页内嵌 JS 数组提取全部 153 人名单，再逐人抓取 65 个芯片相关候选人的个人主页（web.ee.tsinghua.edu.cn）+ 英文师资页核对职称 → 收录 44 人，覆盖电路与系统研究所（全部）、微波与天线研究所（芯片/电路相关）、信息光电子研究所（半导体光电器件/集成光电子/光子计算芯片方向）与通信研究所 1 人。159 人中的纯通信理论、纯天线电磁、纯信号处理/成像、纯 AI 算法教师未收录。\n【3. 计算机科学与技术系 cs.tsinghua.edu.cn】教职工名录 + 杰出人才 + 6 个研究所机构页 + 英文师资页 + 135 个教师个人页 → 收录 19 人（体系结构、处理器/SoC、AI 加速器、类脑与存算、EDA、密码硬件、量子体系结构、路由交换硬件）。高性能计算所中纯并行计算/编译器/存储软件/虚拟化/性能工具方向（陈文光、翟季冬、薛巍、杨广文、武永卫等 11 人）按“排除纯软件算法”规则剔除。\n【4. 自动化系 au.tsinghua.edu.cn】8 个研究所名单页 + 院士页 + 博导名单 + 110 个个人主页 → 仅收录 6 人（郑小平、叶朝辉、赵明国、卓晴、彭黎辉、吴嘉敏）。该系以控制理论/机器人/系统工程/计算成像为主，符合芯片口径的教师本就很少；纯控制理论、纯成像、电力电子、机器人、可靠性、实验教学岗均剔除。\n【5. 精密仪器系 dpi.tsinghua.edu.cn】师资概况 + 杰出人才 + 组织机构 + 4 个研究所页 + tsites 教师接口（89 人名册）+ 89 个个人主页 → 收录 33 人，以仪器科学与技术研究所（MEMS/微纳传感器/类脑芯片/存算一体）、导航技术工程中心（MEMS 惯性仪表与专用 ASIC）、光电工程研究所（光电计算芯片/集成光学）为主；纯导航算法、测试标定、超构表面成像等剔除。\n【6. 材料学院 mse.tsinghua.edu.cn】教师队伍页（75 人）+ 院士页 + 75 个个人主页 → 收录 14 人（阻变存储/自旋电子/铁电与神经形态器件/二维半导体/宽禁带衬底/柔性电子）。电池、热电、MLCC 被动元件、纯理论方向剔除。\n【7. 物理系 phys.tsinghua.edu.cn】教师页（84 人）+ 研究生导师及研究方向 + 研究机构页 + 84 个个人主页 → 收录 10 人（碳纳米管晶体管、忆阻器、自旋器件、超导约瑟夫森结/量子芯片、光电子器件）。碳管合成、凝聚态与拓扑物理理论方向剔除。\n【8. 交叉信息研究院 IIIS / 人工智能学院 / 智能产业研究院 AIR / 信息国家研究中心 BNRist】IIIS 人员队伍+课题组介绍+量子信息中心师资+20 个个人页；人工智能学院官方站点为 collegeai.tsinghua.edu.cn（ai.tsinghua.edu.cn 域名不可达）+人员队伍页；AIR 研究团队页；BNRist 教师队伍页 + 37 个个人主页 → 去重后收录 19 人（IIIS 量子计算硬件/量子芯片测控 17 人、AI 芯片与体系结构 2 人、AIR 边缘智能硬件 1 人）。量子信息理论（姚期智、马雄峰、邓东灵）与纯边缘计算系统软件按方向规则剔除。\n\n未抓到的部分及原因：\n(a) 低维量子物理全国重点实验室独立站点 www.stmbe.tsinghua.edu.cn 全部 302 跳转清华 WEBVPN 统一身份认证，无公开师资列表；其成员通过物理系研究机构页与个人主页佐证。\n(b) 清华大学人工智能学院站点 ai.tsinghua.edu.cn / www.ai.tsinghua.edu.cn 均不可达（curl 返回 000），改用官方 collegeai.tsinghua.edu.cn。\n(c) 邮箱缺失较多（199 人中 111 人无邮箱）：电子工程系个人主页与精密仪器系教师页把 E-mail 渲染成不可还原的十六进制密文；材料学院/物理系部分页面无邮箱字段；IIIS 邮箱为防爬图片。这些一律置 null，未按任何规则猜测。\n(d) 电子工程系“杰出人才/荣誉”类目页无名单，材料/物理院系亦无集中荣誉页；notes 中的荣誉仅在该人个人主页明确写出时才记录。\n(e) 部分教师（如集成电路学院邓伟、计算机系乔林）个人主页内容极简，仅能取到 2 个研究方向关键词，未作补充。\n(f) 同名不同人已分别保留：郑小平（自动化系·检测与电子技术研究所，太赫兹/电磁波探测）与电子工程系郑小平（光通信，按纯光通信方向未收录）；李冬梅（电子工程系，模拟集成电路）与精密仪器系李冬梅（导航技术工程中心，惯性仪表，按非芯片方向未收录）。",
+ "faculty": [
+  {
+   "name_cn": "曾飞",
+   "name_en": "Zeng Fei",
+   "title": "研究员",
+   "department": "材料学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "类脑计算材料与器件",
+    "忆阻器与人工神经突触",
+    "声表面波材料与器件",
+    "功能薄膜界面效应"
+   ],
+   "homepage": "https://www.mse.tsinghua.edu.cn/info/1024/1584.htm",
+   "email": "zengfei@tsinghua.edu.cn",
+   "notes": "国家自然科学二等奖(第二完成人)；国家技术发明二等奖(第三完成人)；国家科技进步二等奖(第六完成人)；教育部新世纪人才计划(2009)"
+  },
+  {
+   "name_cn": "符汪洋",
+   "name_en": "Fu Wangyang",
+   "title": "副教授",
+   "department": "材料学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "石墨烯场效应晶体管",
+    "功能化纳电子器件",
+    "纳电子生物化学传感器",
+    "单分子检测"
+   ],
+   "homepage": "https://www.mse.tsinghua.edu.cn/info/1024/1646.htm",
+   "email": "fwy2018@mail.tsinghua.edu.cn",
+   "notes": "德国洪堡学者(2014)；荷兰Veni基金(2015)；瑞士APM学者(2015)"
+  },
+  {
+   "name_cn": "李千",
+   "name_en": "Li Qian",
+   "title": "长聘副教授",
+   "department": "材料学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "铁电薄膜外延生长",
+    "集成电光器件",
+    "太赫兹与微波光子学",
+    "非线性光学与超快动力学"
+   ],
+   "homepage": "https://www.mse.tsinghua.edu.cn/info/1024/1633.htm",
+   "email": "qianli_mse@tsinghua.edu.cn",
+   "notes": "国家自然科学基金委青年科学基金项目(A类，原国家杰出青年科学基金)(2026)；北京市杰出青年科学基金(2024)；中国电介质物理优秀青年奖(A类)(2025)；国家海外高层次人才青年项目(2019)"
+  },
+  {
+   "name_cn": "林元华",
+   "name_en": "Lin Yuanhua",
+   "title": "教授",
+   "department": "材料学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "面向高端电子的氧化物无机介质材料与器件",
+    "铁电与介电材料",
+    "氧化物高温热电材料与器件"
+   ],
+   "homepage": "https://www.mse.tsinghua.edu.cn/info/1024/1628.htm",
+   "email": "linyh@tsinghua.edu.cn",
+   "notes": "中国科学院院士；清华大学材料学院院长；教育部自然科学奖一等奖(2021)；中国电子元件行业协会科技进步奖一等奖(2023)"
+  },
+  {
+   "name_cn": "刘源",
+   "name_en": "Liu Yuan",
+   "title": "研究员",
+   "department": "材料学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "宽禁带半导体单晶衬底材料及工艺",
+    "4H-SiC单晶生长",
+    "轻量化电子封装",
+    "热管理复合材料"
+   ],
+   "homepage": "https://www.mse.tsinghua.edu.cn/info/1024/1625.htm",
+   "email": "yuanliu@mail.tsinghua.edu.cn",
+   "notes": "教育部新世纪人才(2012)"
+  },
+  {
+   "name_cn": "吕瑞涛",
+   "name_en": "Lv Ruitao",
+   "title": "教授",
+   "department": "材料学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "低维碳基功能材料",
+    "二维材料缺陷调控",
+    "晶体管与半导体光源器件",
+    "超灵敏分子探测"
+   ],
+   "homepage": "https://www.mse.tsinghua.edu.cn/info/1024/1621.htm",
+   "email": "lvruitao@tsinghua.edu.cn",
+   "notes": "国家自然科学基金委青年科学基金项目(A类，原国家杰出青年科学基金)(2025)；国家优秀青年科学基金(2017)；英国炭素学会Brian Kelly Award(2017)；Carbon副主编；中国材料研究学会科学技术奖(基础研究)一等奖(2022，第一完成人)"
+  },
+  {
+   "name_cn": "马静",
+   "name_en": "Ma Jing",
+   "title": "长聘副教授",
+   "department": "材料学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "铁电/多铁性材料及原型器件",
+    "神经形态电子/光电子突触器件",
+    "强关联功能氧化物薄膜",
+    "铪基铁电薄膜"
+   ],
+   "homepage": "https://www.mse.tsinghua.edu.cn/info/1024/1620.htm",
+   "email": "ma-jing@tsinghua.edu.cn",
+   "notes": "国家自然科学基金优秀青年科学基金(2019)；国家高层次人才特殊支持计划青年拔尖人才(2019)；中国电介质物理优秀青年奖(A类)(2023)；高等学校科学研究优秀成果奖(科学技术)自然科学奖一等奖(2021，排名第三)"
+  },
+  {
+   "name_cn": "韦丹",
+   "name_en": "Wei Dan",
+   "title": "教授",
+   "department": "材料学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微磁学",
+    "磁记录读/写磁头设计",
+    "磁存储器件",
+    "磁性材料理论"
+   ],
+   "homepage": "https://www.mse.tsinghua.edu.cn/info/1024/1600.htm",
+   "email": null,
+   "notes": "IEEE磁学协会(MagSoc)会员委员会主席/执行主席；IEEE高级会员；中国电子学会高级会员；著《Micromagnetics and Recording Materials》(Springer, 2012)"
+  },
+  {
+   "name_cn": "易迪",
+   "name_en": "Yi Di",
+   "title": "副教授",
+   "department": "材料学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "多铁性材料及异质结",
+    "磁电耦合效应及原型器件",
+    "氧化物自旋电子材料",
+    "超低功耗信息存储器件",
+    "磁性绝缘体磁振子输运"
+   ],
+   "homepage": "https://www.mse.tsinghua.edu.cn/info/1024/1588.htm",
+   "email": "diyi@mail.tsinghua.edu.cn",
+   "notes": "国家海外高层次人才青年项目(2019)；美国物理学会博士后奖(2019)；中国材料研究学会科学技术奖(基础研究类)一等奖(2024，排名第1)"
+  },
+  {
+   "name_cn": "尹斓",
+   "name_en": "Yin Lan",
+   "title": "副教授",
+   "department": "材料学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "柔性电子器件",
+    "生物可降解植入式器件",
+    "柔性储能器件",
+    "神经接口器件"
+   ],
+   "homepage": "https://www.mse.tsinghua.edu.cn/info/1024/1587.htm",
+   "email": "lanyin@tsinghua.edu.cn",
+   "notes": "MRS Early Career Distinguished Presenter(2025)；中国材料研究学会科学技术奖一等奖(2021，第一完成人)；曾于John A. Rogers课题组从事柔性电子研究"
+  },
+  {
+   "name_cn": "朱宏伟",
+   "name_en": "Zhu Hongwei",
+   "title": "教授",
+   "department": "材料学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "单晶碳材料（碳纳米管、金刚石）",
+    "第四代半导体",
+    "低维材料",
+    "神经形态材料"
+   ],
+   "homepage": "https://www.mse.tsinghua.edu.cn/info/1024/1573.htm",
+   "email": "hongweizhu@tsinghua.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "刘锴",
+   "name_en": "Liu Kai",
+   "title": "长聘教授",
+   "department": "材料学院·先进材料教育部重点实验室",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "二维半导体材料",
+    "神经形态器件",
+    "二维材料高温电子器件",
+    "二硫化钼场效应晶体管"
+   ],
+   "homepage": "https://www.mse.tsinghua.edu.cn/info/1024/1622.htm",
+   "email": "liuk@tsinghua.edu.cn",
+   "notes": "国家高层次人才计划特聘教授(2024)；国家海外高层次人才引进计划青年项目(2015)；国际材料研究学会联盟(IUMRS)前沿材料青年科学家奖(2021)；全国优秀博士学位论文(2010)；先进材料教育部重点实验室副主任"
+  },
+  {
+   "name_cn": "潘峰",
+   "name_en": "Pan Feng",
+   "title": "教授",
+   "department": "材料学院·先进材料教育部重点实验室",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "阻变存储器材料与器件",
+    "自旋电子学材料与器件",
+    "声表面波材料与器件",
+    "薄膜材料结构与性能调控",
+    "离子束与材料相互作用"
+   ],
+   "homepage": "https://www.mse.tsinghua.edu.cn/info/1024/1617.htm",
+   "email": "panf@mail.tsinghua.edu.cn",
+   "notes": "何梁何利基金科学与技术进步奖(2018)；国家科技进步二等奖(2018，第一获奖人，高世代声表面波材料与滤波器产业化技术)；国家自然科学二等奖(2012，第一获奖人)；国家技术发明二等奖(2007，第一获奖人)；曾任先进材料教育部重点实验室主任"
+  },
+  {
+   "name_cn": "宋成",
+   "name_en": "Song Cheng",
+   "title": "教授",
+   "department": "材料学院·先进材料教育部重点实验室",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "自旋电子学材料与器件",
+    "高速高密度磁信息存储",
+    "存内计算器件",
+    "自旋轨道矩材料",
+    "声表面波滤波器",
+    "反铁磁自旋电子学"
+   ],
+   "homepage": "https://www.mse.tsinghua.edu.cn/info/1024/1791.htm",
+   "email": "songcheng@mail.tsinghua.edu.cn",
+   "notes": "国家杰出青年科学基金(2022)；国家自然科学二等奖(2012，第三完成人)；国家科技进步二等奖(2018)；新基石科学探索奖(2025)；教育部自然科学一等奖(2025，第一完成人)；先进材料教育部重点实验室主任、为先书院副院长；主持国家重点研发计划“新型自旋轨道矩材料与高性能存内计算器件”课题"
+  },
+  {
+   "name_cn": "陈志勇",
+   "name_en": "Chen Zhiyong",
+   "title": "副研究员",
+   "department": "精密仪器系·导航技术工程中心",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "微机械惯性仪表",
+    "微结构设计与特性分析",
+    "MEMS惯性器件"
+   ],
+   "homepage": "http://faculty.dpi.tsinghua.edu.cn/chenzhiyong/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "韩丰田",
+   "name_en": "Han Fengtian",
+   "title": "研究员",
+   "department": "精密仪器系·导航技术工程中心",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS谐振梁加速度计",
+    "静电悬浮MEMS陀螺/加速度计",
+    "高精度惯性仪表",
+    "惯性导航系统",
+    "精密伺服控制"
+   ],
+   "homepage": "http://faculty.dpi.tsinghua.edu.cn/hanfengtian/zh_CN/index.htm",
+   "email": null,
+   "notes": "研究员、博士生导师（2011年聘为博士生导师）；中国惯性技术学会副监事长；2013年国家技术发明二等奖（排名第二）"
+  },
+  {
+   "name_cn": "侯波",
+   "name_en": "Hou Bo",
+   "title": "副教授",
+   "department": "精密仪器系·导航技术工程中心",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "惯性MEMS",
+    "集成光电传感",
+    "智能感知器件与系统",
+    "可穿戴传感"
+   ],
+   "homepage": "http://faculty.dpi.tsinghua.edu.cn/houbo/zh_CN/index.htm",
+   "email": null,
+   "notes": "国家高层次青年人才项目支持；中国惯性技术学会优秀博士论文奖"
+  },
+  {
+   "name_cn": "刘云峰",
+   "name_en": "Liu Yunfeng",
+   "title": "副研究员",
+   "department": "精密仪器系·导航技术工程中心",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "微机械惯性传感器",
+    "惯性技术",
+    "重力探测"
+   ],
+   "homepage": "http://faculty.dpi.tsinghua.edu.cn/liuyunfeng/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "魏琦",
+   "name_en": "Wei Qi",
+   "title": "副研究员",
+   "department": "精密仪器系·导航技术工程中心",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "高性能专用集成电路(ASIC)设计",
+    "小型高精度惯性传感器",
+    "MEMS惯性仪表ASIC电路",
+    "微电容检测",
+    "高精度ADC/DAC"
+   ],
+   "homepage": "http://faculty.dpi.tsinghua.edu.cn/weiqi/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张嵘",
+   "name_en": "Zhang Rong",
+   "title": "研究员",
+   "department": "精密仪器系·导航技术工程中心",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微机械惯性仪表及系统",
+    "高精度惯性仪表",
+    "MEMS陀螺",
+    "惯性导航系统"
+   ],
+   "homepage": "http://faculty.dpi.tsinghua.edu.cn/zhangrong/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张瑞雪",
+   "name_en": "Zhang Ruixue",
+   "title": "副研究员",
+   "department": "精密仪器系·导航技术工程中心",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "谐振式惯性仪表技术",
+    "微机械陀螺",
+    "惯性仪表技术"
+   ],
+   "homepage": "http://faculty.dpi.tsinghua.edu.cn/zhangruixue/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "周斌",
+   "name_en": "Zhou Bin",
+   "title": "研究员",
+   "department": "精密仪器系·导航技术工程中心",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "惯性技术",
+    "MEMS技术",
+    "微机械陀螺"
+   ],
+   "homepage": "http://faculty.dpi.tsinghua.edu.cn/zhoubin/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "赵明国",
+   "name_en": null,
+   "title": "研究员",
+   "department": "自动化系·导航与控制研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "类脑芯片",
+    "类脑计算",
+    "机器人控制",
+    "人工通用智能平台"
+   ],
+   "homepage": "https://www.au.tsinghua.edu.cn/info/1081/3199.htm",
+   "email": "mgzhao@mail.tsinghua.edu.cn",
+   "notes": "2015年教育部自然科学二等奖"
+  },
+  {
+   "name_cn": "卓晴",
+   "name_en": null,
+   "title": "副教授",
+   "department": "自动化系·导航与控制研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "嵌入式计算机系统",
+    "DSP信息处理系统",
+    "工业电力电子技术",
+    "模式识别与智能信息处理"
+   ],
+   "homepage": "https://www.au.tsinghua.edu.cn/info/1081/3200.htm",
+   "email": "zhuoqing@mail.tsinghua.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "陈勇",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子工程系·电路与系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "模拟/混合信号集成电路",
+    "射频/毫米波/亚太赫兹集成电路",
+    "有线通信芯片"
+   ],
+   "homepage": "http://web.ee.tsinghua.edu.cn/chenyong/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "邓舒文",
+   "name_en": "Shuwen Deng",
+   "title": "助理教授",
+   "department": "电子工程系·电路与系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "硬件安全",
+    "处理器架构",
+    "隐私计算"
+   ],
+   "homepage": "http://web.ee.tsinghua.edu.cn/shuwen_deng/zh_CN/index.htm",
+   "email": null,
+   "notes": "国家青年人才计划入选者；IEEE HOST 2023最佳博士论文奖"
+  },
+  {
+   "name_cn": "贾弘洋",
+   "name_en": "Jia Hongyang",
+   "title": "副教授",
+   "department": "电子工程系·电路与系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "存算一体",
+    "近似计算",
+    "AI架构与加速器",
+    "先进计算概念芯片",
+    "灵活AI架构与系统",
+    "新兴应用计算平台"
+   ],
+   "homepage": "http://web.ee.tsinghua.edu.cn/jiahongyang/zh_CN/index.htm",
+   "email": null,
+   "notes": "职称以个人信息栏为准（副教授）曾在美国英伟达公司研究院任博士后研究员。；兼聘/交叉任职：BNRist"
+  },
+  {
+   "name_cn": "蒋琛",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子工程系·电路与系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "有机薄膜晶体管",
+    "印刷电子",
+    "柔性电子器件"
+   ],
+   "homepage": "http://web.ee.tsinghua.edu.cn/jiangchen/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李冬梅",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子工程系·电路与系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "模拟及数模混合集成电路设计",
+    "语音图像信号采集电路",
+    "低功耗SoC"
+   ],
+   "homepage": "http://web.ee.tsinghua.edu.cn/lidongmei/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李学清",
+   "name_en": "Xueqing Li",
+   "title": "副教授",
+   "department": "电子工程系·电路与系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路与系统设计",
+    "人工智能芯片",
+    "低功耗数字电路",
+    "混合信号CMOS集成电路设计",
+    "AI计算加速的芯片-算法协同设计",
+    "数据转换器设计"
+   ],
+   "homepage": "http://web.ee.tsinghua.edu.cn/lixueqing/zh_CN/index.htm",
+   "email": null,
+   "notes": "IEEE Senior Member。职称以工作经历栏为准（长聘副教授）；兼聘/交叉任职：BNRist"
+  },
+  {
+   "name_cn": "刘勇攀",
+   "name_en": "Yongpan Liu",
+   "title": "教授",
+   "department": "电子工程系·电路与系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "人工智能芯片",
+    "新型存储器",
+    "非易失处理器",
+    "感存算一体化芯片与系统",
+    "非易失计算"
+   ],
+   "homepage": "http://web.ee.tsinghua.edu.cn/liuyongpan/zh_CN/index.htm",
+   "email": null,
+   "notes": "电路与系统研究所所长；入选国家级高层次人才计划；IEEE高级会员；兼聘/交叉任职：BNRist"
+  },
+  {
+   "name_cn": "路延",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子工程系·电路与系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "电源管理芯片",
+    "功率转换器设计",
+    "无线能量传输电路"
+   ],
+   "homepage": "http://web.ee.tsinghua.edu.cn/luyan/zh_CN/index.htm",
+   "email": null,
+   "notes": "兴华讲席教授；国家级高层次人才；IEEE CASS杰出讲师"
+  },
+  {
+   "name_cn": "乔飞",
+   "name_en": "Fei Qiao",
+   "title": "副教授",
+   "department": "电子工程系·电路与系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "智能感知集成电路与系统",
+    "感存算一体",
+    "边缘智能芯片",
+    "近零功耗智能感知架构和芯片",
+    "感算共融",
+    "柔性穿戴式多模态体征监测系统"
+   ],
+   "homepage": "http://web.ee.tsinghua.edu.cn/qiaofei/zh_CN/index.htm",
+   "email": null,
+   "notes": "职称以个人信息栏为准（副教授）；兼聘/交叉任职：BNRist"
+  },
+  {
+   "name_cn": "孙楠",
+   "name_en": "Nan Sun",
+   "title": "教授",
+   "department": "电子工程系·电路与系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "模拟集成电路",
+    "混合信号集成电路",
+    "数据转换器ADC"
+   ],
+   "homepage": "http://web.ee.tsinghua.edu.cn/sunnan/zh_CN/index.htm",
+   "email": null,
+   "notes": "IEEE Fellow；国家特聘专家"
+  },
+  {
+   "name_cn": "汪玉",
+   "name_en": "Yu WANG",
+   "title": "教授",
+   "department": "电子工程系·电路与系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "智能芯片",
+    "高能效电路与系统",
+    "领域定制加速器",
+    "深度学习加速",
+    "AI加速器",
+    "计算机体系结构"
+   ],
+   "homepage": "http://web.ee.tsinghua.edu.cn/wangyu/zh_CN/index.htm",
+   "email": "yu-wang@mail.tsinghua.edu.cn",
+   "notes": "IEEE Fellow；国家杰出青年科学基金获得者；异质互联可持续智能算力芯片与系统北京市重点实验室主任；兼聘/交叉任职：人工智能学院"
+  },
+  {
+   "name_cn": "王鹏军",
+   "name_en": "PengJun Wang",
+   "title": "副研究员",
+   "department": "电子工程系·电路与系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路与系统设计",
+    "无线通信芯片",
+    "传感器技术"
+   ],
+   "homepage": "http://web.ee.tsinghua.edu.cn/wangpengjun/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "颜深根",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "电子工程系·电路与系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "异构计算",
+    "智能计算系统",
+    "人工智能系统"
+   ],
+   "homepage": "http://web.ee.tsinghua.edu.cn/yanshengen/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "杨华中",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子工程系·电路与系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路与系统设计",
+    "人工智能硬件",
+    "数模混合集成电路"
+   ],
+   "homepage": "http://web.ee.tsinghua.edu.cn/yanghuazhong/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "余金城",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "电子工程系·电路与系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "领域专用硬件加速器设计",
+    "具身智能系统",
+    "多机协同智能"
+   ],
+   "homepage": "http://web.ee.tsinghua.edu.cn/yujincheng/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张沕琳",
+   "name_en": "Milin Zhang",
+   "title": "副教授",
+   "department": "电子工程系·电路与系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "低功耗低噪声电路设计",
+    "神经接口芯片",
+    "生物医学SoC"
+   ],
+   "homepage": "http://web.ee.tsinghua.edu.cn/zhangmilin/zh_CN/index.htm",
+   "email": null,
+   "notes": "国家青年人才计划入选者；IEEE固态电路学会北京分会主席"
+  },
+  {
+   "name_cn": "仲易",
+   "name_en": null,
+   "title": "助理研究员",
+   "department": "电子工程系·电路与系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "混合信号集成电路",
+    "模数转换器ADC",
+    "生物医学信号记录前端"
+   ],
+   "homepage": "http://web.ee.tsinghua.edu.cn/zhongyi/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王军",
+   "name_en": "Jun WANG",
+   "title": "研究员",
+   "department": "电子工程系·通信研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路与系统设计",
+    "宽带通信芯片",
+    "DTMB标准"
+   ],
+   "homepage": "http://web.ee.tsinghua.edu.cn/wangjun/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "陈文华",
+   "name_en": "Wenhua Chen",
+   "title": "教授",
+   "department": "电子工程系·微波与天线研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频功率放大器",
+    "数字预失真",
+    "集成毫米波与太赫兹电路"
+   ],
+   "homepage": "http://web.ee.tsinghua.edu.cn/chenwenhua/zh_CN/index.htm",
+   "email": "chenwh@tsinghua.edu.cn",
+   "notes": "国家杰出青年基金获得者；北京信息科学与技术国家研究中心副主任；微波与天线研究所所长"
+  },
+  {
+   "name_cn": "李越",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子工程系·微波与天线研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "电磁超材料",
+    "超材料电路Metatronics",
+    "毫米波封装天线"
+   ],
+   "homepage": "http://web.ee.tsinghua.edu.cn/liyue/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "许慎恒",
+   "name_en": "ShenHeng Xu",
+   "title": "副教授",
+   "department": "电子工程系·微波与天线研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路与系统设计",
+    "天线与电磁超表面",
+    "电子与量子材料"
+   ],
+   "homepage": "http://web.ee.tsinghua.edu.cn/xushenheng/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "杨帆",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子工程系·微波与天线研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "天线理论与设计",
+    "电磁超材料",
+    "电磁场数值算法"
+   ],
+   "homepage": "http://web.ee.tsinghua.edu.cn/yangfan/zh_CN/index.htm",
+   "email": null,
+   "notes": "IEEE Fellow；IEEE天线与传播学会杰出讲师"
+  },
+  {
+   "name_cn": "陈宏伟",
+   "name_en": "Hongwei Chen",
+   "title": "教授",
+   "department": "电子工程系·信息光电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成光电子信息处理",
+    "光子智能感知",
+    "集成光电子技术"
+   ],
+   "homepage": "http://web.ee.tsinghua.edu.cn/chenhongwei/zh_CN/index.htm",
+   "email": null,
+   "notes": "微波光子学国际会议(MWP)技术委员会主席"
+  },
+  {
+   "name_cn": "崔开宇",
+   "name_en": null,
+   "title": "长聘副教授",
+   "department": "电子工程系·信息光电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "超光谱成像芯片",
+    "微纳光电子器件",
+    "计算光谱芯片"
+   ],
+   "homepage": "http://web.ee.tsinghua.edu.cn/cuikaiyu/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "冯雪",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子工程系·信息光电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微纳结构光电子器件",
+    "纳米光子学"
+   ],
+   "homepage": "http://web.ee.tsinghua.edu.cn/fengxue/zh_CN/index.htm",
+   "email": null,
+   "notes": "美国光学学会(OSA)会员；Scientific Reports编委"
+  },
+  {
+   "name_cn": "甘霖",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "电子工程系·信息光电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成光电器件",
+    "高速大功率光电器件",
+    "微纳结构光电子"
+   ],
+   "homepage": "http://web.ee.tsinghua.edu.cn/ganlin/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "郝智彪",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子工程系·信息光电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体分子束外延",
+    "低维半导体量子结构光电子器件",
+    "量子信息关键器件"
+   ],
+   "homepage": "http://web.ee.tsinghua.edu.cn/haozhibiao/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "黄翊东",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子工程系·信息光电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微纳结构光电子器件",
+    "集成光电子芯片",
+    "量子信息器件与系统"
+   ],
+   "homepage": "http://web.ee.tsinghua.edu.cn/huangyidong/zh_CN/index.htm",
+   "email": null,
+   "notes": "美国国家工程院外籍院士；长江学者；新世纪百千万人才工程国家级人选"
+  },
+  {
+   "name_cn": "霍力",
+   "name_en": "Li Huo",
+   "title": "副教授",
+   "department": "电子工程系·信息光电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体光电器件",
+    "计算光学与医疗成像"
+   ],
+   "homepage": "http://web.ee.tsinghua.edu.cn/huoli/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李永卓",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "电子工程系·信息光电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体纳米激光",
+    "二维材料光电器件",
+    "纳米光子器件"
+   ],
+   "homepage": "http://web.ee.tsinghua.edu.cn/liyongzhuo/zh_CN/index.htm",
+   "email": null,
+   "notes": "国家级青年人才项目"
+  },
+  {
+   "name_cn": "林星",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子工程系·信息光电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光子计算芯片",
+    "光电智能计算",
+    "衍射光计算"
+   ],
+   "homepage": "http://web.ee.tsinghua.edu.cn/linxing/zh_CN/index.htm",
+   "email": null,
+   "notes": "MIT TR35亚太创新35人；中国电子学会科技进步一等奖"
+  },
+  {
+   "name_cn": "刘仿",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子工程系·信息光电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "表面等离激元器件",
+    "芯片集成自由电子光源",
+    "太赫兹辐射源"
+   ],
+   "homepage": "http://web.ee.tsinghua.edu.cn/liufang/zh_CN/index.htm",
+   "email": null,
+   "notes": "青年长江学者"
+  },
+  {
+   "name_cn": "罗毅",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子工程系·信息光电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "氮化镓基光电器件",
+    "半导体信息光电子器件",
+    "固态照明技术"
+   ],
+   "homepage": "http://web.ee.tsinghua.edu.cn/luoyi/zh_CN/index.htm",
+   "email": null,
+   "notes": "中国工程院院士；国家杰出青年科学基金获得者；教育部长江特聘教授"
+  },
+  {
+   "name_cn": "盛兴",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子工程系·信息光电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "植入式光电器件",
+    "生物医学光电子",
+    "柔性光电子器件"
+   ],
+   "homepage": "https://shengxingstars.github.io/www/index.html",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "孙皓",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "电子工程系·信息光电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成光子芯片有源器件",
+    "硅基纳米光源",
+    "片上光放大"
+   ],
+   "homepage": "http://web.ee.tsinghua.edu.cn/sunhao/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "孙长征",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子工程系·信息光电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体光电器件",
+    "光学与光子学",
+    "半导体激光器"
+   ],
+   "homepage": "http://web.ee.tsinghua.edu.cn/sunzhangzheng/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "汪莱",
+   "name_en": "Lai Wang",
+   "title": "教授",
+   "department": "电子工程系·信息光电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "宽禁带半导体光电子器件",
+    "GaN基Micro-LED",
+    "感存算一体化芯片"
+   ],
+   "homepage": "http://web.ee.tsinghua.edu.cn/wanglai/zh_CN/index.htm",
+   "email": null,
+   "notes": "国家杰出青年科学基金获得者"
+  },
+  {
+   "name_cn": "王健",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "电子工程系·信息光电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体激光器",
+    "光调制器",
+    "光电探测器"
+   ],
+   "homepage": "http://web.ee.tsinghua.edu.cn/wangjian/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "熊兵",
+   "name_en": "Bing XIONG",
+   "title": "副教授",
+   "department": "电子工程系·信息光电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体激光器",
+    "半导体光调制器",
+    "高饱和光功率光探测器"
+   ],
+   "homepage": "http://web.ee.tsinghua.edu.cn/xiongbing/zh_CN/index.htm",
+   "email": null,
+   "notes": "国家技术发明二等奖2项"
+  },
+  {
+   "name_cn": "杨四刚",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "电子工程系·信息光电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "硅基光子学",
+    "集成微波光子学",
+    "微结构光纤非线性"
+   ],
+   "homepage": "http://web.ee.tsinghua.edu.cn/yangsigang/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "袁之泉",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "电子工程系·信息光电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成光子学",
+    "高Q光学微腔",
+    "片上量子光源"
+   ],
+   "homepage": "https://web.ee.tsinghua.edu.cn/yuanzhiquan/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张巍",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子工程系·信息光电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光量子器件",
+    "光子芯片集成",
+    "量子通信与量子网络"
+   ],
+   "homepage": "http://web.ee.tsinghua.edu.cn/zhangwei/zh_CN/index.htm",
+   "email": null,
+   "notes": "信息光电子研究所副所长"
+  },
+  {
+   "name_cn": "郑纪元",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "电子工程系·信息光电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "机器视觉芯片",
+    "感内计算",
+    "高灵敏光电探测器"
+   ],
+   "homepage": "https://web.ee.tsinghua.edu.cn/zhengjiyuan/zh_CN/index.htm",
+   "email": null,
+   "notes": "国家自然科学基金青年科学基金项目(B类)获得者"
+  },
+  {
+   "name_cn": "鲍成英",
+   "name_en": "Bao Chengying",
+   "title": "副教授",
+   "department": "精密仪器系·光电工程研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成光学",
+    "片上波导加工",
+    "非线性光学",
+    "超快光学",
+    "光频梳"
+   ],
+   "homepage": "http://faculty.dpi.tsinghua.edu.cn/baochengying/zh_CN/index.htm",
+   "email": "cbao@tsinghua.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "乔畅",
+   "name_en": "Chang Qiao",
+   "title": "助理教授",
+   "department": "精密仪器系·光电工程研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光电计算芯片",
+    "光计算器件",
+    "智能光子学",
+    "三维光互联",
+    "超高时空分辨率成像系统"
+   ],
+   "homepage": "http://faculty.dpi.tsinghua.edu.cn/qiaochang/zh_CN/index.htm",
+   "email": null,
+   "notes": "助理教授、博士生导师；国家级青年人才计划；中国科协青年人才托举工程"
+  },
+  {
+   "name_cn": "付星",
+   "name_en": "Fu Xing",
+   "title": "教授",
+   "department": "精密仪器系·激光与光子技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "单光子探测",
+    "全固态激光",
+    "结构光场调控",
+    "光子测控"
+   ],
+   "homepage": "http://faculty.dpi.tsinghua.edu.cn/fuxing/zh_CN/index.htm",
+   "email": "fuxing@mail.tsinghua.edu.cn",
+   "notes": "长聘教授、博士生导师；国家高层次人才特殊支持计划(2024)；国家级青年人才(2019)；北京市杰青(2023)"
+  },
+  {
+   "name_cn": "杨兴",
+   "name_en": "Yang Xing",
+   "title": "副研究员",
+   "department": "精密仪器系·激光与光子技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "微/纳机电系统(MEMS/NEMS)",
+    "医疗微纳传感器与执行器",
+    "微流体器件"
+   ],
+   "homepage": "http://faculty.dpi.tsinghua.edu.cn/yangxing/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "陈虹",
+   "name_en": null,
+   "title": "研究员",
+   "department": "集成电路学院·集成电路设计与设计自动化研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "极低功耗电路与系统",
+    "异步电路设计方法学",
+    "在线学习异步类脑处理器",
+    "医疗健康电子"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1014/1827.htm",
+   "email": "hongchen@tsinghua.edu.cn",
+   "notes": "2023年国家级高层次科技创新领军人才；IEEE高级会员；IEEE ASYNC大会主席"
+  },
+  {
+   "name_cn": "池保勇",
+   "name_en": null,
+   "title": "长聘教授",
+   "department": "集成电路学院·集成电路设计与设计自动化研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波集成电路",
+    "模拟集成电路",
+    "全集成无线收发机芯片"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1014/1825.htm",
+   "email": "chiby06@139.com",
+   "notes": "IEEE A-SSCC国际会议TPC成员；霍英东教育基金"
+  },
+  {
+   "name_cn": "邓伟",
+   "name_en": null,
+   "title": "长聘副教授",
+   "department": "集成电路学院·集成电路设计与设计自动化研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "数模混合集成电路"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1014/1823.htm",
+   "email": "wdeng@tsinghua.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "方华军",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "集成电路学院·集成电路设计与设计自动化研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微纳电子器件设计与制造",
+    "集成电路设计",
+    "可重构处理器"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1014/1822.htm",
+   "email": "hjfang@tsinghua.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "何虎",
+   "name_en": "Hu He / Hu Ho",
+   "title": "副教授",
+   "department": "集成电路学院·集成电路设计与设计自动化研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "DSP体系结构",
+    "RISC-V处理器设计",
+    "GPGPU体系结构",
+    "VLIW架构与编译器",
+    "VLIW处理器",
+    "RISC-V CPU"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1014/1817.htm",
+   "email": null,
+   "notes": "乘影OpenGPGPU开源项目发起人；北京市科学技术一等奖；兼聘/交叉任职：BNRist"
+  },
+  {
+   "name_cn": "胡杨",
+   "name_en": null,
+   "title": "准聘副教授",
+   "department": "集成电路学院·集成电路设计与设计自动化研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "晶圆级AI芯片",
+    "计算机体系结构",
+    "大模型训练与推理系统",
+    "AI芯片与数字集成电路设计自动化"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1014/1816.htm",
+   "email": "hu_yang@tsinghua.edu.cn",
+   "notes": "国家重大人才工程特聘教授；ISCA/HPCA Hall of Fame；中国电子学会青年科学家奖"
+  },
+  {
+   "name_cn": "贾海昆",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院·集成电路设计与设计自动化研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "硅基毫米波/太赫兹集成电路",
+    "高速串行接口技术",
+    "毫米波相控阵芯片与系统",
+    "毫米波FMCW雷达"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1014/1815.htm",
+   "email": "jiahaikun@tsinghua.edu.cn",
+   "notes": "清华大学特别研究员"
+  },
+  {
+   "name_cn": "姜汉钧",
+   "name_en": null,
+   "title": "长聘教授",
+   "department": "集成电路学院·集成电路设计与设计自动化研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "低功耗模拟与射频集成电路",
+    "无线感知芯片与SoC",
+    "植入式医疗电子SoC",
+    "生物电信号采集芯片"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1014/1814.htm",
+   "email": "jianghanjun@tsinghua.edu.cn",
+   "notes": "IEEE高级会员；IEEE CASS杰出报告人；集成电路学院副院长"
+  },
+  {
+   "name_cn": "揭路",
+   "name_en": null,
+   "title": "准聘副教授",
+   "department": "集成电路学院·集成电路设计与设计自动化研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "高精度高速低功耗模数转换器ADC",
+    "射频数模转换器DAC",
+    "可重构数模混合电路",
+    "数模混合计算"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1014/1813.htm",
+   "email": "jielu@mail.tsinghua.edu.cn",
+   "notes": "新型ADC架构TINS-SAR/CaNS-SAR提出人"
+  },
+  {
+   "name_cn": "李福乐",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "集成电路学院·集成电路设计与设计自动化研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "高性能低功耗数据转换器ADC/DAC",
+    "模拟/数模混合集成电路设计",
+    "射频集成电路设计"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1014/1812.htm",
+   "email": "lifule@tsinghua.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "李翔宇",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "集成电路学院·集成电路设计与设计自动化研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "Chiplet技术",
+    "高能效SoC设计",
+    "信息安全集成电路",
+    "物联网与智能感知",
+    "低功耗电路与系统"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1014/1810.htm",
+   "email": "xiangyuli@tsinghua.edu.cn",
+   "notes": "国家级一流本科课程负责人；兼聘/交叉任职：BNRist"
+  },
+  {
+   "name_cn": "刘雷波",
+   "name_en": "Leibo Liu",
+   "title": "长聘教授",
+   "department": "集成电路学院·集成电路设计与设计自动化研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "软件定义芯片",
+    "硬件安全与密码芯片",
+    "可重构计算",
+    "VLSI数字信号处理",
+    "AI计算",
+    "硬件安全与可信芯片"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1014/1807.htm",
+   "email": "liulb@tsinghua.edu.cn",
+   "notes": "教育部长江学者特聘教授；国家技术发明二等奖；中国专利金奖；兼聘/交叉任职：BNRist"
+  },
+  {
+   "name_cn": "刘效森",
+   "name_en": null,
+   "title": "准聘副教授",
+   "department": "集成电路学院·集成电路设计与设计自动化研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "功率集成电路设计",
+    "电源管理芯片与系统",
+    "III-V族功率半导体电路",
+    "电子设计自动化"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1014/1806.htm",
+   "email": "liuxiaosen@tsinghua.edu.cn",
+   "notes": "国家高层次青年人才(2020)；2025年国家级高层次科技创新领军人才；集成电路设计与CAD研究所副所长"
+  },
+  {
+   "name_cn": "潘思宁",
+   "name_en": null,
+   "title": "准聘副教授",
+   "department": "集成电路学院·集成电路设计与设计自动化研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "传感器读出电路",
+    "CMOS基准源",
+    "存算一体电路",
+    "模拟/混合信号集成电路"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1014/1801.htm",
+   "email": "psn@tsinghua.edu.cn",
+   "notes": "IEEE高级会员；IEEE A-SSCC技术委员会成员"
+  },
+  {
+   "name_cn": "苏菲",
+   "name_en": null,
+   "title": "长聘教授",
+   "department": "集成电路学院·集成电路设计与设计自动化研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "芯片测试与可测性设计DFX",
+    "可靠性设计",
+    "芯片全生命周期管理SLM",
+    "Chiplet测试"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1014/2266.htm",
+   "email": "sufei@mail.tsinghua.edu.cn",
+   "notes": "清华大学兴华讲席教授；SRC Mahboob Khan杰出产业联络奖；IEEE D&T编委"
+  },
+  {
+   "name_cn": "王燕",
+   "name_en": null,
+   "title": "长聘教授",
+   "department": "集成电路学院·集成电路设计与设计自动化研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "器件建模与EDA工具开发",
+    "微波/毫米波集成电路设计",
+    "宽禁带半导体器件(SiC/GaN/金刚石)"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1014/1793.htm",
+   "email": "wangy46@tsinghua.edu.cn",
+   "notes": "清华大学模型模拟团队负责人；Journal of Computational Electronics副主编"
+  },
+  {
+   "name_cn": "王自强",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "集成电路学院·集成电路设计与设计自动化研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "CMOS模拟集成电路设计",
+    "高速串行接口电路",
+    "传感器检测电路"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1014/1790.htm",
+   "email": "wangziq@tsinghua.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "吴行军",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "集成电路学院·集成电路设计与设计自动化研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "高速低功耗数字集成电路设计",
+    "SoC芯片设计技术",
+    "信息安全芯片"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1014/1784.htm",
+   "email": "wuxj@tsinghua.edu.cn",
+   "notes": "第二代居民身份证芯片研制"
+  },
+  {
+   "name_cn": "谢翔",
+   "name_en": null,
+   "title": "长聘副教授",
+   "department": "集成电路学院·集成电路设计与设计自动化研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "存算一体集成电路",
+    "低功耗高性能数字电路与架构",
+    "先进信号处理",
+    "微型医疗电子"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1014/1782.htm",
+   "email": "xiexiang@tsinghua.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "叶佐昌",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "集成电路学院·集成电路设计与设计自动化研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "电子设计自动化EDA",
+    "集成电路建模仿真算法",
+    "统计分析方法"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1014/1778.htm",
+   "email": null,
+   "notes": "DAC/ICCAD/DATE/ASP-DAC TPC成员"
+  },
+  {
+   "name_cn": "尹首一",
+   "name_en": null,
+   "title": "长聘教授",
+   "department": "集成电路学院·集成电路设计与设计自动化研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "可重构计算",
+    "CMOS存算一体架构",
+    "人工智能芯片设计",
+    "集成电路设计"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1014/1777.htm",
+   "email": "yinsy@tsinghua.edu.cn",
+   "notes": "IEEE Fellow；国家杰出青年科学基金获得者；集成电路学院院长；兼聘/交叉任职：BNRist"
+  },
+  {
+   "name_cn": "张奥扬",
+   "name_en": null,
+   "title": "准聘副教授",
+   "department": "集成电路学院·集成电路设计与设计自动化研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "高性能计算芯片",
+    "硬件安全集成电路",
+    "全同态加密芯片",
+    "可重构射频集成电路"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1014/1775.htm",
+   "email": "aoyang@tsinghua.edu.cn",
+   "notes": "国家高层次青年人才(2021)；IEEE SSCS博士生成就奖"
+  },
+  {
+   "name_cn": "张春",
+   "name_en": null,
+   "title": "研究员",
+   "department": "集成电路学院·集成电路设计与设计自动化研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "数模混合信号集成电路设计",
+    "高速串行通信接口",
+    "数字信号处理芯片",
+    "智能机器人芯片"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1014/1774.htm",
+   "email": "zhangchun@tsinghua.edu.cn",
+   "notes": "集成电路设计研究所所长；国家科学技术进步奖二等奖"
+  },
+  {
+   "name_cn": "张雷",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "集成电路学院·集成电路设计与设计自动化研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "模拟/射频/毫米波/太赫兹集成电路",
+    "传感器信号链芯片",
+    "AI驱动集成电路设计方法学"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1014/1773.htm",
+   "email": "zhang.lei@tsinghua.edu.cn",
+   "notes": "IEEE CASS ASPTC专家组成员"
+  },
+  {
+   "name_cn": "白恩慧",
+   "name_en": null,
+   "title": "助理研究员",
+   "department": "集成电路学院·集成电路制造研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "混合器件类脑计算",
+    "类脑电路与时空处理系统",
+    "阻变存储器与铁电器件"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1015/2267.htm",
+   "email": "eunhyebaek@tsinghua.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "蔡坚",
+   "name_en": null,
+   "title": "研究员",
+   "department": "集成电路学院·集成电路制造研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "先进封装技术",
+    "三维封装互连",
+    "系统级封装与异质集成",
+    "封装可靠性"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1015/1828.htm",
+   "email": "jamescai@tsinghua.edu.cn",
+   "notes": "IEEE高级会员；IEEE-EPS北京分会主席；国家集成电路封测产业链技术创新战略联盟副理事长"
+  },
+  {
+   "name_cn": "邓宁",
+   "name_en": null,
+   "title": "研究员",
+   "department": "集成电路学院·集成电路制造研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "自旋器件与存储",
+    "半导体器件物理",
+    "人工智能技术应用"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1015/1824.htm",
+   "email": "ningdeng@tsinghua.edu.cn",
+   "notes": "清华大学高技术实验室副主任；北京量子信息科学研究院副院长"
+  },
+  {
+   "name_cn": "高滨",
+   "name_en": null,
+   "title": "长聘教授",
+   "department": "集成电路学院·集成电路制造研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "新型存储器",
+    "存算一体与神经形态芯片",
+    "设计-工艺协同优化",
+    "信息安全芯片"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1015/1819.htm",
+   "email": "gaob1@tsinghua.edu.cn",
+   "notes": "同页职称不一致：标题行为“高滨 长聘教授”，正文自述“现为清华大学集成电路学院副教授”（均为该页原文，本文件取标题行）。homepage 为该页给出的课题组主页。；兼聘/交叉任职：BNRist"
+  },
+  {
+   "name_cn": "高伟民",
+   "name_en": null,
+   "title": "长聘教授",
+   "department": "集成电路学院·集成电路制造研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "先进光刻技术",
+    "计算光刻",
+    "光学邻近效应修正OPC",
+    "设计工艺协同优化DTCO"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1015/2281.htm",
+   "email": "gaoweimin@tsinghua.edu.cn",
+   "notes": "前ASML技术总监；资深光刻技术专家"
+  },
+  {
+   "name_cn": "南天翔",
+   "name_en": null,
+   "title": "准聘副教授",
+   "department": "集成电路学院·集成电路制造研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "Beyond-CMOS新原理器件",
+    "MRAM存算一体器件",
+    "微机电系统"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1015/1803.htm",
+   "email": "nantianxiang@mail.tsinghua.edu.cn",
+   "notes": "2020年《麻省理工科技评论》35岁以下科技创新35人"
+  },
+  {
+   "name_cn": "潘立阳",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "集成电路学院·集成电路制造研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "ULSI集成电路工艺",
+    "新型半导体存储器技术"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1015/1802.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "钱鹤",
+   "name_en": null,
+   "title": "长聘教授",
+   "department": "集成电路学院·集成电路制造研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "新型半导体存储器",
+    "忆阻器存算一体芯片",
+    "嵌入式存储与安全认证",
+    "存算一体（CIM）芯片"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1015/1800.htm",
+   "email": "qianh@tsinghua.edu.cn",
+   "notes": "国家技术发明二等奖；政府特殊津贴；兼聘/交叉任职：BNRist"
+  },
+  {
+   "name_cn": "曲伟峰",
+   "name_en": null,
+   "title": "长聘教授",
+   "department": "集成电路学院·集成电路制造研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "硅材料物性与制造工艺",
+    "超宽禁带半导体材料",
+    "先进制程用半导体材料"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1015/2144.htm",
+   "email": "kyoku@mail.tsinghua.edu.cn",
+   "notes": "日本信越半导体前首席研究员；清华大学讲席教授"
+  },
+  {
+   "name_cn": "唐建石",
+   "name_en": "Jianshi Tang",
+   "title": "长聘副教授",
+   "department": "集成电路学院·集成电路制造研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "新型存储器",
+    "类脑计算",
+    "单片三维异质集成",
+    "RRAM存算一体",
+    "近传感计算"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1015/1798.htm",
+   "email": "jtang@tsinghua.edu.cn",
+   "notes": "国家级高层次人才计划；国家级青年人才计划；集成电路学院副院长；IEEE TED编辑；兼聘/交叉任职：BNRist"
+  },
+  {
+   "name_cn": "王谦",
+   "name_en": null,
+   "title": "研究员",
+   "department": "集成电路学院·集成电路制造研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "系统级封装SiP",
+    "晶圆级封装",
+    "三维集成与芯粒集成",
+    "封装可靠性与失效分析"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1015/1795.htm",
+   "email": "wang-qian@tsinghua.edu.cn",
+   "notes": "中国半导体行业协会封测分会常务理事"
+  },
+  {
+   "name_cn": "王晓红",
+   "name_en": null,
+   "title": "长聘教授",
+   "department": "集成电路学院·集成电路制造研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS器件与系统集成",
+    "微能源Power MEMS",
+    "微纳传感器"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1015/1794.htm",
+   "email": "wxh-ime@mail.tsinghua.edu.cn",
+   "notes": "IEEE高级会员；IEEE MEMS 2016大会主席；IEEE/ASME JMEMS副主编"
+  },
+  {
+   "name_cn": "王喆垚",
+   "name_en": null,
+   "title": "长聘教授",
+   "department": "集成电路学院·集成电路制造研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS与微纳传感器",
+    "三维集成与芯粒集成",
+    "TSV制造技术",
+    "射频MEMS"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1015/1792.htm",
+   "email": "z.wang@mail.tsinghua.edu.cn",
+   "notes": "IEEE高级会员；北京市科技新星；教育部新世纪优秀人才"
+  },
+  {
+   "name_cn": "吴华强",
+   "name_en": null,
+   "title": "长聘教授",
+   "department": "集成电路学院·集成电路制造研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "新型存储器",
+    "忆阻器存算一体",
+    "器件-架构-芯片协同设计",
+    "器件-架构-算法-芯片跨层次协同"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1015/1787.htm",
+   "email": null,
+   "notes": "国家杰出青年科学基金获得者；2019年科学探索奖；清华大学副校长；兼聘/交叉任职：BNRist"
+  },
+  {
+   "name_cn": "伍冬",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "集成电路学院·集成电路制造研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "图像传感器",
+    "非挥发性存储器",
+    "阵列式电路系统设计"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1015/1788.htm",
+   "email": "dongwu@tsinghua.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "许军",
+   "name_en": null,
+   "title": "研究员",
+   "department": "集成电路学院·集成电路制造研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "SiGe/Si微波功率HBT器件与集成电路",
+    "超高速应变硅MOS器件",
+    "超大规模集成电路工艺"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1015/1781.htm",
+   "email": "junxu@tsinghua.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "严利人",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "集成电路学院·集成电路制造研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路制造工艺",
+    "光刻工艺与设备",
+    "VLSI自动化制造",
+    "工艺分析诊断"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1015/1780.htm",
+   "email": "ylr@tsinghua.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "陈炜",
+   "name_en": null,
+   "title": "长聘教授",
+   "department": "集成电路学院·集成纳电子科学研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "纳电子学",
+    "分子电子器件",
+    "超导电子学",
+    "超导量子计算"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1013/1826.htm",
+   "email": "weichen@mail.tsinghua.edu.cn",
+   "notes": "清华大学百人计划特聘教授；英国剑桥大学Hitachi Fellow"
+  },
+  {
+   "name_cn": "付军",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "集成电路学院·集成纳电子科学研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "SiGe BiCMOS工艺",
+    "RF CMOS射频集成电路工艺",
+    "微波毫米波器件建模",
+    "声表面波谐振器"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1013/1821.htm",
+   "email": "fujun@tsinghua.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "李铁夫",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "集成电路学院·集成纳电子科学研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "超导量子计算芯片",
+    "量子接口器件",
+    "低温CMOS量子调控芯片"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1013/1811.htm",
+   "email": "litf@tsinghua.edu.cn",
+   "notes": "集成电路学院院长助理、人才培养办公室主任"
+  },
+  {
+   "name_cn": "刘建设",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "集成电路学院·集成纳电子科学研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "超导量子计算",
+    "超导量子比特",
+    "量子调控电路"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1013/1808.htm",
+   "email": "jsliu@tsinghua.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "刘玉玺",
+   "name_en": null,
+   "title": "长聘教授",
+   "department": "集成电路学院·集成纳电子科学研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "超导量子器件",
+    "固态量子信息处理",
+    "量子人工智能"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1013/1805.htm",
+   "email": "yuxiliu@tsinghua.edu.cn",
+   "notes": "国家重大科学研究计划项目首席科学家；百人计划"
+  },
+  {
+   "name_cn": "任天令",
+   "name_en": null,
+   "title": "长聘教授",
+   "department": "集成电路学院·集成纳电子科学研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "智能微纳电子器件",
+    "二维纳电子器件与芯片",
+    "柔性可穿戴芯片与系统",
+    "边缘智能柔性AI芯片"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1013/1799.htm",
+   "email": "RenTL@tsinghua.edu.cn",
+   "notes": "IEEE Fellow；国家杰出青年基金获得者；长江学者特聘教授；中国微米纳米技术学会会士"
+  },
+  {
+   "name_cn": "田禾",
+   "name_en": null,
+   "title": "长聘副教授",
+   "department": "集成电路学院·集成纳电子科学研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "二维材料微纳电子器件",
+    "阻变存储器",
+    "仿生突触器件",
+    "晶体管与传感器"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1013/1797.htm",
+   "email": "tianhe88@tsinghua.edu.cn",
+   "notes": "国家高层次青年人才(2020)；2024年国家级高层次科技创新领军人才；集成纳电子所副所长"
+  },
+  {
+   "name_cn": "王敬",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "集成电路学院·集成纳电子科学研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "碳化硅材料与器件",
+    "氮化镓材料与器件",
+    "锗材料与器件",
+    "新型半导体材料"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1013/1796.htm",
+   "email": "wang_j@tsinghua.edu.cn",
+   "notes": "国家科学技术进步二等奖"
+  },
+  {
+   "name_cn": "伍晓明",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "集成电路学院·集成纳电子科学研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成智能传感器",
+    "MEMS器件",
+    "能量收集器",
+    "碳基纳米器件"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1013/1785.htm",
+   "email": "imewuxm@tsinghua.edu.cn",
+   "notes": "清华大学微纳加工中心副主任"
+  },
+  {
+   "name_cn": "谢丹",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "集成电路学院·集成纳电子科学研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "二维材料电子器件",
+    "新型微纳电子材料与器件",
+    "柔性微纳电子器件",
+    "光电探测器"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1013/1783.htm",
+   "email": "xiedan@tsinghua.edu.cn",
+   "notes": "霍英东青年教师基金；教育部新世纪优秀人才"
+  },
+  {
+   "name_cn": "杨轶",
+   "name_en": null,
+   "title": "长聘副教授",
+   "department": "集成电路学院·集成纳电子科学研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "二维纳电子器件",
+    "纳米声学器件",
+    "集成谐振器件",
+    "柔性电子器件"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1013/1779.htm",
+   "email": "yiyang@tsinghua.edu.cn",
+   "notes": "集成电路学院党委副书记；IEEE电子器件学会北京分会主席"
+  },
+  {
+   "name_cn": "岳瑞峰",
+   "name_en": null,
+   "title": "研究员",
+   "department": "集成电路学院·集成纳电子科学研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "功率半导体器件",
+    "碳化硅SiC器件与集成电路",
+    "功率集成电路封装",
+    "半导体器件建模与仿真"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1013/1776.htm",
+   "email": "yuerf@tsinghua.edu.cn",
+   "notes": "清华大学模型、模拟与CAD团队骨干"
+  },
+  {
+   "name_cn": "Mark Neisser",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路学院·讲席教授团组",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光刻技术",
+    "光刻胶材料",
+    "极紫外光刻",
+    "半导体工艺"
+   ],
+   "homepage": "https://www.sic.tsinghua.edu.cn/info/1045/1868.htm",
+   "email": "markthu@mail.tsinghua.edu.cn",
+   "notes": "国际IRDS路线图光刻委员会主席；清华大学讲席教授"
+  },
+  {
+   "name_cn": "彭黎辉",
+   "name_en": null,
+   "title": "教授",
+   "department": "自动化系·检测与电子技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "传感器设计",
+    "电容层析成像(ECT)",
+    "过程成像",
+    "成像系统电子测量硬件",
+    "多传感器融合",
+    "两相流检测"
+   ],
+   "homepage": "https://www.au.tsinghua.edu.cn/info/1079/3239.htm",
+   "email": "lihuipeng@tsinghua.edu.cn",
+   "notes": "IEEE Senior Member (2015)；Associate Editor, IEEE Trans. on Instrumentation and Measurement；2009年教育部自然科学二等奖"
+  },
+  {
+   "name_cn": "叶朝辉",
+   "name_en": null,
+   "title": "副教授",
+   "department": "自动化系·检测与电子技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "可编程片上系统(PSoC)",
+    "FPGA电子系统设计",
+    "集成电路设计",
+    "三维声波测井信号采集与处理"
+   ],
+   "homepage": "https://www.au.tsinghua.edu.cn/info/1079/3241.htm",
+   "email": "yezhaohui@tsinghua.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "郑小平",
+   "name_en": null,
+   "title": "长聘教授",
+   "department": "自动化系·检测与电子技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "电磁波探测",
+    "太赫兹技术",
+    "危险化学品遥测预警",
+    "电磁场与微波技术"
+   ],
+   "homepage": "https://www.au.tsinghua.edu.cn/info/1079/3131.htm",
+   "email": "asean@mail.tsinghua.edu.cn",
+   "notes": "973首席科学家；国家杰出青年科学基金获得者；教育部长江学者特聘教授；2018年国家科技进步二等奖(排名1)"
+  },
+  {
+   "name_cn": "吴嘉敏",
+   "name_en": null,
+   "title": "副教授",
+   "department": "自动化系·脑与认知科学研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "计算光学",
+    "生物医学成像",
+    "单光子成像",
+    "科学智能",
+    "光电智能计算",
+    "智能成像芯片"
+   ],
+   "homepage": "https://www.au.tsinghua.edu.cn/info/1080/3223.htm",
+   "email": "wujiamin@tsinghua.edu.cn",
+   "notes": "准聘副教授（tenure-track）；博士生导师；兼聘/交叉任职：人工智能学院"
+  },
+  {
+   "name_cn": "李兆麟",
+   "name_en": "Zhaolin Li",
+   "title": "教授",
+   "department": "计算机科学与技术系·高性能计算研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "计算机系统结构",
+    "众核处理器",
+    "智能处理器",
+    "并行编译优化",
+    "ReRAM存算架构"
+   ],
+   "homepage": null,
+   "email": "lzl73@mail.tsinghua.edu.cn",
+   "notes": "高等学校科学研究优秀成果奖技术发明一等奖（2019）；中国电子学会技术发明一等奖（2017）"
+  },
+  {
+   "name_cn": "钱学海",
+   "name_en": "Xuehai Qian",
+   "title": "长聘教授",
+   "department": "计算机科学与技术系·高性能计算研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "计算机体系结构",
+    "领域定制加速器",
+    "存内计算架构",
+    "缓存一致性协议",
+    "硬件安全",
+    "计算机系统"
+   ],
+   "homepage": "https://alchem.cs.tsinghua.edu.cn",
+   "email": "xuehaiq@tsinghua.edu.cn",
+   "notes": "ISCA/ASPLOS/MICRO/HPCA 四大体系结构顶会 Hall of Fame；NSF CAREER Award（2018）；美国首届华人计算机新星奖（2019）；IEEE高级会员（2019）；兼聘/交叉任职：BNRist"
+  },
+  {
+   "name_cn": "渠鹏",
+   "name_en": "Peng Qu",
+   "title": "副研究员",
+   "department": "计算机科学与技术系·高性能计算研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "计算机体系结构",
+    "类脑计算",
+    "神经形态计算系统",
+    "异构融合芯片"
+   ],
+   "homepage": null,
+   "email": "qp2018@tsinghua.edu.cn",
+   "notes": "Nature（2020）类脑计算层次结构论文共同第一作者；清华大学优秀博士后（2021）"
+  },
+  {
+   "name_cn": "舒继武",
+   "name_en": "Jiwu Shu",
+   "title": "教授",
+   "department": "计算机科学与技术系·高性能计算研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "持久性内存存储系统",
+    "存内计算PIM架构",
+    "闪存存储系统",
+    "存储可靠性"
+   ],
+   "homepage": "http://storage.cs.tsinghua.edu.cn/~jiwu-shu/",
+   "email": "shujw@tsinghua.edu.cn",
+   "notes": "国家科学技术发明二等奖（2015，面向社区共享的高可用云存储系统）"
+  },
+  {
+   "name_cn": "汪东升",
+   "name_en": "Dongsheng Wang",
+   "title": "教授",
+   "department": "计算机科学与技术系·高性能计算研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "计算机体系结构",
+    "微处理器与SoC",
+    "处理器安全",
+    "安全硬件",
+    "FPGA智能加速"
+   ],
+   "homepage": null,
+   "email": "wds@tsinghua.edu.cn",
+   "notes": "微处理器与SoC研究中心负责人（2003年成立）；国家科技进步二等奖1次、省部级一等奖3次"
+  },
+  {
+   "name_cn": "张悠慧",
+   "name_en": "Youhui Zhang",
+   "title": "研究员",
+   "department": "计算机科学与技术系·高性能计算研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "高性能处理器微体系结构",
+    "类脑计算芯片",
+    "存算融合芯片",
+    "类脑计算基础软件",
+    "异构融合处理器"
+   ],
+   "homepage": "https://craft.cs.tsinghua.edu.cn/",
+   "email": "zyh02@tsinghua.edu.cn",
+   "notes": "2024年北京市自然科学一等奖（异构融合类脑计算基础理论和架构研究）；2022年CCF技术发明一等奖；2022年日内瓦发明金奖；2025年祖冲之奖；『天机』类脑芯片与类脑计算完备性Nature论文作者；兼聘/交叉任职：BNRist"
+  },
+  {
+   "name_cn": "章明星",
+   "name_en": "Mingxing Zhang",
+   "title": "副教授",
+   "department": "计算机科学与技术系·高性能计算研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "计算机系统结构",
+    "并行与分布式处理",
+    "内存系统"
+   ],
+   "homepage": "http://madsys.cs.tsinghua.edu.cn/~zhangmx/",
+   "email": "zhang_mingxing@mail.tsinghua.edu.cn",
+   "notes": "ACM SIGSOFT杰出论文奖；成果发表于OSDI/SOSP/ASPLOS/HPCA"
+  },
+  {
+   "name_cn": "赵文来",
+   "name_en": "Wenlai Zhao",
+   "title": "助理研究员",
+   "department": "计算机科学与技术系·高性能计算研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "可重构计算",
+    "并行计算",
+    "智能计算系统",
+    "可重构加速单元设计",
+    "国产众核处理器"
+   ],
+   "homepage": "wenlai.life",
+   "email": "zhaowenlai@tsinghua.edu.cn",
+   "notes": "国家超级计算无锡中心人工智能研发中心主任"
+  },
+  {
+   "name_cn": "郑纬民",
+   "name_en": "Weimin Zheng",
+   "title": "教授",
+   "department": "计算机科学与技术系·高性能计算研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "高性能计算机体系结构",
+    "并行算法与系统",
+    "存储系统",
+    "大数据与人工智能处理平台"
+   ],
+   "homepage": null,
+   "email": "zwm-dcs@tsinghua.edu.cn",
+   "notes": "中国工程院院士（2019年入选，见杰出人才页）；北京市教学名师（2009年入选）；国家科技进步奖一等奖（2002）"
+  },
+  {
+   "name_cn": "马昱春",
+   "name_en": "Yuchun Ma",
+   "title": "教授",
+   "department": "计算机科学与技术系·基础与实验教学部",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计自动化",
+    "布图规划",
+    "三维芯片物理设计",
+    "算法设计与分析"
+   ],
+   "homepage": null,
+   "email": "myc@tsinghua.edu.cn",
+   "notes": "北京市青年教学名师（2022年入选，见教学名师页）；ASICON 2007最佳论文奖"
+  },
+  {
+   "name_cn": "乔林",
+   "name_en": "Lin Qiao",
+   "title": "副教授",
+   "department": "计算机科学与技术系·基础与实验教学部",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "计算机系统结构",
+    "多核处理器片上网络"
+   ],
+   "homepage": null,
+   "email": "qiaolin@tsinghua.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "喻文健",
+   "name_en": "Wenjian Yu",
+   "title": "教授",
+   "department": "计算机科学与技术系·计算机软件研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "电子设计自动化(EDA)算法与软件",
+    "数值计算",
+    "机器学习与大数据分析算法",
+    "FPGA原型验证划分"
+   ],
+   "homepage": "http://numbda.cs.tsinghua.edu.cn/",
+   "email": "yu-wj@tsinghua.edu.cn",
+   "notes": "IEEE Fellow（2025）；ASPDAC 2025最佳论文奖；CCF科技成果奖技术发明二等奖（2024，排名第1）"
+  },
+  {
+   "name_cn": "周强",
+   "name_en": "Qiang Zhou",
+   "title": "研究员",
+   "department": "计算机科学与技术系·计算机软件研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "电子设计自动化",
+    "布图理论与算法",
+    "三维IC物理设计",
+    "可重构SoC与FPGA",
+    "低功耗互连优化"
+   ],
+   "homepage": null,
+   "email": "zhouqiang@tsinghua.edu.cn",
+   "notes": "北京市科学技术二等奖（2007，超深亚微米SOC物理级CAD关键技术及其应用）"
+  },
+  {
+   "name_cn": "樊海宁",
+   "name_en": "Haining Fan",
+   "title": "副研究员",
+   "department": "计算机科学与技术系·计算机网络研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "密码计算",
+    "有限域并行乘法器设计",
+    "密码硬件实现",
+    "信息安全"
+   ],
+   "homepage": null,
+   "email": "fhn@tsinghua.edu.cn",
+   "notes": "2012 IET Information Security Premium Award；其GF(2^n)乘法器被用于3D XPoint存储芯片与NIST后量子密码硬件评估"
+  },
+  {
+   "name_cn": "刘斌",
+   "name_en": "Bin Liu",
+   "title": "教授",
+   "department": "计算机科学与技术系·计算机网络研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "高性能路由器",
+    "高性能交换机",
+    "软件定义网络",
+    "内容中心网络",
+    "高速网络测量"
+   ],
+   "homepage": null,
+   "email": "liub@tsinghua.edu.cn",
+   "notes": "中国青年科技奖（2001）；中国计算机学会『王选奖』二等奖（2008）；中国电子学会技术发明奖二等奖（2014）"
+  },
+  {
+   "name_cn": "尹霞",
+   "name_en": "Xia Yin",
+   "title": "教授",
+   "department": "计算机科学与技术系·计算机网络研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "计算机体系结构",
+    "计算机网络",
+    "互联网体系结构",
+    "协议测试"
+   ],
+   "homepage": null,
+   "email": "yxia@tsinghua.edu.cn",
+   "notes": "中国青年科技奖（2017）；国家技术发明奖二等奖（2016，可扩展路由交换关键技术）；国家科技进步二等奖（IPv6核心路由器，2005）"
+  },
+  {
+   "name_cn": "张小平",
+   "name_en": "Xiaoping Zhang",
+   "title": "研究员",
+   "department": "计算机科学与技术系·计算机网络研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "计算机体系结构",
+    "高性能路由器体系结构",
+    "可扩展交换结构",
+    "高速网络测试设备"
+   ],
+   "homepage": null,
+   "email": "zhxp@tsinghua.edu.cn",
+   "notes": "国家科技进步二等奖（IPv6核心路由器，2005）；教育部科技进步一等奖（BitEngine系列核心路由器，2006）"
+  },
+  {
+   "name_cn": "赵有健",
+   "name_en": "Youjian Zhao",
+   "title": "教授",
+   "department": "计算机科学与技术系·计算机网络研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "高速互联网体系结构",
+    "交换与路由",
+    "高速网络设备",
+    "高性能路由器体系结构"
+   ],
+   "homepage": null,
+   "email": "zhaoyoujian@tsinghua.edu.cn",
+   "notes": "中国青年科技奖（2010）；国家科技进步二等奖（IPv6核心路由器，2005）"
+  },
+  {
+   "name_cn": "陈建鑫",
+   "name_en": "Jianxin Chen",
+   "title": "长聘副教授",
+   "department": "计算机科学与技术系·智能技术与系统实验室",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "量子体系结构与系统",
+    "量子纠错与容错",
+    "量子软硬协同设计",
+    "量子指令集与微架构",
+    "超导量子芯片测控"
+   ],
+   "homepage": null,
+   "email": "chenjianxin@tsinghua.edu.cn",
+   "notes": "提出时间维度并行的量子纠错实时解码方案（超导量子芯片）；ASPLOS、DAC、PRX Quantum等发表"
+  },
+  {
+   "name_cn": "段路明",
+   "name_en": "Luming Duan",
+   "title": "讲席教授",
+   "department": "交叉信息研究院（IIIS）·量子信息中心",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "离子量子计算",
+    "超导量子计算",
+    "量子网络",
+    "量子模拟",
+    "量子中继"
+   ],
+   "homepage": "https://iiis.tsinghua.edu.cn/rydw/qzjs/duanluming.htm",
+   "email": "lmduan@tsinghua.edu.cn",
+   "notes": "清华大学姚期智讲座教授、清华大学基础科学讲席教授；人工智能学院学术委员会名单列示为院士；美国物理学会会士(2009)；国家自然科学二等奖；美国斯隆研究奖(2004)；DLCZ量子中继方案提出者"
+  },
+  {
+   "name_cn": "濮云飞",
+   "name_en": "Yunfei Pu",
+   "title": "助理教授",
+   "department": "交叉信息研究院（IIIS）·量子信息中心",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "离子阱量子网络",
+    "中性原子阵列量子计算",
+    "量子存储",
+    "量子中继",
+    "量子纠缠"
+   ],
+   "homepage": "https://iiis.tsinghua.edu.cn/rydw/qzjs/puyunfei.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "孙麓岩",
+   "name_en": "Luyan Sun",
+   "title": "教授",
+   "department": "交叉信息研究院（IIIS）·量子信息中心",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "超导量子信息处理",
+    "量子纠错",
+    "量子反馈控制",
+    "超导量子芯片"
+   ],
+   "homepage": "https://iiis.tsinghua.edu.cn/rydw/qzjs/sunluyan.htm",
+   "email": null,
+   "notes": "国家杰出青年科学基金(2019)；清华大学221基础研究青年人才支持计划(2014)"
+  },
+  {
+   "name_cn": "吴宇恺",
+   "name_en": "Yukai Wu",
+   "title": "助理教授",
+   "department": "交叉信息研究院（IIIS）·量子信息中心",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "量子计算物理实现",
+    "量子信息理论",
+    "离子阱量子计算",
+    "量子机器学习"
+   ],
+   "homepage": "https://iiis.tsinghua.edu.cn/rydw/qzjs/wukaiyu.htm",
+   "email": null,
+   "notes": "清华大学优秀博士后(2021)；水木清华学者(2019)；国际博士后交流计划(2019)"
+  },
+  {
+   "name_cn": "常秀英",
+   "name_en": "Xiu-Ying Chang",
+   "title": "副研究员",
+   "department": "交叉信息研究院（IIIS）·量子信息中心",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "量子传感",
+    "超导量子计算",
+    "量子纠缠",
+    "量子纠错",
+    "量子网络节点"
+   ],
+   "homepage": "https://iiis.tsinghua.edu.cn/rydw/yjxl/changxiuying.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "何丽",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "交叉信息研究院（IIIS）·量子信息中心",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "离子阱量子存储",
+    "低温系统",
+    "大规模量子计算",
+    "金刚石色心量子门"
+   ],
+   "homepage": "https://iiis.tsinghua.edu.cn/rydw/yjxl/heli.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "黄园园",
+   "name_en": null,
+   "title": "助理研究员",
+   "department": "交叉信息研究院（IIIS）·量子信息中心",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "离子阱量子网络",
+    "量子纠缠",
+    "量子网络节点",
+    "离子阱实验"
+   ],
+   "homepage": "https://iiis.tsinghua.edu.cn/rydw/yjxl/huangyuanyuan.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "姜越",
+   "name_en": null,
+   "title": "助理研究员",
+   "department": "交叉信息研究院（IIIS）·量子信息中心",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "离子阱芯片研发",
+    "离子阱量子计算",
+    "离子阱量子模拟",
+    "MEMS工艺"
+   ],
+   "homepage": "https://iiis.tsinghua.edu.cn/rydw/yjxl/jiangyue.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "刘艳青",
+   "name_en": "Yanqing Liu",
+   "title": "助理研究员",
+   "department": "交叉信息研究院（IIIS）·量子信息中心",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "金刚石色心量子传感",
+    "量子精密测量",
+    "金刚石薄膜器件"
+   ],
+   "homepage": "https://iiis.tsinghua.edu.cn/rydw/yjxl/liuyanqing.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "祁宾祥",
+   "name_en": "Binxiang Qi",
+   "title": "助理研究员",
+   "department": "交叉信息研究院（IIIS）·量子信息中心",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "离子阱量子计算控制系统",
+    "量子比特测控电子学",
+    "量子精密测量",
+    "电子学技术"
+   ],
+   "homepage": "https://iiis.tsinghua.edu.cn/rydw/yjxl/qibinxiang.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "宋祎璞",
+   "name_en": null,
+   "title": "研究员",
+   "department": "交叉信息研究院（IIIS）·量子信息中心",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "超导量子计算",
+    "超导量子比特",
+    "量子模拟",
+    "介观输运",
+    "可扩展超导架构"
+   ],
+   "homepage": "https://iiis.tsinghua.edu.cn/rydw/yjxl/songyipu.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王韦婷",
+   "name_en": "Weiting Wang",
+   "title": "助理研究员",
+   "department": "交叉信息研究院（IIIS）·量子信息中心",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "超导量子信息处理",
+    "混合量子系统",
+    "超导量子比特",
+    "量子态传输"
+   ],
+   "homepage": "https://iiis.tsinghua.edu.cn/rydw/yjxl/wangweiting.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张宏毅",
+   "name_en": "Hongyi Zhang",
+   "title": "副研究员",
+   "department": "交叉信息研究院（IIIS）·量子信息中心",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "超导量子信息处理",
+    "微波量子光学",
+    "量子器件",
+    "片上微波脉冲发生器",
+    "微波单光子"
+   ],
+   "homepage": "https://iiis.tsinghua.edu.cn/rydw/yjxl/zhanghongyi.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "周子超",
+   "name_en": "Zichao Zhou",
+   "title": "研究员",
+   "department": "交叉信息研究院（IIIS）·量子信息中心",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "离子阱量子信息处理",
+    "离子阱量子计算",
+    "量子模拟",
+    "量子网络",
+    "量子精密测量"
+   ],
+   "homepage": "https://iiis.tsinghua.edu.cn/rydw/yjxl/zhouzichao.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "侯攀宇",
+   "name_en": "Pan-Yu Hou",
+   "title": "助理教授",
+   "department": "交叉信息研究院（IIIS）·量子信息中心",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "离子量子计算",
+    "离子阱量子模拟",
+    "金刚石色心量子信息",
+    "量子传感",
+    "量子纠缠门"
+   ],
+   "homepage": "https://iiis.tsinghua.edu.cn/rydw/qzjs/houpanyu.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "马恺声",
+   "name_en": "Kaisheng Ma",
+   "title": "长聘副教授",
+   "department": "交叉信息研究院（IIIS）·ARChip Lab",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "AI芯片",
+    "Chiplet",
+    "计算机体系结构",
+    "AI算法设计",
+    "非易失处理器"
+   ],
+   "homepage": "https://iiis.tsinghua.edu.cn/rydw/qzjs/makaisheng.htm",
+   "email": "kaisheng@tsinghua.edu.cn",
+   "notes": "2018 EDAA Best Dissertation Award；2022年度CCF集成电路Early Career Award；HPCA 2024 Distinguished Artifact Award（交叉信息院资讯页）"
+  },
+  {
+   "name_cn": "高鸣宇",
+   "name_en": "Mingyu Gao",
+   "title": "长聘副教授",
+   "department": "交叉信息研究院（IIIS）·IDEAL实验室",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "计算机系统结构",
+    "新型存储架构",
+    "专用计算系统",
+    "硬件系统安全",
+    "近数据处理"
+   ],
+   "homepage": "https://iiis.tsinghua.edu.cn/rydw/qzjs/gaomingyu.htm",
+   "email": null,
+   "notes": "HPCA 2024 Distinguished Artifact Award（交叉信息院资讯页）；交叉信息研究院院长助理"
+  },
+  {
+   "name_cn": "方璐",
+   "name_en": "Lu FANG",
+   "title": "教授",
+   "department": "电子工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光场智能成像",
+    "光电智能计算芯片",
+    "计算摄影",
+    "光电计算芯片",
+    "光子计算"
+   ],
+   "homepage": "https://collegeai.tsinghua.edu.cn/rydw.htm",
+   "email": "fanglu@tsinghua.edu.cn",
+   "notes": "信息国家研究中心光电智能技术交叉创新群体带头人 Optica Fellow（页面原文“Optica Fellow”）。页面邮箱写作反爬形式“fanglu at tsinghua.edu.cn”，未按规范格式记录故 email 为 null。页面自述组内方向为 optics/electronics/algorithms 联合设计与 photonic computing、neuromorphic computing。"
+  },
+  {
+   "name_cn": "曹婷",
+   "name_en": null,
+   "title": "研究员",
+   "department": "智能产业研究院（AIR）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "神经网络加速器",
+    "边缘智能",
+    "神经网络训推系统",
+    "物理智能",
+    "计算机系统"
+   ],
+   "homepage": "https://air.tsinghua.edu.cn/airtd/yjtd.htm",
+   "email": null,
+   "notes": "2012 ACM Research Highlights；2012 IEEE Micro Top Picks；2021 ACM SIGMOBILE Research Highlights（AIR研究团队页面）"
+  },
+  {
+   "name_cn": "刘云新",
+   "name_en": null,
+   "title": "首席研究员",
+   "department": "智能产业研究院（AIR）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "边缘计算架构",
+    "异构计算",
+    "移动计算",
+    "端侧智能系统",
+    "边缘智能"
+   ],
+   "homepage": "https://air.tsinghua.edu.cn/airtd/yjtd.htm",
+   "email": "liuyunxin@air.tsinghua.edu.cn",
+   "notes": "IEEE Fellow；博士生导师；AIR副院长；国家重点研发计划项目负责人；入选国家高层次人才计划（AIR研究团队页面）"
+  },
+  {
+   "name_cn": "冯硝",
+   "name_en": "Feng Xiao",
+   "title": "副教授",
+   "department": "物理系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "低维量子器件制备探索",
+    "拓扑材料与低维量子材料",
+    "分子束外延",
+    "量子反常霍尔"
+   ],
+   "homepage": "https://www.phys.tsinghua.edu.cn/info/1097/5601.htm",
+   "email": "xiaofeng@mail.tsinghua.edu.cn",
+   "notes": "2017-2019年任北京-清华大学未来芯片技术高精尖创新中心助理研究员"
+  },
+  {
+   "name_cn": "刘东",
+   "name_en": "Liu Dong",
+   "title": "副教授",
+   "department": "物理系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "量子芯片校准",
+    "量子计算机体系结构与量子编码",
+    "量子器件输运与量子测量",
+    "拓扑量子计算",
+    "马约拉纳"
+   ],
+   "homepage": "https://www.phys.tsinghua.edu.cn/info/1098/4212.htm",
+   "email": "dongeliu@mail.tsinghua.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "柳鹏",
+   "name_en": "Liu Peng",
+   "title": "副研究员",
+   "department": "物理系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "低维碳纳米材料电子学",
+    "半导体碳纳米管阵列",
+    "碳纳米管场发射与膜栅极",
+    "真空电子学"
+   ],
+   "homepage": "https://www.phys.tsinghua.edu.cn/info/1098/5118.htm",
+   "email": "pengliu@tsinghua.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "王宇航",
+   "name_en": "Wang Yuhang",
+   "title": "副教授",
+   "department": "物理系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "界面型忆阻器机理",
+    "低维凝聚态体系多场调控",
+    "扫描探针显微术"
+   ],
+   "homepage": "https://www.phys.tsinghua.edu.cn/info/1100/6021.htm",
+   "email": "wangyuhang@mail.tsinghua.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "张定",
+   "name_en": "Zhang Ding",
+   "title": "教授",
+   "department": "物理系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "高温超导约瑟夫森结",
+    "量子超导二极管",
+    "微纳加工与场效应/离子调控",
+    "超导量子器件"
+   ],
+   "homepage": "https://www.phys.tsinghua.edu.cn/info/1101/5441.htm",
+   "email": "dingzhang@tsinghua.edu.cn",
+   "notes": "茅以升科学技术奖-北京青年科技奖(2025)；麻省理工科技评论中国“35岁以下科技创新35人”(2020)；清华大学学术新人奖(2019)"
+  },
+  {
+   "name_cn": "张金松",
+   "name_en": "Zhang Jinsong",
+   "title": "副教授",
+   "department": "物理系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微纳加工与量子输运器件",
+    "量子反常霍尔效应",
+    "拓扑绝缘体",
+    "二维层状材料",
+    "石墨烯场效应晶体管"
+   ],
+   "homepage": "https://info.phys.tsinghua.edu.cn/zhanglab",
+   "email": "jinsongzhang@mail.tsinghua.edu.cn",
+   "notes": "求是杰出青年学者奖(2020)；亚太物理学会杨振宁奖(2020)；瑞士Chorafas青年研究奖(2014)"
+  },
+  {
+   "name_cn": "赵永刚",
+   "name_en": "Zhao Yonggang",
+   "title": "教授",
+   "department": "物理系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "自旋电子学薄膜与器件",
+    "磁性薄膜异质结构设计与微加工",
+    "多铁与磁电耦合",
+    "庞磁/巨磁电阻材料"
+   ],
+   "homepage": "http://info.phys.tsinghua.edu.cn/zhao/",
+   "email": "ygzhao@tsinghua.edu.cn",
+   "notes": "国家杰出青年科学基金(2004)；清华大学“学术新人奖”(2002)；中国电子学会应用磁学分会委员"
+  },
+  {
+   "name_cn": "熊启华",
+   "name_en": "Xiong Qihua",
+   "title": "教授",
+   "department": "物理系·量子人工智能北京市重点实验室",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光电子学器件",
+    "激子极化激元器件",
+    "钙钛矿半导体微腔与激射",
+    "二维材料范德华异质结光子学"
+   ],
+   "homepage": "https://www.phys.tsinghua.edu.cn/info/1101/4551.htm",
+   "email": "qihua_xiong@tsinghua.edu.cn",
+   "notes": "美国材料研究学会会士(2022)；美国光学会会士(2021)；美国物理学会会士(2018)；亚太材料科学院院士(2019)；国家特聘专家长期项目(2017)；量子人工智能北京市重点实验室主任；《Nano Letters》副主编"
+  },
+  {
+   "name_cn": "江万军",
+   "name_en": "Jiang Wanjun",
+   "title": "教授",
+   "department": "物理系·凝聚态物理研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "自旋器件与芯片",
+    "拓扑自旋结构与磁性斯格明子",
+    "反铁磁自旋电子学",
+    "自旋轨道矩"
+   ],
+   "homepage": "http://info.phys.tsinghua.edu.cn/JiangLab/",
+   "email": "jiang_lab@tsinghua.edu.cn",
+   "notes": "加拿大总督科研金奖(2010)；国家优秀自费留学生奖(2008)；加州大学洛杉矶分校博士后科研校长奖(2012)"
+  },
+  {
+   "name_cn": "李群庆",
+   "name_en": "Li Qunqing",
+   "title": "研究员",
+   "department": "物理系·清华-富士康纳米科技研究中心",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "碳纳米管晶体管",
+    "器件结构与工艺",
+    "微米/纳米结构集成制备技术"
+   ],
+   "homepage": "https://www.phys.tsinghua.edu.cn/info/1098/4216.htm",
+   "email": "qunqli@mail.tsinghua.edu.cn",
+   "notes": "研究员、博士生导师(2007.12-)"
+  },
+  {
+   "name_cn": "邓磊",
+   "name_en": "Deng Lei",
+   "title": "副教授",
+   "department": "精密仪器系·仪器科学与技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "类脑计算芯片",
+    "类脑计算模型",
+    "存算一体",
+    "边缘智能硬件"
+   ],
+   "homepage": "http://faculty.dpi.tsinghua.edu.cn/denglei/zh_CN/index.htm",
+   "email": null,
+   "notes": "国家级青年人才；2022年中国计算机学会技术发明一等奖；2019年中国科学十大进展（参与）"
+  },
+  {
+   "name_cn": "董永贵",
+   "name_en": "Dong Yonggui",
+   "title": "教授",
+   "department": "精密仪器系·仪器科学与技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "谐振式传感器",
+    "石英晶体/声表面波(SAW)传感器",
+    "电阻抗谱传感器",
+    "FPGA软硬件协同设计"
+   ],
+   "homepage": "http://faculty.dpi.tsinghua.edu.cn/dongyonggui/zh_CN/index.htm",
+   "email": null,
+   "notes": "2003年国家发明二等奖（谐振式传感器研究）"
+  },
+  {
+   "name_cn": "冯焱颖",
+   "name_en": "Feng Yanying",
+   "title": "副教授",
+   "department": "精密仪器系·仪器科学与技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "量子惯性导航",
+    "原子干涉陀螺仪",
+    "原子光学",
+    "原子磁力仪",
+    "量子精密测量"
+   ],
+   "homepage": "http://faculty.dpi.tsinghua.edu.cn/fengyanying/zh_CN/index.htm",
+   "email": "yyfeng@mail.tsinghua.edu.cn",
+   "notes": "博士生导师；中国仪器仪表学会量子传感与精密测量仪器分会常务委员"
+  },
+  {
+   "name_cn": "纪兴龙",
+   "name_en": "Xinglong Ji",
+   "title": "副研究员",
+   "department": "精密仪器系·仪器科学与技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "存算一体",
+    "类脑计算芯片",
+    "非易失性存储技术",
+    "边缘智能计算",
+    "领域专用计算架构"
+   ],
+   "homepage": "http://faculty.dpi.tsinghua.edu.cn/jixinglong/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李黄龙",
+   "name_en": "Li Huanglong",
+   "title": "副教授",
+   "department": "精密仪器系·仪器科学与技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体信息器件",
+    "神经形态器件",
+    "忆阻器",
+    "新型晶体管",
+    "半导体信息材料"
+   ],
+   "homepage": "http://faculty.dpi.tsinghua.edu.cn/lihuanglong/zh_CN/index.htm",
+   "email": "li_huanglong@mail.tsinghua.edu.cn",
+   "notes": "剑桥大学电子工程系博士；清华大学类脑计算研究中心"
+  },
+  {
+   "name_cn": "柳世强",
+   "name_en": "Liu shiqiang",
+   "title": "副教授",
+   "department": "精密仪器系·仪器科学与技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "触觉传感",
+    "多模传感器与系统设计",
+    "人机接口",
+    "可穿戴健康监测",
+    "智能机器人"
+   ],
+   "homepage": "http://faculty.dpi.tsinghua.edu.cn/liushiqiang/zh_CN/index.htm",
+   "email": null,
+   "notes": "清华大学优秀博士后；国家高层次青年人才项目支持"
+  },
+  {
+   "name_cn": "任大海",
+   "name_en": "Ren Dahai",
+   "title": "副教授",
+   "department": "精密仪器系·仪器科学与技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "生物微系统(BioMEMS)",
+    "微纳传感器",
+    "单细胞分离技术与芯片",
+    "微型谐振式磁敏感器",
+    "MEMS热电转换器件"
+   ],
+   "homepage": "http://faculty.dpi.tsinghua.edu.cn/rendahai/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "阮勇",
+   "name_en": "Ruan Yong",
+   "title": "研究员",
+   "department": "精密仪器系·仪器科学与技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "硅基MEMS工艺",
+    "MEMS加工技术",
+    "芯片级原子态器件",
+    "MEMS继电器",
+    "恶劣环境MEMS传感器"
+   ],
+   "homepage": "http://faculty.dpi.tsinghua.edu.cn/ruanyong/zh_CN/index.htm",
+   "email": null,
+   "notes": "北京大学微纳电子学系博士；清华大学微电子学研究所博士后"
+  },
+  {
+   "name_cn": "施路平",
+   "name_en": "Shi Luping",
+   "title": "教授",
+   "department": "精密仪器系·仪器科学与技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "类脑计算",
+    "类脑芯片(天机tianjic)",
+    "神经形态器件",
+    "信息存储",
+    "集成光电子"
+   ],
+   "homepage": "http://faculty.dpi.tsinghua.edu.cn/shiluping/zh_CN/index.htm",
+   "email": null,
+   "notes": "清华大学类脑计算研究中心主任；博士生导师；研制首款跨模态异构融合神经形态类脑计算芯片tianjic"
+  },
+  {
+   "name_cn": "王超",
+   "name_en": "Chao Wang",
+   "title": "教授",
+   "department": "精密仪器系·仪器科学与技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路芯片制造关键参数在线监测",
+    "芯片制造装备及核心部件",
+    "高温动态环境高精度在线监测",
+    "能量转换与存储一体化器件"
+   ],
+   "homepage": "http://faculty.dpi.tsinghua.edu.cn/wangchao/zh_CN/index.htm",
+   "email": null,
+   "notes": "国家高层次人才计划入选者；第十五届中国青年科技奖；中国电子学会技术发明一等奖（第一完成人）"
+  },
+  {
+   "name_cn": "王鹏",
+   "name_en": "Wang Peng",
+   "title": "副教授",
+   "department": "精密仪器系·仪器科学与技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "智能传感器",
+    "嵌入式系统软硬件协同设计",
+    "电化学阻抗谱检测",
+    "表面等离子体共振检测"
+   ],
+   "homepage": "http://faculty.dpi.tsinghua.edu.cn/wangpeng1/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王文会",
+   "name_en": "Wang Wenhui",
+   "title": "副教授",
+   "department": "精密仪器系·仪器科学与技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微纳光机电器件与系统",
+    "微流体器件与系统",
+    "微操作",
+    "生物医学微系统"
+   ],
+   "homepage": "http://faculty.dpi.tsinghua.edu.cn/wangwenhui/zh_CN/index.htm",
+   "email": "wwh@tsinghua.edu.cn",
+   "notes": "IEEE高级会员；中国仪器仪表学会微纳器件与系统技术分会理事；青年千人"
+  },
+  {
+   "name_cn": "王晓峰",
+   "name_en": "Wang Xiaofeng",
+   "title": "研究员",
+   "department": "精密仪器系·仪器科学与技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS微电极加工",
+    "微能源封装技术",
+    "超级电容器",
+    "MEMS生化检测传感器",
+    "微纳米功能材料"
+   ],
+   "homepage": "http://faculty.dpi.tsinghua.edu.cn/wangxiaofeng/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "邢飞",
+   "name_en": "Xing Fei",
+   "title": "教授",
+   "department": "精密仪器系·仪器科学与技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微小卫星",
+    "高精度姿态测量传感器",
+    "MEMS太阳敏感器",
+    "APS星敏感器",
+    "智能微系统"
+   ],
+   "homepage": "http://faculty.dpi.tsinghua.edu.cn/xingfei/zh_CN/index.htm",
+   "email": null,
+   "notes": "长聘教授；国家高层次人才；第三届科学探索奖；国家技术发明二等奖2项"
+  },
+  {
+   "name_cn": "叶雄英",
+   "name_en": "Ye Xiongying",
+   "title": "教授",
+   "department": "精密仪器系·仪器科学与技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微纳传感器",
+    "微执行器",
+    "微流控器件及芯片",
+    "微纳发电机",
+    "自供能传感器"
+   ],
+   "homepage": "http://faculty.dpi.tsinghua.edu.cn/yexiongying/zh_CN/index.htm",
+   "email": "xyye@mail.tsinghua.edu.cn",
+   "notes": "东京大学工学博士；中国微米纳米技术学会常务理事；国家奖1项、省部级一等奖2项"
+  },
+  {
+   "name_cn": "尤政",
+   "name_en": "You Zheng",
+   "title": "教授",
+   "department": "精密仪器系·仪器科学与技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "智能微系统",
+    "微纳航天器",
+    "MEMS惯性组合(MIMU)",
+    "MEMS扫描镜",
+    "微纳星敏感器"
+   ],
+   "homepage": "http://faculty.dpi.tsinghua.edu.cn/youzheng/zh_CN/index.htm",
+   "email": null,
+   "notes": "中国工程院院士；博士生导师；国家技术发明二等奖3项、国家科技进步二等奖2项"
+  },
+  {
+   "name_cn": "余芳文",
+   "name_en": "Fangwen Yu",
+   "title": "助理研究员",
+   "department": "精密仪器系·仪器科学与技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "类脑感知计算",
+    "类脑定位导航",
+    "类脑软硬件系统",
+    "微小型类脑机器人"
+   ],
+   "homepage": "http://faculty.dpi.tsinghua.edu.cn/yufangwen/zh_CN/index.htm",
+   "email": null,
+   "notes": "清华大学类脑计算研究中心、精密仪器系助理研究员；中国惯性技术学会智能导航专委会委员"
+  },
+  {
+   "name_cn": "赵嘉昊",
+   "name_en": "Zhao Jiahao",
+   "title": "副研究员",
+   "department": "精密仪器系·仪器科学与技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "RF-MEMS",
+    "空间MEMS技术",
+    "MEMS新材料及新原理",
+    "微米/纳米技术"
+   ],
+   "homepage": "http://faculty.dpi.tsinghua.edu.cn/zhaojiahao/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "赵开春",
+   "name_en": "Zhao Kaichun",
+   "title": "副研究员",
+   "department": "精密仪器系·仪器科学与技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "微纳仿生器件设计与制备",
+    "仿生导航传感系统",
+    "微纳卫星姿态测量与控制"
+   ],
+   "homepage": "http://faculty.dpi.tsinghua.edu.cn/zhaokaichun/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "赵蓉",
+   "name_en": "Zhao Rong",
+   "title": "教授",
+   "department": "精密仪器系·仪器科学与技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "类脑计算与芯片",
+    "神经形态器件",
+    "类脑感知器件与芯片设计",
+    "非易失性存储器芯片",
+    "低功耗存储技术"
+   ],
+   "homepage": "http://faculty.dpi.tsinghua.edu.cn/zhaorong/zh_CN/index.htm",
+   "email": null,
+   "notes": "原新加坡科技与设计大学副教授、人工智能实验室主任"
+  },
+  {
+   "name_cn": "朱荣",
+   "name_en": "Zhu Rong",
+   "title": "教授",
+   "department": "精密仪器系·仪器科学与技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微/纳机电器件(NEMS)",
+    "微流体惯性传感器",
+    "微惯性测量组合(MIMU)",
+    "纳米传感器",
+    "智能测控系统"
+   ],
+   "homepage": "http://faculty.dpi.tsinghua.edu.cn/zhurong/zh_CN/index.htm",
+   "email": "zr_gloria@mail.tsinghua.edu.cn",
+   "notes": "长聘教授；博士生导师；中国仪器仪表学会微纳器件与系统技术分会常务副理事长；IEEE高级会员；国家技术发明二等奖1项"
+  }
+ ]
+}

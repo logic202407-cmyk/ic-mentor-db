@@ -1,0 +1,2924 @@
+{
+  "school": "东南大学",
+  "school_key": "seu",
+  "harvested_at": "2026-09-24",
+  "sources": [
+    "https://ic.seu.edu.cn/47757/list.htm",
+    "https://ic.seu.edu.cn/47772/list.htm",
+    "https://ic.seu.edu.cn/69495/list.htm",
+    "https://ic.seu.edu.cn/69496/list.htm",
+    "https://ic.seu.edu.cn/55864/list.htm",
+    "https://ic.seu.edu.cn/_wp3services/generalQuery?queryObj=teacherHome (siteId=36, 116 位教师个人主页)",
+    "https://electronic.seu.edu.cn/szllx/list.htm",
+    "https://electronic.seu.edu.cn/57224/list.htm",
+    "https://electronic.seu.edu.cn/11463/list.htm",
+    "https://electronic.seu.edu.cn/2069/list.htm",
+    "https://electronic.seu.edu.cn/xssz/list.htm",
+    "https://electronic.seu.edu.cn/xzry/list.htm",
+    "https://electronic.seu.edu.cn/_wp3services/generalQuery?queryObj=teacherHome (siteId=33, 108 位教师个人主页)",
+    "https://radio.seu.edu.cn/19212/list.htm",
+    "https://radio.seu.edu.cn/19256/list.htm",
+    "https://radio.seu.edu.cn/19257/list.htm",
+    "https://radio.seu.edu.cn/19259/list.htm",
+    "https://radio.seu.edu.cn/19260/list.htm",
+    "https://radio.seu.edu.cn/19224/list.htm",
+    "https://radio.seu.edu.cn/19235/list.htm",
+    "https://radio.seu.edu.cn/20249/list.htm",
+    "https://radio.seu.edu.cn/20250/list.htm",
+    "https://radio.seu.edu.cn/ (232 个教师详情页 /20xx/xxxx/c19xxxaNNNNN/page.htm)",
+    "https://cse.seu.edu.cn/49354/list.htm",
+    "https://cse.seu.edu.cn/49355/list.htm",
+    "https://cse.seu.edu.cn/49356/list.htm",
+    "https://cse.seu.edu.cn/54820/list.htm",
+    "https://cse.seu.edu.cn/dsxx/list.htm",
+    "https://cse.seu.edu.cn/_wp3services/generalQuery?queryObj=teacherHome (siteId=191, 174 位教师个人主页)",
+    "https://ins.seu.edu.cn/zrjs/list.htm",
+    "https://ins.seu.edu.cn/45076/list.htm",
+    "https://ins.seu.edu.cn/45092/list.htm",
+    "https://ins.seu.edu.cn/_wp3services/generalQuery?queryObj=teacherHome (siteId=38, 93 位教师个人主页)",
+    "https://automation.seu.edu.cn/32668/list.htm",
+    "https://automation.seu.edu.cn/32670/list.htm",
+    "https://automation.seu.edu.cn/32671/list.htm",
+    "https://automation.seu.edu.cn/_wp3services/generalQuery?queryObj=teacherHome (siteId=338, 100 位教师个人主页)"
+  ],
+  "coverage_note": "已覆盖：①集成电路学院（ic.seu.edu.cn）——全职教师名单、研究生导师介绍（按\"集成电路器件与工艺\"\"集成电路设计与EDA\"分列博导/硕导）以及 116 个教师个人主页，入库 81 人；②电子科学与工程学院（electronic.seu.edu.cn）——师资力量各系（国家ASIC工程中心、MEMS教育部重点实验室、电路与系统系、物理电子学系、微电子学与固体电子学系、光学工程系、学科交叉中心）与 108 个教师个人主页，入库 51 人（显示技术研究中心、先进光子学中心教师包含在内）；③信息科学与工程学院（radio.seu.edu.cn）——教师队伍按通信与信息系统/信号与信息处理/电路与系统/电磁场与微波技术四学科分列名单 + 232 个教师详情页，入库 36 人（只保留毫米波太赫兹/射频电路、射频芯片、模拟与混合信号、基带与SoC 方向；纯通信理论、纯天线/超材料/电磁计算、信道测量与网络方向未收）；④计算机科学与工程学院（cse.seu.edu.cn）——教师按职称/研究方向/系别名单 + 174 个教师个人主页，仅 3 人（杨全胜、徐宁、时霄）有体系结构/AI硬件加速/EDA 的明确证据，其余教师为纯软件、算法、网络与数据库方向，未收；⑤仪器科学与工程学院（ins.seu.edu.cn）——全体教师名单 + 93 个教师个人主页，入库 10 人（MEMS惯性器件、测控与传感电路、智能微系统方向）；⑥自动化学院（automation.seu.edu.cn）——全体教师/博导/硕导名单 + 100 个教师个人主页，仅入库 1 人（王晓俊，嵌入式系统与智能仪器），该院其余教师均为控制理论、机器人、电力系统方向，无芯片设计方向教师。\n\n未能抓到/未覆盖：①电子科学与工程学院、集成电路学院的\"师资力量\"栏目本身由 webplus AJAX 异步加载（页面骨架为空 ul.cols_list），改由站内 teacherHome 接口获取名单；②信息科学与工程学院未开放 teacherHome 接口（返回 553），改用其静态教师队伍页与教师详情页；③自动化学院、仪器科学与工程学院的教师职称在部分页面模板中缺失，标题按页面首页出现的第一个职称词确定，个别以\"专任教师\"标注者按页面正文判定；④退休、访问、客座/兼职教授、博士后、行政与实验工程人员已排除（如 ic.seu.edu.cn/55864 客座兼职教授页、各校\"行政、实验人员\"栏目均未收）；⑤is_phd_advisor 依据证据判定：集成电路学院采用学院官网 69495/69496 研究生导师介绍页的博导/硕导分列名单，其余学院依据个人主页中\"博导/博士生导师\"等表述，页面未写明者记为 false；⑥name_en 仅在页面明确给出英文名时填写，否则为 null；research_keywords 由教师本人主页\"研究领域或方向/研究方向\"与个人简介原文抽取，未做推测。\n\n规模说明：实际入库 182 人，高于 60–150 的常规区间，原因是集成电路学院（81 人）与电子科学与工程学院（51 人）本身即为芯片方向建制单位，为\"尽力完整\"予以全部保留。",
+  "faculty": [
+    {
+      "name_cn": "李鹤",
+      "name_en": null,
+      "title": "教授",
+      "department": "电子科学与工程学院 电路与系统系",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "嵌入式与MCU",
+        "集成电路设计",
+        "EDA与设计自动化",
+        "量子芯片",
+        "数据转换器",
+        "SoC与片上系统"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/lh/list.htm",
+      "email": "helix@seu.edu.cn",
+      "notes": "国家级青年人才"
+    },
+    {
+      "name_cn": "孙豪",
+      "name_en": null,
+      "title": "讲师",
+      "department": "电子科学与工程学院 电路与系统系",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "嵌入式与MCU",
+        "数字集成电路",
+        "AI芯片与加速器"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/sh/list.htm",
+      "email": "hao.sun@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "汤勇明",
+      "name_en": null,
+      "title": "教授",
+      "department": "电子科学与工程学院 电路与系统系",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "嵌入式与MCU",
+        "数字集成电路",
+        "显示驱动电路"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/tym/list.htm",
+      "email": "tym@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "杨海宁",
+      "name_en": null,
+      "title": "教授",
+      "department": "电子科学与工程学院 电路与系统系",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "显示技术",
+        "光电子与硅光",
+        "嵌入式与MCU"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/yhn/list.htm",
+      "email": "h.yang@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "崔一平",
+      "name_en": null,
+      "title": "教授",
+      "department": "电子科学与工程学院 光学工程系",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "非线性光子器件",
+        "光场调控",
+        "光电子与硅光",
+        "光集成传感"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/cyp/list.htm",
+      "email": "cyp@seu.edu.cn",
+      "notes": "国家级高层次人才"
+    },
+    {
+      "name_cn": "胡国华",
+      "name_en": null,
+      "title": "教授",
+      "department": "电子科学与工程学院 光学工程系",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "光电子与硅光",
+        "光纤传感",
+        "光电探测"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/hgh/list.htm",
+      "email": "photonics@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "王著元",
+      "name_en": null,
+      "title": "教授",
+      "department": "电子科学与工程学院 光学工程系",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "光电子与硅光",
+        "生物医疗电子",
+        "传感与检测技术"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/wzy/list.htm",
+      "email": "wangzy@seu.edu.cn",
+      "notes": "国家杰青；国家优青"
+    },
+    {
+      "name_cn": "杨阔",
+      "name_en": null,
+      "title": "讲师",
+      "department": "电子科学与工程学院 光学工程系",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "嵌入式与MCU",
+        "MEMS与微纳传感",
+        "光电检测"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/yk/list.htm",
+      "email": "k_yang@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "恽斌峰",
+      "name_en": null,
+      "title": "教授",
+      "department": "电子科学与工程学院 光学工程系",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "硅基光子集成",
+        "微波光子",
+        "光通信与光传感"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/ybf/list.htm",
+      "email": "ybf@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "董蕾",
+      "name_en": null,
+      "title": "教授",
+      "department": "电子科学与工程学院 微电子学与固体电子学系",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "微纳传感器",
+        "传感器接口电路",
+        "MEMS工艺"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/d  l/list.htm",
+      "email": "dl@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "黄见秋",
+      "name_en": null,
+      "title": "副教授",
+      "department": "电子科学与工程学院 微电子学与固体电子学系",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "CMOS MEMS",
+        "MEMS温湿度传感器",
+        "MEMS压电传感器"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/hjq/list.htm",
+      "email": "hjq@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "蒋昊",
+      "name_en": null,
+      "title": "教授",
+      "department": "电子科学与工程学院 微电子学与固体电子学系",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "低维材料光电探测",
+        "片上智能感知",
+        "光电成像"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/jh/list.htm",
+      "email": "101014230@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "李思潮",
+      "name_en": null,
+      "title": "副教授",
+      "department": "电子科学与工程学院 微电子学与固体电子学系",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "宽禁带半导体",
+        "半导体工艺与集成",
+        "二维材料器件"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/lsc/list.htm",
+      "email": "sichaoli@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "林曈",
+      "name_en": null,
+      "title": "副教授",
+      "department": "电子科学与工程学院 微电子学与固体电子学系",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "微波毫米波器件",
+        "光电子与硅光",
+        "射频与微波",
+        "半导体工艺与集成",
+        "硅基光子集成"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/lt/list.htm",
+      "email": "lintong@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "毛海峰",
+      "name_en": null,
+      "title": "副教授",
+      "department": "电子科学与工程学院 微电子学与固体电子学系",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "MEMS与微纳传感",
+        "红外探测器件",
+        "光学微机电"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/mhf/list.htm",
+      "email": "haifeng.mao@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "倪振华",
+      "name_en": null,
+      "title": "教授",
+      "department": "电子科学与工程学院 微电子学与固体电子学系",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "二维材料器件",
+        "光电子与硅光",
+        "微纳光电器件"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/nzh/list.htm",
+      "email": "zhni@seu.edu.cn",
+      "notes": "国家杰青；长江学者"
+    },
+    {
+      "name_cn": "史志天",
+      "name_en": null,
+      "title": "副教授",
+      "department": "电子科学与工程学院 微电子学与固体电子学系",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "半导体刻蚀工艺",
+        "微纳结构制造",
+        "工艺建模"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/szt/list.htm",
+      "email": "shizhitian@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "苏志成",
+      "name_en": null,
+      "title": "副教授",
+      "department": "电子科学与工程学院 微电子学与固体电子学系",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "光电子与硅光",
+        "显示技术",
+        "量子芯片",
+        "光电探测与成像",
+        "微系统与集成",
+        "微波毫米波器件"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/szc/list.htm",
+      "email": "suzhicheng@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "仝金程",
+      "name_en": null,
+      "title": "教授",
+      "department": "电子科学与工程学院 微电子学与固体电子学系",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "二维材料器件",
+        "存算一体与存内计算",
+        "新型存储器件"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/tjc/list.htm",
+      "email": "jincheng.tong@seu.edu.cn",
+      "notes": "国家级青年人才"
+    },
+    {
+      "name_cn": "王炳昊",
+      "name_en": null,
+      "title": "教授",
+      "department": "电子科学与工程学院 微电子学与固体电子学系",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "生物医疗电子",
+        "SoC与片上系统",
+        "半导体器件"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/wbh/list.htm",
+      "email": "binghaowang@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "王磊",
+      "name_en": null,
+      "title": "副教授",
+      "department": "电子科学与工程学院 微电子学与固体电子学系",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "MEMS与微纳传感",
+        "宽禁带半导体",
+        "半导体器件"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/w　l/list.htm",
+      "email": "lei-wang@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "王立峰",
+      "name_en": null,
+      "title": "教授",
+      "department": "电子科学与工程学院 微电子学与固体电子学系",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "MEMS与微纳传感",
+        "半导体工艺与集成",
+        "微纳加工与表征",
+        "数字集成电路"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/wlf/list.htm",
+      "email": "wanglifeng@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "谢骁",
+      "name_en": null,
+      "title": "副教授",
+      "department": "电子科学与工程学院 微电子学与固体电子学系",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "二维材料器件",
+        "半导体器件",
+        "微纳加工与表征"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/xx/list.htm",
+      "email": "xxie@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "许国强",
+      "name_en": null,
+      "title": "教授",
+      "department": "电子科学与工程学院 微电子学与固体电子学系",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "电子器件热管理",
+        "多物理场耦合调控",
+        "微纳传热"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/xgq/list.htm",
+      "email": "guoqiang.xu@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "于虹",
+      "name_en": null,
+      "title": "教授",
+      "department": "电子科学与工程学院 微电子学与固体电子学系",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "MEMS与微纳传感",
+        "超材料与器件",
+        "光电子与光通信器件"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/yuhong/list.htm",
+      "email": "h_yu@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "张志强",
+      "name_en": null,
+      "title": "副教授",
+      "department": "电子科学与工程学院 微电子学与固体电子学系",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "MEMS与微纳传感",
+        "传感器接口电路",
+        "半导体工艺与集成",
+        "生物医疗电子",
+        "传感与检测技术"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/zzq/list.htm",
+      "email": "zqzhang@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "黄庆安",
+      "name_en": null,
+      "title": "教授",
+      "department": "电子科学与工程学院 微电子学与固体电子学系（MEMS教育部重点实验室）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "MEMS与微纳传感",
+        "微传感器",
+        "无线传感微系统",
+        "MEMS/NEMS技术"
+      ],
+      "homepage": "https://ic.seu.edu.cn/huangqingan/main.htm",
+      "email": "hqa@seu.edu.cn",
+      "notes": "IEEE Fellow"
+    },
+    {
+      "name_cn": "柏宁丰",
+      "name_en": null,
+      "title": "教授",
+      "department": "电子科学与工程学院 物理电子学系",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "硅基光子集成",
+        "光电子与硅光",
+        "毫米波与太赫兹",
+        "微波毫米波器件",
+        "真空电子与电子源"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/bnf/list.htm",
+      "email": "bnfeng@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "陈昭福",
+      "name_en": null,
+      "title": "副教授",
+      "department": "电子科学与工程学院 物理电子学系",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "电磁超材料与超表面",
+        "毫米波与太赫兹",
+        "射频与微波",
+        "真空电子与电子源"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/czf/list.htm",
+      "email": "chenzhaofu@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "樊鹤红",
+      "name_en": null,
+      "title": "副教授",
+      "department": "电子科学与工程学院 物理电子学系",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "真空电子与电子源",
+        "光电子与硅光",
+        "光信号处理"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/fhh/list.htm",
+      "email": "fhh@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "冯锋",
+      "name_en": null,
+      "title": "教授",
+      "department": "电子科学与工程学院 物理电子学系",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "显示技术",
+        "宽禁带半导体",
+        "光电子与硅光"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/ff/list.htm",
+      "email": "ffeng@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "李晨",
+      "name_en": null,
+      "title": "副教授",
+      "department": "电子科学与工程学院 物理电子学系",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "显示技术",
+        "集成电路设计",
+        "存算一体与存内计算",
+        "半导体器件"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/lc/list.htm",
+      "email": "tolichen@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "刘旭",
+      "name_en": null,
+      "title": "副教授",
+      "department": "电子科学与工程学院 物理电子学系",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "光电子与硅光",
+        "硅基光子集成",
+        "微波毫米波器件",
+        "射频与微波",
+        "半导体工艺与集成",
+        "微系统与集成"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/lx/list.htm",
+      "email": "liuare@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "王琦龙",
+      "name_en": null,
+      "title": "教授",
+      "department": "电子科学与工程学院 物理电子学系",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "电磁超材料与超表面",
+        "毫米波与太赫兹",
+        "射频与微波",
+        "光电子与硅光",
+        "真空电子与电子源",
+        "光电探测与成像"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/wql/list.htm",
+      "email": "northrockwql@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "翁一士",
+      "name_en": null,
+      "title": "副教授",
+      "department": "电子科学与工程学院 物理电子学系",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "显示技术",
+        "光电子与硅光",
+        "光电材料与器件"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/wys/list.htm",
+      "email": "yishi@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "夏军",
+      "name_en": null,
+      "title": "教授",
+      "department": "电子科学与工程学院 物理电子学系",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "显示技术",
+        "微显示芯片",
+        "光场与全息显示",
+        "三维成像"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/xj/list.htm",
+      "email": "xiajun@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "肖金标",
+      "name_en": null,
+      "title": "教授",
+      "department": "电子科学与工程学院 物理电子学系",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "硅基光子集成",
+        "光子集成回路",
+        "光子传感"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/xjb/list.htm",
+      "email": "jbxiao@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "张彤",
+      "name_en": null,
+      "title": "教授",
+      "department": "电子科学与工程学院 物理电子学系",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "光电子与硅光",
+        "硅基光子集成",
+        "射频与微波",
+        "微波毫米波器件",
+        "半导体器件",
+        "MEMS与微纳传感"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/zt/list.htm",
+      "email": "tzhang@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "张晓阳",
+      "name_en": null,
+      "title": "副教授",
+      "department": "电子科学与工程学院 物理电子学系",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "光电子与硅光",
+        "柔性电子",
+        "硅基光子集成",
+        "生物医疗电子",
+        "传感与检测技术",
+        "毫米波与太赫兹"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/zxy/list.htm",
+      "email": "zxycom@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "张宇宁",
+      "name_en": null,
+      "title": "教授",
+      "department": "电子科学与工程学院 物理电子学系",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "显示技术",
+        "增强现实显示",
+        "全息波导与光场显示",
+        "光感知与光计算"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/zyn/list.htm",
+      "email": "zyn@seu.edu.cn",
+      "notes": "国家级高层次人才；首席教授"
+    },
+    {
+      "name_cn": "张远飞",
+      "name_en": null,
+      "title": "副教授",
+      "department": "电子科学与工程学院 物理电子学系",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "数据转换器",
+        "嵌入式与MCU",
+        "模拟集成电路"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/zyf/list.htm",
+      "email": "z.yuanfei@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "仲雪飞",
+      "name_en": null,
+      "title": "副教授",
+      "department": "电子科学与工程学院 物理电子学系",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "显示技术",
+        "二维材料器件",
+        "真空电子与电子源"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/zxf/list.htm",
+      "email": "zxf@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "顾兵",
+      "name_en": null,
+      "title": "教授",
+      "department": "电子科学与工程学院 学科交叉中心",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "非线性光子器件",
+        "光场调控",
+        "光电子与硅光"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/gb/list.htm",
+      "email": "gubing@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "顾宇",
+      "name_en": null,
+      "title": "副教授",
+      "department": "电子科学与工程学院 学科交叉中心",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "红外光电探测",
+        "多光谱探测器",
+        "半导体光电器件"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/gy/list.htm",
+      "email": "yug@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "石琼锋",
+      "name_en": null,
+      "title": "教授",
+      "department": "电子科学与工程学院 学科交叉中心",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "MEMS与微纳传感",
+        "柔性电子",
+        "半导体器件",
+        "微系统与集成",
+        "生物医疗电子"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/sqf/list.htm",
+      "email": "qiongfeng@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "石增良",
+      "name_en": null,
+      "title": "副教授",
+      "department": "电子科学与工程学院 学科交叉中心",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "存算一体与存内计算",
+        "光电子与硅光",
+        "光电探测与成像",
+        "嵌入式与MCU"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/szl/list.htm",
+      "email": "101011437@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "吴俊",
+      "name_en": null,
+      "title": "教授",
+      "department": "电子科学与工程学院 学科交叉中心",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "半导体工艺与集成",
+        "显示技术",
+        "柔性电子"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/wj/list.htm",
+      "email": "wujunseu@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "肖梅",
+      "name_en": null,
+      "title": "副教授",
+      "department": "电子科学与工程学院 学科交叉中心",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "真空电子与电子源",
+        "光电子与硅光",
+        "电子器件"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/xm/list.htm",
+      "email": "xiaomei@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "谢欣凯",
+      "name_en": null,
+      "title": "副教授",
+      "department": "电子科学与工程学院 学科交叉中心",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "MEMS与微纳传感",
+        "柔性电子",
+        "可穿戴器件"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/xxk/list.htm",
+      "email": "xinkai.xie@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "徐春祥",
+      "name_en": null,
+      "title": "教授",
+      "department": "电子科学与工程学院 学科交叉中心",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "光电子与硅光",
+        "微纳光电器件",
+        "感存算一体化",
+        "光电探测与成像"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/xcx/list.htm",
+      "email": "xcxseu@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "张晓兵",
+      "name_en": null,
+      "title": "教授",
+      "department": "电子科学与工程学院 学科交叉中心",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "真空电子与电子源",
+        "半导体器件",
+        "微波毫米波器件",
+        "显示技术"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/zxb/list.htm",
+      "email": "bell@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "祖帅",
+      "name_en": null,
+      "title": "副教授",
+      "department": "电子科学与工程学院 学科交叉中心",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "光电子与硅光",
+        "微纳加工与表征",
+        "半导体工艺与集成"
+      ],
+      "homepage": "https://electronic.seu.edu.cn/zs/list.htm",
+      "email": "zushuai@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "陈朝晖",
+      "name_en": null,
+      "title": "首席教授",
+      "department": "集成电路学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "宽禁带半导体",
+        "毫米波与太赫兹",
+        "半导体器件",
+        "半导体工艺与集成"
+      ],
+      "homepage": "https://ic.seu.edu.cn/cch/main.htm",
+      "email": "chenzhaohui@seu.edu.cn",
+      "notes": "国家级高层次人才；首席教授"
+    },
+    {
+      "name_cn": "陈洁",
+      "name_en": null,
+      "title": "副教授",
+      "department": "集成电路学院",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "MEMS器件与电路集成",
+        "磁性传感器件",
+        "传感器电路与建模"
+      ],
+      "homepage": "https://ic.seu.edu.cn/chenjie/main.htm",
+      "email": "seuc@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "方中元",
+      "name_en": null,
+      "title": "教授",
+      "department": "集成电路学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "模拟集成电路",
+        "射频与微波",
+        "天线与相控阵",
+        "集成电路设计"
+      ],
+      "homepage": "https://ic.seu.edu.cn/fangzhongyuan/main.htm",
+      "email": "fangzhongyuan@seu.edu.cn",
+      "notes": "国家级高层次人才；负责人：集成电路学院副院长"
+    },
+    {
+      "name_cn": "符芷源",
+      "name_en": null,
+      "title": "副教授",
+      "department": "集成电路学院",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "存算一体与存内计算",
+        "EDA与设计自动化",
+        "半导体器件",
+        "集成电路设计"
+      ],
+      "homepage": "https://ic.seu.edu.cn/fzy/main.htm",
+      "email": "zyfu@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "国洪轩",
+      "name_en": null,
+      "title": "副研究员",
+      "department": "集成电路学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "存算一体与存内计算",
+        "传感与检测技术",
+        "微纳加工与表征"
+      ],
+      "homepage": "https://ic.seu.edu.cn/guohongxuan/main.htm",
+      "email": "ghx@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "洪华",
+      "name_en": null,
+      "title": "副教授",
+      "department": "集成电路学院",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "生物医疗电子",
+        "宽禁带半导体",
+        "半导体工艺与集成",
+        "二维材料器件",
+        "MEMS与微纳传感"
+      ],
+      "homepage": "https://ic.seu.edu.cn/honghua/main.htm",
+      "email": "huahong@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "黄虎彪",
+      "name_en": null,
+      "title": "教授",
+      "department": "集成电路学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "存算一体与存内计算",
+        "毫米波与太赫兹",
+        "微波毫米波器件",
+        "半导体工艺与集成"
+      ],
+      "homepage": "https://ic.seu.edu.cn/hhb/main.htm",
+      "email": "hub@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "黄晓东",
+      "name_en": null,
+      "title": "教授",
+      "department": "集成电路学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "微能源与能量采集",
+        "MEMS与微纳传感",
+        "能量信息一体化器件",
+        "智能微系统"
+      ],
+      "homepage": "https://ic.seu.edu.cn/huangxiaodong/main.htm",
+      "email": "xdhuang@seu.edu.cn",
+      "notes": "国家级高层次人才；负责人：集成电路学院副院长"
+    },
+    {
+      "name_cn": "江哲",
+      "name_en": null,
+      "title": "教授",
+      "department": "集成电路学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "AI芯片与加速器",
+        "处理器体系结构",
+        "EDA与设计自动化"
+      ],
+      "homepage": "https://ic.seu.edu.cn/jz/main.htm",
+      "email": "101013615@seu.edu.cn",
+      "notes": "国家级青年人才"
+    },
+    {
+      "name_cn": "李晗",
+      "name_en": null,
+      "title": "首席教授",
+      "department": "集成电路学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "集成电路制造工艺",
+        "互连工艺与可靠性",
+        "三维集成工艺",
+        "失效分析"
+      ],
+      "homepage": "https://ic.seu.edu.cn/lh/main.htm",
+      "email": "lhan@seu.edu.cn",
+      "notes": "首席教授"
+    },
+    {
+      "name_cn": "李力一",
+      "name_en": null,
+      "title": "教授",
+      "department": "集成电路学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "半导体工艺与集成",
+        "微纳加工与表征",
+        "MEMS与微纳传感",
+        "EDA与设计自动化"
+      ],
+      "homepage": "https://ic.seu.edu.cn/liliyi/main.htm",
+      "email": "liyi_li@seu.edu.cn",
+      "notes": "国家级高层次人才"
+    },
+    {
+      "name_cn": "李旻",
+      "name_en": null,
+      "title": "研究员",
+      "department": "集成电路学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "EDA与设计自动化",
+        "硬件形式化验证",
+        "AI辅助电路设计"
+      ],
+      "homepage": "https://ic.seu.edu.cn/lm/main.htm",
+      "email": "min.li@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "刘波",
+      "name_en": null,
+      "title": "教授",
+      "department": "集成电路学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "集成电路设计",
+        "数字集成电路",
+        "AI芯片与加速器",
+        "EDA与设计自动化",
+        "嵌入式与MCU"
+      ],
+      "homepage": "https://ic.seu.edu.cn/liubo/main.htm",
+      "email": "liubo_cnasic@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "马海峰",
+      "name_en": null,
+      "title": "教授",
+      "department": "集成电路学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "集成电路设计",
+        "电源管理芯片",
+        "微波毫米波器件",
+        "模拟集成电路"
+      ],
+      "homepage": "https://ic.seu.edu.cn/mhf/main.htm",
+      "email": "haifeng.ma@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "彭亚锐",
+      "name_en": null,
+      "title": "教授",
+      "department": "集成电路学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "EDA与设计自动化",
+        "半导体工艺与集成",
+        "功率电子与电源系统",
+        "微系统与集成",
+        "集成电路设计",
+        "数据转换器"
+      ],
+      "homepage": "https://ic.seu.edu.cn/pyr/main.htm",
+      "email": "yrpeng@seu.edu.cn",
+      "notes": "国家级青年人才"
+    },
+    {
+      "name_cn": "尚金堂",
+      "name_en": null,
+      "title": "教授",
+      "department": "集成电路学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "芯片级原子器件",
+        "微壳体谐振子",
+        "微纳系统封装",
+        "MEMS与集成电路集成"
+      ],
+      "homepage": "https://ic.seu.edu.cn/shangjintang/main.htm",
+      "email": "jshang@seu.edu.cn",
+      "notes": "国家级高层次人才"
+    },
+    {
+      "name_cn": "史泰龙",
+      "name_en": null,
+      "title": "副教授",
+      "department": "集成电路学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "半导体工艺与集成",
+        "嵌入式与MCU",
+        "毫米波与太赫兹"
+      ],
+      "homepage": "https://ic.seu.edu.cn/stl/main.htm",
+      "email": "101013381@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "孙立涛",
+      "name_en": null,
+      "title": "教授",
+      "department": "集成电路学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "二维材料器件",
+        "原子尺度制造",
+        "原位表征",
+        "微纳电子材料与器件"
+      ],
+      "homepage": "https://ic.seu.edu.cn/sunlitao/main.htm",
+      "email": "slt@seu.edu.cn",
+      "notes": "国家级高层次人才"
+    },
+    {
+      "name_cn": "万能",
+      "name_en": null,
+      "title": "副研究员",
+      "department": "集成电路学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "集成电路设计",
+        "数字集成电路",
+        "MEMS与微纳传感"
+      ],
+      "homepage": "https://ic.seu.edu.cn/wanneng/main.htm",
+      "email": "WN@SEU.EDU.CN",
+      "notes": null
+    },
+    {
+      "name_cn": "王俊嘉",
+      "name_en": null,
+      "title": "教授",
+      "department": "集成电路学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "光电子与硅光",
+        "二维材料器件",
+        "光电探测与成像"
+      ],
+      "homepage": "https://ic.seu.edu.cn/wjj/main.htm",
+      "email": "junjia_wang@seu.edu.cn",
+      "notes": "IEEE Senior Member"
+    },
+    {
+      "name_cn": "王翕",
+      "name_en": null,
+      "title": "副教授",
+      "department": "集成电路学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "处理器体系结构",
+        "EDA与设计自动化",
+        "数字集成电路",
+        "数据转换器"
+      ],
+      "homepage": "https://ic.seu.edu.cn/wx/main.htm",
+      "email": "xi.wang@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "吴林东",
+      "name_en": null,
+      "title": "副教授",
+      "department": "集成电路学院",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "忆阻器",
+        "存算一体与存内计算",
+        "片上能源器件",
+        "神经形态计算"
+      ],
+      "homepage": "https://ic.seu.edu.cn/wld/main.htm",
+      "email": "wulindong@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "杨春",
+      "name_en": null,
+      "title": "教授",
+      "department": "集成电路学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "射频与微波",
+        "光电子与硅光",
+        "微波光子"
+      ],
+      "homepage": "https://ic.seu.edu.cn/yangchun/main.htm",
+      "email": "yangchun@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "易真翔",
+      "name_en": null,
+      "title": "教授",
+      "department": "集成电路学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "MEMS流量传感器",
+        "MEMS风速风向传感器",
+        "微波传感器"
+      ],
+      "homepage": "https://ic.seu.edu.cn/yzx/main.htm",
+      "email": "xp@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "张家钧",
+      "name_en": null,
+      "title": "首席教授",
+      "department": "集成电路学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "信号处理芯片",
+        "处理器体系结构",
+        "集成电路设计",
+        "AI芯片与加速器"
+      ],
+      "homepage": "https://ic.seu.edu.cn/zjj/main.htm",
+      "email": "zhangjiajun@seu.edu.cn",
+      "notes": "首席教授"
+    },
+    {
+      "name_cn": "张建福",
+      "name_en": null,
+      "title": "首席教授",
+      "department": "集成电路学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "半导体器件",
+        "器件工艺",
+        "集成电路制造"
+      ],
+      "homepage": "https://ic.seu.edu.cn/zjf/main.htm",
+      "email": "101014062@seu.edu.cn",
+      "notes": "首席教授"
+    },
+    {
+      "name_cn": "张鸣亮",
+      "name_en": null,
+      "title": "教授",
+      "department": "集成电路学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "半导体工艺与集成",
+        "光电子与硅光",
+        "微纳加工与表征",
+        "微波毫米波器件",
+        "电磁超材料与超表面",
+        "半导体器件"
+      ],
+      "homepage": "https://ic.seu.edu.cn/zhangmingliang/main.htm",
+      "email": "mingliangzhang@seu.edu.cn",
+      "notes": "国家级高层次人才"
+    },
+    {
+      "name_cn": "张秋波",
+      "name_en": null,
+      "title": "青年首席教授",
+      "department": "集成电路学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "先进芯片制造与封装",
+        "感存算一体化器件",
+        "原子级制造",
+        "半导体新材料"
+      ],
+      "homepage": "https://ic.seu.edu.cn/zqb/main.htm",
+      "email": "qiubozhang@seu.edu.cn",
+      "notes": "国家级高层次人才"
+    },
+    {
+      "name_cn": "张瑞琳",
+      "name_en": null,
+      "title": "研究员",
+      "department": "集成电路学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "硬件安全与密码芯片",
+        "处理器体系结构",
+        "半导体器件"
+      ],
+      "homepage": "https://ic.seu.edu.cn/zrl/main.htm",
+      "email": "zrlxftt@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "张学永",
+      "name_en": null,
+      "title": "教授",
+      "department": "集成电路学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "模拟集成电路",
+        "集成电路设计",
+        "AI芯片与加速器",
+        "宽禁带半导体",
+        "电源管理芯片",
+        "存算一体与存内计算"
+      ],
+      "homepage": "https://ic.seu.edu.cn/zxy/main.htm",
+      "email": "xueyong.zhang@seu.edu.cn",
+      "notes": "国家级青年人才"
+    },
+    {
+      "name_cn": "郑丽霞",
+      "name_en": null,
+      "title": "副教授",
+      "department": "集成电路学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "传感器接口电路",
+        "数字集成电路",
+        "数据转换器",
+        "时钟与锁相环"
+      ],
+      "homepage": "https://ic.seu.edu.cn/zhenglixia/main.htm",
+      "email": "zhenglx@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "钟立",
+      "name_en": null,
+      "title": "教授",
+      "department": "集成电路学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "先进互连工艺",
+        "异质界面调控",
+        "微纳器件原位表征",
+        "失效机制"
+      ],
+      "homepage": "https://ic.seu.edu.cn/zhongli/main.htm",
+      "email": "lizhong@seu.edu.cn",
+      "notes": "国家级高层次人才"
+    },
+    {
+      "name_cn": "周再发",
+      "name_en": null,
+      "title": "教授",
+      "department": "集成电路学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "MEMS与微纳传感",
+        "传感与检测技术",
+        "微系统与集成"
+      ],
+      "homepage": "https://ic.seu.edu.cn/zhouzaifa/main.htm",
+      "email": "zfzhou@seu.edu.cn",
+      "notes": "负责人：东南大学特聘教授、实验室常务副主任、博导"
+    },
+    {
+      "name_cn": "凌明",
+      "name_en": null,
+      "title": "教授",
+      "department": "集成电路学院 国家专用集成电路系统工程技术研究中心",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "嵌入式与MCU",
+        "SoC与片上系统",
+        "处理器体系结构",
+        "集成电路设计"
+      ],
+      "homepage": "https://ic.seu.edu.cn/lingming/main.htm",
+      "email": "trio@seu.edu.cn",
+      "notes": "负责人：东南大学电工电子实验中心主任"
+    },
+    {
+      "name_cn": "卜爱国",
+      "name_en": null,
+      "title": "副研究员",
+      "department": "集成电路学院 国家ASIC工程中心",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "EDA与设计自动化",
+        "嵌入式系统",
+        "低功耗设计"
+      ],
+      "homepage": "https://ic.seu.edu.cn/buaiguo/main.htm",
+      "email": "101010876@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "蔡浩",
+      "name_en": null,
+      "title": "教授",
+      "department": "集成电路学院 国家ASIC工程中心",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "存算一体与存内计算",
+        "集成电路设计",
+        "SoC与片上系统",
+        "处理器体系结构",
+        "EDA与设计自动化",
+        "嵌入式与MCU"
+      ],
+      "homepage": "https://ic.seu.edu.cn/caihao/main.htm",
+      "email": "hao.cai@seu.edu.cn",
+      "notes": "国家级高层次人才"
+    },
+    {
+      "name_cn": "陈超",
+      "name_en": null,
+      "title": "副教授",
+      "department": "集成电路学院 国家ASIC工程中心",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "射频与微波",
+        "射频集成电路",
+        "数据转换器",
+        "时钟与锁相环",
+        "射频电路与前端"
+      ],
+      "homepage": "https://ic.seu.edu.cn/chenchao/main.htm",
+      "email": "c.chen@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "单伟伟",
+      "name_en": null,
+      "title": "首席教授",
+      "department": "集成电路学院 国家ASIC工程中心",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "集成电路设计",
+        "SoC与片上系统",
+        "AI芯片与加速器"
+      ],
+      "homepage": "https://ic.seu.edu.cn/shanweiwei/main.htm",
+      "email": "wwshan@seu.edu.cn",
+      "notes": "首席教授；负责人：教研室副主任"
+    },
+    {
+      "name_cn": "胡晨",
+      "name_en": null,
+      "title": "教授",
+      "department": "集成电路学院 国家ASIC工程中心",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "嵌入式系统",
+        "SoC与片上系统",
+        "处理器体系结构"
+      ],
+      "homepage": "https://ic.seu.edu.cn/huchen/main.htm",
+      "email": "hc@seu.edu.cn",
+      "notes": "负责人：ASIC中心副主任"
+    },
+    {
+      "name_cn": "黄少珉",
+      "name_en": null,
+      "title": "副研究员",
+      "department": "集成电路学院 国家ASIC工程中心",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "嵌入式系统",
+        "SoC与片上系统",
+        "集成电路设计"
+      ],
+      "homepage": "https://ic.seu.edu.cn/huangshaomin/main.htm",
+      "email": "hsm@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "赖彭宇",
+      "name_en": null,
+      "title": "副研究员",
+      "department": "集成电路学院 国家ASIC工程中心",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "碳化硅功率器件",
+        "器件可靠性",
+        "静电防护器件"
+      ],
+      "homepage": "https://ic.seu.edu.cn/lpy/main.htm",
+      "email": "101014183@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "李杰",
+      "name_en": null,
+      "title": "教授",
+      "department": "集成电路学院 国家ASIC工程中心",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "集成电路设计",
+        "信息安全芯片",
+        "嵌入式系统"
+      ],
+      "homepage": "https://ic.seu.edu.cn/lijie/main.htm",
+      "email": "jie_l@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "李泳佳",
+      "name_en": null,
+      "title": "副教授",
+      "department": "集成电路学院 国家ASIC工程中心",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "模拟集成电路",
+        "传感器接口电路",
+        "集成电路设计"
+      ],
+      "homepage": "https://ic.seu.edu.cn/liyongjia/main.htm",
+      "email": "yongjiali@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "刘昊",
+      "name_en": null,
+      "title": "副教授",
+      "department": "集成电路学院 国家ASIC工程中心",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "嵌入式与MCU",
+        "AI芯片与加速器",
+        "SoC与片上系统",
+        "集成电路设计"
+      ],
+      "homepage": "https://ic.seu.edu.cn/liuhao/main.htm",
+      "email": "nicky_lh@seu.edu.cn",
+      "notes": "负责人：东南大学苏州集成电路重点实验室主任"
+    },
+    {
+      "name_cn": "刘斯扬",
+      "name_en": null,
+      "title": "教授",
+      "department": "集成电路学院 国家ASIC工程中心",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "功率半导体器件",
+        "器件可靠性",
+        "宽禁带半导体"
+      ],
+      "homepage": "https://ic.seu.edu.cn/liusiyang/main.htm",
+      "email": "liusy2017@seu.edu.cn",
+      "notes": "首席教授"
+    },
+    {
+      "name_cn": "刘新宁",
+      "name_en": null,
+      "title": "副教授",
+      "department": "集成电路学院 国家ASIC工程中心",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "SoC与片上系统",
+        "集成电路设计",
+        "嵌入式与MCU"
+      ],
+      "homepage": "https://ic.seu.edu.cn/liuxinning/main.htm",
+      "email": "xinning.liu@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "齐志",
+      "name_en": null,
+      "title": "副教授",
+      "department": "集成电路学院 国家ASIC工程中心",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "数据转换器",
+        "嵌入式与MCU",
+        "芯片测试与验证"
+      ],
+      "homepage": "https://ic.seu.edu.cn/qizhi/main.htm",
+      "email": "qizhi@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "施闰霄",
+      "name_en": null,
+      "title": "副教授",
+      "department": "集成电路学院 国家ASIC工程中心",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "半导体器件",
+        "柔性电子",
+        "电源管理芯片",
+        "存算一体与存内计算",
+        "传感器接口电路",
+        "显示技术"
+      ],
+      "homepage": "https://ic.seu.edu.cn/srx/main.htm",
+      "email": "icrshi@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "时龙兴",
+      "name_en": null,
+      "title": "教授",
+      "department": "集成电路学院 国家ASIC工程中心",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "集成电路设计",
+        "AI芯片与加速器",
+        "EDA与设计自动化"
+      ],
+      "homepage": "https://ic.seu.edu.cn/shilongxing/main.htm",
+      "email": "Lxshi@seu.edu.cn",
+      "notes": "负责人：国家专用集成电路系统工程技术研究中心主任，江苏省产业技术研究院专用集成电路技术研究所所长"
+    },
+    {
+      "name_cn": "司鑫",
+      "name_en": null,
+      "title": "青年首席教授",
+      "department": "集成电路学院 国家ASIC工程中心",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "集成电路设计",
+        "模拟集成电路",
+        "AI芯片与加速器",
+        "存算一体与存内计算"
+      ],
+      "homepage": "https://ic.seu.edu.cn/sixin/main.htm",
+      "email": "xinsi@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "孙伟锋",
+      "name_en": null,
+      "title": "教授",
+      "department": "集成电路学院 国家ASIC工程中心",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "集成电路设计",
+        "模拟集成电路",
+        "宽禁带半导体",
+        "半导体器件"
+      ],
+      "homepage": "https://ic.seu.edu.cn/sunweifeng/main.htm",
+      "email": "swffrog@seu.edu.cn",
+      "notes": "首席教授；负责人：集成电路学院院长"
+    },
+    {
+      "name_cn": "王学香",
+      "name_en": null,
+      "title": "副教授",
+      "department": "集成电路学院 国家ASIC工程中心",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "SoC与片上系统",
+        "嵌入式与MCU",
+        "集成电路设计",
+        "EDA与设计自动化"
+      ],
+      "homepage": "https://ic.seu.edu.cn/wangxuexiang/main.htm",
+      "email": "wxx@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "魏家行",
+      "name_en": null,
+      "title": "副教授",
+      "department": "集成电路学院 国家ASIC工程中心",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "宽禁带功率器件",
+        "功率集成技术",
+        "半导体器件"
+      ],
+      "homepage": "https://ic.seu.edu.cn/weijiaxing/main.htm",
+      "email": "jiaxingwei@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "吴建辉",
+      "name_en": null,
+      "title": "教授",
+      "department": "集成电路学院 国家ASIC工程中心",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "集成电路设计",
+        "模拟集成电路",
+        "射频集成电路",
+        "射频与微波"
+      ],
+      "homepage": "https://ic.seu.edu.cn/wujianhui/main.htm",
+      "email": "wjh@seu.edu.cn",
+      "notes": "负责人：ASIC工程中心副主任"
+    },
+    {
+      "name_cn": "吴汪然",
+      "name_en": null,
+      "title": "青年首席教授",
+      "department": "集成电路学院 国家ASIC工程中心",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "柔性电子",
+        "显示技术",
+        "集成电路设计",
+        "半导体器件"
+      ],
+      "homepage": "https://ic.seu.edu.cn/wuwangran/main.htm",
+      "email": "wrwu@seu.edudotcn",
+      "notes": "国家级青年人才"
+    },
+    {
+      "name_cn": "闫浩",
+      "name_en": null,
+      "title": "副教授",
+      "department": "集成电路学院 国家ASIC工程中心",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "EDA与设计自动化",
+        "时序分析与优化",
+        "智能EDA",
+        "集成电路设计"
+      ],
+      "homepage": "https://ic.seu.edu.cn/yanhao/main.htm",
+      "email": "yanhao@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "张龙",
+      "name_en": null,
+      "title": "青年首席教授",
+      "department": "集成电路学院 国家ASIC工程中心",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "半导体器件",
+        "宽禁带半导体",
+        "集成电路设计"
+      ],
+      "homepage": "https://ic.seu.edu.cn/zhanglong/main.htm",
+      "email": "longzh@seu.edu.cn",
+      "notes": "国家级青年人才"
+    },
+    {
+      "name_cn": "钟锐",
+      "name_en": null,
+      "title": "副教授",
+      "department": "集成电路学院 国家ASIC工程中心",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "嵌入式与MCU",
+        "处理器体系结构",
+        "射频与微波"
+      ],
+      "homepage": "https://ic.seu.edu.cn/zhongrui/main.htm",
+      "email": "ray@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "朱彬武",
+      "name_en": null,
+      "title": "副研究员",
+      "department": "集成电路学院 国家ASIC工程中心",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "EDA与设计自动化",
+        "半导体工艺与集成",
+        "数据转换器"
+      ],
+      "homepage": "https://ic.seu.edu.cn/zbw/main.htm",
+      "email": "bwzhu@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "朱自然",
+      "name_en": null,
+      "title": "青年首席教授",
+      "department": "集成电路学院 国家ASIC工程中心",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "EDA与设计自动化",
+        "数字集成电路",
+        "模拟集成电路",
+        "数据转换器"
+      ],
+      "homepage": "https://ic.seu.edu.cn/zhuziran/main.htm",
+      "email": "zrzhu@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "曹鹏",
+      "name_en": null,
+      "title": "副教授",
+      "department": "集成电路学院 国家ASIC工程中心，EDA国创中心",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "EDA与设计自动化",
+        "时序分析与签核",
+        "AI辅助电路设计",
+        "集成电路设计"
+      ],
+      "homepage": "https://ic.seu.edu.cn/caopeng/main.htm",
+      "email": "caopeng@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "葛立新",
+      "name_en": null,
+      "title": "教授",
+      "department": "集成电路学院 EDA国创中心",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "集成电路设计",
+        "EDA与设计自动化",
+        "半导体器件"
+      ],
+      "homepage": "https://ic.seu.edu.cn/glx/main.htm",
+      "email": "101013912@seu.edu.cn",
+      "notes": "国家级高层次人才"
+    },
+    {
+      "name_cn": "李兴权",
+      "name_en": null,
+      "title": "副研究员",
+      "department": "集成电路学院 EDA国创中心",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "EDA与设计自动化",
+        "集成电路设计",
+        "芯片测试与验证",
+        "数据转换器"
+      ],
+      "homepage": "https://ic.seu.edu.cn/lxq/main.htm",
+      "email": "x.li@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "陆光易",
+      "name_en": null,
+      "title": "副教授",
+      "department": "集成电路学院 EDA国创中心",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "EDA与设计自动化",
+        "SoC与片上系统",
+        "射频与微波"
+      ],
+      "homepage": "https://ic.seu.edu.cn/lgy/main.htm",
+      "email": "guangyilu@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "王超",
+      "name_en": null,
+      "title": "副研究员",
+      "department": "集成电路学院 EDA国创中心",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "EDA与设计自动化",
+        "嵌入式与MCU",
+        "SoC与片上系统"
+      ],
+      "homepage": "https://ic.seu.edu.cn/wangchao/main.htm",
+      "email": "wangc@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "杨军",
+      "name_en": null,
+      "title": "教授",
+      "department": "集成电路学院 EDA国创中心",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "集成电路设计",
+        "EDA与设计自动化",
+        "数字集成电路"
+      ],
+      "homepage": "https://ic.seu.edu.cn/yangjun/main.htm",
+      "email": "dragon@seu.edu.cn",
+      "notes": "首席教授；负责人：EDA国创中心执行主任"
+    },
+    {
+      "name_cn": "窦广彬",
+      "name_en": null,
+      "title": "教授",
+      "department": "集成电路学院 MEMS教育部重点实验室",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "MEMS与微纳传感",
+        "半导体工艺与集成",
+        "传感与检测技术",
+        "微系统与集成"
+      ],
+      "homepage": "https://ic.seu.edu.cn/douguangbin/main.htm",
+      "email": "gdou@seu.edu.cn",
+      "notes": "长江学者；首席教授"
+    },
+    {
+      "name_cn": "韩磊",
+      "name_en": null,
+      "title": "教授",
+      "department": "集成电路学院 MEMS教育部重点实验室",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "微系统与集成",
+        "MEMS与微纳传感",
+        "柔性电子"
+      ],
+      "homepage": "https://ic.seu.edu.cn/hanlei/main.htm",
+      "email": "hanlei@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "贺龙兵",
+      "name_en": null,
+      "title": "教授",
+      "department": "集成电路学院 MEMS教育部重点实验室",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "微纳加工与表征",
+        "半导体工艺与集成",
+        "传感与检测技术"
+      ],
+      "homepage": "https://ic.seu.edu.cn/helongbing/main.htm",
+      "email": "helongbing@seu.edu.cn",
+      "notes": "负责人：微纳系统国际创新中心主任"
+    },
+    {
+      "name_cn": "李霁",
+      "name_en": null,
+      "title": "教授",
+      "department": "集成电路学院 MEMS教育部重点实验室",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "半导体工艺与集成",
+        "微系统与集成",
+        "天线与相控阵",
+        "MEMS与微纳传感"
+      ],
+      "homepage": "https://ic.seu.edu.cn/liji/main.htm",
+      "email": "j.li5@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "廖小平",
+      "name_en": null,
+      "title": "教授",
+      "department": "集成电路学院 MEMS教育部重点实验室",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "微系统与集成",
+        "射频与微波",
+        "射频集成电路",
+        "电源管理芯片",
+        "MEMS与微纳传感"
+      ],
+      "homepage": "https://ic.seu.edu.cn/liaoxiaoping/main.htm",
+      "email": "xpliao@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "聂萌",
+      "name_en": null,
+      "title": "教授",
+      "department": "集成电路学院 MEMS教育部重点实验室",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "MEMS与微纳传感",
+        "集成电路设计",
+        "通信基带与SoC",
+        "光电子与硅光",
+        "生物医疗电子",
+        "微系统与集成"
+      ],
+      "homepage": "https://ic.seu.edu.cn/niemeng/main.htm",
+      "email": "m_nie@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "秦明",
+      "name_en": null,
+      "title": "教授",
+      "department": "集成电路学院 MEMS教育部重点实验室",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "MEMS传感器",
+        "MEMS工艺与封装",
+        "片上集成微系统"
+      ],
+      "homepage": "https://ic.seu.edu.cn/qinming/main.htm",
+      "email": "mqin@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "吴建峰",
+      "name_en": null,
+      "title": "副研究员",
+      "department": "集成电路学院 MEMS教育部重点实验室",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "二维材料器件",
+        "MEMS与微纳传感",
+        "半导体工艺与集成",
+        "微纳加工与表征"
+      ],
+      "homepage": "https://ic.seu.edu.cn/wujianfeng/main.htm",
+      "email": "jfwu@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "徐峰",
+      "name_en": null,
+      "title": "教授",
+      "department": "集成电路学院 MEMS教育部重点实验室",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "二维材料器件",
+        "毫米波与太赫兹",
+        "MEMS与微纳传感",
+        "微纳加工与表征",
+        "宽禁带半导体"
+      ],
+      "homepage": "https://ic.seu.edu.cn/xufeng/main.htm",
+      "email": "xf@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "徐涛",
+      "name_en": null,
+      "title": "教授",
+      "department": "集成电路学院 MEMS教育部重点实验室",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "半导体器件",
+        "二维材料器件",
+        "纳米加工与原位表征"
+      ],
+      "homepage": "https://ic.seu.edu.cn/xutao/main.htm",
+      "email": "xt@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "尹春燕",
+      "name_en": null,
+      "title": "副教授",
+      "department": "集成电路学院 MEMS教育部重点实验室",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "MEMS与微纳传感",
+        "半导体器件",
+        "探测器件"
+      ],
+      "homepage": "https://ic.seu.edu.cn/yinchunyan/main.htm",
+      "email": "yincy@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "尹奎波",
+      "name_en": null,
+      "title": "教授",
+      "department": "集成电路学院 MEMS教育部重点实验室",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "MEMS与微纳传感",
+        "二维材料器件",
+        "原位电子显微"
+      ],
+      "homepage": "https://ic.seu.edu.cn/yinkuibo/main.htm",
+      "email": "yinkuibo@seu.edu.cn",
+      "notes": "负责人：MEMS教育部重点实验室副主任"
+    },
+    {
+      "name_cn": "朱超",
+      "name_en": null,
+      "title": "教授",
+      "department": "集成电路学院 MEMS教育部重点实验室",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "二维半导体器件",
+        "原子级制造",
+        "原位表征"
+      ],
+      "homepage": "https://ic.seu.edu.cn/zhuchao/main.htm",
+      "email": "zhuchao@seu.edu.cn",
+      "notes": "国家级青年人才"
+    },
+    {
+      "name_cn": "朱真",
+      "name_en": null,
+      "title": "教授",
+      "department": "集成电路学院 MEMS教育部重点实验室",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "MEMS与微纳传感",
+        "嵌入式与MCU",
+        "生物医疗电子",
+        "传感与检测技术"
+      ],
+      "homepage": "https://ic.seu.edu.cn/zhuzhen/main.htm",
+      "email": "zhuzhen@seu.edu.cn",
+      "notes": "负责人：无锡校区管委会主任、MEMS教育部重点实验室副主任"
+    },
+    {
+      "name_cn": "杨全胜",
+      "name_en": null,
+      "title": "教授",
+      "department": "计算机科学与工程学院 计算机工程系",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "处理器体系结构",
+        "嵌入式与MCU",
+        "AI芯片与加速器"
+      ],
+      "homepage": "https://cs.seu.edu.cn/yangqs/main.htm",
+      "email": "yangqs@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "时霄",
+      "name_en": "Xiao Shi",
+      "title": "副教授",
+      "department": "计算机科学与工程学院 计算机科学系",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "EDA与设计自动化",
+        "大语言模型",
+        "机器学习"
+      ],
+      "homepage": "https://cs.seu.edu.cn/shixiao/main.htm",
+      "email": "xshi@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "徐宁",
+      "name_en": null,
+      "title": "副教授",
+      "department": "计算机科学与工程学院 计算机科学系",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "EDA与设计自动化",
+        "机器学习",
+        "数据挖掘",
+        "AI辅助芯片设计"
+      ],
+      "homepage": "https://cs.seu.edu.cn/xning_old/main.htm",
+      "email": "xning@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "高昊",
+      "name_en": null,
+      "title": "首席教授",
+      "department": "信息科学与工程学院",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "射频与微波",
+        "射频集成电路",
+        "毫米波与太赫兹"
+      ],
+      "homepage": "https://radio.seu.edu.cn/2023/0914/c19937a464453/page.htm",
+      "email": null,
+      "notes": "国家级高层次人才；首席教授"
+    },
+    {
+      "name_cn": "郭开喆",
+      "name_en": null,
+      "title": "青年首席教授",
+      "department": "信息科学与工程学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "毫米波与太赫兹",
+        "集成电路设计",
+        "通信基带与SoC",
+        "宽禁带半导体"
+      ],
+      "homepage": "https://radio.seu.edu.cn/2023/1025/c19937a483515/page.htm",
+      "email": null,
+      "notes": null
+    },
+    {
+      "name_cn": "李连鸣",
+      "name_en": null,
+      "title": "教授",
+      "department": "信息科学与工程学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "集成电路设计",
+        "模拟集成电路",
+        "毫米波与太赫兹",
+        "天线与相控阵",
+        "射频与微波",
+        "通信基带与SoC"
+      ],
+      "homepage": "https://radio.seu.edu.cn/2018/0423/c19937a422707/page.htm",
+      "email": "Lianming.Li@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "王向阳",
+      "name_en": null,
+      "title": "副研究员",
+      "department": "信息科学与工程学院",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "通信基带与SoC",
+        "数字信号处理",
+        "嵌入式与MCU"
+      ],
+      "homepage": "https://radio.seu.edu.cn/2018/0423/c19938a213547/page.htm",
+      "email": "xywang@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "吴旭",
+      "name_en": null,
+      "title": "副教授",
+      "department": "信息科学与工程学院",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "集成电路设计",
+        "模拟集成电路",
+        "毫米波与太赫兹",
+        "传感器接口电路",
+        "射频与微波",
+        "通信基带与SoC"
+      ],
+      "homepage": "https://radio.seu.edu.cn/2018/0423/c19938a467690/page.htm",
+      "email": null,
+      "notes": null
+    },
+    {
+      "name_cn": "杨传世",
+      "name_en": null,
+      "title": "副教授",
+      "department": "信息科学与工程学院",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "通信基带与SoC",
+        "射频集成电路",
+        "数据转换器",
+        "射频与微波"
+      ],
+      "homepage": "https://radio.seu.edu.cn/2024/0806/c19938a499293/page.htm",
+      "email": "chuanshi.yang@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "赵涤燹",
+      "name_en": null,
+      "title": "教授",
+      "department": "信息科学与工程学院",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "毫米波与太赫兹",
+        "通信基带与SoC",
+        "集成电路设计",
+        "射频集成电路",
+        "天线与相控阵",
+        "雷达与探测芯片"
+      ],
+      "homepage": "https://radio.seu.edu.cn/2018/0930/c19937a241894/page.htm",
+      "email": null,
+      "notes": null
+    },
+    {
+      "name_cn": "蔡龙珠",
+      "name_en": null,
+      "title": "副教授",
+      "department": "信息科学与工程学院 电磁场与微波技术学科",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "毫米波与太赫兹",
+        "射频电路与前端",
+        "电磁超材料与超表面"
+      ],
+      "homepage": "https://radio.seu.edu.cn/2023/1025/c19950a469783/page.htm",
+      "email": null,
+      "notes": null
+    },
+    {
+      "name_cn": "陈继新",
+      "name_en": null,
+      "title": "首席教授",
+      "department": "信息科学与工程学院 电磁场与微波技术学科",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "毫米波与太赫兹",
+        "射频与微波",
+        "射频电路与前端"
+      ],
+      "homepage": "https://radio.seu.edu.cn/2018/0423/c19949a213725/page.htm",
+      "email": "jxchen@seu.edu.cn",
+      "notes": "首席教授"
+    },
+    {
+      "name_cn": "程峰",
+      "name_en": null,
+      "title": "副研究员",
+      "department": "信息科学与工程学院 电磁场与微波技术学科",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "微波集成电路无源元件",
+        "射频与微波",
+        "毫米波MEMS天线"
+      ],
+      "homepage": "https://radio.seu.edu.cn/2018/0423/c19950a213722/page.htm",
+      "email": "fengcheng@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "傅晓建",
+      "name_en": null,
+      "title": "副教授",
+      "department": "信息科学与工程学院 电磁场与微波技术学科",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "毫米波与太赫兹",
+        "人工电磁材料",
+        "表面等离激元电路"
+      ],
+      "homepage": "https://radio.seu.edu.cn/2018/0423/c19950a213746/page.htm",
+      "email": "fuxj@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "高亮",
+      "name_en": null,
+      "title": "教授",
+      "department": "信息科学与工程学院 电磁场与微波技术学科",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "毫米波与太赫兹",
+        "射频集成电路",
+        "毫米波电路"
+      ],
+      "homepage": "https://radio.seu.edu.cn/2024/0226/c19949a481432/page.htm",
+      "email": "lianggao@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "郭健",
+      "name_en": null,
+      "title": "副教授",
+      "department": "信息科学与工程学院 电磁场与微波技术学科",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "毫米波与太赫兹",
+        "射频与微波",
+        "半导体工艺与集成",
+        "雷达与探测芯片"
+      ],
+      "homepage": "https://radio.seu.edu.cn/2018/0423/c19950a213747/page.htm",
+      "email": "jguo@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "郝张成",
+      "name_en": null,
+      "title": "教授",
+      "department": "信息科学与工程学院 电磁场与微波技术学科",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "毫米波与太赫兹",
+        "射频与微波",
+        "雷达与探测芯片",
+        "天线与相控阵",
+        "射频电路与前端",
+        "通信基带与SoC"
+      ],
+      "homepage": "https://radio.seu.edu.cn/2018/0930/c19949a241896/page.htm",
+      "email": "zchao@seu.edu.cn",
+      "notes": "首席教授"
+    },
+    {
+      "name_cn": "洪伟",
+      "name_en": null,
+      "title": "教授",
+      "department": "信息科学与工程学院 电磁场与微波技术学科",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "毫米波与太赫兹",
+        "射频电路与前端",
+        "通信基带与SoC",
+        "毫米波芯片"
+      ],
+      "homepage": "https://radio.seu.edu.cn/2018/0423/c19949a213699/page.htm",
+      "email": "weihong@seu.edu.cn",
+      "notes": "中国科学院院士（2023年当选，见 radio.seu.edu.cn 首页院系新闻）；首席教授；博士生导师"
+    },
+    {
+      "name_cn": "胡三明",
+      "name_en": null,
+      "title": "教授",
+      "department": "信息科学与工程学院 电磁场与微波技术学科",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "毫米波与太赫兹",
+        "射频集成电路",
+        "太赫兹器件"
+      ],
+      "homepage": "https://radio.seu.edu.cn/2018/0423/c19949a213714/page.htm",
+      "email": null,
+      "notes": null
+    },
+    {
+      "name_cn": "沈一竹",
+      "name_en": null,
+      "title": "教授",
+      "department": "信息科学与工程学院 电磁场与微波技术学科",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "毫米波无源芯片",
+        "毫米波与太赫兹",
+        "天线与相控阵"
+      ],
+      "homepage": "https://radio.seu.edu.cn/2019/1205/c19949a297684/page.htm",
+      "email": "yizhu.shen@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "汤红军",
+      "name_en": null,
+      "title": "讲师",
+      "department": "信息科学与工程学院 电磁场与微波技术学科",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "微波毫米波无源器件",
+        "微波毫米波电路与系统",
+        "滤波器"
+      ],
+      "homepage": "https://radio.seu.edu.cn/2018/0423/c19951a213753/page.htm",
+      "email": "hjtang@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "吴逸文",
+      "name_en": null,
+      "title": "教授",
+      "department": "信息科学与工程学院 电磁场与微波技术学科",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "毫米波与太赫兹",
+        "天线与相控阵",
+        "微波毫米波器件"
+      ],
+      "homepage": "https://radio.seu.edu.cn/2026/0104/c19949a550922/page.htm",
+      "email": "ywwu1@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "徐俊",
+      "name_en": null,
+      "title": "副研究员",
+      "department": "信息科学与工程学院 电磁场与微波技术学科",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "毫米波与太赫兹",
+        "微波毫米波器件",
+        "射频电路与前端"
+      ],
+      "homepage": "https://radio.seu.edu.cn/2023/0224/c19950a435108/page.htm",
+      "email": "junxu@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "许正彬",
+      "name_en": null,
+      "title": "副研究员",
+      "department": "信息科学与工程学院 电磁场与微波技术学科",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "毫米波与太赫兹",
+        "射频电路与前端",
+        "微波毫米波器件"
+      ],
+      "homepage": "https://radio.seu.edu.cn/2018/0423/c19950a213759/page.htm",
+      "email": "zb_xu@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "杨非",
+      "name_en": null,
+      "title": "教授",
+      "department": "信息科学与工程学院 电磁场与微波技术学科",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "毫米波与太赫兹",
+        "射频与微波",
+        "SoC与片上系统",
+        "电磁超材料与超表面",
+        "通信基带与SoC",
+        "光电子与硅光"
+      ],
+      "homepage": "https://radio.seu.edu.cn/2018/0423/c19949a467679/page.htm",
+      "email": "yangfei@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "余超",
+      "name_en": null,
+      "title": "教授",
+      "department": "信息科学与工程学院 电磁场与微波技术学科",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "射频功率放大器",
+        "线性化技术",
+        "毫米波阵列系统"
+      ],
+      "homepage": "https://radio.seu.edu.cn/2018/0423/c19949a213744/page.htm",
+      "email": "chao.yu@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "张雷",
+      "name_en": null,
+      "title": "副教授",
+      "department": "信息科学与工程学院 电磁场与微波技术学科",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "微波与毫米波技术",
+        "射频功率放大器",
+        "微波毫米波器件"
+      ],
+      "homepage": "https://radio.seu.edu.cn/2018/0423/c19950a213738/page.htm",
+      "email": "zhangl@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "周培根",
+      "name_en": null,
+      "title": "副研究员",
+      "department": "信息科学与工程学院 电磁场与微波技术学科",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "毫米波与太赫兹",
+        "射频电路与前端",
+        "异质集成"
+      ],
+      "homepage": "https://radio.seu.edu.cn/2026/0706/c19950a575728/page.htm",
+      "email": "pgzhouseu@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "陈莹梅",
+      "name_en": null,
+      "title": "教授",
+      "department": "信息科学与工程学院 电路与系统学科",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "集成电路设计",
+        "模拟集成电路",
+        "光电子与硅光",
+        "数据转换器",
+        "毫米波与太赫兹",
+        "通信基带与SoC"
+      ],
+      "homepage": "https://radio.seu.edu.cn/2023/1025/c19946a469789/page.htm",
+      "email": "njcym@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "黎飞",
+      "name_en": null,
+      "title": "讲师",
+      "department": "信息科学与工程学院 电路与系统学科",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "数据转换器",
+        "时钟与锁相环",
+        "射频与微波",
+        "生物医疗电子"
+      ],
+      "homepage": "https://radio.seu.edu.cn/2018/0423/c19948a213694/page.htm",
+      "email": "lifei@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "李芹",
+      "name_en": null,
+      "title": "副教授",
+      "department": "信息科学与工程学院 电路与系统学科",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "集成电路设计",
+        "毫米波与太赫兹",
+        "射频与微波",
+        "微系统与集成",
+        "射频集成电路",
+        "射频电路与前端"
+      ],
+      "homepage": "https://radio.seu.edu.cn/2023/1025/c19947a469790/page.htm",
+      "email": "101010761@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "李文渊",
+      "name_en": null,
+      "title": "教授",
+      "department": "信息科学与工程学院 电路与系统学科",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "数字集成电路",
+        "模拟集成电路",
+        "射频集成电路",
+        "射频与微波",
+        "生物医疗电子"
+      ],
+      "homepage": "https://radio.seu.edu.cn/2018/0423/c19946a213683/page.htm",
+      "email": "LWY555@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "苗澎",
+      "name_en": null,
+      "title": "副教授",
+      "department": "信息科学与工程学院 电路与系统学科",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "集成电路设计",
+        "光电子与硅光",
+        "模拟集成电路",
+        "毫米波与太赫兹",
+        "微波毫米波器件",
+        "射频与微波"
+      ],
+      "homepage": "https://radio.seu.edu.cn/2018/0423/c19947a213686/page.htm",
+      "email": "miaopeng123@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "唐路",
+      "name_en": null,
+      "title": "副教授",
+      "department": "信息科学与工程学院 电路与系统学科",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "时钟与锁相环",
+        "集成电路设计",
+        "射频与微波",
+        "模拟集成电路"
+      ],
+      "homepage": "https://radio.seu.edu.cn/2018/0423/c19947a213689/page.htm",
+      "email": "lutang2k@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "王欢",
+      "name_en": null,
+      "title": "副教授",
+      "department": "信息科学与工程学院 电路与系统学科",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "射频与微波",
+        "射频集成电路",
+        "射频电路与前端"
+      ],
+      "homepage": "https://radio.seu.edu.cn/2018/0423/c19947a213690/page.htm",
+      "email": "wanghuan@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "王蓉",
+      "name_en": null,
+      "title": "副教授",
+      "department": "信息科学与工程学院 电路与系统学科",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "集成电路设计",
+        "模拟集成电路",
+        "射频集成电路",
+        "射频与微波"
+      ],
+      "homepage": "https://radio.seu.edu.cn/2018/0423/c19946a583496/page.htm",
+      "email": "wangrong@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "徐建",
+      "name_en": null,
+      "title": "副教授",
+      "department": "信息科学与工程学院 电路与系统学科",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "集成电路设计",
+        "模拟集成电路",
+        "射频与微波",
+        "通信基带与SoC"
+      ],
+      "homepage": "https://radio.seu.edu.cn/2023/1025/c19947a469791/page.htm",
+      "email": "xujian318@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "赵鑫泰",
+      "name_en": null,
+      "title": "副教授",
+      "department": "信息科学与工程学院 电路与系统学科",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "射频电路与前端",
+        "微波毫米波器件",
+        "射频与微波"
+      ],
+      "homepage": "https://radio.seu.edu.cn/2018/0423/c19947a213691/page.htm",
+      "email": "xtzhao@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "周智君",
+      "name_en": null,
+      "title": "副教授",
+      "department": "信息科学与工程学院 电路与系统学科",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "数字集成电路",
+        "射频集成电路",
+        "数据转换器",
+        "AI芯片与加速器",
+        "传感器接口电路",
+        "射频与微波"
+      ],
+      "homepage": "https://radio.seu.edu.cn/2018/0423/c19947a467693/page.htm",
+      "email": "zhijun.zhou@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "丁徐锴",
+      "name_en": null,
+      "title": "副教授",
+      "department": "仪器科学与工程学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "MEMS惯性传感器",
+        "模数混合电路设计",
+        "微弱信号检测",
+        "谐振式传感器"
+      ],
+      "homepage": "https://ins.seu.edu.cn/dxk/list.htm",
+      "email": "ding.xk@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "黄丽斌",
+      "name_en": null,
+      "title": "教授",
+      "department": "仪器科学与工程学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "MEMS与微纳传感",
+        "测控电路设计",
+        "智能微系统",
+        "组合导航"
+      ],
+      "homepage": "https://ins.seu.edu.cn/hlb/list.htm",
+      "email": "huanglibin@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "李宏生",
+      "name_en": null,
+      "title": "教授",
+      "department": "仪器科学与工程学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "MEMS与微纳传感",
+        "嵌入式与MCU",
+        "微系统与集成",
+        "SoC与片上系统",
+        "信号处理芯片"
+      ],
+      "homepage": "https://ins.seu.edu.cn/lhs/list.htm",
+      "email": "hsli@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "梁金星",
+      "name_en": null,
+      "title": "教授",
+      "department": "仪器科学与工程学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "石英MEMS谐振器",
+        "石英振梁加速度计",
+        "生物MEMS传感器",
+        "微加工技术"
+      ],
+      "homepage": "https://ins.seu.edu.cn/ljx/list.htm",
+      "email": "j-liang@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "莫凌飞",
+      "name_en": null,
+      "title": "副教授",
+      "department": "仪器科学与工程学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "射频识别",
+        "低功耗广域物联网",
+        "无线定位与感知"
+      ],
+      "homepage": "https://ins.seu.edu.cn/mlf/list.htm",
+      "email": "lfmo@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "秦文虎",
+      "name_en": null,
+      "title": "教授",
+      "department": "仪器科学与工程学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "传感器技术",
+        "检测与控制",
+        "智能仪器"
+      ],
+      "homepage": "https://ins.seu.edu.cn/qwh/list.htm",
+      "email": "qinwenhu@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "夏敦柱",
+      "name_en": null,
+      "title": "教授",
+      "department": "仪器科学与工程学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "SoC与片上系统",
+        "嵌入式与MCU",
+        "MEMS与微纳传感",
+        "模拟集成电路",
+        "信号处理芯片",
+        "传感与检测技术"
+      ],
+      "homepage": "https://ins.seu.edu.cn/xdz/list.htm",
+      "email": "xiadz_1999@163.com",
+      "notes": null
+    },
+    {
+      "name_cn": "徐佳文",
+      "name_en": null,
+      "title": "副教授",
+      "department": "仪器科学与工程学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "自供电传感器",
+        "压电振动能量采集",
+        "谐振式传感器",
+        "低功耗传感节点"
+      ],
+      "homepage": "https://ins.seu.edu.cn/xjw/list.htm",
+      "email": "jiawen.xu@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "杨波",
+      "name_en": null,
+      "title": "教授",
+      "department": "仪器科学与工程学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "微系统与集成",
+        "嵌入式与MCU",
+        "生物医疗电子",
+        "MEMS与微纳传感",
+        "集成电路设计",
+        "传感器接口电路"
+      ],
+      "homepage": "https://ins.seu.edu.cn/yb/list.htm",
+      "email": "yangbo20022002@163.com",
+      "notes": null
+    },
+    {
+      "name_cn": "赵立业",
+      "name_en": null,
+      "title": "教授",
+      "department": "仪器科学与工程学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "微纳光机电传感器",
+        "量子传感与精密测量",
+        "嵌入式系统",
+        "智能仪器"
+      ],
+      "homepage": "https://ins.seu.edu.cn/zly/list.htm",
+      "email": "liyezhao@seu.edu.cn",
+      "notes": null
+    },
+    {
+      "name_cn": "王晓俊",
+      "name_en": null,
+      "title": "副教授",
+      "department": "自动化学院",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "嵌入式系统",
+        "智能仪器设计",
+        "微弱信号检测与处理",
+        "工业物联网"
+      ],
+      "homepage": "https://automation.seu.edu.cn/wxj/list.htm",
+      "email": "101011042@seu.edu.cn",
+      "notes": null
+    }
+  ]
+}

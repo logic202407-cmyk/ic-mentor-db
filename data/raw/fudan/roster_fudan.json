@@ -1,0 +1,2282 @@
+{
+ "school": "复旦大学",
+ "school_key": "fudan",
+ "harvested_at": "2026-09-22",
+ "sources": [
+  "https://icmne.fudan.edu.cn/szgk/list1.htm",
+  "https://icmne.fudan.edu.cn/szgk/list2.htm",
+  "https://icmne.fudan.edu.cn/szgk/list3.htm",
+  "https://icmne.fudan.edu.cn/szgk/list4.htm",
+  "https://icmne.fudan.edu.cn/szgk/list5.htm",
+  "https://icmne.fudan.edu.cn/szgk/list6.htm",
+  "https://icmne.fudan.edu.cn/szgk/list7.htm",
+  "https://icmne.fudan.edu.cn/szgk/list8.htm",
+  "https://icmne.fudan.edu.cn/szgk/list9.htm",
+  "https://icmne.fudan.edu.cn/szgk/list10.htm",
+  "https://icmne.fudan.edu.cn/szgk/list11.htm",
+  "https://icmne.fudan.edu.cn/（100位教师个人主页，逐一抓取）",
+  "https://sme.fudan.edu.cn/apy/list.htm",
+  "https://sme.fudan.edu.cn/azc_31108/list.htm",
+  "https://sme.fudan.edu.cn/（100位教师个人主页，逐一抓取）",
+  "https://sklics.fudan.edu.cn/rcdw/jsml.htm",
+  "https://sklics.fudan.edu.cn/rcdw/ys.htm",
+  "https://sklics.fudan.edu.cn/rcdw/jq.htm",
+  "https://sklics.fudan.edu.cn/kxyj/yjfx.htm",
+  "https://fics.fudan.edu.cn/szdwwxw/list.htm",
+  "https://fics.fudan.edu.cn/ysfc/list.htm",
+  "https://fics.fudan.edu.cn/jcqn/list.htm",
+  "https://fics.fudan.edu.cn/jswyjy/list.htm",
+  "https://fics.fudan.edu.cn/fyjy/list.htm",
+  "https://fics.fudan.edu.cn/qnyjy_22620/list.htm",
+  "https://fics.fudan.edu.cn/qnfyjy_22621/list.htm",
+  "https://fics.fudan.edu.cn/（教师个人主页，逐一抓取）",
+  "https://fit.fudan.edu.cn/Data/List/adw",
+  "https://fit.fudan.edu.cn/Data/List/cptx",
+  "https://fit.fudan.edu.cn/（194位教师个人主页，逐一抓取）",
+  "https://ee.fudan.edu.cn/Data/List/zgj",
+  "https://ee.fudan.edu.cn/Data/List/fgj",
+  "https://cse.fudan.edu.cn/25690/list.htm",
+  "https://cse.fudan.edu.cn/25691/list.htm",
+  "https://ai.fudan.edu.cn/53161/list.htm",
+  "https://ai.fudan.edu.cn/_wp3services/generalQuery?queryObj=teacherHome",
+  "https://cscw.fudan.edu.cn/57/bf/c31071a415679/page.htm",
+  "https://ipass.fudan.edu.cn/sysfzr/list.htm",
+  "https://istbi.fudan.edu.cn/ry/gdkyry_aszmpysx_.htm"
+ ],
+ "coverage_note": "覆盖情况：\n1) 集成电路与微纳电子创新学院（微电子学院，icmne.fudan.edu.cn）：教师名录 11 页共 101 条记录全部抓取，逐条抓取 100 个教师主页；另抓取旧站 sme.fudan.edu.cn 的「按拼音」150 人名单、「按职称」名单与 100 个教师主页，用于补全 icmne 名录未收录的资深教师（如张卫、闫娜、闵昊、任俊彦、屈新萍、丁士进、孙清清、陈建利等）。\n2) 集成芯片与系统全国重点实验室（sklics.fudan.edu.cn）：抓取「教师名录」全部 6 个创新中心名单（114 条）及院士/杰青/优青/海外优青分页，作为交叉校验并补齐跨院系成员（俞军、吴昌、陈更生、林殷茵、刘子玉、许灏、于晓华、叶凡、王堃、陈建利等）。\n3) 芯片与系统前沿技术研究院（fics.fudan.edu.cn）：抓取师资队伍全部分类页（院士、杰出青年、教授/研究员、副教授/副研究员、青年研究员、青年副研究员）与教师主页，补充林秋阳、朱浩哲、朱忠赟珅、陈醒、刘利伟、向都等未出现在微电子学院名录中的 PI。\n4) 信息科学与工程学院（现未来信息创新学院，fit.fudan.edu.cn；电子工程系 ee.fudan.edu.cn；通信科学与工程系 cse.fudan.edu.cn）：抓取「教师名录（按单位）/（按职称）」共 194 人，逐个抓取 194 个教师主页（成功 153 个），按方向关键词筛出电子工程系、光科学与工程系、通信科学与工程系中偏芯片/光电/器件/EDA 的教师；纯雷达遥感、纯光学、纯图像处理方向未收录。\n5) 计算机科学技术学院（现计算与智能创新学院，ai.fudan.edu.cn）：教师名录为 AJAX 动态加载，已通过其数据接口 generalQuery 取回全部 289 名教职工名单（含职称、邮箱），结合全国重点实验室名录筛出芯片相关（VLSI/EDA/智能芯片）教师 2 人（尚笠、张立华）；姜育刚、薛向阳、杨珉、卢暾等虽挂名芯片中心，但公开页面研究方向为 AI/多媒体/系统安全，未收录。\n6) 类脑智能科学与技术研究院（istbi.fudan.edu.cn）：抓取固定科研人员 3 页名单，该院以脑科学/认知神经/神经影像为主，无芯片方向固定科研人员，仅许宁生院士（特聘教授）同时属微电子方向并已收录。\n未抓到/未收录说明：\na) me.fudan.edu.cn 与 www.it.fudan.edu.cn 已失效（DNS 指向 198.18.x.x 假地址、TLS 握手被重置），实际有效域名为 icmne.fudan.edu.cn / sme.fudan.edu.cn / fit.fudan.edu.cn；\nb) icmne「按拼音」「按职称」筛选页与 ai.fudan.edu.cn 教师详情页为 JS 动态渲染，直接抓取为空，已改用分页名录 + 数据接口替代；\nc) fit.fudan.edu.cn 194 个教师主页中 41 个抓取失败（多为院部行政人员及 2 个外链拼接错误的 URL），均已核实为行政岗或不属采集方向；\nd) 微电子学院旧站 sme.fudan.edu.cn 名单中约 50 人（唐长文、沈磊、陆伟成、荀本鹏、尹睿、杨萌、周锋、张纲、张驰、王敏、徐敏、徐赛生、李清、李蔚、刘玉平、华霞等）无个人主页、页面亦无研究方向，无法核实其是否在职及方向，故未收录；同一站点中标注为工程师/高级工程师/科研助理/辅导员/办公室职员者（张立锋、陶新萱、胡春凤、金安澜、姚臻奇、王健、王凡、陆振海、刘莎、刘冰、刘艳、宋芳、郑子薇、周艺羽、徐艺萍、曹颢仪、陈洁、郭俊年、周征、许薇等）已排除；\ne) icmne 名录中页面为空白模板、无任何研究方向信息者（张慧君、赵雪冰、纪新明、薛晓勇、王珺）未收录，以免推测；\nf) 纯材料化学/纯物理理论（如孙正宗团队中偏化学方向、季力团队光催化部分）与纯软件算法（陈涛、姜育刚、李聪、王斌等）方向未收录。\n字段说明：title 优先取 2024-2026 年新站（icmne/fics/fit）标注；仅旧站 sme.fudan.edu.cn（2018-2020 版）有标注者沿用旧站职称。is_phd_advisor 依据页面是否出现「博士生导师/博导」判定，未出现者记为 false。name_en 因各页面未系统给出英文名，统一留 null。",
+ "faculty": [
+  {
+   "name_cn": "刘明",
+   "name_en": null,
+   "title": "中国科学院院士、教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院） / 芯片与系统前沿技术研究院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "新型存储器",
+    "微纳加工",
+    "器件与集成技术"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2d/29/c48925a732457/page.htm",
+   "email": "liuming@fudan.edu.cn",
+   "notes": "中国科学院院士、IEEE Fellow、发展中国家科学院院士；集成电路与微纳电子创新学院院长、芯片与系统前沿技术研究院院长；2008年国家杰青、何梁何利奖"
+  },
+  {
+   "name_cn": "许宁生",
+   "name_en": null,
+   "title": "中国科学院院士、教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微纳电子",
+    "场致电子发射",
+    "真空微纳电子器件"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/3c/47/c48925a736327/page.htm",
+   "email": "stsxns@fudan.edu.cn",
+   "notes": "中国科学院院士、发展中国家科学院院士；类脑智能科学与技术研究院特聘教授"
+  },
+  {
+   "name_cn": "曾璇",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计自动化",
+    "模拟电路设计自动化",
+    "高速互连分析",
+    "DFM",
+    "并行EDA"
+   ],
+   "homepage": "http://homepage.fudan.edu.cn/xuanzeng/",
+   "email": "xzeng@fudan.edu.cn",
+   "notes": "国家杰出青年基金获得者(2011)；全国五一巾帼标兵；SKLICS EDA创新中心"
+  },
+  {
+   "name_cn": "曾晓洋",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "高能效SoC设计与集成",
+    "智能集成系统算法与实现",
+    "数字集成电路"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2d/58/c48925a732504/page.htm",
+   "email": "xyzeng@fudan.edu.cn",
+   "notes": "国家杰青(2015)；科技部中青年科技创新领军人才；IEEE SSCS Shanghai Chapter Chair"
+  },
+  {
+   "name_cn": "洪志良",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟集成电路",
+    "混合信号集成电路"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/3c/45/c48925a736325/page.htm",
+   "email": "zlhong@fudan.edu.cn",
+   "notes": "ISSCC程序委员会委员(2016-2019)；国务院特殊津贴；中国第一位博士后"
+  },
+  {
+   "name_cn": "周鹏",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院） / 芯片与系统前沿技术研究院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "二维半导体器件",
+    "非易失存储器",
+    "硅基异质集成",
+    "存算一体"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2d/61/c48925a732513/page.htm",
+   "email": "pengzhou@fudan.edu.cn",
+   "notes": "国家杰青(2019)、优青(2016)；科学探索奖2024；科技部中青年领军人才；集成电路与微纳电子创新学院执行院长"
+  },
+  {
+   "name_cn": "王建禄",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院） / 芯片与系统前沿技术研究院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光电探测器件",
+    "铁电材料与器件",
+    "光电感知芯片"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2d/41/c48925a732481/page.htm",
+   "email": "jianluwang@fudan.edu.cn",
+   "notes": "国家杰青、优青；芯片与系统前沿技术研究院教授；集成电路与微纳电子创新学院副院长"
+  },
+  {
+   "name_cn": "刘琦",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院） / 芯片与系统前沿技术研究院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "新型非易失存储",
+    "神经形态器件",
+    "类脑计算",
+    "存算一体芯片"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2d/2a/c48925a732458/page.htm",
+   "email": "qi_liu@fudan.edu.cn",
+   "notes": "国家杰青、优青；何梁何利基金奖；集成电路与微纳电子创新学院副院长"
+  },
+  {
+   "name_cn": "江安全",
+   "name_en": null,
+   "title": "研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "铁电集成器件",
+    "非挥发铁电存储芯片",
+    "铁电薄膜"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2d/1b/c48925a732443/page.htm",
+   "email": "aqjiang@fudan.edu.cn",
+   "notes": "国家杰出青年科学基金获得者；上海市高校特聘教授；EPL副编辑"
+  },
+  {
+   "name_cn": "陈琳",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "新原理器件",
+    "先进CMOS工艺",
+    "存储器与存算一体",
+    "三维集成"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2c/a6/c48925a732326/page.htm",
+   "email": "linchen@fudan.edu.cn",
+   "notes": "2025国家级领军人才；2021国家重大人才工程青年学者；上海市曙光计划"
+  },
+  {
+   "name_cn": "陈时友",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "TCAD与器件仿真",
+    "SPICE建模提参",
+    "第一性原理计算",
+    "缺陷与可靠性物理"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2c/a7/c48925a732327/page.htm",
+   "email": "chensy@fudan.edu.cn",
+   "notes": "电子器件的原子级仿真方法与TCAD软件"
+  },
+  {
+   "name_cn": "张卫",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路工艺",
+    "半导体器件",
+    "半导体材料"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/60/81/c31158a352385/page.htm",
+   "email": "dwzhang@fudan.edu.cn",
+   "notes": "微电子学院原院长；教育部创新团队带头人；国家技术发明二等奖(2017)"
+  },
+  {
+   "name_cn": "闫娜",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "高能效射频芯片",
+    "6G通感一体可重构射频",
+    "超低温集成电路",
+    "超低功耗混合信号"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/60/61/c31157a352353/page.htm",
+   "email": "yanna@fudan.edu.cn",
+   "notes": "集成电路与微纳电子创新学院副院长（兼），负责微电子学院行政工作；高能效射频芯片及系统"
+  },
+  {
+   "name_cn": "闵昊",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "系统芯片体系结构",
+    "软件无线电芯片",
+    "无线通信收发机芯片",
+    "RFID"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/60/12/c31148a352274/page.htm",
+   "email": "hmin@fudan.edu.cn",
+   "notes": "专用集成电路与系统国家重点实验室；SKLICS超高速电路与系统创新中心"
+  },
+  {
+   "name_cn": "任俊彦",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频与数模混合集成电路",
+    "高性能数据转换器",
+    "毫米波/太赫兹集成电路"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/60/19/c31152a352281/page.htm",
+   "email": "jyren@fudan.edu.cn",
+   "notes": "SKLICS超高速电路与系统创新中心"
+  },
+  {
+   "name_cn": "屈新萍",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路互连材料",
+    "三维异质集成工艺",
+    "TSV电镀填充",
+    "化学机械抛光"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/60/17/c31151a352279/page.htm",
+   "email": "xpqu@fudan.edu.cn",
+   "notes": "2025年度复旦大学三八红旗手"
+  },
+  {
+   "name_cn": "丁士进",
+   "name_en": null,
+   "title": "研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "氧化物半导体薄膜与器件",
+    "电荷俘获型存储器",
+    "ULSI互连材料与工艺",
+    "原子层沉积"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/5f/d0/c31142a352208/page.htm",
+   "email": "sjding@fudan.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "孙清清",
+   "name_en": null,
+   "title": "研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "新结构逻辑/存储/传感器件",
+    "集成电路先导工艺",
+    "高性能存储器件",
+    "晶圆级二维材料"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/60/20/c31153a352288/page.htm",
+   "email": "qqsun@fudan.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "吴东平",
+   "name_en": null,
+   "title": "研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体传感器",
+    "基因检测芯片",
+    "纳米尺度MOSFET"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/60/34/c31155a352308/page.htm",
+   "email": "dongpingwu@fudan.edu.cn",
+   "notes": "微电子与生命科技交叉；芯片化基因检测系统"
+  },
+  {
+   "name_cn": "卢红亮",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "原子层沉积ALD",
+    "氧化物半导体器件",
+    "MEMS传感器",
+    "薄膜晶体管"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/5f/f4/c31147a352244/page.htm",
+   "email": "honglianglu@fudan.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "林殷茵",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "AI加速器软硬件协同",
+    "存储与互连资源优化",
+    "新型存储器"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/60/05/c31147a352261/page.htm",
+   "email": "yylin@fudan.edu.cn",
+   "notes": "SKLICS超高速电路与系统创新中心"
+  },
+  {
+   "name_cn": "倪熔华",
+   "name_en": null,
+   "title": "研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "高性能模拟/射频/混合信号IC",
+    "锁相环与频率综合器",
+    "高速数据接口",
+    "光电收发机"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/60/15/c31149a352277/page.htm",
+   "email": "ronghua_ni@fudan.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "于晓华",
+   "name_en": null,
+   "title": "研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "模拟/射频/毫米波/高速集成电路",
+    "无线收发机芯片",
+    "相控阵芯片",
+    "AI辅助集成电路设计"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/ca/87/c31157a510599/page.htm",
+   "email": "yuxiaohua@fudan.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "许灏",
+   "name_en": null,
+   "title": "青年研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "模数转换器ADC设计",
+    "混合信号集成电路",
+    "射频/模拟集成电路"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/6b/47/c31156a420679/page.htm",
+   "email": "haoxu@fudan.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "叶凡",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "数模混合CMOS集成电路",
+    "高速高精度流水线ADC",
+    "数字通信SoC",
+    "超宽带物理层"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/60/57/c31157a352343/page.htm",
+   "email": "fanye@fudan.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "黄煜梅",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "射频/模拟集成电路设计",
+    "超低功耗射频电路",
+    "可重构射频/模拟集成电路"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/5f/e1/c31145a352225/page.htm",
+   "email": "yumeihuang@fudan.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "王俊宇",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "数模混合电路设计",
+    "物联网关键技术",
+    "低功耗电路设计",
+    "信息安全芯片"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/60/3b/c31155a352315/page.htm",
+   "email": "junyuwang@fudan.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "王堃",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "FPGA编译器",
+    "集成电路电子设计自动化",
+    "软硬件协同设计"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/60/2f/c31155a352303/page.htm",
+   "email": "wangk@fudan.edu.cn",
+   "notes": "IEEE TCGCC Outstanding Young Researcher"
+  },
+  {
+   "name_cn": "吴昌",
+   "name_en": null,
+   "title": "研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "RTL综合与优化",
+    "FPGA与高性能计算",
+    "异构计算平台",
+    "DNN计算体系结构与编译器"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/60/31/c31155a352305/page.htm",
+   "email": "wuchang@fudan.edu.cn",
+   "notes": "上海市工业强基超大规模FPGA阵列项目"
+  },
+  {
+   "name_cn": "陈更生",
+   "name_en": null,
+   "title": "正高级工程师",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "FPGA",
+    "分布式并行计算",
+    "EDA",
+    "处理器体系结构",
+    "可重构-异构计算",
+    "低功耗设计"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/5f/c1/c31141a352193/page.htm",
+   "email": "gschen@fudan.edu.cn",
+   "notes": "SKLICS EDA创新中心；博士生导师"
+  },
+  {
+   "name_cn": "陈建利",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路电子设计自动化",
+    "物理设计",
+    "布局布线优化算法"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/5f/c6/c31141a352198/page.htm",
+   "email": "chenjianli@fudan.edu.cn",
+   "notes": "SKLICS EDA创新中心"
+  },
+  {
+   "name_cn": "刘子玉",
+   "name_en": null,
+   "title": "研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "三维异质异构集成",
+    "多芯片系统集成设计方法学",
+    "硅通孔TSV",
+    "多芯片键合"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/5f/f3/c31147a352243/page.htm",
+   "email": "liuziyu@fudan.edu.cn",
+   "notes": "微电子学院副院长；国家级青年人才"
+  },
+  {
+   "name_cn": "金晓冬",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "新型MEMS器件设计",
+    "MEMS专用ASIC芯片设计",
+    "MEMS可靠性"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/83/6c/c31146a689004/page.htm",
+   "email": "jinxd@fudan.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "包文中",
+   "name_en": null,
+   "title": "研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "晶圆级二维半导体",
+    "二维器件工艺与电路",
+    "逻辑/存储/射频器件"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/5f/bc/c31140a352188/page.htm",
+   "email": "baowz@fudan.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "季力",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "硅基氧化物异质集成",
+    "光芯片",
+    "新型微纳电子与光电器件"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/5f/e7/c31146a352231/page.htm",
+   "email": "lji@fudan.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "姜培",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光子-电子系统设计",
+    "光电融合集成"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/5f/e4/c31146a352228/page.htm",
+   "email": "pchiang@fudan.edu.cn",
+   "notes": "Optics-of-Everything方向"
+  },
+  {
+   "name_cn": "张增星",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "低维半导体材料",
+    "半导体电子/光电子器件",
+    "光电集成"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/60/84/c31158a352388/page.htm",
+   "email": "zhangzx@fudan.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "吴小晗",
+   "name_en": null,
+   "title": "研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "氧化物半导体",
+    "光电子器件与集成",
+    "原子层沉积技术"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/60/35/c31155a352309/page.htm",
+   "email": "wuxiaohan@fudan.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "吴春蕾",
+   "name_en": null,
+   "title": "青年研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "后摩尔新机制半导体器件",
+    "新型存储器件",
+    "先进CMOS DTCO",
+    "第三代半导体功率器件"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/60/33/c31155a352307/page.htm",
+   "email": "wuchunlei@fudan.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "王晨",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "先进CMOS器件与可靠性",
+    "新型功率半导体器件",
+    "新型存储器"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/60/38/c31155a352312/page.htm",
+   "email": "chen_w@fudan.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "江钧",
+   "name_en": null,
+   "title": "青年研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "铁电材料与铁电存储器件",
+    "畴壁存储",
+    "高密度交叉棒Crossbar存储阵列"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/5f/e8/c31146a352232/page.htm",
+   "email": "junjiang@fudan.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "顾宗铨",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "功能氧化物薄膜生长与物性调控",
+    "氧化物薄膜射频应用",
+    "低维铁电体"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/5f/d8/c31144a352216/page.htm",
+   "email": "guzongquan@fudan.edu.cn",
+   "notes": "SKLICS超高速电路与系统创新中心"
+  },
+  {
+   "name_cn": "胡申",
+   "name_en": null,
+   "title": "青年研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "新型功能氧化物薄膜",
+    "超高真空互联设备(ALD-MBE-PVD)",
+    "前沿薄膜工艺"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/8f/bf/c31145a430015/page.htm",
+   "email": "hushen@fudan.edu.cn",
+   "notes": "国家级青年人才"
+  },
+  {
+   "name_cn": "伍强",
+   "name_en": null,
+   "title": "研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路先进光刻工艺",
+    "光刻材料与设备",
+    "DTCO设计工艺协同优化"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/60/30/c31155a352304/page.htm",
+   "email": "wu_qiang@fudan.edu.cn",
+   "notes": "上海市正高级工程师"
+  },
+  {
+   "name_cn": "邓海",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "高端光刻胶与光刻材料",
+    "90nm~5nm节点光刻材料",
+    "工艺集成"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/5f/d1/c31142a352209/page.htm",
+   "email": "haideng@fudan.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "刘显和",
+   "name_en": null,
+   "title": "青年副研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "先进光刻工艺与设备",
+    "光刻算法软件",
+    "DTCO设计工艺协同优化"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/60/0d/c31147a352269/page.htm",
+   "email": "xianheliu@fudan.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "李艳丽",
+   "name_en": null,
+   "title": "青年研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "先进光刻工艺与设备",
+    "光刻材料",
+    "DTCO设计工艺协同优化"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/60/01/c31147a352257/page.htm",
+   "email": "li_yanli@fudan.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "王启",
+   "name_en": null,
+   "title": "青年副研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "先进光刻工艺与设备",
+    "光刻材料",
+    "DTCO设计工艺协同优化"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/f6/40/c31155a456256/page.htm",
+   "email": "wangqi_fd@fudan.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "俞军",
+   "name_en": null,
+   "title": "教授级高工",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "FPGA与人工智能可重构计算平台",
+    "大数据与AI算法加速",
+    "安全算法破解与防护"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/60/5e/c31157a352350/page.htm",
+   "email": "yujun8621@fudan.edu.cn",
+   "notes": "亿门级FPGA国产化；SKLICS IP与芯片架构创新中心"
+  },
+  {
+   "name_cn": "俞少峰",
+   "name_en": null,
+   "title": "研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "先进器件结构与制造工艺",
+    "器件与工艺仿真",
+    "集成电路制造EDA"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/60/5f/c31157a352351/page.htm",
+   "email": "shaofeng_yu@fudan.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "肖鹏程",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "大规模SoC设计与测试",
+    "高速高分辨率混合集成电路测试",
+    "毫米波射频电路测试",
+    "集成电路自动测试设备"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/60/4e/c31156a352334/page.htm",
+   "email": "pcxiao@fudan.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "朱宝",
+   "name_en": null,
+   "title": "青年副研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "高密度介质电容器",
+    "射频/DRAM/储能电容"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/ed/d8/c31158a454104/page.htm",
+   "email": "baozhu@fudan.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "朱小娜",
+   "name_en": null,
+   "title": "讲师",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "先进节点逻辑器件设计与工艺",
+    "先进图像传感器件"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/60/70/c31158a352368/page.htm",
+   "email": "xiaona_zhu@fudan.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "周嘉",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微流控芯片实验室Lab-on-Chip",
+    "微纳生物化学传感器",
+    "生物医疗电子"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/60/89/c31158a352393/page.htm",
+   "email": "jia.zhou@fudan.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "周晓方",
+   "name_en": null,
+   "title": "高级工程师",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "数字集成电路设计"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/60/6a/c31158a352362/page.htm",
+   "email": "xiaofangzhou@fudan.edu.cn",
+   "notes": "硕士生导师"
+  },
+  {
+   "name_cn": "吕铁良",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "激光光谱技术与应用",
+    "新型半导体器件检测"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/5f/f9/c31147a352249/page.htm",
+   "email": "tl_l@fudan.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "杨迎国",
+   "name_en": null,
+   "title": "青年研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "新型光电材料及微电子器件(氧化镓/钙钛矿)",
+    "半导体表界面工艺调控与表征",
+    "集成电路工艺"
+   ],
+   "homepage": "https://sme.fudan.edu.cn/9e/d3/c31157a433875/page.htm",
+   "email": "yangyingguo@fudan.edu.cn",
+   "notes": "国家级青年人才"
+  },
+  {
+   "name_cn": "朱可人",
+   "name_en": null,
+   "title": "青年研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "EDA算法",
+    "物理设计布局布线",
+    "模拟电路设计自动化",
+    "逻辑综合",
+    "CAD for Emerging Computing"
+   ],
+   "homepage": "https://krzhu.github.io/",
+   "email": "krzhu@fudan.edu.cn",
+   "notes": "复旦大学新工科人才基金\"创新中心讲席教授\"(2023)"
+  },
+  {
+   "name_cn": "朱颢",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "先进CMOS器件与工艺",
+    "低功耗器件与系统",
+    "宽禁带半导体功率器件",
+    "智能传感器件"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2d/63/c48925a732515/page.htm",
+   "email": "hao_zhu@fudan.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "袁凯平",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "新型微纳智能气体传感器",
+    "光谱技术",
+    "半导体气体传感器系统"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2d/57/c48925a732503/page.htm",
+   "email": "kpyuan@fudan.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "殷韵",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "数字射频电路设计",
+    "锁相环与数字发射机",
+    "射频/毫米波收发机芯片",
+    "数字辅助射频校准"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2d/56/c48925a732502/page.htm",
+   "email": "yiny@fudan.edu.cn",
+   "notes": "国家优青(2024)；ISSCC技术评审委员；ISSCC 6篇/JSSC 9篇"
+  },
+  {
+   "name_cn": "易婷",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "模拟集成电路设计",
+    "数模混合集成电路设计"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2d/53/c48925a732499/page.htm",
+   "email": "yiting@fudan.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "杨帆",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "人工神经网络加速",
+    "集成电路成品率分析",
+    "高层次综合",
+    "大规模电路快速分析建模",
+    "并行计算"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2d/50/c48925a732496/page.htm",
+   "email": "yangfan@fudan.edu.cn",
+   "notes": "上海市自然科学一等奖(第三完成人)；DAC/ASPDAC最佳论文提名"
+  },
+  {
+   "name_cn": "严昌浩",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路EDA",
+    "模拟电路设计自动化",
+    "随机法",
+    "超大规模并行计算",
+    "DFM",
+    "寄生参数提取"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2d/4e/c48925a732494/page.htm",
+   "email": "yanch@fudan.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "徐佳伟",
+   "name_en": null,
+   "title": "研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "智能传感模拟放大器与数据转换器",
+    "穿戴/植入医疗混合信号芯片",
+    "超声成像模拟前端",
+    "电源管理"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2d/4c/c48925a732492/page.htm",
+   "email": "jwxu@fudan.edu.cn",
+   "notes": "IEEE SSCS Predoctoral Achievement Award；前imec资深研究员"
+  },
+  {
+   "name_cn": "解玉凤",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "新型存储器件芯片设计",
+    "阻变/磁存储器",
+    "高能效AI加速芯片",
+    "高并行信号处理加速芯片"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2d/4b/c48925a732491/page.htm",
+   "email": "xieyf@fudan.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "吴广健",
+   "name_en": null,
+   "title": "青年研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院） / 芯片与系统前沿技术研究院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "新型光电感知器件",
+    "铁电红外探测器件",
+    "感存算一体器件与系统"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2d/4a/c48925a732490/page.htm",
+   "email": "gjwu@fudan.edu.cn",
+   "notes": "Nat. Mater./Nat. Electron.第一或通讯作者"
+  },
+  {
+   "name_cn": "魏莹芬",
+   "name_en": null,
+   "title": "青年研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院） / 芯片与系统前沿技术研究院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "新型铁电材料与存储技术",
+    "铁电器件",
+    "新型计算器件"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2d/48/c48925a732488/page.htm",
+   "email": "yingfen_wei@fudan.edu.cn",
+   "notes": "入选国家级和上海市海外高层次青年人才引进计划"
+  },
+  {
+   "name_cn": "王云",
+   "name_en": null,
+   "title": "青年研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "5G/6G/卫星通信毫米波集成电路",
+    "相控阵技术",
+    "射频收发机芯片",
+    "超低功耗毫米波收发机"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2d/47/c48925a732487/page.htm",
+   "email": "yun_wang@fudan.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "王水源",
+   "name_en": null,
+   "title": "青年研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "类脑神经形态器件与系统",
+    "二维晶体管与集成",
+    "铁电存储器件"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2d/46/c48925a732486/page.htm",
+   "email": "sy_wang@fudan.edu.cn",
+   "notes": "国家高层次人才支持计划（万人计划）青年拔尖人才(2024)；上海市青年科技英才"
+  },
+  {
+   "name_cn": "王明宇",
+   "name_en": null,
+   "title": "研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "仿生动态视觉传感器芯片",
+    "低功耗SoC设计",
+    "安全芯片与抗攻击",
+    "后量子密码芯片",
+    "类脑加速计算体系结构"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2d/45/c48925a732485/page.htm",
+   "email": "mywang@fudan.edu.cn",
+   "notes": "曾任华翼微电子GM、Freescale senior PM"
+  },
+  {
+   "name_cn": "王明",
+   "name_en": null,
+   "title": "研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院） / 芯片与系统前沿技术研究院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "新型存储与计算",
+    "忆阻神经形态器件",
+    "柔性智能感知"
+   ],
+   "homepage": "https://wangmingfdu.github.io",
+   "email": "wang_ming@fudan.edu.cn",
+   "notes": "入选国家和上海海外高层次人才计划（青年）；上海脑中心求索杰出青年"
+  },
+  {
+   "name_cn": "王伶俐",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "FPGA结构与应用加速",
+    "集成电路设计与EDA算法",
+    "可重构计算",
+    "量子计算"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2d/43/c48925a732483/page.htm",
+   "email": "llwang@fudan.edu.cn",
+   "notes": "浦江人才(2008)；上海市技术发明三等奖(第一完成人)"
+  },
+  {
+   "name_cn": "王竞立",
+   "name_en": null,
+   "title": "青年副研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院） / 芯片与系统前沿技术研究院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "低维材料半导体电子器件",
+    "负电容低功耗器件",
+    "微纳器件制造"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2d/42/c48925a732482/page.htm",
+   "email": "jliwang@fudan.edu.cn",
+   "notes": "上海市领军人才培养计划、启明星扬帆专项"
+  },
+  {
+   "name_cn": "万景",
+   "name_en": null,
+   "title": "研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "硅基及异质半导体工艺与器件",
+    "人工智能用于EDA"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2d/3d/c48925a732477/page.htm",
+   "email": "jingwan@fudan.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "陶俊",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "AI-based EDA",
+    "AI加速算法与AI加速器设计优化",
+    "混合信号系统建模与优化",
+    "芯粒集成系统自动化设计"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2d/3a/c48925a732474/page.htm",
+   "email": "taojun@fudan.edu.cn",
+   "notes": "入选国家人才项目；IEEE高级会员；IEEE TCVLSI Newsletter副主编"
+  },
+  {
+   "name_cn": "谭恺",
+   "name_en": null,
+   "title": "青年副研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "芯片级雷达系统设计",
+    "毫米波雷达成像",
+    "雷达信号处理"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2d/38/c48925a732472/page.htm",
+   "email": "tankai@fudan.edu.cn",
+   "notes": "上海市海外高层次人才引进计划；上海高等教育人才\"揽蓄计划\""
+  },
+  {
+   "name_cn": "孙正宗",
+   "name_en": null,
+   "title": "研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "二维材料精准合成",
+    "二维电子器件",
+    "二维电化学器件"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2d/37/c48925a732471/page.htm",
+   "email": "zhengzong_sun@fudan.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "茹国平",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件物理",
+    "微电子薄膜工艺"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2d/33/c48925a732467/page.htm",
+   "email": "gpru@fudan.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "马顺利",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "毫米波/太赫兹相控阵雷达芯片",
+    "5G/6G毫米波收发机芯片",
+    "模拟射频MoS2芯片",
+    "高速ADPLL/FMCW-PLL/CDR"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2d/31/c48925a732465/page.htm",
+   "email": "shunlima@fudan.edu.cn",
+   "notes": "TCAS-I/II、TMTT等50余篇论文；授权13项中国专利"
+  },
+  {
+   "name_cn": "陆叶",
+   "name_en": null,
+   "title": "研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "先进半导体器件设计/工艺/模型",
+    "AI for EDA"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2d/2e/c48925a732462/page.htm",
+   "email": "lu_ye@fudan.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "刘文军",
+   "name_en": null,
+   "title": "研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "宽禁带氧化物半导体器件(Ga2O3)",
+    "功能器件与电路",
+    "高迁移率电子器件与可靠性"
+   ],
+   "homepage": "https://fudanpower.github.io/",
+   "email": "wjliu@fudan.edu.cn",
+   "notes": "上海市浦江计划(2016)"
+  },
+  {
+   "name_cn": "刘春森",
+   "name_en": null,
+   "title": "青年研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院） / 芯片与系统前沿技术研究院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "新结构逻辑存储器件",
+    "系统集成",
+    "二维闪存芯片"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2d/28/c48925a732456/page.htm",
+   "email": "chunsen_liu@fudan.edu.cn",
+   "notes": "国家自然科学基金优青；教育部U40；上海市启明星；Nature等第一/通讯作者"
+  },
+  {
+   "name_cn": "林青",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "电子信息/集成电路系统设计"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2d/26/c48925a732454/page.htm",
+   "email": "linqing@fudan.edu.cn",
+   "notes": "国家级教学成果二等奖"
+  },
+  {
+   "name_cn": "李炎",
+   "name_en": null,
+   "title": "青年研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "高可靠智能算法及专用加速芯片",
+    "面向AI数据中心的低温(77K)大算力芯片",
+    "智能医疗微系统芯片"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2d/25/c48925a732453/page.htm",
+   "email": "liyan@fudan.edu.cn",
+   "notes": "上海市浦江人才(2022)"
+  },
+  {
+   "name_cn": "李文宏",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "2D/3D图像读出与处理电路",
+    "电源管理集成电路",
+    "低功耗电路设计方法"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2d/24/c48925a732452/page.htm",
+   "email": "wenhongli@fudan.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "李巍",
+   "name_en": null,
+   "title": "研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/模拟/毫米波集成电路",
+    "无线收发系统芯片",
+    "智能化应用集成电路"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2d/23/c48925a732451/page.htm",
+   "email": "w-li@fudan.edu.cn",
+   "notes": "上海市技术发明奖一等奖(2022)"
+  },
+  {
+   "name_cn": "李硕",
+   "name_en": null,
+   "title": "青年研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院） / 芯片与系统前沿技术研究院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "低功耗模拟/数字/混合信号IC",
+    "能量采集与电源管理单元",
+    "存算一体电路(Compute-In-Memory)"
+   ],
+   "homepage": "https://iem-group.github.io",
+   "email": "shuoli@fudan.edu.cn",
+   "notes": "入选国家和上海市海外高层次青年人才引进计划"
+  },
+  {
+   "name_cn": "来金梅",
+   "name_en": null,
+   "title": "研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "可编程芯片设计及测试",
+    "FPGA神经网络加速器",
+    "SoC FPGA深度学习平台",
+    "嵌入式可编程IP核"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2d/21/c48925a732449/page.htm",
+   "email": "jmlai@fudan.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "荆明娥",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "图像识别",
+    "图像拼接",
+    "集成电路设计"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2d/20/c48925a732448/page.htm",
+   "email": "mejing@fudan.edu.cn",
+   "notes": "SKLICS IP与芯片架构创新中心成员（页面所列方向为图像处理类）"
+  },
+  {
+   "name_cn": "蒋玉龙",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路先进材料/工艺与器件",
+    "MOS器件源漏栅接触",
+    "先进铜互连",
+    "功率半导体器件",
+    "柔性器件"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2d/1f/c48925a732447/page.htm",
+   "email": "yljiang@fudan.edu.cn",
+   "notes": "上海市青年科技启明星(2007)；上海市教学成果奖"
+  },
+  {
+   "name_cn": "江文宁",
+   "name_en": null,
+   "title": "青年副研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院） / 芯片与系统前沿技术研究院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "高性能模数转换器ADC",
+    "高速接口电路",
+    "脑机接口电路"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2d/1e/c48925a732446/page.htm",
+   "email": "wenningjiang@fudan.edu.cn",
+   "notes": "ISSCC/JSSC/TCAS-I/CICC等发表；澳门大学博士"
+  },
+  {
+   "name_cn": "蒋昊",
+   "name_en": null,
+   "title": "青年研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院） / 芯片与系统前沿技术研究院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "新型存储技术",
+    "存储器件研发"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2d/1d/c48925a732445/page.htm",
+   "email": "haoj@fudan.edu.cn",
+   "notes": "入选国家和上海海外高层次青年人才引进计划；前Micron研发工程师"
+  },
+  {
+   "name_cn": "江晨",
+   "name_en": null,
+   "title": "青年研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院） / 芯片与系统前沿技术研究院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "太赫兹片上雷达系统",
+    "低功耗无线通信芯片",
+    "毫米波/太赫兹集成电路"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2d/1c/c48925a732444/page.htm",
+   "email": "cjiang@fudan.edu.cn",
+   "notes": "IEEE固态电路协会博士生成就奖；前联发科/Lassen Peak"
+  },
+  {
+   "name_cn": "黄张成",
+   "name_en": null,
+   "title": "研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院） / 芯片与系统前沿技术研究院 / 集成芯片与系统全国重点实验室",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "感算融合芯片",
+    "深低温集成电路",
+    "物理AI计算",
+    "新型激光雷达"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2d/19/c48925a732441/page.htm",
+   "email": "huangzc@fudan.edu.cn",
+   "notes": "国家级青年拔尖人才；前中科院上海技物所课题组长"
+  },
+  {
+   "name_cn": "徐鸿涛",
+   "name_en": null,
+   "title": "研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "AI增强无线集成电路与系统",
+    "先进CMOS高性能收发机架构",
+    "5G/6G毫米波芯片",
+    "智能传感芯片"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2d/17/c48925a732439/page.htm",
+   "email": "hongtao@fudan.edu.cn",
+   "notes": "无线集成电路与系统实验室(WiCAS)负责人"
+  },
+  {
+   "name_cn": "韩军",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "人机融合智能系统芯片",
+    "大算力芯片架构",
+    "RISC-V开源芯片",
+    "5G边缘计算"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2c/af/c48925a732335/page.htm",
+   "email": "junhan@fudan.edu.cn",
+   "notes": "国家高层次人才(2024)；上海领军人才(2022)"
+  },
+  {
+   "name_cn": "郭子钰",
+   "name_en": null,
+   "title": "青年副研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "通信基带信号处理及VLSI实现",
+    "毫米波通信系统设计"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2c/ae/c48925a732334/page.htm",
+   "email": "zguo@fudan.edu.cn",
+   "notes": "前华为海思工程师；东南大学博士、哥伦比亚大学联培"
+  },
+  {
+   "name_cn": "范益波",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "视频编码VPU处理器",
+    "图像处理ISP处理器",
+    "NPU处理器与AI芯片架构",
+    "异构计算与近存计算"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2c/ad/c48925a732333/page.htm",
+   "email": "fanyibo@fudan.edu.cn",
+   "notes": "国家高层次人才；上海市特聘教授；上海市技术发明一等奖"
+  },
+  {
+   "name_cn": "程增光",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "硅基光电子集成与设计",
+    "光子存储与计算",
+    "相变材料与光学忆阻器件",
+    "非易失存储器件"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2c/ac/c48925a732332/page.htm",
+   "email": "zgcheng@fudan.edu.cn",
+   "notes": "牛津大学博士后；哈佛访问学者"
+  },
+  {
+   "name_cn": "程旭",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院）",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "高能效混合信号集成电路",
+    "信息安全领域混合信号IC",
+    "全定制数字集成电路设计方法学"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2c/ab/c48925a732331/page.htm",
+   "email": "chengxu@fudan.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "陈映平",
+   "name_en": null,
+   "title": "青年研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院） / 芯片与系统前沿技术研究院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "模拟/功率集成电路",
+    "CMOS/BCD/GaN工艺",
+    "电源管理芯片"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2c/a9/c48925a732329/page.htm",
+   "email": "yingpingchen@fudan.edu.cn",
+   "notes": "2021年国家海外高层次青年人才引进计划；前IMEC博士后"
+  },
+  {
+   "name_cn": "陈贤哲",
+   "name_en": null,
+   "title": "青年研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院） / 芯片与系统前沿技术研究院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "自旋电子器件",
+    "新型存储与计算器件"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/2c/a8/c48925a732328/page.htm",
+   "email": "chenxianzhe@fudan.edu.cn",
+   "notes": "复旦大学相辉学者（青年）；国家和上海市海外高层次人才计划（青年）；前UC Berkeley博士后"
+  },
+  {
+   "name_cn": "陈迟晓",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院） / 芯片与系统前沿技术研究院 / 集成芯片与系统全国重点实验室",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "AI芯片算法-电路-架构协同设计",
+    "感存算一体电路",
+    "智能芯片"
+   ],
+   "homepage": "https://cihlab.github.io/",
+   "email": "cxchen@fudan.edu.cn",
+   "notes": "上海市青年科技启明星；ISSCC STGA奖；前华盛顿大学博士后"
+  },
+  {
+   "name_cn": "边历峰",
+   "name_en": null,
+   "title": "研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院） / 芯片与系统前沿技术研究院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "新材料新结构光电器件",
+    "自旋器件"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/17/4b/c48925a726859/page.htm",
+   "email": "lfbian@fudan.edu.cn",
+   "notes": "德国Paul-Drude固体电子学研究所博士后"
+  },
+  {
+   "name_cn": "王志昂",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "集成电路与微纳电子创新学院（微电子学院） / 集成芯片与系统全国重点实验室",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "数字芯片电子设计自动化",
+    "系统工艺协同优化",
+    "人工智能",
+    "开源物理设计OpenROAD"
+   ],
+   "homepage": "https://icmne.fudan.edu.cn/97/b8/c48925a759736/page.htm",
+   "email": "zhiangwang@fudan.edu.cn",
+   "notes": "国家海外高层次青年人才计划、上海市海外高层次青年人才计划；UCSD博士（师从Andrew B. Kahng）"
+  },
+  {
+   "name_cn": "毕朝日",
+   "name_en": null,
+   "title": "助理研究员",
+   "department": "集成电路与微纳电子创新学院（微电子学院） / 集成芯片与系统全国重点实验室",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路设计自动化(AI for EDA)",
+    "电路设计参数最优化"
+   ],
+   "homepage": "https://bzr2915.github.io/bzr2915/",
+   "email": "zhaori_bi@fudan.edu.cn",
+   "notes": "上海市扬帆计划；ESWEEK 2024最佳论文提名"
+  },
+  {
+   "name_cn": "林秋阳",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "芯片与系统前沿技术研究院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "生物医疗电子",
+    "模拟/混合信号集成电路",
+    "ADC",
+    "模拟前端",
+    "脑机接口电路"
+   ],
+   "homepage": "https://fics.fudan.edu.cn/ed/a9/c22620a781737/page.htm",
+   "email": "linqiuyang@fudan.edu.cn",
+   "notes": "国家级青年人才、上海市青年人才、IEEE Senior Member；鲁汶大学ESAT-MICAS博士"
+  },
+  {
+   "name_cn": "朱浩哲",
+   "name_en": null,
+   "title": "青年研究员",
+   "department": "芯片与系统前沿技术研究院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "智能处理器芯片",
+    "Chiplet集成芯片系统",
+    "领域专用集成电路与体系结构协同"
+   ],
+   "homepage": "https://fics.fudan.edu.cn/e1/98/c22620a450968/page.htm",
+   "email": "zhuhz@fudan.edu.cn",
+   "notes": "复旦大学微电子学院博士；面向AI与具身智能的DSA设计"
+  },
+  {
+   "name_cn": "朱忠赟珅",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "芯片与系统前沿技术研究院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "BEOL器件设计与集成",
+    "新型高密度存储器件",
+    "器件互连与异质集成"
+   ],
+   "homepage": "https://fics.fudan.edu.cn/ff/51/c22620a786257/page.htm",
+   "email": "zhuzhysh@fudan.edu.cn",
+   "notes": "国家级青年人才、上海市青年人才；瑞典隆德大学博士；MIT经历"
+  },
+  {
+   "name_cn": "陈醒",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "芯片与系统前沿技术研究院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "高能效无线感知与通信",
+    "频率综合与时钟同步",
+    "分布式时序与芯片互连",
+    "毫米波集成电路"
+   ],
+   "homepage": "https://fics.fudan.edu.cn/19/84/c22620a661892/page.htm",
+   "email": "cxing@fudan.edu.cn",
+   "notes": "国家级青年人才、上海市青年人才；前高通/苹果工程师；密西根大学博士"
+  },
+  {
+   "name_cn": "刘利伟",
+   "name_en": null,
+   "title": "青年副研究员",
+   "department": "芯片与系统前沿技术研究院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "二维显示驱动电路",
+    "晶圆级二维半导体转移技术与工艺设备",
+    "极低温二维电子器件"
+   ],
+   "homepage": "https://fics.fudan.edu.cn/f9/a1/c22621a457121/page.htm",
+   "email": "liweiliu@fudan.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "向都",
+   "name_en": null,
+   "title": "青年研究员",
+   "department": "芯片与系统前沿技术研究院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "二维晶体管",
+    "神经形态器件",
+    "自旋量子器件"
+   ],
+   "homepage": "https://fics.fudan.edu.cn/eb/a4/c22620a388004/page.htm",
+   "email": "xiang_du@fudan.edu.cn",
+   "notes": "新加坡国立大学博士；前新加坡联华电子UMC工艺整合工程师"
+  },
+  {
+   "name_cn": "郑立荣",
+   "name_en": null,
+   "title": "教授",
+   "department": "未来信息创新学院（信息科学与工程学院）电子工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "三维多核网络化芯片",
+    "片上网络NoC",
+    "异构微系统集成",
+    "类脑计算芯片",
+    "SiP系统集成封装"
+   ],
+   "homepage": "https://fit.fudan.edu.cn/Data/View/1064",
+   "email": "lrzheng@fudan.edu.cn",
+   "notes": "国际上SiP与NoC概念早期提出者；IEEE Trans. VLSI等500余篇论文"
+  },
+  {
+   "name_cn": "邹卓",
+   "name_en": null,
+   "title": "教授",
+   "department": "未来信息创新学院（信息科学与工程学院）电子工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "数字专用集成电路ASIC",
+    "高能效处理架构与专用处理器",
+    "类脑芯片与神经形态计算",
+    "边缘AI与分布式AIoT"
+   ],
+   "homepage": "https://fit.fudan.edu.cn/Data/View/1139",
+   "email": "zhuo@fudan.edu.cn",
+   "notes": "SKLICS IP与芯片架构创新中心、集成芯片创新中心；长聘教授"
+  },
+  {
+   "name_cn": "李旦",
+   "name_en": null,
+   "title": "教授",
+   "department": "未来信息创新学院（信息科学与工程学院）电子工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "FPGA系统设计及算法加速",
+    "边缘端计算与部署",
+    "智能信号处理"
+   ],
+   "homepage": "https://fit.fudan.edu.cn/Data/View/986",
+   "email": "lidan@fudan.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "仇志军",
+   "name_en": null,
+   "title": "教授",
+   "department": "未来信息创新学院（信息科学与工程学院）电子工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "新型二维半导体器件",
+    "柔性电子器件与工艺",
+    "IC工艺与器件计算机模拟"
+   ],
+   "homepage": "https://fit.fudan.edu.cn/Data/View/1062",
+   "email": "zjqiu@fudan.edu.cn",
+   "notes": "\"AI for Electronics\"尖兵团队；讲授集成电路工艺原理、半导体器件原理"
+  },
+  {
+   "name_cn": "李文武",
+   "name_en": null,
+   "title": "研究员",
+   "department": "未来信息创新学院（信息科学与工程学院）电子工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "先进晶体管器件",
+    "铁电晶体管材料与器件",
+    "面向集成电路应用的器件"
+   ],
+   "homepage": "https://ioe.fudan.edu.cn/55/ec/c45636a415212/page.htm",
+   "email": "liwenwu@fudan.edu.cn",
+   "notes": "Science、Science Advances、Nature Communications、IEDM等发表"
+  },
+  {
+   "name_cn": "熊诗圣",
+   "name_en": null,
+   "title": "研究员",
+   "department": "未来信息创新学院（信息科学与工程学院）电子工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "先进半导体工艺",
+    "EDA工具开发",
+    "新型存储器件",
+    "新型计算范式"
+   ],
+   "homepage": "https://fduxiongteam.fudan.edu.cn/",
+   "email": "sxiong@fudan.edu.cn",
+   "notes": "上海市五一劳动奖章；上海市科技领军人才；上海市优秀学术带头人"
+  },
+  {
+   "name_cn": "刘冉",
+   "name_en": null,
+   "title": "教授",
+   "department": "未来信息创新学院（信息科学与工程学院）电子工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微纳电子/光电子器件工艺",
+    "先进IC互连技术",
+    "微纳材料结构加工与分析",
+    "生物电子技术"
+   ],
+   "homepage": "http://me.fudan.edu.cn/faculty/personweb/liuran/index.htm",
+   "email": "rliu@fudan.edu.cn",
+   "notes": "前美国亚利桑那州立大学客座教授；ESSDERC TPC成员"
+  },
+  {
+   "name_cn": "陈宜方",
+   "name_en": null,
+   "title": "教授",
+   "department": "未来信息创新学院（信息科学与工程学院）电子工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "纳米光刻与纳米工艺",
+    "电子束光刻",
+    "纳米压印光刻",
+    "纳米尺度反应离子刻蚀"
+   ],
+   "homepage": "https://fit.fudan.edu.cn/Data/View/1061",
+   "email": "yifangchen@fudan.edu.cn",
+   "notes": "纳米加工与器件工艺"
+  },
+  {
+   "name_cn": "胡波",
+   "name_en": null,
+   "title": "教授",
+   "department": "未来信息创新学院（信息科学与工程学院）电子工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "专用图像/语音处理芯片",
+    "DSP与FPGA高速数字信号处理系统",
+    "嵌入式芯片系统设计"
+   ],
+   "homepage": "https://fit.fudan.edu.cn/Data/View/984",
+   "email": "bohu@fudan.edu.cn",
+   "notes": "专用集成电路与系统国家重点实验室学术委员会委员；华为无线通信接入技术国家重点实验室学术委员会委员"
+  },
+  {
+   "name_cn": "吴语茂",
+   "name_en": null,
+   "title": "教授",
+   "department": "未来信息创新学院（信息科学与工程学院）电子工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计EDA与大模型",
+    "电磁建模计算与智能EDA",
+    "电磁数据分析与智能图像处理"
+   ],
+   "homepage": "https://fit.fudan.edu.cn/Data/View/1155",
+   "email": "yumaowu@fudan.edu.cn",
+   "notes": "国家杰青、优青；国家重点研发计划首席科学家；电磁建模计算与智能EDA团队"
+  },
+  {
+   "name_cn": "杨国敏",
+   "name_en": null,
+   "title": "教授",
+   "department": "未来信息创新学院（信息科学与工程学院）电子工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频电路与天线技术",
+    "模拟集成电路",
+    "毫米波雷达与无人驾驶",
+    "微波毫米波信号完整性"
+   ],
+   "homepage": "https://fit.fudan.edu.cn/Data/View/1053",
+   "email": "guominyang@fudan.edu.cn",
+   "notes": "IEEE MTT Shanghai Chapter Vice Chair；上海市技术发明二等奖"
+  },
+  {
+   "name_cn": "王岩",
+   "name_en": null,
+   "title": "副教授",
+   "department": "未来信息创新学院（信息科学与工程学院）电子工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "毫米波/太赫兹天线与系统",
+    "智能波束与通信/雷达",
+    "新型电磁材料"
+   ],
+   "homepage": "http://www.emwlab.fudan.edu.cn/",
+   "email": "yanwang_fd@fudan.edu.cn",
+   "notes": "IEEE Senior Member；微波视觉重大任务攻坚队"
+  },
+  {
+   "name_cn": "周宇",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "未来信息创新学院（信息科学与工程学院）电子工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体光电传感器件与集成",
+    "仿生光电传感与智能系统",
+    "人工智能驱动光敏材料设计"
+   ],
+   "homepage": "https://fit.fudan.edu.cn/Data/View/5801",
+   "email": "zhou_yu@fudan.edu.cn",
+   "notes": "国家和上海海外高层次人才计划（青年）；清华大学博士；前香港科技大学研究助理教授"
+  },
+  {
+   "name_cn": "孙允陆",
+   "name_en": null,
+   "title": "青年研究员",
+   "department": "未来信息创新学院（信息科学与工程学院）电子工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "激光微纳加工",
+    "微纳光机电器件与系统",
+    "硅光设计与光互连耦合"
+   ],
+   "homepage": "https://fit.fudan.edu.cn/Data/View/3989",
+   "email": "ylsun@fudan.edu.cn",
+   "notes": "面向硅光设计、光互连耦合招聘硕博博后"
+  },
+  {
+   "name_cn": "张建秋",
+   "name_en": null,
+   "title": "教授",
+   "department": "未来信息创新学院（信息科学与工程学院）电子工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "信号处理及其应用",
+    "检测与估计",
+    "图像处理",
+    "智能仪器仪表"
+   ],
+   "homepage": "https://fit.fudan.edu.cn/Data/View/1003",
+   "email": "jqzhang@fudan.ac.cn",
+   "notes": "IEEE高级会员；SKLICS IP与芯片架构创新中心"
+  },
+  {
+   "name_cn": "李颖",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "未来信息创新学院（信息科学与工程学院）电子工程系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "医学超声信号处理与成像",
+    "医学诊疗系统与医疗物联网",
+    "FPGA数字逻辑设计",
+    "可穿戴医疗嵌入式系统"
+   ],
+   "homepage": "https://imu.fudan.edu.cn/",
+   "email": "yl@fudan.edu.cn",
+   "notes": "国家重大科研仪器研制项目课题负责人"
+  },
+  {
+   "name_cn": "陆明",
+   "name_en": null,
+   "title": "教授",
+   "department": "未来信息创新学院（信息科学与工程学院）光科学与工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "硅基光电子（硅光）技术",
+    "全硅激光器",
+    "黑硅太阳电池",
+    "全硅红外探测器"
+   ],
+   "homepage": "https://fit.fudan.edu.cn/Data/View/1024",
+   "email": "minglu55@fudan.edu.cn",
+   "notes": "全硅激光器、全硅WLED与高效黑硅太阳电池主要发明人"
+  },
+  {
+   "name_cn": "李晶",
+   "name_en": null,
+   "title": "教授",
+   "department": "未来信息创新学院（信息科学与工程学院）光科学与工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "相变存储材料与PRAM",
+    "RRAM阻变器件",
+    "类神经元原型器件",
+    "智能信息存储"
+   ],
+   "homepage": "https://fit.fudan.edu.cn/Data/View/1021",
+   "email": "lijing@fudan.edu.cn",
+   "notes": "面向下一代智能存储与光子计算的量子材料与器件团队"
+  },
+  {
+   "name_cn": "孙剑",
+   "name_en": null,
+   "title": "副教授",
+   "department": "未来信息创新学院（信息科学与工程学院）光科学与工程系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "硅基红外探测器",
+    "纳米结构半导体材料",
+    "光电子材料与器件"
+   ],
+   "homepage": "https://fit.fudan.edu.cn/Data/View/1027",
+   "email": "jsun@fudan.edu.cn",
+   "notes": null
+  },
+  {
+   "name_cn": "张宗芝",
+   "name_en": null,
+   "title": "教授",
+   "department": "未来信息创新学院（信息科学与工程学院）光科学与工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "自旋电子学材料",
+    "高速低能耗信息存储器件",
+    "自旋流产生与检测",
+    "微磁模拟"
+   ],
+   "homepage": "https://fit.fudan.edu.cn/Data/View/1033",
+   "email": "zzzhang@fudan.edu.cn",
+   "notes": "国家优青(2012)；教育部新世纪优秀人才；上海市浦江人才"
+  },
+  {
+   "name_cn": "迟楠",
+   "name_en": null,
+   "title": "教授",
+   "department": "未来信息创新学院（信息科学与工程学院）通信科学与工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "可见光通信",
+    "光与无线网络融合",
+    "全光信息处理",
+    "先进调制方式"
+   ],
+   "homepage": "https://fit.fudan.edu.cn/Data/View/1040",
+   "email": "nanchi@fudan.edu.cn",
+   "notes": "智能光子信息实验室团队；教育部新世纪优秀人才；上海市曙光学者"
+  },
+  {
+   "name_cn": "余建军",
+   "name_en": null,
+   "title": "教授",
+   "department": "未来信息创新学院（信息科学与工程学院）通信科学与工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "高速光纤通信技术",
+    "毫米波与太赫兹波通信",
+    "光纤无线融合"
+   ],
+   "homepage": "https://fit.fudan.edu.cn/Data/View/1055",
+   "email": "jianjun@fudan.edu.cn",
+   "notes": "SKLICS超高速电路与系统创新中心；超高速光纤-太赫兹信息传输创新团队"
+  },
+  {
+   "name_cn": "张俊文",
+   "name_en": null,
+   "title": "教授",
+   "department": "未来信息创新学院（信息科学与工程学院）通信科学与工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "高速光互连(片内/片间)",
+    "光子集成与智能光子信号处理",
+    "6G光子无线融合",
+    "相干光接入"
+   ],
+   "homepage": "https://fit.fudan.edu.cn/Data/View/3814",
+   "email": "junwenzhang@fudan.edu.cn",
+   "notes": "电磁波信息科学教育部重点实验室副主任；上海低轨卫星通信协同创新中心副主任"
+  },
+  {
+   "name_cn": "沈超",
+   "name_en": null,
+   "title": "教授",
+   "department": "未来信息创新学院（信息科学与工程学院）通信科学与工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "宽禁带半导体光电子器件",
+    "氮化镓激光器与调制器",
+    "光子集成电路",
+    "可见光通信"
+   ],
+   "homepage": "https://faculty.fudan.edu.cn/shenchao/zh_CN/index.htm",
+   "email": "chaoshen@fudan.edu.cn",
+   "notes": "IEDM 2026技术委员会TPC Member"
+  },
+  {
+   "name_cn": "王昕",
+   "name_en": null,
+   "title": "教授",
+   "department": "未来信息创新学院（信息科学与工程学院）通信科学与工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "通信系统建模与优化",
+    "5G/6G移动通信",
+    "通信信号处理",
+    "无线AI",
+    "大规模MIMO"
+   ],
+   "homepage": "http://wangxinlab.fudan.edu.cn",
+   "email": "xwang11@fudan.edu.cn",
+   "notes": "IEEE VTS杰出讲师；IEEE Trans. Signal Processing高级领域编辑"
+  },
+  {
+   "name_cn": "许崇斌",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "未来信息创新学院（信息科学与工程学院）通信科学与工程系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "新型多址技术",
+    "通信感知一体化",
+    "贝叶斯推理与迭代信号处理"
+   ],
+   "homepage": "https://fit.fudan.edu.cn/Data/View/1159",
+   "email": "chbinxu@fudan.edu.cn",
+   "notes": "SKLICS超高速电路与系统创新中心；清华大学博士"
+  },
+  {
+   "name_cn": "王凯辉",
+   "name_en": null,
+   "title": "专任副研究员",
+   "department": "未来信息创新学院（信息科学与工程学院）通信科学与工程系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "毫米波/太赫兹光载无线ROF传输",
+    "数据中心光互联",
+    "高速相干光通信DSP芯片",
+    "FPGA实时系统"
+   ],
+   "homepage": "https://fit.fudan.edu.cn/Data/View/4447",
+   "email": "khwang@fudan.edu.cn",
+   "notes": "2025年度中国通信学会科学技术一等奖"
+  },
+  {
+   "name_cn": "周雯",
+   "name_en": null,
+   "title": "副教授",
+   "department": "未来信息创新学院（信息科学与工程学院）通信科学与工程系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "高速光纤通信传输",
+    "光子辅助毫米波产生与探测",
+    "5G/6G通信感知一体化",
+    "智能通信深度神经网络算法"
+   ],
+   "homepage": "https://fit.fudan.edu.cn/Data/View/3819",
+   "email": "zwen@fudan.edu.cn",
+   "notes": "2023年度中国电子学会科技进步一等奖"
+  },
+  {
+   "name_cn": "朱宇",
+   "name_en": null,
+   "title": "教授",
+   "department": "未来信息创新学院（信息科学与工程学院）通信科学与工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "宽带无线通信系统与网络",
+    "通信信号处理",
+    "5G/6G通信系统",
+    "软件无线电",
+    "空天地一体化通信"
+   ],
+   "homepage": "https://fit.fudan.edu.cn/Data/View/1060",
+   "email": "zhuyu@fudan.edu.cn",
+   "notes": "IEEE高级会员；IEEE Wireless Communications Letters编委"
+  },
+  {
+   "name_cn": "周小林",
+   "name_en": null,
+   "title": "副教授",
+   "department": "未来信息创新学院（信息科学与工程学院）通信科学与工程系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "通信信号处理",
+    "人工智能与物联网",
+    "无线通信与6G",
+    "量子通信与无线光通信"
+   ],
+   "homepage": "http://www.ibuildingstd.org.cn",
+   "email": "zhouxiaolin@fudan.edu.cn",
+   "notes": "主持国家科技重大专项\"TD-LTE终端基带芯片研发\"等"
+  },
+  {
+   "name_cn": "尚笠",
+   "name_en": null,
+   "title": "教授",
+   "department": "计算与智能创新学院（计算机科学技术学院） / 集成芯片与系统全国重点实验室",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "VLSI与电子设计自动化",
+    "计算机系统与嵌入式系统",
+    "机器学习系统"
+   ],
+   "homepage": "https://cscw.fudan.edu.cn/57/bf/c31071a415679/page.htm",
+   "email": "lishang@fudan.edu.cn",
+   "notes": "上海市特聘专家；美国普林斯顿大学博士；前英特尔中国研究院副院长、首席架构师；美国NSF CAREER Award；SKLICS EDA创新中心"
+  },
+  {
+   "name_cn": "张立华",
+   "name_en": null,
+   "title": "特聘教授",
+   "department": "计算与智能创新学院（计算机科学技术学院） / 集成芯片与系统全国重点实验室",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "智能计算与智能芯片",
+    "智能机器人与无人系统",
+    "机器直觉与人机融合智能",
+    "计算机视觉"
+   ],
+   "homepage": "https://ipass.fudan.edu.cn/sysfzr/list.htm",
+   "email": null,
+   "notes": "国家重大人才工程入选专家；CAAI会士；智能机器人研究院副院长；智能机器人教育部工程研究中心副主任；SKLICS集成芯片创新中心"
+  }
+ ]
+}
