@@ -1,6 +1,6 @@
 # 集成电路 / AI 芯片 方向导师库（IC Mentor DB）
 
-面向**集成电路、微电子、电子信息、AI 芯片**方向的导师数据库与分级排名，覆盖 **11 所高校**：
+面向**集成电路、微电子、电子信息、AI 芯片**方向的导师数据库、分级排名与招生信息汇总，覆盖 **11 所高校**：
 
 > 清华大学 · 清华大学深圳国际研究生院 · 北京大学 · 复旦大学 · 上海交通大学 · 浙江大学 · 南京大学 · 中国科学技术大学 · 东南大学 · 西安电子科技大学 · 电子科技大学
 
@@ -8,33 +8,35 @@
 
 ---
 
-## 一、这个仓库能给你什么
+## 一、仓库内容
 
-| 需求 | 打开 |
+| 文件 | 用途 |
 |:--|:--|
-| **按我的背景筛导师 + 一键生成邮件** | **`reports/2027推免-导师推荐.html`** |
-| 全库检索（11 校 2114 人，按方向/梯队筛选） | `reports/导师库.html` |
-| 2027 推免定制报告（IC 本科 + 编程一般 + AI 使用者） | `reports/2027推免-按你的背景重排（IC设计×AI）.md` |
-| 2027 推免通用短名单（S/A/B 三级 + 中英邮件模板） | `reports/2027推免-AI芯片方向导师短名单.md` |
-| 完整排名报告（8 维综合分 + 分方向/分学校榜单） | `reports/导师库-详细排名报告.md` |
-| 用 Excel 自己分析 | `data/processed/mentor_ranked.csv` |
+| **`reports/导师推荐.html`** | **可交互推荐页**（355 位方向高度相关导师：按方向/学校/梯队/招生信号筛选与排序，点行展开课题组与招生原话，一键生成联系邮件草稿） |
+| `reports/导师推荐与招生信息.md` / `.docx` | 推荐报告：招生信息汇总（58 位主页明确在招）、分方向/分学校榜单、专题榜、邮件模板与时间线 |
+| `reports/导师库.html` | 全库检索页（11 校 2114 人，按学校/方向/梯队筛选） |
+| `reports/导师库-详细排名报告.md` / `.docx` | 全库排名报告（8 维综合分、分方向与分学校榜单、诚信与异常检测结果） |
+| `data/processed/mentor_ranked.csv` | 全库排名表（Excel 可直接分析） |
+| `data/processed/curated.csv` | 推荐集表（355 人，含招生信号、邮箱、课题组） |
+| `data/raw/<校名>/roster_*.json` | 各校官方师资原始名录（每条带抓取来源 URL） |
 
 > 所有 `.html` 均为**自包含单文件**，双击用浏览器打开即可，无需联网、无需服务器。
 
 ---
 
-## 二、数据从哪来
+## 二、数据来源
 
 1. **官方师资名录**：11 校相关院系官网（微电子/集成电路/电子工程/计算机/光电/物理/仪器等）逐人抓取，
    字段含职称、院系、研究方向、主页、邮箱、荣誉。
-   结构化名录见 `data/raw/<校名>/roster_*.json`，每条都带抓取来源 URL。
-2. **文献证据**：Crossref REST API（2008–2026），按「姓名拼音（含多音字异读组合）× 机构」逐人检索并精确匹配。
-3. **课题组主页**：抓取 231 位候选人的个人/课题组主页，提取**招生原话**（53 人主页有明确招生表述）。
-4. **诚信核查**：Crossref 作品关系接口逐篇核查 `updated-by` / `update-to`（撤稿、更正、关注声明）。
+2. **文献证据**：Crossref REST API（2008–2026），按「姓名拼音（含多音字异读组合）× 机构」逐人检索，
+   再以「作者名精确匹配 + 作者本人机构校验」双重过滤。
+3. **课题组主页**：抓取 494 位候选人的个人/课题组主页，用精确句式提取**招生原话**（58 位主页明确在招）。
+4. **学术诚信**：Crossref 作品关系接口逐篇核查 `updated-by` / `update-to`（撤稿、更正、关注声明）。
+5. **异常筛查**：通用启发式规则（产出量、期刊集中度、引用模式、署名模式、发表爆发、h-index 一致性）。
 
 ---
 
-## 三、评分口径（全部可复核）
+## 三、评分与分级口径
 
 ### 综合分（0–100，8 维加权）
 
@@ -44,22 +46,19 @@
 | 顶刊顶会密度 | 13% | S 级论文 / 本人论文数 |
 | 学术影响力 | 10% | 篇均引用（对数饱和） |
 | 近期活跃度 | 10% | 近 3 年论文数 |
-| 署名伦理健康 | 8% | 学生一作占比（越高越愿给一作） |
-| 团队规模 | 6% | 组内学生数（估） |
-| 头衔与平台 | 8% | 院士/IEEE Fellow/杰青/优青/教授分级 |
-| 学术诚信 | 5% | Crossref 撤稿/更正核查 |
+| 署名伦理健康 | 8% | 学生一作占比（越高越倾向把一作给学生） |
+| 团队规模 | 6% | 组内学生数（估，去重一作中非本校在职教师者） |
+| 头衔与平台 | 8% | 院士 / IEEE Fellow / 杰青 / 优青 / 教授分级 |
+| 学术诚信 | 5% | Crossref 撤稿、更正核查 |
 
 **S 级**＝ISSCC / JSSC / VLSI Symposium / ISCA / MICRO / HPCA / ASPLOS / IEDM / Nature Electronics
 **A 级**＝CICC / A-SSCC / ESSCIRC / RFIC / TCAS-I / TCAS-II / TVLSI / TCAD / TED / MTT / TPEL / TC / DAC / ICCAD / FPGA / SSC-L / JLT
 
-**梯队**：夯 ≥72 ｜ 强 58–72 ｜ 中 42–58 ｜ 观察 26–42 ｜ 信息不足 <26
+**梯队**：夯 T0 ≥72 ｜ 强 T1 58–72 ｜ 中 T2 42–58 ｜ 观察 T3 26–42 ｜ 信息不足 T4 <26（或论文<3 且无顶刊顶会）
 
-### 2027 推免定制维度（另加两个）
+### 细分研究方向（多标签，一人可属多个方向）
 
-- **编程负担**（0–100，越低越适合"不想天天写代码"）：由研究方向关键词 + 院系自动估计
-- **IC 核心度**（0–100）：越高越贴近集成电路本体（相对纯 CS/AI 算法）
-
-**五赛道**：A 模拟/混合/电源（编程最低）｜B 数字 IC/SoC/验证/后端/存算（最推荐）｜C AI 芯片/类脑（可冲）｜V 器件/工艺/存储（IC 本体·偏实验）｜D 编程重（慎选）
+AI 芯片/加速器/体系结构 · 存算一体/新型存储 · 模拟/混合信号/电源管理 · 数字 IC/SoC/验证后端 · EDA/设计自动化 · 类脑/神经形态计算 · 芯片安全/密码硬件 · 智能传感/边缘计算硬件 · 器件/工艺/宽禁带 · 量子芯片/低温电子学
 
 ---
 
@@ -68,27 +67,33 @@
 | 脚本 | 作用 |
 |:--|:--|
 | `tools/prepare_names.py` | 中文姓名 → 英文变体（多音字姓氏纠错 + 异读组合匹配集） |
+| `tools/harvest_crossref.mjs` | 按「学校 × 期刊 ISSN / 会议」抓取论文池 |
 | `tools/enrich_crossref.mjs` | 逐人 Crossref 检索（并发 12），姓名 + 机构双校验 |
 | `tools/classify.mjs` | venue 分层表（S/A/B）+ 中英文方向关键词表 |
 | `tools/score.mjs` | 指标计算、方向归类、强度分，导出 JSON/CSV |
 | `tools/skill_heuristics.py` | 学术异常规则筛查（C01–C07） |
-| `tools/integrity_check.mjs` | Crossref 撤稿/更正核查 |
-| `tools/rank_final.mjs` | 8 维综合分与最终排名 |
-| `tools/shortlist.mjs` / `refit_profile.mjs` | 2027 推免候选筛选与背景重排 |
-| `tools/fetch_labs.mjs` / `analyze_labs.mjs` | 课题组主页抓取与招生信号提取 |
-| `tools/html_db.mjs` / `html_shortlist.mjs` | 生成可交互 HTML（含一键生成邮件草稿） |
-| `tools/report*.mjs` / `make_docx.py` | 生成 Markdown / Word 报告 |
+| `tools/integrity_check.mjs` | Crossref 撤稿 / 更正核查 |
+| `tools/rank_final.mjs` | 8 维综合分与全库排名 |
+| `tools/fetch_labs_all.mjs` | 抓取导师个人 / 课题组主页 |
+| `tools/analyze_labs.mjs` | 提取招生原话、课题组名、联系方式 |
+| `tools/curate.mjs` | 构建方向相关的推荐数据集（多标签归类） |
+| `tools/html_db.mjs` / `html_recommend.mjs` | 生成两个可交互 HTML |
+| `tools/report_final.mjs` / `report_recommend.mjs` / `make_docx.py` | 生成 Markdown / Word 报告 |
+| `tools/dbstats.mjs` / `git_size.py` | 数据体检 / 仓库体积统计 |
 
 ### 复现
 
 ```bash
-python tools/prepare_names.py              # 1. 姓名变体
-node tools/enrich_crossref.mjs             # 2. 逐人 Crossref 富化（2114 人约 15 分钟）
-node tools/score.mjs                       # 3. 指标 + 评分
-python tools/skill_heuristics.py           # 4. 异常规则筛查（需 PYTHONPATH 指向 skill scripts）
-node tools/integrity_check.mjs top260      # 5. 诚信核查
-node tools/rank_final.mjs                  # 6. 最终排名
-node tools/html_db.mjs                     # 7. 生成报告与交互页面
+python tools/prepare_names.py            # 1. 姓名变体
+node tools/enrich_crossref.mjs           # 2. 逐人 Crossref 富化（2114 人约 15 分钟）
+node tools/score.mjs                     # 3. 指标 + 评分
+python tools/skill_heuristics.py         # 4. 异常规则筛查（需 PYTHONPATH 指向 skill scripts）
+node tools/integrity_check.mjs top260    # 5. 诚信核查
+node tools/rank_final.mjs                # 6. 全库排名
+node tools/fetch_labs_all.mjs            # 7. 抓取课题组主页
+node tools/analyze_labs.mjs              # 8. 提取招生信息
+node tools/curate.mjs                    # 9. 构建推荐集
+node tools/html_db.mjs && node tools/html_recommend.mjs   # 10. 生成交互页面
 ```
 
 ---
@@ -96,13 +101,15 @@ node tools/html_db.mjs                     # 7. 生成报告与交互页面
 ## 五、重要局限（务必阅读）
 
 1. **同名污染**：中文拼音重名严重，已做「姓名精确匹配 + 作者本人机构校验 + 非工科期刊剔除」三重过滤
-   （全库剔除 1400+ 篇他人论文），但仍可能有残留；标 ⚠️（疑似漏检）与"低置信"的记录请以官方主页为准。
+   （全库剔除 1400+ 篇他人论文），但仍可能有残留；标记"低置信""疑似漏检"的记录请以官方主页为准。
 2. **顶会漏计**：Crossref 对 IEEE 会议论文（尤其 ISSCC/CICC）作者机构字段收录不完整，会**系统性低估**顶会产出；
    中文期刊（CNKI/万方）完全未覆盖。
 3. **未做逐篇全文质量评分**：论文 PDF 绝大多数在订阅墙内，质量维度基于 venue 层级 + 引用 + 产出结构。
-4. **"编程负担"是自动估计**，不是导师亲口所述，个别组可能有偏差。
-5. **"信息不足"≠ 水平差**：多为英文名重名/拼写差异导致漏检。
-6. **不含指导质量**：导师性格、组会风格、补助、毕业去向、是否允许实习等**文献数据里没有**，必须找师兄师姐核实。
+4. **招生信息有时效性**：主页表述可能滞后于实际名额情况，以导师回复与院系最新通知为准。
+5. **"信息不足"≠ 水平差**：多为英文名重名或拼写差异导致漏检。
+6. **"组内学生数"是下限估计**：由论文一作去重推算，不等于实际在读人数。
+7. **不含指导质量**：导师性格、组会风格、补助、毕业去向、是否允许实习等**文献数据里没有**，
+   必须向在读/毕业学生核实。
 
 ---
 
@@ -110,7 +117,7 @@ node tools/html_db.mjs                     # 7. 生成报告与交互页面
 
 - 本仓库所有导师信息均来自**高校官方公开师资页面**与 **Crossref 公开文献元数据**，不含任何非公开或登录墙内数据；
 - 排名为**公开文献计量证据的分级**，**不构成学术评价、人事评价或报考建议**，也不代表对任何个人的负面判断；
-- 联系邮箱来自官方公开页面，请勿用于任何商业用途或批量群发；
-- 若你是名单中的老师并希望更正或移除信息，请提 Issue，会及时处理。
+- 联系邮箱来自官方公开页面，请勿用于商业用途或批量群发；
+- 若你是名单中的老师并希望更正或移除信息，欢迎提 Issue，会及时处理。
 
 *数据截至 2026-09-24。*

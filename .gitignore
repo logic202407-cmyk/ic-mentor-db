@@ -11,6 +11,9 @@ data/processed/mentor_db.json
 data/processed/*_papers.json
 data/processed/name_variants.json
 data/processed/heuristics_all.json
+data/processed/score_log.txt
+data/processed/shortlist_2027.*
+data/processed/shortlist_final.*
 
 # ── 临时文件与系统文件 ──
 *.tmp
