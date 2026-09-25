@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 使用指南（先看这个）
+    url: https://github.com/logic202407-cmyk/ic-mentor-db/blob/main/docs/使用指南.md
+    about: 指标怎么读、怎么筛导师、怎么发邮件、常见问题
+  - name: 免责声明与合规说明
+    url: https://github.com/logic202407-cmyk/ic-mentor-db/blob/main/DISCLAIMER.md
+    about: 数据来源、隐私处理、排名性质、更正与删除机制

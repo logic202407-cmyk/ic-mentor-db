@@ -69,7 +69,9 @@ const html = `<!DOCTYPE html>
 <header>
   <h1>集成电路设计与 AI 交叉方向 · 导师推荐与招生信息</h1>
   <p>覆盖 11 校 2114 位导师的全库排名 → 本页聚焦 <b>${rows.length} 位</b>方向高度相关者（数字/AI 芯片 · 体系结构 · 存算一体 · 模拟/电源 · EDA · 类脑 · 芯片安全 · 算力相关器件）<br/>
-  课题组主页实抓 ${rows.filter((d) => d.recruit_signal_count > 0).length} 位有明确招生表述 ｜ 数据源：各校官网师资页 + Crossref（2008–2026）+ 撤稿/更正核查 ｜ 截至 2026-09-24</p>
+  课题组主页实抓 ${rows.filter((d) => d.recruit_signal_count > 0).length} 位有明确招生表述 ｜ 数据源：各校官网师资页 + Crossref（2008–2026）+ 撤稿/更正核查 ｜ 截至 2026-09-24<br/>
+  <span style="display:inline-block;margin-top:8px;background:rgba(255,255,255,.16);padding:6px 10px;border-radius:7px;font-size:12px;line-height:1.6">
+  ⚠️ 本页为<b>公开文献计量证据的分层</b>，<b>不构成学术评价、人事评价或报考建议</b>。T3/T4 通常源于姓名重名、英文署名不一致或中文文献未覆盖等数据原因，<b>不代表导师水平或指导质量</b>。使用前请阅读 <a href="../DISCLAIMER.md" style="color:#ffe9a8">免责声明</a> 与 <a href="../docs/使用指南.md" style="color:#ffe9a8">使用指南</a>。</span></p>
 </header>
 <div class="wrap">
   <div class="bar">
@@ -92,11 +94,15 @@ const html = `<!DOCTYPE html>
   </tr></thead><tbody></tbody></table>
 </div>
 <div class="foot">
-  <b>梯队</b>：T0 夯（综合分≥72）｜T1 强（58–72）｜T2 中（42–58）｜T3 观察（26–42）｜T4 信息不足（&lt;26 或论文&lt;3）。<br/>
+  <b>梯队</b>（仅反映公开文献计量证据的多少）：T0 顶刊顶会密集（综合分≥72）｜T1 一流产出稳定（58–72）｜T2 有稳定产出（42–58）｜T3 公开证据较少（26–42）｜T4 公开证据不足（&lt;26 或论文&lt;3）。<br/>
   <b>学生(估)</b>：论文一作中非本校在职教师的去重人数，是团队规模的下限估计，非实际在读人数。<br/>
-  <b class="warn">"信息不足"≠ 水平差</b>：多为英文名重名或拼写差异导致自动匹配失败（标 ⚠️ 者请以官方主页为准）。<br/>
+  <b class="warn">"公开证据不足"≠ 水平低</b>：多为英文名重名或拼写差异导致自动匹配失败（标 ⚠️ 者请以官方主页为准）。<br/>
   点击任意一行展开详情（课题组、招生原话、近期论文），可<b>一键生成联系邮件草稿</b>。<br/>
-  <b>导师的指导风格、课题组氛围、补助与毕业去向无法从文献数据获得</b>，请务必通过在读/毕业学生核实。
+  <b>导师的指导风格、课题组氛围、补助与毕业去向无法从文献数据获得</b>，请务必通过在读/毕业学生核实。<br/><br/>
+  <b>使用条款</b>：本页数据来自高校官网公开师资页与 Crossref 公开元数据，采用 <b>CC BY-NC-SA 4.0（非商业性使用）</b>许可。
+  <b>禁止用于批量群发邮件或其他骚扰行为</b>；引用请注明来源与免责声明。
+  如需更正或删除信息，请提 <a href="../CONTRIBUTING.md">Issue</a>，我们将在 7 个工作日内处理。<br/>
+  完整说明见仓库 <code>DISCLAIMER.md</code>（免责与合规）、<code>docs/使用指南.md</code>（使用教程）、<code>LICENSE-DATA</code>（许可协议）。
 </div>
 <script>
 const DATA = ${JSON.stringify(data)};

@@ -1,0 +1,67 @@
+name: 信息更正 / 删除申请
+description: 教师本人或知情同学申请更正、隐藏或删除某条记录（无需提供任何证件）
+title: "[更正] 学校 - 姓名 - 具体问题"
+labels: ["correction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢你的反馈。本模板用于**更正或删除**信息，我们承诺在 **7 个工作日内**处理。
+
+        **不需要提供任何证件或身份证明。** 只需说明哪一条、错在哪、正确信息是什么、以及可核实的来源链接。
+
+  - type: input
+    id: entry
+    attributes:
+      label: 涉及哪一条记录
+      description: 请填写「学校 + 姓名 + 需要修改的字段」
+      placeholder: 例：清华大学 - 张三 - 职称与研究方向
+    validations:
+      required: true
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 申请类型
+      options:
+        - 更正信息（职称 / 院系 / 研究方向等有误）
+        - 更正文献归属（论文不属于本人，同名混淆）
+        - 删除邮箱（保留其他信息）
+        - 整条记录移除
+        - 标注"信息不公开"
+        - 其他
+    validations:
+      required: true
+
+  - type: textarea
+    id: correct
+    attributes:
+      label: 正确信息是什么
+      description: 请写明应该改成什么；如果是删除申请，写"删除"即可
+    validations:
+      required: true
+
+  - type: input
+    id: source
+    attributes:
+      label: 可核实的来源链接
+      description: 院系官网页面 / 个人主页 / DOI 链接均可
+      placeholder: https://...
+    validations:
+      required: true
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: 补充说明（可选）
+      description: 例如涉及的 DOI 列表、需要一并处理的关联条目等
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: ack
+    attributes:
+      label: 确认
+      options:
+        - label: 我理解本项目为公开学术信息整理，且本申请将公开显示在 Issue 中（请勿填写任何敏感个人信息）
+          required: true

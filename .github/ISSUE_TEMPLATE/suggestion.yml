@@ -1,0 +1,44 @@
+name: 数据补充 / 改进建议
+description: 补充学校、补充招生信息、修正论文归属，或反馈分析问题
+title: "[建议] "
+labels: ["enhancement"]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 类型
+      options:
+        - 补充一所学校
+        - 补充 / 更新某位导师的招生信息
+        - 修正论文归属（同名混淆）
+        - 指标或分析方法有问题
+        - 界面 / 文档改进
+        - 其他
+    validations:
+      required: true
+
+  - type: textarea
+    id: detail
+    attributes:
+      label: 具体内容
+      description: 请尽量写清「哪个条目 / 哪个页面 / 期望结果 / 实际结果」
+    validations:
+      required: true
+
+  - type: input
+    id: source
+    attributes:
+      label: 来源链接（如适用）
+      placeholder: https://...
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: ack
+    attributes:
+      label: 确认
+      options:
+        - label: 我提交的数据来自**公开可访问**的页面（非登录墙、非付费墙、非私人渠道）
+          required: true
+        - label: 我未在其中包含任何未经公开的个人信息
+          required: true

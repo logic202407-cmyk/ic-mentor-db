@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "如果本项目对你的升学或研究有帮助，欢迎按以下格式引用。"
+title: "集成电路 / AI 芯片方向导师库（IC Mentor DB）"
+abstract: >-
+  覆盖 11 所高校（清华、清华深研院、北大、复旦、上交、浙大、南大、中科大、东南、西电、成电）
+  共 2114 位集成电路与 AI 芯片方向导师的公开信息整理：官方师资名录 + Crossref 文献计量证据，
+  含 8 维综合评分、方向多标签归类与课题组招生信息汇总。
+type: dataset
+authors:
+  - name: "ic-mentor-db contributors"
+    url: "https://github.com/logic202407-cmyk/ic-mentor-db"
+version: "2026.09"
+date-released: "2026-09-24"
+license: "CC-BY-NC-SA-4.0"
+keywords:
+  - 集成电路
+  - 微电子
+  - AI 芯片
+  - 导师信息
+  - 保研
+  - 推免
+  - 考研
+  - 文献计量
+repository-code: "https://github.com/logic202407-cmyk/ic-mentor-db"
+url: "https://github.com/logic202407-cmyk/ic-mentor-db"
+notes: >-
+  数据来源：各高校院系官网公开师资页面、Crossref REST API（2008–2026）。
+  本项目不构成学术评价、人事评价或报考建议；梯队分组仅反映公开文献计量证据的多少。
+  数据与文档采用 CC BY-NC-SA 4.0（非商业性使用），代码采用 MIT。

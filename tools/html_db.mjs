@@ -1,4 +1,4 @@
-// html_db.mjs — 生成可交互导师库 HTML（基于最终排名数据）
+﻿// html_db.mjs — 生成可交互导师库 HTML（基于最终排名数据）
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -56,14 +56,14 @@ const html = `<!DOCTYPE html>
 </style></head><body>
 <header>
   <h1>集成电路 / 微电子 / 电子信息 / AI 芯片 —— 导师库（11 校 · 详细排名）</h1>
-  <p>清华 · 清华深研院 · 北大 · 复旦 · 上交 · 浙大 · 南大 · 中科大 · 东南 · 西电 · 成电 ｜ ${rows.length} 位导师 ｜ 数据源：各校官方师资页 + Crossref（2008–2026）+ 撤稿/更正核查 ｜ 2026-09-24</p>
+  <p>清华 · 清华深研院 · 北大 · 复旦 · 上交 · 浙大 · 南大 · 中科大 · 东南 · 西电 · 成电 ｜ ${rows.length} 位导师 ｜ 数据源：各校官方师资页 + Crossref（2008–2026）+ 撤稿/更正核查 ｜ 2026-09-24<br/><span style="display:inline-block;margin-top:8px;background:rgba(255,255,255,.16);padding:6px 10px;border-radius:7px;font-size:12px;line-height:1.6">⚠️ 本页为<b>公开文献计量证据的分层</b>，<b>不构成学术评价、人事评价或报考建议</b>。T3/T4 通常源于姓名重名、英文署名不一致或中文文献未覆盖等数据原因，<b>不代表导师水平或指导质量</b>。使用前请阅读仓库 <code>DISCLAIMER.md</code> 与 <code>docs/使用指南.md</code>。</span></p>
 </header>
 <div class="wrap">
   <div class="bar">
     <input type="text" id="q" placeholder="搜索姓名 / 关键词 / 方向 / 院系"/>
     <select id="school"><option value="">全部学校</option></select>
     <select id="dir"><option value="">全部方向</option></select>
-    <select id="tier"><option value="">全部梯队</option><option>夯</option><option>强</option><option>中</option><option>观察</option><option>信息不足</option></select>
+    <select id="tier"><option value="">全部梯队</option><option>T0 顶刊顶会密集</option><option>T1 一流产出稳定</option><option>T2 有稳定产出</option><option>T3 公开证据较少</option><option>T4 公开证据不足</option></select>
     <select id="sortSel">
       <option value="c">按综合分</option><option value="S">按顶刊顶会数</option><option value="A">按一流期刊会议数</option>
       <option value="ic">按论文总数</option><option value="r3">按近三年</option><option value="cite">按引用</option>
@@ -81,8 +81,8 @@ const html = `<!DOCTYPE html>
 </div>
 <div class="foot">
   <b>综合分</b>＝产出强度 40% + 顶刊顶会密度 13% + 篇均引用 10% + 近三年活跃 10% + 署名伦理 8% + 头衔平台 8% + 团队规模 6% + 诚信 5%。<br/>
-  <b>梯队</b>：夯 ≥55 ｜ 强 42–55 ｜ 中 28–42 ｜ 观察 15–28 ｜ 信息不足 &lt;15 或论文&lt;3 且无顶刊顶会。<br/>
-  <b class="warn">信息不足 ≠ 水平差</b>：多为英文名重名/拼写差异导致漏检（标 ⚠️ 者请以官方主页为准）。同名污染论文（医学/化学等）已剔除并在"备注"标注数量。<br/>
+  <b>梯队</b>（仅反映公开文献计量证据的多少）：T0 顶刊顶会密集 ≥72 ｜ T1 一流产出稳定 58–72 ｜ T2 有稳定产出 42–58 ｜ T3 公开证据较少 26–42 ｜ T4 公开证据不足 &lt;26 或论文&lt;3。<br/>
+  <b class="warn">"公开证据不足" ≠ 水平低</b>：多为英文名重名/拼写差异导致漏检（标 ⚠️ 者请以官方主页为准）。同名污染论文（医学/化学等）已剔除并在"备注"标注数量。<br/><b>本页为公开文献计量证据的分层，不构成学术评价、人事评价或报考建议。</b>详见仓库 <code>DISCLAIMER.md</code>；数据采用 CC BY-NC-SA 4.0（非商业性使用），禁止用于批量群发。<br/>
   <b>文献数据回答不了的问题</b>：导师 push 程度、补助、毕业去向、是否允许实习 —— 务必找在读/毕业师兄师姐核实。
 </div>
 <script>
@@ -90,7 +90,7 @@ const DATA = ${JSON.stringify(data)};
 const $ = (id) => document.getElementById(id);
 [...new Set(DATA.map(d=>d.s))].sort().forEach(s=>$('school').insertAdjacentHTML('beforeend', \`<option>\${s}</option>\`));
 [...new Set(DATA.map(d=>d.d))].sort().forEach(s=>$('dir').insertAdjacentHTML('beforeend', \`<option>\${s}</option>\`));
-const TL={'T0':'夯','T1':'强','T2':'中','T3':'观察','T4':'信息不足'};
+const TL={'T0':'T0 顶刊顶会密集','T1':'T1 一流产出稳定','T2':'T2 有稳定产出','T3':'T3 公开证据较少','T4':'T4 公开证据不足'};
 const TC={T0:'t0',T1:'t1',T2:'t2',T3:'t3',T4:'t4'};
 let sortK='c', asc=false;
 function render(){
