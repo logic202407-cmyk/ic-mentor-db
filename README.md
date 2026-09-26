@@ -1,5 +1,9 @@
 # 集成电路 / AI 芯片 方向导师库（IC Mentor DB）
 
+[![数据与产出校验](https://github.com/logic202407-cmyk/ic-mentor-db/actions/workflows/validate.yml/badge.svg)](https://github.com/logic202407-cmyk/ic-mentor-db/actions/workflows/validate.yml)
+[![许可: CC BY-NC-SA 4.0](https://img.shields.io/badge/%E6%95%B0%E6%8D%AE-CC%20BY--NC--SA%204.0-lightgrey.svg)](LICENSE-DATA)
+[![许可: MIT](https://img.shields.io/badge/%E4%BB%A3%E7%A0%81-MIT-blue.svg)](LICENSE)
+
 > **一个面向相关专业学生的开源信息整理项目**：把 11 所高校集成电路与 AI 芯片方向导师的
 > 公开师资信息、公开学术产出与课题组招生信息汇总到一起，帮助大家在保研 / 考研时
 > 对「梦校 · 梦组 · 梦导师」有一个更直观的了解。
@@ -23,11 +27,14 @@
 | 顶刊顶会（S 级）合计 | 1207 篇（291 位导师有 S 级产出） |
 | 一流期刊会议（A 级）合计 | 4111 篇 |
 | 抓取个人/课题组主页 | 1030 位（成功 989） |
-| **主页明确写了在招** | **152 位** |
+| **主页明确写了在招** | **151 位** |
 
 ---
 
 ## 🚀 快速开始（3 分钟）
+
+> **在线浏览**：开启 GitHub Pages 后可直接打开 `https://<用户名>.github.io/ic-mentor-db/`（见文末「开启在线浏览」）。
+> **离线使用**：
 
 1. **下载本仓库**（`Code` → `Download ZIP`，或 `git clone`）；
 2. **双击打开** `reports/导师推荐.html`（用浏览器即可，无需安装任何东西、无需联网）；
@@ -44,13 +51,15 @@
 | 文件 | 用途 |
 |:--|:--|
 | **`reports/导师推荐.html`** | **推荐页**：458 位导师，可按范围/方向/学校/梯队/招生状态筛选排序，含课题组与招生原话，一键生成邮件草稿 |
-| **`reports/导师推荐与招生信息.md`** / `.docx` | 推荐报告：**152 位主页明确在招**的导师逐人卡片、分方向/分学校榜单、青年 PI 榜、署名结构健康榜、邮件模板与时间线 |
+| **`reports/导师推荐与招生信息.md`** / `.docx` | 推荐报告：**151 位主页明确在招**的导师逐人卡片、分方向/分学校榜单、青年 PI 榜、署名结构健康榜、邮件模板与时间线 |
 | `reports/导师库.html` | 全库检索页（11 校 2114 人） |
 | `reports/导师库-详细排名报告.md` / `.docx` | 全库排名报告（8 维综合分、分方向与分学校榜单、诚信与异常检测结果） |
 | `data/processed/mentor_ranked.csv` | 全库排名表（Excel 可直接分析） |
 | `data/processed/curated.csv` | 推荐集表（458 人，含招生信号、课题组、主页链接） |
 | `data/raw/<校名>/roster_*.json` | 各校官方师资原始名录（每条带抓取来源 URL，可溯源；**不含邮箱**） |
+| `index.html` | 落地页（GitHub Pages 入口，汇总所有产出的导航） |
 | `docs/使用指南.md` | 面向学生的完整使用教程 |
+| `docs/维护指南.md` | 面向后续维护者：数据更新节奏、全量重建流程、排错表、红线 |
 | `DISCLAIMER.md` | 免责声明、隐私处理说明、更正与删除机制 |
 | `CONTRIBUTING.md` | 贡献指南（含"增加一所学校"的完整步骤） |
 
@@ -192,6 +201,39 @@ python tools/make_docx.py ...            # 14. 生成 Word
 
 ---
 
+## 🌐 开启在线浏览（GitHub Pages）
+
+仓库里的两个 HTML 是自包含单文件，可以直接当静态站点发布，学生**无需下载**即可浏览：
+
+1. 把仓库设为 **Public**（私有仓库的 Pages 需要付费计划）；
+2. **Settings → Pages → Source** 选 `Deploy from a branch`，分支 `main`、目录 `/ (root)`，保存；
+3. 约 1 分钟后访问 `https://<用户名>.github.io/ic-mentor-db/` —— 落地页 `index.html` 会引导到推荐页与全库页。
+
+> 仓库已包含 `.nojekyll`，可避免 Jekyll 处理中文文件名。
+
+---
+
+## ✅ 自动校验（GitHub Actions）
+
+每次 push / PR 会自动跑 `.github/workflows/validate.yml`，检查四件事：
+
+| 检查 | 说明 |
+|:--|:--|
+| **邮箱残留** | `strip_emails.mjs --check`：产物中不得出现任何邮箱地址（**隐私红线，不通过则 CI 失败**） |
+| JSON 可解析 | 全部入库数据文件必须能被解析 |
+| HTML 产出完整 | 内嵌数据 JSON 可解析、script 标签闭合、无个人化/评价性词汇 |
+| 字段完整性 | 全库与推荐集人数在下限之上，且**不含 `email` 字段** |
+
+本地预检（提交前建议跑一遍）：
+
+```bash
+node tools/strip_emails.mjs --check
+node tools/verify_html.mjs reports/导师推荐.html reports/导师库.html
+```
+
+
+---
+
 ## 📌 更新记录
 
 | 日期 | 内容 |
@@ -200,5 +242,7 @@ python tools/make_docx.py ...            # 14. 生成 Word
 | 2026-09-24 | 合规完善：免责声明、使用指南、贡献指南、许可协议、Issue 模板；梯队标签中性化 |
 | 2026-09-24 | **移除全部邮箱字段**（名录层 + 产物层 + 兜底清洗），文档同步说明隐私设计 |
 | 2026-09-24 | **数据完善**：低召回导师定向补检（+130 篇论文）、垃圾关键词清洗、主页抓取 231 → 1030 位、明确在招 53 → **152 位**、推荐集扩为两层 458 人 |
+| 2026-09-26 | 移除「主页明确写了不招」清单（避免对个人形成负面指向）；纯负面招生表述不再计入"在招" |
+| 2026-09-26 | 新增落地页 `index.html`、`docs/维护指南.md`、GitHub Actions 自动校验、Pages 部署说明 |
 
 *本项目为公益性质的学生互助信息整理。数据截至 2026-09-24。欢迎指正。*

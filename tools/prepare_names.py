@@ -43,6 +43,13 @@ SCHOOL_META = {
     "seu":   {"name": "东南大学", "query": "Southeast University", "include": r"southeast university", "exclude": None},
     "xidian": {"name": "西安电子科技大学", "query": "Xidian University", "include": r"xidian", "exclude": None},
     "uestc": {"name": "电子科技大学", "query": "University of Electronic Science and Technology of China", "include": r"university of electronic science and technology of china|uestc", "exclude": None},
+    # ── 第二批扩展院校 ──
+    "cas":   {"name": "中国科学院", "query": "Chinese Academy of Sciences", "include": r"chinese academy of sciences|institute of microelectronics|institute of semiconductors", "exclude": r"university of chinese academy"},
+    "hit":   {"name": "哈尔滨工业大学", "query": "Harbin Institute of Technology", "include": r"harbin institute of technology", "exclude": None},
+    "tju":   {"name": "天津大学", "query": "Tianjin University", "include": r"tianjin university", "exclude": r"tianjin university of (technology|science|commerce)"},
+    "hust":  {"name": "华中科技大学", "query": "Huazhong University of Science and Technology", "include": r"huazhong university of science and technology", "exclude": None},
+    "xjtu":  {"name": "西安交通大学", "query": "Xi'an Jiaotong University", "include": r"xi\s*'?an\s*jiaotong", "exclude": None},
+    "buaa":  {"name": "北京航空航天大学", "query": "Beihang University", "include": r"beihang|beijing university of aeronautics", "exclude": None},
 }
 
 MAX_COMBOS = 40

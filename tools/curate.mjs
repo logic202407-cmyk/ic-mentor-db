@@ -44,12 +44,18 @@ const DEVICE_RELEVANT = /存算一体|存内计算|近存计算|忆阻|类脑|�
 
 const BAD_TITLE = /carcinoma|cancer|tumor|clinical|patient|medical|disease|surgery|endoscop|diagnosis|gene|protein|mice|rat |in vivo|cohort|hospital/i;
 
+// 主页里的"不招/已招满"表述：仅用于内部判断，不在产物中展示
+const NEG_SIGNAL = /NO (PhD|Master|M\.?S\.?|graduate) position|not (currently )?(recruiting|accepting)|不再招收|名额已满|已招满/i;
+
 function buildRecord(d, scope) {
   const key = `${d.school}|${d.name_cn}`;
   const lab = labMap.get(key);
   const ana = anaMap.get(key);
   const groups = groupsOf(d);
-  const sigs = (ana && ana.recruit_signals) || [];
+  const allSigs = (ana && ana.recruit_signals) || [];
+  // 只保留正向的招生信号；纯负面表述不计入"在招"
+  const sigs = allSigs.filter((s) => !NEG_SIGNAL.test(s.snippet));
+  const negativeOnly = allSigs.length > 0 && sigs.length === 0;
   return {
     name: d.name_cn, school: d.school, title: d.title, department: d.department,
     scope,
@@ -72,6 +78,7 @@ function buildRecord(d, scope) {
     lab_names: (ana && ana.lab_names) || (lab && lab.lab_names) || [],
     recruit_signals: sigs,
     recruit_signal_count: sigs.length,
+    recruit_negative_only: negativeOnly,
     recent_student_first_authors: (ana && ana.recent_student_first_authors) || 0,
     page_status: lab ? lab.status : 'not_fetched',
     recent_titles: (ana && ana.recent_titles && ana.recent_titles.length

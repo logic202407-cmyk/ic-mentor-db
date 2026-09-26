@@ -25,7 +25,6 @@ const recruiting = rows.filter((d) => d.recruit_signal_count > 0).sort((a, b) =>
 const young = rows.filter((d) => /助理教授|准聘|青年研究员|特任|百人计划|助理研究员|博士后/.test(d.title || '') && d.composite >= 45).sort((a, b) => b.composite - a.composite);
 const ethicsGood = rows.filter((d) => d.n_ic_papers >= 20 && d.student_led_ratio !== null && d.student_led_ratio >= 0.3).sort((a, b) => b.student_led_ratio - a.student_led_ratio);
 const bigTeam = rows.filter((d) => (d.n_students_est || 0) >= 20).sort((a, b) => b.n_students_est - a.n_students_est);
-const negList = recruiting.filter((d) => d.recruit_signals.some((s) => /NO (PhD|Master|M\.?S\.?|graduate) position|not (currently )?(recruiting|accepting)|不(再)?招收|名额已满|已招满/i.test(s.snippet)));
 
 let md = `# 集成电路设计与 AI 交叉方向 · 导师推荐与招生信息
 
@@ -179,15 +178,6 @@ md += `
 |:--|:--|:--|--:|--:|--:|--:|:--|
 `;
 for (const d of bigTeam.slice(0, 25)) md += `| ${d.name} | ${sh(d.school)} | ${d.title || '—'} | **${d.n_students_est}** | ${d.n_ic_papers} | ${d.S} | ${d.composite} | ${d.homepage ? '[主页](' + d.homepage + ')' : '—'} |\n`;
-
-if (negList.length) {
-  md += `\n### 6.4 ⚠️ 主页明确写了不招的（${negList.length} 人）\n\n| 姓名 | 学校 | 职称 | 主页原话 |\n|:--|:--|:--|:--|\n`;
-  for (const d of negList) {
-    const s = d.recruit_signals.find((x) => /NO (PhD|Master|M\.?S\.?|graduate) position|not (currently )?(recruiting|accepting)|不(再)?招收|名额已满|已招满/i.test(x.snippet));
-    md += `| ${d.name} | ${sh(d.school)} | ${d.title || '—'} | ${s.snippet.slice(0, 120)} |\n`;
-  }
-  md += `\n> 注意区分"不招博士"与"不招硕士"——原文若只写 NO PhD position，硕士名额可能仍开放，建议邮件确认。\n`;
-}
 
 // ── 邮件模板 ──
 md += `

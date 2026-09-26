@@ -4,10 +4,12 @@ import path from 'node:path';
 
 const ROOT = 'E:\\ytm\\mentor-db';
 const TARGETS = ['data/processed', 'data/raw', 'reports'];
+const CHECK_ONLY = process.argv.includes('--check');   // --check：只报告不修改（供 CI 使用）
 const EMAIL_RE = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/g;
 const EMAIL_KEY = /^(email|e_mail|mail|page_email|db_email|contact_email|邮箱)$/i;
 
-let jsonKeys = 0, jsonVals = 0, csvCols = 0, csvCells = 0, mdHits = 0, htmlHits = 0, files = 0;
+let jsonKeys = 0, jsonVals = 0, csvCols = 0, csvCells = 0, mdHits = 0, htmlHits = 0, files = 0, leaked = 0;
+const write = (p, txt) => { if (!CHECK_ONLY) fs.writeFileSync(p, txt, 'utf8'); };
 
 function walk(o, file) {
   if (Array.isArray(o)) return o.map((x) => walk(x, file));
@@ -42,15 +44,17 @@ for (const t of TARGETS) {
       const before = JSON.stringify(data).match(EMAIL_RE)?.length || 0;
       const cleaned = walk(data, f);
       const after = JSON.stringify(cleaned).match(EMAIL_RE)?.length || 0;
-      if (before !== after || jsonKeys) fs.writeFileSync(p, JSON.stringify(cleaned, null, 1), 'utf8');
-      if (after) console.log(`  [警告] ${f} 仍有 ${after} 个邮箱地址`);
+      if (before !== after || jsonKeys) write(p, JSON.stringify(cleaned, null, 1));
+      if (CHECK_ONLY && before) { leaked += before; console.log(`  [残留] ${f}: ${before} 个邮箱地址`); }
+      else if (after) console.log(`  [警告] ${f} 仍有 ${after} 个邮箱地址`);
     } else if (ext === '.csv') {
       let txt = fs.readFileSync(p, 'utf8');
       // ① 单元格文本里嵌的邮箱一并替换
       const inText = (txt.match(EMAIL_RE) || []).length;
       if (inText) { txt = txt.replace(EMAIL_RE, '（联系方式见官网主页）'); csvCells += inText; }
       const lines = txt.split('\n');
-      if (!lines.length) { if (inText) fs.writeFileSync(p, txt, 'utf8'); continue; }
+      if (CHECK_ONLY && inText) { leaked += inText; console.log('  [残留] ' + f + ': 单元格含 ' + inText + ' 个邮箱'); continue; }
+      if (!lines.length) { if (inText) write(p, txt); continue; }
       const hdr = lines[0].replace(/^\ufeff/, '').split(',').map((h) => h.replace(/^"|"$/g, ''));
       const drop = hdr.map((h, i) => (EMAIL_KEY.test(h) ? i : -1)).filter((i) => i >= 0);
       if (drop.length) {
@@ -63,7 +67,7 @@ for (const t of TARGETS) {
         csvCols += drop.length;
         console.log(`  ${f}: 移除列 ${drop.map((i) => hdr[i]).join(',')}`);
       }
-      if (inText || drop.length) fs.writeFileSync(p, txt, 'utf8');
+      if (inText || drop.length) write(p, txt);
     } else if (ext === '.md' || ext === '.html') {
       let txt = fs.readFileSync(p, 'utf8');
       const hits = txt.match(EMAIL_RE) || [];
@@ -71,8 +75,9 @@ for (const t of TARGETS) {
       const real = hits.filter((x) => !/users\.noreply\.github\.com$/i.test(x));
       if (real.length) {
         txt = txt.replace(EMAIL_RE, (m) => (/users\.noreply\.github\.com$/i.test(m) ? m : '（联系方式见官网主页）'));
-        fs.writeFileSync(p, txt, 'utf8');
+        write(p, txt);
         if (ext === '.md') mdHits += real.length; else htmlHits += real.length;
+        if (CHECK_ONLY) leaked += real.length;
         console.log(`  ${f}: 替换 ${real.length} 个邮箱地址`);
       }
     }
@@ -80,3 +85,7 @@ for (const t of TARGETS) {
 }
 console.log(`\n扫描 ${files} 个文件`);
 console.log(`JSON 移除邮箱字段: ${jsonKeys} ｜ JSON 文本内替换: ${jsonVals} ｜ CSV 列: ${csvCols} 单元格: ${csvCells} ｜ MD: ${mdHits} ｜ HTML: ${htmlHits}`);
+if (CHECK_ONLY) {
+  console.log(leaked ? `\n❌ 检查未通过：仍有 ${leaked} 处邮箱残留` : '\n✅ 检查通过：未发现任何邮箱残留');
+  process.exit(leaked ? 1 : 0);
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>集成电路 / AI 芯片 方向导师库</title>
+<style>
+  :root{--ink:#16202e;--muted:#5a6880;--line:#dfe6f0;--brand:#2f6fd0}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:"Microsoft YaHei",-apple-system,"Segoe UI",sans-serif;color:var(--ink);
+       background:linear-gradient(160deg,#eef3fa,#f7f9fc 40%,#eef3fa)}
+  .hero{background:linear-gradient(135deg,#0f2547,#2f5fa8 60%,#3f7fd0);color:#fff;padding:44px 24px 38px;text-align:center}
+  .hero h1{margin:0 0 10px;font-size:27px;letter-spacing:.5px}
+  .hero p{margin:6px auto 0;max-width:720px;font-size:14px;line-height:1.8;opacity:.95}
+  .hero .stats{margin-top:20px;display:flex;gap:26px;justify-content:center;flex-wrap:wrap}
+  .hero .stats div{font-size:12.5px;opacity:.9}
+  .hero .stats b{display:block;font-size:22px;margin-bottom:2px}
+  .wrap{max-width:1000px;margin:0 auto;padding:30px 20px 60px}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px 22px;
+        box-shadow:0 2px 10px rgba(16,32,64,.06);transition:.18s}
+  .card:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(16,32,64,.12)}
+  .card h3{margin:0 0 8px;font-size:16.5px;color:#1d3557}
+  .card .tagline{font-size:12.5px;color:var(--brand);font-weight:700;margin-bottom:8px}
+  .card p{margin:0 0 14px;font-size:13px;line-height:1.75;color:var(--muted)}
+  .card a.btn{display:inline-block;background:var(--brand);color:#fff;text-decoration:none;
+              padding:9px 16px;border-radius:8px;font-size:13px;font-weight:700}
+  .card a.btn:hover{filter:brightness(1.08)}
+  .card a.alt{background:#eef2f9;color:#274b80;margin-left:8px}
+  .notice{background:#fff9e9;border-left:4px solid #e0a83a;border-radius:0 10px 10px 0;
+          padding:14px 18px;margin:22px 0;font-size:12.8px;line-height:1.85}
+  .notice b{color:#8a5a10}
+  h2{font-size:17px;margin:30px 0 12px;color:#1d3557}
+  ul.docs{list-style:none;padding:0;margin:0;font-size:13.2px;line-height:2}
+  ul.docs a{color:var(--brand);text-decoration:none}
+  ul.docs a:hover{text-decoration:underline}
+  footer{text-align:center;font-size:12px;color:var(--muted);padding:26px 20px 40px;line-height:1.9}
+</style>
+</head>
+<body>
+<div class="hero">
+  <h1>集成电路 / AI 芯片 方向导师库</h1>
+  <p>把 11+ 所高校集成电路与 AI 芯片方向导师的公开师资信息、公开学术产出与课题组招生信息汇总到一起，<br/>
+     帮你在保研 / 考研时对「梦校 · 梦组 · 梦导师」有一个更直观的了解。</p>
+  <div class="stats">
+    <div><b>2100+</b>收录导师</div>
+    <div><b>11+</b>所高校</div>
+    <div><b>1000+</b>课题组主页实抓</div>
+    <div><b>150+</b>主页明确在招</div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="notice">
+    <b>⚠️ 请先了解</b>：本页是<b>公开学术信息的整理与可视化</b>。其中的「综合分」与「梯队」<b>只反映公开文献计量证据的多少</b>，
+    <b>不构成学术评价、人事评价或报考建议</b>。标注为「公开证据较少 / 不足」的导师，通常是姓名重名、英文署名不一致或中文文献未覆盖等<b>数据原因</b>，
+    <b>不代表导师水平或指导质量</b>。本项目<b>不收录任何邮箱</b>，联系方式请通过条目里的官方主页获取；数据采用 CC BY-NC-SA 4.0（<b>非商业性使用</b>）。
+    完整说明见 <a href="DISCLAIMER.md">DISCLAIMER.md</a>。
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <div class="tagline">推荐从这里开始 →</div>
+      <h3>导师推荐（可交互）</h3>
+      <p>按<b>范围 / 方向 / 学校 / 梯队 / 招生状态</b>筛选与排序；点开任意一行可看课题组、主页招生原话与近期论文，
+         并<b>一键生成联系邮件草稿</b>。</p>
+      <a class="btn" href="reports/导师推荐.html">打开推荐页</a>
+    </div>
+    <div class="card">
+      <div class="tagline">想查全貌 →</div>
+      <h3>导师库（全库检索）</h3>
+      <p>覆盖 11 校 2100+ 位导师，可按学校、方向、梯队筛选，查看 8 维评分明细与公开学术产出结构。</p>
+      <a class="btn" href="reports/导师库.html">打开全库页面</a>
+    </div>
+    <div class="card">
+      <div class="tagline">想读文字版 →</div>
+      <h3>推荐与招生信息报告</h3>
+      <p><b>150+ 位主页明确在招</b>的导师逐人卡片、分方向与分学校榜单、青年 PI 榜、邮件模板与时间线。</p>
+      <a class="btn" href="reports/导师推荐与招生信息.md">看 Markdown</a>
+      <a class="btn alt" href="reports/导师推荐与招生信息.docx">下载 Word</a>
+    </div>
+    <div class="card">
+      <div class="tagline">想自己复现 →</div>
+      <h3>数据与工具链</h3>
+      <p>全库排名表与推荐集表（CSV 可直接用 Excel 分析），以及从抓取到出报告的 20 个脚本。</p>
+      <a class="btn" href="data/processed/mentor_ranked.csv">全库排名 CSV</a>
+      <a class="btn alt" href="data/processed/curated.csv">推荐集 CSV</a>
+    </div>
+  </div>
+
+  <h2>📖 文档</h2>
+  <ul class="docs">
+    <li>📘 <a href="docs/使用指南.md">使用指南</a> —— 三分钟上手、指标怎么读、<b>选导师六步法</b>、FAQ、检索技巧</li>
+    <li>⚖️ <a href="DISCLAIMER.md">免责声明与合规说明</a> —— 数据来源、隐私处理、排名性质、<b>更正与删除机制</b></li>
+    <li>🤝 <a href="CONTRIBUTING.md">贡献指南</a> —— 信息更正流程、<b>新增一所学校</b>的完整步骤、采集规范</li>
+    <li>📄 <a href="LICENSE-DATA">数据许可</a>（CC BY-NC-SA 4.0） ｜ <a href="LICENSE">代码许可</a>（MIT）</li>
+  </ul>
+
+  <h2>📧 关于联系方式</h2>
+  <ul class="docs">
+    <li>本项目<b>不收录、不存储、不展示任何邮箱地址</b>；需要联系导师时，请通过条目里的<b>官方主页链接</b>自行获取。</li>
+    <li>请勿将本项目用于批量群发邮件、商业用途或任何形式的骚扰。</li>
+    <li>如果你是名单中的老师，希望更正或移除信息，请提 <a href="https://github.com/logic202407-cmyk/ic-mentor-db/issues/new?template=correction.yml">Issue</a>（<b>无需提供任何证件</b>），我们将在 7 个工作日内处理。</li>
+  </ul>
+</div>
+
+<footer>
+  数据来源：各高校院系官网公开师资页面 + Crossref REST API（2008–2026）+ 撤稿/更正关系核查<br/>
+  本项目为公益性质的学生互助信息整理，与任何高校、机构无隶属关系。<br/>
+  数据截至 2026-09-24。
+</footer>
+</body>
+</html>
