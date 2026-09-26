@@ -11,6 +11,20 @@ const CONC = Number(process.env.CONC || 10);
 const SELECT = 'DOI,title,author,container-title,published,type,is-referenced-by-count,ISSN,short-container-title';
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
+// Crossref 机构串含 HTML 实体（如 Xi&#x2019;an Jiaotong University），需先解码再匹配
+const ENT2 = /&(#x[0-9a-f]+|#\d+|amp|apos|quot|lt|gt|nbsp);/gi;
+function decodeEnt(s) {
+  return String(s || '').replace(ENT2, (m, g) => {
+    if (g[0] === '#') {
+      const code = g[1].toLowerCase() === 'x' ? parseInt(g.slice(2), 16) : parseInt(g.slice(1), 10);
+      try { return String.fromCodePoint(code); } catch { return ' '; }
+    }
+    return { amp: '&', apos: "'", quot: '"', lt: '<', gt: '>', nbsp: ' ' }[g.toLowerCase()] ?? ' ';
+  });
+}
+const affText = (a) => (a.affiliation || []).map((x) => decodeEnt(x.name || '')).join(' | ');
+
+
 const variants = JSON.parse(fs.readFileSync(path.join(PROC, 'name_variants.json'), 'utf8'));
 
 function compact(s) {
@@ -50,7 +64,7 @@ function toPaper(it, idx, meIdx) {
     cited: it['is-referenced-by-count'] ?? 0,
     my_order: meIdx + 1,
     n_authors: authors.length,
-    coauthors: authors.map((a, i) => ({ name: [a.given, a.family].filter(Boolean).join(' ') || a.name || '', order: i + 1, aff: (a.affiliation || []).map((x) => x.name || '').join(' | ').slice(0, 160) })),
+    coauthors: authors.map((a, i) => ({ name: [a.given, a.family].filter(Boolean).join(' ') || a.name || '', order: i + 1, aff: affText(a).slice(0, 160) })),
   };
 }
 
@@ -104,7 +118,7 @@ for (const [key, list] of Object.entries(bySchool)) {
             const a = authors[k];
             const full = [a.given, a.family].filter(Boolean).join(' ') || a.name || '';
             if (!cset.has(compact(full))) continue;
-            const aff = (a.affiliation || []).map((x) => x.name || '').join(' | ');
+            const aff = affText(a);
             if (aff ? (inc.test(aff) && !(exc && exc.test(aff))) : false) { meIdx = k; break; }
           }
           if (meIdx < 0) continue;

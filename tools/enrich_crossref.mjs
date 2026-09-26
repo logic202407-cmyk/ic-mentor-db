@@ -1,4 +1,4 @@
-﻿// enrich_crossref.mjs — 逐位导师：Crossref「作者名 + 机构」检索 → 精确匹配其论文（含会议）
+// enrich_crossref.mjs — 逐位导师：Crossref「作者名 + 机构」检索 → 精确匹配其论文（含会议）
 // 用法: node enrich_crossref.mjs [schoolKey ...]
 import fs from 'node:fs';
 import path from 'node:path';
@@ -30,6 +30,22 @@ function compactSet(variants) {
     if (c.includes('u')) set.add(c.replace(/u/g, 'v'));
   }
   return set;
+}
+
+// Crossref 的机构串里常带 HTML 实体（如 Xi&#x2019;an Jiaotong University），
+// 必须先解码再做正则匹配，否则整所学校的召回率会崩掉。
+const ENT = /&(#x[0-9a-f]+|#\d+|amp|apos|quot|lt|gt|nbsp);/gi;
+function decodeEnt(s) {
+  return String(s || '').replace(ENT, (m, g) => {
+    if (g[0] === '#') {
+      const code = g[1].toLowerCase() === 'x' ? parseInt(g.slice(2), 16) : parseInt(g.slice(1), 10);
+      try { return String.fromCodePoint(code); } catch { return ' '; }
+    }
+    return { amp: '&', apos: "'", quot: '"', lt: '<', gt: '>', nbsp: ' ' }[g.toLowerCase()] ?? ' ';
+  });
+}
+function affText(a) {
+  return (a.affiliation || []).map((x) => decodeEnt(x.name || '')).join(' | ');
 }
 
 async function cr(url, tries = 4) {
@@ -70,12 +86,12 @@ async function enrichPerson(p, meta) {
         const a = authors[i];
         const full = [a.given, a.family].filter(Boolean).join(' ') || a.name || '';
         if (!cset.has(compact(full))) continue;
-        const aff = (a.affiliation || []).map((x) => x.name || '').join(' | ');
+        const aff = affText(a);
         if (aff ? (inc.test(aff) && !(exc && exc.test(aff))) : false) { me = { i, a }; break; }
         if (!aff) { me = me || { i, a, affUnknown: true }; }
       }
       if (!me) continue;
-      const allAff = authors.flatMap((a) => (a.affiliation || []).map((x) => x.name || '')).join(' | ');
+      const allAff = authors.flatMap((a) => affText(a)).join(' | ');
       if (!inc.test(allAff)) continue;
       if (exc && exc.test(allAff)) continue;
       papers.push({

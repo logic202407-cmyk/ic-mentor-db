@@ -48,7 +48,7 @@ SCHOOL_META = {
     "hit":   {"name": "哈尔滨工业大学", "query": "Harbin Institute of Technology", "include": r"harbin institute of technology", "exclude": None},
     "tju":   {"name": "天津大学", "query": "Tianjin University", "include": r"tianjin university", "exclude": r"tianjin university of (technology|science|commerce)"},
     "hust":  {"name": "华中科技大学", "query": "Huazhong University of Science and Technology", "include": r"huazhong university of science and technology", "exclude": None},
-    "xjtu":  {"name": "西安交通大学", "query": "Xi'an Jiaotong University", "include": r"xi\s*'?an\s*jiaotong", "exclude": None},
+    "xjtu":  {"name": "西安交通大学", "query": "Xi'an Jiaotong University", "include": r"xi[\s'’′´‘`]*an\s*jiao\s*tong|xjtu", "exclude": r"liverpool"},
     "buaa":  {"name": "北京航空航天大学", "query": "Beihang University", "include": r"beihang|beijing university of aeronautics", "exclude": None},
 }
 
@@ -131,10 +131,13 @@ def build(name_cn, name_en):
 
 result = {}
 for f in sorted(glob.glob(os.path.join(RAW, "*", "roster_*.json"))):
-    if "draft" in os.path.basename(f).lower():
+    if "draft" in os.path.basename(f).lower() or "stage" in os.path.basename(f).lower():
         continue
     with open(f, encoding="utf-8") as fh:
         data = json.load(fh)
+    if not isinstance(data, dict):
+        print("  跳过非对象结构:", f)
+        continue
     key = data.get("school_key") or os.path.basename(os.path.dirname(f))
     meta = SCHOOL_META.get(key, {})
     people = []

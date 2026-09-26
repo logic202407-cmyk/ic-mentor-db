@@ -1,0 +1,2455 @@
+{
+ "school": "西安交通大学",
+ "school_key": "xjtu",
+ "harvested_at": "2026-09-26",
+ "sources": [
+  "https://gr.xjtu.edu.cn/units.jsp?urltype=tree.TreeTempUrl&wbtreeid=1021",
+  "https://gr.xjtu.edu.cn/units_teacherlist.jsp?urltype=tsites.CollegeTeacherList&wbtreeid=1021&st=0&id=1180&lang=zh_CN",
+  "https://gr.xjtu.edu.cn/units_teacherlist.jsp?urltype=tsites.CollegeTeacherList&wbtreeid=1021&st=0&id=1179&lang=zh_CN",
+  "https://gr.xjtu.edu.cn/units_teacherlist.jsp?urltype=tsites.CollegeTeacherList&wbtreeid=1021&st=0&id=1175&lang=zh_CN",
+  "https://gr.xjtu.edu.cn/units_teacherlist.jsp?urltype=tsites.CollegeTeacherList&wbtreeid=1021&st=0&id=1025&lang=zh_CN",
+  "https://gr.xjtu.edu.cn/units_teacherlist.jsp?urltype=tsites.CollegeTeacherList&wbtreeid=1021&st=0&id=1151&lang=zh_CN",
+  "https://gr.xjtu.edu.cn/units_teacherlist.jsp?urltype=tsites.CollegeTeacherList&wbtreeid=1021&st=0&id=1128&lang=zh_CN",
+  "https://gr.xjtu.edu.cn/units_teacherlist.jsp?urltype=tsites.CollegeTeacherList&wbtreeid=1021&st=0&id=1099&lang=zh_CN",
+  "https://gr.xjtu.edu.cn/search.jsp?urltype=tree.TreeTempUrl&wbtreeid=1041",
+  "https://dice.xjtu.edu.cn/szdw1/jsml1.htm",
+  "https://dice.xjtu.edu.cn/szdw1/bssds1.htm",
+  "https://dice.xjtu.edu.cn/szdw1/jcrc.htm",
+  "https://ist.xjtu.edu.cn/szdw/jsml1.htm",
+  "https://ist.xjtu.edu.cn/szdw/bdxx/bssds.htm",
+  "https://ist.xjtu.edu.cn/szdw/ljrc.htm",
+  "https://fist.xjtu.edu.cn/szdw/szgk/ys.htm",
+  "https://fist.xjtu.edu.cn/xygk/yjzx/xjdzyjzx.htm",
+  "https://www.xjtu.edu.cn/xynr.jsp?urltype=tree.TreeTempUrl&wbtreeid=1030",
+  "https://eie.xjtu.edu.cn/",
+  "https://yz.xjtu.edu.cn/"
+ ],
+ "coverage_note": "数据主源：西安交通大学教师主页门户 gr.xjtu.edu.cn（官方教师个人主页系统），通过「学院列表 → 学院教师列表」接口按学院逐页抓取，共抓取 527 位教师主页全文（含 zdylm/zhym 自定义栏目，如“研究领域/研究方向”）。\n覆盖院系（7 个，全部来自 gr.xjtu.edu.cn 官方名录）：微电子学院（42 人名录，收录 38 人）、电子科学与工程学院（120 人名录，收录 44 人）、信息与通信工程学院（100 人名录，收录 21 人）、计算机科学与技术学院（75 人名录，收录 6 人）、人工智能学院（50 人名录，收录 8 人）、仪器科学与技术学院（70 人名录，收录 32 人）、前沿科学技术研究院（70 人名录，收录 7 人）。\n方向筛选：按集成电路设计、模拟/混合信号、射频/毫米波/太赫兹、电源管理、数字/处理器/体系结构、AI 加速器/智能芯片、存算一体/新型存储、EDA、半导体器件与工艺、宽禁带半导体、光电子/硅光、MEMS/传感器芯片、通信基带/SoC、生物医疗电子、量子芯片等方向关键词匹配；剔除纯天线电磁、纯材料化学、纯软件算法、纯电力系统等非芯片方向。\n职称筛选：仅保留教授/二级教授/副教授/助理教授/研究员/副研究员/讲师；已排除工程师、高级实验师、博士后、行政及名录中的退休人员（如名录出现）。\n未抓到的部分及原因：① 微电子学院独立官网 sme.xjtu.edu.cn 无法解析（公网 DNS 无记录，且疑似仅校内可达），本机网络经 TUN 代理出境，202.117.x.x 段部分主机 TLS 握手被拒，sei/cs/ia/ime/ai/computer/ece.xjtu.edu.cn 均无法访问；② 电子与信息学部 sei.xjtu.edu.cn、计算机学院 cs.xjtu.edu.cn、人工智能学院 ia.xjtu.edu.cn、微电子学院 ime.xjtu.edu.cn 均不可达，故改用 gr.xjtu.edu.cn 官方教师名录作为等价权威来源；③ 电信学部官网 eie.xjtu.edu.cn 为 JS 单页应用，无静态师资列表；④ 微电子学院/宽禁带半导体等研究中心（微纳电子与系统集成研究中心、宽禁带半导体材料与器件研究中心）独立页面未检索到公网可访问入口，其成员已通过微电子学院/电子科学与工程学院名录覆盖。\n局限说明：① 微电子学院中 10 位教师（刘明、贺永宁、刘卫华、王红义、王晓飞、马超、胡光亮、沈律康、李洋、王驰）的个人主页未填写研究领域，其 research_keywords 为按微电子学院学科范围给出的院系级方向标注，已在各自 notes 中注明；② 少量教师（如杜波波、李远洁、牛刚、魏强）主页公开内容较少，第 3 个关键词取自其本人页面“学科”字段或所属院系官方学科名；③ notes 中的荣誉称号仅在本人姓名邻近文本窗口内匹配，未做二次人工核验；④ email 字段按要求一律为 null。",
+ "faculty": [
+  {
+   "name_cn": "陈衡",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子与信息学部 计算机科学与技术学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "数字处理器与体系结构",
+    "精密测量与仪器",
+    "并行与分布式计算",
+    "机器学习与智能算法"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/hengchen/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "董小社",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 计算机科学与技术学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "数字处理器与体系结构",
+    "智能计算架构",
+    "硬件安全与可靠"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/xsdong/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "蔺杰",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 计算机科学与技术学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "数字处理器与体系结构",
+    "无线通信系统",
+    "机器学习与智能算法"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/jielin/zh_CN/index.htm",
+   "email": null,
+   "notes": "学院副院长"
+  },
+  {
+   "name_cn": "刘松",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子与信息学部 计算机科学与技术学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "数字处理器与体系结构",
+    "智能计算架构",
+    "嵌入式与实时系统",
+    "并行与分布式计算"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/liusong/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "夏秦",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 计算机科学与技术学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "数字处理器与体系结构",
+    "智能计算架构",
+    "并行与分布式计算"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/qin.xia/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王子衡",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "电子与信息学部 计算机科学与技术学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "数字处理器与体系结构",
+    "智能计算架构",
+    "并行与分布式计算",
+    "图像与视觉处理"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/wangziheng/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "刘钊钧",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "前沿科学技术研究院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "宽禁带半导体",
+    "柔性电子与显示",
+    "微纳制造与封装"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/liuzhaojun/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "娄晓杰",
+   "name_en": null,
+   "title": "教授",
+   "department": "前沿科学技术研究院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "存算一体与新型存储",
+    "光电子与硅光",
+    "柔性电子与显示"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/xlou03/zh_CN/index.htm",
+   "email": null,
+   "notes": "校青年拔尖人才"
+  },
+  {
+   "name_cn": "何刚",
+   "name_en": null,
+   "title": "教授",
+   "department": "前沿科学技术研究院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "量子芯片与量子器件",
+    "柔性电子与显示",
+    "柔性传感与可穿戴",
+    "智能计算架构"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/ganghe/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "罗四海",
+   "name_en": null,
+   "title": "教授",
+   "department": "前沿科学技术研究院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "存算一体与新型存储",
+    "半导体器件与工艺",
+    "光电子与硅光"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/sihailuo/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "芦晓可",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "前沿科学技术研究院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路设计",
+    "MEMS与传感器芯片",
+    "生物医疗电子",
+    "量子芯片与量子器件",
+    "柔性电子与显示"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/luxiaoke/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "田亮",
+   "name_en": null,
+   "title": "教授",
+   "department": "前沿科学技术研究院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS与传感器芯片",
+    "柔性电子与显示",
+    "微纳制造与封装"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/ltian/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "董涛",
+   "name_en": null,
+   "title": "教授",
+   "department": "仪器科学与技术学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS与传感器芯片",
+    "微纳制造与封装",
+    "精密测量与仪器",
+    "智能传感器系统"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/tao.dong/zh_CN/index.htm",
+   "email": null,
+   "notes": "学院副院长"
+  },
+  {
+   "name_cn": "陈瑶",
+   "name_en": null,
+   "title": "副教授",
+   "department": "仪器科学与技术学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS与传感器芯片",
+    "量子芯片与量子器件",
+    "气体与生物传感",
+    "微纳制造与封装"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/yaochen/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "高文迪",
+   "name_en": null,
+   "title": "副教授",
+   "department": "仪器科学与技术学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS与传感器芯片",
+    "生物医疗电子",
+    "微纳制造与封装",
+    "智能计算架构"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/wendigao/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "范亮亮",
+   "name_en": null,
+   "title": "副教授",
+   "department": "仪器科学与技术学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "AI芯片与加速器",
+    "MEMS与传感器芯片",
+    "生物医疗电子"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/fanllxj/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "郑彦臻",
+   "name_en": null,
+   "title": "教授",
+   "department": "前沿科学技术研究院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "宽禁带半导体",
+    "氮化镓器件",
+    "自旋电子"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/zhengyanzhen/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "韩香广",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "仪器科学与技术学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "MEMS与传感器芯片",
+    "生物医疗电子",
+    "铁电与压电材料",
+    "柔性传感与可穿戴"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/hxg2017/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "侯成刚",
+   "name_en": null,
+   "title": "副教授",
+   "department": "仪器科学与技术学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "MEMS与传感器芯片",
+    "硬件安全与可靠",
+    "精密测量与仪器",
+    "智能传感器系统"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/chghou/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "焦斌斌",
+   "name_en": null,
+   "title": "教授",
+   "department": "仪器科学与技术学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "光电子与硅光",
+    "MEMS与传感器芯片"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/jiaobinbin/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "韩枫",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "仪器科学与技术学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "生物医疗电子",
+    "柔性电子与显示",
+    "二维材料器件",
+    "柔性传感与可穿戴"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/hanfeng_20625/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "梁霖",
+   "name_en": null,
+   "title": "教授",
+   "department": "仪器科学与技术学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS与传感器芯片",
+    "信号与信息处理",
+    "精密测量与仪器"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/lianglin/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李支康",
+   "name_en": null,
+   "title": "教授",
+   "department": "仪器科学与技术学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS与传感器芯片",
+    "铁电与压电材料",
+    "气体与生物传感"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/zhikang-li/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "刘洋洋",
+   "name_en": null,
+   "title": "研究员",
+   "department": "仪器科学与技术学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "生物医疗电子",
+    "柔性电子与显示",
+    "柔性传感与可穿戴"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/liuyy0510/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李敏",
+   "name_en": null,
+   "title": "副教授",
+   "department": "仪器科学与技术学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "MEMS与传感器芯片",
+    "生物医疗电子",
+    "柔性传感与可穿戴",
+    "微纳制造与封装"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/0020220087/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "景蔚萱",
+   "name_en": null,
+   "title": "教授",
+   "department": "仪器科学与技术学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微波与天线",
+    "MEMS与传感器芯片",
+    "气体与生物传感",
+    "微纳制造与封装"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/wxjing/zh_CN/index.htm",
+   "email": null,
+   "notes": "学院副院长"
+  },
+  {
+   "name_cn": "毛琦",
+   "name_en": null,
+   "title": "研究员",
+   "department": "仪器科学与技术学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "MEMS与传感器芯片",
+    "生物医疗电子",
+    "柔性传感与可穿戴",
+    "气体与生物传感"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/mq/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "林启敬",
+   "name_en": null,
+   "title": "教授",
+   "department": "仪器科学与技术学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "毫米波与太赫兹",
+    "MEMS与传感器芯片",
+    "柔性电子与显示"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/qjlin2015/zh_CN/index.htm",
+   "email": null,
+   "notes": "国家级青年人才；校青年拔尖人才"
+  },
+  {
+   "name_cn": "彭年才",
+   "name_en": null,
+   "title": "教授",
+   "department": "仪器科学与技术学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS与传感器芯片",
+    "生物医疗电子",
+    "惯性传感器",
+    "微纳制造与封装"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/pengniancai/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "罗国希",
+   "name_en": null,
+   "title": "教授",
+   "department": "仪器科学与技术学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS与传感器芯片",
+    "铁电与压电材料",
+    "二维材料器件",
+    "柔性传感与可穿戴"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/luoguoxi/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "南浪",
+   "name_en": null,
+   "title": "研究员",
+   "department": "仪器科学与技术学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "生物医疗电子",
+    "微流控与芯片实验室",
+    "仪器科学与技术"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/nanlang/zh_CN/index.htm",
+   "email": null,
+   "notes": "校青年拔尖人才"
+  },
+  {
+   "name_cn": "王松",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "仪器科学与技术学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "MEMS与传感器芯片",
+    "柔性电子与显示",
+    "柔性传感与可穿戴",
+    "微纳制造与封装"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/wangsong/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王路",
+   "name_en": null,
+   "title": "副教授",
+   "department": "仪器科学与技术学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS与传感器芯片",
+    "生物医疗电子",
+    "微波无源器件",
+    "铁电与压电材料"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/prince_lu/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王琛英",
+   "name_en": null,
+   "title": "教授",
+   "department": "仪器科学与技术学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS与传感器芯片",
+    "生物医疗电子",
+    "柔性电子与显示"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/wangchenying/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "徐洪成",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "仪器科学与技术学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "毫米波与太赫兹",
+    "微波与天线",
+    "MEMS与传感器芯片"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/hc.xu/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "于明智",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "仪器科学与技术学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "光电子与硅光",
+    "MEMS与传感器芯片",
+    "微纳制造与封装",
+    "量子信息与器件"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/yumingzhi/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "雍佳乐",
+   "name_en": null,
+   "title": "教授",
+   "department": "仪器科学与技术学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光电子与硅光",
+    "生物医疗电子",
+    "柔性电子与显示"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/yongjiale/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "杨青",
+   "name_en": null,
+   "title": "研究员",
+   "department": "仪器科学与技术学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "生物医疗电子",
+    "柔性电子与显示",
+    "激光与光学",
+    "微纳制造与封装"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/yangqing/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "韦学勇",
+   "name_en": null,
+   "title": "教授",
+   "department": "仪器科学与技术学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS与传感器芯片",
+    "生物医疗电子",
+    "气体与生物传感",
+    "微纳制造与封装"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/seanwei/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张传禹",
+   "name_en": null,
+   "title": "副教授",
+   "department": "仪器科学与技术学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "MEMS与传感器芯片",
+    "生物医疗电子",
+    "精密测量与仪器",
+    "微流控与芯片实验室"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/chuanyu.zhang/zh_CN/index.htm",
+   "email": null,
+   "notes": "研究所所长"
+  },
+  {
+   "name_cn": "赵立波",
+   "name_en": null,
+   "title": "教授",
+   "department": "仪器科学与技术学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS与传感器芯片",
+    "量子芯片与量子器件",
+    "惯性传感器",
+    "微纳制造与封装"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/libozhao/zh_CN/index.htm",
+   "email": null,
+   "notes": "校青年拔尖人才"
+  },
+  {
+   "name_cn": "赵一鹤",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "仪器科学与技术学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路设计",
+    "MEMS与传感器芯片",
+    "生物医学信号与仪器"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/yihezhao/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张福政",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "仪器科学与技术学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "MEMS与传感器芯片",
+    "生物医疗电子",
+    "柔性电子与显示"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/fzzhang/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "高治文",
+   "name_en": null,
+   "title": "副教授",
+   "department": "仪器科学与技术学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光电子与硅光",
+    "光电探测与成像",
+    "仪器科学与技术"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/zwgao/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "赵文",
+   "name_en": null,
+   "title": "副教授",
+   "department": "仪器科学与技术学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "宽禁带半导体",
+    "MEMS与传感器芯片",
+    "金刚石半导体"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/zhaowen/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "兰旭光",
+   "name_en": null,
+   "title": "教授",
+   "department": "人工智能学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "数字处理器与体系结构",
+    "微波无源器件",
+    "智能计算架构",
+    "信号与信息处理"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/zeuslan/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李宝婷",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "人工智能学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路设计",
+    "数字集成电路",
+    "模拟集成电路",
+    "AI芯片与加速器"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/baotingli/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "刘龙军",
+   "name_en": null,
+   "title": "副教授",
+   "department": "人工智能学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "数字集成电路",
+    "数字处理器与体系结构"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/liulongjun/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "马永强",
+   "name_en": null,
+   "title": "副教授",
+   "department": "人工智能学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "AI芯片与加速器",
+    "智能计算架构",
+    "机器学习与智能算法"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/musaqy/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "任鹏举",
+   "name_en": null,
+   "title": "教授",
+   "department": "人工智能学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "数字处理器与体系结构",
+    "AI芯片与加速器",
+    "存算一体与新型存储"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/pengjuren/zh_CN/index.htm",
+   "email": null,
+   "notes": "国家级领军人才"
+  },
+  {
+   "name_cn": "孙宏滨",
+   "name_en": null,
+   "title": "教授",
+   "department": "人工智能学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "AI芯片与加速器",
+    "EDA与设计自动化"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/hsun/zh_CN/index.htm",
+   "email": null,
+   "notes": "国家级领军人才；学院院长"
+  },
+  {
+   "name_cn": "张旭翀",
+   "name_en": null,
+   "title": "副教授",
+   "department": "人工智能学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "AI芯片与加速器",
+    "EDA与设计自动化",
+    "激光与光学",
+    "智能计算架构"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/zhangxc0329/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "赵文哲",
+   "name_en": null,
+   "title": "副教授",
+   "department": "人工智能学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "模拟集成电路",
+    "数字处理器与体系结构",
+    "智能计算架构"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/wenzhe/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "曹元熙",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "电子与信息学部 信息与通信工程学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "毫米波与太赫兹",
+    "微波与天线",
+    "天线阵列与相控阵"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/caoyx/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "常乐",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 信息与通信工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "毫米波与太赫兹",
+    "微波与天线",
+    "天线阵列与相控阵"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/changle/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "陈晓明",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 信息与通信工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频集成电路",
+    "毫米波与太赫兹",
+    "微波与天线"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/xiaoming.chen/zh_CN/index.htm",
+   "email": null,
+   "notes": "国家级青年人才"
+  },
+  {
+   "name_cn": "陈建忠",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 信息与通信工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频集成电路",
+    "毫米波与太赫兹",
+    "微波与天线"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/jianzhong.chen/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "高华强",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "电子与信息学部 信息与通信工程学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "毫米波与太赫兹",
+    "微波与天线",
+    "数字处理器与体系结构"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/huaqiang.gao/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "杜清河",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 信息与通信工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频集成电路",
+    "无线通信系统",
+    "信息与通信工程"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/duqinghe/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "高贞贞",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子与信息学部 信息与通信工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频集成电路",
+    "天线阵列与相控阵",
+    "智能计算架构",
+    "无线通信系统"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/gaozhenzhen1/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "黄斌科",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 信息与通信工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "毫米波与太赫兹",
+    "微波与天线",
+    "雷达与探测",
+    "无线通信系统"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/bkhuang/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "梁毅军",
+   "name_en": null,
+   "title": "讲师",
+   "department": "电子与信息学部 信息与通信工程学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "数字处理器与体系结构",
+    "智能计算架构",
+    "信号与信息处理"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/liang.yj/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "廖学文",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 信息与通信工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频集成电路",
+    "毫米波与太赫兹",
+    "微波与天线"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/yeplos/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李建星",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 信息与通信工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频集成电路",
+    "毫米波与太赫兹",
+    "微波与天线"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/jianxingli.china/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "吕刚明",
+   "name_en": null,
+   "title": "讲师",
+   "department": "电子与信息学部 信息与通信工程学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "射频集成电路",
+    "微波与天线",
+    "数字处理器与体系结构"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/gmlv/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "乔瑞萍",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子与信息学部 信息与通信工程学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "数字处理器与体系结构",
+    "嵌入式与实时系统",
+    "信息与通信工程"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/rpqiao/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王磊",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子与信息学部 信息与通信工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微波与天线",
+    "通信芯片与基带",
+    "无线通信系统"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/lei.wang/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王力",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "电子与信息学部 信息与通信工程学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "射频集成电路",
+    "微波与天线",
+    "雷达与探测"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/wangli/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "宋新月",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "电子与信息学部 信息与通信工程学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "射频集成电路",
+    "毫米波与太赫兹",
+    "微波与天线"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/songxy/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王熠晨",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 信息与通信工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "数模混合信号",
+    "智能计算架构",
+    "无线通信系统"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/wangyichen/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张安学",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 信息与通信工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频集成电路",
+    "毫米波与太赫兹",
+    "微波与天线",
+    "光电子与硅光",
+    "生物医疗电子"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/anxuezhang/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "衣建甲",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 信息与通信工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "毫米波与太赫兹",
+    "微波与天线",
+    "无线通信系统"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/jianjia.yi/zh_CN/index.htm",
+   "email": null,
+   "notes": "国家级青年人才"
+  },
+  {
+   "name_cn": "闫森",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 信息与通信工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频集成电路",
+    "毫米波与太赫兹",
+    "微波与天线",
+    "生物医疗电子"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/sen.yan/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "郑通兴",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 信息与通信工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "毫米波与太赫兹",
+    "微波与天线",
+    "天线阵列与相控阵",
+    "电磁超表面"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/zhengtx/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "蔡寅",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子与信息学部 电子科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "宽禁带半导体",
+    "光电子与硅光",
+    "量子芯片与量子器件"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/caiyin/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "代锦飞",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子与信息学部 电子科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光电子与硅光",
+    "量子芯片与量子器件",
+    "量子信息与器件"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/daijinfei123/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "董化",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 电子科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光电子与硅光",
+    "光电探测与成像",
+    "电子科学与技术"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/donghuaxjtu/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "杜波波",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子与信息学部 电子科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光电子与硅光",
+    "电子科学与技术",
+    "微电子学与固体电子学"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/bobo.du/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "丁文",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子与信息学部 电子科学与工程学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "毫米波与太赫兹",
+    "电磁超表面",
+    "太赫兹器件"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/dingwen/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "陈涛",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 电子科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "宽禁带半导体",
+    "MEMS与传感器芯片",
+    "微波无源器件",
+    "激光与光学"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/chentaoEle/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "贺雨晨",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子与信息学部 电子科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "毫米波与太赫兹",
+    "生物医疗电子",
+    "雷达与探测",
+    "智能计算架构"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/yuchenhe/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "胡龙",
+   "name_en": null,
+   "title": "研究员",
+   "department": "电子与信息学部 电子科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微波与天线",
+    "宽禁带半导体",
+    "激光与光学"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/longhu/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "董国华",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 电子科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "生物医疗电子",
+    "柔性电子与显示",
+    "半导体材料外延",
+    "铁电与压电材料"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/guohua/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "胡忠强",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 电子科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "微波与天线",
+    "存算一体与新型存储",
+    "MEMS与传感器芯片"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/zhongqianghu/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "胡文波",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 电子科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "宽禁带半导体",
+    "光电子与硅光"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/huwb/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李洁",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子与信息学部 电子科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "宽禁带半导体",
+    "功率半导体器件"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/jie_li/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李峰",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 电子科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "宽禁带半导体",
+    "光电子与硅光",
+    "量子芯片与量子器件"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/felix831204/zh_CN/index.htm",
+   "email": null,
+   "notes": "国家级青年人才；校青年拔尖人才"
+  },
+  {
+   "name_cn": "陈烽",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 电子科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光电子与硅光",
+    "柔性电子与显示",
+    "激光与光学",
+    "微纳制造与封装"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/chenfeng/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李强",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子与信息学部 电子科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频集成电路",
+    "EDA与设计自动化",
+    "半导体器件与工艺",
+    "宽禁带半导体",
+    "光电子与硅光"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/liqiang2014/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李璟睿",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子与信息学部 电子科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "EDA与设计自动化",
+    "光电子与硅光",
+    "铁电与压电材料"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/jingrui.li/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "刘明（电子科学与工程学院）",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 电子科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微波与天线",
+    "MEMS与传感器芯片",
+    "生物医疗电子",
+    "量子芯片与量子器件",
+    "柔性电子与显示"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/mingliu/zh_CN/index.htm",
+   "email": null,
+   "notes": "学院副院长；学院院长；本项目为消歧标注：同名者，见「电子科学与工程学院」"
+  },
+  {
+   "name_cn": "刘增辉",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子与信息学部 电子科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS与传感器芯片",
+    "半导体材料外延",
+    "铁电与压电材料",
+    "微纳制造与封装"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/liu.z.h/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李远洁",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子与信息学部 电子科学与工程学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "电子科学与技术",
+    "微电子学与固体电子学"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/liyuanjie/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "牛刚",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 电子科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "宽禁带半导体",
+    "电子科学与技术",
+    "微电子学与固体电子学"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/gangniu/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李永东",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 电子科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "电子科学与技术",
+    "微电子学与固体电子学"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/leyond/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "司金海",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 电子科学与工程学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "光电子与硅光",
+    "激光与光学",
+    "电子科学与技术"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/jinhaisi/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "田振寰",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子与信息学部 电子科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频集成电路",
+    "宽禁带半导体",
+    "光电子与硅光"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/tianzhenhuan/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王领航",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子与信息学部 电子科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "宽禁带半导体",
+    "光电子与硅光"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/lhwang/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王宏兴",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 电子科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "宽禁带半导体",
+    "半导体材料外延",
+    "金刚石半导体",
+    "氮化镓器件"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/hxwangcn/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王鲁康",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "电子与信息学部 电子科学与工程学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "宽禁带半导体",
+    "MEMS与传感器芯片",
+    "铁电与压电材料",
+    "二维材料器件"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/wanglukang/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王耀功",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 电子科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS与传感器芯片",
+    "电子科学与技术",
+    "微电子学与固体电子学"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/wyg008/zh_CN/index.htm",
+   "email": null,
+   "notes": "研究所所长"
+  },
+  {
+   "name_cn": "李振荣",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 电子科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "宽禁带半导体",
+    "半导体材料外延",
+    "铁电与压电材料"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/zhrli/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王兆宏",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 电子科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微波与天线",
+    "光电子与硅光",
+    "电磁超表面"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/zhwang/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王志广",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 电子科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "MEMS与传感器芯片",
+    "生物医疗电子",
+    "柔性电子与显示"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/wangzhiguang/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王若铮",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子与信息学部 电子科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "宽禁带半导体",
+    "量子芯片与量子器件",
+    "半导体材料外延"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/wangrz/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "吴胜利",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 电子科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "宽禁带半导体",
+    "柔性电子与显示"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/slwu/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "许林峰",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 电子科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "生物医疗电子",
+    "铁电与压电材料",
+    "微流控与芯片实验室"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/xulinfeng/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "魏强",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子与信息学部 电子科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "宽禁带半导体",
+    "电子科学与技术",
+    "微电子学与固体电子学"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/weiqiang1/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "吴金根",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子与信息学部 电子科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频集成电路",
+    "毫米波与太赫兹",
+    "微波与天线",
+    "MEMS与传感器芯片"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/jingen-wu/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "杨蕤生",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "电子与信息学部 电子科学与工程学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "毫米波与太赫兹",
+    "电磁超表面",
+    "电子科学与技术"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/rsyang/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "尹行天",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 电子科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光电子与硅光",
+    "量子芯片与量子器件",
+    "光电探测与成像",
+    "量子信息与器件"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/xt_yin/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张朝阳",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 电子科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光电子与硅光",
+    "光电探测与成像",
+    "激光与光学"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/zhaoyang-zhang/zh_CN/index.htm",
+   "email": null,
+   "notes": "优秀青年科学基金获得者"
+  },
+  {
+   "name_cn": "张景文",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子与信息学部 电子科学与工程学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "宽禁带半导体",
+    "光电子与硅光",
+    "柔性电子与显示"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/jwzhang/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张彦鹏",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 电子科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "毫米波与太赫兹",
+    "光电子与硅光",
+    "量子芯片与量子器件"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/ypzhang/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "赵梦",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "电子与信息学部 电子科学与工程学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "MEMS与传感器芯片",
+    "微纳制造与封装",
+    "自旋电子"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/zhaomeng2/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "赵亚楠",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子与信息学部 电子科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频集成电路",
+    "MEMS与传感器芯片",
+    "柔性电子与显示"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/zhaoyanan1984/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "程军",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子与信息学部 微电子学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路设计",
+    "数字集成电路",
+    "模拟集成电路",
+    "数模混合信号",
+    "电源管理芯片",
+    "AI芯片与加速器"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/jcheng/zh_CN/index.htm",
+   "email": null,
+   "notes": "学院副院长"
+  },
+  {
+   "name_cn": "樊超",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟集成电路",
+    "数模混合信号",
+    "电源管理芯片",
+    "通信芯片与基带"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/chao.fan/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "闫理贺",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 电子科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光电子与硅光",
+    "激光与光学",
+    "精密测量与仪器",
+    "生物医学成像"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/liheyan/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "范世全",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟集成电路",
+    "数模混合信号",
+    "射频集成电路",
+    "电源管理芯片",
+    "存算一体与新型存储"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/junjunfan/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "桂小琰",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟集成电路",
+    "数模混合信号",
+    "射频集成电路",
+    "数字处理器与体系结构",
+    "生物医疗电子"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/xy.gui/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "韩传余",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子与信息学部 微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "AI芯片与加速器",
+    "存算一体与新型存储",
+    "半导体器件与工艺",
+    "宽禁带半导体",
+    "MEMS与传感器芯片",
+    "生物医疗电子"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/hanchuanyu/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "郭卓奇",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子与信息学部 微电子学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "模拟集成电路",
+    "电源管理芯片",
+    "功率半导体器件",
+    "铁电与压电材料"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/guozhuoqi/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "陈雄",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "毫米波与太赫兹",
+    "微波与天线",
+    "电子科学与技术"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/xchen/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "贺永宁",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路",
+    "微电子器件",
+    "半导体器件与工艺"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/yongning/zh_CN/index.htm",
+   "email": null,
+   "notes": "教师主页未填写研究领域，方向按微电子学院学科范围标注"
+  },
+  {
+   "name_cn": "梁峰",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "数字处理器与体系结构",
+    "存算一体与新型存储",
+    "EDA与设计自动化"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/fliang/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李芳沛",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "电子与信息学部 微电子学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "生物医疗电子",
+    "量子芯片与量子器件",
+    "柔性传感与可穿戴",
+    "量子信息与器件"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/lifangpei/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张鸿",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟集成电路",
+    "数模混合信号"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/hongzhang/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "刘卫华",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路",
+    "微电子器件",
+    "半导体器件与工艺"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/lwhua/zh_CN/index.htm",
+   "email": null,
+   "notes": "教师主页未填写研究领域，方向按微电子学院学科范围标注"
+  },
+  {
+   "name_cn": "李丹",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "数模混合信号",
+    "光电子与硅光",
+    "通信芯片与基带"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/dan.li/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "刘明（微电子学院）",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路",
+    "微电子器件",
+    "半导体器件与工艺"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/m.liu/zh_CN/index.htm",
+   "email": null,
+   "notes": "教师主页未填写研究领域，方向按微电子学院学科范围标注；本项目为消歧标注：同名者，见「微电子学院」"
+  },
+  {
+   "name_cn": "马超",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子与信息学部 微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路",
+    "微电子器件",
+    "半导体器件与工艺"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/cm/zh_CN/index.htm",
+   "email": null,
+   "notes": "教师主页未填写研究领域，方向按微电子学院学科范围标注"
+  },
+  {
+   "name_cn": "李昕",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 微电子学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "宽禁带半导体",
+    "生物医疗电子",
+    "半导体材料外延",
+    "铁电与压电材料"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/lx/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "彭文博",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子与信息学部 微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "光电子与硅光",
+    "MEMS与传感器芯片"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/wpeng33/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "耿莉",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "数模混合信号",
+    "射频集成电路",
+    "电源管理芯片",
+    "宽禁带半导体"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/gengli/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "唐炳俊",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子与信息学部 微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "数模混合信号",
+    "射频集成电路",
+    "毫米波与太赫兹"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/bjtang/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张贻齐",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 电子科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光电子与硅光",
+    "电子科学与技术",
+    "微电子学与固体电子学"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/zhangyiqi/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "胡光亮",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子与信息学部 微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路",
+    "微电子器件",
+    "半导体器件与工艺"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/gliang.hu/zh_CN/index.htm",
+   "email": null,
+   "notes": "教师主页未填写研究领域，方向按微电子学院学科范围标注"
+  },
+  {
+   "name_cn": "沈律康",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子与信息学部 微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路",
+    "微电子器件",
+    "半导体器件与工艺"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/slk100/zh_CN/index.htm",
+   "email": null,
+   "notes": "教师主页未填写研究领域，方向按微电子学院学科范围标注"
+  },
+  {
+   "name_cn": "李洋",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "电子与信息学部 微电子学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路",
+    "微电子器件",
+    "半导体器件与工艺"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/yang.li/zh_CN/index.htm",
+   "email": null,
+   "notes": "教师主页未填写研究领域，方向按微电子学院学科范围标注"
+  },
+  {
+   "name_cn": "王剑飞",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "电子与信息学部 微电子学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路设计",
+    "数字处理器与体系结构",
+    "芯片架构与验证",
+    "硬件安全与可靠"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/wangjianfei/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王驰",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "电子与信息学部 微电子学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路",
+    "微电子器件",
+    "半导体器件与工艺"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/chi.wang/zh_CN/index.htm",
+   "email": null,
+   "notes": "教师主页未填写研究领域，方向按微电子学院学科范围标注"
+  },
+  {
+   "name_cn": "王丹",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子与信息学部 微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "硬件安全与可靠",
+    "电子科学与技术"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/alexaustin/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "汪航",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子与信息学部 微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "AI芯片与加速器",
+    "EDA与设计自动化",
+    "智能计算架构",
+    "芯片架构与验证"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/hangwang/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "薛仲明",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子与信息学部 微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "模拟集成电路",
+    "电源管理芯片",
+    "电子科学与技术"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/xuezhongming/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王晓飞",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路",
+    "微电子器件",
+    "半导体器件与工艺"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/mxfwang/zh_CN/index.htm",
+   "email": null,
+   "notes": "教师主页未填写研究领域，方向按微电子学院学科范围标注"
+  },
+  {
+   "name_cn": "杨晨",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子与信息学部 微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "数字集成电路",
+    "模拟集成电路",
+    "数字处理器与体系结构",
+    "AI芯片与加速器",
+    "存算一体与新型存储"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/chyang00/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "许江涛",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子与信息学部 微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "数模混合信号",
+    "生物医疗电子"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/jtxu/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张岩龙",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子与信息学部 微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟集成电路",
+    "数模混合信号",
+    "射频集成电路",
+    "毫米波与太赫兹"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/yanlong.zhang/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王瑞涛",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "电子与信息学部 微电子学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟集成电路",
+    "数模混合信号",
+    "射频集成电路",
+    "毫米波与太赫兹",
+    "EDA与设计自动化"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/wangrt/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张冰",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子与信息学部 微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "数模混合信号",
+    "数字处理器与体系结构",
+    "MEMS与传感器芯片"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/bing_zhang1982/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张杰",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子与信息学部 微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟集成电路",
+    "数模混合信号"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/jiezhang/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "周磊簜",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子与信息学部 微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "宽禁带半导体",
+    "碳化硅器件"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/zhouleidang/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "苑菀彬",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "电子与信息学部 微电子学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "AI芯片与加速器",
+    "MEMS与传感器芯片",
+    "忆阻器与神经形态器件"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/yuanyyb/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "赵小龙",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子与信息学部 微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "宽禁带半导体",
+    "光电子与硅光",
+    "光电探测与成像",
+    "硬件安全与可靠"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/zhaoxiaolong/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王红义",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子与信息学部 微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路",
+    "微电子器件",
+    "半导体器件与工艺"
+   ],
+   "homepage": "https://gr.xjtu.edu.cn/why.mail.ok/zh_CN/index.htm",
+   "email": null,
+   "notes": "教师主页未填写研究领域，方向按微电子学院学科范围标注"
+  }
+ ]
+}
