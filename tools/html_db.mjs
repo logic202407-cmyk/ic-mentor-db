@@ -1,4 +1,4 @@
-﻿// html_db.mjs — 生成可交互导师库 HTML（基于最终排名数据）
+// html_db.mjs — 生成可交互导师库 HTML（基于最终排名数据）
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -23,7 +23,7 @@ const data = rows.map((r) => ({
   phd: r.is_phd_advisor === true ? '是' : (r.is_phd_advisor === false ? '否' : '?'),
   conf: r.confidence, rr: r.recall_risk, retr: r.integrity ? r.integrity.retracted : 0,
   v: (r.top_venues || []).map((x) => `${x[0]}×${x[1]}`).join(' / '),
-  kw: (r.research_keywords || []).join('、'), hp: r.homepage || '', em: r.email || '',
+  kw: (r.research_keywords || []).join('、'), hp: r.homepage || '',
   nt: r.notes || '', off: r.n_off_field || 0,
   dim: r.dim,
 }));

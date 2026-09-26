@@ -1,11 +1,11 @@
-// harvest_crossref.mjs — 按「学校 × 期刊/会议」从 Crossref 抓取论文（含作者机构），并做机构后置校验
+﻿// harvest_crossref.mjs — 按「学校 × 期刊/会议」从 Crossref 抓取论文（含作者机构），并做机构后置校验
 // 用法: node harvest_crossref.mjs [schoolKey ...]   （不传则跑全部）
 import fs from 'node:fs';
 import path from 'node:path';
 
 const OUT = 'E:\\ytm\\mentor-db\\data\\raw\\crossref';
 fs.mkdirSync(OUT, { recursive: true });
-const UA = 'mentor-db/1.0 (mailto:mentor.db.builder@gmail.com)';
+const UA = 'mentor-db/1.0 (mailto:ic-mentor-db@users.noreply.github.com)';
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const YEARS = 'from-pub-date:2015-01-01,until-pub-date:2026-12-31';
 

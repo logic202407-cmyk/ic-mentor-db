@@ -1,2931 +1,2928 @@
 {
-  "school": "北京大学",
-  "school_key": "pku",
-  "harvested_at": "2026-09-24",
-  "sources": [
-    "https://ic.pku.edu.cn/szdw/zzjs/jcwndzx1/index.htm",
-    "https://ic.pku.edu.cn/szdw/zzjs/jcdlsjx1/index.htm",
-    "https://ic.pku.edu.cn/szdw/zzjs/sjzdhyjsxtx1/index.htm",
-    "https://ic.pku.edu.cn/szdw/zzjs/jcwnxtx1/index.htm",
-    "https://ic.pku.edu.cn/szdw/zzjs/jcdlxjzzjsyjzx1/index.htm",
-    "https://ic.pku.edu.cn/szdw/zzjs/jcdlxjzzjsyjzx1/hj/index.htm",
-    "https://ic.pku.edu.cn/szdw/ysfc/hr/index.htm",
-    "https://ic.pku.edu.cn/szdw/ysfc/wyy1/index.htm",
-    "https://ele.pku.edu.cn/szdw/zzjs.htm",
-    "https://ele.pku.edu.cn/szdw/zzjs/1.htm ~ /5.htm",
-    "https://ele.pku.edu.cn/info/1023/*.htm（108 位在职教师详情页，逐页抓取）",
-    "https://ele.pku.edu.cn/yjzxhsys/bjdxtjdzxyjzx.htm",
-    "https://cs.pku.edu.cn/szdw/jyxl/amz/ALL.htm",
-    "https://cs.pku.edu.cn/szdw/jyxl/amz/ALL/1.htm ~ /10.htm",
-    "https://cs.pku.edu.cn/szdw/yjxl.htm",
-    "https://cs.pku.edu.cn/szdw/jxxl.htm",
-    "https://cs.pku.edu.cn/szdw/gcxl.htm",
-    "https://www.cis.pku.edu.cn/szdw/zzjs.htm",
-    "https://www.cis.pku.edu.cn/szdw/zzjs/1.htm ~ /4.htm",
-    "https://ss.pku.edu.cn/sztd/xssbsz/index.htm",
-    "https://ss.pku.edu.cn/sztd/dzxxsssz/index.htm",
-    "https://ss.pku.edu.cn/sztd/qygcbssz/index.htm",
-    "https://ss.pku.edu.cn/sztd/dzxxsssz/*.htm（教师详情页）",
-    "https://www.ece.pku.edu.cn/szdw/js1.htm",
-    "https://www.ece.pku.edu.cn/szdw/js1/1.htm ~ /6.htm",
-    "https://www.phy.pku.edu.cn/jsfcjy.jsp?urltype=tree.TreeTempUrl&wbtreeid=1658",
-    "https://www.phy.pku.edu.cn/zy_list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1011",
-    "https://www.phy.pku.edu.cn/jzyg/ys.htm",
-    "https://www.phy.pku.edu.cn/jzyg/rcjh.htm",
-    "https://www.phy.pku.edu.cn/xygk/xyjg.htm",
-    "https://www.phy.pku.edu.cn/kxyj/yjfx.htm",
-    "https://www.phy.pku.edu.cn/kxyj/kyjg1.htm",
-    "https://icqm.pku.edu.cn/",
-    "https://www.mse.pku.edu.cn/",
-    "https://www.mse.pku.edu.cn/jzyg/zzjs.htm",
-    "https://www.mse.pku.edu.cn/jzyg/jsfc.htm",
-    "https://www.mse.pku.edu.cn/jzyg/jcrc.htm",
-    "https://www.mse.pku.edu.cn/xszx/xjtclyjs/xsjj1.htm",
-    "https://www.mse.pku.edu.cn/xszx/gdzclyjs/xsjj1.htm",
-    "https://www.phy.pku.edu.cn/system/resource/tsites/portal/queryteacher.jsp?collegeid=1520&postdutyname=教研人员&jobtypecode=JOB_TYPE_ID927559,&pageindex=1&pagesize=300&viewid=275976&siteOwner=1539754034&viewOwner=1539754034&viewmode=10&showlang=zh_CN  (返回全校物理学院教研人员名册 JSON, totalnum=233)",
-    "https://www.mse.pku.edu.cn/info/1223/1258.htm",
-    "https://www.mse.pku.edu.cn/info/1223/1256.htm",
-    "https://www.mse.pku.edu.cn/info/1209/1752.htm",
-    "https://www.mse.pku.edu.cn/info/1209/1245.htm",
-    "https://www.mse.pku.edu.cn/info/1200/1321.htm",
-    "https://faculty.pku.edu.cn/chenjianhao/zh_CN/yjfx/6210/content/1421.htm",
-    "https://faculty.pku.edu.cn/chenzhijian/zh_CN/yjfx/6549/content/1271.htm",
-    "https://faculty.pku.edu.cn/chenzhizhong/zh_CN/yjfx/6511/content/1270.htm",
-    "https://faculty.pku.edu.cn/dailun/zh_CN/yjfx/6586/content/1424.htm",
-    "https://faculty.pku.edu.cn/huxiaoyong/zh_CN/yjfx/7475/content/1653.htm",
-    "https://faculty.pku.edu.cn/juguangxu/zh_CN/yjfx/46596/content/2251.htm",
-    "https://faculty.pku.edu.cn/juguangxu/zh_CN/yjfx/46596/content/2250.htm",
-    "https://faculty.pku.edu.cn/liaozhimin/zh_CN/yjfx/4976/content/1740.htm",
-    "https://faculty.pku.edu.cn/liufang/zh_CN/yjfx/55695/content/2706.htm",
-    "https://faculty.pku.edu.cn/liukaihui/zh_CN/yjfx/4939/content/1785.htm",
-    "https://faculty.pku.edu.cn/lvjing/zh_CN/yjfx/8742/content/1750.htm",
-    "https://faculty.pku.edu.cn/ranguangzhao/zh_CN/yjfx/10080/content/1394.htm",
-    "https://faculty.pku.edu.cn/ranguangzhao/zh_CN/yjfx/10080/content/1393.htm",
-    "https://faculty.pku.edu.cn/ranguangzhao/zh_CN/yjfx/10080/content/1392.htm",
-    "https://faculty.pku.edu.cn/shenbo/zh_CN/yjfx/10117/content/2616.htm",
-    "https://faculty.pku.edu.cn/shenbo/zh_CN/yjfx/10117/content/2426.htm",
-    "https://faculty.pku.edu.cn/sundong/zh_CN/yjfx/10606/content/1807.htm",
-    "https://faculty.pku.edu.cn/sundong/zh_CN/yjfx/10606/content/1806.htm",
-    "https://faculty.pku.edu.cn/sundong/zh_CN/yjfx/10606/content/1805.htm",
-    "https://faculty.pku.edu.cn/tangning/zh_CN/yjfx/11739/content/1755.htm",
-    "https://faculty.pku.edu.cn/tangning/zh_CN/yjfx/11739/content/1429.htm",
-    "https://faculty.pku.edu.cn/tangning/zh_CN/yjfx/11739/content/1754.htm",
-    "https://faculty.pku.edu.cn/tongyuzheng/zh_CN/yjfx/16194/content/1531.htm",
-    "https://faculty.pku.edu.cn/wangding/zh_CN/yjfx/53315/content/2566.htm",
-    "https://faculty.pku.edu.cn/wangding/zh_CN/yjfx/53315/content/2567.htm",
-    "https://faculty.pku.edu.cn/wangding/zh_CN/yjfx/53315/content/2568.htm",
-    "https://faculty.pku.edu.cn/wangping/zh_CN/yjfx/49752/content/2330.htm",
-    "https://faculty.pku.edu.cn/wangping/zh_CN/yjfx/49752/content/2329.htm",
-    "https://faculty.pku.edu.cn/wangping/zh_CN/yjfx/49752/content/2331.htm",
-    "https://faculty.pku.edu.cn/xswu/zh_CN/yjfx/11352/content/1809.htm",
-    "https://faculty.pku.edu.cn/xswu/zh_CN/yjfx/11352/content/1808.htm",
-    "https://faculty.pku.edu.cn/xufujun/zh_CN/yjfx/17082/content/1836.htm",
-    "https://faculty.pku.edu.cn/xuxiulai/zh_CN/yjfx/43907/content/2192.htm",
-    "https://faculty.pku.edu.cn/xuxiulai/zh_CN/yjfx/43907/content/2191.htm",
-    "https://faculty.pku.edu.cn/yangxuelin/zh_CN/yjfx/17563/content/1570.htm",
-    "https://faculty.pku.edu.cn/yutongjun/zh_CN/yjfx/17674/content/1572.htm",
-    "https://faculty.pku.edu.cn/zhaoqing/zh_CN/yjfx/4865/content/2446.htm",
-    "https://faculty.pku.edu.cn/zhaoqing/zh_CN/yjfx/4865/content/1289.htm",
-    "https://faculty.pku.edu.cn/zhaoqing/zh_CN/yjfx/4865/content/1288.htm"
-  ],
-  "coverage_note": "已覆盖：①集成电路学院（ic.pku.edu.cn）全部 4 个系（集成微纳电子系 28、集成电路设计系 20、设计自动化与计算系统系 11、集成微纳系统系 18）+ 集成电路先进制造技术研究中心 + 院士风采页，共 80 人；②电子学院（ele.pku.edu.cn）全部 108 位在职教师详情页逐页抓取后按方向筛选，收录 44 人（物理电子学研究所 17、碳基电子学研究中心 12、信息与通信研究所 6、应用电子学研究所 5、量子电子学研究所 3 + 电子学院本级 1），含「北京大学碳基电子学研究中心」（彭练矛团队）全名单；③计算机学院（cs.pku.edu.cn）教研系列 11 页共 121 人 + 研究系列/教学系列/工程系列，筛出系统结构研究所 8、视频与视觉技术研究所 3、数据科学与工程研究所 2、网络与高能效计算研究所 3，共 16 人；④软件与微电子学院（ss.pku.edu.cn）师资团队页（工学博士/电子信息博士/电子信息硕士三个名录）+ 逐人详情页，收录集成电路与智能系统系 5 人（严伟、曹喜信、曹健、时广轶、王振宇）；⑤深圳研究生院信息工程学院（www.ece.pku.edu.cn）在职教师 7 页共 37 人，筛出集成电路/器件/存算/光电子方向 17 人；⑥物理学院（phy.pku.edu.cn，含 233 人教研人员名册 JSON 接口 + ~90 位教师主页研究方向页）与材料科学与工程学院（mse.pku.edu.cn，47 位在职教师名单 + 16 份详情页）中与半导体器件/宽禁带/二维半导体/自旋与量子器件/集成光子强相关的教师，共 31 人。合计 193 人，全部字段来自实际抓取的页面。未抓到/未纳入：(a) 智能学院（cis.pku.edu.cn）专职教师 72 人已全部抓取，但其研究方向全部为计算机视觉/NLP/机器学习/机器人等纯算法，无芯片、体系结构或类脑硬件方向教师，故入库 0 人；(b) 软件与微电子学院仅公开「工学博士/电子信息博士/电子信息硕士」三个按项目划分的名录，名录内多数为校内双聘教师（已在集成电路学院、计算机学院条目中重复出现），其本院专职教师以软件工程、网络空间安全、金融/管理方向为主，符合芯片方向的仅 5 人；(c) 纯工程师岗（工程师/高级工程师，如 EDA 教学实验室管理员、设备维修岗、微纳加工平台工程师）按「只要在职教师/导师」的要求排除，仅保留有博导/硕导身份的「正高级工程师」（于敦山、赵前程）；(d) 排除：客座教授（汪林望）、兼职教授（赵元富）、博士后、光荣退休/离退休、访问学者、行政教辅人员；(e) 抓取障碍：www.ece.pku.edu.cn 与 ss.pku.edu.cn 详情页用 Node fetch 会 TLS 失败，已改用 curl.exe 抓取；北大碳基电子学研究中心独立域名不存在，实际挂在 ele.pku.edu.cn/yjzxhsys/bjdxtjdzxyjzx.htm；nano.pku.edu.cn（纳米器件物理与化学教育部重点实验室）域名已失效；(f) 明确因缺乏可核实来源而未收录：物理学院王新强（宽禁带半导体，其 faculty 主页为占位空页、北大宽禁带半导体研究中心站点 www2.phy.pku.edu.cn/~wgs/ 已下线且无存档，无法从页面核实研究方向）；材料学院刘忠范、吴凯未出现在 mse.pku.edu.cn 在职教师/杰出人才名录中；卢晓波主页仅有「二维量子材料实验室」而无器件方向证据；杜红林主页在 labxing.com 抓取失败；(g) 物理学院/材料学院仅收录与芯片强相关者，纯理论物理、纯凝聚态、核技术/天体/大气/生物物理、以及材料学院的高分子/电池/催化/太阳能电池方向未收录。",
-  "faculty": [
-    {
-      "name_cn": "安霞",
-      "name_en": null,
-      "title": "研究员",
-      "department": "北京大学集成电路学院 集成微纳电子系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "新型微纳器件辐射效应",
-        "损伤机理及加固技术",
-        "新型微纳器件及集成技术"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/ax/index.htm",
-      "email": "xia.an@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "蔡一茂",
-      "name_en": null,
-      "title": "长聘教授",
-      "department": "北京大学集成电路学院 集成微纳电子系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "先进存储器技术",
-        "神经形态器件与智能芯片关键技术"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/cym/index.htm",
-      "email": "caiyimao@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "程哲",
-      "name_en": null,
-      "title": "助理教授，研究员",
-      "department": "北京大学集成电路学院 集成微纳电子系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "微纳电子器件热管理",
-        "先进热表征技术和设备",
-        "三维堆叠芯片",
-        "半导体材料生长",
-        "原子级表征"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/cz/index.htm",
-      "email": "zhe.cheng@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "傅云义",
-      "name_en": null,
-      "title": "教授",
-      "department": "北京大学集成电路学院 集成微纳电子系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "微纳电子器件"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/fyy/index.htm",
-      "email": "yyfu@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "韩德栋",
-      "name_en": null,
-      "title": "研究员",
-      "department": "北京大学集成电路学院 集成微纳电子系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "新型半导体材料与器件",
-        "薄膜晶体管",
-        "纳米加工工艺技术"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/hdd/index.htm",
-      "email": "handedong@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "贺明",
-      "name_en": null,
-      "title": "长聘副教授",
-      "department": "北京大学集成电路学院 集成微纳电子系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "新原理信息材料与器件",
-        "智能感知器件",
-        "感存算集成"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/hm/index.htm",
-      "email": "minghe@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "黄芊芊",
-      "name_en": null,
-      "title": "长聘教授",
-      "department": "北京大学集成电路学院 集成微纳电子系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "后摩尔时代超低功耗微纳电子器件及其在逻辑",
-        "存储与新型计算等领域的应用"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/hqq/index.htm",
-      "email": "hqq@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "康晋锋",
-      "name_en": null,
-      "title": "教授",
-      "department": "北京大学集成电路学院 集成微纳电子系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "智能化感存算融合器件",
-        "新型氧化物材料与新原理器件",
-        "新型类脑与存算融合器件与系统集成",
-        "人工智能芯片技术"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/kjf/index.htm",
-      "email": "kangjf@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "黎明",
-      "name_en": null,
-      "title": "长聘副教授",
-      "department": "北京大学集成电路学院 集成微纳电子系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路器件与先进工艺"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/lm/index.htm",
-      "email": "Liming.ime@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "刘力锋",
-      "name_en": null,
-      "title": "教授",
-      "department": "北京大学集成电路学院 集成微纳电子系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "微纳电子材料与器件",
-        "新型存储与计算技术"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/llf/index.htm",
-      "email": "lfliu@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "梁令",
-      "name_en": null,
-      "title": "助理研究员",
-      "department": "北京大学集成电路学院 集成微纳电子系",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "类脑计算",
-        "信息安全",
-        "计算机体系结构"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/ll/index.htm",
-      "email": "lingliang@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "任黎明",
-      "name_en": null,
-      "title": "讲师",
-      "department": "北京大学集成电路学院 集成微纳电子系",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "纳米电子器件"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/rlm/index.htm",
-      "email": "renlm@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "孙仲",
-      "name_en": null,
-      "title": "助理教授",
-      "department": "北京大学集成电路学院 集成微纳电子系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "模拟计算",
-        "存内计算",
-        "阻变存储器"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/sz/index.htm",
-      "email": "zhong.sun@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "孙雷",
-      "name_en": null,
-      "title": "副教授",
-      "department": "北京大学集成电路学院 集成微纳电子系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "器件结构和制造"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/sl/index.htm",
-      "email": "sunl@pku.eu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "唐克超",
-      "name_en": null,
-      "title": "助理教授",
-      "department": "北京大学集成电路学院 集成微纳电子系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "氧化物材料",
-        "铁电存储器件",
-        "新型传感器件",
-        "感存算一体化"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/tkc/index.htm",
-      "email": "tkch@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "王宗巍",
-      "name_en": null,
-      "title": "助理教授、博导",
-      "department": "北京大学集成电路学院 集成微纳电子系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "微纳电子器件与集成工艺",
-        "先进存储器",
-        "存内计算",
-        "神经形态计算"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/wzw/index.htm",
-      "email": "wangzongwei@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "王金延",
-      "name_en": null,
-      "title": "教授",
-      "department": "北京大学集成电路学院 集成微纳电子系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "宽禁带半导体工艺",
-        "器件和理论"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/wjy/index.htm",
-      "email": "wangjinyan@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "王茂俊",
-      "name_en": null,
-      "title": "副教授",
-      "department": "北京大学集成电路学院 集成微纳电子系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "宽禁带半导体电子器件"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/wmj/index.htm",
-      "email": "mjwang@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "王嘉铭",
-      "name_en": null,
-      "title": "助理教授",
-      "department": "北京大学集成电路学院 集成微纳电子系",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "III族氮化物半导体材料及器件"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/wjm/index.htm",
-      "email": "wangjiaming@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "魏进",
-      "name_en": null,
-      "title": "长聘副教授",
-      "department": "北京大学集成电路学院 集成微纳电子系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "宽禁带半导体器件",
-        "功率集成电路"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/wj/index.htm",
-      "email": "jin.wei@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "吴燕庆",
-      "name_en": null,
-      "title": "教授",
-      "department": "北京大学集成电路学院 集成微纳电子系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "新材料逻辑器件与先进存储器件"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/wyq/index.htm",
-      "email": "yqwu@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "吴恒",
-      "name_en": null,
-      "title": "副教授",
-      "department": "北京大学集成电路学院 集成微纳电子系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "设计工艺协同优化",
-        "逻辑器件与电路设计",
-        "晶体管级三维集成"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/wh/index.htm",
-      "email": "hengwu@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "熊雄",
-      "name_en": null,
-      "title": "助理研究员",
-      "department": "北京大学集成电路学院 集成微纳电子系",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "新型低维半导体电子器件",
-        "互补型场效应晶体管CFET"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/xx/index.htm",
-      "email": "xiongxiong@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "杨玉超",
-      "name_en": null,
-      "title": "长聘教授",
-      "department": "北京大学集成电路学院 集成微纳电子系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "忆阻器",
-        "类脑计算",
-        "存算一体智能芯片"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/yyc/index.htm",
-      "email": "yuchaoyang@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "张兴",
-      "name_en": null,
-      "title": "长聘教授",
-      "department": "北京大学集成电路学院 集成微纳电子系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "新结构半导体器件与工艺",
-        "器件模型模拟"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/zx/index.htm",
-      "email": "zhx@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "周劲",
-      "name_en": null,
-      "title": "副教授",
-      "department": "北京大学集成电路学院 集成微纳电子系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "通用技术和宽禁带半导体"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/zj/index.htm",
-      "email": "zhoujing@ime.pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "周正",
-      "name_en": null,
-      "title": "助理研究员",
-      "department": "北京大学集成电路学院 集成微纳电子系",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "光电融合器件与集成技术",
-        "计算机视觉智能硬件系统",
-        "半导体显示"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/zz/index.htm",
-      "email": "zhouzime@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "赵鹏",
-      "name_en": null,
-      "title": "助理教授，研究员",
-      "department": "北京大学集成电路学院 集成微纳电子系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "先进三维集成技术（nano TSV",
-        "hybrid bonding",
-        "layer transfer",
-        "etc.）",
-        "三维堆叠架构和器件（BSPDN",
-        "CFET"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/zp/index.htm",
-      "email": "pengzhao@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "陈中建",
-      "name_en": null,
-      "title": "教授",
-      "department": "北京大学集成电路学院 集成电路设计系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "模拟集成电路设计"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/czj/index.htm",
-      "email": "chenzj@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "崔小欣",
-      "name_en": null,
-      "title": "研究员",
-      "department": "北京大学集成电路学院 集成电路设计系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "低功耗高安全智能芯片",
-        "多核NOC/SOC芯片",
-        "神经形态计算与类脑芯片"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/cxx/index.htm",
-      "email": "cuixx@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "何燕冬",
-      "name_en": null,
-      "title": "研究员",
-      "department": "北京大学集成电路学院 集成电路设计系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "硅基光电子芯片"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/hyd/index.htm",
-      "email": "heyd@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "盖伟新",
-      "name_en": null,
-      "title": "研究员",
-      "department": "北京大学集成电路学院 集成电路设计系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "超高速收发机芯片",
-        "全数字锁相环PLL",
-        "高速低功耗ADC",
-        "光通信CDR",
-        "智能NoC与大算力AI芯片"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/gwx/index.htm",
-      "email": "wgai@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "贾嵩",
-      "name_en": null,
-      "title": "研究员",
-      "department": "北京大学集成电路学院 集成电路设计系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "数字及混合信号集成电路设计",
-        "高安全性集成电路设计及验证方法"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/js/index.htm",
-      "email": "jias@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "贾天宇",
-      "name_en": null,
-      "title": "助理教授",
-      "department": "北京大学集成电路学院 集成电路设计系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "新型人工智能加速器芯片设计",
-        "系统集成SoC芯片设计与优化",
-        "可重构与可编程AI芯片架构",
-        "超低功耗数字电路设计"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/jty/index.htm",
-      "email": "tianyuj@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "廖怀林",
-      "name_en": null,
-      "title": "教授",
-      "department": "北京大学集成电路学院 集成电路设计系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "射频/毫米波集成电路设计"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/lhl/index.htm",
-      "email": "liaohl@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "刘军华",
-      "name_en": null,
-      "title": "副教授",
-      "department": "北京大学集成电路学院 集成电路设计系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "射频集成电路与系统设计"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/ljh/index.htm",
-      "email": "junhua.liu@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "鲁文高",
-      "name_en": null,
-      "title": "研究员",
-      "department": "北京大学集成电路学院 集成电路设计系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "集成电路设计",
-        "新型成像芯片"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/lwg/index.htm",
-      "email": "wglu@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "马宇飞",
-      "name_en": null,
-      "title": "助理教授",
-      "department": "北京大学集成电路学院 集成电路设计系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "AI加速器芯片",
-        "存算一体",
-        "算法硬件协同"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/myf/index.htm",
-      "email": "yufei.ma@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "汝嘉耘",
-      "name_en": null,
-      "title": "研究员",
-      "department": "北京大学集成电路学院 集成电路设计系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "模拟",
-        "射频 与 混合信号 集成电路设计"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/rjy/index.htm",
-      "email": "jiayoon.ru@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "沈林晓",
-      "name_en": null,
-      "title": "助理教授",
-      "department": "北京大学集成电路学院 集成电路设计系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "高速高精度ADC设计",
-        "传感器接口芯片与系统"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/slx/index.htm",
-      "email": "Linxiao.shen@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "陶耀宇",
-      "name_en": null,
-      "title": "助理教授、博士生导师",
-      "department": "北京大学集成电路学院 集成电路设计系",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "芯片与硬件架构设计",
-        "后摩尔集成电路设计",
-        "算法-硬件协同优化"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/tyy/index.htm",
-      "email": "taoyaoyutyy@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "王源",
-      "name_en": null,
-      "title": "教授",
-      "department": "北京大学集成电路学院 集成电路设计系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计与新计算架构"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/wy/index.htm",
-      "email": "wangyuan@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "唐希源",
-      "name_en": null,
-      "title": "助理教授",
-      "department": "北京大学集成电路学院 集成电路设计系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "高性能模拟",
-        "混合信号集成电路",
-        "数据转换器",
-        "传感器前端"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/txy/index.htm",
-      "email": "xitang@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "叶乐",
-      "name_en": null,
-      "title": "副教授",
-      "department": "北京大学集成电路学院 集成电路设计系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "存算一体AI芯片及架构设计",
-        "3D集成芯片及架构设计",
-        "智能物联网AIoT芯片设计",
-        "高能效模拟与数模混合集成电路设计"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/yl/index.htm",
-      "email": "yele@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "于敦山",
-      "name_en": null,
-      "title": "正高级工程师",
-      "department": "北京大学集成电路学院 集成电路设计系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "系统芯片设计方法及数字信号处理电路设计"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/yds/index.htm",
-      "email": "yuds@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "燕博南",
-      "name_en": null,
-      "title": "助理教授",
-      "department": "北京大学集成电路学院 集成电路设计系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "存算一体电路与微架构"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/ybn/index.htm",
-      "email": "bonanyan@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "张雅聪",
-      "name_en": null,
-      "title": "研究员",
-      "department": "北京大学集成电路学院 集成电路设计系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "模拟/混合信号集成电路设计"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/zyc/index.htm",
-      "email": "zhangyc@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "钟毅",
-      "name_en": null,
-      "title": "助理研究员",
-      "department": "北京大学集成电路学院 集成电路设计系",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "新型类脑计算架构",
-        "芯片与系统设计"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/zy/index.htm",
-      "email": "zhongy@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "杜刚",
-      "name_en": null,
-      "title": "教授",
-      "department": "北京大学集成电路学院 设计自动化与计算系统系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "纳米尺度器件仿真建模与DTCO",
-        "新型图像传感器优化设计"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/dg/index.htm",
-      "email": "gangdu@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "郭冠男",
-      "name_en": null,
-      "title": "助理教授",
-      "department": "北京大学集成电路学院 设计自动化与计算系统系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计自动化（EDA）",
-        "异构加速EDA算法",
-        "AI 驱动的 EDA技术"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/ggn/index.htm",
-      "email": "guannan.guo@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "黄鹏",
-      "name_en": null,
-      "title": "助理教授，研究员",
-      "department": "北京大学集成电路学院 设计自动化与计算系统系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "存内计算芯片与架构",
-        "新型感存算一体器件",
-        "电路与芯片系统"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/hp/index.htm",
-      "email": "phwang@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "梁云",
-      "name_en": null,
-      "title": "长聘教授",
-      "department": "北京大学集成电路学院 设计自动化与计算系统系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "电子设计自动化",
-        "软硬件协同合计",
-        "计算机体系结构"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/ly/index.htm",
-      "email": "ericlyun@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "李萌",
-      "name_en": null,
-      "title": "助理教授",
-      "department": "北京大学集成电路学院 设计自动化与计算系统系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "高效",
-        "安全的多模态人工智能加速算法和系统"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/lim/index.htm",
-      "email": "meng.li@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "林亦波",
-      "name_en": null,
-      "title": "长聘副教授",
-      "department": "北京大学集成电路学院 设计自动化与计算系统系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计自动化（EDA）",
-        "机器学习应用",
-        "异构硬件加速算法"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/lyb_ae03bbb7dd1548659c1ffe83edd4a047/index.htm",
-      "email": "yibolin@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "刘飞",
-      "name_en": null,
-      "title": "长聘副教授、研究员、博导",
-      "department": "北京大学集成电路学院 设计自动化与计算系统系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "新型逻辑和存储器件",
-        "微纳电子器件模型模拟",
-        "纳电子器件与电路协同设计"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/lf/index.htm",
-      "email": "feiliu@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "刘晓彦",
-      "name_en": null,
-      "title": "教授",
-      "department": "北京大学集成电路学院 设计自动化与计算系统系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "微纳电子学中物理效应的模型",
-        "模拟",
-        "DTCO",
-        "TCAD"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/lxy/index.htm",
-      "email": "liuxiaoyan@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "孙广宇",
-      "name_en": null,
-      "title": "长聘教授",
-      "department": "北京大学集成电路学院 设计自动化与计算系统系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "芯片架构设计与自动化 （具体包括：领域定制计算架构",
-        "存算一体架构",
-        "scale-up互连架构",
-        "系统-工艺协同优化等）"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/sgy/index.htm",
-      "email": "gsun@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "王润声",
-      "name_en": null,
-      "title": "长聘教授",
-      "department": "北京大学集成电路学院 设计自动化与计算系统系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "微纳电子新器件",
-        "可靠性与表征技术",
-        "EDA技术",
-        "新范式计算架构与电路"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/wrs/index.htm",
-      "email": "wrs@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "卓有为",
-      "name_en": null,
-      "title": "助理教授",
-      "department": "北京大学集成电路学院 设计自动化与计算系统系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "计算机体系结构",
-        "并行计算",
-        "分布式系统"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/zyw/index.htm",
-      "email": "youwei@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "胡鸿杰",
-      "name_en": null,
-      "title": "助理教授",
-      "department": "北京大学集成电路学院 集成微纳系统系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "可穿戴传感器与执行器",
-        "新型超声换能器",
-        "集成微纳系统"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/hhj/index.htm",
-      "email": "huhj@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "衡文正",
-      "name_en": null,
-      "title": "助理教授/研究员 博士生导师",
-      "department": "北京大学集成电路学院 集成微纳系统系",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "化学与生物微机电系统（生化MEMS）",
-        "原位生化分析柔性电子",
-        "可穿戴/摄入/植入电子",
-        "呼吸分析",
-        "人机交互微系统等"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/hwz/index.htm",
-      "email": "wheng@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "韩金池",
-      "name_en": null,
-      "title": "特聘研究员，助理教授",
-      "department": "北京大学集成电路学院 集成微纳系统系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "压电传感器与执行器",
-        "声学MEMS",
-        "微纳机电开关",
-        "微纳米组装",
-        "微能源"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/hjc/index.htm",
-      "email": "hanjc@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "李志宏",
-      "name_en": null,
-      "title": "教授",
-      "department": "北京大学集成电路学院 集成微纳系统系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "生物微机电系统",
-        "脑机接口"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/lzh/index.htm",
-      "email": "zhhli@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "卢奕鹏",
-      "name_en": null,
-      "title": "长聘副教授，研究员",
-      "department": "北京大学集成电路学院 集成微纳系统系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "压电MEMS",
-        "超声MEMS",
-        "传感器与执行器的设计",
-        "微加工",
-        "系统集成以及相关智能微纳系统在消费电子",
-        "工业电子"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/lyp/index.htm",
-      "email": "yplu@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "史田田",
-      "name_en": null,
-      "title": "助理研究员",
-      "department": "北京大学集成电路学院 集成微纳系统系",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "芯片级原子钟",
-        "高精度量子频率标准",
-        "MEMS量子器件"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/stt/index.htm",
-      "email": "tts@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "盛博文",
-      "name_en": null,
-      "title": "助理研究员",
-      "department": "北京大学集成电路学院 集成微纳系统系",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "新型压电薄膜制备",
-        "压电光声MEMS器件研制"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/sbw/index.htm",
-      "email": "subway715@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "于民",
-      "name_en": null,
-      "title": "副教授",
-      "department": "北京大学集成电路学院 集成微纳系统系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "硅辐射探测器",
-        "半导体工艺TCAD"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/ym/index.htm",
-      "email": "yum@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "吴文刚",
-      "name_en": null,
-      "title": "教授、博导",
-      "department": "北京大学集成电路学院 集成微纳系统系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "微纳机电器件与系统（MEMS/NEMS）",
-        "宽禁带半导体器件及集成电路"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/wwg/index.htm",
-      "email": "wuwg@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "王玮",
-      "name_en": null,
-      "title": "长聘教授",
-      "department": "北京大学集成电路学院 集成微纳系统系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "聚合物微米纳米加工技术",
-        "临床微纳系统技术",
-        "微系统集成与热管理技术"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/ww/index.htm",
-      "email": "w.wang@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "王路达",
-      "name_en": null,
-      "title": "长聘副教授",
-      "department": "北京大学集成电路学院 集成微纳系统系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "微纳流体",
-        "微纳传感器",
-        "微米纳米加工技术",
-        "二维分离膜",
-        "离子电子学"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/wld/index.htm",
-      "email": "luda.wang@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "杨振川",
-      "name_en": null,
-      "title": "教授",
-      "department": "北京大学集成电路学院 集成微纳系统系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "物理量MEMS传感器（声学",
-        "流量",
-        "压力等）",
-        "微纳加工技术"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/yzc/index.htm",
-      "email": "z.yang@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "赵前程",
-      "name_en": null,
-      "title": "正高级工程师",
-      "department": "北京大学集成电路学院 集成微纳系统系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "MEMS惯性技术",
-        "MEMS工艺"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/zqc/index.htm",
-      "email": "zqc@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "张威",
-      "name_en": null,
-      "title": "研究员",
-      "department": "北京大学集成电路学院 集成微纳系统系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "MEMS器件产品化",
-        "标准化"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/zw/index.htm",
-      "email": "weizhang@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "张锦文",
-      "name_en": null,
-      "title": "教授",
-      "department": "北京大学集成电路学院 集成微纳系统系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "微纳米加工技术及其应用研究"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/zjw/index.htm",
-      "email": "zhangjinwen@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "郑雨晴",
-      "name_en": null,
-      "title": "助理教授",
-      "department": "北京大学集成电路学院 集成微纳系统系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "柔性电子学",
-        "脑机接口",
-        "可穿戴生物传感器"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/zyq/index.htm",
-      "email": "zhengyq@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "张驰",
-      "name_en": null,
-      "title": "副研究员",
-      "department": "北京大学集成电路学院 集成微纳系统系",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "电子系统热管理与三维集成技术"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/zc/index.htm",
-      "email": "chizhang@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "张盼",
-      "name_en": null,
-      "title": "助理研究员",
-      "department": "北京大学集成电路学院 集成微纳系统系",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "微纳智能制造技术",
-        "特种传感与微系统技术",
-        "临床微纳系统技术（BioMEMS）"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/zp/index.htm",
-      "email": "panzhang1989@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "何进",
-      "name_en": "Jin He",
-      "title": "教授",
-      "department": "北京大学集成电路学院 集成电路先进制造技术研究中心",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "半导体器件建模与仿真",
-        "GaN功率器件",
-        "纳米尺度MOS器件",
-        "集成电路设计"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/zzjs/jcdlxjzzjsyjzx1/hj/index.htm",
-      "email": "frankhe@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "黄如",
-      "name_en": "Ru Huang",
-      "title": "教授",
-      "department": "北京大学集成电路学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "低功耗逻辑与存储器件",
-        "神经形态器件与类脑计算",
-        "边缘智能计算芯片",
-        "IC可靠性EDA"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/ysfc/hr/index.htm",
-      "email": null,
-      "notes": "中国科学院院士、发展中国家科学院院士，IEEE Fellow，曾任北京大学副校长"
-    },
-    {
-      "name_cn": "王阳元",
-      "name_en": "Yangyuan Wang",
-      "title": "教授",
-      "department": "北京大学集成电路学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "新器件与新工艺",
-        "新结构电路",
-        "SOI/CMOS器件模型",
-        "MEMS",
-        "ICCAD"
-      ],
-      "homepage": "https://ic.pku.edu.cn/szdw/ysfc/wyy1/index.htm",
-      "email": null,
-      "notes": "中国科学院院士，IEEE Fellow，IEE Fellow，中芯国际创始人之一"
-    },
-    {
-      "name_cn": "陈景标",
-      "name_en": null,
-      "title": "长聘教授",
-      "department": "北京大学电子学院 量子电子学研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "量子精密测量高端科学仪器",
-        "包括原子选频法拉第激光器",
-        "主动光钟",
-        "国产芯片原子钟及产业化",
-        "小型钙/铷/铯光钟",
-        "新型激光光谱及稳频技术"
-      ],
-      "homepage": "https://ele.pku.edu.cn/info/1023/1055.htm",
-      "email": "jbchen@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "丁力",
-      "name_en": null,
-      "title": "研究员",
-      "department": "北京大学电子学院 物理电子学研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "碳纳米管电子学"
-      ],
-      "homepage": "https://ele.pku.edu.cn/info/1023/1071.htm",
-      "email": "lding@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "杜朝海",
-      "name_en": null,
-      "title": "研究员",
-      "department": "北京大学电子学院 应用电子学研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "毫米波与太赫兹电子学"
-      ],
-      "homepage": "https://ele.pku.edu.cn/info/1023/1077.htm",
-      "email": "duchaohai@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "贺小伟",
-      "name_en": null,
-      "title": "研究员、助理教授",
-      "department": "北京大学电子学院 物理电子学研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "碳基量子信息器件",
-        "超强光物质相互作用"
-      ],
-      "homepage": "https://ele.pku.edu.cn/info/1023/1091.htm",
-      "email": "xiaoweihe@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "胡又凡",
-      "name_en": null,
-      "title": "长聘教授",
-      "department": "北京大学电子学院 物理电子学研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "纳电子器件"
-      ],
-      "homepage": "https://ele.pku.edu.cn/info/1023/1097.htm",
-      "email": "youfanhu@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "黄少云",
-      "name_en": null,
-      "title": "副教授",
-      "department": "北京大学电子学院 物理电子学研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "半导体纳米器件及物理"
-      ],
-      "homepage": "https://ele.pku.edu.cn/info/1023/1101.htm",
-      "email": "syhuang@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "李艳萍",
-      "name_en": null,
-      "title": "副教授",
-      "department": "北京大学电子学院 信息与通信研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "光电子器件",
-        "光电子集成"
-      ],
-      "homepage": "https://ele.pku.edu.cn/info/1023/1135.htm",
-      "email": "liyp@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "梁学磊",
-      "name_en": null,
-      "title": "教授",
-      "department": "北京大学电子学院 物理电子学研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "纳米电子学"
-      ],
-      "homepage": "https://ele.pku.edu.cn/info/1023/1139.htm",
-      "email": "liangxl@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "廖建辉",
-      "name_en": null,
-      "title": "副研究员",
-      "department": "北京大学电子学院 物理电子学研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "纳米器件",
-        "纳米材料的物性"
-      ],
-      "homepage": "https://ele.pku.edu.cn/info/1023/1141.htm",
-      "email": "jianhui.liao@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "邱晨光",
-      "name_en": null,
-      "title": "长聘副教授",
-      "department": "北京大学电子学院 物理电子学研究所 / 碳基电子学研究中心",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "亚纳米节点低维晶体管与集成电路",
-        "新机理纳米器件",
-        "三维集成"
-      ],
-      "homepage": "https://ele.pku.edu.cn/info/1023/1164.htm",
-      "email": "chenguangqiu@pku.edu.cn",
-      "notes": "北京大学碳基电子学研究中心成员"
-    },
-    {
-      "name_cn": "任全胜",
-      "name_en": null,
-      "title": "副教授",
-      "department": "北京大学电子学院 应用电子学研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "类脑计算",
-        "通用人工智能",
-        "电磁生物学"
-      ],
-      "homepage": "https://ele.pku.edu.cn/info/1023/1167.htm",
-      "email": "qsren@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "孙伟",
-      "name_en": null,
-      "title": "长聘教授",
-      "department": "北京大学电子学院 物理电子学研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "超小节点碳基器件及加工方法学"
-      ],
-      "homepage": "https://ele.pku.edu.cn/info/1023/1175.htm",
-      "email": "sunw@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "谭云华",
-      "name_en": null,
-      "title": "副教授",
-      "department": "北京大学电子学院 应用电子学研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "微波",
-        "毫米波",
-        "太赫兹电子学",
-        "计算电磁学及其应用"
-      ],
-      "homepage": "https://ele.pku.edu.cn/info/1023/1179.htm",
-      "email": "tanggeric@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "王胜",
-      "name_en": null,
-      "title": "副研究员",
-      "department": "北京大学电子学院 物理电子学研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "纳米光电子器件"
-      ],
-      "homepage": "https://ele.pku.edu.cn/info/1023/1187.htm",
-      "email": "shengwang@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "王延辉",
-      "name_en": null,
-      "title": "长聘教授",
-      "department": "北京大学电子学院 量子电子学研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "铷原子钟",
-        "铯原子钟与精密测量"
-      ],
-      "homepage": "https://ele.pku.edu.cn/info/1023/1193.htm",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "王永锋",
-      "name_en": null,
-      "title": "长聘教授",
-      "department": "北京大学电子学院 物理电子学研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "器件表界面",
-        "分子自旋电子学",
-        "电子手性"
-      ],
-      "homepage": "https://ele.pku.edu.cn/info/1023/1195.htm",
-      "email": "yongfengwang@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "魏贤龙",
-      "name_en": null,
-      "title": "长聘副教授、研究员",
-      "department": "北京大学电子学院 物理电子学研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "片上集成真空电子器件/系统",
-        "片上真空技术",
-        "纳米结构电子发射"
-      ],
-      "homepage": "https://ele.pku.edu.cn/info/1023/1197.htm",
-      "email": "weixl@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "夏明耀",
-      "name_en": null,
-      "title": "教授",
-      "department": "北京大学电子学院 应用电子学研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "电磁场与微波技术"
-      ],
-      "homepage": "https://ele.pku.edu.cn/info/1023/1205.htm",
-      "email": "myxia@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "邢英杰",
-      "name_en": null,
-      "title": "副教授",
-      "department": "北京大学电子学院 物理电子学研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "纳米材料",
-        "有机电子器件"
-      ],
-      "homepage": "https://ele.pku.edu.cn/info/1023/1207.htm",
-      "email": "xingyj@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "张耿民",
-      "name_en": null,
-      "title": "教授",
-      "department": "北京大学电子学院 物理电子学研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "物理电子学",
-        "纳米电子学"
-      ],
-      "homepage": "https://ele.pku.edu.cn/info/1023/1231.htm",
-      "email": "zgmin@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "张志勇",
-      "name_en": null,
-      "title": "长聘教授",
-      "department": "北京大学电子学院 物理电子学研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "纳米电子学"
-      ],
-      "homepage": "https://ele.pku.edu.cn/info/1023/1239.htm",
-      "email": "zyzhang@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "赵建业",
-      "name_en": null,
-      "title": "教授",
-      "department": "北京大学电子学院 应用电子学研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "电路与系统"
-      ],
-      "homepage": "https://ele.pku.edu.cn/info/1023/1241.htm",
-      "email": "zhaojianye@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "解晓鹏",
-      "name_en": null,
-      "title": "长聘副教授",
-      "department": "北京大学电子学院 信息与通信研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "光学频率梳",
-        "低噪声光电子器件及其微纳集成"
-      ],
-      "homepage": "https://ele.pku.edu.cn/info/1023/1297.htm",
-      "email": "xiaopeng.xie@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "花中秋",
-      "name_en": null,
-      "title": "副研究员",
-      "department": "北京大学电子学院 碳基电子学研究中心",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "微纳电子学",
-        "碳基化学传感器与系统"
-      ],
-      "homepage": "https://ele.pku.edu.cn/info/1023/1617.htm",
-      "email": "huazhongqiu@pku.edu.cn",
-      "notes": "北京大学碳基电子学研究中心成员"
-    },
-    {
-      "name_cn": "张亚杰",
-      "name_en": null,
-      "title": "副研究员",
-      "department": "北京大学电子学院 碳基电子学研究中心",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "器件表界面研究",
-        "表面纳米结构制备与性质研究"
-      ],
-      "homepage": "https://ele.pku.edu.cn/info/1023/1622.htm",
-      "email": "yjzhang11@pku.edu.cn",
-      "notes": "北京大学碳基电子学研究中心成员"
-    },
-    {
-      "name_cn": "曹宇",
-      "name_en": null,
-      "title": "副研究员",
-      "department": "北京大学电子学院 碳基电子学研究中心",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "纳米电子学"
-      ],
-      "homepage": "https://ele.pku.edu.cn/info/1023/1632.htm",
-      "email": null,
-      "notes": "北京大学碳基电子学研究中心成员"
-    },
-    {
-      "name_cn": "常林",
-      "name_en": null,
-      "title": "研究员、助理教授",
-      "department": "北京大学电子学院 信息与通信研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成光子"
-      ],
-      "homepage": "https://ele.pku.edu.cn/info/1023/1894.htm",
-      "email": "linchang@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "司佳",
-      "name_en": null,
-      "title": "助理研究员",
-      "department": "北京大学电子学院 碳基电子学研究中心",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "碳基新型电子器件与高能效运算芯片的研究"
-      ],
-      "homepage": "https://ele.pku.edu.cn/info/1023/2091.htm",
-      "email": "sijia@pku.edu.cn",
-      "notes": "北京大学碳基电子学研究中心成员"
-    },
-    {
-      "name_cn": "潘多",
-      "name_en": null,
-      "title": "副研究员",
-      "department": "北京大学电子学院 量子电子学研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "新型原子钟"
-      ],
-      "homepage": "https://ele.pku.edu.cn/info/1023/2329.htm",
-      "email": "panduo@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "王德甫",
-      "name_en": null,
-      "title": "副研究员",
-      "department": "北京大学电子学院 碳基电子学研究中心",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "微波器件",
-        "毫米波与太赫兹集成电路"
-      ],
-      "homepage": "https://ele.pku.edu.cn/info/1023/2352.htm",
-      "email": "defu.wang@pku.edu.cn",
-      "notes": "北京大学碳基电子学研究中心成员"
-    },
-    {
-      "name_cn": "刘洪刚",
-      "name_en": null,
-      "title": "研究员",
-      "department": "北京大学电子学院 碳基电子学研究中心",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "射频与太赫兹芯片",
-        "三维异质集成系统"
-      ],
-      "homepage": "https://ele.pku.edu.cn/info/1023/2410.htm",
-      "email": "liuhonggang@pku.edu.cn",
-      "notes": "北京大学碳基电子学研究中心成员"
-    },
-    {
-      "name_cn": "王兴军",
-      "name_en": null,
-      "title": "长聘教授",
-      "department": "北京大学电子学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "光电子集成芯片与信息系统"
-      ],
-      "homepage": "https://ele.pku.edu.cn/info/1023/2473.htm",
-      "email": "xjwang@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "尹建波",
-      "name_en": null,
-      "title": "研究员、助理教授",
-      "department": "北京大学电子学院 信息与通信研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "高带宽光电子器件",
-        "二维材料光电子动力学"
-      ],
-      "homepage": "https://ele.pku.edu.cn/info/1023/2491.htm",
-      "email": "yinjb-cnc@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "舒浩文",
-      "name_en": null,
-      "title": "研究员、助理教授",
-      "department": "北京大学电子学院 信息与通信研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "主要致力于硅基光电子学",
-        "新型集成光电子信息系统",
-        "宽带低功耗光电子器件"
-      ],
-      "homepage": "https://ele.pku.edu.cn/info/1023/2630.htm",
-      "email": "haowenshu@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "刘旸",
-      "name_en": null,
-      "title": "研究员、 助理教授",
-      "department": "北京大学电子学院 物理电子学研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "纳米电子材料",
-        "器件与集成"
-      ],
-      "homepage": "https://ele.pku.edu.cn/info/1023/2670.htm",
-      "email": "liuyangly@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "陈荣梅",
-      "name_en": null,
-      "title": "助理教授、研究员",
-      "department": "北京大学电子学院 碳基电子学研究中心",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路",
-        "芯片设计"
-      ],
-      "homepage": "https://ele.pku.edu.cn/info/1023/2777.htm",
-      "email": "crm@pku.edu.cn",
-      "notes": "北京大学碳基电子学研究中心成员"
-    },
-    {
-      "name_cn": "魏楠",
-      "name_en": null,
-      "title": "助理研究员",
-      "department": "北京大学电子学院 碳基电子学研究中心",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "规范模型体系和芯片原型系统"
-      ],
-      "homepage": "https://ele.pku.edu.cn/info/1023/2827.htm",
-      "email": "weynan@pku.edu.cn",
-      "notes": "北京大学碳基电子学研究中心成员"
-    },
-    {
-      "name_cn": "吴朋",
-      "name_en": null,
-      "title": "研究员、助理教授",
-      "department": "北京大学电子学院 物理电子学研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "纳电子学",
-        "二维材料",
-        "低功耗电子学"
-      ],
-      "homepage": "https://ele.pku.edu.cn/info/1023/3607.htm",
-      "email": "wupeng@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "夏煜",
-      "name_en": null,
-      "title": "研究员、助理教授",
-      "department": "北京大学电子学院 碳基电子学研究中心",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "碳基电子材料与器件"
-      ],
-      "homepage": "https://ele.pku.edu.cn/info/1023/3608.htm",
-      "email": "yu_xia@pku.edu.cn",
-      "notes": "北京大学碳基电子学研究中心成员"
-    },
-    {
-      "name_cn": "肖梦梦",
-      "name_en": null,
-      "title": "副研究员",
-      "department": "北京大学电子学院 碳基电子学研究中心",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "碳基生化传感及系统集成"
-      ],
-      "homepage": "https://ele.pku.edu.cn/info/1023/3609.htm",
-      "email": "mmxiao@pku.edu.cn",
-      "notes": "北京大学碳基电子学研究中心成员"
-    },
-    {
-      "name_cn": "尹雪帆",
-      "name_en": null,
-      "title": "助理教授 研究员",
-      "department": "北京大学电子学院 信息与通信研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "光电子集成器件",
-        "拓扑光子学",
-        "非厄米光子学",
-        "拓扑光子晶体激光器"
-      ],
-      "homepage": "https://ele.pku.edu.cn/info/1023/3671.htm",
-      "email": "xuefan_yin@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "姜建峰",
-      "name_en": null,
-      "title": "研究员、助理教授",
-      "department": "北京大学电子学院 物理电子学研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "纳米电子器件及其系统集成"
-      ],
-      "homepage": "https://ele.pku.edu.cn/info/1023/4635.htm",
-      "email": "jianfengjiang@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "龙冠桦",
-      "name_en": null,
-      "title": "助理研究员",
-      "department": "北京大学电子学院 碳基电子学研究中心",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "柔性电子学",
-        "碳基电子学"
-      ],
-      "homepage": "https://ele.pku.edu.cn/info/1023/6265.htm",
-      "email": "guanhualong@pku.edu.cn",
-      "notes": "北京大学碳基电子学研究中心成员"
-    },
-    {
-      "name_cn": "彭练矛",
-      "name_en": "Lianmao Peng",
-      "title": "教授",
-      "department": "北京大学电子学院 碳基电子学研究中心",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "碳基电子学",
-        "碳纳米管CMOS集成电路",
-        "碳管晶体管",
-        "狄拉克源晶体管",
-        "纳米电子学"
-      ],
-      "homepage": "https://ele.pku.edu.cn/info/1023/1050.htm",
-      "email": null,
-      "notes": "中国科学院院士，北京大学电子学院院长，国家杰出青年科学基金获得者，长江学者特聘教授，碳基电子学研究中心负责人"
-    },
-    {
-      "name_cn": "陈国璋",
-      "name_en": null,
-      "title": "助理教授/研究员",
-      "department": "北京大学计算机学院 视频与视觉技术研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "类脑计算"
-      ],
-      "homepage": "https://cs.pku.edu.cn/info/1062/2902.htm",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "张杰",
-      "name_en": null,
-      "title": "助理教授",
-      "department": "北京大学计算机学院 数据科学与工程研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "存储系统",
-        "体系结构",
-        "操作系统"
-      ],
-      "homepage": "https://cs.pku.edu.cn/info/1086/1734.htm",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "周迪宇",
-      "name_en": null,
-      "title": "助理教授",
-      "department": "北京大学计算机学院 网络与高能效计算研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "操作系统",
-        "存储系统",
-        "体系结构",
-        "形式化验证",
-        "机器学习"
-      ],
-      "homepage": "https://cs.pku.edu.cn/info/1086/3365.htm",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "杨春",
-      "name_en": null,
-      "title": "助理研究员",
-      "department": "北京大学计算机学院 系统结构研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "计算机系统结构"
-      ],
-      "homepage": "https://cs.pku.edu.cn/info/1085/1727.htm",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "易江芳",
-      "name_en": null,
-      "title": "副教授",
-      "department": "北京大学计算机学院 系统结构研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "计算机体系结构"
-      ],
-      "homepage": "https://cs.pku.edu.cn/info/1085/1724.htm",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "吴文斐",
-      "name_en": null,
-      "title": "助理教授",
-      "department": "北京大学计算机学院 数据科学与工程研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "计算机系统结构"
-      ],
-      "homepage": "https://cs.pku.edu.cn/info/1083/1709.htm",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "王韬",
-      "name_en": null,
-      "title": "研究员",
-      "department": "北京大学计算机学院 网络与高能效计算研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "计算机系统结构",
-        "智能机器人系统",
-        "情感与认知计算",
-        "人-机器人交互"
-      ],
-      "homepage": "https://cs.pku.edu.cn/info/1083/3088.htm",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "佟冬",
-      "name_en": null,
-      "title": "副教授",
-      "department": "北京大学计算机学院 系统结构研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "计算机体系结构"
-      ],
-      "homepage": "https://cs.pku.edu.cn/info/1082/1698.htm",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "刘先华",
-      "name_en": null,
-      "title": "教授",
-      "department": "北京大学计算机学院 系统结构研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "计算机体系结构"
-      ],
-      "homepage": "https://cs.pku.edu.cn/info/1071/1691.htm",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "陆俊林",
-      "name_en": null,
-      "title": "教授",
-      "department": "北京大学计算机学院 系统结构研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "计算机体系结构"
-      ],
-      "homepage": "https://cs.pku.edu.cn/info/1071/1693.htm",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "罗国杰",
-      "name_en": null,
-      "title": "长聘副教授",
-      "department": "北京大学计算机学院 网络与高能效计算研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "新型体系结构",
-        "设计自动化"
-      ],
-      "homepage": "https://cs.pku.edu.cn/info/1071/1683.htm",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "刘锋",
-      "name_en": null,
-      "title": "副教授",
-      "department": "北京大学计算机学院 系统结构研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "计算机体系结构"
-      ],
-      "homepage": "https://cs.pku.edu.cn/info/1071/1688.htm",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "管雪涛",
-      "name_en": null,
-      "title": "副研究员",
-      "department": "北京大学计算机学院 系统结构研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "计算机体系结构"
-      ],
-      "homepage": "https://cs.pku.edu.cn/info/1066/1622.htm",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "贾惠柱",
-      "name_en": null,
-      "title": "副研究员",
-      "department": "北京大学计算机学院 视频与视觉技术研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "媒体计算",
-        "多媒体SoC芯片设计",
-        "视频大数据处理系统"
-      ],
-      "homepage": "https://cs.pku.edu.cn/info/1069/1632.htm",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "程旭",
-      "name_en": null,
-      "title": "教授",
-      "department": "北京大学计算机学院 系统结构研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "计算机系统结构"
-      ],
-      "homepage": "https://cs.pku.edu.cn/info/1062/1607.htm",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "张腾",
-      "name_en": null,
-      "title": "助理研究员",
-      "department": "北京大学计算机学院 视频与视觉技术研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "新一代集成电路与智能计算系统"
-      ],
-      "homepage": "https://cs.pku.edu.cn/szdw/jyxl/info/1012/4500.htm",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "严伟",
-      "name_en": "Wei Yan",
-      "title": "教授",
-      "department": "北京大学软件与微电子学院 集成电路与智能系统系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "数字集成电路前端/后端设计",
-        "视频编解码芯片",
-        "无线通讯电路设计",
-        "集成电路抗电磁干扰",
-        "LED芯片"
-      ],
-      "homepage": "https://ss.pku.edu.cn/sztd/dzxxsssz/8a226916e46740159508d27a49a68f69.htm",
-      "email": null,
-      "notes": "北京大学上海微电子研究院研究员，电路与系统研究所副所长"
-    },
-    {
-      "name_cn": "曹喜信",
-      "name_en": "Xixin Cao",
-      "title": "教授",
-      "department": "北京大学软件与微电子学院 集成电路与智能系统系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "数字媒体SoC设计",
-        "嵌入式系统",
-        "AI嵌入式系统",
-        "脑机接口"
-      ],
-      "homepage": "https://ss.pku.edu.cn/sztd/dzxxsssz/4684f2bf4ca84d6c9de257c74291ea6c.htm",
-      "email": null,
-      "notes": "数字媒体SOC实验室主任，集成电路与智能系统系副主任，博导"
-    },
-    {
-      "name_cn": "曹健",
-      "name_en": "Jian Cao",
-      "title": "教授",
-      "department": "北京大学软件与微电子学院 集成电路与智能系统系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "嵌入式人工智能",
-        "软硬件协同设计",
-        "智能工厂(AI+IC)",
-        "车规级芯片(电源芯片/信号链芯片)",
-        "计算机视觉"
-      ],
-      "homepage": "https://ss.pku.edu.cn/sztd/dzxxsssz/47a51c2186254c36ab065e5259b0ad4e.htm",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "时广轶",
-      "name_en": "Guangyi Shi",
-      "title": "教授",
-      "department": "北京大学软件与微电子学院 集成电路与智能系统系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "MEMS惯性器件",
-        "碳纳米管传感器",
-        "微机电信号处理",
-        "高精度惯导系统"
-      ],
-      "homepage": "https://ss.pku.edu.cn/sztd/dzxxsssz/3611021cf134447caefbe6bb085f27fd.htm",
-      "email": null,
-      "notes": "北京大学微米纳米加工技术国家重点实验室博士后"
-    },
-    {
-      "name_cn": "王振宇",
-      "name_en": "Zhenyu Wang",
-      "title": "副教授",
-      "department": "北京大学软件与微电子学院 集成电路与智能系统系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "微纳尺度原位三维成像",
-        "异质界面集成工艺",
-        "微纳芯片研发",
-        "量子计算相变模型"
-      ],
-      "homepage": "https://ss.pku.edu.cn/sztd/dzxxsssz/a27776ebe2314c9fb1140ba6c70d77d9.htm",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "蔡泽宇",
-      "name_en": null,
-      "title": "特聘研究员",
-      "department": "北京大学深圳研究生院 信息工程学院",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "高精度模拟电路芯片",
-        "低功耗模数转换电路芯片",
-        "传感器接口电路芯片",
-        "智能传感器芯片"
-      ],
-      "homepage": "https://www.ece.pku.edu.cn/info/1045/2137.htm\r",
-      "email": "zcai@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "陈少川",
-      "name_en": null,
-      "title": "助理教授",
-      "department": "北京大学深圳研究生院 信息工程学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "微纳电子器件",
-        "新型存储技术",
-        "电子材料与器件"
-      ],
-      "homepage": "https://www.ece.pku.edu.cn/info/1045/3132.htm\r",
-      "email": "shaochuan.chen@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "崔小乐",
-      "name_en": null,
-      "title": "教授",
-      "department": "北京大学深圳研究生院 信息工程学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "芯片设计（IC Design）",
-        "硬件安全（Hardware Security）",
-        "可信计算（Dependable Computing）",
-        "智能硬件（Intelligent hardware）",
-        "芯片可测性与可靠性（Testability and Reliability of IC）"
-      ],
-      "homepage": "https://www.ece.pku.edu.cn/info/1045/2467.htm\r",
-      "email": "cuixl@pkusz.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "张立宁",
-      "name_en": null,
-      "title": "长聘副教授",
-      "department": "北京大学深圳研究生院 信息工程学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "新型逻辑及存储器件",
-        "电子设计自动化EDA",
-        "神经形态器件和计算系统"
-      ],
-      "homepage": "https://www.ece.pku.edu.cn/info/1045/2486.htm\r",
-      "email": "eelnzhang@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "周航",
-      "name_en": null,
-      "title": "副教授",
-      "department": "北京大学深圳研究生院 信息工程学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "钙钛矿太阳能电池",
-        "光电探测器",
-        "印刷电子及柔性生物传感器",
-        "碳基电子器件",
-        "X射线图像传感器"
-      ],
-      "homepage": "https://www.ece.pku.edu.cn/info/1045/2135.htm\r",
-      "email": "zhouh81@pkusz.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "王新安",
-      "name_en": null,
-      "title": "教授",
-      "department": "北京大学深圳研究生院 信息工程学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "SoC芯片与集成微系统研究",
-        "地震监测预测技术研究",
-        "大健康抗衰老技术研究"
-      ],
-      "homepage": "https://www.ece.pku.edu.cn/info/1045/2128.htm\r",
-      "email": "anxinwang@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "吴远鹏",
-      "name_en": null,
-      "title": "助理教授",
-      "department": "北京大学深圳研究生院 信息工程学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "微纳半导体材料及器件"
-      ],
-      "homepage": "https://www.ece.pku.edu.cn/info/1045/2945.htm\r",
-      "email": "ypwu@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "杨玉超",
-      "name_en": null,
-      "title": "长聘教授/博雅特聘教授",
-      "department": "北京大学深圳研究生院 信息工程学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "新型忆阻器与神经动力学计算",
-        "大规模高能效存算一体芯片设计",
-        "双向闭环脑机接口技术"
-      ],
-      "homepage": "https://www.ece.pku.edu.cn/info/1045/2542.htm\r",
-      "email": "yuchaoyang@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "张盛东",
-      "name_en": null,
-      "title": "教授",
-      "department": "北京大学深圳研究生院 信息工程学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "三维集成电路",
-        "显示芯片设计",
-        "图像传感器和生物芯片等"
-      ],
-      "homepage": "https://www.ece.pku.edu.cn/info/1045/2674.htm\r",
-      "email": "zhangsd@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "张冠张",
-      "name_en": null,
-      "title": "长聘副教授",
-      "department": "北京大学深圳研究生院 信息工程学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "神经形态器件和电路",
-        "生物电子",
-        "新型存储器",
-        "超临界流体",
-        "薄膜晶体管"
-      ],
-      "homepage": "https://www.ece.pku.edu.cn/info/1045/2512.htm\r",
-      "email": "kcchang@pkusz.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "苏钰淇",
-      "name_en": null,
-      "title": "助理教授",
-      "department": "北京大学深圳研究生院 信息工程学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "数字",
-        "混合信号集成电路设计"
-      ],
-      "homepage": "https://www.ece.pku.edu.cn/info/1045/2729.htm\r",
-      "email": "suyuqi@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "唐晨宇",
-      "name_en": null,
-      "title": "助理教授",
-      "department": "北京大学深圳研究生院 信息工程学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "智能可穿戴系统",
-        "生物电子器件",
-        "多模态人工智能",
-        "智慧健康技术",
-        "人机交互与具身智能"
-      ],
-      "homepage": "https://www.ece.pku.edu.cn/info/1045/3169.htm\r",
-      "email": "ctang@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "王少聪",
-      "name_en": null,
-      "title": "助理教授",
-      "department": "北京大学深圳研究生院 信息工程学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "存算一体",
-        "软硬件协同设计"
-      ],
-      "homepage": "https://www.ece.pku.edu.cn/info/1045/3131.htm\r",
-      "email": "scwang@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "李倩",
-      "name_en": null,
-      "title": "长聘副教授",
-      "department": "北京大学深圳研究生院 信息工程学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "超快光学",
-        "集成光器件和芯片",
-        "光通信理论与技术"
-      ],
-      "homepage": "https://www.ece.pku.edu.cn/info/1045/2133.htm\r",
-      "email": "liqian@pkusz.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "陆磊",
-      "name_en": null,
-      "title": "长聘副教授",
-      "department": "北京大学深圳研究生院 信息工程学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "薄膜晶体管",
-        "先进显示",
-        "三维集成电路",
-        "柔性电子"
-      ],
-      "homepage": "https://www.ece.pku.edu.cn/info/1045/2139.htm\r",
-      "email": "lulei@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "焦海龙",
-      "name_en": null,
-      "title": "长聘副教授",
-      "department": "北京大学深圳研究生院 信息工程学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "低功耗超大规模集成电路设计"
-      ],
-      "homepage": "https://www.ece.pku.edu.cn/info/1045/2719.htm\r",
-      "email": "jiaohailong@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "金玉丰",
-      "name_en": null,
-      "title": "教授",
-      "department": "北京大学深圳研究生院 信息工程学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成微系统",
-        "微系统封装技术"
-      ],
-      "homepage": "https://www.ece.pku.edu.cn/info/1045/2129.htm\r",
-      "email": "yfjin@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "沈波",
-      "name_en": "Shen Bo",
-      "title": "教授",
-      "department": "北京大学物理学院 凝聚态物理与材料物理研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "宽禁带半导体材料",
-        "氮化物异质外延生长",
-        "半导体缺陷物理与工程",
-        "GaN基电子器件",
-        "深紫外发光器件"
-      ],
-      "homepage": "https://faculty.pku.edu.cn/shenbo/zh_CN/index.htm",
-      "email": "bshen@pku.edu.cn",
-      "notes": "长江特聘教授（2003）；北京大学博雅特聘教授、博士生导师；北京大学宽禁带半导体研究中心主任"
-    },
-    {
-      "name_cn": "许福军",
-      "name_en": "Xu Fujun",
-      "title": "教授",
-      "department": "北京大学物理学院 凝聚态物理与材料物理研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "III族氮化物宽禁带半导体",
-        "氮化物半导体材料生长动力学",
-        "缺陷控制",
-        "氮化物半导体器件及物理",
-        "半导体光电子器件"
-      ],
-      "homepage": "https://faculty.pku.edu.cn/xufujun/zh_CN/index.htm",
-      "email": "fjxu@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "于彤军",
-      "name_en": "Yu Tongjun",
-      "title": "教授",
-      "department": "北京大学物理学院 凝聚态物理与材料物理研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "宽禁带半导体",
-        "III族氮化物",
-        "半导体材料与器件"
-      ],
-      "homepage": "https://faculty.pku.edu.cn/yutongjun/zh_CN/index.htm",
-      "email": "tongjun@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "杨学林",
-      "name_en": "Yang Xuelin",
-      "title": "教授",
-      "department": "北京大学物理学院 凝聚态物理与材料物理研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "GaN基功率电子材料",
-        "射频电子材料MOCVD外延",
-        "杂质与缺陷",
-        "功率/射频电子器件物理",
-        "器件热管理"
-      ],
-      "homepage": "https://faculty.pku.edu.cn/yangxuelin/zh_CN/index.htm",
-      "email": "xlyang@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "唐宁",
-      "name_en": "Tang Ning",
-      "title": "教授",
-      "department": "北京大学物理学院 凝聚态物理与材料物理研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "宽禁带半导体自旋电子学",
-        "二维半导体谷电子学",
-        "宽禁带半导体深紫外光学",
-        "自旋电子器件"
-      ],
-      "homepage": "https://faculty.pku.edu.cn/tangning/zh_CN/index.htm",
-      "email": "ntang@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "戴伦",
-      "name_en": "Dai Lun",
-      "title": "教授",
-      "department": "北京大学物理学院 凝聚态物理与材料物理研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "低维半导体材料",
-        "半导体器件物理"
-      ],
-      "homepage": "https://faculty.pku.edu.cn/dailun/zh_CN/index.htm",
-      "email": "lundai@pku.edu.cn",
-      "notes": "长江特聘教授（2011）"
-    },
-    {
-      "name_cn": "陈志忠",
-      "name_en": "Chen Zhizhong",
-      "title": "教授",
-      "department": "北京大学物理学院 凝聚态物理与材料物理研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "III族氮化物器件物理",
-        "GaN基垂直结构LED",
-        "GaN基微纳米出光结构",
-        "GaN基微纳米器件"
-      ],
-      "homepage": "https://faculty.pku.edu.cn/chenzhizhong/zh_CN/index.htm",
-      "email": "zzchen@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "冉广照",
-      "name_en": "Ran Guangzhao",
-      "title": "教授",
-      "department": "北京大学物理学院 凝聚态物理与材料物理研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "硅光子学与硅基发光",
-        "纳米半导体材料与器件",
-        "分子半导体材料与器件"
-      ],
-      "homepage": "https://faculty.pku.edu.cn/ranguangzhao/zh_CN/index.htm",
-      "email": "rangz@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "赵清",
-      "name_en": "Zhao Qing",
-      "title": "教授",
-      "department": "北京大学物理学院 凝聚态物理与材料物理研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "卤化物半导体光电材料与器件",
-        "离子输运",
-        "固态纳米孔单分子探测"
-      ],
-      "homepage": "https://faculty.pku.edu.cn/zhaoqing/zh_CN/index.htm",
-      "email": "zhaoqing@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "刘开辉",
-      "name_en": "Liu Kaihui",
-      "title": "教授",
-      "department": "北京大学物理学院 凝聚态物理与材料物理研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "二维材料表界面调控生长",
-        "米级单晶材料制造",
-        "纳米光谱学表征",
-        "高性能光电探测器件"
-      ],
-      "homepage": "https://faculty.pku.edu.cn/liukaihui/zh_CN/index.htm",
-      "email": "khliu@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "廖志敏",
-      "name_en": "Liao Zhimin",
-      "title": "教授",
-      "department": "北京大学物理学院 凝聚态物理与材料物理研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "拓扑电子材料",
-        "量子输运",
-        "新原理信息功能器件"
-      ],
-      "homepage": "https://faculty.pku.edu.cn/liaozhimin/zh_CN/index.htm",
-      "email": "liaozm@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "吕劲",
-      "name_en": "Lü Jing",
-      "title": "研究员",
-      "department": "北京大学物理学院 凝聚态物理与材料物理研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "DFT+NEGF计算方法",
-        "纳米电子学器件",
-        "纳米光电子学器件",
-        "自旋电子学器件",
-        "低功耗逻辑器件"
-      ],
-      "homepage": "https://faculty.pku.edu.cn/lvjing/zh_CN/index.htm",
-      "email": "jinglu@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "童玉珍",
-      "name_en": "Tong Yuzhen",
-      "title": "副教授",
-      "department": "北京大学物理学院 凝聚态物理与材料物理研究所",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "宽禁带半导体"
-      ],
-      "homepage": "https://faculty.pku.edu.cn/tongyuzheng/zh_CN/index.htm",
-      "email": "yztong16@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "刘放",
-      "name_en": "Liu Fang",
-      "title": "副研究员",
-      "department": "北京大学物理学院 凝聚态物理与材料物理研究所",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "氮化物半导体光电子材料",
-        "氮化物半导体光电子器件"
-      ],
-      "homepage": "https://faculty.pku.edu.cn/liufang/zh_CN/index.htm",
-      "email": "liu-fang@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "王平",
-      "name_en": "Wang Ping",
-      "title": "助理教授",
-      "department": "北京大学物理学院 凝聚态物理与材料物理研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "氮化物铁电半导体材料",
-        "ScAlN基铁电半导体器件",
-        "GaN基纳米结构及器件",
-        "分子束外延"
-      ],
-      "homepage": "https://faculty.pku.edu.cn/wangping/zh_CN/index.htm",
-      "email": "pingwang@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "王丁",
-      "name_en": "Wang Ding",
-      "title": "助理教授",
-      "department": "北京大学物理学院 凝聚态物理与材料物理研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "新型宽禁带半导体材料与器件",
-        "铁电/多铁调控",
-        "宽禁带半导体异质集成",
-        "高频高功率电子器件"
-      ],
-      "homepage": "https://faculty.pku.edu.cn/wangding/zh_CN/index.htm",
-      "email": "ding.wang@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "鞠光旭",
-      "name_en": "Ju Guangxu",
-      "title": "助理教授",
-      "department": "北京大学物理学院 凝聚态物理与材料物理研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "宽禁带半导体"
-      ],
-      "homepage": "https://faculty.pku.edu.cn/juguangxu/zh_CN/index.htm",
-      "email": "gxju@pku.edu.cn",
-      "notes": "研究员｜博雅青年学者（主页职称栏）"
-    },
-    {
-      "name_cn": "吴孝松",
-      "name_en": "Wu Xiaosong",
-      "title": "教授",
-      "department": "北京大学物理学院 凝聚态物理与材料物理研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "二维材料电学性质",
-        "拓扑材料量子输运",
-        "新原理电子器件",
-        "自旋器件"
-      ],
-      "homepage": "https://faculty.pku.edu.cn/xswu/zh_CN/index.htm",
-      "email": "xswu@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "俞大鹏",
-      "name_en": "Yu Dapeng",
-      "title": "教授",
-      "department": "北京大学物理学院 凝聚态物理与材料物理研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "准一维半导体纳米结构",
-        "低维功能结构与物理",
-        "半导体纳米器件"
-      ],
-      "homepage": "https://faculty.pku.edu.cn/yudapeng/zh_CN/index.htm",
-      "email": "yudp@pku.edu.cn",
-      "notes": "中国科学院院士；教育部长江特聘教授；国家杰出青年科学基金（2000）；北京大学电子显微镜实验室主任"
-    },
-    {
-      "name_cn": "陈剑豪",
-      "name_en": "Chen Jianhao",
-      "title": "长聘副教授",
-      "department": "北京大学物理学院 量子材料科学中心",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "低维纳米电子材料",
-        "量子输运测量",
-        "自旋输运与自旋超导",
-        "拓扑材料器件",
-        "低维磁性异质结"
-      ],
-      "homepage": "https://faculty.pku.edu.cn/chenjianhao/zh_CN/index.htm",
-      "email": "chenjianhao@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "孙栋",
-      "name_en": "Sun Dong",
-      "title": "教授",
-      "department": "北京大学物理学院 量子材料科学中心",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "石墨烯光电子学",
-        "太赫兹技术与器件",
-        "超快光谱",
-        "二维材料光电器件"
-      ],
-      "homepage": "https://faculty.pku.edu.cn/sundong/zh_CN/index.htm",
-      "email": "sundong@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "叶堉",
-      "name_en": "Ye Yu",
-      "title": "教授",
-      "department": "北京大学物理学院 量子材料科学中心",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "二维材料器件设计",
-        "范德华异质结",
-        "纳米尺度光电流测量",
-        "低维材料光电性质"
-      ],
-      "homepage": "https://faculty.pku.edu.cn/yeyu/zh_CN/index.htm",
-      "email": "ye_yu@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "许秀来",
-      "name_en": "Xu Xiulai",
-      "title": "教授",
-      "department": "北京大学物理学院 现代光学研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "低维半导体光电物理与器件",
-        "量子体系光电子学",
-        "半导体激子与光学微腔",
-        "量子信息处理"
-      ],
-      "homepage": "https://faculty.pku.edu.cn/xuxiulai/zh_CN/index.htm",
-      "email": "xlxu@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "王剑威",
-      "name_en": "Wang Jianwei",
-      "title": "教授",
-      "department": "北京大学物理学院 现代光学研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成量子光学",
-        "光量子芯片",
-        "集成量子器件与硬件",
-        "大规模集成光量子芯片",
-        "量子计算与量子模拟"
-      ],
-      "homepage": "https://faculty.pku.edu.cn/Qchip/zh_CN/index.htm",
-      "email": "jianwei.wang@pku.edu.cn",
-      "notes": "国家杰出青年科学基金（2023）；海外高层次青年人才计划（2018）"
-    },
-    {
-      "name_cn": "胡小永",
-      "name_en": "Hu Xiaoyong",
-      "title": "教授",
-      "department": "北京大学物理学院 现代光学研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "光子晶体微纳光子器件",
-        "表面等离激元",
-        "智能光子芯片",
-        "超高速信息处理芯片"
-      ],
-      "homepage": "https://faculty.pku.edu.cn/huxiaoyong/zh_CN/index.htm",
-      "email": "xiaoyonghu@pku.edu.cn",
-      "notes": "长江特聘教授（2012）"
-    },
-    {
-      "name_cn": "陈志坚",
-      "name_en": "Chen Zhijian",
-      "title": "教授",
-      "department": "北京大学物理学院 现代光学研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "有机电致发光器件",
-        "有机场效应晶体管",
-        "有机光折变材料",
-        "器件结构设计"
-      ],
-      "homepage": "https://faculty.pku.edu.cn/chenzhijian/zh_CN/index.htm",
-      "email": "zjchen@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "张艳锋",
-      "name_en": "Zhang Yanfeng",
-      "title": "教授",
-      "department": "北京大学材料科学与工程学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "晶圆级二维半导体材料",
-        "二维异质结构可控制备",
-        "二维半导体电子器件",
-        "二维光电子器件",
-        "MoS2晶圆级制备"
-      ],
-      "homepage": "https://www.mse.pku.edu.cn/info/1223/1258.htm",
-      "email": "Yanfengzhang@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "张锦",
-      "name_en": "Zhang Jin",
-      "title": "教授",
-      "department": "北京大学材料科学与工程学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "石墨烯",
-        "纳米碳材料",
-        "纳米器件物理与化学"
-      ],
-      "homepage": "https://www.mse.pku.edu.cn/info/1223/1256.htm",
-      "email": "jinzhang@pku.edu.cn",
-      "notes": "中国科学院院士；北京大学深圳研究生院院长；北京石墨烯研究院副院长（兼）；教育部纳米器件物理与化学重点实验室副主任"
-    },
-    {
-      "name_cn": "林立",
-      "name_en": "Lin Li",
-      "title": "特聘研究员",
-      "department": "北京大学材料科学与工程学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "二维材料可控制备",
-        "石墨烯单晶合成",
-        "范德华异质结",
-        "二维材料高性能器件"
-      ],
-      "homepage": "https://www.mse.pku.edu.cn/info/1209/1752.htm",
-      "email": "linli-cnc@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "刘磊",
-      "name_en": "Liu Lei",
-      "title": "长聘副教授",
-      "department": "北京大学材料科学与工程学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "二维非晶材料",
-        "二维半导体信息器件",
-        "硅基集成电路",
-        "芯片热管理材料"
-      ],
-      "homepage": "https://www.mse.pku.edu.cn/info/1209/1245.htm",
-      "email": "l_liu@pku.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "曹安源",
-      "name_en": "Cao Anyuan",
-      "title": "教授",
-      "department": "北京大学材料科学与工程学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "碳纳米管",
-        "半导体纳米材料",
-        "纳米电子器件",
-        "集成微电子器件",
-        "薄膜型太阳能电池"
-      ],
-      "homepage": "https://www.mse.pku.edu.cn/info/1200/1321.htm",
-      "email": "anyuan@pku.edu.cn",
-      "notes": null
-    }
-  ]
+ "school": "北京大学",
+ "school_key": "pku",
+ "harvested_at": "2026-09-24",
+ "sources": [
+  "https://ic.pku.edu.cn/szdw/zzjs/jcwndzx1/index.htm",
+  "https://ic.pku.edu.cn/szdw/zzjs/jcdlsjx1/index.htm",
+  "https://ic.pku.edu.cn/szdw/zzjs/sjzdhyjsxtx1/index.htm",
+  "https://ic.pku.edu.cn/szdw/zzjs/jcwnxtx1/index.htm",
+  "https://ic.pku.edu.cn/szdw/zzjs/jcdlxjzzjsyjzx1/index.htm",
+  "https://ic.pku.edu.cn/szdw/zzjs/jcdlxjzzjsyjzx1/hj/index.htm",
+  "https://ic.pku.edu.cn/szdw/ysfc/hr/index.htm",
+  "https://ic.pku.edu.cn/szdw/ysfc/wyy1/index.htm",
+  "https://ele.pku.edu.cn/szdw/zzjs.htm",
+  "https://ele.pku.edu.cn/szdw/zzjs/1.htm ~ /5.htm",
+  "https://ele.pku.edu.cn/info/1023/*.htm（108 位在职教师详情页，逐页抓取）",
+  "https://ele.pku.edu.cn/yjzxhsys/bjdxtjdzxyjzx.htm",
+  "https://cs.pku.edu.cn/szdw/jyxl/amz/ALL.htm",
+  "https://cs.pku.edu.cn/szdw/jyxl/amz/ALL/1.htm ~ /10.htm",
+  "https://cs.pku.edu.cn/szdw/yjxl.htm",
+  "https://cs.pku.edu.cn/szdw/jxxl.htm",
+  "https://cs.pku.edu.cn/szdw/gcxl.htm",
+  "https://www.cis.pku.edu.cn/szdw/zzjs.htm",
+  "https://www.cis.pku.edu.cn/szdw/zzjs/1.htm ~ /4.htm",
+  "https://ss.pku.edu.cn/sztd/xssbsz/index.htm",
+  "https://ss.pku.edu.cn/sztd/dzxxsssz/index.htm",
+  "https://ss.pku.edu.cn/sztd/qygcbssz/index.htm",
+  "https://ss.pku.edu.cn/sztd/dzxxsssz/*.htm（教师详情页）",
+  "https://www.ece.pku.edu.cn/szdw/js1.htm",
+  "https://www.ece.pku.edu.cn/szdw/js1/1.htm ~ /6.htm",
+  "https://www.phy.pku.edu.cn/jsfcjy.jsp?urltype=tree.TreeTempUrl&wbtreeid=1658",
+  "https://www.phy.pku.edu.cn/zy_list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1011",
+  "https://www.phy.pku.edu.cn/jzyg/ys.htm",
+  "https://www.phy.pku.edu.cn/jzyg/rcjh.htm",
+  "https://www.phy.pku.edu.cn/xygk/xyjg.htm",
+  "https://www.phy.pku.edu.cn/kxyj/yjfx.htm",
+  "https://www.phy.pku.edu.cn/kxyj/kyjg1.htm",
+  "https://icqm.pku.edu.cn/",
+  "https://www.mse.pku.edu.cn/",
+  "https://www.mse.pku.edu.cn/jzyg/zzjs.htm",
+  "https://www.mse.pku.edu.cn/jzyg/jsfc.htm",
+  "https://www.mse.pku.edu.cn/jzyg/jcrc.htm",
+  "https://www.mse.pku.edu.cn/xszx/xjtclyjs/xsjj1.htm",
+  "https://www.mse.pku.edu.cn/xszx/gdzclyjs/xsjj1.htm",
+  "https://www.phy.pku.edu.cn/system/resource/tsites/portal/queryteacher.jsp?collegeid=1520&postdutyname=教研人员&jobtypecode=JOB_TYPE_ID927559,&pageindex=1&pagesize=300&viewid=275976&siteOwner=1539754034&viewOwner=1539754034&viewmode=10&showlang=zh_CN  (返回全校物理学院教研人员名册 JSON, totalnum=233)",
+  "https://www.mse.pku.edu.cn/info/1223/1258.htm",
+  "https://www.mse.pku.edu.cn/info/1223/1256.htm",
+  "https://www.mse.pku.edu.cn/info/1209/1752.htm",
+  "https://www.mse.pku.edu.cn/info/1209/1245.htm",
+  "https://www.mse.pku.edu.cn/info/1200/1321.htm",
+  "https://faculty.pku.edu.cn/chenjianhao/zh_CN/yjfx/6210/content/1421.htm",
+  "https://faculty.pku.edu.cn/chenzhijian/zh_CN/yjfx/6549/content/1271.htm",
+  "https://faculty.pku.edu.cn/chenzhizhong/zh_CN/yjfx/6511/content/1270.htm",
+  "https://faculty.pku.edu.cn/dailun/zh_CN/yjfx/6586/content/1424.htm",
+  "https://faculty.pku.edu.cn/huxiaoyong/zh_CN/yjfx/7475/content/1653.htm",
+  "https://faculty.pku.edu.cn/juguangxu/zh_CN/yjfx/46596/content/2251.htm",
+  "https://faculty.pku.edu.cn/juguangxu/zh_CN/yjfx/46596/content/2250.htm",
+  "https://faculty.pku.edu.cn/liaozhimin/zh_CN/yjfx/4976/content/1740.htm",
+  "https://faculty.pku.edu.cn/liufang/zh_CN/yjfx/55695/content/2706.htm",
+  "https://faculty.pku.edu.cn/liukaihui/zh_CN/yjfx/4939/content/1785.htm",
+  "https://faculty.pku.edu.cn/lvjing/zh_CN/yjfx/8742/content/1750.htm",
+  "https://faculty.pku.edu.cn/ranguangzhao/zh_CN/yjfx/10080/content/1394.htm",
+  "https://faculty.pku.edu.cn/ranguangzhao/zh_CN/yjfx/10080/content/1393.htm",
+  "https://faculty.pku.edu.cn/ranguangzhao/zh_CN/yjfx/10080/content/1392.htm",
+  "https://faculty.pku.edu.cn/shenbo/zh_CN/yjfx/10117/content/2616.htm",
+  "https://faculty.pku.edu.cn/shenbo/zh_CN/yjfx/10117/content/2426.htm",
+  "https://faculty.pku.edu.cn/sundong/zh_CN/yjfx/10606/content/1807.htm",
+  "https://faculty.pku.edu.cn/sundong/zh_CN/yjfx/10606/content/1806.htm",
+  "https://faculty.pku.edu.cn/sundong/zh_CN/yjfx/10606/content/1805.htm",
+  "https://faculty.pku.edu.cn/tangning/zh_CN/yjfx/11739/content/1755.htm",
+  "https://faculty.pku.edu.cn/tangning/zh_CN/yjfx/11739/content/1429.htm",
+  "https://faculty.pku.edu.cn/tangning/zh_CN/yjfx/11739/content/1754.htm",
+  "https://faculty.pku.edu.cn/tongyuzheng/zh_CN/yjfx/16194/content/1531.htm",
+  "https://faculty.pku.edu.cn/wangding/zh_CN/yjfx/53315/content/2566.htm",
+  "https://faculty.pku.edu.cn/wangding/zh_CN/yjfx/53315/content/2567.htm",
+  "https://faculty.pku.edu.cn/wangding/zh_CN/yjfx/53315/content/2568.htm",
+  "https://faculty.pku.edu.cn/wangping/zh_CN/yjfx/49752/content/2330.htm",
+  "https://faculty.pku.edu.cn/wangping/zh_CN/yjfx/49752/content/2329.htm",
+  "https://faculty.pku.edu.cn/wangping/zh_CN/yjfx/49752/content/2331.htm",
+  "https://faculty.pku.edu.cn/xswu/zh_CN/yjfx/11352/content/1809.htm",
+  "https://faculty.pku.edu.cn/xswu/zh_CN/yjfx/11352/content/1808.htm",
+  "https://faculty.pku.edu.cn/xufujun/zh_CN/yjfx/17082/content/1836.htm",
+  "https://faculty.pku.edu.cn/xuxiulai/zh_CN/yjfx/43907/content/2192.htm",
+  "https://faculty.pku.edu.cn/xuxiulai/zh_CN/yjfx/43907/content/2191.htm",
+  "https://faculty.pku.edu.cn/yangxuelin/zh_CN/yjfx/17563/content/1570.htm",
+  "https://faculty.pku.edu.cn/yutongjun/zh_CN/yjfx/17674/content/1572.htm",
+  "https://faculty.pku.edu.cn/zhaoqing/zh_CN/yjfx/4865/content/2446.htm",
+  "https://faculty.pku.edu.cn/zhaoqing/zh_CN/yjfx/4865/content/1289.htm",
+  "https://faculty.pku.edu.cn/zhaoqing/zh_CN/yjfx/4865/content/1288.htm"
+ ],
+ "coverage_note": "已覆盖：①集成电路学院（ic.pku.edu.cn）全部 4 个系（集成微纳电子系 28、集成电路设计系 20、设计自动化与计算系统系 11、集成微纳系统系 18）+ 集成电路先进制造技术研究中心 + 院士风采页，共 80 人；②电子学院（ele.pku.edu.cn）全部 108 位在职教师详情页逐页抓取后按方向筛选，收录 44 人（物理电子学研究所 17、碳基电子学研究中心 12、信息与通信研究所 6、应用电子学研究所 5、量子电子学研究所 3 + 电子学院本级 1），含「北京大学碳基电子学研究中心」（彭练矛团队）全名单；③计算机学院（cs.pku.edu.cn）教研系列 11 页共 121 人 + 研究系列/教学系列/工程系列，筛出系统结构研究所 8、视频与视觉技术研究所 3、数据科学与工程研究所 2、网络与高能效计算研究所 3，共 16 人；④软件与微电子学院（ss.pku.edu.cn）师资团队页（工学博士/电子信息博士/电子信息硕士三个名录）+ 逐人详情页，收录集成电路与智能系统系 5 人（严伟、曹喜信、曹健、时广轶、王振宇）；⑤深圳研究生院信息工程学院（www.ece.pku.edu.cn）在职教师 7 页共 37 人，筛出集成电路/器件/存算/光电子方向 17 人；⑥物理学院（phy.pku.edu.cn，含 233 人教研人员名册 JSON 接口 + ~90 位教师主页研究方向页）与材料科学与工程学院（mse.pku.edu.cn，47 位在职教师名单 + 16 份详情页）中与半导体器件/宽禁带/二维半导体/自旋与量子器件/集成光子强相关的教师，共 31 人。合计 193 人，全部字段来自实际抓取的页面。未抓到/未纳入：(a) 智能学院（cis.pku.edu.cn）专职教师 72 人已全部抓取，但其研究方向全部为计算机视觉/NLP/机器学习/机器人等纯算法，无芯片、体系结构或类脑硬件方向教师，故入库 0 人；(b) 软件与微电子学院仅公开「工学博士/电子信息博士/电子信息硕士」三个按项目划分的名录，名录内多数为校内双聘教师（已在集成电路学院、计算机学院条目中重复出现），其本院专职教师以软件工程、网络空间安全、金融/管理方向为主，符合芯片方向的仅 5 人；(c) 纯工程师岗（工程师/高级工程师，如 EDA 教学实验室管理员、设备维修岗、微纳加工平台工程师）按「只要在职教师/导师」的要求排除，仅保留有博导/硕导身份的「正高级工程师」（于敦山、赵前程）；(d) 排除：客座教授（汪林望）、兼职教授（赵元富）、博士后、光荣退休/离退休、访问学者、行政教辅人员；(e) 抓取障碍：www.ece.pku.edu.cn 与 ss.pku.edu.cn 详情页用 Node fetch 会 TLS 失败，已改用 curl.exe 抓取；北大碳基电子学研究中心独立域名不存在，实际挂在 ele.pku.edu.cn/yjzxhsys/bjdxtjdzxyjzx.htm；nano.pku.edu.cn（纳米器件物理与化学教育部重点实验室）域名已失效；(f) 明确因缺乏可核实来源而未收录：物理学院王新强（宽禁带半导体，其 faculty 主页为占位空页、北大宽禁带半导体研究中心站点 www2.phy.pku.edu.cn/~wgs/ 已下线且无存档，无法从页面核实研究方向）；材料学院刘忠范、吴凯未出现在 mse.pku.edu.cn 在职教师/杰出人才名录中；卢晓波主页仅有「二维量子材料实验室」而无器件方向证据；杜红林主页在 labxing.com 抓取失败；(g) 物理学院/材料学院仅收录与芯片强相关者，纯理论物理、纯凝聚态、核技术/天体/大气/生物物理、以及材料学院的高分子/电池/催化/太阳能电池方向未收录。",
+ "faculty": [
+  {
+   "name_cn": "安霞",
+   "name_en": null,
+   "title": "研究员",
+   "department": "北京大学集成电路学院 集成微纳电子系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "新型微纳器件辐射效应",
+    "损伤机理及加固技术",
+    "新型微纳器件及集成技术"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/ax/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "蔡一茂",
+   "name_en": null,
+   "title": "长聘教授",
+   "department": "北京大学集成电路学院 集成微纳电子系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "先进存储器技术",
+    "神经形态器件与智能芯片关键技术"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/cym/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "程哲",
+   "name_en": null,
+   "title": "助理教授，研究员",
+   "department": "北京大学集成电路学院 集成微纳电子系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微纳电子器件热管理",
+    "先进热表征技术和设备",
+    "三维堆叠芯片",
+    "半导体材料生长",
+    "原子级表征"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/cz/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "傅云义",
+   "name_en": null,
+   "title": "教授",
+   "department": "北京大学集成电路学院 集成微纳电子系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微纳电子器件"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/fyy/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "韩德栋",
+   "name_en": null,
+   "title": "研究员",
+   "department": "北京大学集成电路学院 集成微纳电子系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "新型半导体材料与器件",
+    "薄膜晶体管",
+    "纳米加工工艺技术"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/hdd/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "贺明",
+   "name_en": null,
+   "title": "长聘副教授",
+   "department": "北京大学集成电路学院 集成微纳电子系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "新原理信息材料与器件",
+    "智能感知器件",
+    "感存算集成"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/hm/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "黄芊芊",
+   "name_en": null,
+   "title": "长聘教授",
+   "department": "北京大学集成电路学院 集成微纳电子系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "后摩尔时代超低功耗微纳电子器件及其在逻辑",
+    "存储与新型计算等领域的应用"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/hqq/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "康晋锋",
+   "name_en": null,
+   "title": "教授",
+   "department": "北京大学集成电路学院 集成微纳电子系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "智能化感存算融合器件",
+    "新型氧化物材料与新原理器件",
+    "新型类脑与存算融合器件与系统集成",
+    "人工智能芯片技术"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/kjf/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "黎明",
+   "name_en": null,
+   "title": "长聘副教授",
+   "department": "北京大学集成电路学院 集成微纳电子系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路器件与先进工艺"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/lm/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "刘力锋",
+   "name_en": null,
+   "title": "教授",
+   "department": "北京大学集成电路学院 集成微纳电子系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微纳电子材料与器件",
+    "新型存储与计算技术"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/llf/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "梁令",
+   "name_en": null,
+   "title": "助理研究员",
+   "department": "北京大学集成电路学院 集成微纳电子系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "类脑计算",
+    "信息安全",
+    "计算机体系结构"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/ll/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "任黎明",
+   "name_en": null,
+   "title": "讲师",
+   "department": "北京大学集成电路学院 集成微纳电子系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "纳米电子器件"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/rlm/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "孙仲",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "北京大学集成电路学院 集成微纳电子系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "模拟计算",
+    "存内计算",
+    "阻变存储器"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/sz/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "孙雷",
+   "name_en": null,
+   "title": "副教授",
+   "department": "北京大学集成电路学院 集成微纳电子系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "器件结构和制造"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/sl/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "唐克超",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "北京大学集成电路学院 集成微纳电子系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "氧化物材料",
+    "铁电存储器件",
+    "新型传感器件",
+    "感存算一体化"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/tkc/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王宗巍",
+   "name_en": null,
+   "title": "助理教授、博导",
+   "department": "北京大学集成电路学院 集成微纳电子系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微纳电子器件与集成工艺",
+    "先进存储器",
+    "存内计算",
+    "神经形态计算"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/wzw/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王金延",
+   "name_en": null,
+   "title": "教授",
+   "department": "北京大学集成电路学院 集成微纳电子系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "宽禁带半导体工艺",
+    "器件和理论"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/wjy/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王茂俊",
+   "name_en": null,
+   "title": "副教授",
+   "department": "北京大学集成电路学院 集成微纳电子系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "宽禁带半导体电子器件"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/wmj/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王嘉铭",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "北京大学集成电路学院 集成微纳电子系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "III族氮化物半导体材料及器件"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/wjm/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "魏进",
+   "name_en": null,
+   "title": "长聘副教授",
+   "department": "北京大学集成电路学院 集成微纳电子系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "宽禁带半导体器件",
+    "功率集成电路"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/wj/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "吴燕庆",
+   "name_en": null,
+   "title": "教授",
+   "department": "北京大学集成电路学院 集成微纳电子系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "新材料逻辑器件与先进存储器件"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/wyq/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "吴恒",
+   "name_en": null,
+   "title": "副教授",
+   "department": "北京大学集成电路学院 集成微纳电子系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "设计工艺协同优化",
+    "逻辑器件与电路设计",
+    "晶体管级三维集成"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/wh/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "熊雄",
+   "name_en": null,
+   "title": "助理研究员",
+   "department": "北京大学集成电路学院 集成微纳电子系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "新型低维半导体电子器件",
+    "互补型场效应晶体管CFET"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/xx/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "杨玉超",
+   "name_en": null,
+   "title": "长聘教授",
+   "department": "北京大学集成电路学院 集成微纳电子系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "忆阻器",
+    "类脑计算",
+    "存算一体智能芯片"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/yyc/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张兴",
+   "name_en": null,
+   "title": "长聘教授",
+   "department": "北京大学集成电路学院 集成微纳电子系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "新结构半导体器件与工艺",
+    "器件模型模拟"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/zx/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "周劲",
+   "name_en": null,
+   "title": "副教授",
+   "department": "北京大学集成电路学院 集成微纳电子系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "通用技术和宽禁带半导体"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/zj/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "周正",
+   "name_en": null,
+   "title": "助理研究员",
+   "department": "北京大学集成电路学院 集成微纳电子系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "光电融合器件与集成技术",
+    "计算机视觉智能硬件系统",
+    "半导体显示"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/zz/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "赵鹏",
+   "name_en": null,
+   "title": "助理教授，研究员",
+   "department": "北京大学集成电路学院 集成微纳电子系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "先进三维集成技术（nano TSV",
+    "hybrid bonding",
+    "layer transfer",
+    "etc.）",
+    "三维堆叠架构和器件（BSPDN",
+    "CFET"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/zp/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "陈中建",
+   "name_en": null,
+   "title": "教授",
+   "department": "北京大学集成电路学院 集成电路设计系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "模拟集成电路设计"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/czj/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "崔小欣",
+   "name_en": null,
+   "title": "研究员",
+   "department": "北京大学集成电路学院 集成电路设计系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "低功耗高安全智能芯片",
+    "多核NOC/SOC芯片",
+    "神经形态计算与类脑芯片"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/cxx/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "何燕冬",
+   "name_en": null,
+   "title": "研究员",
+   "department": "北京大学集成电路学院 集成电路设计系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "硅基光电子芯片"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/hyd/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "盖伟新",
+   "name_en": null,
+   "title": "研究员",
+   "department": "北京大学集成电路学院 集成电路设计系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "超高速收发机芯片",
+    "全数字锁相环PLL",
+    "高速低功耗ADC",
+    "光通信CDR",
+    "智能NoC与大算力AI芯片"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/gwx/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "贾嵩",
+   "name_en": null,
+   "title": "研究员",
+   "department": "北京大学集成电路学院 集成电路设计系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "数字及混合信号集成电路设计",
+    "高安全性集成电路设计及验证方法"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/js/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "贾天宇",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "北京大学集成电路学院 集成电路设计系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "新型人工智能加速器芯片设计",
+    "系统集成SoC芯片设计与优化",
+    "可重构与可编程AI芯片架构",
+    "超低功耗数字电路设计"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/jty/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "廖怀林",
+   "name_en": null,
+   "title": "教授",
+   "department": "北京大学集成电路学院 集成电路设计系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波集成电路设计"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/lhl/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "刘军华",
+   "name_en": null,
+   "title": "副教授",
+   "department": "北京大学集成电路学院 集成电路设计系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "射频集成电路与系统设计"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/ljh/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "鲁文高",
+   "name_en": null,
+   "title": "研究员",
+   "department": "北京大学集成电路学院 集成电路设计系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路设计",
+    "新型成像芯片"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/lwg/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "马宇飞",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "北京大学集成电路学院 集成电路设计系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "AI加速器芯片",
+    "存算一体",
+    "算法硬件协同"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/myf/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "汝嘉耘",
+   "name_en": null,
+   "title": "研究员",
+   "department": "北京大学集成电路学院 集成电路设计系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "模拟",
+    "射频 与 混合信号 集成电路设计"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/rjy/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "沈林晓",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "北京大学集成电路学院 集成电路设计系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "高速高精度ADC设计",
+    "传感器接口芯片与系统"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/slx/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "陶耀宇",
+   "name_en": null,
+   "title": "助理教授、博士生导师",
+   "department": "北京大学集成电路学院 集成电路设计系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "芯片与硬件架构设计",
+    "后摩尔集成电路设计",
+    "算法-硬件协同优化"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/tyy/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王源",
+   "name_en": null,
+   "title": "教授",
+   "department": "北京大学集成电路学院 集成电路设计系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计与新计算架构"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/wy/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "唐希源",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "北京大学集成电路学院 集成电路设计系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "高性能模拟",
+    "混合信号集成电路",
+    "数据转换器",
+    "传感器前端"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/txy/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "叶乐",
+   "name_en": null,
+   "title": "副教授",
+   "department": "北京大学集成电路学院 集成电路设计系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "存算一体AI芯片及架构设计",
+    "3D集成芯片及架构设计",
+    "智能物联网AIoT芯片设计",
+    "高能效模拟与数模混合集成电路设计"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/yl/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "于敦山",
+   "name_en": null,
+   "title": "正高级工程师",
+   "department": "北京大学集成电路学院 集成电路设计系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "系统芯片设计方法及数字信号处理电路设计"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/yds/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "燕博南",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "北京大学集成电路学院 集成电路设计系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "存算一体电路与微架构"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/ybn/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张雅聪",
+   "name_en": null,
+   "title": "研究员",
+   "department": "北京大学集成电路学院 集成电路设计系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "模拟/混合信号集成电路设计"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/zyc/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "钟毅",
+   "name_en": null,
+   "title": "助理研究员",
+   "department": "北京大学集成电路学院 集成电路设计系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "新型类脑计算架构",
+    "芯片与系统设计"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/zy/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "杜刚",
+   "name_en": null,
+   "title": "教授",
+   "department": "北京大学集成电路学院 设计自动化与计算系统系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "纳米尺度器件仿真建模与DTCO",
+    "新型图像传感器优化设计"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/dg/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "郭冠男",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "北京大学集成电路学院 设计自动化与计算系统系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计自动化（EDA）",
+    "异构加速EDA算法",
+    "AI 驱动的 EDA技术"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/ggn/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "黄鹏",
+   "name_en": null,
+   "title": "助理教授，研究员",
+   "department": "北京大学集成电路学院 设计自动化与计算系统系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "存内计算芯片与架构",
+    "新型感存算一体器件",
+    "电路与芯片系统"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/hp/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "梁云",
+   "name_en": null,
+   "title": "长聘教授",
+   "department": "北京大学集成电路学院 设计自动化与计算系统系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "电子设计自动化",
+    "软硬件协同合计",
+    "计算机体系结构"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/ly/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李萌",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "北京大学集成电路学院 设计自动化与计算系统系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "高效",
+    "安全的多模态人工智能加速算法和系统"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/lim/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "林亦波",
+   "name_en": null,
+   "title": "长聘副教授",
+   "department": "北京大学集成电路学院 设计自动化与计算系统系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计自动化（EDA）",
+    "机器学习应用",
+    "异构硬件加速算法"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/lyb_ae03bbb7dd1548659c1ffe83edd4a047/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "刘飞",
+   "name_en": null,
+   "title": "长聘副教授、研究员、博导",
+   "department": "北京大学集成电路学院 设计自动化与计算系统系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "新型逻辑和存储器件",
+    "微纳电子器件模型模拟",
+    "纳电子器件与电路协同设计"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/lf/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "刘晓彦",
+   "name_en": null,
+   "title": "教授",
+   "department": "北京大学集成电路学院 设计自动化与计算系统系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微纳电子学中物理效应的模型",
+    "模拟",
+    "DTCO",
+    "TCAD"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/lxy/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "孙广宇",
+   "name_en": null,
+   "title": "长聘教授",
+   "department": "北京大学集成电路学院 设计自动化与计算系统系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "芯片架构设计与自动化 （具体包括：领域定制计算架构",
+    "存算一体架构",
+    "scale-up互连架构",
+    "系统-工艺协同优化等）"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/sgy/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王润声",
+   "name_en": null,
+   "title": "长聘教授",
+   "department": "北京大学集成电路学院 设计自动化与计算系统系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微纳电子新器件",
+    "可靠性与表征技术",
+    "EDA技术",
+    "新范式计算架构与电路"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/wrs/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "卓有为",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "北京大学集成电路学院 设计自动化与计算系统系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "计算机体系结构",
+    "并行计算",
+    "分布式系统"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/zyw/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "胡鸿杰",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "北京大学集成电路学院 集成微纳系统系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "可穿戴传感器与执行器",
+    "新型超声换能器",
+    "集成微纳系统"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/hhj/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "衡文正",
+   "name_en": null,
+   "title": "助理教授/研究员 博士生导师",
+   "department": "北京大学集成电路学院 集成微纳系统系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "化学与生物微机电系统（生化MEMS）",
+    "原位生化分析柔性电子",
+    "可穿戴/摄入/植入电子",
+    "呼吸分析",
+    "人机交互微系统等"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/hwz/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "韩金池",
+   "name_en": null,
+   "title": "特聘研究员，助理教授",
+   "department": "北京大学集成电路学院 集成微纳系统系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "压电传感器与执行器",
+    "声学MEMS",
+    "微纳机电开关",
+    "微纳米组装",
+    "微能源"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/hjc/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李志宏",
+   "name_en": null,
+   "title": "教授",
+   "department": "北京大学集成电路学院 集成微纳系统系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "生物微机电系统",
+    "脑机接口"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/lzh/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "卢奕鹏",
+   "name_en": null,
+   "title": "长聘副教授，研究员",
+   "department": "北京大学集成电路学院 集成微纳系统系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "压电MEMS",
+    "超声MEMS",
+    "传感器与执行器的设计",
+    "微加工",
+    "系统集成以及相关智能微纳系统在消费电子",
+    "工业电子"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/lyp/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "史田田",
+   "name_en": null,
+   "title": "助理研究员",
+   "department": "北京大学集成电路学院 集成微纳系统系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "芯片级原子钟",
+    "高精度量子频率标准",
+    "MEMS量子器件"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/stt/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "盛博文",
+   "name_en": null,
+   "title": "助理研究员",
+   "department": "北京大学集成电路学院 集成微纳系统系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "新型压电薄膜制备",
+    "压电光声MEMS器件研制"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/sbw/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "于民",
+   "name_en": null,
+   "title": "副教授",
+   "department": "北京大学集成电路学院 集成微纳系统系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "硅辐射探测器",
+    "半导体工艺TCAD"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/ym/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "吴文刚",
+   "name_en": null,
+   "title": "教授、博导",
+   "department": "北京大学集成电路学院 集成微纳系统系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微纳机电器件与系统（MEMS/NEMS）",
+    "宽禁带半导体器件及集成电路"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/wwg/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王玮",
+   "name_en": null,
+   "title": "长聘教授",
+   "department": "北京大学集成电路学院 集成微纳系统系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "聚合物微米纳米加工技术",
+    "临床微纳系统技术",
+    "微系统集成与热管理技术"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/ww/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王路达",
+   "name_en": null,
+   "title": "长聘副教授",
+   "department": "北京大学集成电路学院 集成微纳系统系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微纳流体",
+    "微纳传感器",
+    "微米纳米加工技术",
+    "二维分离膜",
+    "离子电子学"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/wld/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "杨振川",
+   "name_en": null,
+   "title": "教授",
+   "department": "北京大学集成电路学院 集成微纳系统系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "物理量MEMS传感器（声学",
+    "流量",
+    "压力等）",
+    "微纳加工技术"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/yzc/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "赵前程",
+   "name_en": null,
+   "title": "正高级工程师",
+   "department": "北京大学集成电路学院 集成微纳系统系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "MEMS惯性技术",
+    "MEMS工艺"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/zqc/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张威",
+   "name_en": null,
+   "title": "研究员",
+   "department": "北京大学集成电路学院 集成微纳系统系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "MEMS器件产品化",
+    "标准化"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/zw/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张锦文",
+   "name_en": null,
+   "title": "教授",
+   "department": "北京大学集成电路学院 集成微纳系统系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微纳米加工技术及其应用研究"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/zjw/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "郑雨晴",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "北京大学集成电路学院 集成微纳系统系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "柔性电子学",
+    "脑机接口",
+    "可穿戴生物传感器"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/zyq/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张驰",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "北京大学集成电路学院 集成微纳系统系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "电子系统热管理与三维集成技术"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/zc/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张盼",
+   "name_en": null,
+   "title": "助理研究员",
+   "department": "北京大学集成电路学院 集成微纳系统系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "微纳智能制造技术",
+    "特种传感与微系统技术",
+    "临床微纳系统技术（BioMEMS）"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/zp/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "何进",
+   "name_en": "Jin He",
+   "title": "教授",
+   "department": "北京大学集成电路学院 集成电路先进制造技术研究中心",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件建模与仿真",
+    "GaN功率器件",
+    "纳米尺度MOS器件",
+    "集成电路设计"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/zzjs/jcdlxjzzjsyjzx1/hj/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "黄如",
+   "name_en": "Ru Huang",
+   "title": "教授",
+   "department": "北京大学集成电路学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "低功耗逻辑与存储器件",
+    "神经形态器件与类脑计算",
+    "边缘智能计算芯片",
+    "IC可靠性EDA"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/ysfc/hr/index.htm",
+   "email": null,
+   "notes": "中国科学院院士、发展中国家科学院院士，IEEE Fellow，曾任北京大学副校长"
+  },
+  {
+   "name_cn": "王阳元",
+   "name_en": "Yangyuan Wang",
+   "title": "教授",
+   "department": "北京大学集成电路学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "新器件与新工艺",
+    "新结构电路",
+    "SOI/CMOS器件模型",
+    "MEMS",
+    "ICCAD"
+   ],
+   "homepage": "https://ic.pku.edu.cn/szdw/ysfc/wyy1/index.htm",
+   "email": null,
+   "notes": "中国科学院院士，IEEE Fellow，IEE Fellow，中芯国际创始人之一"
+  },
+  {
+   "name_cn": "陈景标",
+   "name_en": null,
+   "title": "长聘教授",
+   "department": "北京大学电子学院 量子电子学研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "量子精密测量高端科学仪器",
+    "包括原子选频法拉第激光器",
+    "主动光钟",
+    "国产芯片原子钟及产业化",
+    "小型钙/铷/铯光钟",
+    "新型激光光谱及稳频技术"
+   ],
+   "homepage": "https://ele.pku.edu.cn/info/1023/1055.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "丁力",
+   "name_en": null,
+   "title": "研究员",
+   "department": "北京大学电子学院 物理电子学研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "碳纳米管电子学"
+   ],
+   "homepage": "https://ele.pku.edu.cn/info/1023/1071.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "杜朝海",
+   "name_en": null,
+   "title": "研究员",
+   "department": "北京大学电子学院 应用电子学研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "毫米波与太赫兹电子学"
+   ],
+   "homepage": "https://ele.pku.edu.cn/info/1023/1077.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "贺小伟",
+   "name_en": null,
+   "title": "研究员、助理教授",
+   "department": "北京大学电子学院 物理电子学研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "碳基量子信息器件",
+    "超强光物质相互作用"
+   ],
+   "homepage": "https://ele.pku.edu.cn/info/1023/1091.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "胡又凡",
+   "name_en": null,
+   "title": "长聘教授",
+   "department": "北京大学电子学院 物理电子学研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "纳电子器件"
+   ],
+   "homepage": "https://ele.pku.edu.cn/info/1023/1097.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "黄少云",
+   "name_en": null,
+   "title": "副教授",
+   "department": "北京大学电子学院 物理电子学研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体纳米器件及物理"
+   ],
+   "homepage": "https://ele.pku.edu.cn/info/1023/1101.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李艳萍",
+   "name_en": null,
+   "title": "副教授",
+   "department": "北京大学电子学院 信息与通信研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光电子器件",
+    "光电子集成"
+   ],
+   "homepage": "https://ele.pku.edu.cn/info/1023/1135.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "梁学磊",
+   "name_en": null,
+   "title": "教授",
+   "department": "北京大学电子学院 物理电子学研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "纳米电子学"
+   ],
+   "homepage": "https://ele.pku.edu.cn/info/1023/1139.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "廖建辉",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "北京大学电子学院 物理电子学研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "纳米器件",
+    "纳米材料的物性"
+   ],
+   "homepage": "https://ele.pku.edu.cn/info/1023/1141.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "邱晨光",
+   "name_en": null,
+   "title": "长聘副教授",
+   "department": "北京大学电子学院 物理电子学研究所 / 碳基电子学研究中心",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "亚纳米节点低维晶体管与集成电路",
+    "新机理纳米器件",
+    "三维集成"
+   ],
+   "homepage": "https://ele.pku.edu.cn/info/1023/1164.htm",
+   "email": null,
+   "notes": "北京大学碳基电子学研究中心成员"
+  },
+  {
+   "name_cn": "任全胜",
+   "name_en": null,
+   "title": "副教授",
+   "department": "北京大学电子学院 应用电子学研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "类脑计算",
+    "通用人工智能",
+    "电磁生物学"
+   ],
+   "homepage": "https://ele.pku.edu.cn/info/1023/1167.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "孙伟",
+   "name_en": null,
+   "title": "长聘教授",
+   "department": "北京大学电子学院 物理电子学研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "超小节点碳基器件及加工方法学"
+   ],
+   "homepage": "https://ele.pku.edu.cn/info/1023/1175.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "谭云华",
+   "name_en": null,
+   "title": "副教授",
+   "department": "北京大学电子学院 应用电子学研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微波",
+    "毫米波",
+    "太赫兹电子学",
+    "计算电磁学及其应用"
+   ],
+   "homepage": "https://ele.pku.edu.cn/info/1023/1179.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王胜",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "北京大学电子学院 物理电子学研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "纳米光电子器件"
+   ],
+   "homepage": "https://ele.pku.edu.cn/info/1023/1187.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王延辉",
+   "name_en": null,
+   "title": "长聘教授",
+   "department": "北京大学电子学院 量子电子学研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "铷原子钟",
+    "铯原子钟与精密测量"
+   ],
+   "homepage": "https://ele.pku.edu.cn/info/1023/1193.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王永锋",
+   "name_en": null,
+   "title": "长聘教授",
+   "department": "北京大学电子学院 物理电子学研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "器件表界面",
+    "分子自旋电子学",
+    "电子手性"
+   ],
+   "homepage": "https://ele.pku.edu.cn/info/1023/1195.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "魏贤龙",
+   "name_en": null,
+   "title": "长聘副教授、研究员",
+   "department": "北京大学电子学院 物理电子学研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "片上集成真空电子器件/系统",
+    "片上真空技术",
+    "纳米结构电子发射"
+   ],
+   "homepage": "https://ele.pku.edu.cn/info/1023/1197.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "夏明耀",
+   "name_en": null,
+   "title": "教授",
+   "department": "北京大学电子学院 应用电子学研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "电磁场与微波技术"
+   ],
+   "homepage": "https://ele.pku.edu.cn/info/1023/1205.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "邢英杰",
+   "name_en": null,
+   "title": "副教授",
+   "department": "北京大学电子学院 物理电子学研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "纳米材料",
+    "有机电子器件"
+   ],
+   "homepage": "https://ele.pku.edu.cn/info/1023/1207.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张耿民",
+   "name_en": null,
+   "title": "教授",
+   "department": "北京大学电子学院 物理电子学研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "物理电子学",
+    "纳米电子学"
+   ],
+   "homepage": "https://ele.pku.edu.cn/info/1023/1231.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张志勇",
+   "name_en": null,
+   "title": "长聘教授",
+   "department": "北京大学电子学院 物理电子学研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "纳米电子学"
+   ],
+   "homepage": "https://ele.pku.edu.cn/info/1023/1239.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "赵建业",
+   "name_en": null,
+   "title": "教授",
+   "department": "北京大学电子学院 应用电子学研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "电路与系统"
+   ],
+   "homepage": "https://ele.pku.edu.cn/info/1023/1241.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "解晓鹏",
+   "name_en": null,
+   "title": "长聘副教授",
+   "department": "北京大学电子学院 信息与通信研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光学频率梳",
+    "低噪声光电子器件及其微纳集成"
+   ],
+   "homepage": "https://ele.pku.edu.cn/info/1023/1297.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "花中秋",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "北京大学电子学院 碳基电子学研究中心",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微纳电子学",
+    "碳基化学传感器与系统"
+   ],
+   "homepage": "https://ele.pku.edu.cn/info/1023/1617.htm",
+   "email": null,
+   "notes": "北京大学碳基电子学研究中心成员"
+  },
+  {
+   "name_cn": "张亚杰",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "北京大学电子学院 碳基电子学研究中心",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "器件表界面研究",
+    "表面纳米结构制备与性质研究"
+   ],
+   "homepage": "https://ele.pku.edu.cn/info/1023/1622.htm",
+   "email": null,
+   "notes": "北京大学碳基电子学研究中心成员"
+  },
+  {
+   "name_cn": "曹宇",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "北京大学电子学院 碳基电子学研究中心",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "纳米电子学"
+   ],
+   "homepage": "https://ele.pku.edu.cn/info/1023/1632.htm",
+   "email": null,
+   "notes": "北京大学碳基电子学研究中心成员"
+  },
+  {
+   "name_cn": "常林",
+   "name_en": null,
+   "title": "研究员、助理教授",
+   "department": "北京大学电子学院 信息与通信研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成光子"
+   ],
+   "homepage": "https://ele.pku.edu.cn/info/1023/1894.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "司佳",
+   "name_en": null,
+   "title": "助理研究员",
+   "department": "北京大学电子学院 碳基电子学研究中心",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "碳基新型电子器件与高能效运算芯片的研究"
+   ],
+   "homepage": "https://ele.pku.edu.cn/info/1023/2091.htm",
+   "email": null,
+   "notes": "北京大学碳基电子学研究中心成员"
+  },
+  {
+   "name_cn": "潘多",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "北京大学电子学院 量子电子学研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "新型原子钟"
+   ],
+   "homepage": "https://ele.pku.edu.cn/info/1023/2329.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王德甫",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "北京大学电子学院 碳基电子学研究中心",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微波器件",
+    "毫米波与太赫兹集成电路"
+   ],
+   "homepage": "https://ele.pku.edu.cn/info/1023/2352.htm",
+   "email": null,
+   "notes": "北京大学碳基电子学研究中心成员"
+  },
+  {
+   "name_cn": "刘洪刚",
+   "name_en": null,
+   "title": "研究员",
+   "department": "北京大学电子学院 碳基电子学研究中心",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频与太赫兹芯片",
+    "三维异质集成系统"
+   ],
+   "homepage": "https://ele.pku.edu.cn/info/1023/2410.htm",
+   "email": null,
+   "notes": "北京大学碳基电子学研究中心成员"
+  },
+  {
+   "name_cn": "王兴军",
+   "name_en": null,
+   "title": "长聘教授",
+   "department": "北京大学电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光电子集成芯片与信息系统"
+   ],
+   "homepage": "https://ele.pku.edu.cn/info/1023/2473.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "尹建波",
+   "name_en": null,
+   "title": "研究员、助理教授",
+   "department": "北京大学电子学院 信息与通信研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "高带宽光电子器件",
+    "二维材料光电子动力学"
+   ],
+   "homepage": "https://ele.pku.edu.cn/info/1023/2491.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "舒浩文",
+   "name_en": null,
+   "title": "研究员、助理教授",
+   "department": "北京大学电子学院 信息与通信研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "主要致力于硅基光电子学",
+    "新型集成光电子信息系统",
+    "宽带低功耗光电子器件"
+   ],
+   "homepage": "https://ele.pku.edu.cn/info/1023/2630.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "刘旸",
+   "name_en": null,
+   "title": "研究员、 助理教授",
+   "department": "北京大学电子学院 物理电子学研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "纳米电子材料",
+    "器件与集成"
+   ],
+   "homepage": "https://ele.pku.edu.cn/info/1023/2670.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "陈荣梅",
+   "name_en": null,
+   "title": "助理教授、研究员",
+   "department": "北京大学电子学院 碳基电子学研究中心",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路",
+    "芯片设计"
+   ],
+   "homepage": "https://ele.pku.edu.cn/info/1023/2777.htm",
+   "email": null,
+   "notes": "北京大学碳基电子学研究中心成员"
+  },
+  {
+   "name_cn": "魏楠",
+   "name_en": null,
+   "title": "助理研究员",
+   "department": "北京大学电子学院 碳基电子学研究中心",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "规范模型体系和芯片原型系统"
+   ],
+   "homepage": "https://ele.pku.edu.cn/info/1023/2827.htm",
+   "email": null,
+   "notes": "北京大学碳基电子学研究中心成员"
+  },
+  {
+   "name_cn": "吴朋",
+   "name_en": null,
+   "title": "研究员、助理教授",
+   "department": "北京大学电子学院 物理电子学研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "纳电子学",
+    "二维材料",
+    "低功耗电子学"
+   ],
+   "homepage": "https://ele.pku.edu.cn/info/1023/3607.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "夏煜",
+   "name_en": null,
+   "title": "研究员、助理教授",
+   "department": "北京大学电子学院 碳基电子学研究中心",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "碳基电子材料与器件"
+   ],
+   "homepage": "https://ele.pku.edu.cn/info/1023/3608.htm",
+   "email": null,
+   "notes": "北京大学碳基电子学研究中心成员"
+  },
+  {
+   "name_cn": "肖梦梦",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "北京大学电子学院 碳基电子学研究中心",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "碳基生化传感及系统集成"
+   ],
+   "homepage": "https://ele.pku.edu.cn/info/1023/3609.htm",
+   "email": null,
+   "notes": "北京大学碳基电子学研究中心成员"
+  },
+  {
+   "name_cn": "尹雪帆",
+   "name_en": null,
+   "title": "助理教授 研究员",
+   "department": "北京大学电子学院 信息与通信研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光电子集成器件",
+    "拓扑光子学",
+    "非厄米光子学",
+    "拓扑光子晶体激光器"
+   ],
+   "homepage": "https://ele.pku.edu.cn/info/1023/3671.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "姜建峰",
+   "name_en": null,
+   "title": "研究员、助理教授",
+   "department": "北京大学电子学院 物理电子学研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "纳米电子器件及其系统集成"
+   ],
+   "homepage": "https://ele.pku.edu.cn/info/1023/4635.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "龙冠桦",
+   "name_en": null,
+   "title": "助理研究员",
+   "department": "北京大学电子学院 碳基电子学研究中心",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "柔性电子学",
+    "碳基电子学"
+   ],
+   "homepage": "https://ele.pku.edu.cn/info/1023/6265.htm",
+   "email": null,
+   "notes": "北京大学碳基电子学研究中心成员"
+  },
+  {
+   "name_cn": "彭练矛",
+   "name_en": "Lianmao Peng",
+   "title": "教授",
+   "department": "北京大学电子学院 碳基电子学研究中心",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "碳基电子学",
+    "碳纳米管CMOS集成电路",
+    "碳管晶体管",
+    "狄拉克源晶体管",
+    "纳米电子学"
+   ],
+   "homepage": "https://ele.pku.edu.cn/info/1023/1050.htm",
+   "email": null,
+   "notes": "中国科学院院士，北京大学电子学院院长，国家杰出青年科学基金获得者，长江学者特聘教授，碳基电子学研究中心负责人"
+  },
+  {
+   "name_cn": "陈国璋",
+   "name_en": null,
+   "title": "助理教授/研究员",
+   "department": "北京大学计算机学院 视频与视觉技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "类脑计算"
+   ],
+   "homepage": "https://cs.pku.edu.cn/info/1062/2902.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张杰",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "北京大学计算机学院 数据科学与工程研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "存储系统",
+    "体系结构",
+    "操作系统"
+   ],
+   "homepage": "https://cs.pku.edu.cn/info/1086/1734.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "周迪宇",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "北京大学计算机学院 网络与高能效计算研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "操作系统",
+    "存储系统",
+    "体系结构",
+    "形式化验证",
+    "机器学习"
+   ],
+   "homepage": "https://cs.pku.edu.cn/info/1086/3365.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "杨春",
+   "name_en": null,
+   "title": "助理研究员",
+   "department": "北京大学计算机学院 系统结构研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "计算机系统结构"
+   ],
+   "homepage": "https://cs.pku.edu.cn/info/1085/1727.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "易江芳",
+   "name_en": null,
+   "title": "副教授",
+   "department": "北京大学计算机学院 系统结构研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "计算机体系结构"
+   ],
+   "homepage": "https://cs.pku.edu.cn/info/1085/1724.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "吴文斐",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "北京大学计算机学院 数据科学与工程研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "计算机系统结构"
+   ],
+   "homepage": "https://cs.pku.edu.cn/info/1083/1709.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王韬",
+   "name_en": null,
+   "title": "研究员",
+   "department": "北京大学计算机学院 网络与高能效计算研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "计算机系统结构",
+    "智能机器人系统",
+    "情感与认知计算",
+    "人-机器人交互"
+   ],
+   "homepage": "https://cs.pku.edu.cn/info/1083/3088.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "佟冬",
+   "name_en": null,
+   "title": "副教授",
+   "department": "北京大学计算机学院 系统结构研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "计算机体系结构"
+   ],
+   "homepage": "https://cs.pku.edu.cn/info/1082/1698.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "刘先华",
+   "name_en": null,
+   "title": "教授",
+   "department": "北京大学计算机学院 系统结构研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "计算机体系结构"
+   ],
+   "homepage": "https://cs.pku.edu.cn/info/1071/1691.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "陆俊林",
+   "name_en": null,
+   "title": "教授",
+   "department": "北京大学计算机学院 系统结构研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "计算机体系结构"
+   ],
+   "homepage": "https://cs.pku.edu.cn/info/1071/1693.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "罗国杰",
+   "name_en": null,
+   "title": "长聘副教授",
+   "department": "北京大学计算机学院 网络与高能效计算研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "新型体系结构",
+    "设计自动化"
+   ],
+   "homepage": "https://cs.pku.edu.cn/info/1071/1683.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "刘锋",
+   "name_en": null,
+   "title": "副教授",
+   "department": "北京大学计算机学院 系统结构研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "计算机体系结构"
+   ],
+   "homepage": "https://cs.pku.edu.cn/info/1071/1688.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "管雪涛",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "北京大学计算机学院 系统结构研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "计算机体系结构"
+   ],
+   "homepage": "https://cs.pku.edu.cn/info/1066/1622.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "贾惠柱",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "北京大学计算机学院 视频与视觉技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "媒体计算",
+    "多媒体SoC芯片设计",
+    "视频大数据处理系统"
+   ],
+   "homepage": "https://cs.pku.edu.cn/info/1069/1632.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "程旭",
+   "name_en": null,
+   "title": "教授",
+   "department": "北京大学计算机学院 系统结构研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "计算机系统结构"
+   ],
+   "homepage": "https://cs.pku.edu.cn/info/1062/1607.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张腾",
+   "name_en": null,
+   "title": "助理研究员",
+   "department": "北京大学计算机学院 视频与视觉技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "新一代集成电路与智能计算系统"
+   ],
+   "homepage": "https://cs.pku.edu.cn/szdw/jyxl/info/1012/4500.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "严伟",
+   "name_en": "Wei Yan",
+   "title": "教授",
+   "department": "北京大学软件与微电子学院 集成电路与智能系统系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "数字集成电路前端/后端设计",
+    "视频编解码芯片",
+    "无线通讯电路设计",
+    "集成电路抗电磁干扰",
+    "LED芯片"
+   ],
+   "homepage": "https://ss.pku.edu.cn/sztd/dzxxsssz/8a226916e46740159508d27a49a68f69.htm",
+   "email": null,
+   "notes": "北京大学上海微电子研究院研究员，电路与系统研究所副所长"
+  },
+  {
+   "name_cn": "曹喜信",
+   "name_en": "Xixin Cao",
+   "title": "教授",
+   "department": "北京大学软件与微电子学院 集成电路与智能系统系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "数字媒体SoC设计",
+    "嵌入式系统",
+    "脑机接口"
+   ],
+   "homepage": "https://ss.pku.edu.cn/sztd/dzxxsssz/4684f2bf4ca84d6c9de257c74291ea6c.htm",
+   "email": null,
+   "notes": "数字媒体SOC实验室主任，集成电路与智能系统系副主任，博导"
+  },
+  {
+   "name_cn": "曹健",
+   "name_en": "Jian Cao",
+   "title": "教授",
+   "department": "北京大学软件与微电子学院 集成电路与智能系统系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "嵌入式人工智能",
+    "软硬件协同设计",
+    "智能工厂(AI+IC)",
+    "车规级芯片(电源芯片/信号链芯片)",
+    "计算机视觉"
+   ],
+   "homepage": "https://ss.pku.edu.cn/sztd/dzxxsssz/47a51c2186254c36ab065e5259b0ad4e.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "时广轶",
+   "name_en": "Guangyi Shi",
+   "title": "教授",
+   "department": "北京大学软件与微电子学院 集成电路与智能系统系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS惯性器件",
+    "碳纳米管传感器",
+    "微机电信号处理",
+    "高精度惯导系统"
+   ],
+   "homepage": "https://ss.pku.edu.cn/sztd/dzxxsssz/3611021cf134447caefbe6bb085f27fd.htm",
+   "email": null,
+   "notes": "北京大学微米纳米加工技术国家重点实验室博士后"
+  },
+  {
+   "name_cn": "王振宇",
+   "name_en": "Zhenyu Wang",
+   "title": "副教授",
+   "department": "北京大学软件与微电子学院 集成电路与智能系统系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "微纳尺度原位三维成像",
+    "异质界面集成工艺",
+    "微纳芯片研发",
+    "量子计算相变模型"
+   ],
+   "homepage": "https://ss.pku.edu.cn/sztd/dzxxsssz/a27776ebe2314c9fb1140ba6c70d77d9.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "蔡泽宇",
+   "name_en": null,
+   "title": "特聘研究员",
+   "department": "北京大学深圳研究生院 信息工程学院",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "高精度模拟电路芯片",
+    "低功耗模数转换电路芯片",
+    "传感器接口电路芯片",
+    "智能传感器芯片"
+   ],
+   "homepage": "https://www.ece.pku.edu.cn/info/1045/2137.htm\r",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "陈少川",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "北京大学深圳研究生院 信息工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微纳电子器件",
+    "新型存储技术",
+    "电子材料与器件"
+   ],
+   "homepage": "https://www.ece.pku.edu.cn/info/1045/3132.htm\r",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "崔小乐",
+   "name_en": null,
+   "title": "教授",
+   "department": "北京大学深圳研究生院 信息工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "芯片设计（IC Design）",
+    "硬件安全（Hardware Security）",
+    "可信计算（Dependable Computing）",
+    "智能硬件（Intelligent hardware）"
+   ],
+   "homepage": "https://www.ece.pku.edu.cn/info/1045/2467.htm\r",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张立宁",
+   "name_en": null,
+   "title": "长聘副教授",
+   "department": "北京大学深圳研究生院 信息工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "新型逻辑及存储器件",
+    "电子设计自动化EDA",
+    "神经形态器件和计算系统"
+   ],
+   "homepage": "https://www.ece.pku.edu.cn/info/1045/2486.htm\r",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "周航",
+   "name_en": null,
+   "title": "副教授",
+   "department": "北京大学深圳研究生院 信息工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "钙钛矿太阳能电池",
+    "光电探测器",
+    "印刷电子及柔性生物传感器",
+    "碳基电子器件",
+    "X射线图像传感器"
+   ],
+   "homepage": "https://www.ece.pku.edu.cn/info/1045/2135.htm\r",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王新安",
+   "name_en": null,
+   "title": "教授",
+   "department": "北京大学深圳研究生院 信息工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "SoC芯片与集成微系统研究",
+    "地震监测预测技术研究",
+    "大健康抗衰老技术研究"
+   ],
+   "homepage": "https://www.ece.pku.edu.cn/info/1045/2128.htm\r",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "吴远鹏",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "北京大学深圳研究生院 信息工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微纳半导体材料及器件"
+   ],
+   "homepage": "https://www.ece.pku.edu.cn/info/1045/2945.htm\r",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "杨玉超",
+   "name_en": null,
+   "title": "长聘教授/博雅特聘教授",
+   "department": "北京大学深圳研究生院 信息工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "新型忆阻器与神经动力学计算",
+    "大规模高能效存算一体芯片设计",
+    "双向闭环脑机接口技术"
+   ],
+   "homepage": "https://www.ece.pku.edu.cn/info/1045/2542.htm\r",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张盛东",
+   "name_en": null,
+   "title": "教授",
+   "department": "北京大学深圳研究生院 信息工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "三维集成电路",
+    "显示芯片设计",
+    "图像传感器和生物芯片等"
+   ],
+   "homepage": "https://www.ece.pku.edu.cn/info/1045/2674.htm\r",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张冠张",
+   "name_en": null,
+   "title": "长聘副教授",
+   "department": "北京大学深圳研究生院 信息工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "神经形态器件和电路",
+    "生物电子",
+    "新型存储器",
+    "超临界流体",
+    "薄膜晶体管"
+   ],
+   "homepage": "https://www.ece.pku.edu.cn/info/1045/2512.htm\r",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "苏钰淇",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "北京大学深圳研究生院 信息工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "数字",
+    "混合信号集成电路设计"
+   ],
+   "homepage": "https://www.ece.pku.edu.cn/info/1045/2729.htm\r",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "唐晨宇",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "北京大学深圳研究生院 信息工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "智能可穿戴系统",
+    "生物电子器件",
+    "多模态人工智能",
+    "智慧健康技术",
+    "人机交互与具身智能"
+   ],
+   "homepage": "https://www.ece.pku.edu.cn/info/1045/3169.htm\r",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王少聪",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "北京大学深圳研究生院 信息工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "存算一体",
+    "软硬件协同设计"
+   ],
+   "homepage": "https://www.ece.pku.edu.cn/info/1045/3131.htm\r",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李倩",
+   "name_en": null,
+   "title": "长聘副教授",
+   "department": "北京大学深圳研究生院 信息工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "超快光学",
+    "集成光器件和芯片",
+    "光通信理论与技术"
+   ],
+   "homepage": "https://www.ece.pku.edu.cn/info/1045/2133.htm\r",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "陆磊",
+   "name_en": null,
+   "title": "长聘副教授",
+   "department": "北京大学深圳研究生院 信息工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "薄膜晶体管",
+    "先进显示",
+    "三维集成电路",
+    "柔性电子"
+   ],
+   "homepage": "https://www.ece.pku.edu.cn/info/1045/2139.htm\r",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "焦海龙",
+   "name_en": null,
+   "title": "长聘副教授",
+   "department": "北京大学深圳研究生院 信息工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "低功耗超大规模集成电路设计"
+   ],
+   "homepage": "https://www.ece.pku.edu.cn/info/1045/2719.htm\r",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "金玉丰",
+   "name_en": null,
+   "title": "教授",
+   "department": "北京大学深圳研究生院 信息工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成微系统",
+    "微系统封装技术"
+   ],
+   "homepage": "https://www.ece.pku.edu.cn/info/1045/2129.htm\r",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "沈波",
+   "name_en": "Shen Bo",
+   "title": "教授",
+   "department": "北京大学物理学院 凝聚态物理与材料物理研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "宽禁带半导体材料",
+    "氮化物异质外延生长",
+    "半导体缺陷物理与工程",
+    "GaN基电子器件",
+    "深紫外发光器件"
+   ],
+   "homepage": "https://faculty.pku.edu.cn/shenbo/zh_CN/index.htm",
+   "email": null,
+   "notes": "长江特聘教授（2003）；北京大学博雅特聘教授、博士生导师；北京大学宽禁带半导体研究中心主任"
+  },
+  {
+   "name_cn": "许福军",
+   "name_en": "Xu Fujun",
+   "title": "教授",
+   "department": "北京大学物理学院 凝聚态物理与材料物理研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "III族氮化物宽禁带半导体",
+    "氮化物半导体材料生长动力学",
+    "缺陷控制",
+    "氮化物半导体器件及物理",
+    "半导体光电子器件"
+   ],
+   "homepage": "https://faculty.pku.edu.cn/xufujun/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "于彤军",
+   "name_en": "Yu Tongjun",
+   "title": "教授",
+   "department": "北京大学物理学院 凝聚态物理与材料物理研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "宽禁带半导体",
+    "III族氮化物",
+    "半导体材料与器件"
+   ],
+   "homepage": "https://faculty.pku.edu.cn/yutongjun/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "杨学林",
+   "name_en": "Yang Xuelin",
+   "title": "教授",
+   "department": "北京大学物理学院 凝聚态物理与材料物理研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "GaN基功率电子材料",
+    "射频电子材料MOCVD外延",
+    "杂质与缺陷",
+    "功率/射频电子器件物理",
+    "器件热管理"
+   ],
+   "homepage": "https://faculty.pku.edu.cn/yangxuelin/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "唐宁",
+   "name_en": "Tang Ning",
+   "title": "教授",
+   "department": "北京大学物理学院 凝聚态物理与材料物理研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "宽禁带半导体自旋电子学",
+    "二维半导体谷电子学",
+    "宽禁带半导体深紫外光学",
+    "自旋电子器件"
+   ],
+   "homepage": "https://faculty.pku.edu.cn/tangning/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "戴伦",
+   "name_en": "Dai Lun",
+   "title": "教授",
+   "department": "北京大学物理学院 凝聚态物理与材料物理研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "低维半导体材料",
+    "半导体器件物理"
+   ],
+   "homepage": "https://faculty.pku.edu.cn/dailun/zh_CN/index.htm",
+   "email": null,
+   "notes": "长江特聘教授（2011）"
+  },
+  {
+   "name_cn": "陈志忠",
+   "name_en": "Chen Zhizhong",
+   "title": "教授",
+   "department": "北京大学物理学院 凝聚态物理与材料物理研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "III族氮化物器件物理",
+    "GaN基垂直结构LED",
+    "GaN基微纳米出光结构",
+    "GaN基微纳米器件"
+   ],
+   "homepage": "https://faculty.pku.edu.cn/chenzhizhong/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "冉广照",
+   "name_en": "Ran Guangzhao",
+   "title": "教授",
+   "department": "北京大学物理学院 凝聚态物理与材料物理研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "硅光子学与硅基发光",
+    "纳米半导体材料与器件",
+    "分子半导体材料与器件"
+   ],
+   "homepage": "https://faculty.pku.edu.cn/ranguangzhao/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "赵清",
+   "name_en": "Zhao Qing",
+   "title": "教授",
+   "department": "北京大学物理学院 凝聚态物理与材料物理研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "卤化物半导体光电材料与器件",
+    "离子输运",
+    "固态纳米孔单分子探测"
+   ],
+   "homepage": "https://faculty.pku.edu.cn/zhaoqing/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "刘开辉",
+   "name_en": "Liu Kaihui",
+   "title": "教授",
+   "department": "北京大学物理学院 凝聚态物理与材料物理研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "二维材料表界面调控生长",
+    "米级单晶材料制造",
+    "纳米光谱学表征",
+    "高性能光电探测器件"
+   ],
+   "homepage": "https://faculty.pku.edu.cn/liukaihui/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "廖志敏",
+   "name_en": "Liao Zhimin",
+   "title": "教授",
+   "department": "北京大学物理学院 凝聚态物理与材料物理研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "拓扑电子材料",
+    "量子输运",
+    "新原理信息功能器件"
+   ],
+   "homepage": "https://faculty.pku.edu.cn/liaozhimin/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "吕劲",
+   "name_en": "Lü Jing",
+   "title": "研究员",
+   "department": "北京大学物理学院 凝聚态物理与材料物理研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "DFT+NEGF计算方法",
+    "纳米电子学器件",
+    "纳米光电子学器件",
+    "自旋电子学器件",
+    "低功耗逻辑器件"
+   ],
+   "homepage": "https://faculty.pku.edu.cn/lvjing/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "童玉珍",
+   "name_en": "Tong Yuzhen",
+   "title": "副教授",
+   "department": "北京大学物理学院 凝聚态物理与材料物理研究所",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "宽禁带半导体"
+   ],
+   "homepage": "https://faculty.pku.edu.cn/tongyuzheng/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "刘放",
+   "name_en": "Liu Fang",
+   "title": "副研究员",
+   "department": "北京大学物理学院 凝聚态物理与材料物理研究所",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "氮化物半导体光电子材料",
+    "氮化物半导体光电子器件"
+   ],
+   "homepage": "https://faculty.pku.edu.cn/liufang/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王平",
+   "name_en": "Wang Ping",
+   "title": "助理教授",
+   "department": "北京大学物理学院 凝聚态物理与材料物理研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "氮化物铁电半导体材料",
+    "ScAlN基铁电半导体器件",
+    "GaN基纳米结构及器件",
+    "分子束外延"
+   ],
+   "homepage": "https://faculty.pku.edu.cn/wangping/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王丁",
+   "name_en": "Wang Ding",
+   "title": "助理教授",
+   "department": "北京大学物理学院 凝聚态物理与材料物理研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "新型宽禁带半导体材料与器件",
+    "铁电/多铁调控",
+    "宽禁带半导体异质集成",
+    "高频高功率电子器件"
+   ],
+   "homepage": "https://faculty.pku.edu.cn/wangding/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "鞠光旭",
+   "name_en": "Ju Guangxu",
+   "title": "助理教授",
+   "department": "北京大学物理学院 凝聚态物理与材料物理研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "宽禁带半导体"
+   ],
+   "homepage": "https://faculty.pku.edu.cn/juguangxu/zh_CN/index.htm",
+   "email": null,
+   "notes": "研究员｜博雅青年学者（主页职称栏）"
+  },
+  {
+   "name_cn": "吴孝松",
+   "name_en": "Wu Xiaosong",
+   "title": "教授",
+   "department": "北京大学物理学院 凝聚态物理与材料物理研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "二维材料电学性质",
+    "拓扑材料量子输运",
+    "新原理电子器件",
+    "自旋器件"
+   ],
+   "homepage": "https://faculty.pku.edu.cn/xswu/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "俞大鹏",
+   "name_en": "Yu Dapeng",
+   "title": "教授",
+   "department": "北京大学物理学院 凝聚态物理与材料物理研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "准一维半导体纳米结构",
+    "低维功能结构与物理",
+    "半导体纳米器件"
+   ],
+   "homepage": "https://faculty.pku.edu.cn/yudapeng/zh_CN/index.htm",
+   "email": null,
+   "notes": "中国科学院院士；教育部长江特聘教授；国家杰出青年科学基金（2000）；北京大学电子显微镜实验室主任"
+  },
+  {
+   "name_cn": "陈剑豪",
+   "name_en": "Chen Jianhao",
+   "title": "长聘副教授",
+   "department": "北京大学物理学院 量子材料科学中心",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "低维纳米电子材料",
+    "量子输运测量",
+    "自旋输运与自旋超导",
+    "拓扑材料器件",
+    "低维磁性异质结"
+   ],
+   "homepage": "https://faculty.pku.edu.cn/chenjianhao/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "孙栋",
+   "name_en": "Sun Dong",
+   "title": "教授",
+   "department": "北京大学物理学院 量子材料科学中心",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "石墨烯光电子学",
+    "太赫兹技术与器件",
+    "超快光谱",
+    "二维材料光电器件"
+   ],
+   "homepage": "https://faculty.pku.edu.cn/sundong/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "叶堉",
+   "name_en": "Ye Yu",
+   "title": "教授",
+   "department": "北京大学物理学院 量子材料科学中心",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "二维材料器件设计",
+    "范德华异质结",
+    "纳米尺度光电流测量",
+    "低维材料光电性质"
+   ],
+   "homepage": "https://faculty.pku.edu.cn/yeyu/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "许秀来",
+   "name_en": "Xu Xiulai",
+   "title": "教授",
+   "department": "北京大学物理学院 现代光学研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "低维半导体光电物理与器件",
+    "量子体系光电子学",
+    "半导体激子与光学微腔",
+    "量子信息处理"
+   ],
+   "homepage": "https://faculty.pku.edu.cn/xuxiulai/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王剑威",
+   "name_en": "Wang Jianwei",
+   "title": "教授",
+   "department": "北京大学物理学院 现代光学研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成量子光学",
+    "光量子芯片",
+    "集成量子器件与硬件",
+    "量子计算与量子模拟"
+   ],
+   "homepage": "https://faculty.pku.edu.cn/Qchip/zh_CN/index.htm",
+   "email": null,
+   "notes": "国家杰出青年科学基金（2023）；海外高层次青年人才计划（2018）"
+  },
+  {
+   "name_cn": "胡小永",
+   "name_en": "Hu Xiaoyong",
+   "title": "教授",
+   "department": "北京大学物理学院 现代光学研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光子晶体微纳光子器件",
+    "表面等离激元",
+    "智能光子芯片",
+    "超高速信息处理芯片"
+   ],
+   "homepage": "https://faculty.pku.edu.cn/huxiaoyong/zh_CN/index.htm",
+   "email": null,
+   "notes": "长江特聘教授（2012）"
+  },
+  {
+   "name_cn": "陈志坚",
+   "name_en": "Chen Zhijian",
+   "title": "教授",
+   "department": "北京大学物理学院 现代光学研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "有机电致发光器件",
+    "有机场效应晶体管",
+    "有机光折变材料",
+    "器件结构设计"
+   ],
+   "homepage": "https://faculty.pku.edu.cn/chenzhijian/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张艳锋",
+   "name_en": "Zhang Yanfeng",
+   "title": "教授",
+   "department": "北京大学材料科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "晶圆级二维半导体材料",
+    "二维异质结构可控制备",
+    "二维半导体电子器件",
+    "二维光电子器件",
+    "MoS2晶圆级制备"
+   ],
+   "homepage": "https://www.mse.pku.edu.cn/info/1223/1258.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张锦",
+   "name_en": "Zhang Jin",
+   "title": "教授",
+   "department": "北京大学材料科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "石墨烯",
+    "纳米碳材料",
+    "纳米器件物理与化学"
+   ],
+   "homepage": "https://www.mse.pku.edu.cn/info/1223/1256.htm",
+   "email": null,
+   "notes": "中国科学院院士；北京大学深圳研究生院院长；北京石墨烯研究院副院长（兼）；教育部纳米器件物理与化学重点实验室副主任"
+  },
+  {
+   "name_cn": "林立",
+   "name_en": "Lin Li",
+   "title": "特聘研究员",
+   "department": "北京大学材料科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "二维材料可控制备",
+    "石墨烯单晶合成",
+    "范德华异质结",
+    "二维材料高性能器件"
+   ],
+   "homepage": "https://www.mse.pku.edu.cn/info/1209/1752.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "刘磊",
+   "name_en": "Liu Lei",
+   "title": "长聘副教授",
+   "department": "北京大学材料科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "二维非晶材料",
+    "二维半导体信息器件",
+    "硅基集成电路",
+    "芯片热管理材料"
+   ],
+   "homepage": "https://www.mse.pku.edu.cn/info/1209/1245.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "曹安源",
+   "name_en": "Cao Anyuan",
+   "title": "教授",
+   "department": "北京大学材料科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "碳纳米管",
+    "半导体纳米材料",
+    "纳米电子器件",
+    "集成微电子器件",
+    "薄膜型太阳能电池"
+   ],
+   "homepage": "https://www.mse.pku.edu.cn/info/1200/1321.htm",
+   "email": null,
+   "notes": null
+  }
+ ]
 }

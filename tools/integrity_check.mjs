@@ -1,10 +1,10 @@
-// integrity_check.mjs — 用 Crossref 逐 DOI 核查撤稿 / 更正 / 关注声明（update-to 关系）
+﻿// integrity_check.mjs — 用 Crossref 逐 DOI 核查撤稿 / 更正 / 关注声明（update-to 关系）
 // 用法: node integrity_check.mjs <topN|all> [schoolKey]
 import fs from 'node:fs';
 import path from 'node:path';
 
 const PROC = 'E:\\ytm\\mentor-db\\data\\processed';
-const UA = 'mentor-db/1.0 (mailto:mentor.db.builder@gmail.com)';
+const UA = 'mentor-db/1.0 (mailto:ic-mentor-db@users.noreply.github.com)';
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const CONC = Number(process.env.CONC || 10);
 
@@ -40,7 +40,7 @@ async function worker() {
     const t = tasks[i];
     let rec = { name: t.person.name_cn, school: t.person.school, doi: t.doi, year: t.year, title: t.title, status: 'ok', updates: [] };
     try {
-      const r = await fetch(`https://api.crossref.org/works/${encodeURIComponent(t.doi)}?mailto=mentor.db.builder@gmail.com`,
+      const r = await fetch(`https://api.crossref.org/works/${encodeURIComponent(t.doi)}?mailto=ic-mentor-db@users.noreply.github.com`,
         { headers: { 'User-Agent': UA } });
       if (r.ok) {
         const m = (await r.json()).message || {};

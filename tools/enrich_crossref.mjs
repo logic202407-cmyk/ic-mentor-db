@@ -1,11 +1,11 @@
-// enrich_crossref.mjs — 逐位导师：Crossref「作者名 + 机构」检索 → 精确匹配其论文（含会议）
+﻿// enrich_crossref.mjs — 逐位导师：Crossref「作者名 + 机构」检索 → 精确匹配其论文（含会议）
 // 用法: node enrich_crossref.mjs [schoolKey ...]
 import fs from 'node:fs';
 import path from 'node:path';
 
 const PROC = 'E:\\ytm\\mentor-db\\data\\processed';
-const UA = 'mentor-db/1.0 (mailto:mentor.db.builder@gmail.com)';
-const MAILTO = 'mentor.db.builder@gmail.com';
+const UA = 'mentor-db/1.0 (mailto:ic-mentor-db@users.noreply.github.com)';
+const MAILTO = 'ic-mentor-db@users.noreply.github.com';
 const CONCURRENCY = Number(process.env.CONC || 8);
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const SELECT = 'DOI,title,author,container-title,published,type,is-referenced-by-count,ISSN,short-container-title';

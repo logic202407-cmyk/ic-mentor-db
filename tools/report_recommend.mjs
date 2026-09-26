@@ -9,11 +9,11 @@ const rows = JSON.parse(fs.readFileSync(path.join(PROC, 'curated.json'), 'utf8')
 const SHORT = { 清华大学深圳国际研究生院: '清华深研院', 清华大学: '清华', 复旦大学: '复旦', 上海交通大学: '上交', 浙江大学: '浙大', 南京大学: '南大', 中国科学技术大学: '中科大', 北京大学: '北大', 东南大学: '东南', 西安电子科技大学: '西电', 电子科技大学: '成电' };
 const sh = (s) => SHORT[s] || s;
 const TIER_LABEL = { T0: '顶刊顶会密集（≥72）', T1: '一流产出稳定（58–72）', T2: '有稳定产出（42–58）', T3: '公开证据较少（26–42）', T4: '公开证据不足（<26 或论文<3）' };
-const HDR = '| # | 姓名 | 学校 | 职称 | 主方向 | 综合分 | 梯队 | S/A | 论文 | 近3年 | 引用 | 学生(估) | 招生 | 邮箱 | 主页 |\n|--:|:--|:--|:--|:--|--:|:--:|:--|--:|--:|--:|--:|:--|:--|:--|';
+const HDR = '| # | 姓名 | 学校 | 职称 | 主方向 | 综合分 | 梯队 | S/A | 论文 | 近3年 | 引用 | 学生(估) | 招生 | 主页 |\n|--:|:--|:--|:--|:--|--:|:--:|:--|--:|--:|--:|--:|:--|:--|';
 
 function line(d, i) {
   const rc = d.recruit_signal_count > 0 ? '✅在招' : '未明';
-  return `| ${i} | **${d.name}** | ${sh(d.school)} | ${(d.title || '—').replace(/\|/g, '/')} | ${d.group_name} | ${d.composite} | ${d.tier} | ${d.S}/${d.A} | ${d.n_ic_papers} | ${d.recent3} | ${d.citations} | ${d.n_students_est || 0} | ${rc} | ${d.email || '—'} | ${d.homepage ? '[主页](' + d.homepage + ')' : '—'} |`;
+  return `| ${i} | **${d.name}** | ${sh(d.school)} | ${(d.title || '—').replace(/\|/g, '/')} | ${d.group_name} | ${d.composite} | ${d.tier} | ${d.S}/${d.A} | ${d.n_ic_papers} | ${d.recent3} | ${d.citations} | ${d.n_students_est || 0} | ${rc} | ${d.homepage ? '[主页](' + d.homepage + ')' : '—'} |`;
 }
 function tbl(list, n) {
   return HDR + '\n' + list.slice(0, n).map((d, i) => line(d, i + 1)).join('\n');
@@ -38,7 +38,9 @@ let md = `# 集成电路设计与 AI 交叉方向 · 导师推荐与招生信息
 > 本项目采用 CC BY-NC-SA 4.0（**非商业性使用**），**禁止将文中联系方式用于批量群发或其他骚扰行为**；如需更正或删除信息，请提 Issue，我们将在 7 个工作日内处理。
 
 > **覆盖院校（11 所）**：清华大学 · 清华大学深圳国际研究生院 · 北京大学 · 复旦大学 · 上海交通大学 · 浙江大学 · 南京大学 · 中国科学技术大学 · 东南大学 · 西安电子科技大学 · 电子科技大学
-> **本页范围**：从 2114 位导师的全库排名中，筛出 **${rows.length} 位**方向高度相关者（数字/AI 芯片 · 体系结构 · 存算一体 · 模拟/电源 · EDA · 类脑 · 芯片安全 · 算力相关器件）
+> **收录范围**：从 2114 位导师的全库排名中收录 **${rows.length} 位**，分两类：
+> ① **集成电路设计与 AI 交叉方向** ${rows.filter((d) => d.scope === 'focus').length} 位（数字/AI 芯片 · 体系结构 · 存算一体 · 模拟/电源 · EDA · 类脑 · 芯片安全 · 算力相关器件）；
+> ② **其他 IC 方向但主页明确在招** ${rows.filter((d) => d.scope === 'recruiting').length} 位（射频/毫米波 · 光电/硅光 · MEMS/生医 · 器件/工艺 · 量子等）。
 > **招生信息覆盖**：抓取 ${rows.filter((d) => d.page_status.startsWith('ok')).length} 位导师的个人/课题组主页，其中 **${recruiting.length} 位**主页有明确招生表述
 > **数据来源**：各高校官方师资页面 + Crossref 文献库（2008–2026）+ Crossref 撤稿/更正关系核查
 > **截至日期**：2026-09-24
@@ -112,7 +114,7 @@ for (const d of recruiting) {
   md += `- **方向**：${d.group_names.join(' · ')}\n`;
   md += `- **学术**：综合分 ${d.composite}（${d.tier}）｜ 顶刊顶会 S${d.S} / 一流 A${d.A} ｜ 论文 ${d.n_ic_papers} 篇 ｜ 近 3 年 ${d.recent3} 篇 ｜ 引用 ${d.citations}\n`;
   md += `- **组内学生（估）**：${d.n_students_est || 0} 人 ｜ 学生一作占比：${d.student_led_ratio === null ? '—' : Math.round(d.student_led_ratio * 100) + '%'}\n`;
-  md += `- **邮箱**：\`${d.email || '主页未公开，需从院系页面获取'}\`\n`;
+  md += `- **联系方式**：本项目**不收录邮箱**，请通过个人/课题组主页获取\n`;
   md += `- **主页**：${d.homepage || '—'}\n`;
   md += `- **官方方向**：${(d.research_keywords || []).join('、')}\n\n`;
   md += `**主页招生原话**：\n`;

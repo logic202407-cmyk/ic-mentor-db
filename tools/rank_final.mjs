@@ -91,7 +91,7 @@ fs.writeFileSync(path.join(PROC, 'mentor_ranked.json'), JSON.stringify(rows, nul
 const HDR = ['rank', 'composite', 'name_cn', 'school', 'title', 'department', 'primary_direction', 'S', 'A', 'B',
   'n_ic_papers', 'recent3', 'citations', 'cite_per_paper', 'advisor_first_ratio', 'student_led_ratio', 'n_students_est',
   'is_phd_advisor', 'confidence', 'recall_risk', 'dim_strength', 'dim_density', 'dim_impact', 'dim_active', 'dim_ethics',
-  'dim_team', 'dim_title', 'retracted', 'corrected', 'top_venues', 'research_keywords', 'homepage', 'email', 'notes'];
+  'dim_team', 'dim_title', 'retracted', 'corrected', 'top_venues', 'research_keywords', 'homepage', 'notes'];
 const csv = [HDR.join(',')].concat(rows.map((r) => HDR.map((h) => {
   let v;
   if (h.startsWith('dim_')) v = r.dim[h.slice(4)];

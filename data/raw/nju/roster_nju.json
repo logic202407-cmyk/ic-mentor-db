@@ -1,2370 +1,2370 @@
 {
-  "school": "南京大学",
-  "school_key": "nju",
-  "harvested_at": "2026-09-22",
-  "sources": [
-    "https://ic.nju.edu.cn/qyml/list.htm",
-    "https://ic.nju.edu.cn/qyml/list2.htm",
-    "https://ic.nju.edu.cn/56606/list.htm",
-    "https://ese.nju.edu.cn/qyml/list.htm",
-    "https://ese.nju.edu.cn/30444/list2.htm",
-    "https://ese.nju.edu.cn/22542/list.htm",
-    "https://ese.nju.edu.cn/_wp3services/generalQuery?queryObj=teacherHome",
-    "https://cs.nju.edu.cn/1651/list.htm",
-    "https://cs.nju.edu.cn/2639/list.htm",
-    "https://cs.nju.edu.cn/2640/list.htm",
-    "https://cs.nju.edu.cn/zzp/list.htm",
-    "https://eng.nju.edu.cn/qyml2/list.htm",
-    "https://eng.nju.edu.cn/43269/list.htm",
-    "https://eng.nju.edu.cn/_wp3services/generalQuery?queryObj=teacherHome",
-    "https://physics.nju.edu.cn/szdw/qbmd/agw/index.html",
-    "https://physics.nju.edu.cn/kxyj/yjfx/"
-  ],
-  "coverage_note": "【已覆盖】① 集成电路学院（ic.nju.edu.cn）：苏州校区，2021年成立。「全院名录」2页共24名专任教师，逐人抓取个人主页，全员收录（教授/特聘教授/副教授/助理教授/特任副研究员）。② 电子科学与工程学院（ese.nju.edu.cn）：「按岗位」名录179名专任教师逐人抓取个人主页，另抓「按系部」名录4个系（电子工程系31、微电子与光电子学系49、信息电子学系35、通信工程系35）共150人，并经 teacherHome 接口取得151人的学科归属；按微电子学与固体电子学、物理电子学、电路与系统、电磁场与微波技术/无线电物理、信号与信息处理、通信与信息系统六个学科筛选收录。③ 现代工程与应用科学学院（eng.nju.edu.cn）：经 teacherHome 接口取得125名教学科研岗教师名单，逐人抓取个人主页并解析「研究领域/研究方向」，仅保留光电/集成光子/半导体器件/存储器件方向，纯材料、能源、生物、声学方向未收。④ 物理学院（physics.nju.edu.cn）：「全部名单」231人逐人抓取主页，并以学院「研究方向」页的「半导体物理与新原理器件」「固态量子计算和量子模拟」「类脑智能与未来计算（器件方向）」名单为准筛选。【未覆盖及原因】① 计算机学院：现行「教授」（66人）、「副教授」（18人）、「准长聘」（29人）三个名录逐页抓取并全文检索，无集成电路设计、EDA 或处理器体系结构方向在职教师（教师方向集中于分布式系统、编译与程序分析、数据库、机器学习、软件工程等），本方向计 0 人；另注：cs.nju.edu.cn/swang（Shuai Wang，计算机体系结构/片上网络方向）已不在现行师资名录中，故未收录。② 物理学院纯凝聚态理论、材料生长、光谱学、声学、粒子与核物理、软物质与生物物理方向未收。③ 各院系实验技术、专职科研（非教学科研岗）、行政管理、离退休、博士后、兼职/客座教授均未收；未收 ESE「电子信息专业实验教学中心」18人、「微加工中心」2人、「学院行政」14人。④ 抓取限制：eng.nju.edu.cn 有8名教师个人主页跳转学校统一身份认证无法访问，其姓名取自接口元数据但无方向信息，故未收录；ese.nju.edu.cn 有约26名教师个人主页为空页（仅导航，无职称与研究方向），无法核实，未收录；physics.nju.edu.cn 谭新生、张志勇个人主页无研究方向正文，方向依据学院「研究方向」页名单；ese.nju.edu.cn 个别教师（如卜晓峰）主页未公布邮箱，按不确定填 null 处理；11人职称未在页面公布，按不确定填 null 处理。【规模】合计入库 157 人：集成电路学院 24人、电子科学与工程学院 104人、现代工程与应用科学学院 17人、物理学院 12人；其中标注为博导 82 人，含邮箱 143 人、含个人主页链接 157 人。",
-  "faculty": [
-    {
-      "name_cn": "程文",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "MEMS/传感器",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ic.nju.edu.cn/f1/4f/c56672a717135/page.htm",
-      "email": "wen.cheng@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "刘峰源",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "类脑/神经形态芯片",
-        "半导体器件与工艺",
-        "MEMS/传感器",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ic.nju.edu.cn/d4/d3/c56672a840915/page.htm",
-      "email": "fengyuanliu@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "邱红松",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "射频/毫米波/电磁场",
-        "自旋电子/存储芯片",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ic.nju.edu.cn/af/81/c56672a634753/page.htm",
-      "email": "qiuhongsong@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "谢航",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "存算一体",
-        "自旋电子/存储芯片",
-        "MEMS/传感器",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ic.nju.edu.cn/b6/07/c56672a767495/page.htm",
-      "email": "xiehang@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "王欣然",
-      "name_en": null,
-      "title": "教授",
-      "department": "集成电路学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "二维材料器件",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ic.nju.edu.cn/af/8a/c56672a634762/page.htm",
-      "email": "xrwang@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "曹鹏",
-      "name_en": null,
-      "title": "助理教授",
-      "department": "集成电路学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "模拟/混合信号集成电路",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ic.nju.edu.cn/b6/0a/c56672a767498/page.htm",
-      "email": "pengcao@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "傅玉祥",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "数字集成电路/体系结构",
-        "EDA/设计自动化",
-        "通信与信号处理",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ic.nju.edu.cn/af/87/c56672a634759/page.htm",
-      "email": "yuxiangfu@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "杜力",
-      "name_en": null,
-      "title": "教授",
-      "department": "集成电路学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "数字集成电路/体系结构",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ic.nju.edu.cn/26/f4/c56672a730868/page.htm",
-      "email": "ldu@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "区永曦",
-      "name_en": null,
-      "title": "助理教授",
-      "department": "集成电路学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "存算一体",
-        "自旋电子/存储芯片",
-        "半导体器件与工艺",
-        "二维材料器件",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ic.nju.edu.cn/c1/38/c56672a770360/page.htm",
-      "email": "yxou@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "鲁金铭",
-      "name_en": null,
-      "title": "助理教授",
-      "department": "集成电路学院",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "集成电路设计",
-        "数字集成电路/体系结构",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ic.nju.edu.cn/a7/51/c56672a829265/page.htm",
-      "email": "jmlu@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "徐永兵",
-      "name_en": null,
-      "title": "特聘教授",
-      "department": "集成电路学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "自旋电子/存储芯片",
-        "半导体器件与工艺",
-        "光电子/集成光子",
-        "MEMS/传感器",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ic.nju.edu.cn/1a/53/c56672a727635/page.htm",
-      "email": "ybxu@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "夏洋",
-      "name_en": null,
-      "title": "教授",
-      "department": "集成电路学院",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "半导体器件与工艺",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ic.nju.edu.cn/3a/69/c56672a801385/page.htm",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "丁业成",
-      "name_en": null,
-      "title": "特任副研究员",
-      "department": "集成电路学院",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "半导体器件与工艺",
-        "宽禁带半导体",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ic.nju.edu.cn/b9/1a/c56672a833818/page.htm",
-      "email": "yechengding@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "丁孙安",
-      "name_en": null,
-      "title": "特聘教授",
-      "department": "集成电路学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "半导体器件与工艺",
-        "宽禁带半导体",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ic.nju.edu.cn/af/88/c56672a634760/page.htm",
-      "email": "dingsunan@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "李涛涛",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "半导体器件与工艺",
-        "二维材料器件"
-      ],
-      "homepage": "https://ic.nju.edu.cn/af/80/c56672a634752/page.htm",
-      "email": "ttli@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "陆显扬",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "存算一体",
-        "自旋电子/存储芯片",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ic.nju.edu.cn/db/82/c56672a842626/page.htm",
-      "email": "xylu@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "武桐",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "EDA/设计自动化",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ic.nju.edu.cn/30/04/c56672a798724/page.htm",
-      "email": "wut@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "王启晶",
-      "name_en": null,
-      "title": "助理教授",
-      "department": "集成电路学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "类脑/神经形态芯片",
-        "半导体器件与工艺",
-        "光电子/集成光子",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ic.nju.edu.cn/af/85/c56672a634757/page.htm",
-      "email": "qijingwang@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "陈浩",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "自旋电子/存储芯片",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ic.nju.edu.cn/cc/66/c56672a838758/page.htm",
-      "email": "haochen26@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "朱马光",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "二维材料器件",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ic.nju.edu.cn/af/83/c56672a634755/page.htm",
-      "email": "mgzhu@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "邹宁睦",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "半导体器件与工艺",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ic.nju.edu.cn/b0/2b/c56672a634923/page.htm",
-      "email": "nzou@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "李卫胜",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "半导体器件与工艺",
-        "二维材料器件",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ic.nju.edu.cn/bd/d3/c56672a703955/page.htm",
-      "email": "wsli@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "田静",
-      "name_en": null,
-      "title": "助理教授",
-      "department": "集成电路学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ic.nju.edu.cn/af/46/c56672a634694/page.htm",
-      "email": "tianjing@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "庄喆",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "宽禁带半导体",
-        "光电子/集成光子",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ic.nju.edu.cn/c6/71/c56672a771697/page.htm",
-      "email": "zzhuang@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "柏业超",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 通信工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "通信与信号处理"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465301",
-      "email": "ychbai@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "陈敦军",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 微电子与光电子学系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "半导体器件与工艺",
-        "宽禁带半导体",
-        "光电子/集成光子",
-        "MEMS/传感器"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465290",
-      "email": "djchen@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "曹汛",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 通信工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "光电子/集成光子",
-        "通信与信号处理",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465292",
-      "email": "caoxun@nju.edu.cn",
-      "notes": "国家杰青、国家优青"
-    },
-    {
-      "name_cn": "蔡青",
-      "name_en": null,
-      "title": "助理教授",
-      "department": "电子科学与工程学院 微电子与光电子学系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "宽禁带半导体",
-        "光电子/集成光子"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30451&articleId=701673",
-      "email": "caiqing@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "卜晓峰",
-      "name_en": null,
-      "title": "副教授",
-      "department": "电子科学与工程学院 信息电子学系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "集成电路设计",
-        "模拟/混合信号集成电路",
-        "数字集成电路/体系结构",
-        "半导体器件与工艺",
-        "光电子/集成光子",
-        "MEMS/传感器"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30452&articleId=465337",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "陈健",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 电子工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "射频/毫米波/电磁场",
-        "超导/量子器件",
-        "通信与信号处理"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465288",
-      "email": "chenj63@nju.edu.cn",
-      "notes": "长江学者"
-    },
-    {
-      "name_cn": "陈平",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 电子工程系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "射频/毫米波/电磁场",
-        "电磁场与超材料",
-        "通信与信号处理"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465285",
-      "email": "chenping@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "陈鹏",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 微电子与光电子学系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "半导体器件与工艺",
-        "宽禁带半导体",
-        "光电子/集成光子"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465287",
-      "email": "pchen@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "陈克",
-      "name_en": null,
-      "title": "副教授",
-      "department": "电子科学与工程学院 电子工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "射频/毫米波/电磁场",
-        "自旋电子/存储芯片",
-        "电磁场与超材料",
-        "通信与信号处理"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30450&articleId=465076",
-      "email": "ke.chen@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "陈颖",
-      "name_en": null,
-      "title": null,
-      "department": "电子科学与工程学院 信息电子学系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "生物医疗电子",
-        "通信与信号处理",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465282",
-      "email": "yingchen@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "范克彬",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 电子工程系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "射频/毫米波/电磁场",
-        "光电子/集成光子",
-        "电磁场与超材料"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30450&articleId=514600",
-      "email": "kebin.fan@nju.edu.cn",
-      "notes": "全球高被引科学家"
-    },
-    {
-      "name_cn": "杜源",
-      "name_en": null,
-      "title": "副教授",
-      "department": "电子科学与工程学院 通信工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "模拟/混合信号集成电路",
-        "射频/毫米波/电磁场",
-        "数字集成电路/体系结构",
-        "存算一体",
-        "类脑/神经形态芯片"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30453&articleId=465224",
-      "email": "yuandu@nju.edu.cn",
-      "notes": "国家级青年人才、海外高层次人才"
-    },
-    {
-      "name_cn": "陈相宁",
-      "name_en": null,
-      "title": "副教授",
-      "department": "电子科学与工程学院 通信工程系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "通信与信号处理"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465284",
-      "email": "shining@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "费再瑶",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 微电子与光电子学系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "二维材料器件",
-        "光电子/集成光子"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30451&articleId=512371",
-      "email": "zyfei@nju.edu.cn",
-      "notes": "国家级青年人才、海外高层次人才"
-    },
-    {
-      "name_cn": "都思丹",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 信息电子学系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路与系统"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465280",
-      "email": "coff128@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "葛云",
-      "name_en": null,
-      "title": null,
-      "department": "电子科学与工程学院 信息电子学系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "光电子/集成光子",
-        "生物医疗电子",
-        "通信与信号处理"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465267",
-      "email": "geyun@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "何道伟",
-      "name_en": null,
-      "title": "副教授",
-      "department": "电子科学与工程学院 微电子与光电子学系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "二维材料器件",
-        "MEMS/传感器"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465259",
-      "email": "hedwei@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "顾书林",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 微电子与光电子学系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "半导体器件与工艺",
-        "宽禁带半导体"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465265",
-      "email": "slgu@nju.edu.cn",
-      "notes": "国家杰青"
-    },
-    {
-      "name_cn": "冯一军",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 电子工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "射频/毫米波/电磁场",
-        "光电子/集成光子",
-        "电磁场与超材料",
-        "通信与信号处理"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465272",
-      "email": "yjfeng@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "胡雪梅",
-      "name_en": null,
-      "title": "副教授",
-      "department": "电子科学与工程学院 通信工程系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "光电子/集成光子"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30453&articleId=465192",
-      "email": "xuemeihu@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "胡泽华",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 微电子与光电子学系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "超导/量子器件",
-        "半导体器件与工艺",
-        "光电子/集成光子"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30451&articleId=633615",
-      "email": "zehuahu@nju.edu.cn",
-      "notes": "国家优青"
-    },
-    {
-      "name_cn": "贾小氢",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 电子工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "射频/毫米波/电磁场",
-        "超导/量子器件",
-        "光电子/集成光子",
-        "电磁场与超材料",
-        "通信与信号处理"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465252",
-      "email": "xqjia@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "何爱军",
-      "name_en": null,
-      "title": "副教授",
-      "department": "电子科学与工程学院 信息电子学系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "生物医疗电子"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465260",
-      "email": "haj@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "何亮",
-      "name_en": null,
-      "title": "研究员",
-      "department": "电子科学与工程学院 微电子与光电子学系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "半导体器件与工艺"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465257",
-      "email": "heliang@nju.edu.cn",
-      "notes": "国家级青年人才、海外高层次人才"
-    },
-    {
-      "name_cn": "黄晓林",
-      "name_en": null,
-      "title": "副教授",
-      "department": "电子科学与工程学院",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "通信与信号处理"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465255",
-      "email": "xlhuang@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "康琳",
-      "name_en": null,
-      "title": null,
-      "department": "电子科学与工程学院 电子工程系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "超导/量子器件",
-        "半导体器件与工艺"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465245",
-      "email": "kanglin@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "李炳均",
-      "name_en": null,
-      "title": "副教授",
-      "department": "电子科学与工程学院 微电子与光电子学系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "半导体器件与工艺",
-        "宽禁带半导体",
-        "光电子/集成光子"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30451&articleId=799593",
-      "email": "bingjun.li@nju.edu.cn",
-      "notes": "国家级青年人才、海外高层次人才"
-    },
-    {
-      "name_cn": "贾琨鹏",
-      "name_en": null,
-      "title": "准聘副教授",
-      "department": "电子科学与工程学院 通信工程系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "射频/毫米波/电磁场",
-        "光电子/集成光子",
-        "电磁场与超材料"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30453&articleId=647801",
-      "email": "jiakunpeng@nju.edu.cn",
-      "notes": "国家级青年人才"
-    },
-    {
-      "name_cn": "姜田",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 电子工程系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "射频/毫米波/电磁场",
-        "电磁场与超材料",
-        "通信与信号处理"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30450&articleId=465086",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "寇君龙",
-      "name_en": null,
-      "title": "副教授",
-      "department": "电子科学与工程学院 微电子与光电子学系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "半导体器件与工艺",
-        "光电子/集成光子",
-        "MEMS/传感器",
-        "生物医疗电子",
-        "通信与信号处理",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30451&articleId=565573",
-      "email": "jlkou@nju.edu.cn",
-      "notes": "国家级青年人才、海外高层次人才"
-    },
-    {
-      "name_cn": "黎松林",
-      "name_en": null,
-      "title": null,
-      "department": "电子科学与工程学院 微电子与光电子学系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "存算一体",
-        "自旋电子/存储芯片",
-        "半导体器件与工艺",
-        "二维材料器件"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465244",
-      "email": "sli@nju.edu.cn",
-      "notes": "国家级青年人才"
-    },
-    {
-      "name_cn": "李丽",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 微电子与光电子学系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "数字集成电路/体系结构",
-        "半导体器件与工艺",
-        "通信与信号处理",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465235",
-      "email": "lili@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "刘斌",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 微电子与光电子学系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "半导体器件与工艺",
-        "宽禁带半导体",
-        "光电子/集成光子",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465227",
-      "email": "bliu@nju.edu.cn",
-      "notes": "国家优青、长江学者"
-    },
-    {
-      "name_cn": "李勃",
-      "name_en": null,
-      "title": "副教授",
-      "department": "电子科学与工程学院 通信工程系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "通信与信号处理"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465240",
-      "email": "liboee@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "李杨",
-      "name_en": null,
-      "title": "副教授",
-      "department": "电子科学与工程学院 信息电子学系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "光电子/集成光子",
-        "生物医疗电子",
-        "通信与信号处理"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465233",
-      "email": "yogo@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "吕阳阳",
-      "name_en": null,
-      "title": "助理教授",
-      "department": "电子科学与工程学院",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "射频/毫米波/电磁场",
-        "超导/量子器件"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=765939",
-      "email": "yylyu@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "刘波",
-      "name_en": null,
-      "title": "青年教授",
-      "department": "电子科学与工程学院 微电子与光电子学系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "自旋电子/存储芯片",
-        "二维材料器件",
-        "光电子/集成光子"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30451&articleId=633622",
-      "email": "boliu@nju.edu.cn",
-      "notes": "国家优青"
-    },
-    {
-      "name_cn": "李昀",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 微电子与光电子学系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "半导体器件与工艺",
-        "光电子/集成光子"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465231",
-      "email": "yli@nju.edu.cn",
-      "notes": "国家杰青、国家优青"
-    },
-    {
-      "name_cn": "彭成磊",
-      "name_en": null,
-      "title": "副教授",
-      "department": "电子科学与工程学院 信息电子学系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "数字集成电路/体系结构",
-        "类脑/神经形态芯片",
-        "光电子/集成光子",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465206",
-      "email": "pcl@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "马展",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 通信工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "类脑/神经形态芯片",
-        "光电子/集成光子",
-        "通信与信号处理"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465218",
-      "email": "mazhan@nju.edu.cn",
-      "notes": "国家优青"
-    },
-    {
-      "name_cn": "林军",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 通信工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "数字集成电路/体系结构",
-        "半导体器件与工艺",
-        "通信与信号处理",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465229",
-      "email": "jlin@nju.edu.cn",
-      "notes": "国家高层次人才特殊支持计划"
-    },
-    {
-      "name_cn": "刘红星",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 信息电子学系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "生物医疗电子",
-        "通信与信号处理"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465225",
-      "email": "njhxliu@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "马忠元",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 微电子与光电子学系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "类脑/神经形态芯片",
-        "半导体器件与工艺",
-        "二维材料器件",
-        "光电子/集成光子",
-        "通信与信号处理",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465216",
-      "email": "zyma@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "沈凡翔",
-      "name_en": null,
-      "title": "助理教授",
-      "department": "电子科学与工程学院 信息电子学系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "集成电路设计",
-        "数字集成电路/体系结构",
-        "存算一体",
-        "类脑/神经形态芯片",
-        "半导体器件与工艺",
-        "光电子/集成光子"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30452&articleId=765961",
-      "email": "fxshen@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "邱浩",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 微电子与光电子学系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "集成电路设计",
-        "模拟/混合信号集成电路",
-        "数字集成电路/体系结构",
-        "类脑/神经形态芯片",
-        "半导体器件与工艺",
-        "生物医疗电子"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30451&articleId=559651",
-      "email": "haoqiu@nju.edu.cn",
-      "notes": "IEEE Fellow"
-    },
-    {
-      "name_cn": "潘红兵",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 微电子与光电子学系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "模拟/混合信号集成电路",
-        "数字集成电路/体系结构",
-        "存算一体",
-        "类脑/神经形态芯片",
-        "半导体器件与工艺"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465213",
-      "email": "phb@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "陆海",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 信息电子学系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "超导/量子器件",
-        "半导体器件与工艺",
-        "宽禁带半导体",
-        "光电子/集成光子",
-        "MEMS/传感器"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465223",
-      "email": "hailu@nju.edu.cn",
-      "notes": "国家杰青、长江学者"
-    },
-    {
-      "name_cn": "马浩文",
-      "name_en": null,
-      "title": "副教授",
-      "department": "电子科学与工程学院 信息电子学系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "集成电路设计",
-        "模拟/混合信号集成电路",
-        "数字集成电路/体系结构",
-        "半导体器件与工艺",
-        "光电子/集成光子",
-        "MEMS/传感器"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30452&articleId=465346",
-      "email": "hwma@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "任芳芳",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 信息电子学系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "半导体器件与工艺",
-        "光电子/集成光子"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465201",
-      "email": "ffren@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "施毅",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 微电子与光电子学系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "超导/量子器件",
-        "半导体器件与工艺",
-        "光电子/集成光子"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465190",
-      "email": "yshi@nju.edu.cn",
-      "notes": "中国科学院院士、国家杰青、长江学者"
-    },
-    {
-      "name_cn": "阮雅端",
-      "name_en": null,
-      "title": "副教授",
-      "department": "电子科学与工程学院 通信工程系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "通信与信号处理"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465197",
-      "email": "ruanyaduan@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "陶涛",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 微电子与光电子学系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "超导/量子器件",
-        "宽禁带半导体",
-        "光电子/集成光子"
-      ],
-      "homepage": "https://ese.nju.edu.cn/19/90/c30451a465296/page.htm",
-      "email": "ttao@nju.edu.cn",
-      "notes": "长江学者"
-    },
-    {
-      "name_cn": "潘力佳",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 微电子与光电子学系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "光电子/集成光子",
-        "MEMS/传感器",
-        "生物医疗电子",
-        "通信与信号处理"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465209",
-      "email": null,
-      "notes": "国家杰青"
-    },
-    {
-      "name_cn": "蒲殷",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 电子工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "射频/毫米波/电磁场",
-        "电磁场与超材料"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465204",
-      "email": "ypoo@nju.edu.cn",
-      "notes": "国家级青年人才"
-    },
-    {
-      "name_cn": "王华兵",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 电子工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "射频/毫米波/电磁场",
-        "超导/量子器件",
-        "光电子/集成光子",
-        "电磁场与超材料",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465172",
-      "email": null,
-      "notes": "海外高层次人才"
-    },
-    {
-      "name_cn": "孙国柱",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 电子工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "射频/毫米波/电磁场",
-        "超导/量子器件",
-        "电磁场与超材料"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465185",
-      "email": "gzsun@nju.edu.cn",
-      "notes": "国家杰青、国家高层次人才特殊支持计划"
-    },
-    {
-      "name_cn": "王军转",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 微电子与光电子学系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "光电子/集成光子",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465167",
-      "email": "wangjz@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "万昌锦",
-      "name_en": null,
-      "title": null,
-      "department": "电子科学与工程学院 信息电子学系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "类脑/神经形态芯片",
-        "半导体器件与工艺",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30452&articleId=512356",
-      "email": null,
-      "notes": "海外高层次人才"
-    },
-    {
-      "name_cn": "沙金",
-      "name_en": null,
-      "title": null,
-      "department": "电子科学与工程学院 微电子与光电子学系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "数字集成电路/体系结构",
-        "半导体器件与工艺",
-        "通信与信号处理",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465195",
-      "email": "shajin@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "王中风",
-      "name_en": null,
-      "title": "特聘教授",
-      "department": "电子科学与工程学院 通信工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "数字集成电路/体系结构",
-        "生物医疗电子",
-        "通信与信号处理",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30453&articleId=465268",
-      "email": "zfwang@nju.edu.cn",
-      "notes": "海外高层次人才"
-    },
-    {
-      "name_cn": "王枫秋",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 微电子与光电子学系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "二维材料器件",
-        "光电子/集成光子"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465175",
-      "email": "fwang@nju.edu.cn",
-      "notes": "国家级青年人才、海外高层次人才"
-    },
-    {
-      "name_cn": "王凯",
-      "name_en": null,
-      "title": "助理教授",
-      "department": "电子科学与工程学院 信息电子学系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "集成电路设计",
-        "模拟/混合信号集成电路",
-        "数字集成电路/体系结构",
-        "类脑/神经形态芯片",
-        "半导体器件与工艺",
-        "光电子/集成光子"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30452&articleId=765962",
-      "email": "kwang@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "汤琨",
-      "name_en": null,
-      "title": "副研究员",
-      "department": "电子科学与工程学院 微电子与光电子学系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "超导/量子器件",
-        "宽禁带半导体"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465184",
-      "email": "ktang@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "唐岚",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 通信工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "射频/毫米波/电磁场",
-        "通信与信号处理"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465179",
-      "email": "tanglan@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "吴培亨",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 电子工程系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "射频/毫米波/电磁场",
-        "超导/量子器件",
-        "电磁场与超材料"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30450&articleId=555530",
-      "email": null,
-      "notes": "中国科学院院士"
-    },
-    {
-      "name_cn": "王科",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 微电子与光电子学系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "超导/量子器件",
-        "半导体器件与工艺",
-        "宽禁带半导体",
-        "光电子/集成光子",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465165",
-      "email": "kewang@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "王学锋",
-      "name_en": null,
-      "title": "特聘教授",
-      "department": "电子科学与工程学院 微电子与光电子学系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "自旋电子/存储芯片",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465158",
-      "email": "xfwang@nju.edu.cn",
-      "notes": "国家杰青、国家优青"
-    },
-    {
-      "name_cn": "王昊",
-      "name_en": null,
-      "title": "助理教授",
-      "department": "电子科学与工程学院 电子工程系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "超导/量子器件",
-        "半导体器件与工艺"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30450&articleId=536917",
-      "email": "wanghao91@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "王健",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 通信工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "类脑/神经形态芯片",
-        "通信与信号处理"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465170",
-      "email": "wangjnju@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "徐骏",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 微电子与光电子学系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "半导体器件与工艺",
-        "光电子/集成光子"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465143",
-      "email": "junxu@nju.edu.cn",
-      "notes": "国家杰青、长江学者"
-    },
-    {
-      "name_cn": "王永磊",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 电子工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "射频/毫米波/电磁场",
-        "自旋电子/存储芯片",
-        "超导/量子器件",
-        "光电子/集成光子",
-        "电磁场与超材料",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465156",
-      "email": null,
-      "notes": "海外高层次人才"
-    },
-    {
-      "name_cn": "伍瑞新",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 电子工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "射频/毫米波/电磁场",
-        "数字集成电路/体系结构",
-        "光电子/集成光子",
-        "电磁场与超材料"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465148",
-      "email": "rxwu@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "岳涛",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 通信工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "光电子/集成光子"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30453&articleId=465226",
-      "email": "yuetao@nju.edu.cn",
-      "notes": "国家级青年人才"
-    },
-    {
-      "name_cn": "王肖沐",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 微电子与光电子学系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "类脑/神经形态芯片",
-        "半导体器件与工艺",
-        "二维材料器件",
-        "光电子/集成光子"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465161",
-      "email": "xiaomu.wang@nju.edu.cn",
-      "notes": "国家级青年人才、海外高层次人才"
-    },
-    {
-      "name_cn": "谢臻达",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 通信工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "光电子/集成光子",
-        "通信与信号处理",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465147",
-      "email": "xiezhenda@nju.edu.cn",
-      "notes": "国家级青年人才、海外高层次人才"
-    },
-    {
-      "name_cn": "徐岭",
-      "name_en": null,
-      "title": null,
-      "department": "电子科学与工程学院 微电子与光电子学系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "半导体器件与工艺",
-        "光电子/集成光子"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465141",
-      "email": "xuling@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "王元庆",
-      "name_en": null,
-      "title": null,
-      "department": "电子科学与工程学院 信息电子学系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "类脑/神经形态芯片",
-        "光电子/集成光子",
-        "生物医疗电子"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465153",
-      "email": "yqwang@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "吴敬波",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 电子工程系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "射频/毫米波/电磁场",
-        "超导/量子器件",
-        "通信与信号处理"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465150",
-      "email": "jbwu@nju.edu.cn",
-      "notes": "国家杰青"
-    },
-    {
-      "name_cn": "徐尉宗",
-      "name_en": null,
-      "title": "副教授",
-      "department": "电子科学与工程学院 信息电子学系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "超导/量子器件",
-        "半导体器件与工艺",
-        "宽禁带半导体",
-        "光电子/集成光子",
-        "通信与信号处理",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30452&articleId=465350",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "于耀",
-      "name_en": null,
-      "title": "副教授",
-      "department": "电子科学与工程学院 信息电子学系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "电路与系统"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465135",
-      "email": "allanyu@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "叶建东",
-      "name_en": null,
-      "title": null,
-      "department": "电子科学与工程学院 微电子与光电子学系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "半导体器件与工艺",
-        "宽禁带半导体",
-        "光电子/集成光子"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465136",
-      "email": "yejd@nju.edu.cn",
-      "notes": "国家杰青、国家优青"
-    },
-    {
-      "name_cn": "邢钟文",
-      "name_en": null,
-      "title": "副教授",
-      "department": "电子科学与工程学院 微电子与光电子学系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "超导/量子器件",
-        "半导体器件与工艺"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465146",
-      "email": "zwxing@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "周峰",
-      "name_en": null,
-      "title": "副教授",
-      "department": "电子科学与工程学院 信息电子学系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "半导体器件与工艺",
-        "宽禁带半导体"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30452&articleId=801081",
-      "email": "fengzhou@nju.edu.cn",
-      "notes": "国家级青年人才"
-    },
-    {
-      "name_cn": "修向前",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 微电子与光电子学系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "半导体器件与工艺",
-        "宽禁带半导体",
-        "通信与信号处理"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465144",
-      "email": "xqxiu@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "余林蔚",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 微电子与光电子学系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "半导体器件与工艺"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30451&articleId=465169",
-      "email": "yulinwei@nju.edu.cn",
-      "notes": "国家杰青"
-    },
-    {
-      "name_cn": "张蜡宝",
-      "name_en": null,
-      "title": "特聘教授",
-      "department": "电子科学与工程学院 电子工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "超导/量子器件",
-        "光电子/集成光子",
-        "通信与信号处理"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465127",
-      "email": "Lzhang@nju.edu.cn",
-      "notes": "国家杰青、长江学者"
-    },
-    {
-      "name_cn": "张彩虹",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 电子工程系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "射频/毫米波/电磁场",
-        "超导/量子器件",
-        "光电子/集成光子",
-        "电磁场与超材料"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465128",
-      "email": "chzhang@nju.edu.cn",
-      "notes": "国家优青"
-    },
-    {
-      "name_cn": "杨燚",
-      "name_en": null,
-      "title": "讲师",
-      "department": "电子科学与工程学院 信息电子学系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "射频/毫米波/电磁场",
-        "电磁场与超材料"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465138",
-      "email": "malab@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "袁杰",
-      "name_en": null,
-      "title": "副教授",
-      "department": "电子科学与工程学院 信息电子学系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "光电子/集成光子",
-        "生物医疗电子"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465133",
-      "email": "yuanjie@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "张丽敏",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 信息电子学系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "类脑/神经形态芯片",
-        "MEMS/传感器",
-        "生物医疗电子",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465125",
-      "email": "lmzhang@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "赵清源",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 电子工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "超导/量子器件",
-        "光电子/集成光子",
-        "通信与信号处理"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=464825",
-      "email": "qyzhao@nju.edu.cn",
-      "notes": "国家杰青"
-    },
-    {
-      "name_cn": "张旭",
-      "name_en": null,
-      "title": "副教授",
-      "department": "电子科学与工程学院 通信工程系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "类脑/神经形态芯片",
-        "生物医疗电子",
-        "通信与信号处理"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30453&articleId=765963",
-      "email": "xzhang17@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "张豹山",
-      "name_en": null,
-      "title": "副教授",
-      "department": "电子科学与工程学院 信息电子学系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "电路与系统"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465130",
-      "email": "bszhang@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "郑海荣",
-      "name_en": null,
-      "title": "研究员",
-      "department": "电子科学与工程学院 通信工程系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "类脑/神经形态芯片",
-        "自旋电子/存储芯片",
-        "超导/量子器件",
-        "光电子/集成光子",
-        "生物医疗电子"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30453&articleId=771503",
-      "email": "Hr.zheng@nju.edu.cn",
-      "notes": "中国科学院院士、国家杰青"
-    },
-    {
-      "name_cn": "赵康僆",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 通信工程系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "半导体器件与工艺",
-        "通信与信号处理",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=464833",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "周玉刚",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 微电子与光电子学系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "半导体器件与工艺",
-        "宽禁带半导体",
-        "光电子/集成光子",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=464819",
-      "email": "ygzhou@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "赵俊明",
-      "name_en": null,
-      "title": "副教授",
-      "department": "电子科学与工程学院 电子工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "光电子/集成光子",
-        "电磁场与超材料"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=464837",
-      "email": "jmzhao@nju.edu.cn",
-      "notes": "国家高层次人才特殊支持计划"
-    },
-    {
-      "name_cn": "周余",
-      "name_en": null,
-      "title": "副教授",
-      "department": "电子科学与工程学院 信息电子学系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "电路与系统"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=464820",
-      "email": "nackzhou@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "朱博",
-      "name_en": null,
-      "title": "副研究员",
-      "department": "电子科学与工程学院 电子工程系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "射频/毫米波/电磁场",
-        "自旋电子/存储芯片",
-        "电磁场与超材料",
-        "通信与信号处理"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=464818",
-      "email": "bzhu@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "周海波",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 通信工程系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "类脑/神经形态芯片",
-        "通信与信号处理"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=464821",
-      "email": "haibozhou@nju.edu.cn",
-      "notes": "国家杰青、全球高被引科学家"
-    },
-    {
-      "name_cn": "涂学凑",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 电子工程系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "射频/毫米波/电磁场",
-        "半导体器件与工艺",
-        "光电子/集成光子",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30450&articleId=465083",
-      "email": "tuxuecou@nju.edu.cn",
-      "notes": "国家高层次人才特殊支持计划"
-    },
-    {
-      "name_cn": "李文峰",
-      "name_en": null,
-      "title": "特任副研究员",
-      "department": "电子科学与工程学院 通信工程系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "通信与信号处理"
-      ],
-      "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30453&articleId=465198",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "毛成",
-      "name_en": null,
-      "title": "副研究员",
-      "department": "电子科学与工程学院 信息电子学系（无）",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "集成电路设计",
-        "超导/量子器件",
-        "光电子/集成光子",
-        "集成电路与系统"
-      ],
-      "homepage": "https://ese.nju.edu.cn/mc/list.htm",
-      "email": "cmao@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "纪小丽",
-      "name_en": null,
-      "title": "教授",
-      "department": "电子科学与工程学院 信息电子学系（物理电子学）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "射频/毫米波/电磁场",
-        "半导体器件与工艺",
-        "光电子/集成光子",
-        "MEMS/传感器"
-      ],
-      "homepage": "http://ese.nju.edu.cn/jxl_24120/list.htm",
-      "email": "xji@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "陈伟",
-      "name_en": null,
-      "title": "副教授",
-      "department": "现代工程与应用科学学院（光电/材料科学与工程系）",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "光电子/集成光子"
-      ],
-      "homepage": "http://eng.nju.edu.cn/lw/main.htm",
-      "email": "wchen@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "陈向飞",
-      "name_en": null,
-      "title": "教授",
-      "department": "现代工程与应用科学学院（光电/材料科学与工程系）",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "射频/毫米波/电磁场",
-        "光电子/集成光子",
-        "电磁场与超材料",
-        "通信与信号处理",
-        "集成电路与系统"
-      ],
-      "homepage": "http://eng.nju.edu.cn/cxf/main.htm",
-      "email": "chenxf@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "郭少华",
-      "name_en": null,
-      "title": "教授",
-      "department": "现代工程与应用科学学院（光电/材料科学与工程系）",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "光电材料与器件"
-      ],
-      "homepage": "http://eng.nju.edu.cn/gsh/main.htm",
-      "email": "shguo@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "胡伟",
-      "name_en": null,
-      "title": "教授",
-      "department": "现代工程与应用科学学院（光电/材料科学与工程系）",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "光电子/集成光子"
-      ],
-      "homepage": "http://eng.nju.edu.cn/hw/main.htm",
-      "email": "huwei@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "李爱东",
-      "name_en": null,
-      "title": "教授",
-      "department": "现代工程与应用科学学院（光电/材料科学与工程系）",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "光电材料与器件"
-      ],
-      "homepage": "http://eng.nju.edu.cn/lad/main.htm",
-      "email": "adli@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "陆延青",
-      "name_en": null,
-      "title": "教授",
-      "department": "现代工程与应用科学学院（光电/材料科学与工程系）",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "光电子/集成光子"
-      ],
-      "homepage": "http://eng.nju.edu.cn/lyq/main.htm",
-      "email": "yqlu@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "李涛",
-      "name_en": null,
-      "title": "教授",
-      "department": "现代工程与应用科学学院（光电/材料科学与工程系）",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "光电子/集成光子"
-      ],
-      "homepage": "https://taoli.nju.edu.cn/",
-      "email": "taoli@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "李密",
-      "name_en": null,
-      "title": "教授",
-      "department": "现代工程与应用科学学院（光电/材料科学与工程系）",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "光电子/集成光子",
-        "通信与信号处理",
-        "集成电路与系统"
-      ],
-      "homepage": "http://eng.nju.edu.cn/lm2/main.htm",
-      "email": "limi@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "宋万鸽",
-      "name_en": null,
-      "title": "准聘副教授",
-      "department": "现代工程与应用科学学院（光电/材料科学与工程系）",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "光电子/集成光子",
-        "集成电路与系统"
-      ],
-      "homepage": "http://eng.nju.edu.cn/swg/main.htm",
-      "email": "songwange@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "宋茂文",
-      "name_en": null,
-      "title": "准聘副教授",
-      "department": "现代工程与应用科学学院（光电/材料科学与工程系）",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "光电子/集成光子"
-      ],
-      "homepage": "http://eng.nju.edu.cn/smw1/main.htm",
-      "email": "smw@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "王峰",
-      "name_en": null,
-      "title": "教授",
-      "department": "现代工程与应用科学学院（光电/材料科学与工程系）",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "光电子/集成光子",
-        "集成电路与系统"
-      ],
-      "homepage": "http://eng.nju.edu.cn/wf/main.htm",
-      "email": "wangfeng@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "徐挺",
-      "name_en": null,
-      "title": "教授",
-      "department": "现代工程与应用科学学院（光电/材料科学与工程系）",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "光电子/集成光子",
-        "电磁场与超材料"
-      ],
-      "homepage": "http://eng.nju.edu.cn/xt/main.htm",
-      "email": "xuting@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "张益昕",
-      "name_en": null,
-      "title": "教授",
-      "department": "现代工程与应用科学学院（光电/材料科学与工程系）",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "光电材料与器件"
-      ],
-      "homepage": "https://ocer.nju.edu.cn",
-      "email": "zyixin@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "张伟华",
-      "name_en": null,
-      "title": "教授",
-      "department": "现代工程与应用科学学院（光电/材料科学与工程系）",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "射频/毫米波/电磁场",
-        "自旋电子/存储芯片",
-        "半导体器件与工艺",
-        "光电子/集成光子",
-        "MEMS/传感器",
-        "电磁场与超材料"
-      ],
-      "homepage": "http://eng.nju.edu.cn/zwh/main.htm",
-      "email": "zwh@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "郑庆东",
-      "name_en": null,
-      "title": "教授",
-      "department": "现代工程与应用科学学院（光电/材料科学与工程系）",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "半导体器件与工艺",
-        "光电子/集成光子"
-      ],
-      "homepage": "http://eng.nju.edu.cn/zqd/main.htm",
-      "email": "zhengqd@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "袁洪涛",
-      "name_en": null,
-      "title": "教授",
-      "department": "现代工程与应用科学学院（光电/材料科学与工程系）",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "自旋电子/存储芯片",
-        "超导/量子器件",
-        "光电子/集成光子"
-      ],
-      "homepage": "https://interface.nju.edu.cn/18346/list.htm",
-      "email": "htyuan@nju.edu.cn",
-      "notes": "长江学者"
-    },
-    {
-      "name_cn": "张旭苹",
-      "name_en": null,
-      "title": "教授",
-      "department": "现代工程与应用科学学院（光电/材料科学与工程系）",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "光电材料与器件"
-      ],
-      "homepage": "http://eng.nju.edu.cn/zxp/main.htm",
-      "email": "xpzhang@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "杜灵杰",
-      "name_en": null,
-      "title": "教授",
-      "department": "物理学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "宽禁带半导体",
-        "光电子/集成光子"
-      ],
-      "homepage": "http://physics.nju.edu.cn/szdw/qbmd/20240321/i262022.html",
-      "email": "Ljdu@nju.edu.cn",
-      "notes": "国家级人才"
-    },
-    {
-      "name_cn": "刘尔富",
-      "name_en": null,
-      "title": "副教授",
-      "department": "物理学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "二维材料器件",
-        "光电子/集成光子",
-        "电磁场与超材料"
-      ],
-      "homepage": "https://opto.nju.edu.cn/",
-      "email": "erfuliu@nju.edu.cn",
-      "notes": "国家级青年人才"
-    },
-    {
-      "name_cn": "梁世军",
-      "name_en": null,
-      "title": "教授",
-      "department": "物理学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "类脑/神经形态芯片",
-        "二维材料器件",
-        "MEMS/传感器",
-        "集成电路与系统"
-      ],
-      "homepage": "http://nano.nju.edu.cn​",
-      "email": null,
-      "notes": "国家优青"
-    },
-    {
-      "name_cn": "刘荣华",
-      "name_en": null,
-      "title": "教授",
-      "department": "物理学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "射频/毫米波/电磁场",
-        "类脑/神经形态芯片",
-        "自旋电子/存储芯片",
-        "超导/量子器件",
-        "半导体器件与工艺",
-        "电磁场与超材料"
-      ],
-      "homepage": "http://physics.nju.edu.cn/szdw/qbmd/20250325/i310392.html",
-      "email": "rhliu@nju.edu.cn",
-      "notes": "国家级青年人才"
-    },
-    {
-      "name_cn": "缪峰",
-      "name_en": null,
-      "title": "教授",
-      "department": "物理学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "数字集成电路/体系结构",
-        "类脑/神经形态芯片",
-        "二维材料器件",
-        "生物医疗电子"
-      ],
-      "homepage": "https://nano.nju.edu.cn/eng_index.html",
-      "email": null,
-      "notes": "国家级人才、国家杰青、全球高被引科学家"
-    },
-    {
-      "name_cn": "沈瑞",
-      "name_en": null,
-      "title": "教授",
-      "department": "物理学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "自旋电子/存储芯片",
-        "超导/量子器件"
-      ],
-      "homepage": "http://physics.nju.edu.cn/szdw/qbmd/20240321/i261980.html",
-      "email": "shen@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "谭新生",
-      "name_en": null,
-      "title": null,
-      "department": "物理学院",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "半导体器件与量子器件"
-      ],
-      "homepage": "http://physics.nju.edu.cn/szdw/qbmd/20240321/i261977.html",
-      "email": null,
-      "notes": "国家级青年人才"
-    },
-    {
-      "name_cn": "王雷",
-      "name_en": null,
-      "title": "教授",
-      "department": "物理学院",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "半导体器件与工艺",
-        "二维材料器件"
-      ],
-      "homepage": "http://physics.nju.edu.cn/szdw/qbmd/20240605/i267889.html",
-      "email": "Leiwang@nju.edu.cn",
-      "notes": "国家级人才"
-    },
-    {
-      "name_cn": "颜志波",
-      "name_en": null,
-      "title": "教授",
-      "department": "物理学院",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "存算一体",
-        "半导体器件与工艺",
-        "光电子/集成光子"
-      ],
-      "homepage": "http://pld.nju.edu.cn",
-      "email": "zbyan@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "于葛亮",
-      "name_en": null,
-      "title": "教授",
-      "department": "物理学院",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "超导/量子器件",
-        "二维材料器件"
-      ],
-      "homepage": "http://physics.nju.edu.cn/szdw/qbmd/20250615/i324029.html",
-      "email": "yugeliang@nju.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "于扬",
-      "name_en": null,
-      "title": "教授",
-      "department": "物理学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "超导/量子器件"
-      ],
-      "homepage": "https://sslab.nju.edu.cn/main.htm",
-      "email": "yuyang@nju.edu.cn",
-      "notes": "国家级人才、国家杰青、长江学者"
-    },
-    {
-      "name_cn": "张志勇",
-      "name_en": null,
-      "title": null,
-      "department": "物理学院",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "半导体器件与量子器件"
-      ],
-      "homepage": "http://physics.nju.edu.cn/szdw/qbmd/20240321/i262027.html",
-      "email": "zyzhang@nju.edu.cn",
-      "notes": null
-    }
-  ]
+ "school": "南京大学",
+ "school_key": "nju",
+ "harvested_at": "2026-09-22",
+ "sources": [
+  "https://ic.nju.edu.cn/qyml/list.htm",
+  "https://ic.nju.edu.cn/qyml/list2.htm",
+  "https://ic.nju.edu.cn/56606/list.htm",
+  "https://ese.nju.edu.cn/qyml/list.htm",
+  "https://ese.nju.edu.cn/30444/list2.htm",
+  "https://ese.nju.edu.cn/22542/list.htm",
+  "https://ese.nju.edu.cn/_wp3services/generalQuery?queryObj=teacherHome",
+  "https://cs.nju.edu.cn/1651/list.htm",
+  "https://cs.nju.edu.cn/2639/list.htm",
+  "https://cs.nju.edu.cn/2640/list.htm",
+  "https://cs.nju.edu.cn/zzp/list.htm",
+  "https://eng.nju.edu.cn/qyml2/list.htm",
+  "https://eng.nju.edu.cn/43269/list.htm",
+  "https://eng.nju.edu.cn/_wp3services/generalQuery?queryObj=teacherHome",
+  "https://physics.nju.edu.cn/szdw/qbmd/agw/index.html",
+  "https://physics.nju.edu.cn/kxyj/yjfx/"
+ ],
+ "coverage_note": "【已覆盖】① 集成电路学院（ic.nju.edu.cn）：苏州校区，2021年成立。「全院名录」2页共24名专任教师，逐人抓取个人主页，全员收录（教授/特聘教授/副教授/助理教授/特任副研究员）。② 电子科学与工程学院（ese.nju.edu.cn）：「按岗位」名录179名专任教师逐人抓取个人主页，另抓「按系部」名录4个系（电子工程系31、微电子与光电子学系49、信息电子学系35、通信工程系35）共150人，并经 teacherHome 接口取得151人的学科归属；按微电子学与固体电子学、物理电子学、电路与系统、电磁场与微波技术/无线电物理、信号与信息处理、通信与信息系统六个学科筛选收录。③ 现代工程与应用科学学院（eng.nju.edu.cn）：经 teacherHome 接口取得125名教学科研岗教师名单，逐人抓取个人主页并解析「研究领域/研究方向」，仅保留光电/集成光子/半导体器件/存储器件方向，纯材料、能源、生物、声学方向未收。④ 物理学院（physics.nju.edu.cn）：「全部名单」231人逐人抓取主页，并以学院「研究方向」页的「半导体物理与新原理器件」「固态量子计算和量子模拟」「类脑智能与未来计算（器件方向）」名单为准筛选。【未覆盖及原因】① 计算机学院：现行「教授」（66人）、「副教授」（18人）、「准长聘」（29人）三个名录逐页抓取并全文检索，无集成电路设计、EDA 或处理器体系结构方向在职教师（教师方向集中于分布式系统、编译与程序分析、数据库、机器学习、软件工程等），本方向计 0 人；另注：cs.nju.edu.cn/swang（Shuai Wang，计算机体系结构/片上网络方向）已不在现行师资名录中，故未收录。② 物理学院纯凝聚态理论、材料生长、光谱学、声学、粒子与核物理、软物质与生物物理方向未收。③ 各院系实验技术、专职科研（非教学科研岗）、行政管理、离退休、博士后、兼职/客座教授均未收；未收 ESE「电子信息专业实验教学中心」18人、「微加工中心」2人、「学院行政」14人。④ 抓取限制：eng.nju.edu.cn 有8名教师个人主页跳转学校统一身份认证无法访问，其姓名取自接口元数据但无方向信息，故未收录；ese.nju.edu.cn 有约26名教师个人主页为空页（仅导航，无职称与研究方向），无法核实，未收录；physics.nju.edu.cn 谭新生、张志勇个人主页无研究方向正文，方向依据学院「研究方向」页名单；ese.nju.edu.cn 个别教师（如卜晓峰）主页未公布邮箱，按不确定填 null 处理；11人职称未在页面公布，按不确定填 null 处理。【规模】合计入库 157 人：集成电路学院 24人、电子科学与工程学院 104人、现代工程与应用科学学院 17人、物理学院 12人；其中标注为博导 82 人，含邮箱 143 人、含个人主页链接 157 人。",
+ "faculty": [
+  {
+   "name_cn": "程文",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS/传感器",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ic.nju.edu.cn/f1/4f/c56672a717135/page.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "刘峰源",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "类脑/神经形态芯片",
+    "半导体器件与工艺",
+    "MEMS/传感器",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ic.nju.edu.cn/d4/d3/c56672a840915/page.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "邱红松",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波/电磁场",
+    "自旋电子/存储芯片",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ic.nju.edu.cn/af/81/c56672a634753/page.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "谢航",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "存算一体",
+    "自旋电子/存储芯片",
+    "MEMS/传感器",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ic.nju.edu.cn/b6/07/c56672a767495/page.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王欣然",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "二维材料器件",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ic.nju.edu.cn/af/8a/c56672a634762/page.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "曹鹏",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "集成电路学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "模拟/混合信号集成电路",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ic.nju.edu.cn/b6/0a/c56672a767498/page.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "傅玉祥",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "数字集成电路/体系结构",
+    "EDA/设计自动化",
+    "通信与信号处理",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ic.nju.edu.cn/af/87/c56672a634759/page.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "杜力",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "数字集成电路/体系结构",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ic.nju.edu.cn/26/f4/c56672a730868/page.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "区永曦",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "集成电路学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "存算一体",
+    "自旋电子/存储芯片",
+    "半导体器件与工艺",
+    "二维材料器件",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ic.nju.edu.cn/c1/38/c56672a770360/page.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "鲁金铭",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "集成电路学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路设计",
+    "数字集成电路/体系结构",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ic.nju.edu.cn/a7/51/c56672a829265/page.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "徐永兵",
+   "name_en": null,
+   "title": "特聘教授",
+   "department": "集成电路学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "自旋电子/存储芯片",
+    "半导体器件与工艺",
+    "光电子/集成光子",
+    "MEMS/传感器",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ic.nju.edu.cn/1a/53/c56672a727635/page.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "夏洋",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ic.nju.edu.cn/3a/69/c56672a801385/page.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "丁业成",
+   "name_en": null,
+   "title": "特任副研究员",
+   "department": "集成电路学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "宽禁带半导体",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ic.nju.edu.cn/b9/1a/c56672a833818/page.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "丁孙安",
+   "name_en": null,
+   "title": "特聘教授",
+   "department": "集成电路学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "宽禁带半导体",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ic.nju.edu.cn/af/88/c56672a634760/page.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李涛涛",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "二维材料器件"
+   ],
+   "homepage": "https://ic.nju.edu.cn/af/80/c56672a634752/page.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "陆显扬",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "存算一体",
+    "自旋电子/存储芯片",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ic.nju.edu.cn/db/82/c56672a842626/page.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "武桐",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "EDA/设计自动化",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ic.nju.edu.cn/30/04/c56672a798724/page.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王启晶",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "集成电路学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "类脑/神经形态芯片",
+    "半导体器件与工艺",
+    "光电子/集成光子",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ic.nju.edu.cn/af/85/c56672a634757/page.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "陈浩",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "自旋电子/存储芯片",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ic.nju.edu.cn/cc/66/c56672a838758/page.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "朱马光",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "二维材料器件",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ic.nju.edu.cn/af/83/c56672a634755/page.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "邹宁睦",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ic.nju.edu.cn/b0/2b/c56672a634923/page.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李卫胜",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "二维材料器件",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ic.nju.edu.cn/bd/d3/c56672a703955/page.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "田静",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "集成电路学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ic.nju.edu.cn/af/46/c56672a634694/page.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "庄喆",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "宽禁带半导体",
+    "光电子/集成光子",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ic.nju.edu.cn/c6/71/c56672a771697/page.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "柏业超",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 通信工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "通信与信号处理"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465301",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "陈敦军",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 微电子与光电子学系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "宽禁带半导体",
+    "光电子/集成光子",
+    "MEMS/传感器"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465290",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "曹汛",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 通信工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光电子/集成光子",
+    "通信与信号处理",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465292",
+   "email": null,
+   "notes": "国家杰青、国家优青"
+  },
+  {
+   "name_cn": "蔡青",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "电子科学与工程学院 微电子与光电子学系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "宽禁带半导体",
+    "光电子/集成光子"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30451&articleId=701673",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "卜晓峰",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子科学与工程学院 信息电子学系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟/混合信号集成电路",
+    "数字集成电路/体系结构",
+    "半导体器件与工艺",
+    "光电子/集成光子",
+    "MEMS/传感器"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30452&articleId=465337",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "陈健",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 电子工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波/电磁场",
+    "超导/量子器件",
+    "通信与信号处理"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465288",
+   "email": null,
+   "notes": "长江学者"
+  },
+  {
+   "name_cn": "陈平",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 电子工程系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "射频/毫米波/电磁场",
+    "电磁场与超材料",
+    "通信与信号处理"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465285",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "陈鹏",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 微电子与光电子学系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "宽禁带半导体",
+    "光电子/集成光子"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465287",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "陈克",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子科学与工程学院 电子工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波/电磁场",
+    "自旋电子/存储芯片",
+    "电磁场与超材料",
+    "通信与信号处理"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30450&articleId=465076",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "陈颖",
+   "name_en": null,
+   "title": null,
+   "department": "电子科学与工程学院 信息电子学系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "生物医疗电子",
+    "通信与信号处理",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465282",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "范克彬",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 电子工程系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "射频/毫米波/电磁场",
+    "光电子/集成光子",
+    "电磁场与超材料"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30450&articleId=514600",
+   "email": null,
+   "notes": "全球高被引科学家"
+  },
+  {
+   "name_cn": "杜源",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子科学与工程学院 通信工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟/混合信号集成电路",
+    "射频/毫米波/电磁场",
+    "数字集成电路/体系结构",
+    "存算一体",
+    "类脑/神经形态芯片"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30453&articleId=465224",
+   "email": null,
+   "notes": "国家级青年人才、海外高层次人才"
+  },
+  {
+   "name_cn": "陈相宁",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子科学与工程学院 通信工程系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "通信与信号处理"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465284",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "费再瑶",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 微电子与光电子学系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "二维材料器件",
+    "光电子/集成光子"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30451&articleId=512371",
+   "email": null,
+   "notes": "国家级青年人才、海外高层次人才"
+  },
+  {
+   "name_cn": "都思丹",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 信息电子学系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路与系统"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465280",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "葛云",
+   "name_en": null,
+   "title": null,
+   "department": "电子科学与工程学院 信息电子学系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光电子/集成光子",
+    "生物医疗电子",
+    "通信与信号处理"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465267",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "何道伟",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子科学与工程学院 微电子与光电子学系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "二维材料器件",
+    "MEMS/传感器"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465259",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "顾书林",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 微电子与光电子学系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "宽禁带半导体"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465265",
+   "email": null,
+   "notes": "国家杰青"
+  },
+  {
+   "name_cn": "冯一军",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 电子工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波/电磁场",
+    "光电子/集成光子",
+    "电磁场与超材料",
+    "通信与信号处理"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465272",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "胡雪梅",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子科学与工程学院 通信工程系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "光电子/集成光子"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30453&articleId=465192",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "胡泽华",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 微电子与光电子学系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "超导/量子器件",
+    "半导体器件与工艺",
+    "光电子/集成光子"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30451&articleId=633615",
+   "email": null,
+   "notes": "国家优青"
+  },
+  {
+   "name_cn": "贾小氢",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 电子工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波/电磁场",
+    "超导/量子器件",
+    "光电子/集成光子",
+    "电磁场与超材料",
+    "通信与信号处理"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465252",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "何爱军",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子科学与工程学院 信息电子学系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "生物医疗电子"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465260",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "何亮",
+   "name_en": null,
+   "title": "研究员",
+   "department": "电子科学与工程学院 微电子与光电子学系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件与工艺"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465257",
+   "email": null,
+   "notes": "国家级青年人才、海外高层次人才"
+  },
+  {
+   "name_cn": "黄晓林",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子科学与工程学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "通信与信号处理"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465255",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "康琳",
+   "name_en": null,
+   "title": null,
+   "department": "电子科学与工程学院 电子工程系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "超导/量子器件",
+    "半导体器件与工艺"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465245",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李炳均",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子科学与工程学院 微电子与光电子学系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "宽禁带半导体",
+    "光电子/集成光子"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30451&articleId=799593",
+   "email": null,
+   "notes": "国家级青年人才、海外高层次人才"
+  },
+  {
+   "name_cn": "贾琨鹏",
+   "name_en": null,
+   "title": "准聘副教授",
+   "department": "电子科学与工程学院 通信工程系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "射频/毫米波/电磁场",
+    "光电子/集成光子",
+    "电磁场与超材料"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30453&articleId=647801",
+   "email": null,
+   "notes": "国家级青年人才"
+  },
+  {
+   "name_cn": "姜田",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 电子工程系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "射频/毫米波/电磁场",
+    "电磁场与超材料",
+    "通信与信号处理"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30450&articleId=465086",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "寇君龙",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子科学与工程学院 微电子与光电子学系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "光电子/集成光子",
+    "MEMS/传感器",
+    "生物医疗电子",
+    "通信与信号处理",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30451&articleId=565573",
+   "email": null,
+   "notes": "国家级青年人才、海外高层次人才"
+  },
+  {
+   "name_cn": "黎松林",
+   "name_en": null,
+   "title": null,
+   "department": "电子科学与工程学院 微电子与光电子学系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "存算一体",
+    "自旋电子/存储芯片",
+    "半导体器件与工艺",
+    "二维材料器件"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465244",
+   "email": null,
+   "notes": "国家级青年人才"
+  },
+  {
+   "name_cn": "李丽",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 微电子与光电子学系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "数字集成电路/体系结构",
+    "半导体器件与工艺",
+    "通信与信号处理",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465235",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "刘斌",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 微电子与光电子学系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "宽禁带半导体",
+    "光电子/集成光子",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465227",
+   "email": null,
+   "notes": "国家优青、长江学者"
+  },
+  {
+   "name_cn": "李勃",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子科学与工程学院 通信工程系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "通信与信号处理"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465240",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李杨",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子科学与工程学院 信息电子学系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "光电子/集成光子",
+    "生物医疗电子",
+    "通信与信号处理"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465233",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "吕阳阳",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "电子科学与工程学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "射频/毫米波/电磁场",
+    "超导/量子器件"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=765939",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "刘波",
+   "name_en": null,
+   "title": "青年教授",
+   "department": "电子科学与工程学院 微电子与光电子学系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "自旋电子/存储芯片",
+    "二维材料器件",
+    "光电子/集成光子"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30451&articleId=633622",
+   "email": null,
+   "notes": "国家优青"
+  },
+  {
+   "name_cn": "李昀",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 微电子与光电子学系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "光电子/集成光子"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465231",
+   "email": null,
+   "notes": "国家杰青、国家优青"
+  },
+  {
+   "name_cn": "彭成磊",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子科学与工程学院 信息电子学系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "数字集成电路/体系结构",
+    "类脑/神经形态芯片",
+    "光电子/集成光子",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465206",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "马展",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 通信工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "类脑/神经形态芯片",
+    "光电子/集成光子",
+    "通信与信号处理"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465218",
+   "email": null,
+   "notes": "国家优青"
+  },
+  {
+   "name_cn": "林军",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 通信工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "数字集成电路/体系结构",
+    "半导体器件与工艺",
+    "通信与信号处理",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465229",
+   "email": null,
+   "notes": "国家高层次人才特殊支持计划"
+  },
+  {
+   "name_cn": "刘红星",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 信息电子学系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "生物医疗电子",
+    "通信与信号处理"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465225",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "马忠元",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 微电子与光电子学系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "类脑/神经形态芯片",
+    "半导体器件与工艺",
+    "二维材料器件",
+    "光电子/集成光子",
+    "通信与信号处理",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465216",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "沈凡翔",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "电子科学与工程学院 信息电子学系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路设计",
+    "数字集成电路/体系结构",
+    "存算一体",
+    "类脑/神经形态芯片",
+    "半导体器件与工艺",
+    "光电子/集成光子"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30452&articleId=765961",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "邱浩",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 微电子与光电子学系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟/混合信号集成电路",
+    "数字集成电路/体系结构",
+    "类脑/神经形态芯片",
+    "半导体器件与工艺",
+    "生物医疗电子"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30451&articleId=559651",
+   "email": null,
+   "notes": "IEEE Fellow"
+  },
+  {
+   "name_cn": "潘红兵",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 微电子与光电子学系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟/混合信号集成电路",
+    "数字集成电路/体系结构",
+    "存算一体",
+    "类脑/神经形态芯片",
+    "半导体器件与工艺"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465213",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "陆海",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 信息电子学系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "超导/量子器件",
+    "半导体器件与工艺",
+    "宽禁带半导体",
+    "光电子/集成光子",
+    "MEMS/传感器"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465223",
+   "email": null,
+   "notes": "国家杰青、长江学者"
+  },
+  {
+   "name_cn": "马浩文",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子科学与工程学院 信息电子学系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟/混合信号集成电路",
+    "数字集成电路/体系结构",
+    "半导体器件与工艺",
+    "光电子/集成光子",
+    "MEMS/传感器"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30452&articleId=465346",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "任芳芳",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 信息电子学系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "光电子/集成光子"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465201",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "施毅",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 微电子与光电子学系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "超导/量子器件",
+    "半导体器件与工艺",
+    "光电子/集成光子"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465190",
+   "email": null,
+   "notes": "中国科学院院士、国家杰青、长江学者"
+  },
+  {
+   "name_cn": "阮雅端",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子科学与工程学院 通信工程系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "通信与信号处理"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465197",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "陶涛",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 微电子与光电子学系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "超导/量子器件",
+    "宽禁带半导体",
+    "光电子/集成光子"
+   ],
+   "homepage": "https://ese.nju.edu.cn/19/90/c30451a465296/page.htm",
+   "email": null,
+   "notes": "长江学者"
+  },
+  {
+   "name_cn": "潘力佳",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 微电子与光电子学系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "光电子/集成光子",
+    "MEMS/传感器",
+    "生物医疗电子",
+    "通信与信号处理"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465209",
+   "email": null,
+   "notes": "国家杰青"
+  },
+  {
+   "name_cn": "蒲殷",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 电子工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波/电磁场",
+    "电磁场与超材料"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465204",
+   "email": null,
+   "notes": "国家级青年人才"
+  },
+  {
+   "name_cn": "王华兵",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 电子工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波/电磁场",
+    "超导/量子器件",
+    "光电子/集成光子",
+    "电磁场与超材料",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465172",
+   "email": null,
+   "notes": "海外高层次人才"
+  },
+  {
+   "name_cn": "孙国柱",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 电子工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波/电磁场",
+    "超导/量子器件",
+    "电磁场与超材料"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465185",
+   "email": null,
+   "notes": "国家杰青、国家高层次人才特殊支持计划"
+  },
+  {
+   "name_cn": "王军转",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 微电子与光电子学系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光电子/集成光子",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465167",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "万昌锦",
+   "name_en": null,
+   "title": null,
+   "department": "电子科学与工程学院 信息电子学系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "类脑/神经形态芯片",
+    "半导体器件与工艺",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30452&articleId=512356",
+   "email": null,
+   "notes": "海外高层次人才"
+  },
+  {
+   "name_cn": "沙金",
+   "name_en": null,
+   "title": null,
+   "department": "电子科学与工程学院 微电子与光电子学系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "数字集成电路/体系结构",
+    "半导体器件与工艺",
+    "通信与信号处理",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465195",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王中风",
+   "name_en": null,
+   "title": "特聘教授",
+   "department": "电子科学与工程学院 通信工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "数字集成电路/体系结构",
+    "生物医疗电子",
+    "通信与信号处理",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30453&articleId=465268",
+   "email": null,
+   "notes": "海外高层次人才"
+  },
+  {
+   "name_cn": "王枫秋",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 微电子与光电子学系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "二维材料器件",
+    "光电子/集成光子"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465175",
+   "email": null,
+   "notes": "国家级青年人才、海外高层次人才"
+  },
+  {
+   "name_cn": "王凯",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "电子科学与工程学院 信息电子学系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟/混合信号集成电路",
+    "数字集成电路/体系结构",
+    "类脑/神经形态芯片",
+    "半导体器件与工艺",
+    "光电子/集成光子"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30452&articleId=765962",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "汤琨",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "电子科学与工程学院 微电子与光电子学系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "超导/量子器件",
+    "宽禁带半导体"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465184",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "唐岚",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 通信工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波/电磁场",
+    "通信与信号处理"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465179",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "吴培亨",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 电子工程系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "射频/毫米波/电磁场",
+    "超导/量子器件",
+    "电磁场与超材料"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30450&articleId=555530",
+   "email": null,
+   "notes": "中国科学院院士"
+  },
+  {
+   "name_cn": "王科",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 微电子与光电子学系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "超导/量子器件",
+    "半导体器件与工艺",
+    "宽禁带半导体",
+    "光电子/集成光子",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465165",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王学锋",
+   "name_en": null,
+   "title": "特聘教授",
+   "department": "电子科学与工程学院 微电子与光电子学系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "自旋电子/存储芯片",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465158",
+   "email": null,
+   "notes": "国家杰青、国家优青"
+  },
+  {
+   "name_cn": "王昊",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "电子科学与工程学院 电子工程系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "超导/量子器件",
+    "半导体器件与工艺"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30450&articleId=536917",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王健",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 通信工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "类脑/神经形态芯片",
+    "通信与信号处理"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465170",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "徐骏",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 微电子与光电子学系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "光电子/集成光子"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465143",
+   "email": null,
+   "notes": "国家杰青、长江学者"
+  },
+  {
+   "name_cn": "王永磊",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 电子工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波/电磁场",
+    "自旋电子/存储芯片",
+    "超导/量子器件",
+    "光电子/集成光子",
+    "电磁场与超材料",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465156",
+   "email": null,
+   "notes": "海外高层次人才"
+  },
+  {
+   "name_cn": "伍瑞新",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 电子工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波/电磁场",
+    "数字集成电路/体系结构",
+    "光电子/集成光子",
+    "电磁场与超材料"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465148",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "岳涛",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 通信工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光电子/集成光子"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30453&articleId=465226",
+   "email": null,
+   "notes": "国家级青年人才"
+  },
+  {
+   "name_cn": "王肖沐",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 微电子与光电子学系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "类脑/神经形态芯片",
+    "半导体器件与工艺",
+    "二维材料器件",
+    "光电子/集成光子"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465161",
+   "email": null,
+   "notes": "国家级青年人才、海外高层次人才"
+  },
+  {
+   "name_cn": "谢臻达",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 通信工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光电子/集成光子",
+    "通信与信号处理",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465147",
+   "email": null,
+   "notes": "国家级青年人才、海外高层次人才"
+  },
+  {
+   "name_cn": "徐岭",
+   "name_en": null,
+   "title": null,
+   "department": "电子科学与工程学院 微电子与光电子学系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "光电子/集成光子"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465141",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王元庆",
+   "name_en": null,
+   "title": null,
+   "department": "电子科学与工程学院 信息电子学系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "类脑/神经形态芯片",
+    "光电子/集成光子",
+    "生物医疗电子"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465153",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "吴敬波",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 电子工程系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "射频/毫米波/电磁场",
+    "超导/量子器件",
+    "通信与信号处理"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465150",
+   "email": null,
+   "notes": "国家杰青"
+  },
+  {
+   "name_cn": "徐尉宗",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子科学与工程学院 信息电子学系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "超导/量子器件",
+    "半导体器件与工艺",
+    "宽禁带半导体",
+    "光电子/集成光子",
+    "通信与信号处理",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30452&articleId=465350",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "于耀",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子科学与工程学院 信息电子学系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "电路与系统"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465135",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "叶建东",
+   "name_en": null,
+   "title": null,
+   "department": "电子科学与工程学院 微电子与光电子学系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "宽禁带半导体",
+    "光电子/集成光子"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465136",
+   "email": null,
+   "notes": "国家杰青、国家优青"
+  },
+  {
+   "name_cn": "邢钟文",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子科学与工程学院 微电子与光电子学系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "超导/量子器件",
+    "半导体器件与工艺"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465146",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "周峰",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子科学与工程学院 信息电子学系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "宽禁带半导体"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30452&articleId=801081",
+   "email": null,
+   "notes": "国家级青年人才"
+  },
+  {
+   "name_cn": "修向前",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 微电子与光电子学系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "宽禁带半导体",
+    "通信与信号处理"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465144",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "余林蔚",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 微电子与光电子学系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件与工艺"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30451&articleId=465169",
+   "email": null,
+   "notes": "国家杰青"
+  },
+  {
+   "name_cn": "张蜡宝",
+   "name_en": null,
+   "title": "特聘教授",
+   "department": "电子科学与工程学院 电子工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "超导/量子器件",
+    "光电子/集成光子",
+    "通信与信号处理"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465127",
+   "email": null,
+   "notes": "国家杰青、长江学者"
+  },
+  {
+   "name_cn": "张彩虹",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 电子工程系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "射频/毫米波/电磁场",
+    "超导/量子器件",
+    "光电子/集成光子",
+    "电磁场与超材料"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465128",
+   "email": null,
+   "notes": "国家优青"
+  },
+  {
+   "name_cn": "杨燚",
+   "name_en": null,
+   "title": "讲师",
+   "department": "电子科学与工程学院 信息电子学系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波/电磁场",
+    "电磁场与超材料"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465138",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "袁杰",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子科学与工程学院 信息电子学系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "光电子/集成光子",
+    "生物医疗电子"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465133",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张丽敏",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 信息电子学系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "类脑/神经形态芯片",
+    "MEMS/传感器",
+    "生物医疗电子",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465125",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "赵清源",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 电子工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "超导/量子器件",
+    "光电子/集成光子",
+    "通信与信号处理"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=464825",
+   "email": null,
+   "notes": "国家杰青"
+  },
+  {
+   "name_cn": "张旭",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子科学与工程学院 通信工程系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "类脑/神经形态芯片",
+    "生物医疗电子",
+    "通信与信号处理"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30453&articleId=765963",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张豹山",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子科学与工程学院 信息电子学系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "电路与系统"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=465130",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "郑海荣",
+   "name_en": null,
+   "title": "研究员",
+   "department": "电子科学与工程学院 通信工程系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "类脑/神经形态芯片",
+    "自旋电子/存储芯片",
+    "超导/量子器件",
+    "光电子/集成光子",
+    "生物医疗电子"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30453&articleId=771503",
+   "email": null,
+   "notes": "中国科学院院士、国家杰青"
+  },
+  {
+   "name_cn": "赵康僆",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 通信工程系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "通信与信号处理",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=464833",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "周玉刚",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 微电子与光电子学系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "宽禁带半导体",
+    "光电子/集成光子",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=464819",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "赵俊明",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子科学与工程学院 电子工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光电子/集成光子",
+    "电磁场与超材料"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=464837",
+   "email": null,
+   "notes": "国家高层次人才特殊支持计划"
+  },
+  {
+   "name_cn": "周余",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子科学与工程学院 信息电子学系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "电路与系统"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=464820",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "朱博",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "电子科学与工程学院 电子工程系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "射频/毫米波/电磁场",
+    "自旋电子/存储芯片",
+    "电磁场与超材料",
+    "通信与信号处理"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=464818",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "周海波",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 通信工程系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "类脑/神经形态芯片",
+    "通信与信号处理"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30446&articleId=464821",
+   "email": null,
+   "notes": "国家杰青、全球高被引科学家"
+  },
+  {
+   "name_cn": "涂学凑",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 电子工程系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "射频/毫米波/电磁场",
+    "半导体器件与工艺",
+    "光电子/集成光子",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30450&articleId=465083",
+   "email": null,
+   "notes": "国家高层次人才特殊支持计划"
+  },
+  {
+   "name_cn": "李文峰",
+   "name_en": null,
+   "title": "特任副研究员",
+   "department": "电子科学与工程学院 通信工程系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "通信与信号处理"
+   ],
+   "homepage": "https://ese.nju.edu.cn/_redirect?siteId=452&columnId=30453&articleId=465198",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "毛成",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "电子科学与工程学院 信息电子学系（无）",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路设计",
+    "超导/量子器件",
+    "光电子/集成光子",
+    "集成电路与系统"
+   ],
+   "homepage": "https://ese.nju.edu.cn/mc/list.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "纪小丽",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子科学与工程学院 信息电子学系（物理电子学）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波/电磁场",
+    "半导体器件与工艺",
+    "光电子/集成光子",
+    "MEMS/传感器"
+   ],
+   "homepage": "http://ese.nju.edu.cn/jxl_24120/list.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "陈伟",
+   "name_en": null,
+   "title": "副教授",
+   "department": "现代工程与应用科学学院（光电/材料科学与工程系）",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "光电子/集成光子"
+   ],
+   "homepage": "http://eng.nju.edu.cn/lw/main.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "陈向飞",
+   "name_en": null,
+   "title": "教授",
+   "department": "现代工程与应用科学学院（光电/材料科学与工程系）",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "射频/毫米波/电磁场",
+    "光电子/集成光子",
+    "电磁场与超材料",
+    "通信与信号处理",
+    "集成电路与系统"
+   ],
+   "homepage": "http://eng.nju.edu.cn/cxf/main.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "郭少华",
+   "name_en": null,
+   "title": "教授",
+   "department": "现代工程与应用科学学院（光电/材料科学与工程系）",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "光电材料与器件"
+   ],
+   "homepage": "http://eng.nju.edu.cn/gsh/main.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "胡伟",
+   "name_en": null,
+   "title": "教授",
+   "department": "现代工程与应用科学学院（光电/材料科学与工程系）",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "光电子/集成光子"
+   ],
+   "homepage": "http://eng.nju.edu.cn/hw/main.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李爱东",
+   "name_en": null,
+   "title": "教授",
+   "department": "现代工程与应用科学学院（光电/材料科学与工程系）",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "光电材料与器件"
+   ],
+   "homepage": "http://eng.nju.edu.cn/lad/main.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "陆延青",
+   "name_en": null,
+   "title": "教授",
+   "department": "现代工程与应用科学学院（光电/材料科学与工程系）",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "光电子/集成光子"
+   ],
+   "homepage": "http://eng.nju.edu.cn/lyq/main.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李涛",
+   "name_en": null,
+   "title": "教授",
+   "department": "现代工程与应用科学学院（光电/材料科学与工程系）",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "光电子/集成光子"
+   ],
+   "homepage": "https://taoli.nju.edu.cn/",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李密",
+   "name_en": null,
+   "title": "教授",
+   "department": "现代工程与应用科学学院（光电/材料科学与工程系）",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "光电子/集成光子",
+    "通信与信号处理",
+    "集成电路与系统"
+   ],
+   "homepage": "http://eng.nju.edu.cn/lm2/main.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "宋万鸽",
+   "name_en": null,
+   "title": "准聘副教授",
+   "department": "现代工程与应用科学学院（光电/材料科学与工程系）",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "光电子/集成光子",
+    "集成电路与系统"
+   ],
+   "homepage": "http://eng.nju.edu.cn/swg/main.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "宋茂文",
+   "name_en": null,
+   "title": "准聘副教授",
+   "department": "现代工程与应用科学学院（光电/材料科学与工程系）",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "光电子/集成光子"
+   ],
+   "homepage": "http://eng.nju.edu.cn/smw1/main.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王峰",
+   "name_en": null,
+   "title": "教授",
+   "department": "现代工程与应用科学学院（光电/材料科学与工程系）",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "光电子/集成光子",
+    "集成电路与系统"
+   ],
+   "homepage": "http://eng.nju.edu.cn/wf/main.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "徐挺",
+   "name_en": null,
+   "title": "教授",
+   "department": "现代工程与应用科学学院（光电/材料科学与工程系）",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "光电子/集成光子",
+    "电磁场与超材料"
+   ],
+   "homepage": "http://eng.nju.edu.cn/xt/main.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张益昕",
+   "name_en": null,
+   "title": "教授",
+   "department": "现代工程与应用科学学院（光电/材料科学与工程系）",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "光电材料与器件"
+   ],
+   "homepage": "https://ocer.nju.edu.cn",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张伟华",
+   "name_en": null,
+   "title": "教授",
+   "department": "现代工程与应用科学学院（光电/材料科学与工程系）",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "射频/毫米波/电磁场",
+    "自旋电子/存储芯片",
+    "半导体器件与工艺",
+    "光电子/集成光子",
+    "MEMS/传感器",
+    "电磁场与超材料"
+   ],
+   "homepage": "http://eng.nju.edu.cn/zwh/main.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "郑庆东",
+   "name_en": null,
+   "title": "教授",
+   "department": "现代工程与应用科学学院（光电/材料科学与工程系）",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "光电子/集成光子"
+   ],
+   "homepage": "http://eng.nju.edu.cn/zqd/main.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "袁洪涛",
+   "name_en": null,
+   "title": "教授",
+   "department": "现代工程与应用科学学院（光电/材料科学与工程系）",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "自旋电子/存储芯片",
+    "超导/量子器件",
+    "光电子/集成光子"
+   ],
+   "homepage": "https://interface.nju.edu.cn/18346/list.htm",
+   "email": null,
+   "notes": "长江学者"
+  },
+  {
+   "name_cn": "张旭苹",
+   "name_en": null,
+   "title": "教授",
+   "department": "现代工程与应用科学学院（光电/材料科学与工程系）",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "光电材料与器件"
+   ],
+   "homepage": "http://eng.nju.edu.cn/zxp/main.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "杜灵杰",
+   "name_en": null,
+   "title": "教授",
+   "department": "物理学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "宽禁带半导体",
+    "光电子/集成光子"
+   ],
+   "homepage": "http://physics.nju.edu.cn/szdw/qbmd/20240321/i262022.html",
+   "email": null,
+   "notes": "国家级人才"
+  },
+  {
+   "name_cn": "刘尔富",
+   "name_en": null,
+   "title": "副教授",
+   "department": "物理学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "二维材料器件",
+    "光电子/集成光子",
+    "电磁场与超材料"
+   ],
+   "homepage": "https://opto.nju.edu.cn/",
+   "email": null,
+   "notes": "国家级青年人才"
+  },
+  {
+   "name_cn": "梁世军",
+   "name_en": null,
+   "title": "教授",
+   "department": "物理学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "类脑/神经形态芯片",
+    "二维材料器件",
+    "MEMS/传感器",
+    "集成电路与系统"
+   ],
+   "homepage": "http://nano.nju.edu.cn​",
+   "email": null,
+   "notes": "国家优青"
+  },
+  {
+   "name_cn": "刘荣华",
+   "name_en": null,
+   "title": "教授",
+   "department": "物理学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波/电磁场",
+    "类脑/神经形态芯片",
+    "自旋电子/存储芯片",
+    "超导/量子器件",
+    "半导体器件与工艺",
+    "电磁场与超材料"
+   ],
+   "homepage": "http://physics.nju.edu.cn/szdw/qbmd/20250325/i310392.html",
+   "email": null,
+   "notes": "国家级青年人才"
+  },
+  {
+   "name_cn": "缪峰",
+   "name_en": null,
+   "title": "教授",
+   "department": "物理学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "数字集成电路/体系结构",
+    "类脑/神经形态芯片",
+    "二维材料器件",
+    "生物医疗电子"
+   ],
+   "homepage": "https://nano.nju.edu.cn/eng_index.html",
+   "email": null,
+   "notes": "国家级人才、国家杰青、全球高被引科学家"
+  },
+  {
+   "name_cn": "沈瑞",
+   "name_en": null,
+   "title": "教授",
+   "department": "物理学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "自旋电子/存储芯片",
+    "超导/量子器件"
+   ],
+   "homepage": "http://physics.nju.edu.cn/szdw/qbmd/20240321/i261980.html",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "谭新生",
+   "name_en": null,
+   "title": null,
+   "department": "物理学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体器件与量子器件"
+   ],
+   "homepage": "http://physics.nju.edu.cn/szdw/qbmd/20240321/i261977.html",
+   "email": null,
+   "notes": "国家级青年人才"
+  },
+  {
+   "name_cn": "王雷",
+   "name_en": null,
+   "title": "教授",
+   "department": "物理学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "二维材料器件"
+   ],
+   "homepage": "http://physics.nju.edu.cn/szdw/qbmd/20240605/i267889.html",
+   "email": null,
+   "notes": "国家级人才"
+  },
+  {
+   "name_cn": "颜志波",
+   "name_en": null,
+   "title": "教授",
+   "department": "物理学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "存算一体",
+    "半导体器件与工艺",
+    "光电子/集成光子"
+   ],
+   "homepage": "http://pld.nju.edu.cn",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "于葛亮",
+   "name_en": null,
+   "title": "教授",
+   "department": "物理学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "超导/量子器件",
+    "二维材料器件"
+   ],
+   "homepage": "http://physics.nju.edu.cn/szdw/qbmd/20250615/i324029.html",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "于扬",
+   "name_en": null,
+   "title": "教授",
+   "department": "物理学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "超导/量子器件"
+   ],
+   "homepage": "https://sslab.nju.edu.cn/main.htm",
+   "email": null,
+   "notes": "国家级人才、国家杰青、长江学者"
+  },
+  {
+   "name_cn": "张志勇",
+   "name_en": null,
+   "title": null,
+   "department": "物理学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体器件与量子器件"
+   ],
+   "homepage": "http://physics.nju.edu.cn/szdw/qbmd/20240321/i262027.html",
+   "email": null,
+   "notes": null
+  }
+ ]
 }

@@ -1,2469 +1,2469 @@
 {
-  "school": "上海交通大学",
-  "school_key": "sjtu",
-  "harvested_at": "2026-09-22",
-  "sources": [
-    "https://icisee.sjtu.edu.cn/jiaoshiml.html",
-    "https://icisee.sjtu.edu.cn/active/ajax_teacher_list.html (POST 分页，共 28 页)",
-    "https://icisee.sjtu.edu.cn/jiaoshiml/<姓名拼音>.html (274 位教师个人主页，逐页解析系所/邮箱/主页/研究方向/荣誉)",
-    "https://icisee.sjtu.edu.cn/xygk.html",
-    "https://icisee.sjtu.edu.cn/szgk.html",
-    "https://www.seiee.sjtu.edu.cn/",
-    "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
-    "https://cs.sjtu.edu.cn/jiaoshiml.html",
-    "https://cs.sjtu.edu.cn/active/ajax_teacher_list.html (POST，290 人)",
-    "https://cs.sjtu.edu.cn/jiaoshiml/<姓名拼音>.html (290 位教师个人主页，逐页解析)",
-    "https://sais.sjtu.edu.cn/faculty.html",
-    "https://sais.sjtu.edu.cn/active/ajax_teacher_list.html (POST，206 人)",
-    "https://sais.sjtu.edu.cn/faculty/<姓名拼音>.html (206 位教师个人主页，逐页解析)",
-    "https://soai.sjtu.edu.cn/",
-    "https://soai.sjtu.edu.cn/cn/faculty/zzjs",
-    "https://soai.sjtu.edu.cn/cn/facultydetails/zzjs/<slug> (46 位专职教师个人主页)",
-    "https://loct.sjtu.edu.cn/",
-    "https://loct.sjtu.edu.cn/team/directory.html (人员名录 79 人)",
-    "https://loct.sjtu.edu.cn/team/list.html",
-    "https://loct.sjtu.edu.cn/team/index.html",
-    "https://loct.sjtu.edu.cn/team/detail/zhi-neng-guang-zi-xue-yan-jiu-zhong-xin-tuan-dui.html",
-    "https://loct.sjtu.edu.cn/team/detail/guang-zi-xin-xi-chu-li-qi-jian-xi-tong-yu-ying-yong-yan-jiu.html",
-    "https://loct.sjtu.edu.cn/team/detail/guang-chuan-shu-yu-ji-cheng-guang-zi-xue-shi-yan-shi-tuan-dui.html",
-    "https://loct.sjtu.edu.cn/team/detail/liang-zi-gan-zhi-yu-xin-xi-chu-li-yan-jiu-suo-tuan-dui.html",
-    "https://faculty.sjtu.edu.cn/xiabin/zh_CN/index.htm (个别教师主页，用于方向判定)"
-  ],
-  "coverage_note": "【已抓取并逐人解析】\n1) 集成电路学院（信息与电子工程学院）icisee.sjtu.edu.cn —— 教师名录 274 人全部抓取（AJAX POST 28 页）+ 274 个个人主页逐页解析。该学院整合了原微纳电子学系、电子工程系与新设集成电路学院，下设：芯片设计与EDA研究所、微纳器件与集成系统研究所、纳电子材料与器件研究所、光子学与通信研究所、电磁与智能系统研究所、图像通信与网络工程研究所、无线通信技术研究所、信息智能研究所、数据智能研究所、未来媒体网络协同创新中心、先进电子材料与器件平台、电子信息与集成电路实验教学中心。本名册为该 274 人中符合方向要求者。\n2) 电子信息与电气工程学院（学部）seiee.sjtu.edu.cn —— 学部“教师名录”页仅为四个学院的导航入口，无独立师资数据；其下属的集成电路学院、计算机学院、自动化与感知学院均已单独抓取。\n3) 计算机学院 cs.sjtu.edu.cn —— 教师名录 290 人全部抓取（AJAX POST）+ 290 个个人主页解析；按体系结构 / AI 加速器 / EDA / 芯片架构方向筛出 12 人。\n4) 自动化与感知学院（原自动化系＋感知科学与工程学院）sais.sjtu.edu.cn —— 教师名录 206 人全部抓取 + 206 个个人主页解析；按 MEMS / 传感器芯片 / 智能仪器方向筛出 9 人（其余为导航定位、控制理论、机器人、工业互联网方向，属排除范围）。\n5) 人工智能学院 soai.sjtu.edu.cn —— 专职教师 46 人全部抓取 + 46 个个人主页解析；按 AI 芯片 / 算力硬件方向筛出 3 人（程远、戴国浩、冯二虎），其余为 CV / NLP / 具身智能 / 医学 AI 等纯算法方向。\n6) 光子传输与通信全国重点实验室（即原“区域光纤通信网与新型光通信系统国家重点实验室”）loct.sjtu.edu.cn —— 人员名录 79 人全部解析，4 个研究中心介绍页已抓取。79 人中 53 人同时挂在集成电路学院名录（已合并去重）；余 26 人按“偏光芯片 / 光电子器件”标准补入 9 人，其余为量子密码通信理论、遥感雷达、数据智能等方向。\n\n【未抓到及原因】\na) 微纳电子学系 mee.sjtu.edu.cn —— 域名已失效（fetch failed）；该系已并入集成电路学院，师资已在 icisee.sjtu.edu.cn 名录中覆盖。\nb) 电子工程系独立站点 —— 同样并入集成电路学院，无独立师资页。\nc) 微米/纳米加工技术国家级重点实验室 mnfab.sjtu.edu.cn —— 现 302 跳转至 restrict.sjtu.edu.cn（校内限制访问），无公开师资页。该实验室对应现“微纳电子器件与集成技术全国重点实验室”，其固定人员已通过集成电路学院“微纳器件与集成系统研究所”名单覆盖（如蔡星汉标注“微纳全重党支部书记”）。\nd) 人工智能研究院旧站 ai.sjtu.edu.cn —— 仅返回 1KB 占位页；已改用新站 soai.sjtu.edu.cn。\ne) 约 56 位教师个人主页未设“研究方向”栏目，已改用主页全文与个人简介做方向判定；仍无法判定方向者予以剔除。\n\n【筛选口径】仅收在职教师 / 科研人员（讲席教授、特聘教授、教授、研究员、副教授、副研究员、助理教授、助理研究员、讲师）。已剔除：实验师 / 高级实验师 / 工程师 / 高级工程师 / 思政教师 / 行政人员 / 博士后 / 退休 / 兼职双聘；纯材料化学（储能电池、光催化、第一性原理材料计算）、纯物理理论、纯软件算法（视频编码、计算机视觉、大模型、遥感与雷达信号处理、密码理论）、纯管理方向人员。\n【字段说明】title 已归一到规范职称（长聘/长聘教轨岗位的原始称谓保留在 notes 中）；name_en 页面未提供，统一为 null；is_phd_advisor 依据个人主页“博士生导师/博导”表述或岗位性质判定。",
-  "faculty": [
-    {
-      "name_cn": "蔡星汉",
-      "name_en": null,
-      "title": "教授",
-      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "硅光/光电子集成",
-        "MEMS/微机电系统"
-      ],
-      "homepage": "https://2dkitchen.sjtu.edu.cn/",
-      "email": "xhcai@sjtu.edu.cn",
-      "notes": "国家级青年人才"
-    },
-    {
-      "name_cn": "曾贵华",
-      "name_en": null,
-      "title": "教授",
-      "department": "光子传输与通信全国重点实验室（量子感知与信息处理研究所）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "量子信息器件",
-        "通信基带与系统"
-      ],
-      "homepage": null,
-      "email": null,
-      "notes": "QSIP研究所所长；“十三五”科技委主题专家；校内岗位：长聘教授"
-    },
-    {
-      "name_cn": "曾敏",
-      "name_en": null,
-      "title": "副研究员",
-      "department": "集成电路学院（信息与电子工程学院）· 纳电子材料与器件研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "传感器与智能感知"
-      ],
-      "homepage": null,
-      "email": "minzeng@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "陈诚",
-      "name_en": null,
-      "title": "助理研究员",
-      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "集成电路设计",
-        "EDA/设计自动化",
-        "MEMS/微机电系统",
-        "传感器与智能感知",
-        "生物医疗电子/脑机接口"
-      ],
-      "homepage": null,
-      "email": "chencheng_sjtu@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "陈海宝",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "模拟/混合信号集成电路",
-        "数字集成电路与SoC",
-        "EDA/设计自动化",
-        "半导体器件与工艺"
-      ],
-      "homepage": "https://haibaochen.sjtu.edu.cn",
-      "email": "haibaochen@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "陈建平",
-      "name_en": null,
-      "title": "特聘教授",
-      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "模拟/混合信号集成电路",
-        "硅光/光电子集成",
-        "电磁与天线"
-      ],
-      "homepage": null,
-      "email": "jpchen62@sjtu.edu.cn",
-      "notes": "973首席科学家（重点实验室团队页标注）"
-    },
-    {
-      "name_cn": "陈铭易",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "模拟/混合信号集成电路",
-        "射频/毫米波集成电路",
-        "数字集成电路与SoC",
-        "硅光/光电子集成",
-        "MEMS/微机电系统"
-      ],
-      "homepage": null,
-      "email": "mychen@sjtu.edu.cn",
-      "notes": "校内岗位：长聘副教授"
-    },
-    {
-      "name_cn": "陈苏杰",
-      "name_en": null,
-      "title": "副研究员",
-      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "MEMS/微机电系统",
-        "传感器与智能感知"
-      ],
-      "homepage": null,
-      "email": "sjchen2008@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "陈文超",
-      "name_en": null,
-      "title": "教授",
-      "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "射频/毫米波集成电路",
-        "处理器与体系结构",
-        "AI加速器/智能芯片",
-        "EDA/设计自动化",
-        "半导体器件与工艺",
-        "硅光/光电子集成"
-      ],
-      "homepage": null,
-      "email": "chenwenchao@sjtu.edu.cn",
-      "notes": "国家杰青；国家级青年人才"
-    },
-    {
-      "name_cn": "陈一彤",
-      "name_en": null,
-      "title": "助理教授",
-      "department": "集成电路学院（信息与电子工程学院）· 图像通信与网络工程研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "硅光/光电子集成",
-        "AI加速器/智能芯片",
-        "光电智能计算芯片"
-      ],
-      "homepage": null,
-      "email": "yitongchen@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "陈长鑫",
-      "name_en": null,
-      "title": "特聘教授",
-      "department": "集成电路学院（信息与电子工程学院）· 纳电子材料与器件研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "半导体器件与工艺",
-        "硅光/光电子集成"
-      ],
-      "homepage": null,
-      "email": "chen.c.x@sjtu.edu.cn",
-      "notes": "国家级高层次人才"
-    },
-    {
-      "name_cn": "程秀兰",
-      "name_en": null,
-      "title": "研究员",
-      "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "处理器与体系结构",
-        "半导体器件与工艺",
-        "硅光/光电子集成",
-        "通信基带与系统"
-      ],
-      "homepage": null,
-      "email": "xlcheng@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "程远",
-      "name_en": null,
-      "title": "副教授",
-      "department": "人工智能学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "硅光/光电子集成",
-        "AI加速器/智能芯片",
-        "处理器与体系结构"
-      ],
-      "homepage": "https://cyuan328.github.io/",
-      "email": "cyuan328@sjtu.edu.cn",
-      "notes": "光芯片/端侧计算/软硬协同/AI计算架构；福布斯中国U30；2024福布斯中国U30"
-    },
-    {
-      "name_cn": "戴国浩",
-      "name_en": null,
-      "title": "副教授",
-      "department": "人工智能学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "AI加速器/智能芯片",
-        "数字集成电路与SoC",
-        "存算一体/近存计算"
-      ],
-      "homepage": "https://dai.sjtu.edu.cn",
-      "email": "daiguohao@sjtu.edu.cn",
-      "notes": "稀疏计算电路与系统；FPGA 2025/ASP-DAC 2025/DATE 2024最佳论文奖；Ph.D. Forum at DAC 2024 联席主席；2022 WAIC 云帆奖"
-    },
-    {
-      "name_cn": "戴旭涵",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "射频/毫米波集成电路",
-        "半导体器件与工艺",
-        "MEMS/微机电系统",
-        "传感器与智能感知"
-      ],
-      "homepage": null,
-      "email": "xhdai@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "丁桂甫",
-      "name_en": null,
-      "title": "教授",
-      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "处理器与体系结构",
-        "半导体器件与工艺",
-        "MEMS/微机电系统",
-        "传感器与智能感知"
-      ],
-      "homepage": null,
-      "email": "gfding@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "董承远",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "半导体器件与工艺",
-        "硅光/光电子集成",
-        "MEMS/微机电系统",
-        "传感器与智能感知"
-      ],
-      "homepage": null,
-      "email": "cydong@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "杜江兵",
-      "name_en": null,
-      "title": "研究员",
-      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "处理器与体系结构",
-        "硅光/光电子集成",
-        "光纤传感与光通信",
-        "通信基带与系统"
-      ],
-      "homepage": "http://cip.sjtu.edu.cn/www/index.php/teacher/dujia",
-      "email": "dujiangbing@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "樊昕昱",
-      "name_en": null,
-      "title": "研究员",
-      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "硅光/光电子集成",
-        "光纤传感与光通信",
-        "传感器与智能感知",
-        "通信基带与系统"
-      ],
-      "homepage": "https://cip.sjtu.edu.cn/",
-      "email": "fan.xinyu@sjtu.edu.cn",
-      "notes": "国家青年特聘专家；智能光子学研究中心成员"
-    },
-    {
-      "name_cn": "冯二虎",
-      "name_en": null,
-      "title": "助理教授",
-      "department": "人工智能学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "处理器与体系结构",
-        "AI加速器/智能芯片"
-      ],
-      "homepage": "https://ipads.se.sjtu.edu.cn/pub/members/erhu_feng",
-      "email": "fengerhu1@sjtu.edu.cn",
-      "notes": "OSDI/SOSP/ISCA/ASPLOS/HPCA；成果落地RISC-V芯片与AI加速器"
-    },
-    {
-      "name_cn": "冯宇",
-      "name_en": null,
-      "title": "助理教授",
-      "department": "计算机学院（先进计算研究所,约翰·霍普克罗夫特计算机科学中心）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "处理器与体系结构",
-        "AI加速器/智能芯片"
-      ],
-      "homepage": "https://yufenguofr.github.io/",
-      "email": null,
-      "notes": "ISCA/MICRO/ASPLOS 体系结构名人堂；2025 ASPLOS 最佳论文奖"
-    },
-    {
-      "name_cn": "付宇卓",
-      "name_en": null,
-      "title": "教授",
-      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "数字集成电路与SoC",
-        "处理器与体系结构",
-        "EDA/设计自动化"
-      ],
-      "homepage": null,
-      "email": "yzfu@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "顾昌展",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "射频/毫米波集成电路",
-        "AI加速器/智能芯片",
-        "半导体器件与工艺",
-        "硅光/光电子集成",
-        "MEMS/微机电系统",
-        "电磁与天线"
-      ],
-      "homepage": "https://changzhan.sjtu.edu.cn",
-      "email": "changzhan@sjtu.edu.cn",
-      "notes": "校内岗位：长聘副教授"
-    },
-    {
-      "name_cn": "顾磊磊",
-      "name_en": null,
-      "title": "副教授",
-      "department": "计算机学院（清源研究院）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "传感器与智能感知",
-        "AI加速器/智能芯片"
-      ],
-      "homepage": null,
-      "email": null,
-      "notes": "校内岗位：长聘教轨副教授"
-    },
-    {
-      "name_cn": "郭亮",
-      "name_en": null,
-      "title": "特聘教授",
-      "department": "集成电路学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "传感器与智能感知",
-        "生物医疗电子/脑机接口"
-      ],
-      "homepage": null,
-      "email": "guo.liang@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "郭小军",
-      "name_en": null,
-      "title": "教授",
-      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "半导体器件与工艺",
-        "MEMS/微机电系统",
-        "传感器与智能感知"
-      ],
-      "homepage": null,
-      "email": "x.guo@sjtu.edu.cn",
-      "notes": "学院常务副院长（新闻页）"
-    },
-    {
-      "name_cn": "郭旭涵",
-      "name_en": null,
-      "title": "教授",
-      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "硅光/光电子集成",
-        "光纤传感与光通信"
-      ],
-      "homepage": "https://guoxuhan.sjtu.edu.cn/; http://otip.sjtu.edu.cn/member/XuhanGuo",
-      "email": "guoxuhan@sjtu.edu.cn",
-      "notes": "国家级高层次青年人才"
-    },
-    {
-      "name_cn": "郭衍束",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "模拟/混合信号集成电路",
-        "射频/毫米波集成电路",
-        "数字集成电路与SoC",
-        "处理器与体系结构",
-        "EDA/设计自动化"
-      ],
-      "homepage": "https://cryo-x.sjtu.edu.cn",
-      "email": "guoyanshu@sjtu.edu.cn",
-      "notes": "校内岗位：长聘教轨副教授"
-    },
-    {
-      "name_cn": "郭宇耀",
-      "name_en": null,
-      "title": "助理研究员",
-      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "半导体器件与工艺",
-        "硅光/光电子集成",
-        "传感器与智能感知",
-        "通信基带与系统"
-      ],
-      "homepage": null,
-      "email": "guoyuyao1992@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "过悦康",
-      "name_en": null,
-      "title": "讲师",
-      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "集成电路设计",
-        "模拟/混合信号集成电路",
-        "EDA/设计自动化"
-      ],
-      "homepage": null,
-      "email": "guoyuekang@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "韩韬",
-      "name_en": null,
-      "title": "教授",
-      "department": "自动化与感知学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "MEMS/微机电系统",
-        "传感器与智能感知"
-      ],
-      "homepage": null,
-      "email": "than@sjtu.edu.cn",
-      "notes": "校内岗位：长聘教授"
-    },
-    {
-      "name_cn": "何大治",
-      "name_en": null,
-      "title": "研究员",
-      "department": "集成电路学院（信息与电子工程学院）· 未来媒体网络协同创新中心",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "硅光/光电子集成",
-        "通信基带与系统"
-      ],
-      "homepage": null,
-      "email": "hedazhi@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "何谷峰",
-      "name_en": null,
-      "title": "教授",
-      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "半导体器件与工艺",
-        "MEMS/微机电系统",
-        "传感器与智能感知"
-      ],
-      "homepage": "http://oodl.sjtu.edu.cn",
-      "email": "gufenghe@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "何广强",
-      "name_en": null,
-      "title": "教授",
-      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "硅光/光电子集成",
-        "光纤传感与光通信",
-        "传感器与智能感知",
-        "电磁与天线",
-        "量子信息器件"
-      ],
-      "homepage": "http://qnp.sjtu.edu.cn",
-      "email": "gqhe@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "何卫锋",
-      "name_en": null,
-      "title": "教授",
-      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "模拟/混合信号集成电路",
-        "数字集成电路与SoC",
-        "处理器与体系结构",
-        "AI加速器/智能芯片",
-        "存算一体/近存计算"
-      ],
-      "homepage": null,
-      "email": "hewf@sjtu.edu.cn",
-      "notes": "低功耗处理器/存算一体芯片方向"
-    },
-    {
-      "name_cn": "何宇",
-      "name_en": null,
-      "title": "副研究员",
-      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "半导体器件与工艺",
-        "硅光/光电子集成",
-        "光纤传感与光通信"
-      ],
-      "homepage": null,
-      "email": "yuhe2015@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "何哲陟",
-      "name_en": null,
-      "title": "副教授",
-      "department": "计算机学院（人工智能与认知安全研究所）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "AI加速器/智能芯片",
-        "EDA/设计自动化",
-        "存算一体/近存计算"
-      ],
-      "homepage": "https://elliothe.github.io/",
-      "email": null,
-      "notes": "校内岗位：长聘教轨副教授"
-    },
-    {
-      "name_cn": "何祖源",
-      "name_en": null,
-      "title": "教授",
-      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "光纤传感与光通信",
-        "传感器与智能感知"
-      ],
-      "homepage": null,
-      "email": "zuyuanhe@sjtu.edu.cn",
-      "notes": "光子学与通信研究所所长；光子传输与通信全国重点实验室主任；智能光子学研究中心学术带头人"
-    },
-    {
-      "name_cn": "贺光辉",
-      "name_en": null,
-      "title": "教授",
-      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "数字集成电路与SoC",
-        "处理器与体系结构",
-        "AI加速器/智能芯片",
-        "EDA/设计自动化",
-        "通信基带与系统"
-      ],
-      "homepage": null,
-      "email": "guanghui.he@sjtu.edu.cn",
-      "notes": "学院副院长（新闻页）"
-    },
-    {
-      "name_cn": "侯小凤",
-      "name_en": null,
-      "title": "副研究员",
-      "department": "计算机学院（先进计算研究所）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "处理器与体系结构",
-        "AI加速器/智能芯片"
-      ],
-      "homepage": "https://xfhelen.github.io/",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "胡亮",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "射频/毫米波集成电路",
-        "半导体器件与工艺",
-        "硅光/光电子集成",
-        "光纤传感与光通信",
-        "通信基带与系统"
-      ],
-      "homepage": null,
-      "email": "liang.hu@sjtu.edu.cn",
-      "notes": "校内岗位：长聘教轨副教授；玛丽居里学者"
-    },
-    {
-      "name_cn": "胡南滔",
-      "name_en": null,
-      "title": "副研究员",
-      "department": "集成电路学院（信息与电子工程学院）· 纳电子材料与器件研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "MEMS/微机电系统",
-        "传感器与智能感知",
-        "电磁与天线"
-      ],
-      "homepage": null,
-      "email": "hunantao@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "黄其煜",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "半导体器件与工艺",
-        "电源管理/功率器件"
-      ],
-      "homepage": null,
-      "email": "qiyu@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "纪幸辰",
-      "name_en": null,
-      "title": "副教授",
-      "department": "计算机学院 / 光子传输与通信全国重点实验室",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "硅光/光电子集成",
-        "半导体器件与工艺"
-      ],
-      "homepage": null,
-      "email": null,
-      "notes": "国家级青年人才；校内岗位：长聘教轨副教授"
-    },
-    {
-      "name_cn": "纪志罡",
-      "name_en": null,
-      "title": "教授",
-      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "数字集成电路与SoC",
-        "EDA/设计自动化"
-      ],
-      "homepage": null,
-      "email": "zhigangji@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "姜红兰",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "模拟/混合信号集成电路",
-        "数字集成电路与SoC",
-        "处理器与体系结构",
-        "AI加速器/智能芯片",
-        "EDA/设计自动化"
-      ],
-      "homepage": null,
-      "email": "honglan@sjtu.edu.cn",
-      "notes": "校内岗位：长聘教轨副教授"
-    },
-    {
-      "name_cn": "蒋剑飞",
-      "name_en": null,
-      "title": "副研究员",
-      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "数字集成电路与SoC",
-        "处理器与体系结构",
-        "AI加速器/智能芯片",
-        "EDA/设计自动化",
-        "半导体器件与工艺"
-      ],
-      "homepage": null,
-      "email": "jiangjianfei@ sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "蒋力",
-      "name_en": null,
-      "title": "研究员",
-      "department": "计算机学院（可扩展计算研究所）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "处理器与体系结构",
-        "AI加速器/智能芯片",
-        "存算一体/近存计算",
-        "EDA/设计自动化"
-      ],
-      "homepage": "https://jianglisjtu.github.io/index.html",
-      "email": null,
-      "notes": "国家级青年人才；吴文俊人工智能奖（芯片类）二等奖；IET Computers & Digital Techniques 等集成电路期刊编委"
-    },
-    {
-      "name_cn": "金晶",
-      "name_en": null,
-      "title": "研究员",
-      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "模拟/混合信号集成电路",
-        "射频/毫米波集成电路",
-        "EDA/设计自动化"
-      ],
-      "homepage": null,
-      "email": "jinjing@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "金贤敏",
-      "name_en": null,
-      "title": "教授",
-      "department": "物理与天文学院 / 光子传输与通信全国重点实验室",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "硅光/光电子集成",
-        "量子信息器件"
-      ],
-      "homepage": null,
-      "email": null,
-      "notes": "集成光量子芯片方向（光子传输与通信全国重点实验室成员）"
-    },
-    {
-      "name_cn": "景乃锋",
-      "name_en": null,
-      "title": "研究员",
-      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "处理器与体系结构",
-        "存算一体/近存计算",
-        "EDA/设计自动化"
-      ],
-      "homepage": null,
-      "email": "sjtuj@sjtu.edu.cn",
-      "notes": "大算力高能效芯片/GPGPU方向；学院院长助理（新闻页）"
-    },
-    {
-      "name_cn": "雷冲",
-      "name_en": null,
-      "title": "助理研究员",
-      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "MEMS/微机电系统",
-        "传感器与智能感知",
-        "生物医疗电子/脑机接口"
-      ],
-      "homepage": null,
-      "email": "leiqhd@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "冷静文",
-      "name_en": null,
-      "title": "特聘教授",
-      "department": "计算机学院（先进计算研究所）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "处理器与体系结构",
-        "AI加速器/智能芯片"
-      ],
-      "homepage": null,
-      "email": null,
-      "notes": "国家优青"
-    },
-    {
-      "name_cn": "李超",
-      "name_en": null,
-      "title": "教授",
-      "department": "计算机学院（先进计算研究所）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "处理器与体系结构",
-        "AI加速器/智能芯片"
-      ],
-      "homepage": "https://cs.sjtu.edu.cn/~lichao/",
-      "email": null,
-      "notes": "国家优青；CCF体系结构专委会副主任；IEEE TC 领域首席编委"
-    },
-    {
-      "name_cn": "李海华",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院（信息与电子工程学院）· 纳电子材料与器件研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "半导体器件与工艺"
-      ],
-      "homepage": null,
-      "email": "lihaihua@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "李洪婧",
-      "name_en": null,
-      "title": "副研究员",
-      "department": "自动化与感知学院 / 光子传输与通信全国重点实验室",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "量子信息器件",
-        "传感器与智能感知"
-      ],
-      "homepage": null,
-      "email": null,
-      "notes": "量子感知与信息处理研究所成员"
-    },
-    {
-      "name_cn": "李金波",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "模拟/混合信号集成电路",
-        "EDA/设计自动化"
-      ],
-      "homepage": null,
-      "email": "lijinbo@sjtu.edu.cn",
-      "notes": "校内岗位：长聘教轨副教授"
-    },
-    {
-      "name_cn": "李靖驰",
-      "name_en": null,
-      "title": "助理研究员",
-      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "硅光/光电子集成",
-        "光纤传感与光通信"
-      ],
-      "homepage": "https://otip.sjtu.edu.cn/member/JingchiLi",
-      "email": "Jingchi_Lee@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "李平",
-      "name_en": null,
-      "title": "教授",
-      "department": "自动化与感知学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "传感器与智能感知",
-        "电源管理/功率器件"
-      ],
-      "homepage": null,
-      "email": "liping_sh@sjtu.edu.cn",
-      "notes": "校内岗位：长聘教授"
-    },
-    {
-      "name_cn": "李世阳",
-      "name_en": null,
-      "title": "副教授",
-      "department": "自动化与感知学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "MEMS/微机电系统",
-        "传感器与智能感知"
-      ],
-      "homepage": null,
-      "email": "shiyangli@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "李晓春",
-      "name_en": null,
-      "title": "教授",
-      "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "射频/毫米波集成电路",
-        "数字集成电路与SoC",
-        "EDA/设计自动化",
-        "电磁与天线"
-      ],
-      "homepage": "http://hsic.sjtu.edu.cn",
-      "email": "lixc@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "李杏",
-      "name_en": null,
-      "title": "副研究员",
-      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "模拟/混合信号集成电路",
-        "硅光/光电子集成",
-        "传感器与智能感知"
-      ],
-      "homepage": "https://imlic.sjtu.edu.cn/?p=555",
-      "email": "lixing85715@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "李秀妍",
-      "name_en": null,
-      "title": "教授",
-      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "半导体器件与工艺",
-        "MEMS/微机电系统",
-        "电源管理/功率器件"
-      ],
-      "homepage": null,
-      "email": "xiuyanli@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "李永福",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "EDA/设计自动化"
-      ],
-      "homepage": null,
-      "email": "yongfu.li@sjtu.edu.cn",
-      "notes": "校内岗位：长聘副教授"
-    },
-    {
-      "name_cn": "李雨",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "半导体器件与工艺",
-        "硅光/光电子集成",
-        "光纤传感与光通信",
-        "通信基带与系统"
-      ],
-      "homepage": null,
-      "email": "yuli_seiee@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "梁晓峣",
-      "name_en": null,
-      "title": "教授",
-      "department": "计算机学院（可扩展计算研究所）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "处理器与体系结构"
-      ],
-      "homepage": null,
-      "email": null,
-      "notes": "ISCA、MICRO 名人堂（Hall of Fame）"
-    },
-    {
-      "name_cn": "林树靖",
-      "name_en": null,
-      "title": "助理研究员",
-      "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "MEMS/微机电系统",
-        "半导体器件与工艺",
-        "生物医疗电子/脑机接口"
-      ],
-      "homepage": null,
-      "email": "aaron.lin@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "林艳霞",
-      "name_en": null,
-      "title": "助理教授",
-      "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "处理器与体系结构",
-        "EDA/设计自动化",
-        "半导体器件与工艺"
-      ],
-      "homepage": null,
-      "email": "yanxia.lin@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "林祖德",
-      "name_en": null,
-      "title": "副研究员",
-      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "半导体器件与工艺",
-        "MEMS/微机电系统",
-        "传感器与智能感知"
-      ],
-      "homepage": null,
-      "email": "linzude@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "刘方鑫",
-      "name_en": null,
-      "title": "助理研究员",
-      "department": "计算机学院（可扩展计算研究所）",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "处理器与体系结构",
-        "AI加速器/智能芯片",
-        "EDA/设计自动化"
-      ],
-      "homepage": "https://mxhx7199.github.io/",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "刘景全",
-      "name_en": null,
-      "title": "特聘教授",
-      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "半导体器件与工艺",
-        "MEMS/微机电系统",
-        "传感器与智能感知",
-        "生物医疗电子/脑机接口"
-      ],
-      "homepage": "http://mems.sjtu.edu.cn",
-      "email": "jqliu@sjtu.edu.cn",
-      "notes": "微纳器件与集成系统研究所（MEMS方向）团队负责人"
-    },
-    {
-      "name_cn": "刘庆文",
-      "name_en": null,
-      "title": "教授",
-      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "硅光/光电子集成",
-        "光纤传感与光通信",
-        "MEMS/微机电系统",
-        "传感器与智能感知",
-        "通信基带与系统"
-      ],
-      "homepage": null,
-      "email": "liuqingwen@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "刘武",
-      "name_en": null,
-      "title": "副研究员",
-      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "处理器与体系结构",
-        "MEMS/微机电系统",
-        "传感器与智能感知",
-        "电磁与天线"
-      ],
-      "homepage": null,
-      "email": "liuwu@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "刘彦",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "模拟/混合信号集成电路",
-        "EDA/设计自动化",
-        "生物医疗电子/脑机接口"
-      ],
-      "homepage": null,
-      "email": "yan.liu06@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "卢佳青",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "射频/毫米波集成电路",
-        "EDA/设计自动化",
-        "电磁与天线"
-      ],
-      "homepage": "jiaqing-lu.github.io",
-      "email": "jlu@ieee.org",
-      "notes": "校内岗位：长聘教轨副教授"
-    },
-    {
-      "name_cn": "陆梁军",
-      "name_en": null,
-      "title": "教授",
-      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "射频/毫米波集成电路",
-        "处理器与体系结构",
-        "硅光/光电子集成",
-        "光纤传感与光通信",
-        "电磁与天线"
-      ],
-      "homepage": null,
-      "email": "luliangjun@sjtu.edu.cn",
-      "notes": "国家高层次青年人才"
-    },
-    {
-      "name_cn": "罗骋韬",
-      "name_en": null,
-      "title": "副教授",
-      "department": "自动化与感知学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "MEMS/微机电系统",
-        "半导体器件与工艺"
-      ],
-      "homepage": null,
-      "email": "cluo1989@sjtu.edu.cn",
-      "notes": "校内岗位：长聘教轨副教授"
-    },
-    {
-      "name_cn": "马伯文",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "硅光/光电子集成"
-      ],
-      "homepage": null,
-      "email": "bowenma@sjtu.edu.cn",
-      "notes": "校内岗位：长聘教轨副教授"
-    },
-    {
-      "name_cn": "马麟",
-      "name_en": null,
-      "title": "研究员",
-      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "硅光/光电子集成",
-        "光纤传感与光通信",
-        "传感器与智能感知",
-        "电磁与天线"
-      ],
-      "homepage": null,
-      "email": "ma.lin@sjtu.edu.cn",
-      "notes": "上海特聘专家；智能光子学研究中心成员"
-    },
-    {
-      "name_cn": "毛军发",
-      "name_en": null,
-      "title": "教授",
-      "department": "集成电路学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "射频/毫米波集成电路",
-        "高速集成电路与系统",
-        "半导体器件与工艺"
-      ],
-      "homepage": null,
-      "email": "jfmao@sjtu.edu.cn",
-      "notes": "学院名录标注“院士”；集成电路互连与封装"
-    },
-    {
-      "name_cn": "毛逸飞",
-      "name_en": null,
-      "title": "副教授",
-      "department": "自动化与感知学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "硅光/光电子集成",
-        "半导体器件与工艺"
-      ],
-      "homepage": "https://www.x-mol.com/groups/mao_yifei",
-      "email": "maoyifei@sjtu.edu.cn",
-      "notes": "校内岗位：长聘教轨副教授"
-    },
-    {
-      "name_cn": "毛志刚",
-      "name_en": null,
-      "title": "教授",
-      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "数字集成电路与SoC",
-        "EDA/设计自动化"
-      ],
-      "homepage": null,
-      "email": "maozhigang@ic.sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "莫亭亭",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院（信息与电子工程学院）· 电子信息与集成电路实验教学中心",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "射频/毫米波集成电路"
-      ],
-      "homepage": null,
-      "email": "moting@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "庞健",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "射频/毫米波集成电路",
-        "数字集成电路与SoC",
-        "硅基相控阵收发机"
-      ],
-      "homepage": "https://siliconrf.sjtu.edu.cn/",
-      "email": "pangjian@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "彭争春",
-      "name_en": null,
-      "title": "教授",
-      "department": "集成电路学院（信息与电子工程学院）· 纳电子材料与器件研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "存算一体/近存计算",
-        "半导体器件与工艺",
-        "传感器与智能感知"
-      ],
-      "homepage": null,
-      "email": "pengzc@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "祁亮",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "模拟/混合信号集成电路",
-        "射频/毫米波集成电路",
-        "EDA/设计自动化",
-        "硅光/光电子集成",
-        "传感器与智能感知"
-      ],
-      "homepage": null,
-      "email": "qi.liang@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "钱娜",
-      "name_en": null,
-      "title": "副研究员",
-      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "模拟/混合信号集成电路",
-        "射频/毫米波集成电路",
-        "硅光/光电子集成"
-      ],
-      "homepage": null,
-      "email": "qianna@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "邱辞源",
-      "name_en": null,
-      "title": "教授",
-      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "射频/毫米波集成电路",
-        "AI加速器/智能芯片",
-        "半导体器件与工艺",
-        "硅光/光电子集成",
-        "光纤传感与光通信",
-        "通信基带与系统"
-      ],
-      "homepage": null,
-      "email": "qiuciyuan@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "邱良丰",
-      "name_en": null,
-      "title": "副研究员",
-      "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "射频/毫米波集成电路",
-        "EDA/设计自动化",
-        "半导体器件与工艺",
-        "电磁与天线"
-      ],
-      "homepage": "http://microwave.eu.org:8000/",
-      "email": "gilbert0571@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "任鹏鹏",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "模拟/混合信号集成电路",
-        "数字集成电路与SoC",
-        "EDA/设计自动化",
-        "半导体器件与工艺"
-      ],
-      "homepage": null,
-      "email": "pengpengren@sjtu.edu.cn",
-      "notes": "校内岗位：长聘教轨副教授"
-    },
-    {
-      "name_cn": "绳伟光",
-      "name_en": null,
-      "title": "副研究员",
-      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "数字集成电路与SoC",
-        "处理器与体系结构",
-        "EDA/设计自动化"
-      ],
-      "homepage": null,
-      "email": "wgshenghit@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "施国勇",
-      "name_en": null,
-      "title": "教授",
-      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "模拟/混合信号集成电路",
-        "EDA/设计自动化"
-      ],
-      "homepage": null,
-      "email": "shiguoyong@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "石剑虹",
-      "name_en": null,
-      "title": "副教授",
-      "department": "自动化与感知学院 / 光子传输与通信全国重点实验室",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "量子信息器件",
-        "传感器与智能感知"
-      ],
-      "homepage": null,
-      "email": null,
-      "notes": "量子感知与信息处理研究所成员"
-    },
-    {
-      "name_cn": "史汝川",
-      "name_en": null,
-      "title": "助理研究员",
-      "department": "自动化与感知学院",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "MEMS/微机电系统",
-        "射频/毫米波集成电路",
-        "传感器与智能感知"
-      ],
-      "homepage": null,
-      "email": "srcno1@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "司梦维",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "数字集成电路与SoC",
-        "半导体器件与工艺",
-        "MEMS/微机电系统"
-      ],
-      "homepage": "https://sigroup.sjtu.edu.cn/",
-      "email": "mengwei.si@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "宋卓然",
-      "name_en": null,
-      "title": "副研究员",
-      "department": "计算机学院（可扩展计算研究所）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "处理器与体系结构",
-        "AI加速器/智能芯片"
-      ],
-      "homepage": null,
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "苏言杰",
-      "name_en": null,
-      "title": "研究员",
-      "department": "集成电路学院（信息与电子工程学院）· 纳电子材料与器件研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "MEMS/微机电系统",
-        "传感器与智能感知"
-      ],
-      "homepage": null,
-      "email": "yanjiesu@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "苏翼凯",
-      "name_en": null,
-      "title": "特聘教授",
-      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "硅光/光电子集成",
-        "光纤传感与光通信"
-      ],
-      "homepage": "http://otip.sjtu.edu.cn",
-      "email": "yikaisu@sjtu.edu.cn",
-      "notes": "国家高层次人才；光传输与集成光子学实验室负责人"
-    },
-    {
-      "name_cn": "孙璐",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "硅光/光电子集成",
-        "光纤传感与光通信",
-        "通信基带与系统"
-      ],
-      "homepage": "http://otip.sjtu.edu.cn/member/LuSun",
-      "email": "sunlu@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "孙亚男",
-      "name_en": null,
-      "title": "教授",
-      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "模拟/混合信号集成电路",
-        "数字集成电路与SoC",
-        "处理器与体系结构",
-        "AI加速器/智能芯片",
-        "存算一体/近存计算"
-      ],
-      "homepage": null,
-      "email": "sunyanan@sjtu.edu.cn",
-      "notes": "高能效数字集成电路与存内计算方向"
-    },
-    {
-      "name_cn": "孙云娜",
-      "name_en": null,
-      "title": "副研究员",
-      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "处理器与体系结构",
-        "半导体器件与工艺",
-        "MEMS/微机电系统",
-        "电源管理/功率器件"
-      ],
-      "homepage": null,
-      "email": "Cecilia_Sun@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "唐旻",
-      "name_en": null,
-      "title": "教授",
-      "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "射频/毫米波集成电路",
-        "EDA/设计自动化",
-        "半导体器件与工艺",
-        "电源管理/功率器件",
-        "电磁与天线"
-      ],
-      "homepage": "http://rfeda.sjtu.edu.cn",
-      "email": "tm222@sjtu.edu.cn",
-      "notes": "国家级高层次人才"
-    },
-    {
-      "name_cn": "唐伟",
-      "name_en": null,
-      "title": "副研究员",
-      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "半导体器件与工艺",
-        "MEMS/微机电系统",
-        "生物医疗电子/脑机接口"
-      ],
-      "homepage": "http://smil.sjtu.edu.cn/",
-      "email": "terry_tang@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "田晓华",
-      "name_en": null,
-      "title": "教授",
-      "department": "集成电路学院（信息与电子工程学院）· 无线通信技术研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "硅光/光电子集成",
-        "通信基带与系统",
-        "电磁与天线"
-      ],
-      "homepage": "http://xtian.sjtu.edu.cn",
-      "email": "xtian@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "万文杰",
-      "name_en": null,
-      "title": "副教授",
-      "department": "物理与天文学院 / 光子传输与通信全国重点实验室",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "硅光/光电子集成",
-        "微纳光子学"
-      ],
-      "homepage": null,
-      "email": null,
-      "notes": "光子传输与通信全国重点实验室副主任"
-    },
-    {
-      "name_cn": "万阳阳",
-      "name_en": null,
-      "title": "助理教授",
-      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "光纤传感与光通信",
-        "传感器与智能感知"
-      ],
-      "homepage": "https://cip.sjtu.edu.cn/wordpress/（团队主页）",
-      "email": "YangyangWan@sjtu.edu.cn",
-      "notes": "校内岗位：长聘教轨助理教授"
-    },
-    {
-      "name_cn": "王国兴",
-      "name_en": null,
-      "title": "教授",
-      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "EDA/设计自动化"
-      ],
-      "homepage": null,
-      "email": "guoxing@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "王辉",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "模拟/混合信号集成电路",
-        "数字集成电路与SoC",
-        "MEMS/微机电系统",
-        "电源管理/功率器件"
-      ],
-      "homepage": "https://ace.sjtu.edu.cn",
-      "email": "ihuiwang@sjtu.edu.cn",
-      "notes": "校内岗位：长聘教轨副教授"
-    },
-    {
-      "name_cn": "王静",
-      "name_en": null,
-      "title": "助理研究员",
-      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "模拟/混合信号集成电路",
-        "数字集成电路与SoC",
-        "半导体器件与工艺",
-        "硅光/光电子集成",
-        "通信基带与系统"
-      ],
-      "homepage": null,
-      "email": "wj1996@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "王隆春",
-      "name_en": null,
-      "title": "助理教授",
-      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "半导体器件与工艺",
-        "硅光/光电子集成",
-        "MEMS/微机电系统",
-        "生物医疗电子/脑机接口"
-      ],
-      "homepage": null,
-      "email": "LongchunWang@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "王琴",
-      "name_en": null,
-      "title": "研究员",
-      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "模拟/混合信号集成电路",
-        "数字集成电路与SoC",
-        "处理器与体系结构",
-        "AI加速器/智能芯片",
-        "EDA/设计自动化"
-      ],
-      "homepage": null,
-      "email": "qinqinwang@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "王庆康",
-      "name_en": null,
-      "title": "教授",
-      "department": "集成电路学院（信息与电子工程学院）· 纳电子材料与器件研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "硅光/光电子集成",
-        "半导体器件与工艺",
-        "微纳加工"
-      ],
-      "homepage": null,
-      "email": "Wangqingkang@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "王涛",
-      "name_en": null,
-      "title": "副教授",
-      "department": "自动化与感知学院 / 光子传输与通信全国重点实验室",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "量子信息器件",
-        "数字集成电路与SoC"
-      ],
-      "homepage": null,
-      "email": null,
-      "notes": "量子集成化芯片研制；校内岗位：长聘教轨副教授"
-    },
-    {
-      "name_cn": "王霆",
-      "name_en": null,
-      "title": "教授",
-      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "半导体器件与工艺",
-        "硅光/光电子集成"
-      ],
-      "homepage": null,
-      "email": "wangting1113@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "王尧",
-      "name_en": null,
-      "title": "助理研究员",
-      "department": "集成电路学院（信息与电子工程学院）· 未来媒体网络协同创新中心",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "通信基带与系统"
-      ],
-      "homepage": null,
-      "email": "yaowang@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "文惠敏",
-      "name_en": null,
-      "title": "副研究员",
-      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "硅光/光电子集成",
-        "MEMS/微机电系统",
-        "传感器与智能感知"
-      ],
-      "homepage": null,
-      "email": "wenhuimin@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "吴龟灵",
-      "name_en": null,
-      "title": "教授",
-      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "模拟/混合信号集成电路",
-        "硅光/光电子集成",
-        "光纤传感与光通信"
-      ],
-      "homepage": null,
-      "email": "wuguiling@sjtu.edu.cn",
-      "notes": "大川奖获得者"
-    },
-    {
-      "name_cn": "吴开宇",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院（信息与电子工程学院）· 纳电子材料与器件研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "硅光/光电子集成"
-      ],
-      "homepage": null,
-      "email": "kaiwu@sjtu.edu.cn",
-      "notes": "校内岗位：长聘教轨副教授"
-    },
-    {
-      "name_cn": "吴侃",
-      "name_en": null,
-      "title": "教授",
-      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "硅光/光电子集成"
-      ],
-      "homepage": null,
-      "email": "kanwu@sjtu.edu.cn",
-      "notes": "国家高层次青年人才"
-    },
-    {
-      "name_cn": "吴林晟",
-      "name_en": null,
-      "title": "教授",
-      "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "射频/毫米波集成电路",
-        "处理器与体系结构",
-        "半导体器件与工艺",
-        "MEMS/微机电系统",
-        "电磁与天线"
-      ],
-      "homepage": "http://cmrft.sjtu.edu.cn/newsinfo/news_view.asp?newsid=74",
-      "email": "wallish@sjtu.edu.cn",
-      "notes": "学院副院长（新闻页）"
-    },
-    {
-      "name_cn": "吴茂坤",
-      "name_en": null,
-      "title": "助理研究员",
-      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "集成电路设计",
-        "EDA/设计自动化"
-      ],
-      "homepage": null,
-      "email": "maokunwu@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "吴校生",
-      "name_en": null,
-      "title": "副研究员",
-      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "处理器与体系结构",
-        "硅光/光电子集成",
-        "MEMS/微机电系统",
-        "传感器与智能感知",
-        "生物医疗电子/脑机接口"
-      ],
-      "homepage": null,
-      "email": "xswu@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "吴子涵",
-      "name_en": null,
-      "title": "助理教授",
-      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "数字集成电路与SoC",
-        "处理器与体系结构",
-        "存算一体/近存计算",
-        "EDA/设计自动化"
-      ],
-      "homepage": null,
-      "email": "zihanwu@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "夏彬",
-      "name_en": null,
-      "title": "副研究员",
-      "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "射频/毫米波集成电路",
-        "处理器与体系结构",
-        "EDA/设计自动化",
-        "半导体器件与工艺",
-        "电磁与天线"
-      ],
-      "homepage": null,
-      "email": "xiabin760806@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "肖高标",
-      "name_en": null,
-      "title": "教授",
-      "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "射频/毫米波集成电路",
-        "数字集成电路与SoC",
-        "EDA/设计自动化",
-        "电磁与天线"
-      ],
-      "homepage": null,
-      "email": "gaobiaoxiao@sjtu.edu.cn",
-      "notes": "校内岗位：长聘教授"
-    },
-    {
-      "name_cn": "肖太龙",
-      "name_en": null,
-      "title": "助理研究员",
-      "department": "自动化与感知学院 / 光子传输与通信全国重点实验室",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "硅光/光电子集成"
-      ],
-      "homepage": null,
-      "email": null,
-      "notes": "光子计算智能方向"
-    },
-    {
-      "name_cn": "谢卫强",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "半导体器件与工艺",
-        "硅光/光电子集成",
-        "传感器与智能感知",
-        "通信基带与系统"
-      ],
-      "homepage": "https://otip.sjtu.edu.cn/member/WeiqiangXie",
-      "email": "weiqiang.xie@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "徐绍夫",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "模拟/混合信号集成电路",
-        "处理器与体系结构",
-        "硅光/光电子集成"
-      ],
-      "homepage": "https://imlic.sjtu.edu.cn/?p=3096",
-      "email": "s.xu@sjtu.edu.cn",
-      "notes": "校内岗位：长聘教轨副教授"
-    },
-    {
-      "name_cn": "许齐敏",
-      "name_en": null,
-      "title": "副研究员",
-      "department": "自动化与感知学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "EDA/设计自动化",
-        "AI加速器/智能芯片"
-      ],
-      "homepage": "https://iwin.sjtu.edu.cn/",
-      "email": "qiminxu@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "闫浩",
-      "name_en": null,
-      "title": "副研究员",
-      "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路测量",
-        "传感器与智能感知",
-        "精密测量仪器"
-      ],
-      "homepage": null,
-      "email": "yan_hao@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "杨斌",
-      "name_en": null,
-      "title": "研究员",
-      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "MEMS/微机电系统",
-        "传感器与智能感知",
-        "电源管理/功率器件",
-        "电磁与天线"
-      ],
-      "homepage": null,
-      "email": "binyang@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "杨超",
-      "name_en": null,
-      "title": "助理研究员",
-      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "集成电路设计",
-        "模拟/混合信号集成电路",
-        "射频/毫米波集成电路",
-        "数字集成电路与SoC",
-        "EDA/设计自动化"
-      ],
-      "homepage": null,
-      "email": "supersheep@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "杨佳苗",
-      "name_en": null,
-      "title": "副教授",
-      "department": "自动化与感知学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "硅光/光电子集成",
-        "传感器与智能感知",
-        "AI加速器/智能芯片"
-      ],
-      "homepage": null,
-      "email": "jiamiaoyang@sjtu.edu.cn",
-      "notes": "校内岗位：长聘副教授"
-    },
-    {
-      "name_cn": "杨建华",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院（信息与电子工程学院）· 纳电子材料与器件研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "MEMS/微机电系统",
-        "传感器与智能感知"
-      ],
-      "homepage": null,
-      "email": "yangjh08@sjtu.edu.cn",
-      "notes": "校内岗位：长聘教轨副教授"
-    },
-    {
-      "name_cn": "杨天",
-      "name_en": null,
-      "title": "副教授",
-      "department": "自动化与感知学院 / 光子传输与通信全国重点实验室",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "硅光/光电子集成",
-        "传感器与智能感知"
-      ],
-      "homepage": null,
-      "email": null,
-      "notes": "光子传输与通信全国重点实验室“纳米光子学”实验室负责人；校内岗位：长聘副教授"
-    },
-    {
-      "name_cn": "杨志",
-      "name_en": null,
-      "title": "教授",
-      "department": "集成电路学院（信息与电子工程学院）· 纳电子材料与器件研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "MEMS/微机电系统",
-        "传感器与智能感知"
-      ],
-      "homepage": null,
-      "email": "zhiyang@sjtu.edu.cn",
-      "notes": "校内岗位：长聘教授"
-    },
-    {
-      "name_cn": "杨卓青",
-      "name_en": null,
-      "title": "教授",
-      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "半导体器件与工艺",
-        "MEMS/微机电系统",
-        "传感器与智能感知"
-      ],
-      "homepage": "https://gpmems.sjtu.edu.cn/",
-      "email": "yzhuoqing@sjtu.edu.cn",
-      "notes": "校内岗位：长聘教授"
-    },
-    {
-      "name_cn": "叶瑶瑶",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "模拟/混合信号集成电路",
-        "数字集成电路与SoC",
-        "处理器与体系结构",
-        "AI加速器/智能芯片",
-        "EDA/设计自动化"
-      ],
-      "homepage": null,
-      "email": "yeyaoyao@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "义理林",
-      "name_en": null,
-      "title": "教授",
-      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "硅光/光电子集成",
-        "光纤传感与光通信"
-      ],
-      "homepage": "http://olife.sjtu.edu.cn",
-      "email": "lilinyi@sjtu.edu.cn",
-      "notes": "光子传输与通信全国重点实验室副主任"
-    },
-    {
-      "name_cn": "尹琛",
-      "name_en": null,
-      "title": "助理研究员",
-      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "集成电路设计",
-        "模拟/混合信号集成电路",
-        "数字集成电路与SoC",
-        "处理器与体系结构",
-        "AI加速器/智能芯片",
-        "存算一体/近存计算"
-      ],
-      "homepage": null,
-      "email": "yinchen@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "应忍冬",
-      "name_en": null,
-      "title": "研究员",
-      "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "处理器与体系结构",
-        "AI加速器/智能芯片",
-        "嵌入式系统"
-      ],
-      "homepage": "http://bat.sjtu.edu.cn",
-      "email": "rdying@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "尤敏敏",
-      "name_en": null,
-      "title": "副研究员",
-      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "硅光/光电子集成",
-        "MEMS/微机电系统",
-        "传感器与智能感知"
-      ],
-      "homepage": null,
-      "email": "minminyou@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "臧法珩",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "半导体器件与工艺",
-        "MEMS/微机电系统",
-        "传感器与智能感知"
-      ],
-      "homepage": "https://gpmems.sjtu.edu.cn",
-      "email": "zangfh@sjtu.edu.cn",
-      "notes": "校内岗位：长聘教轨副教授"
-    },
-    {
-      "name_cn": "张爱新",
-      "name_en": null,
-      "title": "副研究员",
-      "department": "计算机学院（交叉前沿研究所）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "数字集成电路与SoC",
-        "集成电路设计",
-        "密码专用芯片"
-      ],
-      "homepage": null,
-      "email": null,
-      "notes": "曾主持上海市科委重大研究计划“高性能密码算法专用芯片的研制”“数字证书SoC芯片开发”"
-    },
-    {
-      "name_cn": "张宸",
-      "name_en": null,
-      "title": "助理教授",
-      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "模拟/混合信号集成电路",
-        "数字集成电路与SoC",
-        "处理器与体系结构",
-        "AI加速器/智能芯片",
-        "EDA/设计自动化"
-      ],
-      "homepage": "https://chenzhangsjtu.github.io/",
-      "email": "chenzhang.sjtu@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "张丛春",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "半导体器件与工艺",
-        "MEMS/微机电系统",
-        "传感器与智能感知"
-      ],
-      "homepage": null,
-      "email": "zhcc@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "张文甲",
-      "name_en": null,
-      "title": "教授",
-      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "EDA/设计自动化",
-        "硅光/光电子集成",
-        "光纤传感与光通信"
-      ],
-      "homepage": null,
-      "email": "wenjia.zhang@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "张文军",
-      "name_en": null,
-      "title": "教授",
-      "department": "集成电路学院（信息与电子工程学院）· 图像通信与网络工程研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "数字集成电路与SoC"
-      ],
-      "homepage": null,
-      "email": "zhangwenjun@sjtu.edu.cn",
-      "notes": "中国工程院院士；图像通信与网络工程研究所所长"
-    },
-    {
-      "name_cn": "赵健",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "模拟/混合信号集成电路",
-        "数字集成电路与SoC",
-        "EDA/设计自动化",
-        "半导体器件与工艺",
-        "传感器与智能感知"
-      ],
-      "homepage": null,
-      "email": "zhaojianycc@sjtu.edu.cn",
-      "notes": "校内岗位：长聘教轨副教授"
-    },
-    {
-      "name_cn": "赵杰茹",
-      "name_en": null,
-      "title": "副教授",
-      "department": "计算机学院（先进计算研究所）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "处理器与体系结构",
-        "EDA/设计自动化"
-      ],
-      "homepage": "https://zjru.github.io/",
-      "email": null,
-      "notes": "校内岗位：长聘教轨副教授"
-    },
-    {
-      "name_cn": "赵昕",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "数字集成电路与SoC",
-        "MEMS/微机电系统"
-      ],
-      "homepage": "http://xinzhao.sjtu.edu.cn/",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "赵阳",
-      "name_en": null,
-      "title": "副研究员",
-      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "EDA/设计自动化",
-        "传感器与智能感知"
-      ],
-      "homepage": null,
-      "email": "yangzhao90@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "周健军",
-      "name_en": null,
-      "title": "教授",
-      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "模拟/混合信号集成电路",
-        "射频/毫米波集成电路",
-        "EDA/设计自动化"
-      ],
-      "homepage": null,
-      "email": "zhoujianjun@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "周亮",
-      "name_en": null,
-      "title": "教授",
-      "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "射频/毫米波集成电路",
-        "半导体器件与工艺",
-        "封装集成与电磁兼容"
-      ],
-      "homepage": null,
-      "email": "liangzhou@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "周林杰",
-      "name_en": null,
-      "title": "教授",
-      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "射频/毫米波集成电路",
-        "处理器与体系结构",
-        "硅光/光电子集成",
-        "光纤传感与光通信",
-        "通信基带与系统"
-      ],
-      "homepage": null,
-      "email": "ljzhou@sjtu.edu.cn",
-      "notes": "光子传输与通信全国重点实验室副主任；国家级高层次人才"
-    },
-    {
-      "name_cn": "周志华",
-      "name_en": null,
-      "title": "助理研究员",
-      "department": "集成电路学院（信息与电子工程学院）· 纳电子材料与器件研究所",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "硅光/光电子集成",
-        "传感器与智能感知"
-      ],
-      "homepage": null,
-      "email": "zhouxiaozhi@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "朱敏",
-      "name_en": null,
-      "title": "教授",
-      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "存算一体/近存计算",
-        "MEMS/微机电系统"
-      ],
-      "homepage": "https://www.researchgate.net/profile/Min-Zhu-28?ev=hdr_xprf",
-      "email": "mzhu2@sjtu.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "朱逸萧",
-      "name_en": null,
-      "title": "副教授",
-      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "硅光/光电子集成",
-        "光纤传感与光通信"
-      ],
-      "homepage": null,
-      "email": "yixiaozhu@sjtu.edu.cn",
-      "notes": "校内岗位：长聘教轨副教授"
-    },
-    {
-      "name_cn": "邹卫文",
-      "name_en": null,
-      "title": "特聘教授",
-      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "模拟/混合信号集成电路",
-        "硅光/光电子集成"
-      ],
-      "homepage": "https://imlic.sjtu.edu.cn/?p=205",
-      "email": "wzou@sjtu.edu.cn",
-      "notes": null
-    }
-  ]
+ "school": "上海交通大学",
+ "school_key": "sjtu",
+ "harvested_at": "2026-09-22",
+ "sources": [
+  "https://icisee.sjtu.edu.cn/jiaoshiml.html",
+  "https://icisee.sjtu.edu.cn/active/ajax_teacher_list.html (POST 分页，共 28 页)",
+  "https://icisee.sjtu.edu.cn/jiaoshiml/<姓名拼音>.html (274 位教师个人主页，逐页解析系所/邮箱/主页/研究方向/荣誉)",
+  "https://icisee.sjtu.edu.cn/xygk.html",
+  "https://icisee.sjtu.edu.cn/szgk.html",
+  "https://www.seiee.sjtu.edu.cn/",
+  "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+  "https://cs.sjtu.edu.cn/jiaoshiml.html",
+  "https://cs.sjtu.edu.cn/active/ajax_teacher_list.html (POST，290 人)",
+  "https://cs.sjtu.edu.cn/jiaoshiml/<姓名拼音>.html (290 位教师个人主页，逐页解析)",
+  "https://sais.sjtu.edu.cn/faculty.html",
+  "https://sais.sjtu.edu.cn/active/ajax_teacher_list.html (POST，206 人)",
+  "https://sais.sjtu.edu.cn/faculty/<姓名拼音>.html (206 位教师个人主页，逐页解析)",
+  "https://soai.sjtu.edu.cn/",
+  "https://soai.sjtu.edu.cn/cn/faculty/zzjs",
+  "https://soai.sjtu.edu.cn/cn/facultydetails/zzjs/<slug> (46 位专职教师个人主页)",
+  "https://loct.sjtu.edu.cn/",
+  "https://loct.sjtu.edu.cn/team/directory.html (人员名录 79 人)",
+  "https://loct.sjtu.edu.cn/team/list.html",
+  "https://loct.sjtu.edu.cn/team/index.html",
+  "https://loct.sjtu.edu.cn/team/detail/zhi-neng-guang-zi-xue-yan-jiu-zhong-xin-tuan-dui.html",
+  "https://loct.sjtu.edu.cn/team/detail/guang-zi-xin-xi-chu-li-qi-jian-xi-tong-yu-ying-yong-yan-jiu.html",
+  "https://loct.sjtu.edu.cn/team/detail/guang-chuan-shu-yu-ji-cheng-guang-zi-xue-shi-yan-shi-tuan-dui.html",
+  "https://loct.sjtu.edu.cn/team/detail/liang-zi-gan-zhi-yu-xin-xi-chu-li-yan-jiu-suo-tuan-dui.html",
+  "https://faculty.sjtu.edu.cn/xiabin/zh_CN/index.htm (个别教师主页，用于方向判定)"
+ ],
+ "coverage_note": "【已抓取并逐人解析】\n1) 集成电路学院（信息与电子工程学院）icisee.sjtu.edu.cn —— 教师名录 274 人全部抓取（AJAX POST 28 页）+ 274 个个人主页逐页解析。该学院整合了原微纳电子学系、电子工程系与新设集成电路学院，下设：芯片设计与EDA研究所、微纳器件与集成系统研究所、纳电子材料与器件研究所、光子学与通信研究所、电磁与智能系统研究所、图像通信与网络工程研究所、无线通信技术研究所、信息智能研究所、数据智能研究所、未来媒体网络协同创新中心、先进电子材料与器件平台、电子信息与集成电路实验教学中心。本名册为该 274 人中符合方向要求者。\n2) 电子信息与电气工程学院（学部）seiee.sjtu.edu.cn —— 学部“教师名录”页仅为四个学院的导航入口，无独立师资数据；其下属的集成电路学院、计算机学院、自动化与感知学院均已单独抓取。\n3) 计算机学院 cs.sjtu.edu.cn —— 教师名录 290 人全部抓取（AJAX POST）+ 290 个个人主页解析；按体系结构 / AI 加速器 / EDA / 芯片架构方向筛出 12 人。\n4) 自动化与感知学院（原自动化系＋感知科学与工程学院）sais.sjtu.edu.cn —— 教师名录 206 人全部抓取 + 206 个个人主页解析；按 MEMS / 传感器芯片 / 智能仪器方向筛出 9 人（其余为导航定位、控制理论、机器人、工业互联网方向，属排除范围）。\n5) 人工智能学院 soai.sjtu.edu.cn —— 专职教师 46 人全部抓取 + 46 个个人主页解析；按 AI 芯片 / 算力硬件方向筛出 3 人（程远、戴国浩、冯二虎），其余为 CV / NLP / 具身智能 / 医学 AI 等纯算法方向。\n6) 光子传输与通信全国重点实验室（即原“区域光纤通信网与新型光通信系统国家重点实验室”）loct.sjtu.edu.cn —— 人员名录 79 人全部解析，4 个研究中心介绍页已抓取。79 人中 53 人同时挂在集成电路学院名录（已合并去重）；余 26 人按“偏光芯片 / 光电子器件”标准补入 9 人，其余为量子密码通信理论、遥感雷达、数据智能等方向。\n\n【未抓到及原因】\na) 微纳电子学系 mee.sjtu.edu.cn —— 域名已失效（fetch failed）；该系已并入集成电路学院，师资已在 icisee.sjtu.edu.cn 名录中覆盖。\nb) 电子工程系独立站点 —— 同样并入集成电路学院，无独立师资页。\nc) 微米/纳米加工技术国家级重点实验室 mnfab.sjtu.edu.cn —— 现 302 跳转至 restrict.sjtu.edu.cn（校内限制访问），无公开师资页。该实验室对应现“微纳电子器件与集成技术全国重点实验室”，其固定人员已通过集成电路学院“微纳器件与集成系统研究所”名单覆盖（如蔡星汉标注“微纳全重党支部书记”）。\nd) 人工智能研究院旧站 ai.sjtu.edu.cn —— 仅返回 1KB 占位页；已改用新站 soai.sjtu.edu.cn。\ne) 约 56 位教师个人主页未设“研究方向”栏目，已改用主页全文与个人简介做方向判定；仍无法判定方向者予以剔除。\n\n【筛选口径】仅收在职教师 / 科研人员（讲席教授、特聘教授、教授、研究员、副教授、副研究员、助理教授、助理研究员、讲师）。已剔除：实验师 / 高级实验师 / 工程师 / 高级工程师 / 思政教师 / 行政人员 / 博士后 / 退休 / 兼职双聘；纯材料化学（储能电池、光催化、第一性原理材料计算）、纯物理理论、纯软件算法（视频编码、计算机视觉、大模型、遥感与雷达信号处理、密码理论）、纯管理方向人员。\n【字段说明】title 已归一到规范职称（长聘/长聘教轨岗位的原始称谓保留在 notes 中）；name_en 页面未提供，统一为 null；is_phd_advisor 依据个人主页“博士生导师/博导”表述或岗位性质判定。",
+ "faculty": [
+  {
+   "name_cn": "蔡星汉",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "硅光/光电子集成",
+    "MEMS/微机电系统"
+   ],
+   "homepage": "https://2dkitchen.sjtu.edu.cn/",
+   "email": null,
+   "notes": "国家级青年人才"
+  },
+  {
+   "name_cn": "曾贵华",
+   "name_en": null,
+   "title": "教授",
+   "department": "光子传输与通信全国重点实验室（量子感知与信息处理研究所）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "量子信息器件",
+    "通信基带与系统"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "QSIP研究所所长；“十三五”科技委主题专家；校内岗位：长聘教授"
+  },
+  {
+   "name_cn": "曾敏",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "集成电路学院（信息与电子工程学院）· 纳电子材料与器件研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "传感器与智能感知"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "陈诚",
+   "name_en": null,
+   "title": "助理研究员",
+   "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路设计",
+    "EDA/设计自动化",
+    "MEMS/微机电系统",
+    "传感器与智能感知",
+    "生物医疗电子/脑机接口"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "陈海宝",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟/混合信号集成电路",
+    "数字集成电路与SoC",
+    "EDA/设计自动化",
+    "半导体器件与工艺"
+   ],
+   "homepage": "https://haibaochen.sjtu.edu.cn",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "陈建平",
+   "name_en": null,
+   "title": "特聘教授",
+   "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "模拟/混合信号集成电路",
+    "硅光/光电子集成",
+    "电磁与天线"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "973首席科学家（重点实验室团队页标注）"
+  },
+  {
+   "name_cn": "陈铭易",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟/混合信号集成电路",
+    "射频/毫米波集成电路",
+    "数字集成电路与SoC",
+    "硅光/光电子集成",
+    "MEMS/微机电系统"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "校内岗位：长聘副教授"
+  },
+  {
+   "name_cn": "陈苏杰",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS/微机电系统",
+    "传感器与智能感知"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "陈文超",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波集成电路",
+    "处理器与体系结构",
+    "AI加速器/智能芯片",
+    "EDA/设计自动化",
+    "半导体器件与工艺",
+    "硅光/光电子集成"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "国家杰青；国家级青年人才"
+  },
+  {
+   "name_cn": "陈一彤",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "集成电路学院（信息与电子工程学院）· 图像通信与网络工程研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "硅光/光电子集成",
+    "AI加速器/智能芯片",
+    "光电智能计算芯片"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "陈长鑫",
+   "name_en": null,
+   "title": "特聘教授",
+   "department": "集成电路学院（信息与电子工程学院）· 纳电子材料与器件研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "硅光/光电子集成"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "国家级高层次人才"
+  },
+  {
+   "name_cn": "程秀兰",
+   "name_en": null,
+   "title": "研究员",
+   "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "处理器与体系结构",
+    "半导体器件与工艺",
+    "硅光/光电子集成",
+    "通信基带与系统"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "程远",
+   "name_en": null,
+   "title": "副教授",
+   "department": "人工智能学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "硅光/光电子集成",
+    "AI加速器/智能芯片",
+    "处理器与体系结构"
+   ],
+   "homepage": "https://cyuan328.github.io/",
+   "email": null,
+   "notes": "光芯片/端侧计算/软硬协同/AI计算架构；福布斯中国U30；2024福布斯中国U30"
+  },
+  {
+   "name_cn": "戴国浩",
+   "name_en": null,
+   "title": "副教授",
+   "department": "人工智能学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "AI加速器/智能芯片",
+    "数字集成电路与SoC",
+    "存算一体/近存计算"
+   ],
+   "homepage": "https://dai.sjtu.edu.cn",
+   "email": null,
+   "notes": "稀疏计算电路与系统；FPGA 2025/ASP-DAC 2025/DATE 2024最佳论文奖；Ph.D. Forum at DAC 2024 联席主席；2022 WAIC 云帆奖"
+  },
+  {
+   "name_cn": "戴旭涵",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波集成电路",
+    "半导体器件与工艺",
+    "MEMS/微机电系统",
+    "传感器与智能感知"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "丁桂甫",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "处理器与体系结构",
+    "半导体器件与工艺",
+    "MEMS/微机电系统",
+    "传感器与智能感知"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "董承远",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "硅光/光电子集成",
+    "MEMS/微机电系统",
+    "传感器与智能感知"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "杜江兵",
+   "name_en": null,
+   "title": "研究员",
+   "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "处理器与体系结构",
+    "硅光/光电子集成",
+    "光纤传感与光通信",
+    "通信基带与系统"
+   ],
+   "homepage": "http://cip.sjtu.edu.cn/www/index.php/teacher/dujia",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "樊昕昱",
+   "name_en": null,
+   "title": "研究员",
+   "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "硅光/光电子集成",
+    "光纤传感与光通信",
+    "传感器与智能感知",
+    "通信基带与系统"
+   ],
+   "homepage": "https://cip.sjtu.edu.cn/",
+   "email": null,
+   "notes": "国家青年特聘专家；智能光子学研究中心成员"
+  },
+  {
+   "name_cn": "冯二虎",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "人工智能学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "处理器与体系结构",
+    "AI加速器/智能芯片"
+   ],
+   "homepage": "https://ipads.se.sjtu.edu.cn/pub/members/erhu_feng",
+   "email": null,
+   "notes": "OSDI/SOSP/ISCA/ASPLOS/HPCA；成果落地RISC-V芯片与AI加速器"
+  },
+  {
+   "name_cn": "冯宇",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "计算机学院（先进计算研究所,约翰·霍普克罗夫特计算机科学中心）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "处理器与体系结构",
+    "AI加速器/智能芯片"
+   ],
+   "homepage": "https://yufenguofr.github.io/",
+   "email": null,
+   "notes": "ISCA/MICRO/ASPLOS 体系结构名人堂；2025 ASPLOS 最佳论文奖"
+  },
+  {
+   "name_cn": "付宇卓",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "数字集成电路与SoC",
+    "处理器与体系结构",
+    "EDA/设计自动化"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "顾昌展",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波集成电路",
+    "AI加速器/智能芯片",
+    "半导体器件与工艺",
+    "硅光/光电子集成",
+    "MEMS/微机电系统",
+    "电磁与天线"
+   ],
+   "homepage": "https://changzhan.sjtu.edu.cn",
+   "email": null,
+   "notes": "校内岗位：长聘副教授"
+  },
+  {
+   "name_cn": "顾磊磊",
+   "name_en": null,
+   "title": "副教授",
+   "department": "计算机学院（清源研究院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "传感器与智能感知",
+    "AI加速器/智能芯片"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "校内岗位：长聘教轨副教授"
+  },
+  {
+   "name_cn": "郭亮",
+   "name_en": null,
+   "title": "特聘教授",
+   "department": "集成电路学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "传感器与智能感知",
+    "生物医疗电子/脑机接口"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "郭小军",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "MEMS/微机电系统",
+    "传感器与智能感知"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "学院常务副院长（新闻页）"
+  },
+  {
+   "name_cn": "郭旭涵",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "硅光/光电子集成",
+    "光纤传感与光通信"
+   ],
+   "homepage": "https://guoxuhan.sjtu.edu.cn/; http://otip.sjtu.edu.cn/member/XuhanGuo",
+   "email": null,
+   "notes": "国家级高层次青年人才"
+  },
+  {
+   "name_cn": "郭衍束",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟/混合信号集成电路",
+    "射频/毫米波集成电路",
+    "数字集成电路与SoC",
+    "处理器与体系结构",
+    "EDA/设计自动化"
+   ],
+   "homepage": "https://cryo-x.sjtu.edu.cn",
+   "email": null,
+   "notes": "校内岗位：长聘教轨副教授"
+  },
+  {
+   "name_cn": "郭宇耀",
+   "name_en": null,
+   "title": "助理研究员",
+   "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "硅光/光电子集成",
+    "传感器与智能感知",
+    "通信基带与系统"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "过悦康",
+   "name_en": null,
+   "title": "讲师",
+   "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟/混合信号集成电路",
+    "EDA/设计自动化"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "韩韬",
+   "name_en": null,
+   "title": "教授",
+   "department": "自动化与感知学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS/微机电系统",
+    "传感器与智能感知"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "校内岗位：长聘教授"
+  },
+  {
+   "name_cn": "何大治",
+   "name_en": null,
+   "title": "研究员",
+   "department": "集成电路学院（信息与电子工程学院）· 未来媒体网络协同创新中心",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "硅光/光电子集成",
+    "通信基带与系统"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "何谷峰",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "MEMS/微机电系统",
+    "传感器与智能感知"
+   ],
+   "homepage": "http://oodl.sjtu.edu.cn",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "何广强",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "硅光/光电子集成",
+    "光纤传感与光通信",
+    "传感器与智能感知",
+    "电磁与天线",
+    "量子信息器件"
+   ],
+   "homepage": "http://qnp.sjtu.edu.cn",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "何卫锋",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟/混合信号集成电路",
+    "数字集成电路与SoC",
+    "处理器与体系结构",
+    "AI加速器/智能芯片",
+    "存算一体/近存计算"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "低功耗处理器/存算一体芯片方向"
+  },
+  {
+   "name_cn": "何宇",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "硅光/光电子集成",
+    "光纤传感与光通信"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "何哲陟",
+   "name_en": null,
+   "title": "副教授",
+   "department": "计算机学院（人工智能与认知安全研究所）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "AI加速器/智能芯片",
+    "EDA/设计自动化",
+    "存算一体/近存计算"
+   ],
+   "homepage": "https://elliothe.github.io/",
+   "email": null,
+   "notes": "校内岗位：长聘教轨副教授"
+  },
+  {
+   "name_cn": "何祖源",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光纤传感与光通信",
+    "传感器与智能感知"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "光子学与通信研究所所长；光子传输与通信全国重点实验室主任；智能光子学研究中心学术带头人"
+  },
+  {
+   "name_cn": "贺光辉",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "数字集成电路与SoC",
+    "处理器与体系结构",
+    "AI加速器/智能芯片",
+    "EDA/设计自动化",
+    "通信基带与系统"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "学院副院长（新闻页）"
+  },
+  {
+   "name_cn": "侯小凤",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "计算机学院（先进计算研究所）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "处理器与体系结构",
+    "AI加速器/智能芯片"
+   ],
+   "homepage": "https://xfhelen.github.io/",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "胡亮",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波集成电路",
+    "半导体器件与工艺",
+    "硅光/光电子集成",
+    "光纤传感与光通信",
+    "通信基带与系统"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "校内岗位：长聘教轨副教授；玛丽居里学者"
+  },
+  {
+   "name_cn": "胡南滔",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "集成电路学院（信息与电子工程学院）· 纳电子材料与器件研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS/微机电系统",
+    "传感器与智能感知",
+    "电磁与天线"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "黄其煜",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "电源管理/功率器件"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "纪幸辰",
+   "name_en": null,
+   "title": "副教授",
+   "department": "计算机学院 / 光子传输与通信全国重点实验室",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "硅光/光电子集成",
+    "半导体器件与工艺"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "国家级青年人才；校内岗位：长聘教轨副教授"
+  },
+  {
+   "name_cn": "纪志罡",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "数字集成电路与SoC",
+    "EDA/设计自动化"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "姜红兰",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟/混合信号集成电路",
+    "数字集成电路与SoC",
+    "处理器与体系结构",
+    "AI加速器/智能芯片",
+    "EDA/设计自动化"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "校内岗位：长聘教轨副教授"
+  },
+  {
+   "name_cn": "蒋剑飞",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "数字集成电路与SoC",
+    "处理器与体系结构",
+    "AI加速器/智能芯片",
+    "EDA/设计自动化",
+    "半导体器件与工艺"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "蒋力",
+   "name_en": null,
+   "title": "研究员",
+   "department": "计算机学院（可扩展计算研究所）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "处理器与体系结构",
+    "AI加速器/智能芯片",
+    "存算一体/近存计算",
+    "EDA/设计自动化"
+   ],
+   "homepage": "https://jianglisjtu.github.io/index.html",
+   "email": null,
+   "notes": "国家级青年人才；吴文俊人工智能奖（芯片类）二等奖；IET Computers & Digital Techniques 等集成电路期刊编委"
+  },
+  {
+   "name_cn": "金晶",
+   "name_en": null,
+   "title": "研究员",
+   "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟/混合信号集成电路",
+    "射频/毫米波集成电路",
+    "EDA/设计自动化"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "金贤敏",
+   "name_en": null,
+   "title": "教授",
+   "department": "物理与天文学院 / 光子传输与通信全国重点实验室",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "硅光/光电子集成",
+    "量子信息器件"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "集成光量子芯片方向（光子传输与通信全国重点实验室成员）"
+  },
+  {
+   "name_cn": "景乃锋",
+   "name_en": null,
+   "title": "研究员",
+   "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "处理器与体系结构",
+    "存算一体/近存计算",
+    "EDA/设计自动化"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "大算力高能效芯片/GPGPU方向；学院院长助理（新闻页）"
+  },
+  {
+   "name_cn": "雷冲",
+   "name_en": null,
+   "title": "助理研究员",
+   "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "MEMS/微机电系统",
+    "传感器与智能感知",
+    "生物医疗电子/脑机接口"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "冷静文",
+   "name_en": null,
+   "title": "特聘教授",
+   "department": "计算机学院（先进计算研究所）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "处理器与体系结构",
+    "AI加速器/智能芯片"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "国家优青"
+  },
+  {
+   "name_cn": "李超",
+   "name_en": null,
+   "title": "教授",
+   "department": "计算机学院（先进计算研究所）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "处理器与体系结构",
+    "AI加速器/智能芯片"
+   ],
+   "homepage": "https://cs.sjtu.edu.cn/~lichao/",
+   "email": null,
+   "notes": "国家优青；CCF体系结构专委会副主任；IEEE TC 领域首席编委"
+  },
+  {
+   "name_cn": "李海华",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院（信息与电子工程学院）· 纳电子材料与器件研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件与工艺"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李洪婧",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "自动化与感知学院 / 光子传输与通信全国重点实验室",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "量子信息器件",
+    "传感器与智能感知"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "量子感知与信息处理研究所成员"
+  },
+  {
+   "name_cn": "李金波",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟/混合信号集成电路",
+    "EDA/设计自动化"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "校内岗位：长聘教轨副教授"
+  },
+  {
+   "name_cn": "李靖驰",
+   "name_en": null,
+   "title": "助理研究员",
+   "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "硅光/光电子集成",
+    "光纤传感与光通信"
+   ],
+   "homepage": "https://otip.sjtu.edu.cn/member/JingchiLi",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李平",
+   "name_en": null,
+   "title": "教授",
+   "department": "自动化与感知学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "传感器与智能感知",
+    "电源管理/功率器件"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "校内岗位：长聘教授"
+  },
+  {
+   "name_cn": "李世阳",
+   "name_en": null,
+   "title": "副教授",
+   "department": "自动化与感知学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS/微机电系统",
+    "传感器与智能感知"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李晓春",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "射频/毫米波集成电路",
+    "数字集成电路与SoC",
+    "EDA/设计自动化",
+    "电磁与天线"
+   ],
+   "homepage": "http://hsic.sjtu.edu.cn",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李杏",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "模拟/混合信号集成电路",
+    "硅光/光电子集成",
+    "传感器与智能感知"
+   ],
+   "homepage": "https://imlic.sjtu.edu.cn/?p=555",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李秀妍",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "MEMS/微机电系统",
+    "电源管理/功率器件"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李永福",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "EDA/设计自动化"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "校内岗位：长聘副教授"
+  },
+  {
+   "name_cn": "李雨",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "硅光/光电子集成",
+    "光纤传感与光通信",
+    "通信基带与系统"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "梁晓峣",
+   "name_en": null,
+   "title": "教授",
+   "department": "计算机学院（可扩展计算研究所）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "处理器与体系结构"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "ISCA、MICRO 名人堂（Hall of Fame）"
+  },
+  {
+   "name_cn": "林树靖",
+   "name_en": null,
+   "title": "助理研究员",
+   "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "MEMS/微机电系统",
+    "半导体器件与工艺",
+    "生物医疗电子/脑机接口"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "林艳霞",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "处理器与体系结构",
+    "EDA/设计自动化",
+    "半导体器件与工艺"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "林祖德",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "MEMS/微机电系统",
+    "传感器与智能感知"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "刘方鑫",
+   "name_en": null,
+   "title": "助理研究员",
+   "department": "计算机学院（可扩展计算研究所）",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "处理器与体系结构",
+    "AI加速器/智能芯片",
+    "EDA/设计自动化"
+   ],
+   "homepage": "https://mxhx7199.github.io/",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "刘景全",
+   "name_en": null,
+   "title": "特聘教授",
+   "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "MEMS/微机电系统",
+    "传感器与智能感知",
+    "生物医疗电子/脑机接口"
+   ],
+   "homepage": "http://mems.sjtu.edu.cn",
+   "email": null,
+   "notes": "微纳器件与集成系统研究所（MEMS方向）团队负责人"
+  },
+  {
+   "name_cn": "刘庆文",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "硅光/光电子集成",
+    "光纤传感与光通信",
+    "MEMS/微机电系统",
+    "传感器与智能感知",
+    "通信基带与系统"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "刘武",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "处理器与体系结构",
+    "MEMS/微机电系统",
+    "传感器与智能感知",
+    "电磁与天线"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "刘彦",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟/混合信号集成电路",
+    "EDA/设计自动化",
+    "生物医疗电子/脑机接口"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "卢佳青",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波集成电路",
+    "EDA/设计自动化",
+    "电磁与天线"
+   ],
+   "homepage": "jiaqing-lu.github.io",
+   "email": null,
+   "notes": "校内岗位：长聘教轨副教授"
+  },
+  {
+   "name_cn": "陆梁军",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "射频/毫米波集成电路",
+    "处理器与体系结构",
+    "硅光/光电子集成",
+    "光纤传感与光通信",
+    "电磁与天线"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "国家高层次青年人才"
+  },
+  {
+   "name_cn": "罗骋韬",
+   "name_en": null,
+   "title": "副教授",
+   "department": "自动化与感知学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS/微机电系统",
+    "半导体器件与工艺"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "校内岗位：长聘教轨副教授"
+  },
+  {
+   "name_cn": "马伯文",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "硅光/光电子集成"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "校内岗位：长聘教轨副教授"
+  },
+  {
+   "name_cn": "马麟",
+   "name_en": null,
+   "title": "研究员",
+   "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "硅光/光电子集成",
+    "光纤传感与光通信",
+    "传感器与智能感知",
+    "电磁与天线"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "上海特聘专家；智能光子学研究中心成员"
+  },
+  {
+   "name_cn": "毛军发",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波集成电路",
+    "高速集成电路与系统",
+    "半导体器件与工艺"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "学院名录标注“院士”；集成电路互连与封装"
+  },
+  {
+   "name_cn": "毛逸飞",
+   "name_en": null,
+   "title": "副教授",
+   "department": "自动化与感知学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "硅光/光电子集成",
+    "半导体器件与工艺"
+   ],
+   "homepage": "https://www.x-mol.com/groups/mao_yifei",
+   "email": null,
+   "notes": "校内岗位：长聘教轨副教授"
+  },
+  {
+   "name_cn": "毛志刚",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "数字集成电路与SoC",
+    "EDA/设计自动化"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "莫亭亭",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院（信息与电子工程学院）· 电子信息与集成电路实验教学中心",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波集成电路"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "庞健",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波集成电路",
+    "数字集成电路与SoC",
+    "硅基相控阵收发机"
+   ],
+   "homepage": "https://siliconrf.sjtu.edu.cn/",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "彭争春",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路学院（信息与电子工程学院）· 纳电子材料与器件研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "存算一体/近存计算",
+    "半导体器件与工艺",
+    "传感器与智能感知"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "祁亮",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟/混合信号集成电路",
+    "射频/毫米波集成电路",
+    "EDA/设计自动化",
+    "硅光/光电子集成",
+    "传感器与智能感知"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "钱娜",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "模拟/混合信号集成电路",
+    "射频/毫米波集成电路",
+    "硅光/光电子集成"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "邱辞源",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波集成电路",
+    "AI加速器/智能芯片",
+    "半导体器件与工艺",
+    "硅光/光电子集成",
+    "光纤传感与光通信",
+    "通信基带与系统"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "邱良丰",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波集成电路",
+    "EDA/设计自动化",
+    "半导体器件与工艺",
+    "电磁与天线"
+   ],
+   "homepage": "http://microwave.eu.org:8000/",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "任鹏鹏",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟/混合信号集成电路",
+    "数字集成电路与SoC",
+    "EDA/设计自动化",
+    "半导体器件与工艺"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "校内岗位：长聘教轨副教授"
+  },
+  {
+   "name_cn": "绳伟光",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "数字集成电路与SoC",
+    "处理器与体系结构",
+    "EDA/设计自动化"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "施国勇",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟/混合信号集成电路",
+    "EDA/设计自动化"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "石剑虹",
+   "name_en": null,
+   "title": "副教授",
+   "department": "自动化与感知学院 / 光子传输与通信全国重点实验室",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "量子信息器件",
+    "传感器与智能感知"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "量子感知与信息处理研究所成员"
+  },
+  {
+   "name_cn": "史汝川",
+   "name_en": null,
+   "title": "助理研究员",
+   "department": "自动化与感知学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "MEMS/微机电系统",
+    "射频/毫米波集成电路",
+    "传感器与智能感知"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "司梦维",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "数字集成电路与SoC",
+    "半导体器件与工艺",
+    "MEMS/微机电系统"
+   ],
+   "homepage": "https://sigroup.sjtu.edu.cn/",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "宋卓然",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "计算机学院（可扩展计算研究所）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "处理器与体系结构",
+    "AI加速器/智能芯片"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "苏言杰",
+   "name_en": null,
+   "title": "研究员",
+   "department": "集成电路学院（信息与电子工程学院）· 纳电子材料与器件研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS/微机电系统",
+    "传感器与智能感知"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "苏翼凯",
+   "name_en": null,
+   "title": "特聘教授",
+   "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "硅光/光电子集成",
+    "光纤传感与光通信"
+   ],
+   "homepage": "http://otip.sjtu.edu.cn",
+   "email": null,
+   "notes": "国家高层次人才；光传输与集成光子学实验室负责人"
+  },
+  {
+   "name_cn": "孙璐",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "硅光/光电子集成",
+    "光纤传感与光通信",
+    "通信基带与系统"
+   ],
+   "homepage": "http://otip.sjtu.edu.cn/member/LuSun",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "孙亚男",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟/混合信号集成电路",
+    "数字集成电路与SoC",
+    "处理器与体系结构",
+    "AI加速器/智能芯片",
+    "存算一体/近存计算"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "高能效数字集成电路与存内计算方向"
+  },
+  {
+   "name_cn": "孙云娜",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "处理器与体系结构",
+    "半导体器件与工艺",
+    "MEMS/微机电系统",
+    "电源管理/功率器件"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "唐旻",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波集成电路",
+    "EDA/设计自动化",
+    "半导体器件与工艺",
+    "电源管理/功率器件",
+    "电磁与天线"
+   ],
+   "homepage": "http://rfeda.sjtu.edu.cn",
+   "email": null,
+   "notes": "国家级高层次人才"
+  },
+  {
+   "name_cn": "唐伟",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "MEMS/微机电系统",
+    "生物医疗电子/脑机接口"
+   ],
+   "homepage": "http://smil.sjtu.edu.cn/",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "田晓华",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路学院（信息与电子工程学院）· 无线通信技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "硅光/光电子集成",
+    "通信基带与系统",
+    "电磁与天线"
+   ],
+   "homepage": "http://xtian.sjtu.edu.cn",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "万文杰",
+   "name_en": null,
+   "title": "副教授",
+   "department": "物理与天文学院 / 光子传输与通信全国重点实验室",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "硅光/光电子集成",
+    "微纳光子学"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "光子传输与通信全国重点实验室副主任"
+  },
+  {
+   "name_cn": "万阳阳",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光纤传感与光通信",
+    "传感器与智能感知"
+   ],
+   "homepage": "https://cip.sjtu.edu.cn/wordpress/（团队主页）",
+   "email": null,
+   "notes": "校内岗位：长聘教轨助理教授"
+  },
+  {
+   "name_cn": "王国兴",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "EDA/设计自动化"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王辉",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "模拟/混合信号集成电路",
+    "数字集成电路与SoC",
+    "MEMS/微机电系统",
+    "电源管理/功率器件"
+   ],
+   "homepage": "https://ace.sjtu.edu.cn",
+   "email": null,
+   "notes": "校内岗位：长聘教轨副教授"
+  },
+  {
+   "name_cn": "王静",
+   "name_en": null,
+   "title": "助理研究员",
+   "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "模拟/混合信号集成电路",
+    "数字集成电路与SoC",
+    "半导体器件与工艺",
+    "硅光/光电子集成",
+    "通信基带与系统"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王隆春",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "硅光/光电子集成",
+    "MEMS/微机电系统",
+    "生物医疗电子/脑机接口"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王琴",
+   "name_en": null,
+   "title": "研究员",
+   "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟/混合信号集成电路",
+    "数字集成电路与SoC",
+    "处理器与体系结构",
+    "AI加速器/智能芯片",
+    "EDA/设计自动化"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王庆康",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路学院（信息与电子工程学院）· 纳电子材料与器件研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "硅光/光电子集成",
+    "半导体器件与工艺",
+    "微纳加工"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王涛",
+   "name_en": null,
+   "title": "副教授",
+   "department": "自动化与感知学院 / 光子传输与通信全国重点实验室",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "量子信息器件",
+    "数字集成电路与SoC"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "量子集成化芯片研制；校内岗位：长聘教轨副教授"
+  },
+  {
+   "name_cn": "王霆",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "硅光/光电子集成"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王尧",
+   "name_en": null,
+   "title": "助理研究员",
+   "department": "集成电路学院（信息与电子工程学院）· 未来媒体网络协同创新中心",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "通信基带与系统"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "文惠敏",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "硅光/光电子集成",
+    "MEMS/微机电系统",
+    "传感器与智能感知"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "吴龟灵",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "模拟/混合信号集成电路",
+    "硅光/光电子集成",
+    "光纤传感与光通信"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "大川奖获得者"
+  },
+  {
+   "name_cn": "吴开宇",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院（信息与电子工程学院）· 纳电子材料与器件研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "硅光/光电子集成"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "校内岗位：长聘教轨副教授"
+  },
+  {
+   "name_cn": "吴侃",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "硅光/光电子集成"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "国家高层次青年人才"
+  },
+  {
+   "name_cn": "吴林晟",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "射频/毫米波集成电路",
+    "处理器与体系结构",
+    "半导体器件与工艺",
+    "MEMS/微机电系统",
+    "电磁与天线"
+   ],
+   "homepage": "http://cmrft.sjtu.edu.cn/newsinfo/news_view.asp?newsid=74",
+   "email": null,
+   "notes": "学院副院长（新闻页）"
+  },
+  {
+   "name_cn": "吴茂坤",
+   "name_en": null,
+   "title": "助理研究员",
+   "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路设计",
+    "EDA/设计自动化"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "吴校生",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "处理器与体系结构",
+    "硅光/光电子集成",
+    "MEMS/微机电系统",
+    "传感器与智能感知",
+    "生物医疗电子/脑机接口"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "吴子涵",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "数字集成电路与SoC",
+    "处理器与体系结构",
+    "存算一体/近存计算",
+    "EDA/设计自动化"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "夏彬",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波集成电路",
+    "处理器与体系结构",
+    "EDA/设计自动化",
+    "半导体器件与工艺",
+    "电磁与天线"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "肖高标",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波集成电路",
+    "数字集成电路与SoC",
+    "EDA/设计自动化",
+    "电磁与天线"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "校内岗位：长聘教授"
+  },
+  {
+   "name_cn": "肖太龙",
+   "name_en": null,
+   "title": "助理研究员",
+   "department": "自动化与感知学院 / 光子传输与通信全国重点实验室",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "硅光/光电子集成"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "光子计算智能方向"
+  },
+  {
+   "name_cn": "谢卫强",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "硅光/光电子集成",
+    "传感器与智能感知",
+    "通信基带与系统"
+   ],
+   "homepage": "https://otip.sjtu.edu.cn/member/WeiqiangXie",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "徐绍夫",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "模拟/混合信号集成电路",
+    "处理器与体系结构",
+    "硅光/光电子集成"
+   ],
+   "homepage": "https://imlic.sjtu.edu.cn/?p=3096",
+   "email": null,
+   "notes": "校内岗位：长聘教轨副教授"
+  },
+  {
+   "name_cn": "许齐敏",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "自动化与感知学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "EDA/设计自动化",
+    "AI加速器/智能芯片"
+   ],
+   "homepage": "https://iwin.sjtu.edu.cn/",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "闫浩",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路测量",
+    "传感器与智能感知",
+    "精密测量仪器"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "杨斌",
+   "name_en": null,
+   "title": "研究员",
+   "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "MEMS/微机电系统",
+    "传感器与智能感知",
+    "电源管理/功率器件",
+    "电磁与天线"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "杨超",
+   "name_en": null,
+   "title": "助理研究员",
+   "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟/混合信号集成电路",
+    "射频/毫米波集成电路",
+    "数字集成电路与SoC",
+    "EDA/设计自动化"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "杨佳苗",
+   "name_en": null,
+   "title": "副教授",
+   "department": "自动化与感知学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "硅光/光电子集成",
+    "传感器与智能感知",
+    "AI加速器/智能芯片"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "校内岗位：长聘副教授"
+  },
+  {
+   "name_cn": "杨建华",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院（信息与电子工程学院）· 纳电子材料与器件研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS/微机电系统",
+    "传感器与智能感知"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "校内岗位：长聘教轨副教授"
+  },
+  {
+   "name_cn": "杨天",
+   "name_en": null,
+   "title": "副教授",
+   "department": "自动化与感知学院 / 光子传输与通信全国重点实验室",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "硅光/光电子集成",
+    "传感器与智能感知"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "光子传输与通信全国重点实验室“纳米光子学”实验室负责人；校内岗位：长聘副教授"
+  },
+  {
+   "name_cn": "杨志",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路学院（信息与电子工程学院）· 纳电子材料与器件研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "MEMS/微机电系统",
+    "传感器与智能感知"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "校内岗位：长聘教授"
+  },
+  {
+   "name_cn": "杨卓青",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "MEMS/微机电系统",
+    "传感器与智能感知"
+   ],
+   "homepage": "https://gpmems.sjtu.edu.cn/",
+   "email": null,
+   "notes": "校内岗位：长聘教授"
+  },
+  {
+   "name_cn": "叶瑶瑶",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟/混合信号集成电路",
+    "数字集成电路与SoC",
+    "处理器与体系结构",
+    "AI加速器/智能芯片",
+    "EDA/设计自动化"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "义理林",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "硅光/光电子集成",
+    "光纤传感与光通信"
+   ],
+   "homepage": "http://olife.sjtu.edu.cn",
+   "email": null,
+   "notes": "光子传输与通信全国重点实验室副主任"
+  },
+  {
+   "name_cn": "尹琛",
+   "name_en": null,
+   "title": "助理研究员",
+   "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟/混合信号集成电路",
+    "数字集成电路与SoC",
+    "处理器与体系结构",
+    "AI加速器/智能芯片",
+    "存算一体/近存计算"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "应忍冬",
+   "name_en": null,
+   "title": "研究员",
+   "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "处理器与体系结构",
+    "AI加速器/智能芯片",
+    "嵌入式系统"
+   ],
+   "homepage": "http://bat.sjtu.edu.cn",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "尤敏敏",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "硅光/光电子集成",
+    "MEMS/微机电系统",
+    "传感器与智能感知"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "臧法珩",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "MEMS/微机电系统",
+    "传感器与智能感知"
+   ],
+   "homepage": "https://gpmems.sjtu.edu.cn",
+   "email": null,
+   "notes": "校内岗位：长聘教轨副教授"
+  },
+  {
+   "name_cn": "张爱新",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "计算机学院（交叉前沿研究所）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "数字集成电路与SoC",
+    "集成电路设计",
+    "密码专用芯片"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "曾主持上海市科委重大研究计划“高性能密码算法专用芯片的研制”“数字证书SoC芯片开发”"
+  },
+  {
+   "name_cn": "张宸",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟/混合信号集成电路",
+    "数字集成电路与SoC",
+    "处理器与体系结构",
+    "AI加速器/智能芯片",
+    "EDA/设计自动化"
+   ],
+   "homepage": "https://chenzhangsjtu.github.io/",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张丛春",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件与工艺",
+    "MEMS/微机电系统",
+    "传感器与智能感知"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张文甲",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "EDA/设计自动化",
+    "硅光/光电子集成",
+    "光纤传感与光通信"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张文军",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路学院（信息与电子工程学院）· 图像通信与网络工程研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "数字集成电路与SoC"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "中国工程院院士；图像通信与网络工程研究所所长"
+  },
+  {
+   "name_cn": "赵健",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟/混合信号集成电路",
+    "数字集成电路与SoC",
+    "EDA/设计自动化",
+    "半导体器件与工艺",
+    "传感器与智能感知"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "校内岗位：长聘教轨副教授"
+  },
+  {
+   "name_cn": "赵杰茹",
+   "name_en": null,
+   "title": "副教授",
+   "department": "计算机学院（先进计算研究所）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "处理器与体系结构",
+    "EDA/设计自动化"
+   ],
+   "homepage": "https://zjru.github.io/",
+   "email": null,
+   "notes": "校内岗位：长聘教轨副教授"
+  },
+  {
+   "name_cn": "赵昕",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "数字集成电路与SoC",
+    "MEMS/微机电系统"
+   ],
+   "homepage": "http://xinzhao.sjtu.edu.cn/",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "赵阳",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "EDA/设计自动化",
+    "传感器与智能感知"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "周健军",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟/混合信号集成电路",
+    "射频/毫米波集成电路",
+    "EDA/设计自动化"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "周亮",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波集成电路",
+    "半导体器件与工艺",
+    "封装集成与电磁兼容"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "周林杰",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波集成电路",
+    "处理器与体系结构",
+    "硅光/光电子集成",
+    "光纤传感与光通信",
+    "通信基带与系统"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "光子传输与通信全国重点实验室副主任；国家级高层次人才"
+  },
+  {
+   "name_cn": "周志华",
+   "name_en": null,
+   "title": "助理研究员",
+   "department": "集成电路学院（信息与电子工程学院）· 纳电子材料与器件研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "硅光/光电子集成",
+    "传感器与智能感知"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "朱敏",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "存算一体/近存计算",
+    "MEMS/微机电系统"
+   ],
+   "homepage": "https://www.researchgate.net/profile/Min-Zhu-28?ev=hdr_xprf",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "朱逸萧",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "硅光/光电子集成",
+    "光纤传感与光通信"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "校内岗位：长聘教轨副教授"
+  },
+  {
+   "name_cn": "邹卫文",
+   "name_en": null,
+   "title": "特聘教授",
+   "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "模拟/混合信号集成电路",
+    "硅光/光电子集成"
+   ],
+   "homepage": "https://imlic.sjtu.edu.cn/?p=205",
+   "email": null,
+   "notes": null
+  }
+ ]
 }

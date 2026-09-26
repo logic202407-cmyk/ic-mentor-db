@@ -1,4 +1,4 @@
-// fetch_labs_all.mjs — 抓取全部候选人的个人/课题组主页（已抓过的复用本地文本）
+// fetch_labs_all.mjs — 抓取推荐集导师的个人/课题组主页（已抓过的复用本地文本）
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -6,9 +6,15 @@ const PROC = 'E:\\ytm\\mentor-db\\data\\processed';
 const RAWDIR = 'E:\\ytm\\mentor-db\\data\\raw\\lab_pages';
 fs.mkdirSync(RAWDIR, { recursive: true });
 
-const list = JSON.parse(fs.readFileSync(path.join(PROC, 'shortlist_2027.json'), 'utf8'));
-const targets = list.filter((d) => d.homepage);
-console.log(`候选 ${list.length} 人，其中有主页 ${targets.length} 人`);
+// 抓取范围：全部有个人主页、且论文数 ≥3 的导师（覆盖推荐集之外的院系）
+const ranked = JSON.parse(fs.readFileSync(path.join(PROC, 'mentor_ranked.json'), 'utf8'));
+const targets = ranked
+  .filter((d) => d.homepage && (d.n_ic_papers || 0) >= 3 && d.primary_direction !== 'other')
+  .map((d) => ({
+    name_cn: d.name_cn, school: d.school, title: d.title, department: d.department,
+    homepage: d.homepage, primary_direction: d.primary_direction,
+  }));
+console.log(`全库 ${ranked.length} 人 → 抓取目标 ${targets.length} 人`);
 
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36';
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));

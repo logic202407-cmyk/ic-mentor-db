@@ -38,11 +38,10 @@
     "毫米波低功耗前端集成电路",
     "毫米波高功率高能效振荡器",
     "超宽带前端集成电路",
-    "超宽带脉冲生成器和放大器",
-    "集成电路设计"
+    "超宽带脉冲生成器和放大器"
    ],
    "homepage": "https://faculty.xidian.edu.cn/ANXIN/zh_CN/index.htm",
-   "email": "anxin@xidian.edu.cn",
+   "email": null,
    "notes": "国家级青年人才；华山学者特聘教授"
   },
   {
@@ -54,13 +53,11 @@
    "research_keywords": [
     "模拟集成电路设计",
     "微弱信号检测与虚拟仪器技术",
-    "集成电路设计",
-    "模拟集成电路",
     "毫米波",
     "可靠性"
    ],
    "homepage": "https://faculty.xidian.edu.cn/BJL/zh_CN/index.htm",
-   "email": "baoing@mail.xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -86,11 +83,10 @@
    "is_phd_advisor": true,
    "research_keywords": [
     "超大规模集成电路设计和测试",
-    "集成电路设计",
     "微电子学与固体电子学"
    ],
    "homepage": "https://faculty.xidian.edu.cn/CJP1/zh_CN/index.htm",
-   "email": "jpcai@mail.xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -108,7 +104,7 @@
     "芯片"
    ],
    "homepage": "https://faculty.xidian.edu.cn/CZB/zh_CN/index.htm",
-   "email": "zbzeng@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -122,11 +118,10 @@
     "新型半导体光伏材料与太阳电池",
     "集成电路设计",
     "宽禁带半导体",
-    "半导体器件",
     "功率器件"
    ],
    "homepage": "https://faculty.xidian.edu.cn/CDZ1/zh_CN/index.htm",
-   "email": "dzchen@xidian.edu.cn",
+   "email": null,
    "notes": "国家级青年人才"
   },
   {
@@ -139,12 +134,10 @@
     "新型低功耗纳米器件",
     "超低功耗集成电路设计",
     "半导体器件可靠性",
-    "集成电路可靠性设计",
-    "集成电路设计",
-    "半导体器件"
+    "集成电路可靠性设计"
    ],
    "homepage": "https://faculty.xidian.edu.cn/CSP1/zh_CN/index.htm",
-   "email": "spchen@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -159,7 +152,7 @@
     "微电子学与固体电子学"
    ],
    "homepage": "https://faculty.xidian.edu.cn/CHEN_DONGDONG/zh_CN/index.htm",
-   "email": "ddchen@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -170,8 +163,7 @@
    "is_phd_advisor": true,
    "research_keywords": [
     "集成电路系统设计",
-    "微电子学与固体电子学",
-    "微电子"
+    "微电子学与固体电子学"
    ],
    "homepage": "https://faculty.xidian.edu.cn/SGB/zh_CN/index.htm",
    "email": null,
@@ -201,13 +193,10 @@
    "research_keywords": [
     "超宽禁带半导体材料及器件",
     "新型氮化物半导体功率器件",
-    "超宽禁带半导体",
-    "宽禁带半导体",
-    "功率器件",
     "可靠性"
    ],
    "homepage": "https://faculty.xidian.edu.cn/DM2/zh_CN/index.htm",
-   "email": "duming@mail.xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -219,8 +208,7 @@
    "research_keywords": [
     "硅基功率器件与集成",
     "宽带隙半导体功率器件",
-    "nm后CMOS关键技术研究",
-    "功率器件"
+    "nm后CMOS关键技术研究"
    ],
    "homepage": "https://faculty.xidian.edu.cn/DBX/zh_CN/index.htm",
    "email": null,
@@ -254,7 +242,7 @@
     "压电器件及等效电路系统研究"
    ],
    "homepage": "https://faculty.xidian.edu.cn/FCL/zh_CN/index.htm",
-   "email": "clfei@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -268,11 +256,10 @@
     "存内计算芯片",
     "类脑计算芯片",
     "模拟集成电路",
-    "人工智能芯片",
-    "存内计算"
+    "人工智能芯片"
    ],
    "homepage": "https://faculty.xidian.edu.cn/FENGLICHEN/zh_CN/index.htm",
-   "email": "lcfeng@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -284,7 +271,6 @@
    "research_keywords": [
     "光电器件",
     "超宽禁带半导体",
-    "宽禁带半导体",
     "MOSFET",
     "氮化镓",
     "氧化镓"
@@ -315,11 +301,10 @@
    "research_keywords": [
     "半导体器件",
     "宽禁带",
-    "微电子",
-    "半导体"
+    "微电子"
    ],
    "homepage": "https://faculty.xidian.edu.cn/FUYU/zh_CN/index.htm",
-   "email": "fuyu@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -330,9 +315,7 @@
    "is_phd_advisor": true,
    "research_keywords": [
     "新型半导体器件与集成电路",
-    "新型非易失阻变存储器",
-    "阻变存储器",
-    "半导体器件"
+    "新型非易失阻变存储器"
    ],
    "homepage": "https://faculty.xidian.edu.cn/GHX1/zh_CN/index.htm",
    "email": null,
@@ -349,8 +332,7 @@
     "光电子器件",
     "器件以及石墨烯材料和器件等方面",
     "宽禁带半导体",
-    "化合物半导体",
-    "半导体器件"
+    "化合物半导体"
    ],
    "homepage": "https://faculty.xidian.edu.cn/GH6/zh_CN/index.htm",
    "email": null,
@@ -383,9 +365,7 @@
     "宽禁带半导体材料与器件",
     "微纳半导体新器件及其可靠性",
     "SoC设计与设计方法学",
-    "超宽禁带半导体",
-    "宽禁带半导体",
-    "SoC设计"
+    "超宽禁带半导体"
    ],
    "homepage": "https://faculty.xidian.edu.cn/HY2/zh_CN/index.htm",
    "email": null,
@@ -400,11 +380,10 @@
    "research_keywords": [
     "第三代半导体技术研发和成果转化",
     "集成电路设计",
-    "集成电路",
     "微电子"
    ],
    "homepage": "https://faculty.xidian.edu.cn/HXN1/zh_CN/index.htm",
-   "email": "xnhe@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -417,9 +396,7 @@
     "宽禁带半导体功率器件设计与工艺",
     "大功率电力电子器件测试与可靠性",
     "材料-器件-系统一体化设计与片上系统",
-    "宽禁带半导体",
-    "器件可靠性",
-    "片上系统"
+    "器件可靠性"
    ],
    "homepage": "https://faculty.xidian.edu.cn/HYL1/zh_CN/index.htm",
    "email": null,
@@ -436,11 +413,10 @@
     "Si基GaN射频功率器件",
     "电力电子器件以及集成应用",
     "新型宽禁带半导体材料及器件研究",
-    "电路及逻辑器件研究",
-    "宽禁带半导体"
+    "电路及逻辑器件研究"
    ],
    "homepage": "https://faculty.xidian.edu.cn/HB6/zh_CN/index.htm",
-   "email": "bhou@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -451,12 +427,10 @@
    "is_phd_advisor": true,
    "research_keywords": [
     "硅基光子器件与单片光电集成",
-    "高速半导体器件与集成电路",
-    "半导体器件",
-    "光电集成"
+    "高速半导体器件与集成电路"
    ],
    "homepage": "https://faculty.xidian.edu.cn/HHY/zh_CN/index.htm",
-   "email": "huhy@xidian.edu.cn",
+   "email": null,
    "notes": "国家重点研发计划项目负责人"
   },
   {
@@ -469,12 +443,11 @@
     "芯片化激光雷达及图像传感器",
     "生物医疗芯片",
     "数据转换器等混合信号集成电路",
-    "混合信号集成电路",
     "集成电路设计",
     "模拟集成电路"
    ],
    "homepage": "https://faculty.xidian.edu.cn/HUJIN/zh_CN/index.htm",
-   "email": "hujin@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -489,7 +462,7 @@
     "高频滤波器"
    ],
    "homepage": "https://faculty.xidian.edu.cn/HYF1/zh_CN/index.htm",
-   "email": "huyanfei@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -517,7 +490,6 @@
     "新型微波功率器件与电路设计及仿真",
     "集成电路设计",
     "宽禁带半导体",
-    "功率器件",
     "碳化硅"
    ],
    "homepage": "https://faculty.xidian.edu.cn/JHJ/zh_CN/index.htm",
@@ -532,14 +504,13 @@
    "is_phd_advisor": true,
    "research_keywords": [
     "宽禁带半导体材料与器件",
-    "宽禁带半导体",
     "MOSFET",
     "功率器件",
     "碳化硅",
     "氧化镓"
    ],
    "homepage": "https://faculty.xidian.edu.cn/JRX/zh_CN/index.htm",
-   "email": "rxjia@mail.xidian.edu.cn",
+   "email": null,
    "notes": "国家级人才；华山学者领军教授"
   },
   {
@@ -557,7 +528,7 @@
     "芯片设计"
    ],
    "homepage": "https://faculty.xidian.edu.cn/JG/zh_CN/index.htm",
-   "email": "gjin@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -589,11 +560,10 @@
     "模拟集成电路",
     "数字集成电路",
     "半导体器件",
-    "器件建模",
-    "EDA"
+    "器件建模"
    ],
    "homepage": "https://faculty.xidian.edu.cn/LC3/zh_CN/index.htm",
-   "email": "licong@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -611,7 +581,7 @@
     "PCB板级系统电路设计"
    ],
    "homepage": "https://faculty.xidian.edu.cn/LD2/zh_CN/index.htm",
-   "email": "lidi2004@126.com",
+   "email": null,
    "notes": null
   },
   {
@@ -625,11 +595,10 @@
     "光电探测前端智能计算架构和电路",
     "芯片化图像传感器",
     "集成电路设计",
-    "数字集成电路",
-    "智能计算"
+    "数字集成电路"
    ],
    "homepage": "https://faculty.xidian.edu.cn/LD6/zh_CN/index.htm",
-   "email": "lidong@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -642,12 +611,10 @@
     "新型器件与电路建模与可靠性技术",
     "集成电路设计与SoC设计方法",
     "面向深度学习嵌入式加速硬件设计研究",
-    "集成电路设计自动化与机器学习技术",
-    "集成电路设计",
-    "SoC设计"
+    "集成电路设计自动化与机器学习技术"
    ],
    "homepage": "https://faculty.xidian.edu.cn/LK4/zh_CN/index.htm",
-   "email": "lik@mail.xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -661,7 +628,6 @@
     "无源物联网芯片与通信系统",
     "射频识别与智能感知集成技术",
     "智能功率集成电路与芯内可靠性监测技术",
-    "数模混合集成电路",
     "集成电路设计"
    ],
    "homepage": "https://faculty.xidian.edu.cn/LXM3/zh_CN/index.htm",
@@ -677,13 +643,10 @@
    "research_keywords": [
     "模拟集成电路设计",
     "混合信号集成电路",
-    "集成电路设计",
-    "模拟集成电路",
-    "芯片设计",
-    "芯片"
+    "芯片设计"
    ],
    "homepage": "https://faculty.xidian.edu.cn/LYN4/zh_CN/index.htm",
-   "email": "yanili@mail.xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -701,7 +664,7 @@
     "可靠性"
    ],
    "homepage": "https://faculty.xidian.edu.cn/LY51/zh_CN/index.htm",
-   "email": "liychana@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -712,7 +675,6 @@
    "is_phd_advisor": true,
    "research_keywords": [
     "集成电路系统设计",
-    "集成电路",
     "微电子",
     "半导体"
    ],
@@ -730,7 +692,7 @@
     "微电子"
    ],
    "homepage": "https://faculty.xidian.edu.cn/LIAOXUFENG/zh_CN/index.htm",
-   "email": "liaoxufeng@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -740,11 +702,10 @@
    "department": "微电子学院",
    "is_phd_advisor": true,
    "research_keywords": [
-    "微电子学与固体电子学",
-    "微电子"
+    "微电子学与固体电子学"
    ],
    "homepage": "https://faculty.xidian.edu.cn/LZH5/zh_CN/index.htm",
-   "email": "zhlin@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -758,11 +719,10 @@
     "柔性可穿戴与可降解电子器件",
     "异质集成新型半导体器件",
     "集成电路设计",
-    "MOSFET",
-    "半导体器件"
+    "MOSFET"
    ],
    "homepage": "https://faculty.xidian.edu.cn/LC7/zh_CN/index.htm",
-   "email": "liuchen@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -776,8 +736,7 @@
     "宽禁带半导体材料与新结构器件",
     "超大规模集成电路设计与优化",
     "高速半导体器件与集成电路",
-    "纳米集成电路的制造技术",
-    "集成电路设计"
+    "纳米集成电路的制造技术"
    ],
    "homepage": "https://faculty.xidian.edu.cn/LHX3/zh_CN/index.htm",
    "email": null,
@@ -791,11 +750,10 @@
    "is_phd_advisor": false,
    "research_keywords": [
     "SiC新型功率器件以及应用",
-    "功率器件",
     "微电子"
    ],
    "homepage": "https://faculty.xidian.edu.cn/LL7/zh_CN/index.htm",
-   "email": "liuli@mail.xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -809,11 +767,10 @@
     "超低功耗CMOS集成电路设计",
     "模拟前端集成电路设计",
     "能量获取集成电路设计",
-    "混合信号集成电路",
-    "集成电路设计"
+    "混合信号集成电路"
    ],
    "homepage": "https://faculty.xidian.edu.cn/LLX/zh_CN/index.htm",
-   "email": "lxliu@mail.xidian.edu.cn",
+   "email": null,
    "notes": "国家级人才"
   },
   {
@@ -831,7 +788,7 @@
     "微系统"
    ],
    "homepage": "https://faculty.xidian.edu.cn/LML2/zh_CN/index.htm",
-   "email": "mlliu@xidian.edu.cn",
+   "email": null,
    "notes": "国家级人才"
   },
   {
@@ -844,12 +801,10 @@
     "集成电路设计",
     "抗辐射集成电路加固技术",
     "EDA技术",
-    "混合信号集成电路测试",
-    "混合信号集成电路",
-    "EDA"
+    "混合信号集成电路测试"
    ],
    "homepage": "https://faculty.xidian.edu.cn/LWF/zh_CN/index.htm",
-   "email": "wfliu@mail.xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -860,12 +815,10 @@
    "is_phd_advisor": true,
    "research_keywords": [
     "射频集成电路与系统",
-    "三维集成电路与系统",
-    "射频集成电路",
-    "三维集成"
+    "三维集成电路与系统"
    ],
    "homepage": "https://faculty.xidian.edu.cn/LXX5/zh_CN/index.htm",
-   "email": "liudou@xidian.edu.cn",
+   "email": null,
    "notes": "国家级青年人才；长江学者"
   },
   {
@@ -876,14 +829,10 @@
    "is_phd_advisor": false,
    "research_keywords": [
     "射频功率放大器及线性化技术",
-    "微波毫米波前端芯片研究",
-    "功率放大器",
-    "微波毫米波",
-    "毫米波",
-    "芯片"
+    "微波毫米波前端芯片研究"
    ],
    "homepage": "https://faculty.xidian.edu.cn/LIUXIN/zh_CN/index.htm",
-   "email": "liuxin01@xidian.edu.cn",
+   "email": null,
    "notes": "华山菁英学者"
   },
   {
@@ -894,7 +843,6 @@
    "is_phd_advisor": true,
    "research_keywords": [
     "微电子学与固体电子学",
-    "微电子",
     "半导体",
     "光电"
    ],
@@ -915,7 +863,7 @@
     "三维集成"
    ],
    "homepage": "https://faculty.xidian.edu.cn/LY39/zh_CN/index.htm",
-   "email": "liuyang@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -957,12 +905,10 @@
    "is_phd_advisor": true,
    "research_keywords": [
     "先进半导体器件",
-    "重点是氮化镓电子器件",
-    "半导体器件",
-    "氮化镓"
+    "重点是氮化镓电子器件"
    ],
    "homepage": "https://faculty.xidian.edu.cn/LIUZHIHONG/zh_CN/index.htm",
-   "email": "zhliu@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -974,13 +920,11 @@
    "research_keywords": [
     "新型三维集成电路互连技术",
     "相关技术",
-    "高频超声换能器相关技术",
     "半导体器件",
-    "MEMS",
-    "三维集成"
+    "MEMS"
    ],
    "homepage": "https://faculty.xidian.edu.cn/LLF1/zh_CN/index.htm",
-   "email": "loulifei@mail.xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -992,12 +936,10 @@
    "research_keywords": [
     "硅基射频集成电路与系统",
     "毫米波",
-    "毫米波集成电路",
-    "射频集成电路",
     "微系统"
    ],
    "homepage": "https://faculty.xidian.edu.cn/LQJ2/zh_CN/index.htm",
-   "email": "qjlu@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -1015,7 +957,7 @@
     "化合物半导体器件参数提取与模型建立"
    ],
    "homepage": "https://faculty.xidian.edu.cn/LY44/zh_CN/index.htm",
-   "email": "luyang@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -1027,13 +969,10 @@
    "research_keywords": [
     "宽禁带半导体器件",
     "氮化镓异质集成关键技术",
-    "化合物半导体关键工艺",
-    "宽禁带半导体",
-    "化合物半导体",
-    "半导体器件"
+    "化合物半导体关键工艺"
    ],
    "homepage": "https://faculty.xidian.edu.cn/luhao/zh_CN/index.htm",
-   "email": "luhao@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -1045,11 +984,10 @@
    "research_keywords": [
     "光导微波功率器件与系统设计",
     "氧化镓",
-    "Si基GaN外延材料开发与功率器件及电路",
-    "功率器件"
+    "Si基GaN外延材料开发与功率器件及电路"
    ],
    "homepage": "https://faculty.xidian.edu.cn/LXL8/zh_CN/index.htm",
-   "email": "xllu@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -1062,9 +1000,7 @@
     "宽带隙半导体器件与电路",
     "射频集成电路设计",
     "新型半导体器件与电路设计-工艺协同优化",
-    "数模混合集成电路",
-    "集成电路设计",
-    "射频集成电路"
+    "数模混合集成电路"
    ],
    "homepage": "https://faculty.xidian.edu.cn/LHL7/zh_CN/index.htm",
    "email": null,
@@ -1078,14 +1014,11 @@
    "is_phd_advisor": false,
    "research_keywords": [
     "宽禁带半导体器件与可靠性研究",
-    "宽禁带半导体",
-    "半导体器件",
     "器件可靠性",
-    "氮化镓",
-    "可靠性"
+    "氮化镓"
    ],
    "homepage": "https://faculty.xidian.edu.cn/LL20/zh_CN/index.htm",
-   "email": "llv@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -1099,7 +1032,7 @@
     "微电子"
    ],
    "homepage": "https://faculty.xidian.edu.cn/MHJ/zh_CN/index.htm",
-   "email": "mahj07@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -1114,7 +1047,7 @@
     "宽禁带半导体"
    ],
    "homepage": "https://faculty.xidian.edu.cn/MPJ/zh_CN/index.htm",
-   "email": "pjma@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -1125,14 +1058,12 @@
    "is_phd_advisor": true,
    "research_keywords": [
     "传感器芯片",
-    "芯片",
-    "微光图像传感器芯片",
     "硅光电倍增管",
     "模拟前端电路及数据转换器：跨阻放大器",
     "时间数字转换器"
    ],
    "homepage": "https://faculty.xidian.edu.cn/MR/zh_CN/index.htm",
-   "email": "rma@xidian.edu.cn",
+   "email": null,
    "notes": "国家杰青；国家级青年人才"
   },
   {
@@ -1147,7 +1078,7 @@
     "微电子学与固体电子学"
    ],
    "homepage": "https://faculty.xidian.edu.cn/MXH2/zh_CN/index.htm",
-   "email": "xhma@xidian.edu.cn",
+   "email": null,
    "notes": "重点实验室主任"
   },
   {
@@ -1173,12 +1104,10 @@
     "新型半导体器件与集成电路设计",
     "宽禁带半导体",
     "低功耗纳米电子器件与电路设计",
-    "新型传感器与芯片",
-    "集成电路设计",
-    "半导体器件"
+    "新型传感器与芯片"
    ],
    "homepage": "https://faculty.xidian.edu.cn/MW/zh_CN/index.htm",
-   "email": "mwxidian@126.com",
+   "email": null,
    "notes": "国家级人才；国家自然科学基金创新研究群体牵头人；二级教授"
   },
   {
@@ -1189,11 +1118,10 @@
    "is_phd_advisor": false,
    "research_keywords": [
     "半导体光电子器件",
-    "自旋电子学",
-    "自旋电子"
+    "自旋电子学"
    ],
    "homepage": "https://faculty.xidian.edu.cn/MT1/zh_CN/index.htm",
-   "email": "miaotian@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -1211,7 +1139,7 @@
     "功率半导体"
    ],
    "homepage": "https://faculty.xidian.edu.cn/NJ1/zh_CN/index.htm",
-   "email": "ningj@xidian.edu.cn",
+   "email": null,
    "notes": "国家级青年人才"
   },
   {
@@ -1224,9 +1152,7 @@
     "模拟/射频集成电路设计",
     "机器学习",
     "数字信号处理",
-    "无线通信系统",
-    "集成电路设计",
-    "射频集成电路"
+    "无线通信系统"
    ],
    "homepage": "https://faculty.xidian.edu.cn/PQ/zh_CN/index.htm",
    "email": null,
@@ -1241,13 +1167,10 @@
    "research_keywords": [
     "新型氧化铪基铁电存储器件及存算一体芯片",
     "信息存储材料",
-    "器件及其应用",
-    "铁电存储器",
-    "存算一体",
-    "芯片"
+    "器件及其应用"
    ],
    "homepage": "https://faculty.xidian.edu.cn/PENGYUE/zh_CN/index.htm",
-   "email": "ypeng@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -1260,12 +1183,10 @@
     "数字化射频集成电路",
     "微波/毫米波/太赫兹集成电路",
     "片上相控阵无线系统",
-    "可重构无源电路",
-    "射频集成电路",
-    "毫米波"
+    "可重构无源电路"
    ],
    "homepage": "https://faculty.xidian.edu.cn/QIANHUIZHEN/zh_CN/index.htm",
-   "email": "qianhuizhen@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -1278,7 +1199,7 @@
     "微电子"
    ],
    "homepage": "https://faculty.xidian.edu.cn/QY4/zh_CN/index.htm",
-   "email": "quanyi@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -1292,7 +1213,6 @@
     "数字集成电路",
     "雷达信号处理",
     "物理设计",
-    "EDA",
     "流片"
    ],
    "homepage": "https://faculty.xidian.edu.cn/SJY3/zh_CN/index.htm",
@@ -1307,7 +1227,6 @@
    "is_phd_advisor": false,
    "research_keywords": [
     "高速半导体集成电路设计与制造",
-    "集成电路设计",
     "微电子学与固体电子学"
    ],
    "homepage": "https://faculty.xidian.edu.cn/SB1/zh_CN/index.htm",
@@ -1327,7 +1246,7 @@
     "半导体"
    ],
    "homepage": "https://faculty.xidian.edu.cn/SJJ1/zh_CN/index.htm",
-   "email": "jianjun_79_81@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -1375,11 +1294,10 @@
     "半导体先进封装与测试技术",
     "SiC功率器件工艺与应用共性技术",
     "基于宽禁带半导体的电力电子系统",
-    "高功率智能集成电路",
-    "宽禁带半导体"
+    "高功率智能集成电路"
    ],
    "homepage": "https://faculty.xidian.edu.cn/SLJ1/zh_CN/index.htm",
-   "email": "ljsun@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -1392,7 +1310,7 @@
     "微电子"
    ],
    "homepage": "https://faculty.xidian.edu.cn/SUNRUJUN/zh_CN/index.htm",
-   "email": "sunrujun@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -1404,13 +1322,10 @@
    "research_keywords": [
     "数字接口与算法ASIC设计",
     "微弱信号采集与检测",
-    "数模混合集成电路设计",
-    "数模混合集成电路",
-    "集成电路设计",
-    "ASIC"
+    "数模混合集成电路设计"
    ],
    "homepage": "https://faculty.xidian.edu.cn/THL/zh_CN/index.htm",
-   "email": "hltang@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -1424,11 +1339,10 @@
     "SiC大功率器件设计及应用",
     "新型宽禁带器件模型和仿真",
     "宽禁带半导体",
-    "MOSFET",
-    "功率器件"
+    "MOSFET"
    ],
    "homepage": "https://faculty.xidian.edu.cn/TXY/zh_CN/index.htm",
-   "email": "xytang@mail.xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -1439,10 +1353,7 @@
    "is_phd_advisor": false,
    "research_keywords": [
     "数模混合集成电路设计",
-    "新型微纳半导体器件设计",
-    "数模混合集成电路",
-    "集成电路设计",
-    "半导体器件"
+    "新型微纳半导体器件设计"
    ],
    "homepage": "https://faculty.xidian.edu.cn/WB7/zh_CN/index.htm",
    "email": null,
@@ -1456,14 +1367,13 @@
    "is_phd_advisor": true,
    "research_keywords": [
     "应用于5G通信的GaN微波功率器件研究",
-    "功率器件",
     "氮化镓功率转换开关电路设计",
     "氮化镓基数字电路设计",
     "GaN基电子器件可靠性研究",
     "宽禁带半导体"
    ],
    "homepage": "https://faculty.xidian.edu.cn/WC4/zh_CN/index.htm",
-   "email": "chongw@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -1474,12 +1384,10 @@
    "is_phd_advisor": true,
    "research_keywords": [
     "低维宽禁带/超宽禁带半导体材料与器件",
-    "类石墨烯二维功能材料与器件",
-    "超宽禁带半导体",
-    "宽禁带半导体"
+    "类石墨烯二维功能材料与器件"
    ],
    "homepage": "https://faculty.xidian.edu.cn/WD/zh_CN/index.htm",
-   "email": "chankwang@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -1492,7 +1400,7 @@
     "微电子"
    ],
    "homepage": "https://faculty.xidian.edu.cn/WH13/zh_CN/index.htm",
-   "email": "hongwang@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -1504,12 +1412,10 @@
    "research_keywords": [
     "类脑芯片",
     "智能传感器",
-    "纳米光电器件",
-    "光电器件",
-    "芯片"
+    "纳米光电器件"
    ],
    "homepage": "https://faculty.xidian.edu.cn/WSL6/zh_CN/index.htm",
-   "email": "slwang@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -1520,12 +1426,10 @@
    "is_phd_advisor": false,
    "research_keywords": [
     "高性能时间数字转换器",
-    "光电探测传感器芯片及模拟前端集成电路",
-    "传感器芯片",
-    "芯片"
+    "光电探测传感器芯片及模拟前端集成电路"
    ],
    "homepage": "https://faculty.xidian.edu.cn/WXY11/zh_CN/index.htm",
-   "email": "wangxiayu@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -1537,13 +1441,10 @@
    "research_keywords": [
     "超）宽禁带半导体器件可靠性",
     "超）宽禁带半导体器件辐射效应及加固机理",
-    "超）宽禁带半导体器件缺陷研究",
-    "宽禁带半导体",
-    "半导体器件",
-    "器件可靠性"
+    "超）宽禁带半导体器件缺陷研究"
    ],
    "homepage": "https://faculty.xidian.edu.cn/WYZ5/zh_CN/index.htm",
-   "email": "yingzhewang@xidian.edu.cn",
+   "email": null,
    "notes": "IEEE Fellow"
   },
   {
@@ -1558,7 +1459,7 @@
     "可靠性"
    ],
    "homepage": "https://faculty.xidian.edu.cn/WYT/zh_CN/index.htm",
-   "email": "ytwang@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -1568,8 +1469,7 @@
    "department": "微电子学院",
    "is_phd_advisor": false,
    "research_keywords": [
-    "微电子学与固体电子学",
-    "微电子"
+    "微电子学与固体电子学"
    ],
    "homepage": "https://faculty.xidian.edu.cn/WYH7/zh_CN/index.htm",
    "email": null,
@@ -1586,7 +1486,6 @@
     "抗辐射加固设计",
     "系统集成设计",
     "超大规模集成电路设计",
-    "集成电路设计",
     "芯片"
    ],
    "homepage": "https://faculty.xidian.edu.cn/WLS4/zh_CN/index.htm",
@@ -1600,13 +1499,10 @@
    "department": "微电子学院",
    "is_phd_advisor": false,
    "research_keywords": [
-    "三维集成微系统及其可靠性研究",
-    "三维集成",
-    "微系统",
-    "可靠性"
+    "三维集成微系统及其可靠性研究"
    ],
    "homepage": "https://faculty.xidian.edu.cn/WXP2/zh_CN/index.htm",
-   "email": "xpwu@mail.xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -1631,11 +1527,10 @@
    "research_keywords": [
     "集成电路技术及其可靠性研究",
     "FinFET",
-    "可靠性",
     "天线"
    ],
    "homepage": "https://faculty.xidian.edu.cn/WZY3/zh_CN/index.htm",
-   "email": "wuzhenyu@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -1648,11 +1543,10 @@
     "GaN射频功率器件设计",
     "同质外延GaN器件",
     "热传输理论与调控技术",
-    "晶圆键合等异质集成关键技术",
-    "功率器件"
+    "晶圆键合等异质集成关键技术"
    ],
    "homepage": "https://faculty.xidian.edu.cn/WUMEI/zh_CN/index.htm",
-   "email": "wumei@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -1670,7 +1564,7 @@
     "集成电路设计"
    ],
    "homepage": "https://faculty.xidian.edu.cn/XIAOMING/zh_CN/index.htm",
-   "email": "xiaoming@xidian.edu.cn",
+   "email": null,
    "notes": "国家级青年人才"
   },
   {
@@ -1681,11 +1575,10 @@
    "is_phd_advisor": false,
    "research_keywords": [
     "超宽禁带半导体",
-    "宽禁带半导体",
     "微电子学与固体电子学"
    ],
    "homepage": "https://faculty.xidian.edu.cn/XIEMIN/zh_CN/index.htm",
-   "email": "xiemin@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -1711,9 +1604,7 @@
     "紫外与深紫外LED",
     "氮化物HEMT器件",
     "半导体器件工艺",
-    "半导体光电集成",
-    "半导体器件",
-    "HEMT"
+    "半导体光电集成"
    ],
    "homepage": "https://faculty.xidian.edu.cn/XSR/zh_CN/index.htm",
    "email": null,
@@ -1747,7 +1638,7 @@
     "器件可靠性"
    ],
    "homepage": "https://faculty.xidian.edu.cn/YLA/zh_CN/index.htm",
-   "email": "layang@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -1761,7 +1652,7 @@
     "微电子"
    ],
    "homepage": "https://faculty.xidian.edu.cn/YL12/zh_CN/index.htm",
-   "email": "yangling@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -1789,7 +1680,7 @@
     "微电子"
    ],
    "homepage": "https://faculty.xidian.edu.cn/YAODANYANG/zh_CN/index.htm",
-   "email": "dyyao@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -1801,13 +1692,10 @@
    "research_keywords": [
     "射频/微波集成电路设计",
     "射频/微波集成微系统设计",
-    "三维集成电路及系统可靠性优化",
-    "集成电路设计",
-    "三维集成",
-    "微系统"
+    "三维集成电路及系统可靠性优化"
    ],
    "homepage": "https://faculty.xidian.edu.cn/YXK1/zh_CN/index.htm",
-   "email": "yinxkcn@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -1821,11 +1709,10 @@
     "集成电路设计自动化EDA与可靠性设计",
     "研究模拟与数字集成电路设计的自动化方法",
     "原型验证",
-    "布局布线",
-    "集成电路设计"
+    "布局布线"
    ],
    "homepage": "https://faculty.xidian.edu.cn/YHL3/zh_CN/index.htm",
-   "email": "hlyou@mail.xidian.edu.cn",
+   "email": null,
    "notes": "实验室主任"
   },
   {
@@ -1838,12 +1725,10 @@
     "高功率密度电源模块研究",
     "GaN驱动电路设计技术",
     "宽禁带半导体GaN器件可靠性研究",
-    "宽禁带半导体器件检测技术",
-    "宽禁带半导体",
-    "半导体器件"
+    "宽禁带半导体器件检测技术"
    ],
    "homepage": "https://faculty.xidian.edu.cn/YULONGYANG/zh_CN/index.htm",
-   "email": "yulongyang@xidian.edu.cn",
+   "email": null,
    "notes": "华山菁英学者"
   },
   {
@@ -1856,12 +1741,10 @@
     "碳化硅基电力电子器件设计",
     "研制及应用",
     "碳化硅基紫外光电探测器",
-    "氧化镓材料及电子器件",
-    "碳化硅",
-    "氧化镓"
+    "氧化镓材料及电子器件"
    ],
    "homepage": "https://faculty.xidian.edu.cn/YL13/zh_CN/index.htm",
-   "email": "yuanlei@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -1876,7 +1759,7 @@
     "微电子学与固体电子学"
    ],
    "homepage": "https://faculty.xidian.edu.cn/YH8/zh_CN/index.htm",
-   "email": "haoyuan@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -1890,8 +1773,7 @@
     "瞬态电子器件及集成",
     "有机半导体电子器件",
     "新型薄膜太阳能电池",
-    "半导体器件",
-    "柔性电子"
+    "半导体器件"
    ],
    "homepage": "https://faculty.xidian.edu.cn/ZCF1/zh_CN/index.htm",
    "email": null,
@@ -1932,11 +1814,10 @@
    "research_keywords": [
     "宽禁带半导体材料和器件",
     "超宽禁带半导体",
-    "宽禁带半导体",
     "MOSFET"
    ],
    "homepage": "https://faculty.xidian.edu.cn/ZJF3/zh_CN/index.htm",
-   "email": "jfzhang@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -1946,11 +1827,10 @@
    "department": "微电子学院",
    "is_phd_advisor": true,
    "research_keywords": [
-    "微电子学与固体电子学",
-    "微电子"
+    "微电子学与固体电子学"
    ],
    "homepage": "https://faculty.xidian.edu.cn/ZJC/zh_CN/index.htm",
-   "email": "jchzhang@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -1961,12 +1841,10 @@
    "is_phd_advisor": true,
    "research_keywords": [
     "三维集成电路与微系统",
-    "半导体光电子器件与集成技术",
-    "三维集成",
-    "微系统"
+    "半导体光电子器件与集成技术"
    ],
    "homepage": "https://faculty.xidian.edu.cn/ZJQ3/zh_CN/index.htm",
-   "email": "zhangjq@mail.xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -1991,12 +1869,10 @@
    "research_keywords": [
     "硅基红外光电器件",
     "硅基纳米结构的光电特性",
-    "集成电路设计与制造",
-    "集成电路设计",
-    "光电器件"
+    "集成电路设计与制造"
    ],
    "homepage": "https://faculty.xidian.edu.cn/ZHANGNINGNING/zh_CN/index.htm",
-   "email": "zhangningning@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -2020,12 +1896,10 @@
    "is_phd_advisor": false,
    "research_keywords": [
     "GaN基功率器件及其可靠性",
-    "大输出电流密度的GaN基垂直功率器件",
-    "功率器件",
-    "可靠性"
+    "大输出电流密度的GaN基垂直功率器件"
    ],
    "homepage": "https://faculty.xidian.edu.cn/ZP8/zh_CN/index.htm",
-   "email": "pengzhang@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -2039,7 +1913,6 @@
     "模拟集成电路和版图设计",
     "数字集成电路和版图设计",
     "数模混合集成电路和版图设计",
-    "集成电路和版图设计",
     "PCB级电路和版图设计"
    ],
    "homepage": "https://faculty.xidian.edu.cn/zhangqidong/zh_CN/index.htm",
@@ -2054,12 +1927,10 @@
    "is_phd_advisor": true,
    "research_keywords": [
     "宽带隙半导体氮化镓材料与器件",
-    "氮化镓",
-    "微电子",
-    "半导体"
+    "微电子"
    ],
    "homepage": "https://faculty.xidian.edu.cn/ZHANGTAO2/zh_CN/index.htm",
-   "email": "zhangtao@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -2071,12 +1942,10 @@
    "research_keywords": [
     "新型宽禁带",
     "超宽禁带半导体材料",
-    "器件",
-    "超宽禁带半导体",
-    "宽禁带半导体"
+    "器件"
    ],
    "homepage": "https://faculty.xidian.edu.cn/ZYC5/zh_CN/index.htm",
-   "email": "ychzhang@xidian.edu.cn",
+   "email": null,
    "notes": "国家级青年人才"
   },
   {
@@ -2089,7 +1958,7 @@
     "微电子"
    ],
    "homepage": "https://faculty.xidian.edu.cn/ZHANGYANBO/zh_CN/index.htm",
-   "email": "zhangyanbo@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -2107,7 +1976,7 @@
     "电源管理集成电路"
    ],
    "homepage": "https://faculty.xidian.edu.cn/ZYM11/zh_CN/index.htm",
-   "email": "zhangyimeng@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -2135,15 +2004,12 @@
    "department": "微电子学院",
    "is_phd_advisor": true,
    "research_keywords": [
-    "研究方向",
     "功率器件可靠性与产业化研究",
     "氮化物垂直电力电子器件",
-    "氮化物横向HEMT电力电子器件",
-    "器件可靠性",
-    "功率器件"
+    "氮化物横向HEMT电力电子器件"
    ],
    "homepage": "https://faculty.xidian.edu.cn/CSWLS/zh_CN/index.htm",
-   "email": "slzhao@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -2153,12 +2019,10 @@
    "department": "微电子学院",
    "is_phd_advisor": false,
    "research_keywords": [
-    "半导体器件与集成电路可靠性",
-    "半导体器件",
-    "可靠性"
+    "半导体器件与集成电路可靠性"
    ],
    "homepage": "https://faculty.xidian.edu.cn/ZTL2/zh_CN/index.htm",
-   "email": "zhaotl@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -2176,7 +2040,7 @@
     "用于高速数据接口的均衡"
    ],
    "homepage": "https://faculty.xidian.edu.cn/ZHAOXIAOTENG/zh_CN/index.htm",
-   "email": "xtzhao@xidian.edu.cn",
+   "email": null,
    "notes": "国家级青年人才；华山学者特聘教授"
   },
   {
@@ -2189,7 +2053,7 @@
     "微电子"
    ],
    "homepage": "https://faculty.xidian.edu.cn/ZHAOXUE/zh_CN/index.htm",
-   "email": "zhaoxue@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -2202,9 +2066,7 @@
     "宽禁带半导体材料与器件",
     "半导体器件可靠性研究",
     "半导体光电器件与探测器",
-    "新型半导体存储器件",
-    "宽禁带半导体",
-    "半导体器件"
+    "新型半导体存储器件"
    ],
    "homepage": "https://faculty.xidian.edu.cn/ZXF5/zh_CN/index.htm",
    "email": null,
@@ -2233,11 +2095,10 @@
    "is_phd_advisor": false,
    "research_keywords": [
     "新型宽禁带半导体材料与器件设计研究",
-    "宽禁带半导体",
     "半导体器件"
    ],
    "homepage": "https://faculty.xidian.edu.cn/ZJD/zh_CN/index.htm",
-   "email": "jdzhu@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -2249,11 +2110,10 @@
    "research_keywords": [
     "电子信息微纳系统集成",
     "柔性光电器件",
-    "光伏材料物理与器件",
-    "光电器件"
+    "光伏材料物理与器件"
    ],
    "homepage": "https://faculty.xidian.edu.cn/ZWD4/zh_CN/index.htm",
-   "email": "wdzhu@xidian.edu.cn",
+   "email": null,
    "notes": "华山菁英学者"
   },
   {
@@ -2266,8 +2126,6 @@
     "宽禁带半导体微波功率器件及应用",
     "高能效固态毫米波器件及集成技术",
     "高性能电介质薄膜制备及其在半导体中的应用",
-    "宽禁带半导体",
-    "功率器件",
     "氮化镓"
    ],
    "homepage": "https://faculty.xidian.edu.cn/jjzhu/zh_CN/index.htm",
@@ -2283,12 +2141,10 @@
    "research_keywords": [
     "半导体功率器件的研发",
     "半导体功率控制器集成电路的研发",
-    "模拟及数模混合集成电路的研发",
-    "数模混合集成电路",
-    "功率器件"
+    "模拟及数模混合集成电路的研发"
    ],
    "homepage": "https://faculty.xidian.edu.cn/GXW2/zh_CN/index.htm",
-   "email": "xwgong@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -2301,12 +2157,10 @@
     "氮化镓微波毫米波器件",
     "氮化镓微波整流电路与芯片",
     "微波限幅电路与芯片",
-    "毫米波单片电路设计",
-    "微波毫米波",
-    "氮化镓"
+    "毫米波单片电路设计"
    ],
    "homepage": "https://faculty.xidian.edu.cn/DK/zh_CN/index.htm",
-   "email": "dangkui@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -2317,9 +2171,7 @@
    "is_phd_advisor": false,
    "research_keywords": [
     "宽禁带半导体材料与器件",
-    "新型低功耗器件与类脑芯片",
-    "宽禁带半导体",
-    "芯片"
+    "新型低功耗器件与类脑芯片"
    ],
    "homepage": "https://faculty.xidian.edu.cn/duanxiaoling/zh_CN/index.htm",
    "email": null,
@@ -2334,12 +2186,10 @@
    "research_keywords": [
     "混合信号集成电路设计",
     "高速数据转换器",
-    "超高速模拟前端集成电路",
-    "混合信号集成电路",
-    "集成电路设计"
+    "超高速模拟前端集成电路"
    ],
    "homepage": "https://faculty.xidian.edu.cn/LDQ/zh_CN/index.htm",
-   "email": "dqli@xidian.edu.cn",
+   "email": null,
    "notes": "国家级青年人才；华山学者特聘教授"
   },
   {
@@ -2357,7 +2207,7 @@
     "集成电路设计"
    ],
    "homepage": "https://faculty.xidian.edu.cn/LIZHAOXI/zh_CN/index.htm",
-   "email": "lizhaoxi@xidian.edu.cn",
+   "email": null,
    "notes": "华山菁英学者"
   },
   {
@@ -2371,11 +2221,10 @@
     "面向5G及未来6G射频器件",
     "氮化镓新型高线性",
     "高效率器件研究",
-    "氮化镓微波毫米波器件",
-    "宽禁带半导体"
+    "氮化镓微波毫米波器件"
    ],
    "homepage": "https://faculty.xidian.edu.cn/MMH/zh_CN/index.htm",
-   "email": "mhmi@xidian.edu.cn",
+   "email": null,
    "notes": "国家级青年人才"
   },
   {
@@ -2386,12 +2235,10 @@
    "is_phd_advisor": false,
    "research_keywords": [
     "超宽禁带半导体金刚石材料与器件",
-    "超宽禁带半导体",
-    "宽禁带半导体",
     "氮化镓"
    ],
    "homepage": "https://faculty.xidian.edu.cn/RENZEYANG/zh_CN/index.htm",
-   "email": "zeyangren@xidian.edu.cn",
+   "email": null,
    "notes": "国家级青年人才"
   },
   {
@@ -2402,12 +2249,10 @@
    "is_phd_advisor": false,
    "research_keywords": [
     "宽禁带半导体材料与器件",
-    "宽禁带半导体",
-    "传感器芯片",
-    "芯片"
+    "传感器芯片"
    ],
    "homepage": "https://faculty.xidian.edu.cn/SUKAI/zh_CN/index.htm",
-   "email": "ksu@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -2420,12 +2265,10 @@
     "新型硅基半导体多功能芯片",
     "感存算一体化芯片设计实现",
     "超高速硅基光电子芯片",
-    "硅基单光子红外探测芯片",
-    "存算一体",
-    "芯片设计"
+    "硅基单光子红外探测芯片"
    ],
    "homepage": "https://faculty.xidian.edu.cn/WLM2/zh_CN/index.htm",
-   "email": "lmwang@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -2438,7 +2281,7 @@
     "集成电路"
    ],
    "homepage": "https://faculty.xidian.edu.cn/ZHANGMENG/zh_CN/index.htm",
-   "email": "zhangmeng@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -2456,7 +2299,7 @@
     "太赫兹"
    ],
    "homepage": "https://faculty.xidian.edu.cn/ZT9/zh_CN/index.htm",
-   "email": "zhangt@xidian.edu.cn",
+   "email": null,
    "notes": "华山菁英学者"
   },
   {
@@ -2473,7 +2316,7 @@
     "芯片"
    ],
    "homepage": "https://faculty.xidian.edu.cn/ZLJ4/zh_CN/index.htm",
-   "email": "ljzhong@xidian.edu.cn",
+   "email": null,
    "notes": "国家级青年人才；华山学者特聘教授"
   },
   {
@@ -2484,12 +2327,10 @@
    "is_phd_advisor": false,
    "research_keywords": [
     "集成电路设计",
-    "模拟集成电路",
-    "集成电路",
-    "模拟"
+    "模拟集成电路"
    ],
    "homepage": "https://faculty.xidian.edu.cn/ZHOURONG/zh_CN/index.htm",
-   "email": "zhourong@xidian.edu.cn",
+   "email": null,
    "notes": "华山菁英学者"
   },
   {
@@ -2532,10 +2373,7 @@
    "research_keywords": [
     "计算电磁学与应用电磁学",
     "微波毫米波电路与应用系统",
-    "无线通信中的射频技术",
-    "微波毫米波",
-    "计算电磁学",
-    "毫米波"
+    "无线通信中的射频技术"
    ],
    "homepage": "https://faculty.xidian.edu.cn/AX/zh_CN/index.htm",
    "email": null,
@@ -2551,9 +2389,7 @@
     "天线理论与设计：方向回溯阵列天线",
     "反射及透射阵列天线",
     "优化技术：仿生优化算法",
-    "射频电路：混频器",
-    "射频电路",
-    "混频器"
+    "射频电路：混频器"
    ],
    "homepage": "https://faculty.xidian.edu.cn/CL5/zh_CN/index.htm",
    "email": null,
@@ -2570,8 +2406,7 @@
     "研究审查规则的设计和审查算法",
     "人工智能在信号完整性中的应用",
     "电子系统的EDA设计",
-    "高速电路信号完整性分析",
-    "信号完整性"
+    "高速电路信号完整性分析"
    ],
    "homepage": "https://faculty.xidian.edu.cn/CXQ1/zh_CN/index.htm",
    "email": null,
@@ -2585,7 +2420,6 @@
    "is_phd_advisor": false,
    "research_keywords": [
     "ASIC",
-    "电源管理类ASIC设计",
     "测试技术",
     "高压IC工艺",
     "芯片制造技术",
@@ -2605,9 +2439,7 @@
     "生物电磁学",
     "计算电磁学",
     "微波毫米电路与系统",
-    "微波器件与光电器件的建模与设计研究",
-    "光电器件",
-    "微波器件"
+    "微波器件与光电器件的建模与设计研究"
    ],
    "homepage": "https://faculty.xidian.edu.cn/HJQ/zh_CN/index.htm",
    "email": null,
@@ -2622,9 +2454,7 @@
    "research_keywords": [
     "电子系统集成与数模混合专用集成电路设计",
     "ASIC",
-    "图像采集专用集成电路设计",
-    "集成电路设计",
-    "专用集成电路"
+    "图像采集专用集成电路设计"
    ],
    "homepage": "https://faculty.xidian.edu.cn/LXQ2/zh_CN/index.htm",
    "email": null,
@@ -2645,7 +2475,7 @@
     "混合信号集成电路"
    ],
    "homepage": "https://faculty.xidian.edu.cn/LXR5/zh_CN/index.htm",
-   "email": "lixr@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -2657,9 +2487,7 @@
    "research_keywords": [
     "天线理论与工程",
     "天线测量",
-    "微波电路设计",
-    "微波电路",
-    "天线"
+    "微波电路设计"
    ],
    "homepage": "https://faculty.xidian.edu.cn/LX10/zh_CN/index.htm",
    "email": null,
@@ -2680,7 +2508,7 @@
     "基于RISC处理器的SOC系统设计"
    ],
    "homepage": "https://faculty.xidian.edu.cn/LSH/zh_CN/index.htm",
-   "email": "sanhu@mail.xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -2691,7 +2519,6 @@
    "is_phd_advisor": false,
    "research_keywords": [
     "元器件电性能建模",
-    "建模",
     "高速数字系统的建模",
     "分析与设计:涉及对高速数字系统中互连线",
     "过孔",
@@ -2709,7 +2536,6 @@
    "is_phd_advisor": true,
    "research_keywords": [
     "高速实时信号处理",
-    "实时信号处理",
     "FPGA"
    ],
    "homepage": "https://faculty.xidian.edu.cn/LYJ2/zh_CN/index.htm",
@@ -2724,11 +2550,10 @@
    "is_phd_advisor": false,
    "research_keywords": [
     "微处理器",
-    "EDA",
     "微系统"
    ],
    "homepage": "https://faculty.xidian.edu.cn/Renaifeng/zh_CN/index.htm",
-   "email": "afren@mail.xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -2741,11 +2566,10 @@
     "计算电磁学",
     "集成电路EDA",
     "电磁兼容",
-    "EDA",
     "天线"
    ],
    "homepage": "https://faculty.xidian.edu.cn/RY/zh_CN/index.htm",
-   "email": "yren@xidian.edu.cn",
+   "email": null,
    "notes": "IEEE Senior Member"
   },
   {
@@ -2759,8 +2583,7 @@
     "智能天线",
     "射频识别",
     "电磁兼容",
-    "计算电磁学",
-    "微波电路"
+    "计算电磁学"
    ],
    "homepage": "https://faculty.xidian.edu.cn/SXW1/zh_CN/index.htm",
    "email": null,
@@ -2775,13 +2598,12 @@
    "research_keywords": [
     "通信感知-声光电一体化安防系统",
     "雷达信号处理算法和系统实现",
-    "雷达信号处理",
     "实时信号处理",
     "医疗电子",
     "毫米波"
    ],
    "homepage": "https://faculty.xidian.edu.cn/ST1/zh_CN/index.htm",
-   "email": "sutao@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -2793,8 +2615,7 @@
    "research_keywords": [
     "电磁数值计算和优化设计算法",
     "微波器件",
-    "天线和系统设计",
-    "天线"
+    "天线和系统设计"
    ],
    "homepage": "https://faculty.xidian.edu.cn/ST2/zh_CN/index.htm",
    "email": null,
@@ -2827,9 +2648,7 @@
     "微波毫米波电路与系统设计",
     "智能天线与天线组阵技术研究",
     "实时信号处理",
-    "FPGA",
-    "微波毫米波",
-    "毫米波"
+    "FPGA"
    ],
    "homepage": "https://faculty.xidian.edu.cn/WXH6/zh_CN/index.htm",
    "email": null,
@@ -2845,12 +2664,10 @@
     "阵列天线优化与设计",
     "超宽带天线设计",
     "高性能微波毫米波器件",
-    "天线微波工程测量及算法",
-    "微波毫米波",
-    "毫米波"
+    "天线微波工程测量及算法"
    ],
    "homepage": "https://faculty.xidian.edu.cn/WZB1/zh_CN/index.htm",
-   "email": "zibinweng@mail.xidian.edu.cn",
+   "email": null,
    "notes": "IEEE Senior Member"
   },
   {
@@ -2862,10 +2679,7 @@
    "research_keywords": [
     "微波毫米波器件与系统",
     "低维集成电磁器件与天线",
-    "毫米波与太赫兹系统",
-    "微波毫米波",
-    "毫米波",
-    "太赫兹"
+    "毫米波与太赫兹系统"
    ],
    "homepage": "https://faculty.xidian.edu.cn/WB4/zh_CN/index.htm",
    "email": null,
@@ -2886,7 +2700,7 @@
     "共形天线技术：机载共形天线阵列分析及设计"
    ],
    "homepage": "https://faculty.xidian.edu.cn/XL3/zh_CN/index.htm",
-   "email": "lexu@mail.xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -2898,8 +2712,7 @@
    "research_keywords": [
     "通信天线",
     "天线跟踪技术",
-    "微波器件",
-    "天线"
+    "微波器件"
    ],
    "homepage": "https://faculty.xidian.edu.cn/YZH2/zh_CN/index.htm",
    "email": null,
@@ -2920,7 +2733,7 @@
     "手机终端软件开发"
    ],
    "homepage": "https://faculty.xidian.edu.cn/YG/zh_CN/index.htm",
-   "email": "gangyang@xidian.edu.cn",
+   "email": null,
    "notes": "实验室主任"
   },
   {
@@ -2933,9 +2746,7 @@
     "数模混合集成电路设计",
     "电源管理及充电管理芯片的研究与设计",
     "信号链芯片的研究与设计",
-    "数模混合集成电路",
-    "电子设计自动化",
-    "集成电路设计"
+    "电子设计自动化"
    ],
    "homepage": "https://faculty.xidian.edu.cn/YQ2/zh_CN/index.htm",
    "email": null,
@@ -2950,9 +2761,7 @@
    "research_keywords": [
     "微波射频识别技术",
     "天线工程与CAD",
-    "微波射频电路与系统",
-    "射频电路",
-    "天线"
+    "微波射频电路与系统"
    ],
    "homepage": "https://faculty.xidian.edu.cn/YYZ1/zh_CN/index.htm",
    "email": null,
@@ -2985,8 +2794,7 @@
    "research_keywords": [
     "雷达信号处理",
     "高速信号采集与回放",
-    "传感器信息处理",
-    "EDA"
+    "传感器信息处理"
    ],
    "homepage": "https://faculty.xidian.edu.cn/YXG/zh_CN/index.htm",
    "email": null,
@@ -3002,11 +2810,10 @@
     "射频系统多物理场仿真",
     "计算电磁学",
     "天线设计",
-    "电磁兼容",
-    "天线"
+    "电磁兼容"
    ],
    "homepage": "https://faculty.xidian.edu.cn/ZHH1/zh_CN/index.htm",
-   "email": "hhzhang@xidian.edu.cn",
+   "email": null,
    "notes": "IEEE Senior Member"
   },
   {
@@ -3018,8 +2825,7 @@
    "research_keywords": [
     "信号处理与检测",
     "电子系统设计自动化",
-    "雷达信号处理",
-    "EDA"
+    "雷达信号处理"
    ],
    "homepage": "https://faculty.xidian.edu.cn/ZLR/zh_CN/index.htm",
    "email": null,
@@ -3036,8 +2842,7 @@
     "高效率平面阵列天线",
     "反射面天线设计",
     "毫米波微波器件设计",
-    "微波毫米波",
-    "微波器件"
+    "微波毫米波"
    ],
    "homepage": "https://faculty.xidian.edu.cn/ZTL/zh_CN/index.htm",
    "email": null,
@@ -3053,8 +2858,7 @@
     "计算电磁学",
     "射频电路系统",
     "微波辐射与测量系统",
-    "神经元网络形态和功能实现机理",
-    "射频电路"
+    "神经元网络形态和功能实现机理"
    ],
    "homepage": "https://faculty.xidian.edu.cn/ZJX3/zh_CN/index.htm",
    "email": null,
@@ -3073,7 +2877,7 @@
     "FPGA"
    ],
    "homepage": "https://faculty.xidian.edu.cn/YGAO/zh_CN/index.htm",
-   "email": "ygaoxd@mail.xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -3091,7 +2895,7 @@
     "FPGA"
    ],
    "homepage": "https://faculty.xidian.edu.cn/GFK/zh_CN/index.htm",
-   "email": "fkgong@xidian.edu.cn",
+   "email": null,
    "notes": "团队负责人"
   },
   {
@@ -3104,12 +2908,10 @@
     "面向分布式AI应用的网络关键技术",
     "基于SDN的云计算数据中心光网络",
     "超大容量光交换芯片",
-    "基于新型互连技术的AI计算架构",
-    "互连技术",
-    "计算架构"
+    "基于新型互连技术的AI计算架构"
    ],
    "homepage": "https://faculty.xidian.edu.cn/hxgu/zh_CN/index.htm",
-   "email": "hxgu@xidian.edu.cn",
+   "email": null,
    "notes": "省级教学名师；团队负责人；二级教授"
   },
   {
@@ -3173,11 +2975,10 @@
     "图像/视频处理",
     "编码及传输",
     "芯片设计",
-    "高性能计算",
-    "芯片"
+    "高性能计算"
    ],
    "homepage": "https://faculty.xidian.edu.cn/LYS4/zh_CN/index.htm",
-   "email": "ysli@mail.xidian.edu.cn",
+   "email": null,
    "notes": "国家级人才"
   },
   {
@@ -3192,7 +2993,7 @@
     "FPGA"
    ],
    "homepage": "https://faculty.xidian.edu.cn/LL19/zh_CN/index.htm",
-   "email": "linlin@mail.xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -3210,7 +3011,7 @@
     "每一项研究内容都有对应的实际需求"
    ],
    "homepage": "https://faculty.xidian.edu.cn/MZ/zh_CN/index.htm",
-   "email": "zma@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -3220,7 +3021,6 @@
    "department": "通信工程学院（空天地一体化综合业务网全国重点实验室）",
    "is_phd_advisor": false,
    "research_keywords": [
-    "研究方向为高速可编程网络",
     "云原生智算平台相关的FPGA及芯片实现",
     "网络协议卸载加速",
     "网卡",
@@ -3241,11 +3041,10 @@
     "现代信道编码与调制",
     "信道编码与调制识别",
     "信道编码的FPGA设计",
-    "无线智能协作通信",
-    "FPGA"
+    "无线智能协作通信"
    ],
    "homepage": "https://faculty.xidian.edu.cn/SY4/zh_CN/index.htm",
-   "email": "ysun@mail.xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -3271,11 +3070,10 @@
    "is_phd_advisor": true,
    "research_keywords": [
     "光电器件",
-    "通信与信息系统",
-    "光电"
+    "通信与信息系统"
    ],
    "homepage": "https://faculty.xidian.edu.cn/WANGTAO/zh_CN/index.htm",
-   "email": "twang6@xidian.edu.cn",
+   "email": null,
    "notes": "华山菁英学者"
   },
   {
@@ -3320,8 +3118,7 @@
    "research_keywords": [
     "无人数据链",
     "异构网络融合",
-    "异构硬件加速等方面的研究",
-    "硬件加速"
+    "异构硬件加速等方面的研究"
    ],
    "homepage": "https://faculty.xidian.edu.cn/ZY25/zh_CN/index.htm",
    "email": null,
@@ -3337,7 +3134,7 @@
     "神经网络加速"
    ],
    "homepage": "https://faculty.xidian.edu.cn/CF6/zh_CN/index.htm",
-   "email": "chengfei@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -3352,7 +3149,7 @@
     "计算机系统结构"
    ],
    "homepage": "https://faculty.xidian.edu.cn/FSF/zh_CN/index.htm",
-   "email": "fushaofeng@sina.com",
+   "email": null,
    "notes": null
   },
   {
@@ -3363,7 +3160,6 @@
    "is_phd_advisor": false,
    "research_keywords": [
     "嵌入式系统及应用",
-    "嵌入式系统",
     "计算机应用技术"
    ],
    "homepage": "https://faculty.xidian.edu.cn/GX1/zh_CN/index.htm",
@@ -3380,7 +3176,6 @@
     "现代编码技术",
     "GPU并行计算在编码技术中的应用",
     "现代编码系统的FPGA实现",
-    "FPGA",
     "可靠性"
    ],
    "homepage": "https://faculty.xidian.edu.cn/JXP1/zh_CN/index.htm",
@@ -3420,7 +3215,7 @@
     "系统建模与仿真"
    ],
    "homepage": "https://faculty.xidian.edu.cn/LG4/zh_CN/index.htm",
-   "email": "gliu@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -3432,10 +3227,7 @@
    "research_keywords": [
     "高速图像视频编码算法及实现研究",
     "基于FPGA/嵌入式片上系统的应用研究",
-    "高性能微处理器体系结构研究",
-    "处理器体系结构",
-    "微处理器",
-    "FPGA"
+    "高性能微处理器体系结构研究"
    ],
    "homepage": "https://faculty.xidian.edu.cn/LK3/zh_CN/index.htm",
    "email": null,
@@ -3449,9 +3241,7 @@
    "is_phd_advisor": false,
    "research_keywords": [
     "嵌入式系统",
-    "芯片设计",
-    "EDA",
-    "芯片"
+    "芯片设计"
    ],
    "homepage": "https://faculty.xidian.edu.cn/MAZHI/zh_CN/index.htm",
    "email": null,
@@ -3486,7 +3276,7 @@
     "嵌入式系统"
    ],
    "homepage": "https://faculty.xidian.edu.cn/WB2/zh_CN/index.htm",
-   "email": "wanbo@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -3502,7 +3292,7 @@
     "嵌入式系统"
    ],
    "homepage": "https://faculty.xidian.edu.cn/WQ4/zh_CN/index.htm",
-   "email": "qwang@xidian.edu.cn",
+   "email": null,
    "notes": "重点实验室主任；团队负责人"
   },
   {
@@ -3519,7 +3309,7 @@
     "集成学习"
    ],
    "homepage": "https://faculty.xidian.edu.cn/YLY2/zh_CN/index.htm",
-   "email": "yangliying1208@163.com",
+   "email": null,
    "notes": null
   },
   {
@@ -3531,12 +3321,10 @@
    "research_keywords": [
     "嵌入式系统结构",
     "嵌入式安全",
-    "智能计算与控制",
-    "嵌入式系统",
-    "智能计算"
+    "智能计算与控制"
    ],
    "homepage": "https://faculty.xidian.edu.cn/YPF/zh_CN/index.htm",
-   "email": "pfyang@xidian.edu.cn",
+   "email": null,
    "notes": "国家杰青"
   },
   {
@@ -3581,13 +3369,12 @@
    "research_keywords": [
     "程序和芯片设计的形式化验证",
     "时序逻辑",
-    "时序逻辑程序设计",
     "定理证明",
     "模型检测",
     "运行时验证"
    ],
    "homepage": "https://faculty.xidian.edu.cn/ZN5/zh_CN/index.htm",
-   "email": "nanzhang@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -3618,12 +3405,10 @@
     "类脑计算与人工智能",
     "忆阻器与神经形态器件",
     "状态监测与故障诊断",
-    "智能生物电信号处理",
-    "神经形态器件",
-    "类脑计算"
+    "智能生物电信号处理"
    ],
    "homepage": "https://faculty.xidian.edu.cn/guozhang/zh_CN/index.htm",
-   "email": "guozhang@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -3636,9 +3421,7 @@
     "生成式大模型",
     "具身智能与无人系统",
     "遥感影像解译",
-    "人工智能芯片及系统",
-    "人工智能芯片",
-    "智能芯片"
+    "人工智能芯片及系统"
    ],
    "homepage": "https://faculty.xidian.edu.cn/HB1/zh_CN/index.htm",
    "email": null,
@@ -3656,7 +3439,7 @@
     "芯片"
    ],
    "homepage": "https://faculty.xidian.edu.cn/mjp/zh_CN/index.htm",
-   "email": "majupo@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -3674,7 +3457,7 @@
     "功率应用"
    ],
    "homepage": "https://faculty.xidian.edu.cn/FENGXIN/zh_CN/index.htm",
-   "email": "xinfeng@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -3686,13 +3469,10 @@
    "research_keywords": [
     "SiC功率器件设计",
     "工艺开发",
-    "器件流片制作及可靠性研究",
-    "功率器件",
-    "可靠性",
-    "流片"
+    "器件流片制作及可靠性研究"
    ],
    "homepage": "https://faculty.xidian.edu.cn/HYJ/zh_CN/index.htm",
-   "email": "hyj@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -3703,14 +3483,10 @@
    "is_phd_advisor": false,
    "research_keywords": [
     "宽禁带半导体器件可靠性",
-    "微纳器件加工",
-    "宽禁带半导体",
-    "半导体器件",
-    "器件可靠性",
-    "微纳器件"
+    "微纳器件加工"
    ],
    "homepage": "https://faculty.xidian.edu.cn/jiangteng/zh_CN/index.htm",
-   "email": "jiangteng@xidian.edu.cn",
+   "email": null,
    "notes": "华山菁英学者；团队负责人"
   },
   {
@@ -3723,9 +3499,7 @@
     "人工智能及其交叉方向",
     "量子传感与AI光电芯片",
     "量子信息与量子计算",
-    "量子计算",
-    "光计算",
-    "芯片"
+    "光计算"
    ],
    "homepage": "https://faculty.xidian.edu.cn/luyong/zh_CN/index.htm",
    "email": null,
@@ -3740,12 +3514,10 @@
    "research_keywords": [
     "宽禁带半导体",
     "功率器件",
-    "可靠性研究以及功率集成设计",
-    "功率集成",
-    "可靠性"
+    "可靠性研究以及功率集成设计"
    ],
    "homepage": "https://faculty.xidian.edu.cn/WUYINHE/zh_CN/index.htm",
-   "email": "wuyinhe@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -3758,12 +3530,10 @@
     "集成电路EDA仿真技术研究",
     "类脑计算算法与架构研究",
     "大规模集成电路设计优化技术研究",
-    "集成电路设计",
-    "数字集成电路",
-    "类脑计算"
+    "数字集成电路"
    ],
    "homepage": "https://faculty.xidian.edu.cn/XCHQ/zh_CN/index.htm",
-   "email": "cqxu@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -3774,12 +3544,11 @@
    "is_phd_advisor": true,
    "research_keywords": [
     "集成电路系统设计",
-    "集成电路",
     "微电子",
     "半导体"
    ],
    "homepage": "https://faculty.xidian.edu.cn/YUYUKUI/zh_CN/index.htm",
-   "email": "yuyukui@xidian.edu.cn",
+   "email": null,
    "notes": "国家级青年人才；华山学者特聘教授"
   },
   {
@@ -3790,14 +3559,10 @@
    "is_phd_advisor": false,
    "research_keywords": [
     "高速Serdes芯片设计",
-    "功率半导体器件",
-    "半导体器件",
-    "功率半导体",
-    "芯片设计",
-    "芯片"
+    "功率半导体器件"
    ],
    "homepage": "https://faculty.xidian.edu.cn/YUANSONG/zh_CN/index.htm",
-   "email": "syuan@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -3815,7 +3580,7 @@
     "大规模布局布线问题的编码方式研究"
    ],
    "homepage": "https://faculty.xidian.edu.cn/ZHAOHONG/zh_CN/index.htm",
-   "email": "hongzhao@xidian.edu.cn",
+   "email": null,
    "notes": "IEEE Fellow"
   },
   {
@@ -3833,7 +3598,7 @@
     "重建"
    ],
    "homepage": "https://faculty.xidian.edu.cn/BaoYaoQi/zh_CN/index.htm",
-   "email": "baoyaoqi@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -3851,7 +3616,7 @@
     "芯片设计"
    ],
    "homepage": "https://faculty.xidian.edu.cn/CHENLISHENG/zh_CN/index.htm",
-   "email": "chenlisheng01@xidian.edu.cn",
+   "email": null,
    "notes": "国家级青年人才；华山学者特聘教授"
   },
   {
@@ -3861,12 +3626,10 @@
    "department": "杭州研究院",
    "is_phd_advisor": true,
    "research_keywords": [
-    "高效模拟集成电路设计",
-    "集成电路设计",
-    "模拟集成电路"
+    "高效模拟集成电路设计"
    ],
    "homepage": "https://faculty.xidian.edu.cn/DRX/zh_CN/index.htm",
-   "email": "rxding@mail.xidian.edu.cn",
+   "email": null,
    "notes": "国家级青年人才"
   },
   {
@@ -3879,11 +3642,10 @@
     "神经网络处理器设计",
     "智能图像信号处理器",
     "先进图像处理算法",
-    "微型机器学习",
-    "神经网络处理器"
+    "微型机器学习"
    ],
    "homepage": "https://faculty.xidian.edu.cn/guanjuntao/zh_CN/index.htm",
-   "email": "guanjuntao@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -3895,12 +3657,11 @@
    "research_keywords": [
     "薄膜晶体管",
     "存算一体器件与电路",
-    "存算一体",
     "功率器件",
     "氧化镓"
    ],
    "homepage": "https://faculty.xidian.edu.cn/LIBOCHANG/zh_CN/index.htm",
-   "email": "libochang@xidian.edu.cn",
+   "email": null,
    "notes": "国家级青年人才"
   },
   {
@@ -3918,7 +3679,7 @@
     "电池管理芯片"
    ],
    "homepage": "https://faculty.xidian.edu.cn/LYY7/zh_CN/index.htm",
-   "email": "liyongyuan@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -3936,7 +3697,7 @@
     "卫星通信射频芯片设计"
    ],
    "homepage": "https://faculty.xidian.edu.cn/LB17/zh_CN/index.htm",
-   "email": "liubei@xidian.edu.cn",
+   "email": null,
    "notes": "国家级青年人才；实验室主任"
   },
   {
@@ -3952,7 +3713,7 @@
     "智能科学与技术"
    ],
    "homepage": "https://faculty.xidian.edu.cn/LIULIXIANG/zh_CN/index.htm",
-   "email": "liulixiang@xidian.edu.cn",
+   "email": null,
    "notes": "国家级青年人才"
   },
   {
@@ -3970,7 +3731,7 @@
     "嵌入式系统"
    ],
    "homepage": "https://faculty.xidian.edu.cn/LSB/zh_CN/index.htm",
-   "email": "sbliu@xidian.edu.cn",
+   "email": null,
    "notes": "国家级青年人才；团队负责人"
   },
   {
@@ -3988,7 +3749,7 @@
     "数字电源"
    ],
    "homepage": "https://faculty.xidian.edu.cn/icliu/zh_CN/index.htm",
-   "email": "icliu@xidian.edu.cn",
+   "email": null,
    "notes": "国家级青年人才"
   },
   {
@@ -4002,11 +3763,10 @@
     "数模混合信号处理芯片设计",
     "智能计算系统研究",
     "集成电路设计",
-    "数字集成电路",
-    "人工智能芯片"
+    "数字集成电路"
    ],
    "homepage": "https://faculty.xidian.edu.cn/MAOWEI/zh_CN/index.htm",
-   "email": "maowei@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -4022,7 +3782,7 @@
     "集成电路系统设计"
    ],
    "homepage": "https://faculty.xidian.edu.cn/QIANLIBO/zh_CN/index.htm",
-   "email": "qianlibo@xidian.edu.cn",
+   "email": null,
    "notes": "国家优青；华山学者特聘教授"
   },
   {
@@ -4034,13 +3794,10 @@
    "research_keywords": [
     "模拟和混合信号集成电路设计",
     "高性能（高速",
-    "高能效）模数转换器",
-    "混合信号集成电路",
-    "集成电路设计",
-    "模数转换器"
+    "高能效）模数转换器"
    ],
    "homepage": "https://faculty.xidian.edu.cn/SY12/zh_CN/index.htm",
-   "email": "shenyi@xidian.edu.cn",
+   "email": null,
    "notes": "国家级青年人才"
   },
   {
@@ -4051,14 +3808,12 @@
    "is_phd_advisor": false,
    "research_keywords": [
     "混合信号集成电路设计",
-    "混合信号集成电路",
-    "集成电路设计",
     "芯片设计",
     "锁相环",
     "流片"
    ],
    "homepage": "https://faculty.xidian.edu.cn/SUNDEPENG/zh_CN/index.htm",
-   "email": "sundepeng@xidian.edu.cn",
+   "email": null,
    "notes": "华山菁英学者"
   },
   {
@@ -4069,13 +3824,10 @@
    "is_phd_advisor": true,
    "research_keywords": [
     "高性能传感器接口芯片设计",
-    "高精度可重构模数转换器设计",
-    "模数转换器",
-    "芯片设计",
-    "芯片"
+    "高精度可重构模数转换器设计"
    ],
    "homepage": "https://faculty.xidian.edu.cn/tangzhong/zh_CN/index.htm",
-   "email": "tangzhong@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -4093,7 +3845,7 @@
     "流片"
    ],
    "homepage": "https://faculty.xidian.edu.cn/WANGXIUDENG/zh_CN/index.htm",
-   "email": "wangxiudeng@xidian.edu.cn",
+   "email": null,
    "notes": "华山菁英学者"
   },
   {
@@ -4105,13 +3857,12 @@
    "research_keywords": [
     "面向高能效",
     "超宽禁带半导体",
-    "宽禁带半导体",
     "功率器件",
     "芯片设计",
     "氧化镓"
    ],
    "homepage": "https://faculty.xidian.edu.cn/wangyibo/zh_CN/index.htm",
-   "email": "wangyibo2576@126.com",
+   "email": null,
    "notes": null
   },
   {
@@ -4123,13 +3874,10 @@
    "research_keywords": [
     "数字及数模混合集成电路设计",
     "硬件安全集成电路",
-    "抗机器学习攻击的物理不可克隆函数电路",
-    "数模混合集成电路",
-    "物理不可克隆函数",
-    "集成电路设计"
+    "抗机器学习攻击的物理不可克隆函数电路"
    ],
    "homepage": "https://faculty.xidian.edu.cn/XUCHONGYAO/zh_CN/index.htm",
-   "email": "xuchongyao@xidian.edu.cn",
+   "email": null,
    "notes": "国家级青年人才"
   },
   {
@@ -4141,12 +3889,10 @@
    "research_keywords": [
     "医疗电子和可穿戴电子",
     "新形态电子器件",
-    "柔性传感器",
-    "可穿戴电子",
-    "医疗电子"
+    "柔性传感器"
    ],
    "homepage": "https://faculty.xidian.edu.cn/ZHOUYUNLEI/zh_CN/index.htm",
-   "email": "zhouyunlei@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -4164,7 +3910,7 @@
     "模拟集成电路"
    ],
    "homepage": "https://faculty.xidian.edu.cn/gqzhu/zh_CN/index.htm",
-   "email": "zhuguangqian@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -4175,9 +3921,7 @@
    "is_phd_advisor": false,
    "research_keywords": [
     "纳米器件与结构中的输运机制及噪声",
-    "电子材料与元器件可靠性",
-    "器件可靠性",
-    "可靠性"
+    "电子材料与元器件可靠性"
    ],
    "homepage": "https://faculty.xidian.edu.cn/CH3/zh_CN/index.htm",
    "email": null,
@@ -4194,11 +3938,10 @@
     "化合物半导体集成电路芯片设计及封装",
     "功能纳米材料/半导体等无机非金属材料",
     "团队招收：硕士",
-    "博士",
-    "博士后"
+    "博士"
    ],
    "homepage": "https://faculty.xidian.edu.cn/DongGuangzhi/zh_CN/index.htm",
-   "email": "gzdong@xidian.edu.cn",
+   "email": null,
    "notes": "国家级青年人才；华山菁英学者"
   },
   {
@@ -4209,12 +3952,10 @@
    "is_phd_advisor": false,
    "research_keywords": [
     "电子材料与元器件可靠性无损表征技术",
-    "铁电存储器",
-    "器件可靠性",
-    "可靠性"
+    "铁电存储器"
    ],
    "homepage": "https://faculty.xidian.edu.cn/HL3/zh_CN/index.htm",
-   "email": "lhe@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -4245,11 +3986,10 @@
     "先进功能纳米材料",
     "先进柔性电子器件",
     "高性能传感器件",
-    "柔性电子",
     "芯片"
    ],
    "homepage": "https://faculty.xidian.edu.cn/LIQIKUN/zh_CN/index.htm",
-   "email": "liqikun@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -4261,12 +4001,11 @@
    "research_keywords": [
     "信息功能材料与器件",
     "铁电薄膜及铁电存储器",
-    "铁电存储器",
     "存算一体",
     "芯片"
    ],
    "homepage": "https://faculty.xidian.edu.cn/LIAOJIAJIA/zh_CN/index.htm",
-   "email": "liaojiajia@xidian.edu.cn",
+   "email": null,
    "notes": "团队负责人"
   },
   {
@@ -4279,12 +4018,11 @@
     "铁电材料及其存储芯片",
     "器件仿真与制造工艺",
     "铁电存储器",
-    "器件仿真",
     "芯片设计",
     "可靠性"
    ],
    "homepage": "https://faculty.xidian.edu.cn/LIAOMIN/zh_CN/index.htm",
-   "email": "mliao@xidian.edu.cn",
+   "email": null,
    "notes": "华山学者领军教授"
   },
   {
@@ -4294,11 +4032,10 @@
    "department": "先进材料与纳米科技学院",
    "is_phd_advisor": false,
    "research_keywords": [
-    "半导体器件",
-    "半导体"
+    "半导体器件"
    ],
    "homepage": "https://faculty.xidian.edu.cn/liuxuanling/zh_CN/index.htm",
-   "email": "xl-liu@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -4312,7 +4049,7 @@
     "模拟"
    ],
    "homepage": "https://faculty.xidian.edu.cn/PRC/zh_CN/index.htm",
-   "email": "pengrenci@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -4323,11 +4060,10 @@
    "is_phd_advisor": false,
    "research_keywords": [
     "新型信息存储器件制备与集成",
-    "宽禁带半导体材料与器件",
-    "宽禁带半导体"
+    "宽禁带半导体材料与器件"
    ],
    "homepage": "https://faculty.xidian.edu.cn/SUNJING/zh_CN/index.htm",
-   "email": "jingsun@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -4339,9 +4075,6 @@
    "research_keywords": [
     "半导体器件",
     "器件可靠性",
-    "可靠性",
-    "半导体器件灵敏",
-    "无损检测：半导体器件多应力损伤的灵敏监测",
     "无损检测"
    ],
    "homepage": "https://faculty.xidian.edu.cn/SP2/zh_CN/index.htm",
@@ -4358,11 +4091,10 @@
     "纳米材料合成与表征",
     "纳米器件设计与制作",
     "纳米传感器技术",
-    "宽禁带半导体核技术应用",
-    "宽禁带半导体"
+    "宽禁带半导体核技术应用"
    ],
    "homepage": "https://faculty.xidian.edu.cn/WWW2/zh_CN/index.htm",
-   "email": "wwwu@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -4373,11 +4105,10 @@
    "is_phd_advisor": false,
    "research_keywords": [
     "铁电存储器技术",
-    "铁电薄膜的微结构研究",
-    "铁电存储器"
+    "铁电薄膜的微结构研究"
    ],
    "homepage": "https://faculty.xidian.edu.cn/ZHANGSIRUI/zh_CN/index.htm",
-   "email": "srzhang@xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -4395,7 +4126,7 @@
     "氮化镓"
    ],
    "homepage": "https://faculty.xidian.edu.cn/ZXW4/zh_CN/index.htm",
-   "email": "xwzhou@mail.xidian.edu.cn",
+   "email": null,
    "notes": null
   },
   {
@@ -4408,11 +4139,10 @@
     "二维半导体材料的制备与应用",
     "电磁波吸收",
     "制备合成及应用研究",
-    "碳基半导体材料与器件",
-    "二维半导体"
+    "碳基半导体材料与器件"
    ],
    "homepage": "https://faculty.xidian.edu.cn/ZXJ4/zh_CN/index.htm",
-   "email": "xjzhou@xidian.edu.cn",
+   "email": null,
    "notes": null
   }
  ]

@@ -1,4 +1,4 @@
-// html_recommend.mjs — 生成中性的「集成电路设计与 AI 交叉方向 · 导师推荐」交互页面
+﻿// html_recommend.mjs — 生成中性的「集成电路设计与 AI 交叉方向 · 导师推荐」交互页面
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -10,12 +10,12 @@ const SHORT = { 清华大学深圳国际研究生院: '清华深研院', 清华�
 
 const data = rows.map((d) => ({
   n: d.name, s: SHORT[d.school] || d.school, sc: d.school, t: d.title || '', dp: d.department || '',
-  g: d.group, gn: d.group_names, tier: d.tier,
-  c: d.composite, S: d.S, A: d.A, ic: d.n_ic_papers, r3: d.recent3, cite: d.citations, cpp: d.cite_per_paper,
+  g: d.group, gn: d.group_names, tier: d.tier, scope: d.scope,
+  c: d.composite, S: d.S, A: d.A, ic: d.n_ic_papers, rel: d.n_related_papers || d.n_ic_papers, r3: d.recent3, cite: d.citations, cpp: d.cite_per_paper,
   stu: d.n_students_est || 0, phd: d.is_phd_advisor === true,
   eth: d.student_led_ratio === null || d.student_led_ratio === undefined ? null : +(d.student_led_ratio * 100).toFixed(0),
   conf: d.confidence, rr: d.recall_risk === 'yes', retr: d.integrity_retracted || 0,
-  email: d.email || '', hp: d.homepage || '', lab: d.lab_names[0] || '',
+  hp: d.homepage || '', lab: d.lab_names[0] || '',
   rsc: d.recruit_signal_count || 0,
   kw: (d.research_keywords || []).join('、'),
   sig: (d.recruit_signals || []).slice(0, 2).map((x) => x.snippet.slice(0, 240)),
@@ -68,14 +68,15 @@ const html = `<!DOCTYPE html>
 </style></head><body>
 <header>
   <h1>集成电路设计与 AI 交叉方向 · 导师推荐与招生信息</h1>
-  <p>覆盖 11 校 2114 位导师的全库排名 → 本页聚焦 <b>${rows.length} 位</b>方向高度相关者（数字/AI 芯片 · 体系结构 · 存算一体 · 模拟/电源 · EDA · 类脑 · 芯片安全 · 算力相关器件）<br/>
-  课题组主页实抓 ${rows.filter((d) => d.recruit_signal_count > 0).length} 位有明确招生表述 ｜ 数据源：各校官网师资页 + Crossref（2008–2026）+ 撤稿/更正核查 ｜ 截至 2026-09-24<br/>
+  <p>覆盖 11 校 2114 位导师的全库排名 → 本页收录 <b>${rows.length} 位</b>：集成电路设计与 AI 交叉方向 ${rows.filter((d) => d.scope === 'focus').length} 位 ＋ 其他 IC 方向但<b>主页明确在招</b> ${rows.filter((d) => d.scope === 'recruiting').length} 位<br/>
+  课题组主页实抓 ${rows.filter((d) => d.page_status.startsWith('ok')).length} 位，其中 <b>${rows.filter((d) => d.recruit_signal_count > 0).length} 位有明确招生表述</b> ｜ 数据源：各校官网师资页 + Crossref（2008–2026）+ 撤稿/更正核查 ｜ 截至 2026-09-24<br/>
   <span style="display:inline-block;margin-top:8px;background:rgba(255,255,255,.16);padding:6px 10px;border-radius:7px;font-size:12px;line-height:1.6">
   ⚠️ 本页为<b>公开文献计量证据的分层</b>，<b>不构成学术评价、人事评价或报考建议</b>。T3/T4 通常源于姓名重名、英文署名不一致或中文文献未覆盖等数据原因，<b>不代表导师水平或指导质量</b>。使用前请阅读 <a href="../DISCLAIMER.md" style="color:#ffe9a8">免责声明</a> 与 <a href="../docs/使用指南.md" style="color:#ffe9a8">使用指南</a>。</span></p>
 </header>
 <div class="wrap">
   <div class="bar">
     <input type="text" id="q" placeholder="搜索姓名 / 关键词 / 院系 / 课题组"/>
+    <label class="f">范围 <select id="sp"><option value="">全部</option><option value="focus">集成电路设计与 AI 交叉</option><option value="recruiting">其他方向但在招</option></select></label>
     <label class="f">方向 <select id="g"><option value="">全部方向</option>${allGroups.map((g) => `<option>${g}</option>`).join('')}</select></label>
     <label class="f">学校 <select id="sc"><option value="">全部</option></select></label>
     <label class="f">梯队 <select id="ti"><option value="">全部</option><option>T0</option><option>T1</option><option>T2</option><option>T3</option><option>T4</option></select></label>
@@ -90,7 +91,7 @@ const html = `<!DOCTYPE html>
     <th data-k="n">姓名</th><th data-k="s">学校</th><th data-k="t">职称</th><th data-k="g">方向</th>
     <th data-k="c" class="num">综合分</th><th data-k="tier">梯队</th><th data-k="S" class="num">S/A</th>
     <th data-k="ic" class="num">论文</th><th data-k="r3" class="num">近3年</th><th data-k="cite" class="num">引用</th>
-    <th data-k="stu" class="num">学生(估)</th><th data-k="rsc">招生</th><th>邮箱</th>
+    <th data-k="stu" class="num">学生(估)</th><th data-k="rsc">招生</th><th>联系</th>
   </tr></thead><tbody></tbody></table>
 </div>
 <div class="foot">
@@ -110,8 +111,9 @@ const $ = (id) => document.getElementById(id);
 [...new Set(DATA.map(d=>d.s))].sort().forEach(s=>$('sc').insertAdjacentHTML('beforeend', \`<option>\${s}</option>\`));
 let sortK='c', asc=false, openRow=null;
 function filtered(){
-  const q=$('q').value.trim().toLowerCase(), g=$('g').value, sc=$('sc').value, ti=$('ti').value, rc=$('rc').value;
+  const q=$('q').value.trim().toLowerCase(), g=$('g').value, sc=$('sc').value, ti=$('ti').value, rc=$('rc').value, sp=$('sp').value;
   return DATA.filter(d=>{
+    if(sp && d.scope!==sp) return false;
     if(g && !d.gn.includes(g)) return false;
     if(sc && d.s!==sc) return false;
     if(ti && d.tier!==ti) return false;
@@ -129,8 +131,8 @@ function detail(d){
     <h4>\${d.n} · \${d.sc} · \${d.t} <span class="pill \${d.tier}">\${d.tier}</span></h4>
     <div class="grid">
       <div>院系：\${d.dp||'—'}</div><div>课题组：\${d.lab||'（未识别）'}</div>
-      <div>邮箱：<b>\${d.email||'主页未公开'}</b></div><div>主页：\${d.hp?\`<a href="\${d.hp}" target="_blank">打开</a>\`:'—'}</div>
-      <div>学术：综合分 \${d.c} ｜ S\${d.S} / A\${d.A} ｜ 论文 \${d.ic} 篇 ｜ 近3年 \${d.r3} ｜ 引用 \${d.cite}</div>
+      <div>联系方式：<b>见官方主页</b>（本项目不收录邮箱，请从院系官网或课题组主页获取）</div><div>主页：\${d.hp?\`<a href="\${d.hp}" target="_blank">打开</a>\`:'—'}</div>
+      <div>学术：综合分 \${d.c} ｜ S\${d.S} / A\${d.A} ｜ IC 相关论文 \${d.ic} 篇（全部相关 \${d.rel} 篇）｜ 近3年 \${d.r3} ｜ 引用 \${d.cite}</div>
       <div>组内学生(估)：\${d.stu} 人 ｜ 博导：\${d.phd?'是':'未标注'} ｜ 学生一作占比：\${d.eth===null?'—':d.eth+'%'}</div>
       <div>方向标签：\${d.gn.map(t=>\`<span class="tag">\${t}</span>\`).join('')}</div>
       <div>置信度：\${d.conf==='high'?'高':d.conf==='medium'?'中':'低'}\${d.rr?' ⚠️疑似漏检':''}\${d.retr?' ❗撤稿 '+d.retr:''}</div>
@@ -195,7 +197,7 @@ function render(){
       <td class="num"><b>\${d.c}</b></td><td><span class="pill \${d.tier}">\${d.tier}</span></td>
       <td class="num">\${d.S}/\${d.A}</td><td class="num">\${d.ic}</td><td class="num">\${d.r3}</td>
       <td class="num">\${d.cite}</td><td class="num">\${d.stu}</td><td>\${rc}</td>
-      <td><small>\${d.email||'—'}</small></td></tr>\`;
+      <td><small>\${d.hp?'<a href="'+d.hp+'" target="_blank">主页</a>':'—'}</small></td></tr>\`;
     if(openRow===d.n) html += \`<tr class="detail"><td colspan="13">\${detail(d)}</td></tr>\`;
   });
   tb.innerHTML = html;
@@ -204,7 +206,7 @@ function render(){
   }));
   $('stat').textContent = \`显示 \${list.length} / 本页 \${DATA.length} 人 ｜ 其中主页明确在招 \${list.filter(x=>x.rsc>0).length} 人\`;
 }
-['q','g','sc','ti','rc'].forEach(id=>$(id).addEventListener('input',render));
+['q','g','sc','ti','rc','sp'].forEach(id=>$(id).addEventListener('input',render));
 $('sortSel').addEventListener('input',()=>{sortK=$('sortSel').value; asc=(sortK==='cpp'); render();});
 document.querySelectorAll('th[data-k]').forEach(th=>th.addEventListener('click',()=>{
   const k=th.dataset.k; if(sortK===k) asc=!asc; else {sortK=k; asc=(k==='n'||k==='s');} render();
@@ -215,4 +217,4 @@ render();
 fs.mkdirSync(path.dirname(OUT), { recursive: true });
 fs.writeFileSync(OUT, html, 'utf8');
 console.log('saved', OUT, (html.length / 1024).toFixed(0) + 'KB', 'rows', data.length);
-console.log('有招生原话:', data.filter((d) => d.rsc > 0).length, '| 有邮箱:', data.filter((d) => d.email).length);
+console.log('有招生原话:', data.filter((d) => d.rsc > 0).length, '| 有主页链接:', data.filter((d) => d.hp).length);

@@ -16,18 +16,32 @@
 
 | 类别 | 具体来源 | 说明 |
 |:--|:--|:--|
-| 师资名录 | 各高校院系官网公开的教师名录页与个人主页 | 姓名、职称、院系、研究方向、办公邮箱、荣誉头衔 |
+| 师资名录 | 各高校院系官网公开的教师名录页与个人主页 | 姓名、职称、院系、研究方向、荣誉头衔 |
 | 课题组信息 | 教师个人/课题组主页公开内容 | 课题组名称、招生表述原文 |
 | 文献元数据 | Crossref REST API（`api.crossref.org`） | 论文标题、作者、期刊/会议名、年份、被引数、DOI |
 | 撤稿/更正信息 | Crossref 作品关系字段（`updated-by` / `update-to`） | 撤稿、更正、关注声明 |
 
 **未使用**的数据：任何需要登录、付费、或绕过访问控制才能获取的内容（包括但不限于知网/万方全文、IEEE/Elsevier 订阅内容、需登录的基金与专利数据库、社交平台私密内容）。
 
+### 📧 关于邮箱：本项目**不收录、不存储、不展示任何邮箱地址**
+
+我们**主动放弃了**"抓取教师办公邮箱"这一环节。原因：
+
+1. **降低个人信息风险**——邮箱是名单中敏感度最高的字段，聚合后可能被用于批量联系；
+2. **尊重联系渠道**——希望联系导师的同学，请通过**官方主页上的公开联系方式**自行获取；
+3. **避免被滥用**——本项目不希望成为群发工具的素材来源。
+
+具体落实为：
+
+- 所有对外数据文件（JSON / CSV）**均不含邮箱字段**；
+- 两个交互页面（HTML）与报告**不展示邮箱**，"联系方式"一栏统一指向**官方主页链接**；
+- 名录采集阶段即不写入邮箱（见 `tools/clean_rosters.mjs`），产出前还有一道自动剥离（见 `tools/strip_emails.mjs`）。
+
 ### 采集方式合规性
 
 - 仅访问**公开可访问**的页面，不绕过任何登录、验证码或反爬机制；
 - 采集时设置请求间隔与并发上限（默认并发 8–12、间隔 100–500 ms），避免对目标站点造成负担；
-- 不采集、不存储任何非公开的个人信息（身份证号、手机号、住址、家庭成员等一概不涉及）；
+- 不采集、不存储任何非公开的个人信息（邮箱、手机号、身份证号、住址、家庭成员等一概不涉及）；
 - 引用文献元数据来自 Crossref 开放接口，使用其推荐的联系方式标识（`mailto`）以进入友好访问池。
 
 ---
@@ -40,9 +54,9 @@
 |:--|:--|:--|:--|
 | 姓名、任职单位、院系、职称 | 标识学者身份，便于学生定位 | 单位官网公开页面 | 必要 |
 | 研究方向关键词 | 帮助学生按方向检索 | 单位官网公开页面 | 必要 |
-| 办公邮箱 | 便于学生进行**学术事务联系** | 单位官网公开页面 | 必要 |
 | 个人/课题组主页链接 | 引导访问权威原始来源 | 单位官网公开页面 | 必要 |
 | 公开文献记录（作者位次、期刊、被引） | 呈现公开学术产出 | Crossref | 必要 |
+| ~~办公邮箱~~ | — | — | **不采集** |
 
 **处理原则**：
 
@@ -83,7 +97,7 @@
 使用本项目即表示你同意：
 
 1. **非商业使用**：不得用于任何商业产品或付费服务；
-2. **禁止批量联系**：不得将本项目包含的联系方式用于批量群发邮件、短信或其他形式的骚扰；
+2. **禁止批量联系**：本项目**本身不提供任何邮箱**；若你通过主页自行获取联系方式，不得用于批量群发邮件、短信或其他形式的骚扰；
 3. **禁止断章取义**：不得脱离本文档的说明，单独引用排名结果作为对某位教师的评价依据；
 4. **禁止用于自动化决策**：不得将本项目数据接入任何对个人作出评价、筛选、排序决定的自动化系统；
 5. **注明来源**：公开引用本项目数据或图表时，请注明来源与本免责声明。
@@ -96,10 +110,11 @@
 
 | 你的诉求 | 处理方式 | 承诺时限 |
 |:--|:--|:--|
-| 信息有误（职称/方向/单位等） | 提 Issue 或邮件说明，附官方页面链接，我们更正 | 7 个工作日内 |
-| 希望删除邮箱 | 提 Issue 或邮件说明，我们从数据与页面中移除该字段 | 7 个工作日内 |
-| 希望整体移除个人条目 | 提 Issue 或邮件说明，我们移除对应记录 | 7 个工作日内 |
+| 信息有误（职称/方向/单位等） | 提 Issue 说明，附官方页面链接，我们更正 | 7 个工作日内 |
+| 希望整体移除个人条目 | 提 Issue 说明，我们移除对应记录 | 7 个工作日内 |
 | 希望更正文献归属（同名混淆） | 提 Issue 说明，我们修正或标注 | 7 个工作日内 |
+| 希望移除主页链接 | 提 Issue 说明，我们移除该字段 | 7 个工作日内 |
+| **邮箱相关诉求** | 本项目**不收录邮箱**，无需申请删除；若你发现任何残留，请告知，我们将立即清理 | 立即 |
 
 **提交渠道**：见仓库 [Issues](../../issues) 页面的「信息更正 / 删除申请」模板。
 提交时**无需提供任何敏感证件**，只需说明具体条目与官方页面链接即可。
@@ -123,7 +138,8 @@ This project aggregates **publicly available** academic information (faculty dir
 - **It is NOT** an academic evaluation, personnel assessment, or application advice, and makes **no negative assertion about any individual**.
 - Tiers T0–T4 reflect **the amount of publicly verifiable bibliographic evidence only**. T3/T4 commonly result from name disambiguation failures, not from a supervisor's quality.
 - No login-protected, paywalled, or private data is collected. Crawling is rate-limited and respects public accessibility.
-- **Non-commercial use only.** Bulk unsolicited emailing is prohibited.
+- **No email addresses are collected, stored, or displayed.** Contact details are available only via the linked official pages.
+- **Non-commercial use only.** Bulk unsolicited contact is prohibited.
 - **Correction and removal requests** are honored within 7 business days via GitHub Issues — no sensitive documents required.
 
 ---

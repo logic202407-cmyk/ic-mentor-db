@@ -100,10 +100,11 @@ for (const p of people) {
     school: p.school, school_key: p.school_key,
     name_cn: p.name_cn, title: p.title, department: p.department,
     is_phd_advisor: p.is_phd_advisor, research_keywords: p.research_keywords || [],
-    homepage: p.homepage, email: p.email, notes: p.notes,
+    homepage: p.homepage, notes: p.notes,
     primary_direction: primaryDir,
     direction_scores: Object.fromEntries(dirsSorted.slice(0, 4)),
     n_ic_papers: ic.length, n_all_papers: (p.papers || []).length, n_off_field: offField.length,
+    n_related_papers: papersInField.length,
     S: byTier.S, A: byTier.A, B: byTier.B,
     recent3, recent5, citations, first_author: firstAuthor, last_author: lastAuthor,
     advisor_first_ratio: advisorFirstRatio, student_led_ratio: studentLedRatio, n_students_est: studentFirst.size,
@@ -115,7 +116,7 @@ for (const p of people) {
 rows.sort((a, b) => b.score - a.score);
 fs.writeFileSync(path.join(PROC, 'mentor_db.json'), JSON.stringify(rows, null, 1));
 
-const HDR = ['school', 'name_cn', 'title', 'department', 'primary_direction', 'score', 'S', 'A', 'B', 'n_ic_papers', 'recent3', 'citations', 'first_author', 'last_author', 'advisor_first_ratio', 'student_led_ratio', 'n_students_est', 'is_phd_advisor', 'confidence', 'top_venues', 'research_keywords', 'homepage', 'email', 'notes'];
+const HDR = ['school', 'name_cn', 'title', 'department', 'primary_direction', 'score', 'S', 'A', 'B', 'n_ic_papers', 'recent3', 'citations', 'first_author', 'last_author', 'advisor_first_ratio', 'student_led_ratio', 'n_students_est', 'is_phd_advisor', 'confidence', 'top_venues', 'research_keywords', 'homepage', 'notes'];
 const csv = [HDR.join(',')].concat(rows.map((r) => HDR.map((h) => {
   let v = r[h];
   if (Array.isArray(v)) v = v.join(' ');

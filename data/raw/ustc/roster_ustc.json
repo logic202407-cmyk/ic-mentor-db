@@ -1,1286 +1,1286 @@
 {
-  "school": "中国科学技术大学",
-  "school_key": "ustc",
-  "harvested_at": "2026-09-24",
-  "sources": [
-    "https://auto.ustc.edu.cn/25970/list.htm",
-    "https://cs.ustc.edu.cn/fjs_23239/list.htm",
-    "https://cs.ustc.edu.cn/fjs_23239/list2.htm",
-    "https://cs.ustc.edu.cn/js_23235/list.htm",
-    "https://cs.ustc.edu.cn/js_23235/list2.htm",
-    "https://eeis.ustc.edu.cn/2593/list.htm",
-    "https://eeis.ustc.edu.cn/2615/list.htm",
-    "https://eeis.ustc.edu.cn/2648/list.htm",
-    "https://leinao.ustc.edu.cn/25925/list.htm",
-    "https://sme.ustc.edu.cn/zdjswxnw_30996/list.htm"
-  ],
-  "coverage_note": "已覆盖：①微电子学院/集成电路学院（sme.ustc.edu.cn，国家示范性微电子学院）——院士、教授/研究员（校内指导教师）、副教授/副研究员（校内）、讲师、特任副研究员共 51 人全部抓取到人，逐个详情页读取研究方向/邮箱，剔除纯物理与纯软件后入库 46 人；②信息科学技术学院电子工程与信息科学系（eeis.ustc.edu.cn）——教授 59 人（8 页）、副教授 49 人（7 页）、讲师及其他 5 人全部抓取，逐人详情页读取，按微波毫米波/射频电路/光电子/生物医疗电子/EDA 口径筛出 21 人，其余为语音、多媒体、通信理论、网络与信息安全方向，按排除规则未入库；③计算机科学与技术学院（cs.ustc.edu.cn）——教授 32 人、特任教授 18 人、副教授 36 人、特任研究员/讲师全部抓取，按体系结构/AI 芯片加速器/EDA 口径入库 11 人；④类脑智能技术及应用国家工程实验室（leinao.ustc.edu.cn）——正高 42 人、副高 19 人名单全部抓取，逐人详情页核对，仅入库 3 名与芯片/存算器件直接相关者（林福江、沈胜春、殷月伟），其余为脑科学、CV、语音、机器人方向；⑤自动化系（auto.ustc.edu.cn）——正高/副高/其他共 5 页 116 名教师详情页全部抓取，该系以控制、机器人、计算机视觉为主，仅 3 人涉及 MEMS/微纳传感器/体系结构（陈池来、孔德义、崔超远）。未抓取及原因：①微电子学院\"指导教师（校外）\"与\"博士后\"栏目按范围要求排除；②dsxt.ustc.edu.cn（原电子科学与技术系站点）全程返回 403，无法访问，该系师资已在微电子学院/集成电路学院名录中体现；③先进技术研究院（iat.ustc.edu.cn）师资页仅提供\"招生导师列表\"入口、无研究方向明细，且以工程应用/企业导师为主，未纳入；④\"国家示范性微电子学院\"与微电子学院为同一实体（sme.ustc.edu.cn 页脚署名），未重复采集；⑤eeis\"讲师及其他\"栏目详情页为空页，仅能取到姓名与方向，具体职称未在页面明示；⑥自动化学科教师详情页多无\"研究方向\"字段，仅能依据有内容页面判定。所有条目均来自上述实际页面，未做推测性补全；无法确认的字段填 null。口径与不确定项：①is_phd_advisor —— 详情页明确写“博士生导师/博导”的记为 true；讲师记为 false；正高职称（教授/研究员/特任教授/特任研究员）所在栏目本身即为研究生指导教师名录，记为 true；副高职称页面未明示的记为 null（共 19 人）；②research_keywords 一般为 3-6 个，其中 5 人（白雪飞、余杰、黄自龙、张普华、张俊霞）官方页面只给出 1-2 个方向，未做推测性扩写；③name_en —— 仅 Nicola D’Ascenzo、Amgad Al-Saman 两人页面本身给出英文名，其余未从页面获得可靠拼音，一律填 null；④共 9 人 email 为 null（官方页面邮箱栏为空或详情页为空页）。",
-  "faculty": [
-    {
-      "name_cn": "刘明",
-      "name_en": null,
-      "title": "研究员",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "半导体存储器",
-        "阻变存储器",
-        "集成电路微纳加工"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2022/0526/c31012a556063/page.htm",
-      "email": "liuming@ime.ac.cn",
-      "notes": "中国科学院院士，集成电路学院（国家示范性微电子学院）院长；何梁何利基金科学与技术进步奖"
-    },
-    {
-      "name_cn": "吴汉明",
-      "name_en": null,
-      "title": "教授",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "先进芯片大生产",
-        "SoC芯片设计",
-        "芯片可靠性"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2022/0526/c31012a556089/page.htm",
-      "email": "hanmingwu@zju.edu.cn",
-      "notes": "中国工程院院士"
-    },
-    {
-      "name_cn": "李树深",
-      "name_en": null,
-      "title": "研究员",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "低维半导体器件",
-        "光电子器件",
-        "固态量子信息"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2022/0526/c31012a556062/page.htm",
-      "email": "sslee@red.semi.ac.cn",
-      "notes": "中国科学院院士、发展中国家科学院院士；国家杰青；中国科学院半导体研究所原所长"
-    },
-    {
-      "name_cn": "龙世兵",
-      "name_en": null,
-      "title": "教授",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "阻变存储器",
-        "宽禁带功率器件",
-        "微纳加工",
-        "存储器电路设计"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2022/0601/c30996a556910/page.htm",
-      "email": "shibinglong@ustc.edu.cn",
-      "notes": "国家杰青、国家自然科学二等奖；IEEE高级会员；微电子学院常务副院长"
-    },
-    {
-      "name_cn": "程林",
-      "name_en": null,
-      "title": "教授",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "电源管理芯片",
-        "模拟集成电路",
-        "全集成电压调节器(IVR)",
-        "算力芯片供电架构"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2022/0601/c30996a556909/page.htm",
-      "email": "eecheng@ustc.edu.cn",
-      "notes": "集成电路学院副院长；IEEE New Frontier Award；ISSCC论文21篇、JSSC论文16篇；ISSCC电源管理分委会委员"
-    },
-    {
-      "name_cn": "杨树",
-      "name_en": null,
-      "title": "教授",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "宽禁带功率器件",
-        "垂直GaN器件",
-        "器件可靠性"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2023/0320/c30996a595778/page.htm",
-      "email": "eesyang@ustc.edu.cn",
-      "notes": "IEEE ISPSD Charitat青年研究者奖、达摩院青橙奖、MIT TR35亚太"
-    },
-    {
-      "name_cn": "左成杰",
-      "name_en": null,
-      "title": "教授",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "RF-MEMS",
-        "射频滤波器",
-        "射频集成电路(RFIC)",
-        "射频前端模组"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2022/0601/c30996a556916/page.htm",
-      "email": "czuo@ustc.edu.cn",
-      "notes": "国家级科技领军人才；IEEE UFFC-JS最佳学生论文奖"
-    },
-    {
-      "name_cn": "孙海定",
-      "name_en": null,
-      "title": "教授",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "光电子器件与集成芯片",
-        "半导体材料",
-        "光电化学器件"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2022/0601/c30996a556912/page.htm",
-      "email": "haiding@ustc.edu.cn",
-      "notes": "iGaN实验室负责人"
-    },
-    {
-      "name_cn": "赵雷",
-      "name_en": null,
-      "title": "教授",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "专用集成电路(ASIC)设计",
-        "高速高精度信号采集",
-        "超高精度时间测量"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2022/0601/c30996a556917/page.htm",
-      "email": "zlei@ustc.edu.cn",
-      "notes": "国家优青、安徽省杰青；中科大物理电子学专业主任；LHAASO/WCDA电子学总工程师"
-    },
-    {
-      "name_cn": "李海欧",
-      "name_en": null,
-      "title": "教授",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "硅基量子芯片",
-        "量子比特操控",
-        "低温量子输运",
-        "微波射频测控电路"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2022/0601/c30996a556920/page.htm",
-      "email": "haiouli@ustc.edu.cn",
-      "notes": "国家高层次人才特殊支持计划青年拔尖人才、安徽省杰青"
-    },
-    {
-      "name_cn": "胡芹",
-      "name_en": null,
-      "title": "特任研究员",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "光电子器件",
-        "集成芯片",
-        "新原理新材料半导体器件"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2022/0601/c30996a556935/page.htm",
-      "email": "qinhu20@ustc.edu.cn",
-      "notes": "特任研究员"
-    },
-    {
-      "name_cn": "吕頔",
-      "name_en": null,
-      "title": "特任教授",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "氧化物器件",
-        "生物电子器件",
-        "新原理半导体器件"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2022/0601/c30996a556940/page.htm",
-      "email": "dilu@ustc.edu.cn",
-      "notes": "特任教授"
-    },
-    {
-      "name_cn": "李鹏",
-      "name_en": null,
-      "title": "特任教授",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "存算一体材料与芯片",
-        "量子芯片",
-        "新型存储器件"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2022/0601/c30996a556941/page.htm",
-      "email": "lipeng18@ustc.edu.cn",
-      "notes": "国家海外高层次青年人才；曾任美国奥本大学助理教授"
-    },
-    {
-      "name_cn": "徐奇",
-      "name_en": null,
-      "title": "特任研究员",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "三维集成电路物理设计自动化",
-        "人工智能赋能EDA",
-        "芯片可靠性设计"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2022/0601/c30996a557049/page.htm",
-      "email": "xuqi@ustc.edu.cn",
-      "notes": "主持国自然3项、华为技术攻关项目3项；个人主页 xuqi-ustc.github.io"
-    },
-    {
-      "name_cn": "赵晓龙",
-      "name_en": null,
-      "title": "特任教授",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "宽禁带光电探测器",
-        "氧化镓器件",
-        "阻变器件"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2022/0601/c30996a557052/page.htm",
-      "email": "xlzhao77@ustc.edu.cn",
-      "notes": "国家级青年人才支持计划"
-    },
-    {
-      "name_cn": "徐光伟",
-      "name_en": null,
-      "title": "特任教授",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "宽禁带半导体功率器件",
-        "器件缺陷态测量",
-        "器件模型"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2022/0601/c30996a557053/page.htm",
-      "email": "xugw@ustc.edu.cn",
-      "notes": "特任教授"
-    },
-    {
-      "name_cn": "覃愿",
-      "name_en": null,
-      "title": "特任教授",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "超宽禁带半导体",
-        "功率与光电子器件",
-        "器件集成技术"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2022/0601/c30996a722624/page.htm",
-      "email": "qinyuan@ustc.edu.cn",
-      "notes": "国家海外高层次青年人才；中科院院长奖"
-    },
-    {
-      "name_cn": "陈松",
-      "name_en": null,
-      "title": "副教授",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "智能芯片设计",
-        "电子设计自动化(EDA)",
-        "存算融合架构",
-        "片上网络",
-        "FPGA"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2022/0601/c31000a556942/page.htm",
-      "email": "songch@ustc.edu.cn",
-      "notes": "博士生导师；主持国自然4项"
-    },
-    {
-      "name_cn": "李垚",
-      "name_en": null,
-      "title": "副教授",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "2D材料晶体管",
-        "异质结双极晶体管",
-        "半导体器件物理"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2022/0601/c31000a556943/page.htm",
-      "email": "yli@ustc.edu.cn",
-      "notes": "IEEE EDL审稿人"
-    },
-    {
-      "name_cn": "金西",
-      "name_en": null,
-      "title": "副教授",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "CPU/DSP/FPGA异构IP核",
-        "可重构计算",
-        "弱信号数据加速处理"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2022/0601/c31000a556948/page.htm",
-      "email": "jinxi@ustc.edu.cn",
-      "notes": "国家专用集成电路设计工程技术研究中心合肥中心副主任；物理系SoC设计室负责人；博士生导师"
-    },
-    {
-      "name_cn": "陈香",
-      "name_en": null,
-      "title": "副教授",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "生物医学信号检测与处理",
-        "神经康复工程",
-        "智能交互",
-        "移动健康"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2022/0601/c31000a556961/page.htm",
-      "email": "xch@ustc.edu.cn",
-      "notes": "IEEE会员；中国生物医学工程学会测量分会常务理事"
-    },
-    {
-      "name_cn": "张旭",
-      "name_en": null,
-      "title": "副教授",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "智能肌电控制",
-        "电生理多模态人机交互",
-        "神经康复器械"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2022/0601/c31000a556963/page.htm",
-      "email": "Xuzhang90@ustc.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "张四海",
-      "name_en": null,
-      "title": "副教授",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "集成电路工艺优化",
-        "无线智能",
-        "机器学习"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2022/0601/c31000a556964/page.htm",
-      "email": "shzhang@ustc.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "唐建",
-      "name_en": null,
-      "title": "副教授",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "DSP与嵌入式系统设计",
-        "语音图像视频编解码",
-        "芯片设计"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2022/0602/c31000a557060/page.htm",
-      "email": "jtang@ustc.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "白雪飞",
-      "name_en": null,
-      "title": "讲师",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "数字集成电路设计",
-        "电子系统设计"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2022/0602/c31013a557067/page.htm",
-      "email": "baixf@ustc.edu.cn",
-      "notes": "主持国自然青年基金；国家科技重大专项参研"
-    },
-    {
-      "name_cn": "朱俊株",
-      "name_en": null,
-      "title": "讲师",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "嵌入式系统",
-        "MEMS",
-        "图像处理"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2022/0602/c31013a557063/page.htm",
-      "email": "jzzhu@ustc.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "余杰",
-      "name_en": null,
-      "title": "特任副研究员",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "新型存储器可靠性",
-        "存算融合系统验证"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2022/0602/c31014a720049/page.htm",
-      "email": "yjtech@ustc.edu.cn",
-      "notes": "特任副研究员"
-    },
-    {
-      "name_cn": "侯小虎",
-      "name_en": null,
-      "title": "特任副研究员",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "超宽带隙半导体",
-        "氧化镓光电器件",
-        "X射线/中子探测器"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2022/0711/c31014a562346/page.htm",
-      "email": "hxh2022@ustc.edu.cn",
-      "notes": "特任副研究员"
-    },
-    {
-      "name_cn": "石媛媛",
-      "name_en": null,
-      "title": "特任教授",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "类脑神经形态器件",
-        "新材料逻辑与存储器件",
-        "集成电路工艺"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2022/0718/c30996a562795/page.htm",
-      "email": "yuanyuanshi@ustc.edu.cn",
-      "notes": "国家海外高层次青年人才；欧盟玛丽居里学者；Nature Electronics论文"
-    },
-    {
-      "name_cn": "胡诣哲",
-      "name_en": null,
-      "title": "特任教授",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "数字化射频集成电路(Digital-RF)",
-        "全数字锁相环",
-        "毫米波雷达芯片",
-        "相控阵芯片"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2022/1012/c30996a575413/page.htm",
-      "email": "huyz@ustc.edu.cn",
-      "notes": "ISSCC/JSSC论文7篇；师从IEEE Fellow R. B. Staszewski"
-    },
-    {
-      "name_cn": "陈涛",
-      "name_en": null,
-      "title": "特任教授",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "微纳电子器件",
-        "复杂网络",
-        "机器学习"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2023/0321/c30996a595833/page.htm",
-      "email": "tchen@ustc.edu.cn",
-      "notes": "特任教授"
-    },
-    {
-      "name_cn": "马平",
-      "name_en": null,
-      "title": "特任教授",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成信息光子器件",
-        "集成光子芯片",
-        "高速低功耗光子器件"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2023/0921/c30996a612926/page.htm",
-      "email": "pingma(at)ustc.edu.cn",
-      "notes": "博士生导师；IEEE高级会员、Optica高级会员；Nature Nanotechnology/Nature Materials论文"
-    },
-    {
-      "name_cn": "周选择",
-      "name_en": null,
-      "title": "特任副研究员",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "氧化镓材料与功率器件",
-        "超宽禁带半导体",
-        "功率器件微纳加工"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2023/0925/c31014a613312/page.htm",
-      "email": "zhouxz@ustc.edu.cn",
-      "notes": "墨子杰出青年；2024中国第三代半导体十大进展"
-    },
-    {
-      "name_cn": "郑柘炀",
-      "name_en": null,
-      "title": "特任教授",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "半导体器件物理",
-        "器件-电路交互",
-        "功率电子",
-        "射频器件"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2023/1007/c30996a614037/page.htm",
-      "email": "eezyzheng@ustc.edu.cn",
-      "notes": "IEDM/ISPSD/Nature Electronics论文"
-    },
-    {
-      "name_cn": "岳夫永",
-      "name_en": null,
-      "title": "特任教授",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "微纳光子学",
-        "超构表面器件",
-        "集成光子芯片"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2024/0116/c30996a628541/page.htm",
-      "email": "fuyongyue@ustc.edu.cn",
-      "notes": "特任教授"
-    },
-    {
-      "name_cn": "楼立恒",
-      "name_en": null,
-      "title": "特任副研究员",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "RF/mmW收发电路",
-        "全数字锁相环与频率综合",
-        "相控阵/MIMO IC"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2024/0225/c31014a630510/page.htm",
-      "email": "lhlou@ustc.edu.cn",
-      "notes": "特任副研究员"
-    },
-    {
-      "name_cn": "谭青海",
-      "name_en": null,
-      "title": "特任教授",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "二维半导体器件",
-        "铁电存储器件",
-        "量子信息器件"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2024/0307/c30996a631590/page.htm",
-      "email": "tanqh@ustc.edu.cn",
-      "notes": "特任教授"
-    },
-    {
-      "name_cn": "许中广",
-      "name_en": null,
-      "title": "特任教授",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "新型存储器芯片",
-        "存算一体架构",
-        "AI硬件加速器",
-        "智能存储体系架构"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2024/0314/c30996a632482/page.htm",
-      "email": "xuxu@ustc.edu.cn",
-      "notes": "国家海外高层次青年人才；曾任美光主任存储架构师、西部数据资深工程师"
-    },
-    {
-      "name_cn": "朱晨昕",
-      "name_en": null,
-      "title": "特任教授",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "新型信息器件",
-        "柔性传感器",
-        "感算融合系统"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2024/0318/c30996a632893/page.htm",
-      "email": "cxzhu6@ustc.edu.cn",
-      "notes": "特任教授"
-    },
-    {
-      "name_cn": "潘东方",
-      "name_en": null,
-      "title": "特任教授",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "功率集成电路",
-        "射频集成电路",
-        "全集成隔离电源芯片"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2025/0317/c30996a677023/page.htm",
-      "email": "pdf1992@ustc.edu.cn",
-      "notes": "第一作者ISSCC/JSSC论文7篇"
-    },
-    {
-      "name_cn": "李志鹏",
-      "name_en": null,
-      "title": "特任教授",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "射频电路与芯片",
-        "微波超表面",
-        "可穿戴电子"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2025/0516/c30996a684457/page.htm",
-      "email": "zhipeng.li@ustc.edu.cn",
-      "notes": "特任教授"
-    },
-    {
-      "name_cn": "计旭东",
-      "name_en": null,
-      "title": "特任教授",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "有机电化学晶体管",
-        "离子电子混合导体",
-        "生物电子器件"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2025/0924/c30996a702470/page.htm",
-      "email": "xudongji@ustc.edu.cn",
-      "notes": "特任教授"
-    },
-    {
-      "name_cn": "郭昊",
-      "name_en": null,
-      "title": "特任教授",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "射频集成电路",
-        "毫米波/亚太赫兹CMOS",
-        "雷达传感芯片"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2025/1219/c30996a716855/page.htm",
-      "email": null,
-      "notes": "ISSCC 2024/2025 Lewis Winner Award for Outstanding Paper；ISSCC论文5篇"
-    },
-    {
-      "name_cn": "王晶",
-      "name_en": null,
-      "title": "特任研究员",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "高性能模拟前端(AFE)",
-        "接口芯片",
-        "量子测控低温芯片"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2026/0327/c30996a724311/page.htm",
-      "email": "jw2019@ustc.edu.cn",
-      "notes": "主持国自然青年、国家重点研发子课题"
-    },
-    {
-      "name_cn": "闫冬",
-      "name_en": null,
-      "title": "特任教授",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成功率转换(DC/DC、AC/DC)",
-        "GaN/SiC芯片集成",
-        "电源管理与混合信号"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2026/0602/c30996a742376/page.htm",
-      "email": "dong_yan@ustc.edu.cn",
-      "notes": "特任教授"
-    },
-    {
-      "name_cn": "Amgad Al-Saman",
-      "name_en": "Amgad Al-Saman",
-      "title": "特任副研究员",
-      "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "半导体器件建模",
-        "GaN紧凑模型",
-        "TCAD协同仿真"
-      ],
-      "homepage": "https://sme.ustc.edu.cn/2026/0609/c31014a744025/page.htm",
-      "email": "alsaman@ustc.edu.cn",
-      "notes": "特任副研究员；IEEE TED/JEDS等期刊论文"
-    },
-    {
-      "name_cn": "陈畅",
-      "name_en": null,
-      "title": "教授",
-      "department": "信息科学技术学院 电子工程与信息科学系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "微波系统与技术",
-        "微波毫米波电路",
-        "射频系统"
-      ],
-      "homepage": "https://eeis.ustc.edu.cn/2017/0807/c2648a190436/page.htm",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "王卫东",
-      "name_en": null,
-      "title": "教授",
-      "department": "信息科学技术学院 电子工程与信息科学系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "微波毫米波器件与电路",
-        "无线通信",
-        "雷达系统"
-      ],
-      "homepage": "https://eeis.ustc.edu.cn/2010/0825/c2648a19474/page.htm",
-      "email": "wdwang@ustc.edu.cn",
-      "notes": "国家科技进步二等奖"
-    },
-    {
-      "name_cn": "陈卫东",
-      "name_en": null,
-      "title": "教授",
-      "department": "信息科学技术学院 电子工程与信息科学系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "微波毫米波系统",
-        "雷达信号与信息处理",
-        "微波成像"
-      ],
-      "homepage": "https://eeis.ustc.edu.cn/2015/0501/c2648a19636/page.htm",
-      "email": null,
-      "notes": "中科院科技进步一等奖；信息学院党委书记、副院长"
-    },
-    {
-      "name_cn": "刘发林",
-      "name_en": null,
-      "title": "教授",
-      "department": "信息科学技术学院 电子工程与信息科学系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "电磁场与微波技术",
-        "微波通信",
-        "毫米波技术"
-      ],
-      "homepage": "https://eeis.ustc.edu.cn/2010/0825/c2648a20133/page.htm",
-      "email": null,
-      "notes": "国家科技进步二等奖；教育部优秀青年教师资助计划"
-    },
-    {
-      "name_cn": "徐云生",
-      "name_en": null,
-      "title": "教授",
-      "department": "信息科学技术学院 电子工程与信息科学系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "电磁场理论与数值计算",
-        "天线设计",
-        "电磁散射与辐射"
-      ],
-      "homepage": "https://eeis.ustc.edu.cn/2010/0825/c2648a19483/page.htm",
-      "email": "xys@ustc.edu.cn",
-      "notes": "信息科学技术学院副院长"
-    },
-    {
-      "name_cn": "朱旗",
-      "name_en": null,
-      "title": "教授",
-      "department": "信息科学技术学院 电子工程与信息科学系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "微波集成电路",
-        "天线理论与设计",
-        "电磁场理论"
-      ],
-      "homepage": "https://eeis.ustc.edu.cn/2010/0707/c2648a19430/page.htm",
-      "email": "zhuqi@ustc.edu.cn",
-      "notes": "中国科学院特聘研究员；中国电子学会电波传播分会委员"
-    },
-    {
-      "name_cn": "王刚",
-      "name_en": null,
-      "title": "教授",
-      "department": "信息科学技术学院 电子工程与信息科学系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "微波毫米波技术",
-        "天线与电路设计",
-        "物联网射频传感"
-      ],
-      "homepage": "https://eeis.ustc.edu.cn/2014/0709/c2648a19466/page.htm",
-      "email": "gwang01@ustc.edu.cn",
-      "notes": "省部级科学技术奖3项"
-    },
-    {
-      "name_cn": "朱冰",
-      "name_en": null,
-      "title": "教授",
-      "department": "信息科学技术学院 电子工程与信息科学系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "光纤器件",
-        "光纤传感器",
-        "光电子"
-      ],
-      "homepage": "https://eeis.ustc.edu.cn/2010/0825/c2648a19498/page.htm",
-      "email": "zbing@ustc.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "赵刚",
-      "name_en": null,
-      "title": "教授",
-      "department": "信息科学技术学院 电子工程与信息科学系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "低温生物医学工程",
-        "微纳系统",
-        "柔性电子"
-      ],
-      "homepage": "https://eeis.ustc.edu.cn/2022/0330/c2648a550672/page.htm",
-      "email": null,
-      "notes": "安徽省生命资源保存与人工器官工程技术研究中心副主任"
-    },
-    {
-      "name_cn": "谢庆国",
-      "name_en": null,
-      "title": "教授",
-      "department": "信息科学技术学院 电子工程与信息科学系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "数字PET",
-        "高速脉冲数字化",
-        "辐射探测电子学"
-      ],
-      "homepage": "https://eeis.ustc.edu.cn/2021/0423/c2648a481660/page.htm",
-      "email": "qgxie@ustc.edu.cn",
-      "notes": "国家杰青；数字PET发明人；合肥综合性国家科学中心人工智能研究院首席研究员"
-    },
-    {
-      "name_cn": "肖鹏",
-      "name_en": null,
-      "title": "教授",
-      "department": "信息科学技术学院 电子工程与信息科学系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "信号探测与信号处理",
-        "智能成像仪器",
-        "PET系统设计"
-      ],
-      "homepage": "https://eeis.ustc.edu.cn/2021/0423/c2648a481661/page.htm",
-      "email": "xiaop@ustc.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "王杰",
-      "name_en": null,
-      "title": "教授",
-      "department": "信息科学技术学院 电子工程与信息科学系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "芯片电子设计自动化(EDA)",
-        "图机器学习",
-        "强化学习"
-      ],
-      "homepage": "https://eeis.ustc.edu.cn/2017/0807/c2648a190580/page.htm",
-      "email": null,
-      "notes": "国家优青、国家创新人才计划青年特聘专家；少年班学院副院长；IEEE Senior Member"
-    },
-    {
-      "name_cn": "Nicola D’Ascenzo",
-      "name_en": "Nicola D’Ascenzo",
-      "title": "教授",
-      "department": "信息科学技术学院 电子工程与信息科学系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "数字PET成像",
-        "探测器电子学",
-        "便携式PET系统"
-      ],
-      "homepage": "https://eeis.ustc.edu.cn/2023/0519/c2648a602711/page.htm",
-      "email": "nicoladascenzo@ustc.edu.cn",
-      "notes": "国家千人计划青年项目（2016）；Agri-PET发明人"
-    },
-    {
-      "name_cn": "梁晓雯",
-      "name_en": null,
-      "title": "副教授",
-      "department": "信息科学技术学院 电子工程与信息科学系",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "无线通信",
-        "电子设计自动化",
-        "超大规模集成电路应用"
-      ],
-      "homepage": "https://eeis.ustc.edu.cn/2010/0825/c2615a19503/page.htm",
-      "email": "lxw@ustc.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "陆广华",
-      "name_en": null,
-      "title": "副教授",
-      "department": "信息科学技术学院 电子工程与信息科学系",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "微波毫米波系统",
-        "微波毫米波技术",
-        "微波电路"
-      ],
-      "homepage": "https://eeis.ustc.edu.cn/2010/0825/c2615a19509/page.htm",
-      "email": "lugh@ustc.edu.cn",
-      "notes": "中科院科技进步一等奖"
-    },
-    {
-      "name_cn": "周凌云",
-      "name_en": null,
-      "title": "副教授",
-      "department": "信息科学技术学院 电子工程与信息科学系",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "微波毫米波器件",
-        "微波毫米波前端电路",
-        "微波成像"
-      ],
-      "homepage": "https://eeis.ustc.edu.cn/2010/0825/c2615a19434/page.htm",
-      "email": "lyzhou@ustc.edu.cn",
-      "notes": "中科院科技进步一等奖"
-    },
-    {
-      "name_cn": "杨利",
-      "name_en": null,
-      "title": "副教授",
-      "department": "信息科学技术学院 电子工程与信息科学系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "光波导理论",
-        "光纤器件与光纤传感",
-        "光子器件建模"
-      ],
-      "homepage": "https://eeis.ustc.edu.cn/2015/0721/c2615a19456/page.htm",
-      "email": "yanglil@ustc.edu.cn",
-      "notes": "中科院院长特别奖"
-    },
-    {
-      "name_cn": "郭圆月",
-      "name_en": null,
-      "title": "副教授",
-      "department": "信息科学技术学院 电子工程与信息科学系",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "微波毫米波技术",
-        "雷达信号与信息处理",
-        "天线理论"
-      ],
-      "homepage": "https://eeis.ustc.edu.cn/2017/0807/c2615a190449/page.htm",
-      "email": "yuanyueg@ustc.edu.cn",
-      "notes": "全国量子成像学术委员会委员"
-    },
-    {
-      "name_cn": "丁卫平",
-      "name_en": null,
-      "title": "副教授",
-      "department": "信息科学技术学院 电子工程与信息科学系",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "器官芯片",
-        "生物传感器",
-        "生物微机电系统(MEMS/NEMS)"
-      ],
-      "homepage": "https://eeis.ustc.edu.cn/2023/0911/c2615a611823/page.htm",
-      "email": null,
-      "notes": "个人主页 biomems.ustc.edu.cn；中科院院长奖"
-    },
-    {
-      "name_cn": "黄自龙",
-      "name_en": null,
-      "title": "讲师",
-      "department": "信息科学技术学院 电子工程与信息科学系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "电路与系统"
-      ],
-      "homepage": "https://eeis.ustc.edu.cn/2017/0807/c2593a190450/page.htm",
-      "email": null,
-      "notes": "信息学院官网\"讲师及其他\"名录（详情页为空，仅有方向）"
-    },
-    {
-      "name_cn": "张普华",
-      "name_en": null,
-      "title": "讲师",
-      "department": "信息科学技术学院 电子工程与信息科学系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "通信电路与系统"
-      ],
-      "homepage": "https://eeis.ustc.edu.cn/2017/0807/c2593a190457/page.htm",
-      "email": null,
-      "notes": "信息学院官网\"讲师及其他\"名录（详情页为空，仅有方向）"
-    },
-    {
-      "name_cn": "安虹",
-      "name_en": null,
-      "title": "教授",
-      "department": "计算机科学与技术学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "高性能计算芯片",
-        "系统结构",
-        "并行程序设计环境与工具"
-      ],
-      "homepage": "https://cs.ustc.edu.cn/js_23235/list.htm",
-      "email": "han@ustc.edu.cn",
-      "notes": "高性能计算/科学智能团队负责人"
-    },
-    {
-      "name_cn": "王超",
-      "name_en": null,
-      "title": "教授",
-      "department": "计算机科学与技术学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "智能计算机体系结构",
-        "深度学习处理器",
-        "FPGA应用加速"
-      ],
-      "homepage": "https://cs.ustc.edu.cn/js_23235/list2.htm",
-      "email": "cswang@ustc.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "周学海",
-      "name_en": null,
-      "title": "教授",
-      "department": "计算机科学与技术学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "异构多核体系结构",
-        "可重构系统",
-        "嵌入式系统设计"
-      ],
-      "homepage": "https://cs.ustc.edu.cn/js_23235/list2.htm",
-      "email": "xhzhou@ustc.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "李曦",
-      "name_en": null,
-      "title": "教授",
-      "department": "计算机科学与技术学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "嵌入式实时系统",
-        "低功耗系统",
-        "智能计算机系统"
-      ],
-      "homepage": "https://cs.ustc.edu.cn/js_23235/list.htm",
-      "email": "llxx@ustc.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "顾乃杰",
-      "name_en": null,
-      "title": "教授",
-      "department": "计算机科学与技术学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "并行体系结构",
-        "并行算法与并行处理",
-        "高性能计算"
-      ],
-      "homepage": "https://cs.ustc.edu.cn/js_23235/list.htm",
-      "email": "gunj@ustc.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "蔡晓辉",
-      "name_en": null,
-      "title": "教授",
-      "department": "计算机科学与技术学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "新型传感器",
-        "嵌入式系统",
-        "智能织物与可穿戴"
-      ],
-      "homepage": "https://cs.ustc.edu.cn/js_23235/list.htm",
-      "email": "caixiaohui@ustc.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "宫磊",
-      "name_en": null,
-      "title": "副教授",
-      "department": "计算机科学与技术学院",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "智能处理器架构",
-        "智能计算系统",
-        "FPGA硬件加速"
-      ],
-      "homepage": "https://cs.ustc.edu.cn/fjs_23239/list.htm",
-      "email": "leigong0203@ustc.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "郑启龙",
-      "name_en": null,
-      "title": "副教授",
-      "department": "计算机科学与技术学院",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "魂芯DSP C编译器",
-        "深度学习平台",
-        "处理器工具链"
-      ],
-      "homepage": "https://cs.ustc.edu.cn/fjs_23239/list2.htm",
-      "email": "QLZheng@ustc.edu.cn",
-      "notes": "国产魂芯DSP编译器研制"
-    },
-    {
-      "name_cn": "张俊霞",
-      "name_en": null,
-      "title": "副教授",
-      "department": "计算机科学与技术学院",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "计算机系统结构",
-        "嵌入式系统设计"
-      ],
-      "homepage": "https://cs.ustc.edu.cn/fjs_23239/list2.htm",
-      "email": "zjx@ustc.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "吴俊敏",
-      "name_en": null,
-      "title": "副教授",
-      "department": "计算机科学与技术学院",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "多核计算机系统与应用",
-        "虚拟化技术",
-        "系统仿真与性能优化"
-      ],
-      "homepage": "https://cs.ustc.edu.cn/fjs_23239/list2.htm",
-      "email": "jmwu@ustc.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "解围",
-      "name_en": null,
-      "title": "副教授",
-      "department": "计算机科学与技术学院",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "量子计算系统设计与优化",
-        "量子算法",
-        "人工智能赋能量子计算"
-      ],
-      "homepage": "https://cs.ustc.edu.cn/fjs_23239/list2.htm",
-      "email": "xxieww@ustc.edu.cn",
-      "notes": null
-    },
-    {
-      "name_cn": "林福江",
-      "name_en": null,
-      "title": "教授",
-      "department": "类脑智能技术及应用国家工程实验室 / 信息科学技术学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "射频器件建模",
-        "射频/微波芯片设计",
-        "毫米波数字相控阵",
-        "微纳电子系统集成"
-      ],
-      "homepage": "https://leinao.ustc.edu.cn/2021/0430/c25925a483553/page.htm",
-      "email": "linfj@ustc.edu.cn",
-      "notes": "类脑智能技术及应用国家工程实验室正高名录（2021）；曾主导中科大微电子学科与实验室建设；注：未出现在集成电路学院/信息学院现任师资名录中，可能已退休"
-    },
-    {
-      "name_cn": "沈胜春",
-      "name_en": null,
-      "title": "特任教授",
-      "department": "类脑智能技术及应用国家工程实验室 / 信息科学技术学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "铁性信息材料与器件",
-        "感存算一体",
-        "类脑人工智能"
-      ],
-      "homepage": "https://leinao.ustc.edu.cn/2026/0610/c25925a744108/page.htm",
-      "email": "scshen@ustc.edu.cn",
-      "notes": "博士生导师；Nat. Mater./PRX/PNAS等论文"
-    },
-    {
-      "name_cn": "殷月伟",
-      "name_en": null,
-      "title": "教授",
-      "department": "类脑智能技术及应用国家工程实验室 / 信息科学技术学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "铁电存储器件",
-        "类脑器件",
-        "信息存储",
-        "电介质电容器"
-      ],
-      "homepage": "https://leinao.ustc.edu.cn/2026/0610/c25925a744101/page.htm",
-      "email": "yyw@ustc.edu.cn",
-      "notes": "博士生导师；铁电隧道结非易失存储原型"
-    },
-    {
-      "name_cn": "陈池来",
-      "name_en": null,
-      "title": "研究员",
-      "department": "信息科学技术学院 自动化系（中国科学院合肥物质科学研究院）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "MEMS制造",
-        "晶圆级3D封装",
-        "MEMS智能传感器",
-        "MEMS质谱"
-      ],
-      "homepage": "https://auto.ustc.edu.cn/2021/0510/c25976a484842/page.htm",
-      "email": "chlchen@iim.ac.cn",
-      "notes": "中科院合肥智能机械研究所；博导"
-    },
-    {
-      "name_cn": "孔德义",
-      "name_en": null,
-      "title": "研究员",
-      "department": "信息科学技术学院 自动化系（中国科学院合肥物质科学研究院）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "微机械加工技术",
-        "微纳传感器",
-        "微系统"
-      ],
-      "homepage": "https://auto.ustc.edu.cn/2021/0510/c25976a484828/page.htm",
-      "email": "kongdy@iim.ac.cn",
-      "notes": "中科院合肥智能机械研究所；博导（东南大学微电子中心博士）"
-    },
-    {
-      "name_cn": "崔超远",
-      "name_en": null,
-      "title": "研究员",
-      "department": "信息科学技术学院 自动化系（中国科学院合肥物质科学研究院）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "计算机体系结构",
-        "安全处理器",
-        "硬件辅助虚拟化"
-      ],
-      "homepage": "https://auto.ustc.edu.cn/2021/0510/c25976a484816/page.htm",
-      "email": "cycui@iim.ac.cn",
-      "notes": "中科院合肥智能机械研究所先进感知与智能系统研究室副主任；博导"
-    }
-  ]
+ "school": "中国科学技术大学",
+ "school_key": "ustc",
+ "harvested_at": "2026-09-24",
+ "sources": [
+  "https://auto.ustc.edu.cn/25970/list.htm",
+  "https://cs.ustc.edu.cn/fjs_23239/list.htm",
+  "https://cs.ustc.edu.cn/fjs_23239/list2.htm",
+  "https://cs.ustc.edu.cn/js_23235/list.htm",
+  "https://cs.ustc.edu.cn/js_23235/list2.htm",
+  "https://eeis.ustc.edu.cn/2593/list.htm",
+  "https://eeis.ustc.edu.cn/2615/list.htm",
+  "https://eeis.ustc.edu.cn/2648/list.htm",
+  "https://leinao.ustc.edu.cn/25925/list.htm",
+  "https://sme.ustc.edu.cn/zdjswxnw_30996/list.htm"
+ ],
+ "coverage_note": "已覆盖：①微电子学院/集成电路学院（sme.ustc.edu.cn，国家示范性微电子学院）——院士、教授/研究员（校内指导教师）、副教授/副研究员（校内）、讲师、特任副研究员共 51 人全部抓取到人，逐个详情页读取研究方向/邮箱，剔除纯物理与纯软件后入库 46 人；②信息科学技术学院电子工程与信息科学系（eeis.ustc.edu.cn）——教授 59 人（8 页）、副教授 49 人（7 页）、讲师及其他 5 人全部抓取，逐人详情页读取，按微波毫米波/射频电路/光电子/生物医疗电子/EDA 口径筛出 21 人，其余为语音、多媒体、通信理论、网络与信息安全方向，按排除规则未入库；③计算机科学与技术学院（cs.ustc.edu.cn）——教授 32 人、特任教授 18 人、副教授 36 人、特任研究员/讲师全部抓取，按体系结构/AI 芯片加速器/EDA 口径入库 11 人；④类脑智能技术及应用国家工程实验室（leinao.ustc.edu.cn）——正高 42 人、副高 19 人名单全部抓取，逐人详情页核对，仅入库 3 名与芯片/存算器件直接相关者（林福江、沈胜春、殷月伟），其余为脑科学、CV、语音、机器人方向；⑤自动化系（auto.ustc.edu.cn）——正高/副高/其他共 5 页 116 名教师详情页全部抓取，该系以控制、机器人、计算机视觉为主，仅 3 人涉及 MEMS/微纳传感器/体系结构（陈池来、孔德义、崔超远）。未抓取及原因：①微电子学院\"指导教师（校外）\"与\"博士后\"栏目按范围要求排除；②dsxt.ustc.edu.cn（原电子科学与技术系站点）全程返回 403，无法访问，该系师资已在微电子学院/集成电路学院名录中体现；③先进技术研究院（iat.ustc.edu.cn）师资页仅提供\"招生导师列表\"入口、无研究方向明细，且以工程应用/企业导师为主，未纳入；④\"国家示范性微电子学院\"与微电子学院为同一实体（sme.ustc.edu.cn 页脚署名），未重复采集；⑤eeis\"讲师及其他\"栏目详情页为空页，仅能取到姓名与方向，具体职称未在页面明示；⑥自动化学科教师详情页多无\"研究方向\"字段，仅能依据有内容页面判定。所有条目均来自上述实际页面，未做推测性补全；无法确认的字段填 null。口径与不确定项：①is_phd_advisor —— 详情页明确写“博士生导师/博导”的记为 true；讲师记为 false；正高职称（教授/研究员/特任教授/特任研究员）所在栏目本身即为研究生指导教师名录，记为 true；副高职称页面未明示的记为 null（共 19 人）；②research_keywords 一般为 3-6 个，其中 5 人（白雪飞、余杰、黄自龙、张普华、张俊霞）官方页面只给出 1-2 个方向，未做推测性扩写；③name_en —— 仅 Nicola D’Ascenzo、Amgad Al-Saman 两人页面本身给出英文名，其余未从页面获得可靠拼音，一律填 null；④共 9 人 email 为 null（官方页面邮箱栏为空或详情页为空页）。",
+ "faculty": [
+  {
+   "name_cn": "刘明",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体存储器",
+    "阻变存储器",
+    "集成电路微纳加工"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2022/0526/c31012a556063/page.htm",
+   "email": null,
+   "notes": "中国科学院院士，集成电路学院（国家示范性微电子学院）院长；何梁何利基金科学与技术进步奖"
+  },
+  {
+   "name_cn": "吴汉明",
+   "name_en": null,
+   "title": "教授",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "先进芯片大生产",
+    "SoC芯片设计",
+    "芯片可靠性"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2022/0526/c31012a556089/page.htm",
+   "email": null,
+   "notes": "中国工程院院士"
+  },
+  {
+   "name_cn": "李树深",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "低维半导体器件",
+    "光电子器件",
+    "固态量子信息"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2022/0526/c31012a556062/page.htm",
+   "email": null,
+   "notes": "中国科学院院士、发展中国家科学院院士；国家杰青；中国科学院半导体研究所原所长"
+  },
+  {
+   "name_cn": "龙世兵",
+   "name_en": null,
+   "title": "教授",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "阻变存储器",
+    "宽禁带功率器件",
+    "微纳加工",
+    "存储器电路设计"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2022/0601/c30996a556910/page.htm",
+   "email": null,
+   "notes": "国家杰青、国家自然科学二等奖；IEEE高级会员；微电子学院常务副院长"
+  },
+  {
+   "name_cn": "程林",
+   "name_en": null,
+   "title": "教授",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "电源管理芯片",
+    "模拟集成电路",
+    "全集成电压调节器(IVR)",
+    "算力芯片供电架构"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2022/0601/c30996a556909/page.htm",
+   "email": null,
+   "notes": "集成电路学院副院长；IEEE New Frontier Award；ISSCC论文21篇、JSSC论文16篇；ISSCC电源管理分委会委员"
+  },
+  {
+   "name_cn": "杨树",
+   "name_en": null,
+   "title": "教授",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "宽禁带功率器件",
+    "垂直GaN器件",
+    "器件可靠性"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2023/0320/c30996a595778/page.htm",
+   "email": null,
+   "notes": "IEEE ISPSD Charitat青年研究者奖、达摩院青橙奖、MIT TR35亚太"
+  },
+  {
+   "name_cn": "左成杰",
+   "name_en": null,
+   "title": "教授",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "RF-MEMS",
+    "射频滤波器",
+    "射频集成电路(RFIC)",
+    "射频前端模组"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2022/0601/c30996a556916/page.htm",
+   "email": null,
+   "notes": "国家级科技领军人才；IEEE UFFC-JS最佳学生论文奖"
+  },
+  {
+   "name_cn": "孙海定",
+   "name_en": null,
+   "title": "教授",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光电子器件与集成芯片",
+    "半导体材料",
+    "光电化学器件"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2022/0601/c30996a556912/page.htm",
+   "email": null,
+   "notes": "iGaN实验室负责人"
+  },
+  {
+   "name_cn": "赵雷",
+   "name_en": null,
+   "title": "教授",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "专用集成电路(ASIC)设计",
+    "高速高精度信号采集",
+    "超高精度时间测量"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2022/0601/c30996a556917/page.htm",
+   "email": null,
+   "notes": "国家优青、安徽省杰青；中科大物理电子学专业主任；LHAASO/WCDA电子学总工程师"
+  },
+  {
+   "name_cn": "李海欧",
+   "name_en": null,
+   "title": "教授",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "硅基量子芯片",
+    "量子比特操控",
+    "低温量子输运",
+    "微波射频测控电路"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2022/0601/c30996a556920/page.htm",
+   "email": null,
+   "notes": "国家高层次人才特殊支持计划青年拔尖人才、安徽省杰青"
+  },
+  {
+   "name_cn": "胡芹",
+   "name_en": null,
+   "title": "特任研究员",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光电子器件",
+    "集成芯片",
+    "新原理新材料半导体器件"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2022/0601/c30996a556935/page.htm",
+   "email": null,
+   "notes": "特任研究员"
+  },
+  {
+   "name_cn": "吕頔",
+   "name_en": null,
+   "title": "特任教授",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "氧化物器件",
+    "生物电子器件",
+    "新原理半导体器件"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2022/0601/c30996a556940/page.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李鹏",
+   "name_en": null,
+   "title": "特任教授",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "存算一体材料与芯片",
+    "量子芯片",
+    "新型存储器件"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2022/0601/c30996a556941/page.htm",
+   "email": null,
+   "notes": "国家海外高层次青年人才；曾任美国奥本大学助理教授"
+  },
+  {
+   "name_cn": "徐奇",
+   "name_en": null,
+   "title": "特任研究员",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "三维集成电路物理设计自动化",
+    "人工智能赋能EDA",
+    "芯片可靠性设计"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2022/0601/c30996a557049/page.htm",
+   "email": null,
+   "notes": "主持国自然3项、华为技术攻关项目3项；个人主页 xuqi-ustc.github.io"
+  },
+  {
+   "name_cn": "赵晓龙",
+   "name_en": null,
+   "title": "特任教授",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "宽禁带光电探测器",
+    "氧化镓器件",
+    "阻变器件"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2022/0601/c30996a557052/page.htm",
+   "email": null,
+   "notes": "国家级青年人才支持计划"
+  },
+  {
+   "name_cn": "徐光伟",
+   "name_en": null,
+   "title": "特任教授",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "宽禁带半导体功率器件",
+    "器件缺陷态测量",
+    "器件模型"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2022/0601/c30996a557053/page.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "覃愿",
+   "name_en": null,
+   "title": "特任教授",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "超宽禁带半导体",
+    "功率与光电子器件",
+    "器件集成技术"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2022/0601/c30996a722624/page.htm",
+   "email": null,
+   "notes": "国家海外高层次青年人才；中科院院长奖"
+  },
+  {
+   "name_cn": "陈松",
+   "name_en": null,
+   "title": "副教授",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "智能芯片设计",
+    "电子设计自动化(EDA)",
+    "存算融合架构",
+    "片上网络",
+    "FPGA"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2022/0601/c31000a556942/page.htm",
+   "email": null,
+   "notes": "博士生导师；主持国自然4项"
+  },
+  {
+   "name_cn": "李垚",
+   "name_en": null,
+   "title": "副教授",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "2D材料晶体管",
+    "异质结双极晶体管",
+    "半导体器件物理"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2022/0601/c31000a556943/page.htm",
+   "email": null,
+   "notes": "IEEE EDL审稿人"
+  },
+  {
+   "name_cn": "金西",
+   "name_en": null,
+   "title": "副教授",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "CPU/DSP/FPGA异构IP核",
+    "可重构计算",
+    "弱信号数据加速处理"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2022/0601/c31000a556948/page.htm",
+   "email": null,
+   "notes": "国家专用集成电路设计工程技术研究中心合肥中心副主任；物理系SoC设计室负责人；博士生导师"
+  },
+  {
+   "name_cn": "陈香",
+   "name_en": null,
+   "title": "副教授",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "生物医学信号检测与处理",
+    "神经康复工程",
+    "智能交互",
+    "移动健康"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2022/0601/c31000a556961/page.htm",
+   "email": null,
+   "notes": "IEEE会员；中国生物医学工程学会测量分会常务理事"
+  },
+  {
+   "name_cn": "张旭",
+   "name_en": null,
+   "title": "副教授",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "智能肌电控制",
+    "电生理多模态人机交互",
+    "神经康复器械"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2022/0601/c31000a556963/page.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张四海",
+   "name_en": null,
+   "title": "副教授",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "集成电路工艺优化",
+    "无线智能",
+    "机器学习"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2022/0601/c31000a556964/page.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "唐建",
+   "name_en": null,
+   "title": "副教授",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "DSP与嵌入式系统设计",
+    "语音图像视频编解码",
+    "芯片设计"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2022/0602/c31000a557060/page.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "白雪飞",
+   "name_en": null,
+   "title": "讲师",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "数字集成电路设计",
+    "电子系统设计"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2022/0602/c31013a557067/page.htm",
+   "email": null,
+   "notes": "主持国自然青年基金；国家科技重大专项参研"
+  },
+  {
+   "name_cn": "朱俊株",
+   "name_en": null,
+   "title": "讲师",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "嵌入式系统",
+    "MEMS",
+    "图像处理"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2022/0602/c31013a557063/page.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "余杰",
+   "name_en": null,
+   "title": "特任副研究员",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "新型存储器可靠性",
+    "存算融合系统验证"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2022/0602/c31014a720049/page.htm",
+   "email": null,
+   "notes": "特任副研究员"
+  },
+  {
+   "name_cn": "侯小虎",
+   "name_en": null,
+   "title": "特任副研究员",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "超宽带隙半导体",
+    "氧化镓光电器件",
+    "X射线/中子探测器"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2022/0711/c31014a562346/page.htm",
+   "email": null,
+   "notes": "特任副研究员"
+  },
+  {
+   "name_cn": "石媛媛",
+   "name_en": null,
+   "title": "特任教授",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "类脑神经形态器件",
+    "新材料逻辑与存储器件",
+    "集成电路工艺"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2022/0718/c30996a562795/page.htm",
+   "email": null,
+   "notes": "国家海外高层次青年人才；欧盟玛丽居里学者；Nature Electronics论文"
+  },
+  {
+   "name_cn": "胡诣哲",
+   "name_en": null,
+   "title": "特任教授",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "数字化射频集成电路(Digital-RF)",
+    "全数字锁相环",
+    "毫米波雷达芯片",
+    "相控阵芯片"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2022/1012/c30996a575413/page.htm",
+   "email": null,
+   "notes": "ISSCC/JSSC论文7篇；师从IEEE Fellow R. B. Staszewski"
+  },
+  {
+   "name_cn": "陈涛",
+   "name_en": null,
+   "title": "特任教授",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微纳电子器件",
+    "复杂网络",
+    "机器学习"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2023/0321/c30996a595833/page.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "马平",
+   "name_en": null,
+   "title": "特任教授",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成信息光子器件",
+    "集成光子芯片",
+    "高速低功耗光子器件"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2023/0921/c30996a612926/page.htm",
+   "email": null,
+   "notes": "博士生导师；IEEE高级会员、Optica高级会员；Nature Nanotechnology/Nature Materials论文"
+  },
+  {
+   "name_cn": "周选择",
+   "name_en": null,
+   "title": "特任副研究员",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "氧化镓材料与功率器件",
+    "超宽禁带半导体",
+    "功率器件微纳加工"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2023/0925/c31014a613312/page.htm",
+   "email": null,
+   "notes": "墨子杰出青年；2024中国第三代半导体十大进展"
+  },
+  {
+   "name_cn": "郑柘炀",
+   "name_en": null,
+   "title": "特任教授",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件物理",
+    "器件-电路交互",
+    "功率电子",
+    "射频器件"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2023/1007/c30996a614037/page.htm",
+   "email": null,
+   "notes": "IEDM/ISPSD/Nature Electronics论文"
+  },
+  {
+   "name_cn": "岳夫永",
+   "name_en": null,
+   "title": "特任教授",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微纳光子学",
+    "超构表面器件",
+    "集成光子芯片"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2024/0116/c30996a628541/page.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "楼立恒",
+   "name_en": null,
+   "title": "特任副研究员",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "RF/mmW收发电路",
+    "全数字锁相环与频率综合",
+    "相控阵/MIMO IC"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2024/0225/c31014a630510/page.htm",
+   "email": null,
+   "notes": "特任副研究员"
+  },
+  {
+   "name_cn": "谭青海",
+   "name_en": null,
+   "title": "特任教授",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "二维半导体器件",
+    "铁电存储器件",
+    "量子信息器件"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2024/0307/c30996a631590/page.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "许中广",
+   "name_en": null,
+   "title": "特任教授",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "新型存储器芯片",
+    "存算一体架构",
+    "AI硬件加速器",
+    "智能存储体系架构"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2024/0314/c30996a632482/page.htm",
+   "email": null,
+   "notes": "国家海外高层次青年人才；曾任美光主任存储架构师、西部数据资深工程师"
+  },
+  {
+   "name_cn": "朱晨昕",
+   "name_en": null,
+   "title": "特任教授",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "新型信息器件",
+    "柔性传感器",
+    "感算融合系统"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2024/0318/c30996a632893/page.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "潘东方",
+   "name_en": null,
+   "title": "特任教授",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "功率集成电路",
+    "射频集成电路",
+    "全集成隔离电源芯片"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2025/0317/c30996a677023/page.htm",
+   "email": null,
+   "notes": "第一作者ISSCC/JSSC论文7篇"
+  },
+  {
+   "name_cn": "李志鹏",
+   "name_en": null,
+   "title": "特任教授",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频电路与芯片",
+    "微波超表面",
+    "可穿戴电子"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2025/0516/c30996a684457/page.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "计旭东",
+   "name_en": null,
+   "title": "特任教授",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "有机电化学晶体管",
+    "离子电子混合导体",
+    "生物电子器件"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2025/0924/c30996a702470/page.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "郭昊",
+   "name_en": null,
+   "title": "特任教授",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频集成电路",
+    "毫米波/亚太赫兹CMOS",
+    "雷达传感芯片"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2025/1219/c30996a716855/page.htm",
+   "email": null,
+   "notes": "ISSCC 2024/2025 Lewis Winner Award for Outstanding Paper；ISSCC论文5篇"
+  },
+  {
+   "name_cn": "王晶",
+   "name_en": null,
+   "title": "特任研究员",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "高性能模拟前端(AFE)",
+    "接口芯片",
+    "量子测控低温芯片"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2026/0327/c30996a724311/page.htm",
+   "email": null,
+   "notes": "主持国自然青年、国家重点研发子课题"
+  },
+  {
+   "name_cn": "闫冬",
+   "name_en": null,
+   "title": "特任教授",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成功率转换(DC/DC、AC/DC)",
+    "GaN/SiC芯片集成",
+    "电源管理与混合信号"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2026/0602/c30996a742376/page.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "Amgad Al-Saman",
+   "name_en": "Amgad Al-Saman",
+   "title": "特任副研究员",
+   "department": "微电子学院（集成电路学院/国家示范性微电子学院）",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "半导体器件建模",
+    "GaN紧凑模型",
+    "TCAD协同仿真"
+   ],
+   "homepage": "https://sme.ustc.edu.cn/2026/0609/c31014a744025/page.htm",
+   "email": null,
+   "notes": "特任副研究员；IEEE TED/JEDS等期刊论文"
+  },
+  {
+   "name_cn": "陈畅",
+   "name_en": null,
+   "title": "教授",
+   "department": "信息科学技术学院 电子工程与信息科学系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微波系统与技术",
+    "微波毫米波电路",
+    "射频系统"
+   ],
+   "homepage": "https://eeis.ustc.edu.cn/2017/0807/c2648a190436/page.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王卫东",
+   "name_en": null,
+   "title": "教授",
+   "department": "信息科学技术学院 电子工程与信息科学系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微波毫米波器件与电路",
+    "无线通信",
+    "雷达系统"
+   ],
+   "homepage": "https://eeis.ustc.edu.cn/2010/0825/c2648a19474/page.htm",
+   "email": null,
+   "notes": "国家科技进步二等奖"
+  },
+  {
+   "name_cn": "陈卫东",
+   "name_en": null,
+   "title": "教授",
+   "department": "信息科学技术学院 电子工程与信息科学系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微波毫米波系统",
+    "雷达信号与信息处理",
+    "微波成像"
+   ],
+   "homepage": "https://eeis.ustc.edu.cn/2015/0501/c2648a19636/page.htm",
+   "email": null,
+   "notes": "中科院科技进步一等奖；信息学院党委书记、副院长"
+  },
+  {
+   "name_cn": "刘发林",
+   "name_en": null,
+   "title": "教授",
+   "department": "信息科学技术学院 电子工程与信息科学系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "电磁场与微波技术",
+    "微波通信",
+    "毫米波技术"
+   ],
+   "homepage": "https://eeis.ustc.edu.cn/2010/0825/c2648a20133/page.htm",
+   "email": null,
+   "notes": "国家科技进步二等奖；教育部优秀青年教师资助计划"
+  },
+  {
+   "name_cn": "徐云生",
+   "name_en": null,
+   "title": "教授",
+   "department": "信息科学技术学院 电子工程与信息科学系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "电磁场理论与数值计算",
+    "天线设计",
+    "电磁散射与辐射"
+   ],
+   "homepage": "https://eeis.ustc.edu.cn/2010/0825/c2648a19483/page.htm",
+   "email": null,
+   "notes": "信息科学技术学院副院长"
+  },
+  {
+   "name_cn": "朱旗",
+   "name_en": null,
+   "title": "教授",
+   "department": "信息科学技术学院 电子工程与信息科学系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微波集成电路",
+    "天线理论与设计",
+    "电磁场理论"
+   ],
+   "homepage": "https://eeis.ustc.edu.cn/2010/0707/c2648a19430/page.htm",
+   "email": null,
+   "notes": "中国科学院特聘研究员；中国电子学会电波传播分会委员"
+  },
+  {
+   "name_cn": "王刚",
+   "name_en": null,
+   "title": "教授",
+   "department": "信息科学技术学院 电子工程与信息科学系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微波毫米波技术",
+    "天线与电路设计",
+    "物联网射频传感"
+   ],
+   "homepage": "https://eeis.ustc.edu.cn/2014/0709/c2648a19466/page.htm",
+   "email": null,
+   "notes": "省部级科学技术奖3项"
+  },
+  {
+   "name_cn": "朱冰",
+   "name_en": null,
+   "title": "教授",
+   "department": "信息科学技术学院 电子工程与信息科学系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光纤器件",
+    "光纤传感器",
+    "光电子"
+   ],
+   "homepage": "https://eeis.ustc.edu.cn/2010/0825/c2648a19498/page.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "赵刚",
+   "name_en": null,
+   "title": "教授",
+   "department": "信息科学技术学院 电子工程与信息科学系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "低温生物医学工程",
+    "微纳系统",
+    "柔性电子"
+   ],
+   "homepage": "https://eeis.ustc.edu.cn/2022/0330/c2648a550672/page.htm",
+   "email": null,
+   "notes": "安徽省生命资源保存与人工器官工程技术研究中心副主任"
+  },
+  {
+   "name_cn": "谢庆国",
+   "name_en": null,
+   "title": "教授",
+   "department": "信息科学技术学院 电子工程与信息科学系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "数字PET",
+    "高速脉冲数字化",
+    "辐射探测电子学"
+   ],
+   "homepage": "https://eeis.ustc.edu.cn/2021/0423/c2648a481660/page.htm",
+   "email": null,
+   "notes": "国家杰青；数字PET发明人；合肥综合性国家科学中心人工智能研究院首席研究员"
+  },
+  {
+   "name_cn": "肖鹏",
+   "name_en": null,
+   "title": "教授",
+   "department": "信息科学技术学院 电子工程与信息科学系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "信号探测与信号处理",
+    "智能成像仪器",
+    "PET系统设计"
+   ],
+   "homepage": "https://eeis.ustc.edu.cn/2021/0423/c2648a481661/page.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王杰",
+   "name_en": null,
+   "title": "教授",
+   "department": "信息科学技术学院 电子工程与信息科学系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "芯片电子设计自动化(EDA)",
+    "图机器学习",
+    "强化学习"
+   ],
+   "homepage": "https://eeis.ustc.edu.cn/2017/0807/c2648a190580/page.htm",
+   "email": null,
+   "notes": "国家优青、国家创新人才计划青年特聘专家；少年班学院副院长；IEEE Senior Member"
+  },
+  {
+   "name_cn": "Nicola D’Ascenzo",
+   "name_en": "Nicola D’Ascenzo",
+   "title": "教授",
+   "department": "信息科学技术学院 电子工程与信息科学系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "数字PET成像",
+    "探测器电子学",
+    "便携式PET系统"
+   ],
+   "homepage": "https://eeis.ustc.edu.cn/2023/0519/c2648a602711/page.htm",
+   "email": null,
+   "notes": "国家千人计划青年项目（2016）；Agri-PET发明人"
+  },
+  {
+   "name_cn": "梁晓雯",
+   "name_en": null,
+   "title": "副教授",
+   "department": "信息科学技术学院 电子工程与信息科学系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "无线通信",
+    "电子设计自动化",
+    "超大规模集成电路应用"
+   ],
+   "homepage": "https://eeis.ustc.edu.cn/2010/0825/c2615a19503/page.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "陆广华",
+   "name_en": null,
+   "title": "副教授",
+   "department": "信息科学技术学院 电子工程与信息科学系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "微波毫米波系统",
+    "微波毫米波技术",
+    "微波电路"
+   ],
+   "homepage": "https://eeis.ustc.edu.cn/2010/0825/c2615a19509/page.htm",
+   "email": null,
+   "notes": "中科院科技进步一等奖"
+  },
+  {
+   "name_cn": "周凌云",
+   "name_en": null,
+   "title": "副教授",
+   "department": "信息科学技术学院 电子工程与信息科学系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "微波毫米波器件",
+    "微波毫米波前端电路",
+    "微波成像"
+   ],
+   "homepage": "https://eeis.ustc.edu.cn/2010/0825/c2615a19434/page.htm",
+   "email": null,
+   "notes": "中科院科技进步一等奖"
+  },
+  {
+   "name_cn": "杨利",
+   "name_en": null,
+   "title": "副教授",
+   "department": "信息科学技术学院 电子工程与信息科学系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "光波导理论",
+    "光纤器件与光纤传感",
+    "光子器件建模"
+   ],
+   "homepage": "https://eeis.ustc.edu.cn/2015/0721/c2615a19456/page.htm",
+   "email": null,
+   "notes": "中科院院长特别奖"
+  },
+  {
+   "name_cn": "郭圆月",
+   "name_en": null,
+   "title": "副教授",
+   "department": "信息科学技术学院 电子工程与信息科学系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "微波毫米波技术",
+    "雷达信号与信息处理",
+    "天线理论"
+   ],
+   "homepage": "https://eeis.ustc.edu.cn/2017/0807/c2615a190449/page.htm",
+   "email": null,
+   "notes": "全国量子成像学术委员会委员"
+  },
+  {
+   "name_cn": "丁卫平",
+   "name_en": null,
+   "title": "副教授",
+   "department": "信息科学技术学院 电子工程与信息科学系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "器官芯片",
+    "生物传感器",
+    "生物微机电系统(MEMS/NEMS)"
+   ],
+   "homepage": "https://eeis.ustc.edu.cn/2023/0911/c2615a611823/page.htm",
+   "email": null,
+   "notes": "个人主页 biomems.ustc.edu.cn；中科院院长奖"
+  },
+  {
+   "name_cn": "黄自龙",
+   "name_en": null,
+   "title": "讲师",
+   "department": "信息科学技术学院 电子工程与信息科学系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "电路与系统"
+   ],
+   "homepage": "https://eeis.ustc.edu.cn/2017/0807/c2593a190450/page.htm",
+   "email": null,
+   "notes": "信息学院官网\"讲师及其他\"名录（详情页为空，仅有方向）"
+  },
+  {
+   "name_cn": "张普华",
+   "name_en": null,
+   "title": "讲师",
+   "department": "信息科学技术学院 电子工程与信息科学系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "通信电路与系统"
+   ],
+   "homepage": "https://eeis.ustc.edu.cn/2017/0807/c2593a190457/page.htm",
+   "email": null,
+   "notes": "信息学院官网\"讲师及其他\"名录（详情页为空，仅有方向）"
+  },
+  {
+   "name_cn": "安虹",
+   "name_en": null,
+   "title": "教授",
+   "department": "计算机科学与技术学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "高性能计算芯片",
+    "系统结构",
+    "并行程序设计环境与工具"
+   ],
+   "homepage": "https://cs.ustc.edu.cn/js_23235/list.htm",
+   "email": null,
+   "notes": "高性能计算/科学智能团队负责人"
+  },
+  {
+   "name_cn": "王超",
+   "name_en": null,
+   "title": "教授",
+   "department": "计算机科学与技术学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "智能计算机体系结构",
+    "深度学习处理器",
+    "FPGA应用加速"
+   ],
+   "homepage": "https://cs.ustc.edu.cn/js_23235/list2.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "周学海",
+   "name_en": null,
+   "title": "教授",
+   "department": "计算机科学与技术学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "异构多核体系结构",
+    "可重构系统",
+    "嵌入式系统设计"
+   ],
+   "homepage": "https://cs.ustc.edu.cn/js_23235/list2.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李曦",
+   "name_en": null,
+   "title": "教授",
+   "department": "计算机科学与技术学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "嵌入式实时系统",
+    "低功耗系统",
+    "智能计算机系统"
+   ],
+   "homepage": "https://cs.ustc.edu.cn/js_23235/list.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "顾乃杰",
+   "name_en": null,
+   "title": "教授",
+   "department": "计算机科学与技术学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "并行体系结构",
+    "并行算法与并行处理",
+    "高性能计算"
+   ],
+   "homepage": "https://cs.ustc.edu.cn/js_23235/list.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "蔡晓辉",
+   "name_en": null,
+   "title": "教授",
+   "department": "计算机科学与技术学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "新型传感器",
+    "嵌入式系统",
+    "智能织物与可穿戴"
+   ],
+   "homepage": "https://cs.ustc.edu.cn/js_23235/list.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "宫磊",
+   "name_en": null,
+   "title": "副教授",
+   "department": "计算机科学与技术学院",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "智能处理器架构",
+    "智能计算系统",
+    "FPGA硬件加速"
+   ],
+   "homepage": "https://cs.ustc.edu.cn/fjs_23239/list.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "郑启龙",
+   "name_en": null,
+   "title": "副教授",
+   "department": "计算机科学与技术学院",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "魂芯DSP C编译器",
+    "深度学习平台",
+    "处理器工具链"
+   ],
+   "homepage": "https://cs.ustc.edu.cn/fjs_23239/list2.htm",
+   "email": null,
+   "notes": "国产魂芯DSP编译器研制"
+  },
+  {
+   "name_cn": "张俊霞",
+   "name_en": null,
+   "title": "副教授",
+   "department": "计算机科学与技术学院",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "计算机系统结构",
+    "嵌入式系统设计"
+   ],
+   "homepage": "https://cs.ustc.edu.cn/fjs_23239/list2.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "吴俊敏",
+   "name_en": null,
+   "title": "副教授",
+   "department": "计算机科学与技术学院",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "多核计算机系统与应用",
+    "虚拟化技术",
+    "系统仿真与性能优化"
+   ],
+   "homepage": "https://cs.ustc.edu.cn/fjs_23239/list2.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "解围",
+   "name_en": null,
+   "title": "副教授",
+   "department": "计算机科学与技术学院",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "量子计算系统设计与优化",
+    "量子算法",
+    "人工智能赋能量子计算"
+   ],
+   "homepage": "https://cs.ustc.edu.cn/fjs_23239/list2.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "林福江",
+   "name_en": null,
+   "title": "教授",
+   "department": "类脑智能技术及应用国家工程实验室 / 信息科学技术学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频器件建模",
+    "射频/微波芯片设计",
+    "毫米波数字相控阵",
+    "微纳电子系统集成"
+   ],
+   "homepage": "https://leinao.ustc.edu.cn/2021/0430/c25925a483553/page.htm",
+   "email": null,
+   "notes": "类脑智能技术及应用国家工程实验室正高名录（2021）；曾主导中科大微电子学科与实验室建设；注：未出现在集成电路学院/信息学院现任师资名录中，可能已退休"
+  },
+  {
+   "name_cn": "沈胜春",
+   "name_en": null,
+   "title": "特任教授",
+   "department": "类脑智能技术及应用国家工程实验室 / 信息科学技术学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "铁性信息材料与器件",
+    "感存算一体",
+    "类脑人工智能"
+   ],
+   "homepage": "https://leinao.ustc.edu.cn/2026/0610/c25925a744108/page.htm",
+   "email": null,
+   "notes": "博士生导师；Nat. Mater./PRX/PNAS等论文"
+  },
+  {
+   "name_cn": "殷月伟",
+   "name_en": null,
+   "title": "教授",
+   "department": "类脑智能技术及应用国家工程实验室 / 信息科学技术学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "铁电存储器件",
+    "类脑器件",
+    "信息存储",
+    "电介质电容器"
+   ],
+   "homepage": "https://leinao.ustc.edu.cn/2026/0610/c25925a744101/page.htm",
+   "email": null,
+   "notes": "博士生导师；铁电隧道结非易失存储原型"
+  },
+  {
+   "name_cn": "陈池来",
+   "name_en": null,
+   "title": "研究员",
+   "department": "信息科学技术学院 自动化系（中国科学院合肥物质科学研究院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS制造",
+    "晶圆级3D封装",
+    "MEMS智能传感器",
+    "MEMS质谱"
+   ],
+   "homepage": "https://auto.ustc.edu.cn/2021/0510/c25976a484842/page.htm",
+   "email": null,
+   "notes": "中科院合肥智能机械研究所；博导"
+  },
+  {
+   "name_cn": "孔德义",
+   "name_en": null,
+   "title": "研究员",
+   "department": "信息科学技术学院 自动化系（中国科学院合肥物质科学研究院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微机械加工技术",
+    "微纳传感器",
+    "微系统"
+   ],
+   "homepage": "https://auto.ustc.edu.cn/2021/0510/c25976a484828/page.htm",
+   "email": null,
+   "notes": "中科院合肥智能机械研究所；博导（东南大学微电子中心博士）"
+  },
+  {
+   "name_cn": "崔超远",
+   "name_en": null,
+   "title": "研究员",
+   "department": "信息科学技术学院 自动化系（中国科学院合肥物质科学研究院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "计算机体系结构",
+    "安全处理器",
+    "硬件辅助虚拟化"
+   ],
+   "homepage": "https://auto.ustc.edu.cn/2021/0510/c25976a484816/page.htm",
+   "email": null,
+   "notes": "中科院合肥智能机械研究所先进感知与智能系统研究室副主任；博导"
+  }
+ ]
 }
