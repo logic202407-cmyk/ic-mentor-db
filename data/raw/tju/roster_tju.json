@@ -1,0 +1,1964 @@
+{
+ "school": "天津大学",
+ "school_key": "tju",
+ "harvested_at": "2026-09-26",
+ "sources": [
+  "https://sme.tju.edu.cn/",
+  "https://sme.tju.edu.cn/szdw/szgk.htm",
+  "https://sme.tju.edu.cn/szdw/jsdw_qz_.htm",
+  "https://sme.tju.edu.cn/szdw/jsdw_qz_/apy.htm",
+  "https://sme.tju.edu.cn/szdw/jsdw_qz_/apy/5.htm",
+  "https://sme.tju.edu.cn/szdw/jsdw_qz_/apy/4.htm",
+  "https://sme.tju.edu.cn/szdw/jsdw_qz_/apy/3.htm",
+  "https://sme.tju.edu.cn/szdw/jsdw_qz_/apy/2.htm",
+  "https://sme.tju.edu.cn/szdw/jsdw_qz_/apy/1.htm",
+  "https://sme.tju.edu.cn/szdw/jsdw_qz_/azc/js.htm",
+  "https://sme.tju.edu.cn/szdw/jsdw_qz_/azc/js/2.htm",
+  "https://sme.tju.edu.cn/szdw/jsdw_qz_/azc/js/1.htm",
+  "https://sme.tju.edu.cn/szdw/jsdw_qz_/azc/fjs.htm",
+  "https://sme.tju.edu.cn/szdw/jsdw_qz_/azc/fjs/2.htm",
+  "https://sme.tju.edu.cn/szdw/jsdw_qz_/azc/fjs/1.htm",
+  "https://sme.tju.edu.cn/szdw/jsdw_qz_/azc/js1.htm",
+  "https://sme.tju.edu.cn/szdw/jsdw_qz_/azc/zzyjry.htm",
+  "https://sme.tju.edu.cn/szdw/jsdw_qz_/azc/gcs.htm",
+  "https://sme.tju.edu.cn/szdw/jzsz.htm",
+  "https://sme.tju.edu.cn/szdw/jcxksz.htm",
+  "https://sme.tju.edu.cn/rcpy/yjs/daosfc.htm",
+  "https://sme.tju.edu.cn/xygk/dzld.htm",
+  "https://seea.tju.edu.cn/szdw.htm",
+  "https://seea.tju.edu.cn/szdw/dzxxgcx.htm",
+  "https://seea.tju.edu.cn/szdw/txgcx.htm",
+  "https://seea.tju.edu.cn/szdw/zdhx.htm",
+  "https://cic.tju.edu.cn/szdw/jcrc.htm",
+  "https://cic.tju.edu.cn/szdw/szmd/azcjs.htm",
+  "https://cic.tju.edu.cn/szdw/szmd/axyjs.htm",
+  "https://cic.tju.edu.cn/jyjx/yjsjy/yjsdsml.htm",
+  "https://cic.tju.edu.cn/kxyj/kytd.htm",
+  "https://jyxy.tju.edu.cn/cn/index.shtml",
+  "https://jyxy.tju.edu.cn/html/Teachers.html",
+  "http://faculty.tju.edu.cn/xulinyan/zh_CN/index.htm",
+  "http://cheng.tju.edu.cn/",
+  "http://cheng.tju.edu.cn/yjry.htm",
+  "https://qingdao.tju.edu.cn/",
+  "https://qingdao.tju.edu.cn/jiao_yu_pei_xun/yjsjy.htm"
+ ],
+ "coverage_note": "【已覆盖】\n1) 微电子学院（sme.tju.edu.cn）：师资概况、教师队伍（全职）\"按拼音\"6 页、\"按职称\"（教授 3 页／副教授 3 页／讲师／专职研究人员／工程师）分页、兼职师资、交叉学科师资、党政领导、导师风采页，全部抓取。按拼音全量 72 人（含 6 名助理研究员，为\"按职称\"页未覆盖者）；\"按职称\"页 66 人为其子集，两套名单交叉核对无差异。另抓取 57 个教师个人主页（faculty.tju.edu.cn）补充逐人\"研究方向\"与拼音姓名。入库 69 人（剔除 3 人：1 人方向为医学图像分析，2 人为工程师/高级实验师且无导师身份）。多数教师的关键词取自该院官方四大方向组（射频/太赫兹芯片微系统、传感器芯片系统、智能芯片与电子系统、微纳电子材料与器件）＋个人主页专有方向字段。兼职师资、交叉学科师资两页为空页（分页栏显示\"首页 上页 1 下页 尾页\"但无条目）。\n2) 电气自动化与信息工程学院（seea.tju.edu.cn）：师资队伍总页 + 电子信息工程系、通信工程系、自动化系三个系级名单，逐条抓取全部 127 个教师详情页（info/1013、1014、1015），按\"职称／学科专业／主要研究方向\"字段筛选出偏芯片-电路-光电子-传感硬件的 21 人入库。电气工程系（电力系统/高电压/电力电子）按范围要求未纳入。庞彦伟、黄翔东、徐宁、王建、任群、杨敬钰等详情页只有职称、无研究方向字段，为避免臆测未入库。\n3) 智能与计算学部（cic.tju.edu.cn）：研究生导师名录、师资名单（按职称检索／按学院检索）、杰出人才、科研团队页；并按\"按学院检索\"页链接抓取全部 170 个教师详情页。该学部教师详情页大面积只有姓名（内容为空），有字段的 133 页中仅 4 人方向与体系结构／AI 处理器／硬件加速／集成电路相关，已入库；另据\"科研团队\"页收录\"高性能计算与体系结构\"团队（团队方向含专用芯片设计）负责人于策。张余豪（计算机系统结构/存储与AI系统）、鲁赵骏（硬件安全/抗量子软硬协同加速）方向相关，但页面未标注职称且无法排除博士后身份，未入库。\n4) 精密仪器与光电子工程学院（jyxy.tju.edu.cn）：入口为 jyxy.tju.edu.cn（pi.tju.edu.cn 域名不存在）。抓取学院师资页 Teachers.html（229 条，含实验中心与学院办公室）及其中 121 个教师详情页，按\"所在系别／所属课题组／研究方向\"筛选出 MEMS 与传感器芯片、微纳制造工艺、集成光子/光芯片、太赫兹器件四类共 27 人。实验中心与学院办公室的行政、教辅人员按要求排除。\n5) 青岛海洋技术研究院（qingdao.tju.edu.cn）：抓取首页、科学研究、研究生教育页——站点仅有新闻与机构介绍，无师资/导师名录，未产出人员。\n\n【未抓到及原因】\n- 天津大学佐治亚理工深圳学院（GTSI）：gtsi.tju.edu.cn、www.gtsi.edu.cn、faculty.gtsi.edu.cn 三个域名均无法解析（curl 返回 000，站点已下线），无法采集。\n- 青岛海洋工程研究院/青岛海洋技术研究院：站点无导师栏目，亦无芯片方向教师名录。\n- 微电子学院\"兼职师资\"\"交叉学科师资\"栏目为空白页。\n- 精仪学院 Teachers.html 中 86 名教师没有任何个人详情页链接；其中庞慰（射频 MEMS）、马雷、吴森、张帅等少数科研教师因无任何可抓取的官方页面而未入库（宁缺勿造）。\n- 智能与计算学部教师详情页大面积空白，无法据页面判断方向，故该学部入库人数偏少。\n- 教师个人主页系统（faculty.tju.edu.cn）仅对部分教师开放，57 个微电子学院主页中仅 11 个能解析出拼音姓名、6 个能解析出有效研究方向，其余靠学院方向组字段。\n- 全部 email 字段按要求统一写 null。\n\n【口径说明】\n- 仅收在职教师/导师；排除退休、访问学者、博士后、行政与实验教辅岗（工程师、高级实验师且非导师者）。\n- is_phd_advisor：true＝页面标注博士生导师；false＝仅标注硕士生导师；null＝页面未标注。\n- research_keywords 全部来自被抓取页面自身的研究方向/研究领域/所在方向组字段，未做页面外推断；title 为页面原始职称（含\"研究员\"\"助理研究员\"\"英才副教授\"\"预聘教师\"等校内职称写法）。\n- 入库 121 人：微电子学院 69、电气自动化与信息工程学院 21、智能与计算学部 4、精密仪器与光电子工程学院 27。",
+ "faculty": [
+  {
+   "name_cn": "安文星",
+   "name_en": null,
+   "title": "副教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "射频集成电路",
+    "太赫兹芯片",
+    "毫米波电路",
+    "射频微系统"
+   ],
+   "homepage": "http://faculty.tju.edu.cn/166187/zh_CN/index.htm",
+   "email": null,
+   "notes": "硕士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "陈瑞",
+   "name_en": null,
+   "title": "副教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "传感器芯片",
+    "CMOS图像传感器",
+    "集成传感器系统",
+    "读出电路"
+   ],
+   "homepage": "https://sme.tju.edu.cn/info/1041/1101.htm",
+   "email": null,
+   "notes": "硕士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "陈为刚",
+   "name_en": null,
+   "title": "教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "数字集成电路",
+    "智能芯片",
+    "SoC设计",
+    "电子系统"
+   ],
+   "homepage": "http://faculty.tju.edu.cn/chenwg/zh_CN/index.htm",
+   "email": null,
+   "notes": "博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "程思璐",
+   "name_en": null,
+   "title": "高级工程师",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "CMOS图像传感器",
+    "仿生视觉芯片",
+    "图像处理"
+   ],
+   "homepage": "http://faculty.tju.edu.cn/csl/zh_CN/index.htm",
+   "email": null,
+   "notes": "硕士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "翟晓宇",
+   "name_en": null,
+   "title": "助理研究员",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "射频集成电路",
+    "太赫兹芯片",
+    "毫米波电路",
+    "射频微系统"
+   ],
+   "homepage": "https://sme.tju.edu.cn/info/1064/3211.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "杜明昆",
+   "name_en": null,
+   "title": "副教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件",
+    "微纳电子器件",
+    "器件工艺",
+    "薄膜晶体管"
+   ],
+   "homepage": "https://faculty.tju.edu.cn/256072/zh_CN/index.htm",
+   "email": null,
+   "notes": "博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "冯枫",
+   "name_en": null,
+   "title": "教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频集成电路",
+    "太赫兹芯片",
+    "毫米波电路",
+    "射频微系统"
+   ],
+   "homepage": "http://faculty.tju.edu.cn/ff/zh_CN/index.htm",
+   "email": null,
+   "notes": "博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "高静",
+   "name_en": null,
+   "title": "副教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "传感器芯片",
+    "CMOS图像传感器",
+    "集成传感器系统",
+    "读出电路"
+   ],
+   "homepage": "http://faculty.tju.edu.cn/050095/zh_CN/index.htm",
+   "email": null,
+   "notes": "博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "宫霄霖",
+   "name_en": "Gong Xiaolin",
+   "title": "副教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "数字集成电路",
+    "智能芯片",
+    "SoC设计",
+    "电子系统"
+   ],
+   "homepage": "http://faculty.tju.edu.cn/050047/zh_CN/index.htm",
+   "email": null,
+   "notes": "硕士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "关欣",
+   "name_en": null,
+   "title": "副教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "数字集成电路",
+    "智能芯片",
+    "SoC设计",
+    "电子系统"
+   ],
+   "homepage": "https://sme.tju.edu.cn/info/1045/1110.htm",
+   "email": null,
+   "notes": "硕士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "郭朝晖",
+   "name_en": "Guo Zhaohui",
+   "title": "助理研究员",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "零知识证明加速",
+    "软硬件协同加速",
+    "区块链硬件"
+   ],
+   "homepage": "http://faculty.tju.edu.cn/248107/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "韩昌彩",
+   "name_en": null,
+   "title": "副教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "数字集成电路",
+    "智能芯片",
+    "SoC设计",
+    "电子系统"
+   ],
+   "homepage": "http://faculty.tju.edu.cn/096047/zh_CN/index.htm",
+   "email": null,
+   "notes": "硕士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "郝东宁",
+   "name_en": null,
+   "title": "助理研究员",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "模拟集成电路",
+    "射频集成电路",
+    "混合信号电路"
+   ],
+   "homepage": "https://sme.tju.edu.cn/info/1046/3209.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "何家骥",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "传感器芯片",
+    "CMOS图像传感器",
+    "集成传感器系统",
+    "读出电路"
+   ],
+   "homepage": "http://faculty.tju.edu.cn/He_Jiaji/zh_CN/index.htm",
+   "email": null,
+   "notes": "博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "侯岳峰",
+   "name_en": null,
+   "title": "副教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频集成电路",
+    "太赫兹芯片",
+    "毫米波电路",
+    "射频微系统"
+   ],
+   "homepage": "http://faculty.tju.edu.cn/houyuefeng/zh_CN/index.htm",
+   "email": null,
+   "notes": "博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "胡建全",
+   "name_en": null,
+   "title": "副教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "射频集成电路",
+    "太赫兹芯片",
+    "毫米波电路",
+    "射频微系统"
+   ],
+   "homepage": "https://faculty.tju.edu.cn/256249/zh_CN/index.htm",
+   "email": null,
+   "notes": "硕士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "旷章曲",
+   "name_en": null,
+   "title": "研究员",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "图像传感器芯片",
+    "智能传感芯片",
+    "CMOS图像传感器"
+   ],
+   "homepage": "https://sme.tju.edu.cn/info/1049/6006.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李磊",
+   "name_en": null,
+   "title": "副教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "宽禁带半导体"
+   ],
+   "homepage": "https://faculty.tju.edu.cn/236077/zh_CN/index.htm",
+   "email": null,
+   "notes": "硕士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "李玲霞",
+   "name_en": null,
+   "title": "教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件",
+    "微纳电子器件",
+    "器件工艺",
+    "薄膜晶体管"
+   ],
+   "homepage": "https://faculty.tju.edu.cn/965683/zh_CN/index.htm",
+   "email": null,
+   "notes": "博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "李敏",
+   "name_en": null,
+   "title": "教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频集成电路",
+    "太赫兹芯片",
+    "毫米波电路",
+    "射频微系统"
+   ],
+   "homepage": "http://faculty.tju.edu.cn/246064/zh_CN/index.htm",
+   "email": null,
+   "notes": "博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "李锵",
+   "name_en": "Li Qiang",
+   "title": "教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "数字集成电路",
+    "智能芯片",
+    "SoC设计",
+    "电子系统"
+   ],
+   "homepage": "http://faculty.tju.edu.cn/030182/zh_CN/index.htm",
+   "email": null,
+   "notes": "博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "李尧",
+   "name_en": null,
+   "title": "助理研究员",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "混合信号集成电路",
+    "模拟集成电路",
+    "数据转换器"
+   ],
+   "homepage": "https://sme.tju.edu.cn/info/1050/3210.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李卓",
+   "name_en": null,
+   "title": "副教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "数字集成电路",
+    "智能芯片",
+    "SoC设计",
+    "电子系统"
+   ],
+   "homepage": "http://faculty.tju.edu.cn/zhuoli/zh_CN/index.htm",
+   "email": null,
+   "notes": "微电子学院副院长（学院官网\"党政领导\"页）；博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "梁继然",
+   "name_en": null,
+   "title": "教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件",
+    "微纳电子器件",
+    "器件工艺",
+    "薄膜晶体管"
+   ],
+   "homepage": "http://faculty.tju.edu.cn/086010/zh_CN/index.htm",
+   "email": null,
+   "notes": "博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "梁士雄",
+   "name_en": null,
+   "title": "教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频集成电路",
+    "太赫兹芯片",
+    "毫米波电路",
+    "射频微系统"
+   ],
+   "homepage": "https://faculty.tju.edu.cn/246181/zh_CN/index.htm",
+   "email": null,
+   "notes": "博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "梁煜",
+   "name_en": null,
+   "title": "副教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "数字集成电路",
+    "智能芯片",
+    "SoC设计",
+    "电子系统"
+   ],
+   "homepage": "http://faculty.tju.edu.cn/976821/zh_CN/index.htm",
+   "email": null,
+   "notes": "硕士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "刘强",
+   "name_en": "Qiang Liu",
+   "title": "教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "数字集成电路",
+    "智能芯片",
+    "SoC设计",
+    "电子系统"
+   ],
+   "homepage": "http://faculty.tju.edu.cn/116022/zh_CN/index.htm",
+   "email": null,
+   "notes": "博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "刘雨",
+   "name_en": null,
+   "title": "助理教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "数字集成电路",
+    "智能芯片",
+    "SoC设计",
+    "电子系统"
+   ],
+   "homepage": "https://sme.tju.edu.cn/info/1050/5846.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "刘昱",
+   "name_en": null,
+   "title": "教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "数字集成电路",
+    "智能芯片",
+    "SoC设计",
+    "电子系统"
+   ],
+   "homepage": "https://faculty.tju.edu.cn/liuyu/zh_CN/index.htm",
+   "email": null,
+   "notes": "博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "刘哲",
+   "name_en": null,
+   "title": "教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频集成电路",
+    "太赫兹芯片",
+    "毫米波电路",
+    "射频微系统"
+   ],
+   "homepage": "https://faculty.tju.edu.cn/256119/zh_CN/index.htm",
+   "email": null,
+   "notes": "博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "罗宇",
+   "name_en": null,
+   "title": "教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频集成电路",
+    "太赫兹芯片",
+    "毫米波电路",
+    "射频微系统"
+   ],
+   "homepage": "http://faculty.tju.edu.cn/186302/zh_CN/index.htm",
+   "email": null,
+   "notes": "博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "马凯学",
+   "name_en": "Ma Kaixue",
+   "title": "教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微波毫米波通信与雷达集成电路（IC设计）",
+    "基于SISL平台的系统集成",
+    "射频集成电路",
+    "太赫兹芯片",
+    "毫米波电路",
+    "射频微系统"
+   ],
+   "homepage": "http://faculty.tju.edu.cn/186005/zh_CN/index.htm",
+   "email": null,
+   "notes": "微电子学院院长、电子科学与技术一级学科负责人、IEEE Fellow、中国电子学会会士、国家杰出青年科学基金获得者（个人主页＋学院官网\"党政领导\"页）；博士生导师（学院官网师资页）；天津市成像与感知微电子技术重点实验室主任（个人主页）"
+  },
+  {
+   "name_cn": "马永涛",
+   "name_en": null,
+   "title": "教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "数字集成电路",
+    "智能芯片",
+    "SoC设计",
+    "电子系统"
+   ],
+   "homepage": "http://faculty.tju.edu.cn/MaYongtao/zh_CN/index.htm",
+   "email": null,
+   "notes": "微电子学院副院长（学院官网\"党政领导\"页）；博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "孟凡易",
+   "name_en": null,
+   "title": "教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频集成电路",
+    "太赫兹芯片",
+    "毫米波电路",
+    "射频微系统"
+   ],
+   "homepage": "http://faculty.tju.edu.cn/186297/zh_CN/index.htm",
+   "email": null,
+   "notes": "博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "聂凯明",
+   "name_en": null,
+   "title": "教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "传感器芯片",
+    "CMOS图像传感器",
+    "集成传感器系统",
+    "读出电路"
+   ],
+   "homepage": "http://faculty.tju.edu.cn/176244/zh_CN/index.htm",
+   "email": null,
+   "notes": "博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "秦国轩",
+   "name_en": null,
+   "title": "教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件",
+    "微纳电子器件",
+    "器件工艺",
+    "薄膜晶体管"
+   ],
+   "homepage": "http://faculty.tju.edu.cn/106030/zh_CN/index.htm",
+   "email": null,
+   "notes": "博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "秦玉香",
+   "name_en": null,
+   "title": "教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件",
+    "微纳电子器件",
+    "器件工艺",
+    "薄膜晶体管"
+   ],
+   "homepage": "http://faculty.tju.edu.cn/070022/zh_CN/index.htm",
+   "email": null,
+   "notes": "博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "任翔",
+   "name_en": "Xiang Ren",
+   "title": "副教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "数字集成电路",
+    "智能芯片",
+    "SoC设计",
+    "电子系统"
+   ],
+   "homepage": "http://faculty.tju.edu.cn/TJU_BioMEMS/zh_CN/index.htm",
+   "email": null,
+   "notes": "硕士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "史再峰",
+   "name_en": "Shi Zaifeng",
+   "title": "教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "传感器芯片",
+    "CMOS图像传感器",
+    "集成传感器系统",
+    "读出电路"
+   ],
+   "homepage": "http://faculty.tju.edu.cn/040198/zh_CN/index.htm",
+   "email": null,
+   "notes": "博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "田成龙",
+   "name_en": null,
+   "title": "副教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "数字集成电路",
+    "智能芯片",
+    "SoC设计",
+    "电子系统"
+   ],
+   "homepage": "https://faculty.tju.edu.cn/tianchenglong/zh_CN/index.htm",
+   "email": null,
+   "notes": "博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "王伯波",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "数字集成电路",
+    "智能芯片",
+    "SoC设计",
+    "电子系统"
+   ],
+   "homepage": "https://faculty.tju.edu.cn/wangbobo/zh_CN/index.htm",
+   "email": null,
+   "notes": "硕士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "王聪",
+   "name_en": null,
+   "title": "教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "有机半导体",
+    "柔性电子集成",
+    "薄膜器件"
+   ],
+   "homepage": "https://faculty.tju.edu.cn/266140/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王瀚",
+   "name_en": null,
+   "title": "副教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "智能传感系统",
+    "多媒体信号处理",
+    "芯片系统设计"
+   ],
+   "homepage": "http://faculty.tju.edu.cn/~3qUnEr/zh_CN/index.htm",
+   "email": null,
+   "notes": "硕士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "王健",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "无线信道建模",
+    "通信基带算法",
+    "电子系统"
+   ],
+   "homepage": "https://sme.tju.edu.cn/info/1061/1618.htm",
+   "email": null,
+   "notes": "博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "王鉴远",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "甚高频无线通信",
+    "射频前端",
+    "通信电路"
+   ],
+   "homepage": "https://sme.tju.edu.cn/info/1061/5796.htm",
+   "email": null,
+   "notes": "硕士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "王科平",
+   "name_en": "Wang Keping",
+   "title": "教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "无线SoC集成电路芯片",
+    "6G 硅基模拟/射频/毫米波集成电路芯片",
+    "射频集成电路",
+    "太赫兹芯片",
+    "毫米波电路",
+    "射频微系统"
+   ],
+   "homepage": "http://faculty.tju.edu.cn/eastlab/zh_CN/index.htm",
+   "email": null,
+   "notes": "博士生导师（学院官网师资页）；课题组网站 east-lab（个人主页给出）"
+  },
+  {
+   "name_cn": "王秀宇",
+   "name_en": "Wang Xiuyu",
+   "title": "教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "传感器芯片系统",
+    "CMOS图像传感器及系统集成",
+    "电子功能材料与器件",
+    "传感器芯片",
+    "CMOS图像传感器",
+    "集成传感器系统"
+   ],
+   "homepage": "http://faculty.tju.edu.cn/070025/zh_CN/index.htm",
+   "email": null,
+   "notes": "博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "王勇强",
+   "name_en": null,
+   "title": "副教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频集成电路",
+    "太赫兹芯片",
+    "毫米波电路",
+    "射频微系统"
+   ],
+   "homepage": "http://faculty.tju.edu.cn/216077/zh_CN/index.htm",
+   "email": null,
+   "notes": "博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "吴志鹏",
+   "name_en": null,
+   "title": "讲师",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "数字集成电路",
+    "智能芯片",
+    "SoC设计",
+    "电子系统"
+   ],
+   "homepage": "https://faculty.tju.edu.cn/266090/zh_CN/index.htm",
+   "email": null,
+   "notes": "硕士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "武依",
+   "name_en": null,
+   "title": "副教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频集成电路",
+    "太赫兹芯片",
+    "毫米波电路",
+    "射频微系统"
+   ],
+   "homepage": "https://faculty.tju.edu.cn/256071/zh_CN/index.htm",
+   "email": null,
+   "notes": "博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "肖夏",
+   "name_en": null,
+   "title": "教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "数字集成电路",
+    "智能芯片",
+    "SoC设计",
+    "电子系统"
+   ],
+   "homepage": "http://faculty.tju.edu.cn/030031/zh_CN/index.htm",
+   "email": null,
+   "notes": "博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "谢生",
+   "name_en": null,
+   "title": "副教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频集成电路",
+    "太赫兹芯片",
+    "毫米波电路",
+    "射频微系统"
+   ],
+   "homepage": "http://faculty.tju.edu.cn/060073/zh_CN/index.htm",
+   "email": null,
+   "notes": "博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "徐江涛",
+   "name_en": "Xu Jiangtao",
+   "title": "教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "CMOS图像传感芯片",
+    "数模混合集成电路",
+    "智能视觉系统",
+    "传感器芯片",
+    "CMOS图像传感器",
+    "集成传感器系统"
+   ],
+   "homepage": "http://faculty.tju.edu.cn/060114/zh_CN/index.htm",
+   "email": null,
+   "notes": "博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "闫宁宁",
+   "name_en": null,
+   "title": "教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频集成电路",
+    "太赫兹芯片",
+    "毫米波电路",
+    "射频微系统"
+   ],
+   "homepage": "https://faculty.tju.edu.cn/226105/zh_CN/index.htm",
+   "email": null,
+   "notes": "博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "杨铖",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "智能无线通信",
+    "通信基带",
+    "电子系统"
+   ],
+   "homepage": "https://sme.tju.edu.cn/info/1063/2934.htm",
+   "email": null,
+   "notes": "硕士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "杨杰圣",
+   "name_en": null,
+   "title": "教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频集成电路",
+    "太赫兹芯片",
+    "毫米波电路",
+    "射频微系统"
+   ],
+   "homepage": "http://faculty.tju.edu.cn/ysk/zh_CN/index.htm",
+   "email": null,
+   "notes": "外籍教授（新加坡籍），学院官网列为学院外籍院士级人才；博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "叶茂",
+   "name_en": null,
+   "title": "副教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "传感器芯片",
+    "CMOS图像传感器",
+    "集成传感器系统",
+    "读出电路"
+   ],
+   "homepage": "http://faculty.tju.edu.cn/156115/zh_CN/index.htm",
+   "email": null,
+   "notes": "博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "于和善",
+   "name_en": null,
+   "title": "副教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件",
+    "微纳电子器件",
+    "器件工艺",
+    "薄膜晶体管"
+   ],
+   "homepage": "http://faculty.tju.edu.cn/YuHeshan/zh_CN/index.htm",
+   "email": null,
+   "notes": "博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "于洋",
+   "name_en": null,
+   "title": "副教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频集成电路",
+    "太赫兹芯片",
+    "毫米波电路",
+    "射频微系统"
+   ],
+   "homepage": "https://faculty.tju.edu.cn/yangyu/zh_CN/index.htm",
+   "email": null,
+   "notes": "博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "张启智",
+   "name_en": null,
+   "title": "助理研究员",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "传感器芯片",
+    "CMOS图像传感器",
+    "集成传感器系统",
+    "读出电路"
+   ],
+   "homepage": "https://sme.tju.edu.cn/info/1064/6536.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张瑞峰",
+   "name_en": null,
+   "title": "副教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "传感器芯片",
+    "CMOS图像传感器",
+    "集成传感器系统",
+    "读出电路"
+   ],
+   "homepage": "https://sme.tju.edu.cn/info/1064/1092.htm",
+   "email": null,
+   "notes": "硕士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "张为",
+   "name_en": null,
+   "title": "教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "数字集成电路",
+    "智能芯片",
+    "SoC设计",
+    "电子系统"
+   ],
+   "homepage": "http://faculty.tju.edu.cn/027886/zh_CN/index.htm",
+   "email": null,
+   "notes": "博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "张新",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "射频集成电路",
+    "太赫兹芯片",
+    "毫米波电路",
+    "射频微系统"
+   ],
+   "homepage": "https://faculty.tju.edu.cn/266053/zh_CN/index.htm",
+   "email": null,
+   "notes": "硕士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "赵毅强",
+   "name_en": null,
+   "title": "教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "传感器芯片",
+    "CMOS图像传感器",
+    "集成传感器系统",
+    "读出电路"
+   ],
+   "homepage": "http://faculty.tju.edu.cn/017452/zh_CN/index.htm",
+   "email": null,
+   "notes": "博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "赵增龙",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "射频集成电路",
+    "太赫兹芯片",
+    "毫米波电路",
+    "射频微系统"
+   ],
+   "homepage": "https://faculty.tju.edu.cn/266089/zh_CN/index.htm",
+   "email": null,
+   "notes": "硕士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "郑德印",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "微纳加工",
+    "芯片热管理",
+    "集成散热"
+   ],
+   "homepage": "http://faculty.tju.edu.cn/yy/zh_CN/index.htm",
+   "email": null,
+   "notes": "硕士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "邹强",
+   "name_en": null,
+   "title": "副教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "数字集成电路",
+    "智能芯片",
+    "SoC设计",
+    "电子系统"
+   ],
+   "homepage": "http://faculty.tju.edu.cn/070070/zh_CN/index.htm",
+   "email": null,
+   "notes": "硕士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "Bharatha Kumar Thangarasu(Kumar)",
+   "name_en": "Bharatha Kumar Thangarasu",
+   "title": "副教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "射频集成电路",
+    "太赫兹芯片",
+    "毫米波电路",
+    "射频微系统"
+   ],
+   "homepage": "http://faculty.tju.edu.cn/236073/zh_CN/index.htm",
+   "email": null,
+   "notes": "硕士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "Mahalingam Nagarajan（Raju)",
+   "name_en": "Mahalingam Nagarajan",
+   "title": "副教授",
+   "department": "天津大学微电子学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "射频集成电路",
+    "太赫兹芯片",
+    "毫米波电路",
+    "射频微系统"
+   ],
+   "homepage": "http://faculty.tju.edu.cn/raju/zh_CN/index.htm",
+   "email": null,
+   "notes": "硕士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "张涛",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电气自动化与信息工程学院 电子信息工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "媒体处理器结构",
+    "DSP系统设计",
+    "嵌入式系统",
+    "数字音视频处理"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "周圆",
+   "name_en": null,
+   "title": "教授",
+   "department": "电气自动化与信息工程学院 通信工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "深度学习硬件加速",
+    "FPGA开发",
+    "嵌入式系统设计",
+    "计算机视觉"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "张镇",
+   "name_en": null,
+   "title": "教授",
+   "department": "电气自动化与信息工程学院 自动化系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "AI芯片",
+    "嵌入式计算架构",
+    "异构计算",
+    "DSP/ARM/ZYNQ"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "天津大学嵌入式计算与控制研究中心（TJU-ECC）负责人（学院官网师资页）"
+  },
+  {
+   "name_cn": "谷宇",
+   "name_en": null,
+   "title": "助理研究员",
+   "department": "电气自动化与信息工程学院 自动化系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "AI芯片",
+    "嵌入式计算",
+    "异构并行计算",
+    "边缘计算"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "TJU-ECC 团队成员（学院官网师资页）"
+  },
+  {
+   "name_cn": "邓斌",
+   "name_en": null,
+   "title": "教授",
+   "department": "电气自动化与信息工程学院 自动化系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "FPGA/ARM类脑计算平台",
+    "宽禁带器件电力电子",
+    "机器触觉",
+    "嵌入式系统"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "王江",
+   "name_en": null,
+   "title": "教授",
+   "department": "电气自动化与信息工程学院 自动化系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "FPGA/VLSI类脑计算",
+    "DSP与嵌入式",
+    "神经工程",
+    "非线性动力学"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "崔自强",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电气自动化与信息工程学院 自动化系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "电学层析成像",
+    "FPGA/DSP/ARM实现",
+    "智能传感器",
+    "微弱信号处理"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "硕士及博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "高镇",
+   "name_en": null,
+   "title": "英才副教授",
+   "department": "电气自动化与信息工程学院 通信工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "电路系统可靠性",
+    "软件无线电",
+    "通信系统集成电路",
+    "无线通信"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "主讲\"通信系统集成电路设计\"；硕士/博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "辛明",
+   "name_en": null,
+   "title": "教授",
+   "department": "电气自动化与信息工程学院 通信工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成光电子学",
+    "智能光子计算",
+    "超快光子学",
+    "光子测控"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "贾石",
+   "name_en": null,
+   "title": "教授",
+   "department": "电气自动化与信息工程学院 通信工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成微波光子学",
+    "光子太赫兹通信",
+    "高速光信号处理",
+    "光电技术"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "王子雄",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电气自动化与信息工程学院 通信工程系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "微波光子",
+    "可见光通信",
+    "自由空间光通信",
+    "相干光通信"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "学院官网师资页"
+  },
+  {
+   "name_cn": "王菊",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电气自动化与信息工程学院 通信工程系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "微波光子技术",
+    "光通信",
+    "微波技术",
+    "接入网技术"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "硕士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "于晋龙",
+   "name_en": null,
+   "title": "教授",
+   "department": "电气自动化与信息工程学院 通信工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "高速光信号处理",
+    "光子微波技术",
+    "高速光通信",
+    "光电技术"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "马闯",
+   "name_en": null,
+   "title": "预聘教师",
+   "department": "电气自动化与信息工程学院 通信工程系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "微波光子技术"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "学院官网师资页"
+  },
+  {
+   "name_cn": "李燕青",
+   "name_en": null,
+   "title": "讲师",
+   "department": "电气自动化与信息工程学院 通信工程系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "工业电子与嵌入式系统",
+    "传感器技术",
+    "数字电视信道技术",
+    "无线通信与物联网"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "学院官网师资页"
+  },
+  {
+   "name_cn": "吕辰刚",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电气自动化与信息工程学院 通信工程系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "光学传感器件及系统",
+    "射频集成电路",
+    "工业物联网",
+    "机器视觉"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "学院官网师资页；撰《集成电路工程领域发展报告-专题4 射频集成电路》"
+  },
+  {
+   "name_cn": "张平",
+   "name_en": null,
+   "title": "教授",
+   "department": "电气自动化与信息工程学院 通信工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "信息材料与器件",
+    "自驱动智能微系统",
+    "纳米发电机",
+    "高速高可靠通信"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "杨阳",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电气自动化与信息工程学院 通信工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "毫米波雷达",
+    "超宽带雷达",
+    "射频感知",
+    "多模态信号处理"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "硕士/博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "孙宏军",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电气自动化与信息工程学院 自动化系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "嵌入式系统设计",
+    "传感技术与信息处理",
+    "过程参数检测",
+    "仪器开发"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "博士生导师（团队）（学院官网师资页）"
+  },
+  {
+   "name_cn": "翟路生",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电气自动化与信息工程学院 自动化系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "先进传感技术与传感系统",
+    "微流控技术",
+    "电学/声学/光学传感",
+    "现代信息处理"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "博士生导师（学院官网师资页）"
+  },
+  {
+   "name_cn": "谭超",
+   "name_en": null,
+   "title": "教授",
+   "department": "电气自动化与信息工程学院 自动化系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "智能传感仪器软硬件系统",
+    "多模态过程层析成像",
+    "生物信息测试与成像",
+    "过程诊断"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "天津市过程检测与控制重点实验室主任；IET Fellow（学院官网师资页）"
+  },
+  {
+   "name_cn": "魏继增",
+   "name_en": null,
+   "title": "副教授",
+   "department": "智能与计算学部 计算机科学与技术学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "AI处理器设计",
+    "高能效处理器",
+    "计算机体系结构",
+    "嵌入式系统"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "硕导；属学部\"高性能计算与体系结构\"团队（学部科研团队页）"
+  },
+  {
+   "name_cn": "罗韬",
+   "name_en": null,
+   "title": "副教授",
+   "department": "智能与计算学部 计算机学院（工程系）",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路",
+    "图像传感器",
+    "数字电路",
+    "智能视觉处理"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "硕导（学部师资页）"
+  },
+  {
+   "name_cn": "陈仁海",
+   "name_en": null,
+   "title": "副教授",
+   "department": "智能与计算学部 计算机科学系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "智能算法硬件加速",
+    "计算机存储",
+    "大规模图计算",
+    "体系结构"
+   ],
+   "homepage": "http://cic.tju.edu.cn/faculty/chenrenhai/index.html",
+   "email": null,
+   "notes": "硕导（学部师资页）"
+  },
+  {
+   "name_cn": "于策",
+   "name_en": null,
+   "title": "教授",
+   "department": "智能与计算学部 计算机科学与技术学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "高性能计算",
+    "专用芯片设计",
+    "计算机体系结构",
+    "并行编程模型"
+   ],
+   "homepage": "http://cic.tju.edu.cn/faculty/yuce/index.html",
+   "email": null,
+   "notes": "学部\"高性能计算与体系结构\"团队负责人，团队方向含专用芯片设计（学部科研团队页）；博导/硕导"
+  },
+  {
+   "name_cn": "张浩",
+   "name_en": null,
+   "title": "教授",
+   "department": "精密仪器与光电子工程学院 精密仪器工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS时钟频率芯片",
+    "压电声学MEMS",
+    "惯性MEMS传感器",
+    "集成微系统"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "天津大学MEMS实验室\"芯片与集成微系统\"课题组负责人；博导/硕导"
+  },
+  {
+   "name_cn": "崔魏巍",
+   "name_en": null,
+   "title": "副教授",
+   "department": "精密仪器与光电子工程学院 精密仪器工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS芯片",
+    "压电MEMS传感器",
+    "QMEMS谐振器",
+    "集成微系统封装"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "天津大学MEMS实验室；硕导/博导"
+  },
+  {
+   "name_cn": "张孟伦",
+   "name_en": null,
+   "title": "副教授",
+   "department": "精密仪器与光电子工程学院 精密仪器工程系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "MEMS传感器",
+    "传感器芯片",
+    "MEMS微系统"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "MEMS微系统实验室；硕导"
+  },
+  {
+   "name_cn": "牛鹏飞",
+   "name_en": null,
+   "title": "副教授",
+   "department": "精密仪器与光电子工程学院 精密仪器工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS超声换能器芯片",
+    "PMUT/CMUT",
+    "晶圆级工艺",
+    "超声芯片封装"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "微纳机电系统（MEMS）实验室；博导/硕导"
+  },
+  {
+   "name_cn": "段学欣",
+   "name_en": null,
+   "title": "教授",
+   "department": "精密仪器与光电子工程学院 精密仪器工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "生物微纳机电系统",
+    "微流控芯片",
+    "生物传感器",
+    "声流体"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "博导；微纳制造与测试课题组"
+  },
+  {
+   "name_cn": "王艳艳",
+   "name_en": null,
+   "title": "副教授",
+   "department": "精密仪器与光电子工程学院 精密仪器工程系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "微纳生物医学传感",
+    "微纳机电系统",
+    "细胞/蛋白芯片",
+    "微流控生物分析"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "微纳制造与测试课题组"
+  },
+  {
+   "name_cn": "薛茜男",
+   "name_en": null,
+   "title": "副教授",
+   "department": "精密仪器与光电子工程学院 精密仪器工程系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "MEMS微纳传感系统",
+    "微波传感器",
+    "电化学纳米生物传感器",
+    "柔性压电传感"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "硕导"
+  },
+  {
+   "name_cn": "谢梦莹",
+   "name_en": null,
+   "title": "副教授",
+   "department": "精密仪器与光电子工程学院 精密仪器工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "触觉传感器",
+    "柔性多功能传感器",
+    "能量采集器件",
+    "可穿戴器件"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "硕导/博导"
+  },
+  {
+   "name_cn": "武恩秀",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "精密仪器与光电子工程学院 感知科学与工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "二维半导体器件",
+    "忆阻器",
+    "存算一体化器件",
+    "微纳传感器"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "博导/硕导"
+  },
+  {
+   "name_cn": "霍文星",
+   "name_en": null,
+   "title": "副教授",
+   "department": "精密仪器与光电子工程学院 感知科学与工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "氧化物柔性薄膜晶体管",
+    "触觉传感器",
+    "柔性电子器件",
+    "柔性集成系统"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "柔性电子技术实验室；博导/硕导"
+  },
+  {
+   "name_cn": "张磊",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "精密仪器与光电子工程学院 感知科学与工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "柔性力触觉传感器",
+    "穿戴式生物传感",
+    "柔性微纳集成传感系统"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "博导/硕导"
+  },
+  {
+   "name_cn": "蒲治华",
+   "name_en": null,
+   "title": "副教授",
+   "department": "精密仪器与光电子工程学院 感知科学与工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "数智传感芯片",
+    "柔性电子传感器",
+    "微纳加工",
+    "传感仪器硬件电路"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "数智传感芯片及仪器实验室；博导/硕导"
+  },
+  {
+   "name_cn": "栗大超",
+   "name_en": null,
+   "title": "教授",
+   "department": "精密仪器与光电子工程学院 感知科学与工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光/声微流体",
+    "超声微器件",
+    "柔性传感器",
+    "喷墨打印微制造"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "生物微流体与生物传感技术课题组；博导/硕导"
+  },
+  {
+   "name_cn": "刘晶",
+   "name_en": null,
+   "title": "英才教授",
+   "department": "精密仪器与光电子工程学院 感知科学与工程系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "纳米器件物理",
+    "传感器件",
+    "柔性可穿戴器件"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "纳米器件与传感实验室"
+  },
+  {
+   "name_cn": "徐临燕",
+   "name_en": "Xu Linyan",
+   "title": "助理教授",
+   "department": "精密仪器与光电子工程学院 精密仪器工程系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "RF-MEMS振动测量",
+    "AFM探针",
+    "纳力测量",
+    "微纳测试"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "职称据其天津大学教师个人主页（Assistant professor）"
+  },
+  {
+   "name_cn": "徐宗伟",
+   "name_en": null,
+   "title": "教授",
+   "department": "精密仪器与光电子工程学院 精密仪器工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "宽禁带半导体",
+    "纳米功能器件",
+    "微纳制造",
+    "原子尺度加工"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "微纳制造实验室（MNMT）；博导/硕导"
+  },
+  {
+   "name_cn": "赖敏",
+   "name_en": null,
+   "title": "副教授",
+   "department": "精密仪器与光电子工程学院 精密仪器工程系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "微纳制造",
+    "芯片制造工艺",
+    "超精密加工",
+    "硬脆晶体加工"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "微纳制造实验室（MNMT）；硕导"
+  },
+  {
+   "name_cn": "程振洲",
+   "name_en": "Zhenzhou Cheng",
+   "title": "教授",
+   "department": "精密仪器与光电子工程学院 光电信息工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "硅基光子学",
+    "光子集成回路",
+    "光子芯片",
+    "集成光电器件"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "name_en: Zhenzhou Cheng；光子芯片实验室负责人，精密测试技术及仪器全国重点实验室副主任、光电信息工程系系主任（实验室官网研究人员页）"
+  },
+  {
+   "name_cn": "张尊月",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "精密仪器与光电子工程学院 光电信息工程系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "集成光谱器件",
+    "中红外光子学",
+    "光谱成像与传感系统"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "光子芯片实验室；副研究员（实验室官网研究人员页）"
+  },
+  {
+   "name_cn": "华平壤",
+   "name_en": null,
+   "title": "副教授",
+   "department": "精密仪器与光电子工程学院 光电信息工程系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成光子芯片",
+    "光波导器件",
+    "光电传感",
+    "微波光子学"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "集成光电子实验室；硕导"
+  },
+  {
+   "name_cn": "蔡璐彤",
+   "name_en": null,
+   "title": "副教授",
+   "department": "精密仪器与光电子工程学院 光电信息工程系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成光子芯片",
+    "非线性光学",
+    "微纳光电子器件"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "光子系统实验室；硕导"
+  },
+  {
+   "name_cn": "赵健",
+   "name_en": null,
+   "title": "副教授",
+   "department": "精密仪器与光电子工程学院 光电信息工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光芯片",
+    "光计算与光子人工智能",
+    "光信号处理",
+    "相干光传输"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "光通信与光计算实验室；博导/硕导"
+  },
+  {
+   "name_cn": "韩家广",
+   "name_en": null,
+   "title": "教授",
+   "department": "精密仪器与光电子工程学院 光电信息工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "太赫兹功能器件",
+    "太赫兹表面等离激元",
+    "太赫兹科学与技术"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "国家杰青、优青、教育部青年长江学者（学院官网师资页）；天津大学太赫兹研究中心"
+  },
+  {
+   "name_cn": "许全",
+   "name_en": null,
+   "title": "副教授",
+   "department": "精密仪器与光电子工程学院 光电子科学技术系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "太赫兹片上集成器件",
+    "太赫兹光子学",
+    "表面等离激元"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "太赫兹研究中心；硕导/博导"
+  },
+  {
+   "name_cn": "田震",
+   "name_en": null,
+   "title": "讲席教授",
+   "department": "精密仪器与光电子工程学院 光电子科学技术系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "太赫兹光子学",
+    "微纳光子学",
+    "光声光学"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "太赫兹研究中心；博导/硕导"
+  },
+  {
+   "name_cn": "张学迁",
+   "name_en": null,
+   "title": "教授",
+   "department": "精密仪器与光电子工程学院 光电信息工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "太赫兹波前调控",
+    "太赫兹功能器件"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "天津大学太赫兹研究中心；博导/硕导"
+  },
+  {
+   "name_cn": "杨志斌",
+   "name_en": null,
+   "title": "副教授",
+   "department": "精密仪器与光电子工程学院 光电信息工程系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "二维材料器件",
+    "太赫兹器件",
+    "异质集成工艺"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "长聘副教授；博导（实验室官网研究人员页）"
+  }
+ ]
+}

@@ -1,0 +1,6709 @@
+{
+ "school": "中国科学院",
+ "school_key": "cas",
+ "harvested_at": "2026-09-26",
+ "sources": [
+  "https://www.ime.ac.cn/kjrh/dsjs/ssds/ (+index_1..3)",
+  "https://www.ime.ac.cn/kjrh/dsjs/bsds/ (+index_1..3)",
+  "https://bdt.semi.ac.cn/yanjiusheng/channels/695.html",
+  "https://bdt.semi.ac.cn/yanjiusheng/ (导师简介 123 人详情页)",
+  "http://sim.cas.cn/yjs/dsjs/",
+  "http://www.sim.cas.cn/dwjs2016/zgjrc/jcdl/",
+  "http://www.sim.cas.cn/dwjs2016/fgjrc/jcdl/",
+  "https://sklp.ict.ac.cn/gysys/yjdw/yjy/ (+index_1,index_2)",
+  "https://sklp.ict.ac.cn/gysys/yjdw/fyjy/ (+index_1)",
+  "http://www.ia.cas.cn/yjsjy/dsjj/",
+  "http://www.sari.cas.cn/gradedu/szdw/znxx/"
+ ],
+ "coverage_note": "覆盖（共 449 人）：微电子研究所 106 人，半导体研究所 117 人，上海微系统与信息技术研究所 155 人，计算技术研究所 50 人，自动化研究所 6 人，上海高等研究院 15 人。\n微电子研究所：抓取所网「研究生教育-导师介绍」博士导师 4 页 + 硕士导师 4 页共 114 人去重名单，并逐人抓取所内专家库详情页，取得职称/所属研究中心/研究方向/获奖荣誉（涵盖设计、器件、工艺、EDA、封装、光刻、MEMS、AI 芯片等方向）。\n半导体研究所：抓取 bdt.semi.ac.cn「导师简介」全量 123 条（含实验室、职称、博导/硕导、招生专业、研究方向），并逐人抓取详情页补充简历与荣誉。\n上海微系统与信息技术研究所：抓取所网「研究生教育-导师介绍」表格全部 166 条（含研究室、课题组、博导/硕导、学科代码、研究方向），并从「队伍建设-正高级/副高级人才」五个领域名录（集成电路/传感器技术/量子科技/人工智能/通信与信息系统）解析 232 条职称记录，用于回填导师职称。\n计算技术研究所：仅收「处理器芯片全国重点实验室」(sklp.ict.ac.cn) 研究队伍 70 人（研究员 3 页 + 副研究员 2 页），逐人抓取详情页取得研究方向/导师类别/个人主页/荣誉。\n自动化研究所：仅收所网导师介绍中「集成电路设计」方向 6 人，并抓取各人国科大主页补全职称与研究领域。\n上海高等研究院：仅收「智能信息通信技术研究与发展中心」4 个方向（下一代移动通信网络/物联网与智能系统/感知与计算/工业人工智能）20 名研究生导师，逐人抓取详情页。\n未取得或未纳入：①上海微系统所 51 人的「个人主页」为 sourcedb.sim.cas.cn 域名，该主机不可达（fetch failed），故 homepage 记 null，职称已由人才名录回填；②18 人职称在公开页面未标注，title 记 null；③中国科学院大学集成电路学院（sme.ucas.ac.cn）研究生导师名录为按拼音排序的纯姓名列表，无研究方向字段，且其师资主体即微电子研究所导师，故未重复收录；④计算所非芯片方向（编译/操作系统/大数据/网络/深度学习算法等 20 人）与自动化所非集成电路方向、上海高研院纯 AI 软件方向按排除规则剔除；⑤未纳入纯材料化学、纯物理理论（第一性原理/凝聚态理论）、纯生物医学（脑机接口/医学影像）、纯激光与光纤器件、光伏/催化等方向共 50 人。\n筛选口径：方向关键词命中「集成电路设计、模拟/混合信号、射频/毫米波/太赫兹、处理器/体系结构、AI 加速器/智能芯片、存算一体/新型存储、EDA、集成电路测试与可靠性、半导体器件、半导体工艺与制造、封装与三维集成、半导体材料与器件、光电子/硅光、光电探测、MEMS/传感器、通信基带/SoC、量子芯片、宽禁带半导体、二维材料器件、功率半导体、光刻与半导体装备」之一即收录；仅命中纯材料化学、纯物理理论、纯软件算法、纯生物医学者剔除。\n全部记录均来自实际抓取的官方页面，原始 HTML/TXT 保留在 data/raw/cas/ 及各 *_detail 子目录以便复核；email 字段按要求一律为 null。",
+ "faculty": [
+  {
+   "name_cn": "孙泽宇",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "EDA/设计自动化",
+    "人工智能EDA",
+    "集成电路可靠性"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202605/t20260522_8208429.html",
+   "email": null,
+   "notes": "EDA中心；海外高层次人才"
+  },
+  {
+   "name_cn": "刘颂",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体工艺/制造",
+    "二维材料/低维器件",
+    "二维半导体制备与器件工艺"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202407/t20240718_7230543.html",
+   "email": null,
+   "notes": "集成电路先导工艺研发中心"
+  },
+  {
+   "name_cn": "杨尊松",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟/混合信号电路",
+    "射频/毫米波/太赫兹",
+    "通信基带/无线SoC"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202407/t20240718_7230296.html",
+   "email": null,
+   "notes": "抗辐照器件技术重点实验室；海外高层次人才"
+  },
+  {
+   "name_cn": "罗庆",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "存算一体/新型存储",
+    "新型存储器"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202308/t20230824_6866336.html",
+   "email": null,
+   "notes": "微电子器件与集成技术研发中心"
+  },
+  {
+   "name_cn": "许晓欣",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "处理器/体系结构",
+    "存算一体/新型存储",
+    "新型非挥发存储"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202307/t20230711_6808408.html",
+   "email": null,
+   "notes": "微电子器件与集成技术重点实验室"
+  },
+  {
+   "name_cn": "杨红",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件",
+    "半导体工艺/制造"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202305/t20230524_6762643.html",
+   "email": null,
+   "notes": "集成电路先导工艺研发中心"
+  },
+  {
+   "name_cn": "荀孟",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光电子/硅光",
+    "半导体光电子器件与集成芯片",
+    "微纳光学结构与光场调控"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202204/t20220426_6439219.html",
+   "email": null,
+   "notes": "高频高压器件与集成研发中心；青促会"
+  },
+  {
+   "name_cn": "张青竹",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件",
+    "半导体工艺/制造",
+    "晶体管器件三维堆叠"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202204/t20220426_6439203.html",
+   "email": null,
+   "notes": "先导中心；项目/团队负责人"
+  },
+  {
+   "name_cn": "陈睿",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "EDA/设计自动化",
+    "半导体工艺/制造",
+    "集成电路智能制造"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202104/t20210402_5989301.html",
+   "email": null,
+   "notes": "EDA中心"
+  },
+  {
+   "name_cn": "汤益丹",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "宽禁带/化合物半导体",
+    "宽禁带半导体器件研发",
+    "半导体缺陷科学与工程"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202012/t20201210_5814274.html",
+   "email": null,
+   "notes": "高频高压器件及集成研发中心"
+  },
+  {
+   "name_cn": "尚大山",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "处理器/体系结构",
+    "AI加速器/智能芯片",
+    "封装/三维集成"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202012/t20201208_5813465.html",
+   "email": null,
+   "notes": "微电子器件与集成技术重点实验室"
+  },
+  {
+   "name_cn": "王磊（微电子所）",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件",
+    "半导体材料/外延",
+    "半导体材料与器件可靠性"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202010/t20201029_5724177.html",
+   "email": null,
+   "notes": "硅器件中心；本项目为消歧标注：同名者，见「微电子所」"
+  },
+  {
+   "name_cn": "张滋黎",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光刻/半导体装备",
+    "精密仪器设计",
+    "集成电路光学检测"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202007/t20200715_5626211.html",
+   "email": null,
+   "notes": "光电技术研发中心"
+  },
+  {
+   "name_cn": "董登峰",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光刻/半导体装备",
+    "光电精密检测",
+    "精密仪器研究与开发"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202007/t20200707_5619865.html",
+   "email": null,
+   "notes": "光电技术研发中心"
+  },
+  {
+   "name_cn": "周维虎",
+   "name_en": null,
+   "title": "正高级工程师",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光刻/半导体装备",
+    "光电精密测量技术与系统",
+    "集成电路光学检测"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202401/t20240102_6940076.html",
+   "email": null,
+   "notes": "光电技术研发中心"
+  },
+  {
+   "name_cn": "刘凡宇",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟/混合信号电路",
+    "半导体器件",
+    "半导体材料/外延"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202006/t20200611_5604334.html",
+   "email": null,
+   "notes": "硅器件与集成研发中心"
+  },
+  {
+   "name_cn": "宗明成",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体工艺/制造",
+    "光刻/半导体装备",
+    "先进光刻"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202003/t20200330_5521819.html",
+   "email": null,
+   "notes": "光刻技术总体部"
+  },
+  {
+   "name_cn": "齐月静",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体工艺/制造",
+    "光刻/半导体装备",
+    "精密仪器及光学"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202003/t20200323_5518304.html",
+   "email": null,
+   "notes": "新技术开发部"
+  },
+  {
+   "name_cn": "王林飞",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "集成电路可靠性"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/201907/t20190730_5353393.html",
+   "email": null,
+   "notes": "硅器件与集成研发中心"
+  },
+  {
+   "name_cn": "冯燕",
+   "name_en": null,
+   "title": "正高级工程师",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "处理器/体系结构",
+    "集成电路测试/可靠性",
+    "集成电路硬件安全"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/201907/t20190716_5342310.html",
+   "email": null,
+   "notes": "EDA中心"
+  },
+  {
+   "name_cn": "殷华湘",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体工艺/制造",
+    "半导体材料/外延",
+    "MEMS/传感器"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/201905/t20190520_5297479.html",
+   "email": null,
+   "notes": "集成电路先导工艺研发中心"
+  },
+  {
+   "name_cn": "李志强",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "射频/毫米波/太赫兹",
+    "EDA/设计自动化",
+    "半导体工艺/制造"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/201806/t20180622_5030022.html",
+   "email": null,
+   "notes": "EDA中心"
+  },
+  {
+   "name_cn": "王盛凯",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "存算一体/新型存储",
+    "半导体器件",
+    "D-DRAM的氧化物晶体管器件"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/201803/t20180302_4969189.html",
+   "email": null,
+   "notes": "教育处；青促会"
+  },
+  {
+   "name_cn": "尹明会",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "EDA/设计自动化",
+    "标准单元库"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/201707/t20170704_4822503.html",
+   "email": null,
+   "notes": "中国科学院EDA中心"
+  },
+  {
+   "name_cn": "薛海韵",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "封装/三维集成",
+    "异质异构光电共封装"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/201707/t20170703_4821314.html",
+   "email": null,
+   "notes": "系统封装与集成研发中心"
+  },
+  {
+   "name_cn": "王鑫华",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波/太赫兹",
+    "封装/三维集成",
+    "宽禁带/化合物半导体",
+    "功率半导体/电力电子"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/201706/t20170613_4811911.html",
+   "email": null,
+   "notes": "高频高压器件与集成研发中心"
+  },
+  {
+   "name_cn": "张锋",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "AI加速器/智能芯片",
+    "存算一体/新型存储"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/201706/t20170609_4810760.html",
+   "email": null,
+   "notes": "微电子器件与集成技术重点实验室"
+  },
+  {
+   "name_cn": "黄森",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波/太赫兹",
+    "半导体器件",
+    "半导体工艺/制造",
+    "宽禁带/化合物半导体",
+    "功率半导体/电力电子"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/201706/t20170609_4810754.html",
+   "email": null,
+   "notes": "高频高压器件与集成研发中心；优青、青促会"
+  },
+  {
+   "name_cn": "徐勤志",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "EDA/设计自动化",
+    "半导体工艺/制造",
+    "集成芯片多物理场仿真与EDA"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/201704/t20170419_4777813.html",
+   "email": null,
+   "notes": "EDA中心"
+  },
+  {
+   "name_cn": "刘飞",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟/混合信号电路",
+    "ADC"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/201703/t20170329_4765803.html",
+   "email": null,
+   "notes": "新技术开发部"
+  },
+  {
+   "name_cn": "李泠",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件",
+    "器件物理与紧凑模型技术及电路设计"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/201703/t20170328_4765062.html",
+   "email": null,
+   "notes": "微电子器件与集成技术重点实验室"
+  },
+  {
+   "name_cn": "黄成军",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体工艺/制造",
+    "MEMS/传感器",
+    "微纳传感器"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/201703/t20170327_4764518.html",
+   "email": null,
+   "notes": "健康电子研发中心"
+  },
+  {
+   "name_cn": "卜建辉",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/201703/t20170327_4764373.html",
+   "email": null,
+   "notes": "硅器件与集成研发中心"
+  },
+  {
+   "name_cn": "乔树山",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "处理器/体系结构",
+    "EDA/设计自动化",
+    "MEMS/传感器",
+    "通信基带/无线SoC"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/201611/t20161125_4706497.html",
+   "email": null,
+   "notes": "智能感知研发中心"
+  },
+  {
+   "name_cn": "蔡建",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波/太赫兹",
+    "碘电推进技术及航天应用",
+    "射频等离子体"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/201610/t20161024_4683441.html",
+   "email": null,
+   "notes": "微电子仪器设备研发中心"
+  },
+  {
+   "name_cn": "王玮冰",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体工艺/制造",
+    "MEMS/传感器",
+    "通信基带/无线SoC"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/201604/t20160413_4582520.html",
+   "email": null,
+   "notes": "智能感知研发中心"
+  },
+  {
+   "name_cn": "卢年端",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "存算一体/新型存储",
+    "半导体器件",
+    "热电材料"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/201602/t20160204_4530863.html",
+   "email": null,
+   "notes": "集成电路制造技术重点实验室"
+  },
+  {
+   "name_cn": "李超波",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体工艺/制造",
+    "MEMS/传感器",
+    "新原理纳米加工工艺与装备"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/201512/t20151231_4508542.html",
+   "email": null,
+   "notes": "微电子仪器设备研发中心"
+  },
+  {
+   "name_cn": "刘明",
+   "name_en": null,
+   "title": "院士",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": null,
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/201512/t20151216_4497277.html",
+   "email": null,
+   "notes": "微电子器件与集成技术重点实验室；中国科学院院士；官方页面未列出研究方向"
+  },
+  {
+   "name_cn": "刘昱",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波/太赫兹",
+    "MEMS/传感器",
+    "通信基带/无线SoC"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/201407/t20140702_4147555.html",
+   "email": null,
+   "notes": "健康电子研发中心"
+  },
+  {
+   "name_cn": "韦亚一",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体工艺/制造",
+    "nm浸没式光刻工艺",
+    "光刻材料研发和评估"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/201403/t20140324_4073683.html",
+   "email": null,
+   "notes": "集成电路先导工艺研发中心"
+  },
+  {
+   "name_cn": "陈曙东",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "处理器/体系结构",
+    "通信基带/无线SoC",
+    "云计算"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/201403/t20140304_4045144.html",
+   "email": null,
+   "notes": "AI中心"
+  },
+  {
+   "name_cn": "赵野",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "处理器/体系结构",
+    "通信基带/无线SoC"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/201402/t20140217_4032888.html",
+   "email": null,
+   "notes": "智能感知中心"
+  },
+  {
+   "name_cn": "刘海南",
+   "name_en": null,
+   "title": "正高级工程师",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "存算一体/新型存储",
+    "集成电路测试/可靠性",
+    "封装/三维集成"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/201211/t20121107_3679163.html",
+   "email": null,
+   "notes": "硅器件与集成技术研发中心"
+  },
+  {
+   "name_cn": "曹立强",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "封装/三维集成"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/200910/t20091009_2541409.html",
+   "email": null,
+   "notes": "null"
+  },
+  {
+   "name_cn": "粟雅娟",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "EDA/设计自动化",
+    "半导体工艺/制造",
+    "二维材料/低维器件"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/200910/t20091009_2541333.html",
+   "email": null,
+   "notes": "集成电路先导工艺研发中心"
+  },
+  {
+   "name_cn": "刘新宇",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波/太赫兹",
+    "半导体器件",
+    "半导体工艺/制造",
+    "宽禁带/化合物半导体",
+    "功率半导体/电力电子"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/200909/t20090929_2533145.html",
+   "email": null,
+   "notes": "null"
+  },
+  {
+   "name_cn": "张海英",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波/太赫兹",
+    "EDA/设计自动化",
+    "封装/三维集成",
+    "通信基带/无线SoC"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/200909/t20090929_2533136.html",
+   "email": null,
+   "notes": "健康电子研发中心"
+  },
+  {
+   "name_cn": "吴德馨",
+   "name_en": null,
+   "title": "院士",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微电子/集成电路",
+    "半导体器件和集成电路"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/200909/t20090929_2533121.html",
+   "email": null,
+   "notes": "高频高压器件与集成研发中心；中国科学院院士、项目/团队负责人"
+  },
+  {
+   "name_cn": "叶甜春",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "半导体工艺/制造",
+    "纳米加工与制造"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/200909/t20090929_2532842.html",
+   "email": null,
+   "notes": "优青"
+  },
+  {
+   "name_cn": "周玉梅",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "集成电路测试/可靠性",
+    "功率半导体/电力电子"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/200909/t20090929_2531265.html",
+   "email": null,
+   "notes": "null"
+  },
+  {
+   "name_cn": "朱慧珑",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件",
+    "半导体工艺/制造",
+    "纳米器件及关键工艺基础技术先导"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/200909/t20090929_2529769.html",
+   "email": null,
+   "notes": "集成电路先导工艺研发中心"
+  },
+  {
+   "name_cn": "韩郑生",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微电子/集成电路"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/200909/t20090928_2529545.html",
+   "email": null,
+   "notes": "硅器件与集成研发中心"
+  },
+  {
+   "name_cn": "陈大鹏",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体工艺/制造",
+    "微细加工"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/200908/t20090803_2310001.html",
+   "email": null,
+   "notes": "null"
+  },
+  {
+   "name_cn": "陈岚",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟/混合信号电路",
+    "处理器/体系结构",
+    "存算一体/新型存储",
+    "EDA/设计自动化",
+    "半导体工艺/制造"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/200908/t20090803_2310000.html",
+   "email": null,
+   "notes": "EDA中心"
+  },
+  {
+   "name_cn": "陈鸣",
+   "name_en": null,
+   "title": "高级工程师",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟/混合信号电路",
+    "MEMS/传感器"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202605/t20260522_8208500.html",
+   "email": null,
+   "notes": "高频高压中心"
+  },
+  {
+   "name_cn": "汪令飞",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路设计",
+    "EDA/设计自动化",
+    "半导体器件",
+    "封装/三维集成"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202411/t20241115_7440187.html",
+   "email": null,
+   "notes": "重点实验室"
+  },
+  {
+   "name_cn": "潘冠中",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "光电子/硅光",
+    "半导体面发射激光芯片",
+    "新型光子集成器件"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202411/t20241115_7440168.html",
+   "email": null,
+   "notes": "高频高压中心"
+  },
+  {
+   "name_cn": "龚天成",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "存算一体/新型存储",
+    "半导体器件",
+    "缺陷表征方法"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202411/t20241115_7440158.html",
+   "email": null,
+   "notes": "微电子器件与集成技术研发中心；青促会"
+  },
+  {
+   "name_cn": "姜成昊",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "光电子/硅光",
+    "新型激光感知与测量",
+    "光电子集成与测量"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202407/t20240722_7234049.html",
+   "email": null,
+   "notes": "光电技术研发中心"
+  },
+  {
+   "name_cn": "曹鹤",
+   "name_en": null,
+   "title": "高级工程师",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "EDA/设计自动化",
+    "封装/三维集成",
+    "芯片可靠性验证"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202407/t20240719_7231465.html",
+   "email": null,
+   "notes": "EDA中心"
+  },
+  {
+   "name_cn": "桑云刚",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "光电子/硅光",
+    "微纳激光器件与物理",
+    "新型光子芯片集成"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202407/t20240719_7231428.html",
+   "email": null,
+   "notes": "光电技术研发中心"
+  },
+  {
+   "name_cn": "刘曼文",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路设计",
+    "半导体工艺/制造",
+    "光电探测/成像"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202407/t20240718_7230532.html",
+   "email": null,
+   "notes": "集成电路先导工艺研发中心"
+  },
+  {
+   "name_cn": "石俊凯",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "光刻/半导体装备",
+    "光学精密测量",
+    "微纳检测"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202407/t20240718_7230519.html",
+   "email": null,
+   "notes": "光电技术研发中心"
+  },
+  {
+   "name_cn": "刘建云",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "EDA/设计自动化",
+    "集成芯片热应力仿真与EDA",
+    "结构热机械可靠性验证"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202407/t20240718_7230452.html",
+   "email": null,
+   "notes": "EDA中心"
+  },
+  {
+   "name_cn": "侯峰泽",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "封装/三维集成",
+    "宽禁带/化合物半导体",
+    "三维异质集成"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202404/t20240417_7116793.html",
+   "email": null,
+   "notes": "封装中心"
+  },
+  {
+   "name_cn": "陈钏",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "封装/三维集成",
+    "封装热管理",
+    "微通道冷却"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202404/t20240417_7115989.html",
+   "email": null,
+   "notes": "封装中心；青促会"
+  },
+  {
+   "name_cn": "张保",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "存算一体/新型存储",
+    "半导体工艺/制造"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202404/t20240402_7063191.html",
+   "email": null,
+   "notes": "新技术开发部存储器实验室"
+  },
+  {
+   "name_cn": "刘立拓",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "光刻/半导体装备",
+    "半导体光学检测",
+    "光谱检测"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202311/t20231124_6931592.html",
+   "email": null,
+   "notes": "光电技术研发中心"
+  },
+  {
+   "name_cn": "李俊杰",
+   "name_en": null,
+   "title": "正高级工程师",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体器件",
+    "半导体工艺/制造",
+    "纳米器件及关键工艺"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202204/t20220402_6418466.html",
+   "email": null,
+   "notes": "先导中心"
+  },
+  {
+   "name_cn": "周娜",
+   "name_en": null,
+   "title": "高级工程师",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体工艺/制造",
+    "MEMS/传感器"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202112/t20211231_6331266.html",
+   "email": null,
+   "notes": "先导中心"
+  },
+  {
+   "name_cn": "霍树春",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "光刻/半导体装备",
+    "集成电路光学测量技术及精密仪器"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202111/t20211126_6272441.html",
+   "email": null,
+   "notes": "光电技术研发中心"
+  },
+  {
+   "name_cn": "郭轩",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟/混合信号电路",
+    "DAC"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202111/t20211126_6272435.html",
+   "email": null,
+   "notes": "高频高压器件与集成研发中心"
+  },
+  {
+   "name_cn": "路鑫超",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "MEMS/传感器",
+    "生物传感器",
+    "微纳检测"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202110/t20211019_6224446.html",
+   "email": null,
+   "notes": "健康电子中心"
+  },
+  {
+   "name_cn": "姚振杰",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "EDA/设计自动化"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202106/t20210611_6082358.html",
+   "email": null,
+   "notes": "EDA中心"
+  },
+  {
+   "name_cn": "丁金滨",
+   "name_en": null,
+   "title": "高级工程师",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "光刻/半导体装备",
+    "精密仪器与机械",
+    "准分子激光"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202012/t20201211_5814692.html",
+   "email": null,
+   "notes": "光电研发中心"
+  },
+  {
+   "name_cn": "张卫华",
+   "name_en": null,
+   "title": "高级工程师",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "EDA/设计自动化",
+    "PDK",
+    "标准单元库"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202009/t20200904_5686437.html",
+   "email": null,
+   "notes": "EDA中心"
+  },
+  {
+   "name_cn": "陈晓娟",
+   "name_en": null,
+   "title": "正高级工程师",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体器件",
+    "半导体工艺/制造",
+    "宽禁带/化合物半导体"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202009/t20200904_5686332.html",
+   "email": null,
+   "notes": "高频高压器件与集成研发中心"
+  },
+  {
+   "name_cn": "秦毅",
+   "name_en": null,
+   "title": "高级工程师",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "EDA/设计自动化",
+    "半导体工艺/制造",
+    "设计与制造协同"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202009/t20200902_5683743.html",
+   "email": null,
+   "notes": "EDA中心"
+  },
+  {
+   "name_cn": "孙锴",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体工艺/制造",
+    "复杂产品可靠性分析",
+    "智能制造"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202007/t20200730_5647980.html",
+   "email": null,
+   "notes": "高频高压中心"
+  },
+  {
+   "name_cn": "程鹏",
+   "name_en": null,
+   "title": "高级工程师",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "处理器/体系结构",
+    "通信基带/无线SoC"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202007/t20200728_5647179.html",
+   "email": null,
+   "notes": "智能制造电子研发中心"
+  },
+  {
+   "name_cn": "孟真",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路设计",
+    "MEMS/传感器",
+    "通信基带/无线SoC"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202007/t20200723_5643707.html",
+   "email": null,
+   "notes": "智能感知研发中心"
+  },
+  {
+   "name_cn": "朱精果",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "光电子/硅光",
+    "光电子集成"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202007/t20200717_5632985.html",
+   "email": null,
+   "notes": "光电技术研发中心"
+  },
+  {
+   "name_cn": "颜博霞",
+   "name_en": null,
+   "title": "高级工程师",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "光电子/硅光",
+    "集成光子学",
+    "非线性光学频率变换晶体材料"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202007/t20200715_5626199.html",
+   "email": null,
+   "notes": "光电研发中心"
+  },
+  {
+   "name_cn": "吴晓斌",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体工艺/制造",
+    "光刻/半导体装备",
+    "极紫外光刻"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202007/t20200715_5626045.html",
+   "email": null,
+   "notes": "光电技术研发中心"
+  },
+  {
+   "name_cn": "亓岩",
+   "name_en": null,
+   "title": "正高级工程师",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "封装/三维集成",
+    "光电子/硅光",
+    "激光器件与应用"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202007/t20200709_5621298.html",
+   "email": null,
+   "notes": "光电研发中心"
+  },
+  {
+   "name_cn": "韩晓泉",
+   "name_en": null,
+   "title": "正高级工程师",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "通信基带/无线SoC",
+    "光电测量",
+    "精密控制"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202007/t20200708_5620931.html",
+   "email": null,
+   "notes": "光电研发中心"
+  },
+  {
+   "name_cn": "韩春蕊",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "封装/三维集成",
+    "光电子/硅光",
+    "纳米光子学与光子集成"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202007/t20200708_5620844.html",
+   "email": null,
+   "notes": "光电研发中心"
+  },
+  {
+   "name_cn": "李大朋",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "通信基带/无线SoC",
+    "信号与信息处理",
+    "软件无线电人工智能应用"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202004/t20200402_5526345.html",
+   "email": null,
+   "notes": "通信中心"
+  },
+  {
+   "name_cn": "冷永清",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "模拟/混合信号电路",
+    "射频/毫米波/太赫兹",
+    "射频微波电路"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202004/t20200402_5526326.html",
+   "email": null,
+   "notes": "通信与信息工程研发中心"
+  },
+  {
+   "name_cn": "卢增雄",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "光刻/半导体装备",
+    "光学检测",
+    "精密仪器"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202003/t20200324_5518682.html",
+   "email": null,
+   "notes": "光刻技术总体部"
+  },
+  {
+   "name_cn": "解婧",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体工艺/制造",
+    "MEMS/传感器",
+    "微纳材料"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/201907/t20190730_5353609.html",
+   "email": null,
+   "notes": "微电子仪器设备研发中心"
+  },
+  {
+   "name_cn": "熊伟",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "EDA/设计自动化",
+    "半导体工艺/制造"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/201907/t20190730_5353519.html",
+   "email": null,
+   "notes": "微电子仪器设备研发中心"
+  },
+  {
+   "name_cn": "王启东",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "射频/毫米波/太赫兹",
+    "封装/三维集成",
+    "MEMS/传感器"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/201907/t20190725_5351353.html",
+   "email": null,
+   "notes": "封装中心；青促会"
+  },
+  {
+   "name_cn": "李君",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "射频/毫米波/太赫兹",
+    "EDA/设计自动化",
+    "封装/三维集成"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/201907/t20190723_5346376.html",
+   "email": null,
+   "notes": "系统封装与集成研发中心"
+  },
+  {
+   "name_cn": "李志华",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "光电子/硅光",
+    "硅光子"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/201906/t20190604_5317459.html",
+   "email": null,
+   "notes": "先导中心 光子器件与集成技术部"
+  },
+  {
+   "name_cn": "杨妍",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "光电子/硅光",
+    "硅基光电子集成芯片"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/201901/t20190117_5231066.html",
+   "email": null,
+   "notes": "先导中心"
+  },
+  {
+   "name_cn": "郑旭强",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "模拟/混合信号电路"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/201811/t20181127_5193603.html",
+   "email": null,
+   "notes": "高频高压器件与集成研发中心"
+  },
+  {
+   "name_cn": "苏永波",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟/混合信号电路",
+    "射频/毫米波/太赫兹",
+    "半导体器件",
+    "半导体工艺/制造",
+    "宽禁带/化合物半导体"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/201811/t20181127_5193595.html",
+   "email": null,
+   "notes": "高频高压器件与集成研发中心；青促会"
+  },
+  {
+   "name_cn": "彭松昂",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "二维材料/低维器件",
+    "二维材料电子器件与电路"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/201811/t20181127_5193589.html",
+   "email": null,
+   "notes": "高频高压器件与集成研发中心"
+  },
+  {
+   "name_cn": "张大勇",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "射频/毫米波/太赫兹",
+    "半导体器件",
+    "半导体工艺/制造",
+    "宽禁带/化合物半导体",
+    "二维材料/低维器件"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/201811/t20181127_5193580.html",
+   "email": null,
+   "notes": "高频高压器件与集成研发中心"
+  },
+  {
+   "name_cn": "白云",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体器件",
+    "宽禁带/化合物半导体",
+    "功率半导体/电力电子"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/201811/t20181127_5193570.html",
+   "email": null,
+   "notes": "高频高压器件与集成研发中心"
+  },
+  {
+   "name_cn": "梁晓新",
+   "name_en": null,
+   "title": "研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "射频/毫米波/太赫兹",
+    "微波毫米波芯片及模块"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/201710/t20171011_4871649.html",
+   "email": null,
+   "notes": "通信与信息工程研发中心"
+  },
+  {
+   "name_cn": "张以涛",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "模拟/混合信号电路",
+    "MEMS/传感器",
+    "可穿戴式人体生理信号感知"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/201707/t20170704_4822549.html",
+   "email": null,
+   "notes": "健康电子研发中心"
+  },
+  {
+   "name_cn": "卢维尔",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "模拟/混合信号电路",
+    "集成电路测试/可靠性",
+    "半导体器件",
+    "半导体工艺/制造"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/201706/t20170626_4818247.html",
+   "email": null,
+   "notes": "抗辐照器件技术重点实验室"
+  },
+  {
+   "name_cn": "杨颖",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "微电子研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路设计",
+    "处理器/体系结构",
+    "通信基带/无线SoC"
+   ],
+   "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/201706/t20170616_4813412.html",
+   "email": null,
+   "notes": "新技术开发部"
+  },
+  {
+   "name_cn": "袁国栋",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体材料/外延"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/695.html",
+   "email": null,
+   "notes": "半导体物理实验室"
+  },
+  {
+   "name_cn": "刘岳阳",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/843.html",
+   "email": null,
+   "notes": "半导体物理实验室；院高层次人才"
+  },
+  {
+   "name_cn": "李树深",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光电子/硅光",
+    "量子芯片/量子计算",
+    "二维材料/低维器件"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/804.html",
+   "email": null,
+   "notes": "半导体物理实验室；中国科学院院士；杰青"
+  },
+  {
+   "name_cn": "伊晓燕",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体材料/外延"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/701.html",
+   "email": null,
+   "notes": "半导体照明研发中心"
+  },
+  {
+   "name_cn": "张东",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "二维材料/低维器件",
+    "师从常凯院士"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/4494.html",
+   "email": null,
+   "notes": "半导体超晶格国家重点实验室"
+  },
+  {
+   "name_cn": "刘力源",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波/太赫兹",
+    "光电探测/成像",
+    "MEMS/传感器",
+    "二维材料/低维器件"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/788.html",
+   "email": null,
+   "notes": "半导体物理实验室"
+  },
+  {
+   "name_cn": "娄正",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS/传感器",
+    "二维材料/低维器件",
+    "新型柔性传感器件"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/776.html",
+   "email": null,
+   "notes": "半导体物理实验室"
+  },
+  {
+   "name_cn": "王智杰",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体材料/外延",
+    "光电化学"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/731.html",
+   "email": null,
+   "notes": "固态光电信息技术实验室"
+  },
+  {
+   "name_cn": "张钊",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟/混合信号电路",
+    "二维材料/低维器件"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/862.html",
+   "email": null,
+   "notes": "半导体物理实验室"
+  },
+  {
+   "name_cn": "于海娟",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光刻/半导体装备"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/697.html",
+   "email": null,
+   "notes": "全固态光源实验室"
+  },
+  {
+   "name_cn": "杨晓光",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体材料/外延",
+    "二维材料/低维器件",
+    "量子点"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/705.html",
+   "email": null,
+   "notes": "固态光电信息技术实验室"
+  },
+  {
+   "name_cn": "蒋琦",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微电子/集成电路",
+    "研究员",
+    "年出生于湖南"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/4333.html",
+   "email": null,
+   "notes": "院高层次人才"
+  },
+  {
+   "name_cn": "宁欣",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "形象认知计算理论与方法",
+    "副主任"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/848.html",
+   "email": null,
+   "notes": "高速电路与神经网络实验室"
+  },
+  {
+   "name_cn": "李伟（半导体所）",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波/太赫兹"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/803.html",
+   "email": null,
+   "notes": "光电子材料与器件重点实验室；本项目为消歧标注：同名者，见「半导体所」"
+  },
+  {
+   "name_cn": "李芳",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光电子/硅光",
+    "MEMS/传感器"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/807.html",
+   "email": null,
+   "notes": "光电系统实验室"
+  },
+  {
+   "name_cn": "于双铭",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟/混合信号电路",
+    "类脑视觉芯片"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/857.html",
+   "email": null,
+   "notes": "半导体物理实验室"
+  },
+  {
+   "name_cn": "梁松",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体材料/外延",
+    "光电子/硅光",
+    "宽禁带/化合物半导体"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/797.html",
+   "email": null,
+   "notes": "光电子材料与器件重点实验室"
+  },
+  {
+   "name_cn": "王国伟",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体材料/外延",
+    "光电探测/成像",
+    "宽禁带/化合物半导体",
+    "二维材料/低维器件"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/747.html",
+   "email": null,
+   "notes": "光电子材料与器件重点实验室"
+  },
+  {
+   "name_cn": "卓宁",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体材料/外延",
+    "光电子/硅光",
+    "红外半导体激光材料与器件"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/864.html",
+   "email": null,
+   "notes": "固态光电信息技术实验室"
+  },
+  {
+   "name_cn": "鉴海防",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "封装/三维集成"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/811.html",
+   "email": null,
+   "notes": "固态光电信息技术实验室"
+  },
+  {
+   "name_cn": "张文涛",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS/传感器"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/689.html",
+   "email": null,
+   "notes": "光电系统实验室"
+  },
+  {
+   "name_cn": "渠红伟",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体工艺/制造",
+    "光电子/硅光",
+    "随后在半导体所参加"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/759.html",
+   "email": null,
+   "notes": "固态光电信息技术实验室"
+  },
+  {
+   "name_cn": "王晓东",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "存算一体/新型存储",
+    "半导体器件",
+    "封装/三维集成",
+    "半导体材料/外延",
+    "光电子/硅光",
+    "宽禁带/化合物半导体"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/740.html",
+   "email": null,
+   "notes": "半导体集成技术中心"
+  },
+  {
+   "name_cn": "伍绍腾",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微电子/集成电路",
+    "并成为研究员"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/4319.html",
+   "email": null,
+   "notes": "院高层次人才"
+  },
+  {
+   "name_cn": "郝腾飞",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波/太赫兹",
+    "研究员"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/5005.html",
+   "email": null,
+   "notes": "优青"
+  },
+  {
+   "name_cn": "杨跃德",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光电子/硅光",
+    "半导体激光器",
+    "微腔物理特性"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/702.html",
+   "email": null,
+   "notes": "光电子材料与器件重点实验室"
+  },
+  {
+   "name_cn": "林学春",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体工艺/制造",
+    "光电子/硅光",
+    "年获评研究员"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/796.html",
+   "email": null,
+   "notes": "全固态光源实验室；杰青"
+  },
+  {
+   "name_cn": "黄北举",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光电子/硅光"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/815.html",
+   "email": null,
+   "notes": "光电子材料与器件重点实验室"
+  },
+  {
+   "name_cn": "姜丽娟",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "射频/毫米波/太赫兹",
+    "半导体器件",
+    "半导体材料/外延",
+    "宽禁带/化合物半导体",
+    "功率半导体/电力电子"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/840.html",
+   "email": null,
+   "notes": "固态光电信息技术实验室"
+  },
+  {
+   "name_cn": "林妙玲",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "二维材料/低维器件"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/1884.html",
+   "email": null,
+   "notes": "半导体物理实验室"
+  },
+  {
+   "name_cn": "吴东海",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "量子芯片/量子计算",
+    "宽禁带/化合物半导体",
+    "二维材料/低维器件"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/854.html",
+   "email": null,
+   "notes": "光电子材料与器件重点实验室"
+  },
+  {
+   "name_cn": "王宇飞",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "光电子/硅光",
+    "MEMS/传感器",
+    "通信基带/无线SoC"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/734.html",
+   "email": null,
+   "notes": "固态光电信息技术实验室"
+  },
+  {
+   "name_cn": "马稳龙",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "量子芯片/量子计算",
+    "光刻/半导体装备",
+    "师从李树深院士"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/847.html",
+   "email": null,
+   "notes": "半导体物理实验室"
+  },
+  {
+   "name_cn": "韩伟华",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "封装/三维集成",
+    "光电子/硅光"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/816.html",
+   "email": null,
+   "notes": "半导体集成技术中心"
+  },
+  {
+   "name_cn": "王军喜",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体材料/外延",
+    "半导体材料与器件"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/745.html",
+   "email": null,
+   "notes": "半导体照明研发中心"
+  },
+  {
+   "name_cn": "刘志强",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体材料/外延",
+    "宽禁带/化合物半导体",
+    "GaN材料物性分析"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/778.html",
+   "email": null,
+   "notes": "半导体照明研发中心"
+  },
+  {
+   "name_cn": "武荣庭",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体工艺/制造",
+    "半导体材料/外延",
+    "武荣庭"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/4991.html",
+   "email": null,
+   "notes": "半导体物理实验室"
+  },
+  {
+   "name_cn": "黄稳柱",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "MEMS/传感器"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/844.html",
+   "email": null,
+   "notes": "光电系统实验室"
+  },
+  {
+   "name_cn": "陈平",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体材料/外延",
+    "宽禁带/化合物半导体",
+    "历任助理研究员"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/831.html",
+   "email": null,
+   "notes": "固态光电信息技术实验室"
+  },
+  {
+   "name_cn": "石暖暖",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波/太赫兹",
+    "封装/三维集成",
+    "通信基带/无线SoC"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/850.html",
+   "email": null,
+   "notes": "光电子材料与器件重点实验室"
+  },
+  {
+   "name_cn": "丛慧",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "光电探测/成像"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/1878.html",
+   "email": null,
+   "notes": "光电子材料与器件重点实验室"
+  },
+  {
+   "name_cn": "李文昌",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "模拟/混合信号电路",
+    "射频/毫米波/太赫兹",
+    "MEMS/传感器"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/801.html",
+   "email": null,
+   "notes": "固态光电信息技术实验室"
+  },
+  {
+   "name_cn": "李明（半导体所）",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体材料/外延",
+    "光电子/硅光",
+    "通信基带/无线SoC"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/805.html",
+   "email": null,
+   "notes": "光电子材料与器件重点实验室；本项目为消歧标注：同名者，见「半导体所」"
+  },
+  {
+   "name_cn": "王明金",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "封装/三维集成",
+    "光电子/硅光",
+    "MEMS/传感器",
+    "通信基带/无线SoC"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/5020.html",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "薛春来",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "封装/三维集成",
+    "半导体材料/外延",
+    "副所长"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/713.html",
+   "email": null,
+   "notes": "光电子材料与器件重点实验室；杰青"
+  },
+  {
+   "name_cn": "程传同",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "光电探测/成像",
+    "MEMS/传感器"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/1877.html",
+   "email": null,
+   "notes": "光电子材料与器件重点实验室"
+  },
+  {
+   "name_cn": "徐应强",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体工艺/制造",
+    "半导体材料/外延",
+    "二维材料/低维器件"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/716.html",
+   "email": null,
+   "notes": "光电子材料与器件重点实验室"
+  },
+  {
+   "name_cn": "张志研",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "光电子/硅光"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/1893.html",
+   "email": null,
+   "notes": "全固态光源实验室"
+  },
+  {
+   "name_cn": "赵洸铭",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "封装/三维集成",
+    "光电子/硅光"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/4324.html",
+   "email": null,
+   "notes": "院高层次人才"
+  },
+  {
+   "name_cn": "徐团伟",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "光电子/硅光",
+    "特种光纤光栅"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/717.html",
+   "email": null,
+   "notes": "光电系统实验室"
+  },
+  {
+   "name_cn": "刘舒曼",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体材料/外延",
+    "光电探测/成像",
+    "二维材料/低维器件"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/786.html",
+   "email": null,
+   "notes": "固态光电信息技术实验室"
+  },
+  {
+   "name_cn": "杨华",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "封装/三维集成",
+    "半导体材料/外延",
+    "光电子/硅光"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/4347.html",
+   "email": null,
+   "notes": "光电子材料与器件重点实验室；院高层次人才"
+  },
+  {
+   "name_cn": "曹晓东",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟/混合信号电路",
+    "射频/毫米波/太赫兹",
+    "通信基带/无线SoC"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/837.html",
+   "email": null,
+   "notes": "高速电路与神经网络实验室"
+  },
+  {
+   "name_cn": "梁锋",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体材料/外延",
+    "光电子/硅光",
+    "宽禁带/化合物半导体"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/1883.html",
+   "email": null,
+   "notes": "固态光电信息技术实验室"
+  },
+  {
+   "name_cn": "徐云",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光电子/硅光",
+    "光电探测/成像",
+    "无机可延展柔性光电子器件的"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/715.html",
+   "email": null,
+   "notes": "纳米光电子实验室"
+  },
+  {
+   "name_cn": "金鹏",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体材料/外延",
+    "光电子/硅光",
+    "师从潘士宏教授"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/810.html",
+   "email": null,
+   "notes": "固态光电信息技术实验室"
+  },
+  {
+   "name_cn": "宋志刚固",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "EDA/设计自动化",
+    "半导体材料/外延",
+    "光电子/硅光"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/851.html",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "刘文浩",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体器件",
+    "半导体材料/外延",
+    "介观尺度的多尺度计算方法"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/5036.html",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "杨盈莹",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "射频/毫米波/太赫兹",
+    "激光物理",
+    "激光技术与应用"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/703.html",
+   "email": null,
+   "notes": "全固态光源实验室"
+  },
+  {
+   "name_cn": "周子琦",
+   "name_en": null,
+   "title": null,
+   "department": "半导体研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体材料/外延",
+    "光电子/硅光",
+    "光电探测/成像",
+    "MEMS/传感器"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/5034.html",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "刘安金",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光电子/硅光",
+    "微纳面发射激光器",
+    "混合集成光子芯片"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/795.html",
+   "email": null,
+   "notes": "光电子材料与器件重点实验室"
+  },
+  {
+   "name_cn": "刘宇",
+   "name_en": null,
+   "title": "正高级工程师",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波/太赫兹",
+    "封装/三维集成",
+    "光电子/硅光",
+    "通信基带/无线SoC"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/782.html",
+   "email": null,
+   "notes": "光电子材料与器件重点实验室"
+  },
+  {
+   "name_cn": "李钊",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS/传感器",
+    "生物电子",
+    "微流控芯片"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/845.html",
+   "email": null,
+   "notes": "光电子材料与器件重点实验室；院高层次人才"
+  },
+  {
+   "name_cn": "曹玉莲",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光电子/硅光",
+    "光电探测/成像",
+    "宽禁带/化合物半导体",
+    "二维材料/低维器件"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/836.html",
+   "email": null,
+   "notes": "纳米光电子实验室"
+  },
+  {
+   "name_cn": "张锦川",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件",
+    "半导体工艺/制造",
+    "半导体材料/外延",
+    "光电子/硅光"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/693.html",
+   "email": null,
+   "notes": "固态光电信息技术实验室"
+  },
+  {
+   "name_cn": "张冶金",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光电子/硅光",
+    "光电探测/成像",
+    "宽禁带/化合物半导体"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/684.html",
+   "email": null,
+   "notes": "光电子材料与器件重点实验室"
+  },
+  {
+   "name_cn": "郭文涛",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "光电子/硅光",
+    "MEMS/传感器",
+    "北京市科技新星"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/869.html",
+   "email": null,
+   "notes": "光电子材料与器件重点实验室"
+  },
+  {
+   "name_cn": "刘雄华",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "二维材料/低维器件",
+    "年出生于湖北省汉川市"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/4410.html",
+   "email": null,
+   "notes": "半导体超晶格国家重点实验室"
+  },
+  {
+   "name_cn": "谭平恒",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件",
+    "二维半导体声子物理",
+    "谭平恒研究员一直从事半导体光学"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/751.html",
+   "email": null,
+   "notes": "半导体物理实验室"
+  },
+  {
+   "name_cn": "王新伟",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光电探测/成像",
+    "远距离",
+    "兼任红外与激光工程青年编委"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/737.html",
+   "email": null,
+   "notes": "光电系统实验室"
+  },
+  {
+   "name_cn": "翟慎强",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体器件",
+    "半导体材料/外延",
+    "光电子/硅光"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/858.html",
+   "email": null,
+   "notes": "固态光电信息技术实验室"
+  },
+  {
+   "name_cn": "王开友",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件",
+    "中国物理学会理事",
+    "是国内外多个杂志编委"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/744.html",
+   "email": null,
+   "notes": "半导体物理实验室；杰青"
+  },
+  {
+   "name_cn": "沈桂英",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体材料/外延",
+    "光电子/硅光",
+    "主要从事磷化铟"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/1887.html",
+   "email": null,
+   "notes": "固态光电信息技术实验室"
+  },
+  {
+   "name_cn": "肖金龙",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光电子/硅光",
+    "年至今留半导体所",
+    "目前主要从事微纳谐振腔激光器"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/721.html",
+   "email": null,
+   "notes": "光电子材料与器件重点实验室"
+  },
+  {
+   "name_cn": "刘孔",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体材料/外延",
+    "二维材料/低维器件",
+    "之后回半导体所任副研究员"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/789.html",
+   "email": null,
+   "notes": "固态光电信息技术实验室"
+  },
+  {
+   "name_cn": "赵树森",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体工艺/制造",
+    "激光制造",
+    "激光焊接"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/679.html",
+   "email": null,
+   "notes": "全固态光源实验室"
+  },
+  {
+   "name_cn": "王丽丽",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微电子/集成电路"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/853.html",
+   "email": null,
+   "notes": "半导体物理实验室；优青；院高层次人才"
+  },
+  {
+   "name_cn": "张杨",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件",
+    "半导体工艺/制造",
+    "半导体材料/外延",
+    "光电子/硅光",
+    "宽禁带/化合物半导体"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/872.html",
+   "email": null,
+   "notes": "半导体材料科学重点实验室"
+  },
+  {
+   "name_cn": "尹志岗",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体材料/外延",
+    "物性表征和应用",
+    "先后主持和参加科技部"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/699.html",
+   "email": null,
+   "notes": "半导体物理实验室"
+  },
+  {
+   "name_cn": "岳世忠",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件",
+    "光电子/硅光",
+    "宽禁带/化合物半导体",
+    "功率半导体/电力电子"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/4340.html",
+   "email": null,
+   "notes": "院高层次人才"
+  },
+  {
+   "name_cn": "郑婉华",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体工艺/制造",
+    "半导体材料/外延",
+    "光电子/硅光"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/676.html",
+   "email": null,
+   "notes": "固态光电信息技术实验室；中国科学院院士"
+  },
+  {
+   "name_cn": "刘喆",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体材料/外延",
+    "光电子/硅光",
+    "新型氮化物材料生长和器件研制"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/779.html",
+   "email": null,
+   "notes": "固态光电信息技术实验室"
+  },
+  {
+   "name_cn": "张菁",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体材料/外延",
+    "取得了一系列原创性研究成果"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/859.html",
+   "email": null,
+   "notes": "半导体物理实验室"
+  },
+  {
+   "name_cn": "娄文凯",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "二维材料/低维器件",
+    "凝聚态理论物理",
+    "自旋电子学"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/777.html",
+   "email": null,
+   "notes": "半导体物理实验室"
+  },
+  {
+   "name_cn": "魏学成",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体材料/外延",
+    "光电子/硅光"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/727.html",
+   "email": null,
+   "notes": "半导体照明研发中心"
+  },
+  {
+   "name_cn": "潘东",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "量子芯片/量子计算",
+    "二维材料/低维器件",
+    "半导体低维材料物理"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/765.html",
+   "email": null,
+   "notes": "半导体物理实验室"
+  },
+  {
+   "name_cn": "魏大海",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "二维材料/低维器件"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/729.html",
+   "email": null,
+   "notes": "半导体物理实验室；院高层次人才"
+  },
+  {
+   "name_cn": "祁楠",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟/混合信号电路",
+    "二维材料/低维器件"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/762.html",
+   "email": null,
+   "notes": "半导体物理实验室"
+  },
+  {
+   "name_cn": "韦欣",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件",
+    "半导体材料/外延",
+    "光电子/硅光",
+    "宽禁带/化合物半导体"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/730.html",
+   "email": null,
+   "notes": "纳米光电子实验室"
+  },
+  {
+   "name_cn": "申超",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体材料/外延",
+    "二维材料/低维器件",
+    "历任助理研究员"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/849.html",
+   "email": null,
+   "notes": "半导体物理实验室"
+  },
+  {
+   "name_cn": "徐驰",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体材料/外延",
+    "并研究相关的半导体物理问题"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/856.html",
+   "email": null,
+   "notes": "光电子材料与器件重点实验室"
+  },
+  {
+   "name_cn": "张韵",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "存算一体/新型存储",
+    "半导体器件",
+    "封装/三维集成",
+    "半导体材料/外延",
+    "光电子/硅光",
+    "宽禁带/化合物半导体"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/683.html",
+   "email": null,
+   "notes": "固态光电信息技术实验室"
+  },
+  {
+   "name_cn": "吴江滨",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "二维材料/低维器件",
+    "任研究员"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/1888.html",
+   "email": null,
+   "notes": "半导体物理实验室；院高层次人才"
+  },
+  {
+   "name_cn": "熊聪光电",
+   "name_en": null,
+   "title": "正高级工程师",
+   "department": "半导体研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体材料/外延",
+    "光电子/硅光",
+    "半导体热电材料的"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/855.html",
+   "email": null,
+   "notes": "工程中心"
+  },
+  {
+   "name_cn": "史衍猛",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "宽禁带/化合物半导体",
+    "二维材料/低维器件",
+    "任研究员"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/870.html",
+   "email": null,
+   "notes": "半导体物理实验室"
+  },
+  {
+   "name_cn": "张俊",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光电子/硅光",
+    "二维材料/低维器件",
+    "半导体声子物理和器件"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/692.html",
+   "email": null,
+   "notes": "半导体物理实验室；杰青；院高层次人才"
+  },
+  {
+   "name_cn": "赵德刚",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件",
+    "半导体材料/外延",
+    "光电子/硅光",
+    "宽禁带/化合物半导体"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/682.html",
+   "email": null,
+   "notes": "固态光电信息技术实验室；杰青；院高层次人才"
+  },
+  {
+   "name_cn": "陈幼玲",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "光电子/硅光",
+    "MEMS/传感器",
+    "微腔传感"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/1876.html",
+   "email": null,
+   "notes": "光电子材料与器件重点实验室"
+  },
+  {
+   "name_cn": "王欣",
+   "name_en": null,
+   "title": "正高级工程师",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波/太赫兹",
+    "封装/三维集成",
+    "光电子/硅光",
+    "通信基带/无线SoC"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/738.html",
+   "email": null,
+   "notes": "光电子材料与器件重点实验室"
+  },
+  {
+   "name_cn": "蒋洞微",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体材料/外延",
+    "光电探测/成像",
+    "宽禁带/化合物半导体",
+    "二维材料/低维器件"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/1880.html",
+   "email": null,
+   "notes": "光电子材料与器件重点实验室"
+  },
+  {
+   "name_cn": "杨珏晗",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体材料/外延",
+    "MEMS/传感器",
+    "二维材料/低维器件"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/1890.html",
+   "email": null,
+   "notes": "半导体物理实验室"
+  },
+  {
+   "name_cn": "骆军委",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "二维材料/低维器件",
+    "计算材料和器件研究组组长",
+    "研究员和资深研究员"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/773.html",
+   "email": null,
+   "notes": "半导体物理实验室；杰青"
+  },
+  {
+   "name_cn": "周代兵",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "光电子/硅光",
+    "宽禁带/化合物半导体",
+    "半导体激光器"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/1895.html",
+   "email": null,
+   "notes": "光电子材料与器件重点实验室"
+  },
+  {
+   "name_cn": "张兴旺",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体工艺/制造",
+    "半导体材料/外延",
+    "二维原子晶体材料与器件"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/687.html",
+   "email": null,
+   "notes": "半导体物理实验室"
+  },
+  {
+   "name_cn": "李卫军",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "机器视觉",
+    "模式识别与智能系统"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/802.html",
+   "email": null,
+   "notes": "高速电路与神经网络实验室"
+  },
+  {
+   "name_cn": "黄雨青",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体材料/外延",
+    "半导体纳米结构中光与自旋相互作用",
+    "取得了一系列原创性研究成果"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/1879.html",
+   "email": null,
+   "notes": "半导体物理实验室"
+  },
+  {
+   "name_cn": "游经碧",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体材料/外延"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/698.html",
+   "email": null,
+   "notes": "半导体物理实验室；杰青；院高层次人才"
+  },
+  {
+   "name_cn": "阚强",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光电子/硅光",
+    "垂直腔面发射激光器及光子集成芯片",
+    "OSA"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/809.html",
+   "email": null,
+   "notes": "光电子材料与器件重点实验室"
+  },
+  {
+   "name_cn": "朱礼军",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "存算一体/新型存储",
+    "二维材料/低维器件",
+    "自旋轨道矩新材料"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/866.html",
+   "email": null,
+   "notes": "半导体物理实验室；院高层次人才"
+  },
+  {
+   "name_cn": "杨静",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体材料/外延",
+    "宽禁带/化合物半导体",
+    "研究员"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/871.html",
+   "email": null,
+   "notes": "固态光电信息技术实验室；院高层次人才"
+  },
+  {
+   "name_cn": "魏同波",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体材料/外延",
+    "光电子/硅光",
+    "光电探测/成像",
+    "宽禁带/化合物半导体"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/728.html",
+   "email": null,
+   "notes": "半导体照明研发中心"
+  },
+  {
+   "name_cn": "仲莉",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件",
+    "光电子/硅光",
+    "排名第三"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/675.html",
+   "email": null,
+   "notes": "工程中心"
+  },
+  {
+   "name_cn": "张昕",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "二维材料/低维器件",
+    "师从谭平恒研究员和郑厚植院士"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/860.html",
+   "email": null,
+   "notes": "半导体物理实验室；院高层次人才"
+  },
+  {
+   "name_cn": "魏钟鸣",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体材料/外延",
+    "二维材料/低维器件"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/726.html",
+   "email": null,
+   "notes": "半导体物理实验室"
+  },
+  {
+   "name_cn": "赵超",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体材料/外延",
+    "宽禁带/化合物半导体",
+    "师从王占国院士"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/842.html",
+   "email": null,
+   "notes": "光电子材料与器件全国重点实验室；院高层次人才"
+  },
+  {
+   "name_cn": "王毅军",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "通信基带/无线SoC",
+    "神经工程和计算神经科学的"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/736.html",
+   "email": null,
+   "notes": "固态光电信息技术实验室；院高层次人才"
+  },
+  {
+   "name_cn": "张永亮",
+   "name_en": null,
+   "title": "研究员",
+   "department": "半导体研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS/传感器",
+    "二维材料/低维器件"
+   ],
+   "homepage": "https://bdt.semi.ac.cn/yanjiusheng/contents/695/861.html",
+   "email": null,
+   "notes": "半导体物理实验室"
+  },
+  {
+   "name_cn": "武震宇",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波/太赫兹",
+    "MEMS/传感器",
+    "通信基带/无线SoC"
+   ],
+   "homepage": "http://sim.cas.cn/dwjs2016/zgjrc/cgqjs/202505/t20250509_7648165.html",
+   "email": null,
+   "notes": "传感技术实验室；先进MEMS器件和微系统课题组；博士生导师"
+  },
+  {
+   "name_cn": "汪洋",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体工艺/制造",
+    "MEMS/传感器",
+    "微型化光电模组"
+   ],
+   "homepage": "http://sim.cas.cn/dwjs2016/fgjrc/cgqjs/202505/t20250512_7649923.html",
+   "email": null,
+   "notes": "传感技术实验室；先进MEMS器件和微系统课题组"
+  },
+  {
+   "name_cn": "陈浩",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS/传感器",
+    "量子芯片/量子计算"
+   ],
+   "homepage": "https://people.ucas.ac.cn/~0073676",
+   "email": null,
+   "notes": "传感技术实验室；先进MEMS器件和微系统课题组；博士生导师"
+  },
+  {
+   "name_cn": "田丰",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS/传感器",
+    "通信基带/无线SoC",
+    "微纳光子学"
+   ],
+   "homepage": "http://sim.cas.cn/dwjs2016/fgjrc/cgqjs/202505/t20250512_7649925.html",
+   "email": null,
+   "notes": "传感技术实验室；先进MEMS器件和微系统课题组；博士生导师"
+  },
+  {
+   "name_cn": "周志涛",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS/传感器",
+    "柔性脑机接口",
+    "新型微纳传感"
+   ],
+   "homepage": "http://sim.cas.cn/dwjs2016/zgjrc/cgqjs/202505/t20250509_7648131.html",
+   "email": null,
+   "notes": "传感技术实验室；生物和信息技术融合（BTIT）课题组；博士生导师"
+  },
+  {
+   "name_cn": "秦楠",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "MEMS/传感器",
+    "生物与信息交叉融合",
+    "智能传感器"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201907/t20190715_5342122.html",
+   "email": null,
+   "notes": "传感技术实验室；生物和信息技术融合（BTIT）课题组"
+  },
+  {
+   "name_cn": "魏晓玲",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS/传感器",
+    "脑机接口",
+    "生物电子"
+   ],
+   "homepage": "http://sim.cas.cn/dwjs2016/zgjrc/cgqjs/202505/t20250509_7648130.html",
+   "email": null,
+   "notes": "传感技术实验室；多模脑机交互课题组；博士生导师"
+  },
+  {
+   "name_cn": "李昕欣",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS/传感器"
+   ],
+   "homepage": "http://sim.cas.cn/dwjs2016/zgjrc/cgqjs/202505/t20250509_7648127.html",
+   "email": null,
+   "notes": "传感技术实验室；MEMS传感器课题组；博士生导师"
+  },
+  {
+   "name_cn": "杨恒",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体工艺/制造",
+    "硅基时钟振荡器",
+    "微纳集成制造"
+   ],
+   "homepage": "http://sim.cas.cn/dwjs2016/zgjrc/cgqjs/202505/t20250509_7648118.html",
+   "email": null,
+   "notes": "传感技术实验室；MEMS传感器课题组；博士生导师"
+  },
+  {
+   "name_cn": "王家畴",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体工艺/制造",
+    "MEMS/传感器"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "传感技术实验室；MEMS传感器课题组"
+  },
+  {
+   "name_cn": "许鹏程",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS/传感器",
+    "微纳传感器",
+    "生化传感器"
+   ],
+   "homepage": "http://sim.cas.cn/dwjs2016/zgjrc/cgqjs/202505/t20250509_7648165.html",
+   "email": null,
+   "notes": "传感技术实验室；MEMS传感器课题组；博士生导师"
+  },
+  {
+   "name_cn": "贾浩",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体工艺/制造",
+    "MEMS/传感器",
+    "光刻/半导体装备"
+   ],
+   "homepage": "https://people.ucas.ac.cn/~0073690",
+   "email": null,
+   "notes": "传感技术实验室；MEMS传感器课题组；博士生导师"
+  },
+  {
+   "name_cn": "李明（上海微系统所）",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "MEMS/传感器",
+    "纳米敏感材料"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "传感技术实验室；MEMS传感器课题组；本项目为消歧标注：同名者，见「上海微系统所」"
+  },
+  {
+   "name_cn": "陈滢",
+   "name_en": null,
+   "title": "高级工程师",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "MEMS/传感器",
+    "微纳传感器",
+    "生化传感器"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "传感技术实验室；MEMS传感器课题组"
+  },
+  {
+   "name_cn": "王雪凤",
+   "name_en": null,
+   "title": null,
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "MEMS/传感器",
+    "微纳传感器",
+    "生化传感器"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "传感技术实验室；MEMS传感器课题组"
+  },
+  {
+   "name_cn": "陈方",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "MEMS/传感器"
+   ],
+   "homepage": "http://sim.cas.cn/dwjs2016/fgjrc/cgqjs/202505/t20250512_7649922.html",
+   "email": null,
+   "notes": "传感技术实验室"
+  },
+  {
+   "name_cn": "冯飞",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体工艺/制造",
+    "MEMS/传感器",
+    "光刻/半导体装备"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "传感技术实验室；MEMS气相色谱传感课题组；博士生导师"
+  },
+  {
+   "name_cn": "程建功",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS/传感器",
+    "新型敏感材料与传感器"
+   ],
+   "homepage": "http://sim.cas.cn/dwjs2016/zgjrc/cgqjs/202505/t20250509_7648124.html",
+   "email": null,
+   "notes": "传感技术实验室；有机半导体气体传感器课题组；博士生导师"
+  },
+  {
+   "name_cn": "贺庆国",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS/传感器",
+    "有机半导体",
+    "人工智能材料设计"
+   ],
+   "homepage": "http://sim.cas.cn/dwjs2016/zgjrc/cgqjs/202505/t20250509_7648115.html",
+   "email": null,
+   "notes": "传感技术实验室；有机半导体气体传感器课题组；博士生导师"
+  },
+  {
+   "name_cn": "付艳艳",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS/传感器",
+    "有机半导体",
+    "化学传感器"
+   ],
+   "homepage": "http://sim.cas.cn/dwjs2016/zgjrc/cgqjs/202505/t20250509_7648112.html",
+   "email": null,
+   "notes": "传感技术实验室；有机半导体气体传感器课题组；博士生导师"
+  },
+  {
+   "name_cn": "徐炜",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "MEMS/传感器",
+    "有机半导体荧光敏感材料",
+    "超分子界面主客体过程"
+   ],
+   "homepage": "http://sim.cas.cn/dwjs2016/fgjrc/cgqjs/202505/t20250512_7649926.html",
+   "email": null,
+   "notes": "传感技术实验室；有机半导体气体传感器课题组"
+  },
+  {
+   "name_cn": "李卉梓",
+   "name_en": null,
+   "title": null,
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "MEMS/传感器",
+    "微纳光学结构",
+    "片上光学器件"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "传感技术实验室；有机半导体气体传感器课题组"
+  },
+  {
+   "name_cn": "赵建龙",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS/传感器",
+    "微光机电集成系统及微纳传感器"
+   ],
+   "homepage": "http://sim.cas.cn/dwjs2016/zgjrc/cgqjs/202505/t20250509_7648123.html",
+   "email": null,
+   "notes": "传感技术实验室；DNA组；博士生导师"
+  },
+  {
+   "name_cn": "吴蕾",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "MEMS/传感器",
+    "微流控芯片",
+    "器官芯片"
+   ],
+   "homepage": "http://sim.cas.cn/dwjs2016/fgjrc/cgqjs/202505/t20250512_7649913.html",
+   "email": null,
+   "notes": "传感技术实验室；DNA组"
+  },
+  {
+   "name_cn": "冯世伦",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光电子/硅光",
+    "MEMS/传感器",
+    "生物微流控芯片"
+   ],
+   "homepage": "https://people.ucas.ac.cn/~0073680",
+   "email": null,
+   "notes": "传感技术实验室；DNA组；博士生导师"
+  },
+  {
+   "name_cn": "葛玉卿",
+   "name_en": null,
+   "title": "正高级工程师",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "MEMS/传感器",
+    "体外诊断器件和检测方法",
+    "器官芯片的研制和应用"
+   ],
+   "homepage": "http://sim.cas.cn/dwjs2016/fgjrc/cgqjs/202505/t20250512_7649918.html",
+   "email": null,
+   "notes": "传感技术实验室；DNA组"
+  },
+  {
+   "name_cn": "梁丽娟",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS/传感器",
+    "MEMS环境监测传感器",
+    "生物微流控芯片"
+   ],
+   "homepage": "http://sim.cas.cn/dwjs2016/zgjrc/cgqjs/202505/t20250509_7648132.html",
+   "email": null,
+   "notes": "传感技术实验室；DNA组；博士生导师"
+  },
+  {
+   "name_cn": "贾春平",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "MEMS/传感器",
+    "生物微纳传感",
+    "微流控芯片及微全分析系统"
+   ],
+   "homepage": "http://sim.cas.cn/dwjs2016/fgjrc/cgqjs/202505/t20250512_7649911.html",
+   "email": null,
+   "notes": "传感技术实验室；DNA组"
+  },
+  {
+   "name_cn": "周麟",
+   "name_en": null,
+   "title": null,
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "MEMS/传感器",
+    "光电生物传感器",
+    "生物传感界面"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "传感技术实验室；DNA组"
+  },
+  {
+   "name_cn": "武振华",
+   "name_en": null,
+   "title": null,
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体器件",
+    "MEMS/传感器",
+    "生化传感器件"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "传感技术实验室；DNA组"
+  },
+  {
+   "name_cn": "吴亚明",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波/太赫兹",
+    "半导体工艺/制造",
+    "MEMS/传感器",
+    "通信基带/无线SoC",
+    "光刻/半导体装备"
+   ],
+   "homepage": "http://sim.cas.cn/dwjs2016/zgjrc/cgqjs/202505/t20250509_7648117.html",
+   "email": null,
+   "notes": "传感技术实验室；光MEMS课题组；博士生导师"
+  },
+  {
+   "name_cn": "李铁",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS/传感器",
+    "微纳传感器机理",
+    "器件与应用"
+   ],
+   "homepage": "http://sim.cas.cn/dwjs2016/zgjrc/cgqjs/202505/t20250509_7648111.html",
+   "email": null,
+   "notes": "传感技术实验室；微纳传感器课题组；博士生导师"
+  },
+  {
+   "name_cn": "何朋",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体材料/外延",
+    "二维材料/低维器件",
+    "石墨烯材料可控制备和组装"
+   ],
+   "homepage": "https://people.ucas.ac.cn/~hepeng.materials",
+   "email": null,
+   "notes": "纳米材料与器件实验室；二维材料课题组"
+  },
+  {
+   "name_cn": "杨思维",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "二维材料/低维器件",
+    "石墨烯",
+    "碳材料"
+   ],
+   "homepage": "https://people.ucas.ac.cn/~yangsiwei",
+   "email": null,
+   "notes": "纳米材料与器件实验室；二维材料课题组"
+  },
+  {
+   "name_cn": "时志远",
+   "name_en": null,
+   "title": null,
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体材料/外延",
+    "二维材料/低维器件",
+    "石墨烯"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "纳米材料与器件实验室；二维材料课题组"
+  },
+  {
+   "name_cn": "于庆凯",
+   "name_en": null,
+   "title": null,
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体材料/外延",
+    "二维材料/低维器件",
+    "材料生长与合成"
+   ],
+   "homepage": "https://people.ucas.ac.cn/~0065943",
+   "email": null,
+   "notes": "纳米材料与器件实验室；二维材料课题组；博士生导师"
+  },
+  {
+   "name_cn": "宋志棠",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "存算一体/新型存储",
+    "半导体工艺/制造",
+    "纳电子信息存储技术与纳米抛光液"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/200907/t20090701_1884362.html",
+   "email": null,
+   "notes": "纳米材料与器件实验室；PCRAM课题组；博士生导师"
+  },
+  {
+   "name_cn": "周夕淋",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "存算一体/新型存储",
+    "封装/三维集成",
+    "新型存储器件"
+   ],
+   "homepage": "https://people.ucas.edu.cn/~zhouxilin",
+   "email": null,
+   "notes": "纳米材料与器件实验室；PCRAM课题组；博士生导师"
+  },
+  {
+   "name_cn": "刘卫丽",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体工艺/制造",
+    "半导体材料/外延",
+    "纳米材料"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/200907/t20090701_1884363.html",
+   "email": null,
+   "notes": "纳米材料与器件实验室；PCRAM课题组；博士生导师"
+  },
+  {
+   "name_cn": "宋三年",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "存算一体/新型存储",
+    "半导体工艺/制造",
+    "相变存储材料"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201203/t20120327_3544849.html",
+   "email": null,
+   "notes": "纳米材料与器件实验室；PCRAM课题组；博士生导师"
+  },
+  {
+   "name_cn": "王浩敏",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "二维材料/低维器件",
+    "石墨烯",
+    "六角氮化硼"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201203/t20120327_3544788.html",
+   "email": null,
+   "notes": "纳米材料与器件实验室；PCRAM课题组；博士生导师"
+  },
+  {
+   "name_cn": "陈小刚",
+   "name_en": null,
+   "title": "正高级工程师",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "存算一体/新型存储",
+    "存储芯片测试与应用"
+   ],
+   "homepage": "https://people.ucas.edu.cn/~chenxiaogang",
+   "email": null,
+   "notes": "纳米材料与器件实验室；PCRAM课题组"
+  },
+  {
+   "name_cn": "宋文雄",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "存算一体/新型存储",
+    "新型存储与存算一体材料",
+    "器件及机理"
+   ],
+   "homepage": "https://people.ucas.ac.cn/~0073692",
+   "email": null,
+   "notes": "纳米材料与器件实验室；PCRAM课题组"
+  },
+  {
+   "name_cn": "雷宇",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "存算一体/新型存储",
+    "存储器",
+    "D存算一体芯片电路设计"
+   ],
+   "homepage": "https://people.ucas.edu.cn/~leiyu123",
+   "email": null,
+   "notes": "纳米材料与器件实验室；PCRAM课题组；博士生导师"
+  },
+  {
+   "name_cn": "李喜",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "存算一体/新型存储"
+   ],
+   "homepage": "https://people.ucas.edu.cn/~lixi",
+   "email": null,
+   "notes": "纳米材料与器件实验室；PCRAM课题组；博士生导师"
+  },
+  {
+   "name_cn": "薛媛",
+   "name_en": null,
+   "title": null,
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "存算一体/新型存储",
+    "相变存储材料",
+    "开关材料机理"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "纳米材料与器件实验室；PCRAM课题组"
+  },
+  {
+   "name_cn": "刘文柱",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件",
+    "硅异质结太阳电池",
+    "硅-钙钛矿叠层太阳电池"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "纳米材料与器件实验室；太阳能课题组；博士生导师"
+  },
+  {
+   "name_cn": "张丽平",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件",
+    "半导体工艺/制造",
+    "非晶和纳晶硅薄膜"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201401/t20140113_4022022.html",
+   "email": null,
+   "notes": "纳米材料与器件实验室；太阳能课题组；博士生导师"
+  },
+  {
+   "name_cn": "孟凡英",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体工艺/制造",
+    "太阳电池",
+    "透明导电氧化物薄膜"
+   ],
+   "homepage": "http://www.sim.cas.cn/dwjs2016/gjrc_129560/yjyzgjgcs/",
+   "email": null,
+   "notes": "纳米材料与器件实验室；太阳能课题组；博士生导师"
+  },
+  {
+   "name_cn": "曹俊诚",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波/太赫兹",
+    "量子芯片/量子计算",
+    "太赫兹量子器件及应用"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/200907/t20090701_1884393.html",
+   "email": null,
+   "notes": "太赫兹固态技术实验室；太赫兹课题组；博士生导师"
+  },
+  {
+   "name_cn": "黎华",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波/太赫兹",
+    "光电子/硅光",
+    "太赫兹光子学器件与应用"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201603/t20160302_4541237.html",
+   "email": null,
+   "notes": "太赫兹固态技术实验室；太赫兹课题组；博士生导师"
+  },
+  {
+   "name_cn": "王长",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波/太赫兹",
+    "半导体器件",
+    "光电探测/成像"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201603/t20160302_4541235.html",
+   "email": null,
+   "notes": "太赫兹固态技术实验室；太赫兹课题组；博士生导师"
+  },
+  {
+   "name_cn": "谭智勇",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波/太赫兹",
+    "光电探测/成像",
+    "半导体太赫兹辐射源"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201401/t20140113_4022035.html",
+   "email": null,
+   "notes": "太赫兹固态技术实验室；太赫兹课题组；博士生导师"
+  },
+  {
+   "name_cn": "韩英军",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波/太赫兹",
+    "半导体材料/外延",
+    "光电子/硅光",
+    "光电探测/成像",
+    "量子芯片/量子计算"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "太赫兹固态技术实验室；太赫兹课题组；博士生导师"
+  },
+  {
+   "name_cn": "万文坚",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "射频/毫米波/太赫兹",
+    "半导体材料/外延",
+    "光电子/硅光",
+    "宽禁带/化合物半导体"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201907/t20190716_5342383.html",
+   "email": null,
+   "notes": "太赫兹固态技术实验室；太赫兹课题组"
+  },
+  {
+   "name_cn": "任丁丁",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "射频/毫米波/太赫兹",
+    "长波红外与太赫兹集成光学微器件"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201907/t20190716_5342383.html",
+   "email": null,
+   "notes": "太赫兹固态技术实验室；太赫兹课题组"
+  },
+  {
+   "name_cn": "李子平",
+   "name_en": null,
+   "title": null,
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "射频/毫米波/太赫兹",
+    "太赫兹光频梳"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201907/t20190716_5342383.html",
+   "email": null,
+   "notes": "太赫兹固态技术实验室；太赫兹课题组"
+  },
+  {
+   "name_cn": "陈意桥",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件",
+    "半导体工艺/制造",
+    "半导体材料/外延"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/202203/t20220328_6408751.html",
+   "email": null,
+   "notes": "太赫兹固态技术实验室；分子束外延课题组；博士生导师"
+  },
+  {
+   "name_cn": "龚谦",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体材料/外延",
+    "光电子/硅光",
+    "分子束外延"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/200907/t20090701_1884398.html",
+   "email": null,
+   "notes": "太赫兹固态技术实验室；分子束外延课题组；博士生导师"
+  },
+  {
+   "name_cn": "艾立鹍",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体器件",
+    "半导体材料/外延",
+    "宽禁带/化合物半导体"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201203/t20120327_3544845.html",
+   "email": null,
+   "notes": "太赫兹固态技术实验室；分子束外延课题组"
+  },
+  {
+   "name_cn": "吴亮",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波/太赫兹",
+    "EDA/设计自动化",
+    "MEMS/传感器",
+    "宽禁带/化合物半导体"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201603/t20160302_4541274.html",
+   "email": null,
+   "notes": "太赫兹固态技术实验室；RF课题组；博士生导师"
+  },
+  {
+   "name_cn": "李宝清",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS/传感器",
+    "通信基带/无线SoC",
+    "目标识别分类"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/200907/t20090701_1884293.html",
+   "email": null,
+   "notes": "微系统技术实验室；微系统技术课题组；博士生导师"
+  },
+  {
+   "name_cn": "覃荣华",
+   "name_en": null,
+   "title": "正高级工程师",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "MEMS/传感器",
+    "通信基带/无线SoC"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201603/t20160302_4541315.html",
+   "email": null,
+   "notes": "微系统技术实验室；微系统技术课题组；博士生导师"
+  },
+  {
+   "name_cn": "童官军",
+   "name_en": null,
+   "title": "正高级工程师",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "通信基带/无线SoC",
+    "智能感知",
+    "物联网应用"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201603/t20160302_4541314.html",
+   "email": null,
+   "notes": "微系统技术实验室；微系统技术课题组；博士生导师"
+  },
+  {
+   "name_cn": "刘华巍",
+   "name_en": null,
+   "title": "正高级工程师",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS/传感器",
+    "通信基带/无线SoC",
+    "传感器信号处理"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201907/t20190715_5341998.html",
+   "email": null,
+   "notes": "微系统技术实验室；微系统技术课题组；博士生导师"
+  },
+  {
+   "name_cn": "刘建坡",
+   "name_en": null,
+   "title": "正高级工程师",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "MEMS/传感器",
+    "通信基带/无线SoC",
+    "无线自组网通信"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201203/t20120327_3518645.html",
+   "email": null,
+   "notes": "微系统技术实验室；微系统技术课题组"
+  },
+  {
+   "name_cn": "钱汉望",
+   "name_en": null,
+   "title": "正高级工程师",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "MEMS/传感器",
+    "通信基带/无线SoC",
+    "大规模"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201907/t20190716_5342419.html",
+   "email": null,
+   "notes": "微系统技术实验室；微系统技术课题组"
+  },
+  {
+   "name_cn": "郑斌琪",
+   "name_en": null,
+   "title": "正高级工程师",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "MEMS/传感器",
+    "通信基带/无线SoC",
+    "传感器信号处理"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201603/t20160302_4541311.html",
+   "email": null,
+   "notes": "微系统技术实验室；微系统技术课题组"
+  },
+  {
+   "name_cn": "汪明亮",
+   "name_en": null,
+   "title": "正高级工程师",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟/混合信号电路",
+    "通信基带/无线SoC"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201603/t20160302_4541311.html",
+   "email": null,
+   "notes": "微系统技术实验室；微系统技术课题组"
+  },
+  {
+   "name_cn": "赵宇",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波/太赫兹",
+    "通信基带/无线SoC",
+    "雷达信号处理"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/202203/t20220304_6385696.html",
+   "email": null,
+   "notes": "宽带无线通信实验室；宽带通信与新型电磁技术课题组；博士生导师"
+  },
+  {
+   "name_cn": "唐亮",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波/太赫兹",
+    "通信基带/无线SoC",
+    "G通信信号处理"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201603/t20160302_4541308.html",
+   "email": null,
+   "notes": "宽带无线通信实验室；宽带通信与新型电磁技术课题组；博士生导师"
+  },
+  {
+   "name_cn": "周斌",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波/太赫兹",
+    "通信基带/无线SoC",
+    "相控阵"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201603/t20160302_4541325.html",
+   "email": null,
+   "notes": "宽带无线通信实验室；宽带通信与新型电磁技术课题组；博士生导师"
+  },
+  {
+   "name_cn": "杨秀梅",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "通信基带/无线SoC",
+    "G星地融合通信",
+    "AI的通信算法优化"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201603/t20160307_4545284.html",
+   "email": null,
+   "notes": "宽带无线通信实验室；宽带通信与新型电磁技术课题组；博士生导师"
+  },
+  {
+   "name_cn": "沈斐",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "存算一体/新型存储",
+    "通信基带/无线SoC",
+    "新一代移动通信系统"
+   ],
+   "homepage": "http://www.sim.cas.cn/kybm2016/kdwxjssys/kydw2016/yjy2016/202203/t20220325_6407709.html",
+   "email": null,
+   "notes": "宽带无线通信实验室；宽带通信与新型电磁技术课题组；博士生导师"
+  },
+  {
+   "name_cn": "汪涵",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "通信基带/无线SoC",
+    "G星地融合通信"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "宽带无线通信实验室；宽带通信与新型电磁技术课题组"
+  },
+  {
+   "name_cn": "徐陈锋",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "通信基带/无线SoC",
+    "G通信",
+    "自组网和通感导融合"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "宽带无线通信实验室；宽带通信与新型电磁技术课题组"
+  },
+  {
+   "name_cn": "王江",
+   "name_en": null,
+   "title": "正高级工程师",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "通信基带/无线SoC",
+    "低轨卫星协同的空地一体化通信",
+    "电磁目标感知识别与定位"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "宽带无线通信实验室；宽带通信与新型电磁技术课题组；博士生导师"
+  },
+  {
+   "name_cn": "何为",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS/传感器",
+    "通信基带/无线SoC",
+    "多传感信息融合"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "宽带无线通信实验室；位置网课题组；博士生导师"
+  },
+  {
+   "name_cn": "李凤荣",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "MEMS/传感器",
+    "通信基带/无线SoC",
+    "多传感信息融合"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201907/t20190716_5342446.html",
+   "email": null,
+   "notes": "宽带无线通信实验室；位置网课题组"
+  },
+  {
+   "name_cn": "马润泽",
+   "name_en": null,
+   "title": "高级工程师",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "通信基带/无线SoC",
+    "声纹故障识别",
+    "人工智能"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "宽带无线通信实验室；位置网课题组"
+  },
+  {
+   "name_cn": "郑敏",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "通信基带/无线SoC",
+    "宽带无线通信",
+    "无线自组网"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201603/t20160302_4541234.html",
+   "email": null,
+   "notes": "宽带无线通信实验室；电力课题组；博士生导师"
+  },
+  {
+   "name_cn": "谭冲",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "通信基带/无线SoC",
+    "宽带无线通信",
+    "网络优化"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201907/t20190716_5342505.html",
+   "email": null,
+   "notes": "宽带无线通信实验室；电力课题组"
+  },
+  {
+   "name_cn": "刘洪",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "通信基带/无线SoC",
+    "行业物联网",
+    "宽带移动通信"
+   ],
+   "homepage": "http://www.sim.cas.cn/kybm2016/kdwxjssys/kydw2016/yjy2016/202202/t20220221_6363672.html",
+   "email": null,
+   "notes": "宽带无线通信实验室；电力课题组"
+  },
+  {
+   "name_cn": "李慧",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "通信基带/无线SoC",
+    "物联网通信",
+    "自组织网络"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201603/t20160302_4541328.html",
+   "email": null,
+   "notes": "宽带无线通信实验室；电力课题组"
+  },
+  {
+   "name_cn": "熊勇",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "AI加速器/智能芯片",
+    "通信基带/无线SoC",
+    "通感算一体化信息系统"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/200907/t20090701_1884286.html",
+   "email": null,
+   "notes": "宽带无线通信实验室；智慧应急消防课题组；博士生导师"
+  },
+  {
+   "name_cn": "狄增峰",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件",
+    "硅基SOI",
+    "非硅SOI"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201203/t20120327_3544773.html",
+   "email": null,
+   "notes": "硅基材料与集成器件实验室；二维SOI材料课题组；博士生导师"
+  },
+  {
+   "name_cn": "张苗",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件",
+    "硅基SOI",
+    "非硅SOI"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "硅基材料与集成器件实验室；二维SOI材料课题组；博士生导师"
+  },
+  {
+   "name_cn": "田子傲",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体材料/外延",
+    "二维材料/低维器件",
+    "二维材料生长及器件"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "硅基材料与集成器件实验室；二维SOI材料课题组；博士生导师"
+  },
+  {
+   "name_cn": "王正",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "封装/三维集成",
+    "光电子/硅光",
+    "二维材料/低维器件"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "硅基材料与集成器件实验室；二维SOI材料课题组；博士生导师"
+  },
+  {
+   "name_cn": "徐向明",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体材料/外延",
+    "高质量二维单晶制备与电路集成"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "硅基材料与集成器件实验室；二维SOI材料课题组；博士生导师"
+  },
+  {
+   "name_cn": "姜海涛",
+   "name_en": null,
+   "title": "高级工程师",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "射频/毫米波/太赫兹",
+    "封装/三维集成",
+    "半导体材料/外延"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "硅基材料与集成器件实验室；二维SOI材料课题组"
+  },
+  {
+   "name_cn": "李湃",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体材料/外延",
+    "集成电路材料生长与缺陷调控",
+    "表界面结构及热"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "硅基材料与集成器件实验室；二维SOI材料课题组"
+  },
+  {
+   "name_cn": "俞文杰",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波/太赫兹",
+    "半导体器件",
+    "半导体工艺/制造",
+    "半导体材料/外延",
+    "通信基带/无线SoC"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201603/t20160302_4541278.html",
+   "email": null,
+   "notes": "硅基材料与集成器件实验室；集成电路材料课题组；博士生导师"
+  },
+  {
+   "name_cn": "母志强",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波/太赫兹",
+    "封装/三维集成",
+    "半导体材料/外延"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "硅基材料与集成器件实验室；集成电路材料课题组；博士生导师"
+  },
+  {
+   "name_cn": "朱雷",
+   "name_en": null,
+   "title": "高级工程师",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体材料/外延",
+    "集成电路材料基因组"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "硅基材料与集成器件实验室；集成电路材料课题组"
+  },
+  {
+   "name_cn": "沈玲燕",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体材料/外延",
+    "宽禁带/化合物半导体",
+    "功率半导体/电力电子"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "硅基材料与集成器件实验室；集成电路材料课题组"
+  },
+  {
+   "name_cn": "欧欣",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波/太赫兹",
+    "半导体器件",
+    "封装/三维集成",
+    "半导体材料/外延",
+    "通信基带/无线SoC",
+    "功率半导体/电力电子"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201509/t20150921_4428008.html",
+   "email": null,
+   "notes": "硅基材料与集成器件实验室；异质集成课题组；博士生导师"
+  },
+  {
+   "name_cn": "游天桂",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "封装/三维集成",
+    "半导体材料/外延",
+    "宽禁带/化合物半导体"
+   ],
+   "homepage": "https://people.ucas.ac.cn/~0067558",
+   "email": null,
+   "notes": "硅基材料与集成器件实验室；异质集成课题组；博士生导师"
+  },
+  {
+   "name_cn": "张师斌",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波/太赫兹",
+    "封装/三维集成",
+    "通信基带/无线SoC"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "硅基材料与集成器件实验室；异质集成课题组；博士生导师"
+  },
+  {
+   "name_cn": "徐文慧",
+   "name_en": null,
+   "title": null,
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体器件",
+    "封装/三维集成",
+    "宽禁带/化合物半导体"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "硅基材料与集成器件实验室；异质集成课题组"
+  },
+  {
+   "name_cn": "伊艾伦",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "封装/三维集成",
+    "半导体材料/外延",
+    "光电子/硅光",
+    "量子芯片/量子计算",
+    "宽禁带/化合物半导体"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "硅基材料与集成器件实验室；异质集成课题组"
+  },
+  {
+   "name_cn": "王成立",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "射频/毫米波/太赫兹",
+    "封装/三维集成",
+    "光电子/硅光"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "硅基材料与集成器件实验室；异质集成课题组"
+  },
+  {
+   "name_cn": "程新红",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "封装/三维集成",
+    "功率半导体/电力电子",
+    "功率器件及驱动保护电路设计"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/200907/t20090701_1884317.html",
+   "email": null,
+   "notes": "硅基材料与集成器件实验室；电力电子器件与功率集成课题组；博士生导师"
+  },
+  {
+   "name_cn": "郑理",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件",
+    "封装/三维集成",
+    "功率半导体/电力电子"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201907/t20190715_5341976.html",
+   "email": null,
+   "notes": "硅基材料与集成器件实验室；电力电子器件与功率集成课题组；博士生导师"
+  },
+  {
+   "name_cn": "毕大炜",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "半导体工艺/制造"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/200907/t20090701_1884366.html",
+   "email": null,
+   "notes": "硅基材料与集成器件实验室；高可靠SOI集成电路技术课题组；博士生导师"
+  },
+  {
+   "name_cn": "陈静",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "存算一体/新型存储",
+    "半导体器件",
+    "SOI器件与电路"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/200907/t20090701_1884314.html",
+   "email": null,
+   "notes": "硅基材料与集成器件实验室；SOI器件与电路课题组；博士生导师"
+  },
+  {
+   "name_cn": "魏星",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体器件",
+    "半导体工艺/制造",
+    "半导体材料/外延"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201303/t20130318_3794581.html",
+   "email": null,
+   "notes": "硅基材料与集成器件实验室；先进硅基衬底材料课题组；博士生导师"
+  },
+  {
+   "name_cn": "薛忠营",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体器件",
+    "半导体材料/外延",
+    "SOI材料与器件"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201603/t20160302_4541279.html",
+   "email": null,
+   "notes": "硅基材料与集成器件实验室；先进硅基衬底材料课题组"
+  },
+  {
+   "name_cn": "蔡艳",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "封装/三维集成",
+    "光电子/硅光",
+    "硅基光电子集成工艺"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201907/t20190715_5341906.html",
+   "email": null,
+   "notes": "硅基材料与集成器件实验室；硅光集成课题组；博士生导师"
+  },
+  {
+   "name_cn": "岳文成",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "封装/三维集成",
+    "光电子/硅光",
+    "硅基光电子器件与集成"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "硅基材料与集成器件实验室；硅光集成课题组"
+  },
+  {
+   "name_cn": "王书晓",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "封装/三维集成",
+    "光电子/硅光",
+    "硅光集成芯片"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "硅基材料与集成器件实验室；硅光集成课题组"
+  },
+  {
+   "name_cn": "王茹雪",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "射频/毫米波/太赫兹",
+    "MEMS/传感器",
+    "硅基光传感"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "硅基材料与集成器件实验室；硅基光电子课题组"
+  },
+  {
+   "name_cn": "李伟（上海微系统所）",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光电子/硅光",
+    "MEMS/传感器",
+    "超材料光子学物理与器件"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201401/t20140113_4022045.html",
+   "email": null,
+   "notes": "硅基材料与集成器件实验室；超材料光子芯片课题组；博士生导师；本项目为消歧标注：同名者，见「上海微系统所」"
+  },
+  {
+   "name_cn": "黄海阳",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "光电子/硅光",
+    "MEMS/传感器",
+    "超材料光子学物理与器件"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "硅基材料与集成器件实验室；超材料光子芯片课题组"
+  },
+  {
+   "name_cn": "盛振",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "光电探测/成像",
+    "CMOS兼容硅基光电器件"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201401/t20140113_4022039.html",
+   "email": null,
+   "notes": "硅基材料与集成器件实验室；硅光子课题组；博士生导师"
+  },
+  {
+   "name_cn": "赵瑛璇",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "光电子/硅光",
+    "硅光子学关键器件性能",
+    "硅光子集成"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "硅基材料与集成器件实验室；硅光子课题组"
+  },
+  {
+   "name_cn": "谢晓明",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "量子芯片/量子计算",
+    "二维材料/低维器件",
+    "超导电子学前沿应用"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/200907/t20090701_1884365.html",
+   "email": null,
+   "notes": "超导电子学实验室；博士生导师"
+  },
+  {
+   "name_cn": "尤立星",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光电探测/成像",
+    "量子芯片/量子计算",
+    "超导光子探测"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/200907/t20090701_1884395.html",
+   "email": null,
+   "notes": "超导电子学实验室；博士生导师"
+  },
+  {
+   "name_cn": "李浩（SSPD）",
+   "name_en": null,
+   "title": null,
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "封装/三维集成",
+    "光电子/硅光",
+    "光电探测/成像",
+    "量子芯片/量子计算"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "超导电子学实验室；SSPD课题组；博士生导师"
+  },
+  {
+   "name_cn": "张伟君",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光电子/硅光",
+    "光电探测/成像",
+    "量子芯片/量子计算"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201907/t20190716_5342455.html",
+   "email": null,
+   "notes": "超导电子学实验室；SSPD课题组；博士生导师"
+  },
+  {
+   "name_cn": "孔令东",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光电探测/成像",
+    "MEMS/传感器",
+    "量子芯片/量子计算"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201603/t20160307_4545300.html",
+   "email": null,
+   "notes": "超导电子学实验室；SSPD课题组；博士生导师"
+  },
+  {
+   "name_cn": "周慧",
+   "name_en": null,
+   "title": null,
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "光电探测/成像",
+    "超导单光子探测技术及应用",
+    "中红外超导微纳器件"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "超导电子学实验室；SSPD课题组"
+  },
+  {
+   "name_cn": "任洁",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "模拟/混合信号电路",
+    "处理器/体系结构",
+    "EDA/设计自动化"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/200907/t20090701_1884323.html",
+   "email": null,
+   "notes": "超导电子学实验室；SFQ课题组；博士生导师"
+  },
+  {
+   "name_cn": "林志荣",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波/太赫兹",
+    "量子芯片/量子计算",
+    "超导量子计算"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "超导电子学实验室；Qubit课题组；博士生导师"
+  },
+  {
+   "name_cn": "吴禹",
+   "name_en": null,
+   "title": null,
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "模拟/混合信号电路",
+    "射频/毫米波/太赫兹",
+    "量子芯片/量子计算"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201401/t20140110_4021399.html",
+   "email": null,
+   "notes": "超导电子学实验室；Qubit课题组"
+  },
+  {
+   "name_cn": "董慧",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS/传感器",
+    "量子芯片/量子计算",
+    "超导量子磁传感器"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201907/t20190715_5341530.html",
+   "email": null,
+   "notes": "超导电子学实验室；SQUID课题组；博士生导师"
+  },
+  {
+   "name_cn": "荣亮亮",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS/传感器",
+    "超导地球物理探测应用",
+    "具体包括地面"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201907/t20190715_5342069.html",
+   "email": null,
+   "notes": "超导电子学实验室；SQUID课题组；博士生导师"
+  },
+  {
+   "name_cn": "陈垒",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "存算一体/新型存储",
+    "量子芯片/量子计算",
+    "纳米超导量子干涉器件"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/202203/t20220326_6408335.html",
+   "email": null,
+   "notes": "超导电子学实验室；SQUID课题组；博士生导师"
+  },
+  {
+   "name_cn": "孙立敏",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "通信基带/无线SoC"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201907/t20190715_5342088.html",
+   "email": null,
+   "notes": "超导电子学实验室；SQUID课题组；博士生导师"
+  },
+  {
+   "name_cn": "李浩（SQUID）",
+   "name_en": null,
+   "title": null,
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体工艺/制造",
+    "MEMS/传感器",
+    "高温超导磁传感器"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "超导电子学实验室；SQUID课题组"
+  },
+  {
+   "name_cn": "伍文涛",
+   "name_en": null,
+   "title": null,
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "模拟/混合信号电路",
+    "射频/毫米波/太赫兹",
+    "量子芯片/量子计算"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201603/t20160307_4545288.html",
+   "email": null,
+   "notes": "超导电子学实验室；SQUID课题组"
+  },
+  {
+   "name_cn": "张国峰",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "封装/三维集成",
+    "量子芯片/量子计算",
+    "工艺制备和应用"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "超导电子学实验室；SQUID课题组"
+  },
+  {
+   "name_cn": "李华",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "量子芯片/量子计算",
+    "超导量子干涉器件及应用",
+    "生物磁检测"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "超导电子学实验室；SQUID课题组"
+  },
+  {
+   "name_cn": "肖克来提",
+   "name_en": null,
+   "title": null,
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "封装/三维集成",
+    "MEMS/传感器",
+    "半导体先进封装"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "超导电子学实验室；封装；博士生导师"
+  },
+  {
+   "name_cn": "牟刚",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体工艺/制造",
+    "二维材料/低维器件",
+    "低维超导材料"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201401/t20140113_4022050.html",
+   "email": null,
+   "notes": "超导电子学实验室；SELF平台；博士生导师"
+  },
+  {
+   "name_cn": "彭炜",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "封装/三维集成",
+    "超导薄膜",
+    "超导器件基础工艺与集成"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "超导电子学实验室；SELF平台"
+  },
+  {
+   "name_cn": "应利良",
+   "name_en": null,
+   "title": "正高级工程师",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体工艺/制造",
+    "超导器件工艺",
+    "超导薄膜"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "超导电子学实验室；SELF平台"
+  },
+  {
+   "name_cn": "张露",
+   "name_en": null,
+   "title": null,
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体工艺/制造",
+    "量子芯片/量子计算",
+    "超导薄膜及新型超导电子器件"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201203/t20120327_3544778.html",
+   "email": null,
+   "notes": "超导电子学实验室；SELF平台"
+  },
+  {
+   "name_cn": "周健",
+   "name_en": null,
+   "title": "正高级工程师",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "射频/毫米波/太赫兹",
+    "存算一体/新型存储",
+    "半导体工艺/制造",
+    "光电探测/成像"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201203/t20120322_3514586.html",
+   "email": null,
+   "notes": "超导电子学实验室；SELF平台"
+  },
+  {
+   "name_cn": "张加祥",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光电子/硅光",
+    "量子芯片/量子计算",
+    "大规模混合集成光量子芯片"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201603/t20160302_4541236.html",
+   "email": null,
+   "notes": "超导电子学实验室；CEO；博士生导师"
+  },
+  {
+   "name_cn": "李凌云",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路设计",
+    "射频/毫米波/太赫兹",
+    "量子芯片/量子计算"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "超导电子学实验室；CEO"
+  },
+  {
+   "name_cn": "王永良",
+   "name_en": null,
+   "title": "正高级工程师",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路设计",
+    "模拟/混合信号电路",
+    "MEMS/传感器",
+    "量子芯片/量子计算"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "超导电子学实验室；CEO"
+  },
+  {
+   "name_cn": "王磊（上海微系统所）",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "处理器/体系结构",
+    "具身智能",
+    "定位导航"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "仿生视觉系统实验室；/；博士生导师；本项目为消歧标注：同名者，见「上海微系统所」"
+  },
+  {
+   "name_cn": "付凤杰",
+   "name_en": null,
+   "title": "正高级工程师",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路设计",
+    "半导体器件",
+    "数字电路设计"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201907/t20190715_5342079.html",
+   "email": null,
+   "notes": "仿生视觉系统实验室；/"
+  },
+  {
+   "name_cn": "邓诗凯",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体工艺/制造",
+    "MEMS/传感器",
+    "二维材料/低维器件"
+   ],
+   "homepage": "https://people.ucas.edu.cn/~shikaideng",
+   "email": null,
+   "notes": "2020前沿实验室；纳米光电子器件课题组；博士生导师"
+  },
+  {
+   "name_cn": "唐述杰",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体材料/外延",
+    "光电子/硅光",
+    "二维微电子材料"
+   ],
+   "homepage": "http://sourcedb.sim.cas.cn/cn/expert/201907/t20190715_5341533.html",
+   "email": null,
+   "notes": "2020前沿实验室；二维量子材料课题组；博士生导师"
+  },
+  {
+   "name_cn": "孙鎏炀",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS/传感器",
+    "微机电",
+    "微纳器件"
+   ],
+   "homepage": "https://people.ucas.edu.cn/~Sunly",
+   "email": null,
+   "notes": "2020前沿实验室；微纳脑机接口技术课题组；博士生导师"
+  },
+  {
+   "name_cn": "李馥",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "MEMS/传感器",
+    "多孔框架材料",
+    "胶体纳米晶体"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "2020前沿实验室；敏感材料与器件课题组"
+  },
+  {
+   "name_cn": "张凯欢",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体工艺/制造",
+    "MEMS/传感器",
+    "软物质微纳制造"
+   ],
+   "homepage": "https://people.ucas.ac.cn/~kaihuanzhang",
+   "email": null,
+   "notes": "2020前沿实验室；软物质敏感材料与器件课题组；博士生导师"
+  },
+  {
+   "name_cn": "吴阳江",
+   "name_en": null,
+   "title": null,
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体器件",
+    "MEMS/传感器",
+    "晶体管器件设计与制备"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "2020前沿实验室；软物质敏感材料与器件课题组"
+  },
+  {
+   "name_cn": "朱锋锋",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体材料/外延",
+    "二维材料/低维器件",
+    "层状二维材料晶体生长与原型器件"
+   ],
+   "homepage": "http://people.ucas.edu.cn/~fzhu",
+   "email": null,
+   "notes": "2020前沿实验室；磁性与拓扑量子材料课题组"
+  },
+  {
+   "name_cn": "杜少卿",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频/毫米波/太赫兹",
+    "太赫兹波的单分子表征与调控",
+    "单分子电子输运"
+   ],
+   "homepage": "https://people.ucas.edu.cn/~shaoqingdu",
+   "email": null,
+   "notes": "2020前沿实验室；太赫兹纳米科学课题组；博士生导师"
+  },
+  {
+   "name_cn": "孔潇",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体材料/外延",
+    "二维材料/低维器件",
+    "二维材料生长现象仿真"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "2020前沿实验室；材料生长理论与仿真课题组"
+  },
+  {
+   "name_cn": "王博翔",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微电子/集成电路",
+    "微纳尺度热辐射与热光子学",
+    "超材料"
+   ],
+   "homepage": "https://people.ucas.edu.cn/~wangboxiang",
+   "email": null,
+   "notes": "2020前沿实验室；微纳热辐射与芯片散热课题组；博士生导师"
+  },
+  {
+   "name_cn": "严佳伟",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "上海微系统与信息技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体材料/外延",
+    "量子芯片/量子计算",
+    "强关联电子系统计算方法"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "2020前沿实验室；计算凝聚态物理课题组"
+  },
+  {
+   "name_cn": "包云岗",
+   "name_en": null,
+   "title": "研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "处理器/体系结构",
+    "开源芯片/芯片生态",
+    "计算机体系结构"
+   ],
+   "homepage": "http://acs.ict.ac.cn/baoyg/",
+   "email": null,
+   "notes": "博士生导师"
+  },
+  {
+   "name_cn": "陈明宇",
+   "name_en": null,
+   "title": "研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "处理器/体系结构",
+    "计算机访存体系结构"
+   ],
+   "homepage": "https://sklp.ict.ac.cn/gysys/yjdw/yjy/202302/t20230214_128689.html",
+   "email": null,
+   "notes": "博士生导师"
+  },
+  {
+   "name_cn": "陈天石",
+   "name_en": null,
+   "title": "研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "处理器/体系结构",
+    "AI加速器/智能芯片",
+    "智能处理器"
+   ],
+   "homepage": "https://sklp.ict.ac.cn/gysys/yjdw/yjy/202302/t20230214_128691.html",
+   "email": null,
+   "notes": "博士生导师"
+  },
+  {
+   "name_cn": "陈云霁",
+   "name_en": null,
+   "title": "研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "处理器/体系结构",
+    "计算机体系结构",
+    "机器学习"
+   ],
+   "homepage": "http://novel.ict.ac.cn/ychen",
+   "email": null,
+   "notes": "博士生导师"
+  },
+  {
+   "name_cn": "陈晓明",
+   "name_en": null,
+   "title": "研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "处理器/体系结构",
+    "EDA/设计自动化"
+   ],
+   "homepage": "http://people.ucas.edu.cn/~chenxm",
+   "email": null,
+   "notes": "博士生导师"
+  },
+  {
+   "name_cn": "杜子东",
+   "name_en": null,
+   "title": "研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "处理器/体系结构",
+    "AI加速器/智能芯片",
+    "智能处理器"
+   ],
+   "homepage": "https://zidongdu.github.io/2.html",
+   "email": null,
+   "notes": "博士生导师"
+  },
+  {
+   "name_cn": "郭崎",
+   "name_en": null,
+   "title": "研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "处理器/体系结构",
+    "AI加速器/智能芯片",
+    "智能计算系统"
+   ],
+   "homepage": "http://novel.ict.ac.cn/qguo/",
+   "email": null,
+   "notes": "博士生导师"
+  },
+  {
+   "name_cn": "韩银和",
+   "name_en": null,
+   "title": "研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "AI加速器/智能芯片",
+    "智能计算机软硬件系统"
+   ],
+   "homepage": "http://www.carch.ac.cn/~yinhes/",
+   "email": null,
+   "notes": "博士生导师"
+  },
+  {
+   "name_cn": "胡伟武",
+   "name_en": null,
+   "title": "研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "处理器/体系结构",
+    "微处理器设计"
+   ],
+   "homepage": "https://sklp.ict.ac.cn/gysys/yjdw/yjy/202302/t20230214_128699.html",
+   "email": null,
+   "notes": "博士生导师"
+  },
+  {
+   "name_cn": "胡瑜",
+   "name_en": null,
+   "title": "研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "处理器/体系结构",
+    "自动驾驶感知与决策",
+    "神经网络架构搜索"
+   ],
+   "homepage": "https://sklp.ict.ac.cn/gysys/yjdw/yjy/202302/t20230214_128700.html",
+   "email": null,
+   "notes": "博士生导师"
+  },
+  {
+   "name_cn": "胡杏",
+   "name_en": null,
+   "title": "研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "处理器/体系结构",
+    "计算机体系架构",
+    "专用领域架构"
+   ],
+   "homepage": "http://www.ict.ac.cn/sourcedb/cn/jssrck/202010/t20201022_5720975.html",
+   "email": null,
+   "notes": "1"
+  },
+  {
+   "name_cn": "贾伟乐",
+   "name_en": null,
+   "title": "研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "处理器/体系结构",
+    "智能科学计算",
+    "高性能计算"
+   ],
+   "homepage": "https://people.ucas.ac.cn/~jiaweile",
+   "email": null,
+   "notes": "1"
+  },
+  {
+   "name_cn": "李华伟",
+   "name_en": null,
+   "title": "研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "处理器/体系结构",
+    "EDA/设计自动化",
+    "集成电路测试/可靠性"
+   ],
+   "homepage": "https://people.ucas.ac.cn/~lihuawei",
+   "email": null,
+   "notes": "博士生导师"
+  },
+  {
+   "name_cn": "李文明",
+   "name_en": null,
+   "title": "研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "处理器/体系结构",
+    "AI加速器/智能芯片",
+    "高通量众核体系结构"
+   ],
+   "homepage": "http://www.ict.ac.cn/sourcedb/cn/jssrck/201810/t20181030_5151416.html",
+   "email": null,
+   "notes": "博士生导师"
+  },
+  {
+   "name_cn": "李晓维",
+   "name_en": null,
+   "title": "研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路测试/可靠性",
+    "数字VLSI电路测试及可靠性设计",
+    "容错计算"
+   ],
+   "homepage": "https://www.ict.ac.cn/sourcedb/cn/jssrck/200909/t20090917_2496661.html",
+   "email": null,
+   "notes": "博士生导师；[1] “科技北京”百名领军人才培养工程（2014）:中科院计算所测试与容错技术创新团队[2] 国家“有突出贡献中青年专家”（荣誉称号/2013）[3] 国家“百千万人才工程”（2013）[4] 中国科学院“优秀研究生指导教师”奖（2012）[5] 中国科学院“朱李月华优秀教师”奖（2009）[6] 国务院政府特殊津贴（2009）[7] 中国科学院研究生院“集中教学突出贡献奖”（2008）[8]"
+  },
+  {
+   "name_cn": "路航",
+   "name_en": null,
+   "title": "研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "AI加速器/智能芯片",
+    "可定制计算"
+   ],
+   "homepage": "https://luhang-CCL.github.io",
+   "email": null,
+   "notes": "博士生导师"
+  },
+  {
+   "name_cn": "石晶林",
+   "name_en": null,
+   "title": "研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "通信基带/无线SoC",
+    "无线通信",
+    "计算与通信相融合"
+   ],
+   "homepage": "https://sklp.ict.ac.cn/gysys/yjdw/yjy/202302/t20230214_128705.html",
+   "email": null,
+   "notes": "博士生导师"
+  },
+  {
+   "name_cn": "孙凝晖",
+   "name_en": null,
+   "title": "研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "处理器/体系结构",
+    "并行处理体系结构",
+    "分布式操作系统"
+   ],
+   "homepage": "https://sklp.ict.ac.cn/gysys/yjdw/yjy/202302/t20230214_128706.html",
+   "email": null,
+   "notes": "1"
+  },
+  {
+   "name_cn": "孙晓明",
+   "name_en": null,
+   "title": "研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "通信基带/无线SoC",
+    "量子芯片/量子计算",
+    "算法复杂性"
+   ],
+   "homepage": "https://sklp.ict.ac.cn/gysys/yjdw/yjy/202302/t20230214_128707.html",
+   "email": null,
+   "notes": "1"
+  },
+  {
+   "name_cn": "唐光明",
+   "name_en": null,
+   "title": "研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "处理器/体系结构",
+    "超导处理器",
+    "超导计算机"
+   ],
+   "homepage": "https://sklp.ict.ac.cn/gysys/yjdw/yjy/202302/t20230214_128708.html",
+   "email": null,
+   "notes": "博士生导师"
+  },
+  {
+   "name_cn": "唐志敏",
+   "name_en": null,
+   "title": "研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "处理器/体系结构",
+    "高性能计算机体系结构",
+    "处理器微体系结构"
+   ],
+   "homepage": "https://sklp.ict.ac.cn/gysys/yjdw/yjy/202302/t20230214_128709.html",
+   "email": null,
+   "notes": "博士生导师"
+  },
+  {
+   "name_cn": "陶鼎文",
+   "name_en": null,
+   "title": "研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "处理器/体系结构",
+    "高性能计算",
+    "并行算法和软件"
+   ],
+   "homepage": "https://sklp.ict.ac.cn/gysys/yjdw/yjy/202501/t20250104_304400.html",
+   "email": null,
+   "notes": "博导计算机系统结构"
+  },
+  {
+   "name_cn": "王剑",
+   "name_en": null,
+   "title": "研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "处理器/体系结构",
+    "处理器设计"
+   ],
+   "homepage": "https://sklp.ict.ac.cn/gysys/yjdw/yjy/202302/t20230214_128710.html",
+   "email": null,
+   "notes": "博士生导师"
+  },
+  {
+   "name_cn": "鄢贵海",
+   "name_en": null,
+   "title": "研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "处理器/体系结构",
+    "计算机体系结构"
+   ],
+   "homepage": "https://sklp.ict.ac.cn/gysys/yjdw/yjy/202302/t20230214_128713.html",
+   "email": null,
+   "notes": "博士生导师"
+  },
+  {
+   "name_cn": "叶笑春",
+   "name_en": null,
+   "title": "研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "处理器/体系结构",
+    "高通量众核处理器结构",
+    "图计算加速结构"
+   ],
+   "homepage": "https://sklp.ict.ac.cn/gysys/yjdw/yjy/202302/t20230214_128714.html",
+   "email": null,
+   "notes": "博导"
+  },
+  {
+   "name_cn": "詹剑锋",
+   "name_en": null,
+   "title": "研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "开源芯片/芯片生态",
+    "大数据和人工智能",
+    "开源计算机系统与开源芯片"
+   ],
+   "homepage": "https://sklp.ict.ac.cn/gysys/yjdw/yjy/202302/t20230214_128715.html",
+   "email": null,
+   "notes": "博士生导师"
+  },
+  {
+   "name_cn": "张福新",
+   "name_en": null,
+   "title": "研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "处理器/体系结构",
+    "微处理器设计"
+   ],
+   "homepage": "https://sklp.ict.ac.cn/gysys/yjdw/yjy/202302/t20230214_128716.html",
+   "email": null,
+   "notes": "博士生导师"
+  },
+  {
+   "name_cn": "张云泉",
+   "name_en": null,
+   "title": "研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "处理器/体系结构",
+    "高性能计算"
+   ],
+   "homepage": "https://sklp.ict.ac.cn/gysys/yjdw/yjy/202302/t20230214_128720.html",
+   "email": null,
+   "notes": "1"
+  },
+  {
+   "name_cn": "张磊",
+   "name_en": null,
+   "title": "研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "通信基带/无线SoC",
+    "计算机系统",
+    "嵌入式芯片"
+   ],
+   "homepage": "https://sklp.ict.ac.cn/gysys/yjdw/yjy/202302/t20230214_128719.html",
+   "email": null,
+   "notes": "博导"
+  },
+  {
+   "name_cn": "张科",
+   "name_en": null,
+   "title": "研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "处理器/体系结构",
+    "开源芯片/芯片生态",
+    "计算机体系结构"
+   ],
+   "homepage": "https://sklp.ict.ac.cn/gysys/yjdw/yjy/202302/t20230214_128718.html",
+   "email": null,
+   "notes": "硕士生导师"
+  },
+  {
+   "name_cn": "周一青",
+   "name_en": null,
+   "title": "研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "通信基带/无线SoC",
+    "通信与计算融合",
+    "移动边缘计算"
+   ],
+   "homepage": "http://www.escience.cn/people/zhouyiqing/index.html",
+   "email": null,
+   "notes": "博士生导师"
+  },
+  {
+   "name_cn": "曹华伟",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "处理器/体系结构",
+    "图计算",
+    "云计算"
+   ],
+   "homepage": "http://www.ict.ac.cn/sourcedb/cn/jssrck/201912/t20191209_5451113.html",
+   "email": null,
+   "notes": "2"
+  },
+  {
+   "name_cn": "黄俊英",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "EDA/设计自动化",
+    "超导集成电路EDA算法及工具"
+   ],
+   "homepage": "http://www.ict.ac.cn/sourcedb/cn/jssrck/202010/t20201023_5721597.html",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "蒋德钧",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "处理器/体系结构",
+    "存储系统与体系结构",
+    "操作系统"
+   ],
+   "homepage": "https://ict.cas.cn/sourcedb/cn/jssrck/201512/t20151207_4488175.html",
+   "email": null,
+   "notes": "博士生导师"
+  },
+  {
+   "name_cn": "李威",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路设计",
+    "高性能芯片设计"
+   ],
+   "homepage": "http://www.ict.ac.cn/sourcedb/cn/jssrck/201708/t20170810_4841095.html",
+   "email": null,
+   "notes": "硕士生导师"
+  },
+  {
+   "name_cn": "李拓",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "处理器/体系结构",
+    "处理器架构",
+    "平台完整性和可靠性"
+   ],
+   "homepage": "https://li3tuo4.github.io",
+   "email": null,
+   "notes": "硕导计算机系统结构"
+  },
+  {
+   "name_cn": "刘成",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "处理器/体系结构",
+    "AI加速器/智能芯片",
+    "集成电路测试/可靠性"
+   ],
+   "homepage": "https://liu-cheng.github.io/",
+   "email": null,
+   "notes": "2"
+  },
+  {
+   "name_cn": "刘宇航",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "处理器/体系结构",
+    "计算机体系结构",
+    "存储系统"
+   ],
+   "homepage": "https://ict.cas.cn/sourcedb/cn/jssrck/201711/t20171114_4894348.html",
+   "email": null,
+   "notes": "硕导计算机系统结构"
+  },
+  {
+   "name_cn": "石侃",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "处理器/体系结构",
+    "开源芯片/芯片生态",
+    "芯片敏捷设计与验证"
+   ],
+   "homepage": "https://ict.cas.cn/sourcedb/cn/jssrck/202305/t20230505_6749159.html",
+   "email": null,
+   "notes": "硕导计算机系统结构"
+  },
+  {
+   "name_cn": "唐丹",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "处理器/体系结构",
+    "计算机体系结构"
+   ],
+   "homepage": "https://sklp.ict.ac.cn/gysys/yjdw/fyjy/202302/t20230214_128791.html",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王磊（计算所）",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路设计",
+    "开源芯片/芯片生态"
+   ],
+   "homepage": "https://sklp.ict.ac.cn/gysys/yjdw/fyjy/202302/t20230214_128790.html",
+   "email": null,
+   "notes": "硕导；本项目为消歧标注：同名者，见「计算所」"
+  },
+  {
+   "name_cn": "王郁杰",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "EDA/设计自动化",
+    "集成电路测试/可靠性"
+   ],
+   "homepage": "https://ict.cas.cn/sourcedb/cn/jssrck/202010/t20201023_5721572.html",
+   "email": null,
+   "notes": "博导"
+  },
+  {
+   "name_cn": "肖俊华",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "处理器/体系结构",
+    "计算机体系结构",
+    "高性能处理器设计"
+   ],
+   "homepage": "https://ict.cas.cn/sourcedb/cn/jssrck/201511/t20151119_4470340.html",
+   "email": null,
+   "notes": "硕士生导师"
+  },
+  {
+   "name_cn": "叶靖",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路测试/可靠性",
+    "集成电路测试与安全"
+   ],
+   "homepage": "https://ict.cas.cn/sourcedb/cn/jssrck/201810/t20181030_5151480.html",
+   "email": null,
+   "notes": "硕导计算机系统结构"
+  },
+  {
+   "name_cn": "臧大伟",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "处理器/体系结构",
+    "高性能计算",
+    "光计算体系结构"
+   ],
+   "homepage": "https://ict.cas.cn/sourcedb/cn/jssrck/202010/t20201023_5721607.html",
+   "email": null,
+   "notes": "硕士生导师"
+  },
+  {
+   "name_cn": "张浩",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "处理器/体系结构",
+    "众核处理器设计",
+    "高密度计算系统设计"
+   ],
+   "homepage": "http://www.ict.ac.cn/sourcedb/cn/jssrck/201706/t20170626_4818164.html",
+   "email": null,
+   "notes": "硕士生导师"
+  },
+  {
+   "name_cn": "章隆兵",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "处理器/体系结构",
+    "计算机体系结构"
+   ],
+   "homepage": "https://sklp.ict.ac.cn/gysys/yjdw/fyjy/202302/t20230214_128775.html",
+   "email": null,
+   "notes": "博士生导师"
+  },
+  {
+   "name_cn": "赵地",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "处理器/体系结构",
+    "AI加速器/智能芯片",
+    "开源芯片/芯片生态",
+    "通信基带/无线SoC"
+   ],
+   "homepage": "https://ict.cas.cn/sourcedb/cn/jssrck/201803/t20180309_4971421.html",
+   "email": null,
+   "notes": "硕导计算机系统结构"
+  },
+  {
+   "name_cn": "赵家程",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "处理器/体系结构",
+    "领域定制架构的系统软件和编译"
+   ],
+   "homepage": "https://ict.cas.cn/sourcedb/cn/jssrck/202010/t20201023_5721593.html",
+   "email": null,
+   "notes": "硕士生导师"
+  },
+  {
+   "name_cn": "支天",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "计算技术研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路设计",
+    "处理器/体系结构",
+    "可重构计算"
+   ],
+   "homepage": "http://www.ict.ac.cn/sourcedb/cn/jssrck/202010/t20201023_5721585.html",
+   "email": null,
+   "notes": "硕士生导师"
+  },
+  {
+   "name_cn": "张志伟",
+   "name_en": null,
+   "title": "研究员",
+   "department": "自动化研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "处理器/体系结构",
+    "通信基带/无线SoC"
+   ],
+   "homepage": "https://people.ucas.ac.cn/~zhangzw",
+   "email": null,
+   "notes": "国家专用集成电路设计工程技术研究中心/集成电路设计方向"
+  },
+  {
+   "name_cn": "蒿杰",
+   "name_en": null,
+   "title": "研究员",
+   "department": "自动化研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "处理器/体系结构",
+    "AI加速器/智能芯片",
+    "量子芯片/量子计算"
+   ],
+   "homepage": "https://people.ucas.ac.cn/~haojie",
+   "email": null,
+   "notes": "国家专用集成电路设计工程技术研究中心/集成电路设计方向"
+  },
+  {
+   "name_cn": "程健",
+   "name_en": null,
+   "title": "研究员",
+   "department": "自动化研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "处理器/体系结构",
+    "AI加速器/智能芯片",
+    "实现轻量化人工智能部署和应用"
+   ],
+   "homepage": "https://people.ucas.ac.cn/~chengjian",
+   "email": null,
+   "notes": "国家专用集成电路设计工程技术研究中心/集成电路设计方向"
+  },
+  {
+   "name_cn": "陈亮",
+   "name_en": null,
+   "title": "高级工程师",
+   "department": "自动化研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路设计",
+    "处理器/体系结构",
+    "AI加速器/智能芯片",
+    "通信基带/无线SoC"
+   ],
+   "homepage": "https://people.ucas.ac.cn/~liangchen",
+   "email": null,
+   "notes": "国家专用集成电路设计工程技术研究中心/集成电路设计方向"
+  },
+  {
+   "name_cn": "舒琳",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "自动化研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "AI加速器/智能芯片",
+    "MEMS/传感器",
+    "FPGA加速计算"
+   ],
+   "homepage": "https://people.ucas.ac.cn/~shulin",
+   "email": null,
+   "notes": "国家专用集成电路设计工程技术研究中心/集成电路设计方向"
+  },
+  {
+   "name_cn": "毛静娜",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "自动化研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路设计",
+    "通信基带/无线SoC",
+    "生物医学电路与系统"
+   ],
+   "homepage": "https://people.ucas.ac.cn/~maojn",
+   "email": null,
+   "notes": "国家专用集成电路设计工程技术研究中心/集成电路设计方向"
+  },
+  {
+   "name_cn": "康凯",
+   "name_en": null,
+   "title": "正高级工程师",
+   "department": "上海高等研究院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "MEMS/传感器",
+    "通信基带/无线SoC",
+    "无线通信"
+   ],
+   "homepage": "http://www.sari.cas.cn/gradedu/szdw/znxx/xydydtxwl/yjsds/202507/t20250709_7882909.html",
+   "email": null,
+   "notes": "智能信息通信技术研究与发展中心；下一代移动通信网络"
+  },
+  {
+   "name_cn": "李明齐",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海高等研究院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "通信基带/无线SoC",
+    "G通信",
+    "AI的通信信号处理"
+   ],
+   "homepage": "http://www.sari.cas.cn/gradedu/szdw/znxx/xydydtxwl/yjsds/202507/t20250709_7882913.html",
+   "email": null,
+   "notes": "智能信息通信技术研究与发展中心；下一代移动通信网络"
+  },
+  {
+   "name_cn": "徐天衡",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海高等研究院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "通信基带/无线SoC",
+    "研究员",
+    "新一代信息技术专项"
+   ],
+   "homepage": "http://www.sari.cas.cn/gradedu/szdw/znxx/xydydtxwl/yjsds/202507/t20250709_7882911.html",
+   "email": null,
+   "notes": "智能信息通信技术研究与发展中心；下一代移动通信网络"
+  },
+  {
+   "name_cn": "魏建明",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海高等研究院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS/传感器",
+    "国家安全生产应急专家",
+    "科技部与上海市信息技术领域专家"
+   ],
+   "homepage": "http://www.sari.cas.cn/gradedu/szdw/znxx/wlwyznxt/yjsds/202507/t20250709_7882939.html",
+   "email": null,
+   "notes": "智能信息通信技术研究与发展中心；物联网与智能系统"
+  },
+  {
+   "name_cn": "吴波",
+   "name_en": null,
+   "title": "正高级工程师",
+   "department": "上海高等研究院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体工艺/制造",
+    "上海电子学会副理事长",
+    "智能电网重大专项专家"
+   ],
+   "homepage": "http://www.sari.cas.cn/gradedu/szdw/znxx/wlwyznxt/yjsds/202507/t20250709_7882942.html",
+   "email": null,
+   "notes": "智能信息通信技术研究与发展中心；物联网与智能系统"
+  },
+  {
+   "name_cn": "梅年松",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "上海高等研究院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "通信基带/无线SoC",
+    "脑机接口",
+    "具身智能前沿"
+   ],
+   "homepage": "http://www.sari.cas.cn/gradedu/szdw/znxx/wlwyznxt/yjsds/202507/t20250709_7882940.html",
+   "email": null,
+   "notes": "智能信息通信技术研究与发展中心；物联网与智能系统"
+  },
+  {
+   "name_cn": "徐正蓺",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "上海高等研究院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "MEMS/传感器",
+    "智能传感",
+    "多源数据融合"
+   ],
+   "homepage": "http://www.sari.cas.cn/gradedu/szdw/znxx/wlwyznxt/yjsds/202507/t20250709_7882941.html",
+   "email": null,
+   "notes": "智能信息通信技术研究与发展中心；物联网与智能系统"
+  },
+  {
+   "name_cn": "黄尊恺",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海高等研究院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "处理器/体系结构",
+    "光电子/硅光",
+    "光电探测/成像",
+    "MEMS/传感器"
+   ],
+   "homepage": "http://www.sari.cas.cn/gradedu/szdw/znxx/gzyjs/yjsds/202507/t20250709_7882949.html",
+   "email": null,
+   "notes": "智能信息通信技术研究与发展中心；感知与计算"
+  },
+  {
+   "name_cn": "田犁",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海高等研究院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路设计",
+    "宽禁带/化合物半导体",
+    "人工智能"
+   ],
+   "homepage": "http://www.sari.cas.cn/gradedu/szdw/znxx/gzyjs/yjsds/202507/t20250709_7882953.html",
+   "email": null,
+   "notes": "智能信息通信技术研究与发展中心；感知与计算"
+  },
+  {
+   "name_cn": "汪辉",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海高等研究院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体工艺/制造",
+    "光电子/硅光",
+    "光电探测/成像",
+    "MEMS/传感器",
+    "通信基带/无线SoC"
+   ],
+   "homepage": "http://www.sari.cas.cn/gradedu/szdw/znxx/gzyjs/yjsds/202507/t20250709_7882952.html",
+   "email": null,
+   "notes": "智能信息通信技术研究与发展中心；感知与计算"
+  },
+  {
+   "name_cn": "祝永新",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海高等研究院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "AI加速器/智能芯片"
+   ],
+   "homepage": "http://www.sari.cas.cn/gradedu/szdw/znxx/gzyjs/yjsds/202507/t20250709_7882950.html",
+   "email": null,
+   "notes": "智能信息通信技术研究与发展中心；感知与计算"
+  },
+  {
+   "name_cn": "刘立庄",
+   "name_en": null,
+   "title": "正高级工程师",
+   "department": "上海高等研究院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路设计",
+    "处理器/体系结构",
+    "人工智能"
+   ],
+   "homepage": "http://www.sari.cas.cn/gradedu/szdw/znxx/gyrgzn/yjsds/202507/t20250709_7882957.html",
+   "email": null,
+   "notes": "智能信息通信技术研究与发展中心；工业人工智能"
+  },
+  {
+   "name_cn": "汪欣",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "上海高等研究院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "MEMS/传感器",
+    "通信基带/无线SoC",
+    "副研究员"
+   ],
+   "homepage": "http://www.sari.cas.cn/gradedu/szdw/znxx/gyrgzn/yjsds/202507/t20250709_7881919.html",
+   "email": null,
+   "notes": "智能信息通信技术研究与发展中心；工业人工智能"
+  },
+  {
+   "name_cn": "周文晋",
+   "name_en": null,
+   "title": "高级工程师",
+   "department": "上海高等研究院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "光刻/半导体装备",
+    "中科院院重点部署课题",
+    "上海市科委"
+   ],
+   "homepage": "http://www.sari.cas.cn/gradedu/szdw/znxx/gyrgzn/yjsds/202507/t20250709_7882956.html",
+   "email": null,
+   "notes": "智能信息通信技术研究与发展中心；工业人工智能"
+  },
+  {
+   "name_cn": "王中阳",
+   "name_en": null,
+   "title": "研究员",
+   "department": "上海高等研究院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体工艺/制造"
+   ],
+   "homepage": "http://www.sari.cas.cn/gradedu/szdw/znxx/gyrgzn/yjsds/202507/t20250709_7882961.html",
+   "email": null,
+   "notes": "智能信息通信技术研究与发展中心；工业人工智能"
+  }
+ ]
+}

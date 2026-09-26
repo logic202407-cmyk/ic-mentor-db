@@ -97,6 +97,28 @@ for (const t of ['T0', 'T1', 'T2', 'T3', 'T4']) {
   md += `| ${t} ${TIER_LABEL[t]} | ${rows.filter((d) => d.tier === t).length} |\n`;
 }
 
+// ── 学校 × 方向 交叉矩阵 ──
+const matrixGroups = groups.filter((g) => rows.filter((d) => d.group_names.includes(g)).length >= 5);
+md += `
+### 2.4 学校 × 方向 交叉矩阵（选校参考）
+
+> 单元格＝该校该方向的收录人数（含方向交叉，一人可计入多列）。**括号内为其中主页明确在招的人数**。
+> 这张表回答的是"我想做 X 方向，哪几所学校可选的人多"，**不代表方向实力排名**。
+
+| 学校 | ${matrixGroups.join(' | ')} | 合计 |
+|:--|${matrixGroups.map(() => '--:').join('|')}|--:|
+`;
+for (const s of schools) {
+  const sub = rows.filter((d) => d.school === s);
+  const cells = matrixGroups.map((g) => {
+    const hit = sub.filter((d) => d.group_names.includes(g));
+    const rec = hit.filter((d) => d.recruit_signal_count > 0).length;
+    return hit.length ? `${hit.length}${rec ? `（${rec}）` : ''}` : '—';
+  });
+  md += `| ${sh(s)} | ${cells.join(' | ')} | ${sub.length} |\n`;
+}
+md += `| **合计** | ${matrixGroups.map((g) => `**${rows.filter((d) => d.group_names.includes(g)).length}**`).join(' | ')} | **${rows.length}** |\n`;
+
 // ── 招生信息 ──
 md += `
 ---

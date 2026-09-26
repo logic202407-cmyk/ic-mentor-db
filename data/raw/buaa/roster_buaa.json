@@ -1,0 +1,1528 @@
+{
+ "school": "北京航空航天大学",
+ "school_key": "buaa",
+ "harvested_at": "2026-09-26",
+ "sources": [
+  "https://shi.buaa.edu.cn/xylb.jsp?urltype=tree.TreeTempUrl&wbtreeid=1002",
+  "https://shi.buaa.edu.cn/xyjslb.jsp?totalpage=40&PAGENUM=1..N&id=1176&lang=zh_CN&st=0&urltype=tsites.CollegeTeacherList&wbtreeid=1002",
+  "https://shi.buaa.edu.cn/xyjslb.jsp?totalpage=40&PAGENUM=1..N&id=1007&lang=zh_CN&st=0&urltype=tsites.CollegeTeacherList&wbtreeid=1002",
+  "https://shi.buaa.edu.cn/xyjslb.jsp?totalpage=40&PAGENUM=1..N&id=1039&lang=zh_CN&st=0&urltype=tsites.CollegeTeacherList&wbtreeid=1002",
+  "https://shi.buaa.edu.cn/xyjslb.jsp?totalpage=40&PAGENUM=1..N&id=1012&lang=zh_CN&st=0&urltype=tsites.CollegeTeacherList&wbtreeid=1002",
+  "https://shi.buaa.edu.cn/xyjslb.jsp?totalpage=40&PAGENUM=1..N&id=1114&lang=zh_CN&st=0&urltype=tsites.CollegeTeacherList&wbtreeid=1002",
+  "https://shi.buaa.edu.cn/xyjslb.jsp?totalpage=40&PAGENUM=1..N&id=1190&lang=zh_CN&st=0&urltype=tsites.CollegeTeacherList&wbtreeid=1002",
+  "https://shi.buaa.edu.cn/xyjslb.jsp?totalpage=40&PAGENUM=1..N&id=1154&lang=zh_CN&st=0&urltype=tsites.CollegeTeacherList&wbtreeid=1002",
+  "https://shi.buaa.edu.cn/xyjslb.jsp?totalpage=40&PAGENUM=1..N&id=1188&lang=zh_CN&st=0&urltype=tsites.CollegeTeacherList&wbtreeid=1002",
+  "https://shi.buaa.edu.cn/xyjslb.jsp?totalpage=40&PAGENUM=1..N&id=1139&lang=zh_CN&st=0&urltype=tsites.CollegeTeacherList&wbtreeid=1002",
+  "http://ic.buaa.edu.cn/szll.htm",
+  "http://ic.buaa.edu.cn/szll/jcrcx.htm (及 /jcrcx/1..3.htm)",
+  "http://ic.buaa.edu.cn/szll/szdw1/jsx.htm (及 /jsx/1..3.htm)",
+  "http://ic.buaa.edu.cn/szll/szdw1/fjsx.htm (及 /fjsx/1..4.htm)",
+  "http://ic.buaa.edu.cn/szll/szdw1/zljsx.htm",
+  "http://ic.buaa.edu.cn/szll/jzjx.htm",
+  "http://ic.buaa.edu.cn/",
+  "http://www.ee.buaa.edu.cn/szdw/qtjgzz.htm",
+  "http://www.ee.buaa.edu.cn/szdw/bdjj.htm",
+  "http://www.ee.buaa.edu.cn/szdw/sdjj.htm",
+  "http://www.ee.buaa.edu.cn/szdw/zmxz.htm",
+  "http://www.ee.buaa.edu.cn/xyjj/xsjg.htm",
+  "http://www.ee.buaa.edu.cn/kxyj/kyfx.htm",
+  "http://www.ee.buaa.edu.cn/info/1160|1161|1167|1168|1272/<id>.htm (295 个教师简介页)",
+  "https://scse.buaa.edu.cn/",
+  "https://www.buaa.edu.cn/",
+  "https://shi.buaa.edu.cn/<slug>/zh_CN/index.htm (857 个教师个人主页)",
+  "https://shi.buaa.edu.cn/xiaolimin/zh_CN/yjgk/9841/list/index.htm"
+ ],
+ "coverage_note": "已覆盖院系（以 shi.buaa.edu.cn 教师主页平台的“学院列表”为骨架，逐院抓取教师列表后再逐个抓取个人主页）：\n1) 集成电路科学与工程学院（id=1176，70 条记录/66 人）：全部抓取；另抓取学院官网 ic.buaa.edu.cn 的“杰出人才/教授/副教授/助理教授/兼职讲席”分页，“研究方向+人才称号”直接来自官网，是本库质量最高的部分。\n2) 电子信息工程学院（id=1007，215 条/206 人）：全部抓取；另抓取学院官网 www.ee.buaa.edu.cn 的“全体教工（在职）”（用于系所归属）、“博导简介/硕导简介”（295 个教师简介页，含职称与研究方向）、“知名学者”“学术机构”“科研方向”。重点收录电子科学与技术系（微波/毫米波/太赫兹/集成电路设计）、光电与信息工程系（硅光/微纳光子/集成光子芯片），以及通信工程系中做集成电路与射频电路者。\n3) 计算机学院（id=1039，95 条/87 人）：全部抓取后按方向筛选，仅收录体系结构/定制芯片/可重构计算/处理器方向（其余为 CV、NLP、VR、医学影像、软件等，已剔除）。\n4) 自动化科学与电气工程学院（id=1012，221 条/206 人）：全部抓取后筛选，收录宽禁带功率器件、功率集成、生物信号处理芯片方向。\n5) 仪器科学与光电工程学院（id=1114，159 条/149 人）：全部抓取后筛选，收录 MEMS 传感器、微纳传感芯片、集成光电子器件、集成电路测试、芯片化量子传感器方向。\n6) 人工智能研究院（id=1190，36 条/31 人）：全部抓取；该院以机器学习/大模型/具身智能为主，与芯片直接相关者很少，仅收录端侧 AI 芯片部署与星载实时计算方向 1 人。\n7) 另抓取网络空间安全学院（id=1154）、国际前沿交叉科学研究院（id=1188）、无人系统研究院（id=1139）教师列表作旁证，未发现符合芯片方向的在职教师，未收录。\n未抓到/未收录及原因：\nA. 苗俊刚（电子信息工程学院教授，电子科学与技术系，毫米波/太赫兹方向）：其 shi.buaa.edu.cn 个人主页仅有基本信息、无任何研究内容，ee.buaa.edu.cn 教师简介页缺失（/info/1161/10040.htm 返回 404），学院“科研方向”页只有方向名称不含人名 —— 无法取得可追溯的研究方向证据，故未收录，避免编造关键词。\nB. 电子信息工程学院“兼职讲席/退休/行政”人员：退休教师（学院“老教师”栏目）、党政办公室人员、实验教学中心以教学为主者（王俊、张有光、张玉玺、杨彬等）均未收录。\nC. 集成电路科学与工程学院“兼职讲席”（艾尔伯·费尔、郝跃院士、赵超、赵元富、陈雷、金意儿、张亦农、张韵东）为非全职兼职岗位，按“只要在职教师/导师”的要求未收录；师资博士后（张科）与无任何研究信息的陈浩轩、丁瑞云、高静、胡晏铭、邢炜、金辉未收录。\nD. 部分教师个人主页为空白模板（如全院 857 人中约 400 人无个人简介），其研究方向改用学院官网/系所归属补足；仍无证据者一律不收录。\nE. 纯方向剔除：计算机视觉/自然语言处理/大模型/虚拟现实/医学影像/遥感/导航制导/机器人/电磁兼容与天线工程（非芯片）/电机与伺服/流体与结构力学/材料化学与光催化等。\nF. is_phd_advisor 由教师主页证据判定（页面含“博士生导师/博士生招生”或维护“博士研究生”栏目）；主页未标注者记为 false，可能与实际情况有偏差。\nG. 全库 email 一律为 null（按项目要求不收录邮箱）。",
+ "faculty": [
+  {
+   "name_cn": "赵巍胜",
+   "name_en": "Weisheng ZHAO",
+   "title": "教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "自旋电子学",
+    "新型信息器件",
+    "非易失存储器",
+    "自旋存储芯片"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/09688/zh_CN/index.htm",
+   "email": null,
+   "notes": "国家级领军人才；自旋电子/存算一体方向学术带头人，自旋芯片与技术全国重点实验室"
+  },
+  {
+   "name_cn": "张悦",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "自旋电子学",
+    "自旋存算一体器件",
+    "超低功耗集成电路设计",
+    "新型计算逻辑系统"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/yuezhang/zh_CN/index.htm",
+   "email": null,
+   "notes": "国家级青年人才；学院常务副院长"
+  },
+  {
+   "name_cn": "聂天晓",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "自旋场效应晶体管",
+    "磁随机存储器件",
+    "自旋太赫兹器件",
+    "超低功耗器件"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/nietianxiao/zh_CN/index.htm",
+   "email": null,
+   "notes": "国家级青年人才；学院副院长"
+  },
+  {
+   "name_cn": "胡远奇",
+   "name_en": "Hu Yuan qi",
+   "title": "教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "模拟集成电路设计",
+    "数模混合芯片",
+    "高精度ADC",
+    "生物电子芯片"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/yuanqihu86/zh_CN/index.htm",
+   "email": null,
+   "notes": "国家级青年人才；学院副院长"
+  },
+  {
+   "name_cn": "张慧（射频SoC）",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "无线收发机与SoC",
+    "射频前端(LNA/PA)",
+    "锁相环与时钟电路",
+    "数据转换器(ADC/DAC)",
+    "电源管理与低功耗AFE"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "国家级领军人才；集成电路科学与工程学院教授（原博通硬件设计经理）。注意：本院另有同名副教授张慧（自旋电子学方向）。来源：集成电路科学与工程学院官网师资队伍/杰出人才页 http://ic.buaa.edu.cn/szll/szdw1/jsx.htm （该教师未开设 shi.buaa.edu.cn 个人主页；见 ic_home.txt 学院杰出人才栏目）；本项目为消歧标注：同名者，见「射频SoC」"
+  },
+  {
+   "name_cn": "张紫辰",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "激光加工技术",
+    "半导体设备",
+    "半导体界面态激光表征"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/zz241/zh_CN/index.htm",
+   "email": null,
+   "notes": "国家级领军人才"
+  },
+  {
+   "name_cn": "于海明",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "自旋波电子学",
+    "磁子器件",
+    "低功耗信息器件"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/hyu/zh_CN/index.htm",
+   "email": null,
+   "notes": "国家级领军人才"
+  },
+  {
+   "name_cn": "林楠",
+   "name_en": "linnan",
+   "title": "教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "极紫外光源",
+    "集成电路光刻",
+    "量检测技术"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/linnan/zh_CN/index.htm",
+   "email": null,
+   "notes": "国家级领军人才、欧盟玛丽居里学者"
+  },
+  {
+   "name_cn": "童志国",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "电源管理集成电路设计",
+    "GPU供电电路",
+    "宽禁带半导体驱动电路",
+    "抗辐照电源电路"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "国家级青年人才；ISSCC/JSSC/VLSI 论文多篇。来源：集成电路科学与工程学院官网师资队伍页 http://ic.buaa.edu.cn/szll/szdw1/jsx.htm （该教师未开设 shi.buaa.edu.cn 个人主页）"
+  },
+  {
+   "name_cn": "刘晨晨",
+   "name_en": "Liu Chenchen",
+   "title": "教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "人工智能芯片",
+    "非冯诺依曼架构与电路设计",
+    "存内计算(PIM)",
+    "异构计算系统"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/liuchenchen/zh_CN/index.htm",
+   "email": null,
+   "notes": "国家级青年人才"
+  },
+  {
+   "name_cn": "康旺",
+   "name_en": "Wang Kang",
+   "title": "教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "存算一体AI芯片",
+    "自旋存储与计算芯片",
+    "类脑计算",
+    "新型计算体系架构"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/kangwang/zh_CN/index.htm",
+   "email": null,
+   "notes": "国家级青年人才/国家特聘青年学者；存算一体团队负责人"
+  },
+  {
+   "name_cn": "彭守仲",
+   "name_en": "Peng Shouzhong",
+   "title": "教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微电子学",
+    "自旋电子学",
+    "磁随机存储器(MRAM)",
+    "磁性材料与薄膜器件"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/shouzhong/zh_CN/index.htm",
+   "email": null,
+   "notes": "国家优秀青年基金获得者；材料与器件系主任"
+  },
+  {
+   "name_cn": "李奕晗",
+   "name_en": "LI YI HAN",
+   "title": "教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光子器件与系统",
+    "光子集成",
+    "超宽带测量技术与设备"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/yihanli/zh_CN/index.htm",
+   "email": null,
+   "notes": "国家级青年人才；院长助理/系主任"
+  },
+  {
+   "name_cn": "朱大鹏",
+   "name_en": "Zhu Dapeng",
+   "title": "教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "自旋轨道矩",
+    "自旋输运与探测",
+    "自旋传感芯片",
+    "隧穿磁电阻器件"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/zhudapeng/zh_CN/index.htm",
+   "email": null,
+   "notes": "国家级青年人才；北航青岛研究院微电子分院副院长"
+  },
+  {
+   "name_cn": "王昭昊",
+   "name_en": "WANG ZHAOHAO",
+   "title": "教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "自旋电子器件",
+    "非易失自旋存储器与逻辑电路",
+    "高能效计算体系架构",
+    "模拟集成电路"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/howard/zh_CN/index.htm",
+   "email": null,
+   "notes": "国家级青年人才；学院副院长"
+  },
+  {
+   "name_cn": "伍连博",
+   "name_en": "wu lianbo",
+   "title": "教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频集成电路设计",
+    "数模混合信号集成电路",
+    "锁相环",
+    "脑机接口芯片"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/wulianbo/zh_CN/index.htm",
+   "email": null,
+   "notes": "国家级青年人才；北航卓越青年学者"
+  },
+  {
+   "name_cn": "詹天卓",
+   "name_en": "zhantianzhuo",
+   "title": "教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "芯片异质集成",
+    "芯片热管理",
+    "微纳尺度传热",
+    "半导体热电器件"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/zhantianzhuo/zh_CN/index.htm",
+   "email": null,
+   "notes": "国家级领军人才"
+  },
+  {
+   "name_cn": "闫建昌",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "宽禁带半导体器件",
+    "氮化物紫外光电器件",
+    "半导体光电集成"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/yanjianchang/zh_CN/index.htm",
+   "email": null,
+   "notes": "国家级领军人才"
+  },
+  {
+   "name_cn": "王聪",
+   "name_en": "WANG CONG",
+   "title": "教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "自旋电子学材料与器件",
+    "光学薄膜",
+    "自旋器件物理"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/06919/zh_CN/index.htm",
+   "email": null,
+   "notes": "2005年教育部新世纪优秀人才"
+  },
+  {
+   "name_cn": "王鹏",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "EDA工具开发",
+    "集成电路自动化设计",
+    "不确定性量化"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/wangpeng1/zh_CN/index.htm",
+   "email": null,
+   "notes": "国家级青年人才"
+  },
+  {
+   "name_cn": "史书园",
+   "name_en": "Shi Shuyuan",
+   "title": "教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "自旋电子学",
+    "自旋存储与逻辑器件",
+    "自旋神经形态器件",
+    "反铁磁自旋电子学"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/shishuyuan/zh_CN/index.htm",
+   "email": null,
+   "notes": "国家优秀青年基金获得者；北京市科技新星"
+  },
+  {
+   "name_cn": "雷娜",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "拓扑磁性材料",
+    "电控磁矩翻转",
+    "超低功耗自旋存储",
+    "自旋类脑器件"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/leina/zh_CN/index.htm",
+   "email": null,
+   "notes": "中国仪器仪表学会技术发明一等奖"
+  },
+  {
+   "name_cn": "林晓阳",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "低功耗自旋电子器件",
+    "新型信息材料与器件",
+    "集成电路装备"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/XYLin/zh_CN/index.htm",
+   "email": null,
+   "notes": "国家级青年人才"
+  },
+  {
+   "name_cn": "曾琅",
+   "name_en": null,
+   "title": "教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体器件量子输运仿真",
+    "设计工艺协同优化",
+    "自旋器件建模与仿真",
+    "伊辛计算"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/midfielder/zh_CN/index.htm",
+   "email": null,
+   "notes": "国家级青年人才"
+  },
+  {
+   "name_cn": "温良恭",
+   "name_en": "wen liang gong",
+   "title": "副教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS传感器",
+    "微纳器件",
+    "太赫兹器件及传感器",
+    "医工交叉微纳系统"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/wenlianggong/zh_CN/index.htm",
+   "email": null,
+   "notes": "山东省泰山产业领军人才；曾任IMEC先导工艺研究"
+  },
+  {
+   "name_cn": "王新河",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "自旋电子学器件",
+    "集成电路工艺检测",
+    "装备控制"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/wangxinhe/zh_CN/index.htm",
+   "email": null,
+   "notes": "北京市科技新星；学院副院长"
+  },
+  {
+   "name_cn": "张昆",
+   "name_en": "zhangkun",
+   "title": "副教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "磁电自旋轨道逻辑器件",
+    "自旋存算一体器件",
+    "自旋轨道矩调控"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/KunZHANG/zh_CN/index.htm",
+   "email": null,
+   "notes": "学科：微电子学与固体电子学"
+  },
+  {
+   "name_cn": "张德明",
+   "name_en": "Zhang Deming",
+   "title": "副教授",
+   "department": "集成电路科学与工程学院（北航青岛研究院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "自旋存算一体芯片电路设计",
+    "抗辐照存储与逻辑芯片",
+    "磁传感器模拟前端芯片"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/zhangdeming/zh_CN/index.htm",
+   "email": null,
+   "notes": "山东省泰山学者青年专家；北航青岛研究院院长"
+  },
+  {
+   "name_cn": "张学莹",
+   "name_en": "Zhang Xueying",
+   "title": "副研究员",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路测试设备",
+    "磁光克尔成像",
+    "自旋电子芯片设计"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/zhangxueying/zh_CN/index.htm",
+   "email": null,
+   "notes": "国家“万人计划”科技创新领军人才；自旋芯片与技术全国重点实验室副主任"
+  },
+  {
+   "name_cn": "潘彪",
+   "name_en": "panbiao",
+   "title": "副教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "数字集成电路设计",
+    "RISC-V存算一体AI芯片",
+    "类脑计算芯片",
+    "自旋电子器件"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/panbiao/zh_CN/index.htm",
+   "email": null,
+   "notes": "翼动芯生课题组负责人"
+  },
+  {
+   "name_cn": "许涌",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "自旋电子学",
+    "超快磁学",
+    "自旋动力学"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/xuyongbuaa/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "罗金",
+   "name_en": "Luo Jin",
+   "title": "副教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "存算一体智能芯片",
+    "三维存算一体架构",
+    "新型非易失器件"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/luojin/zh_CN/index.htm",
+   "email": null,
+   "notes": "IEEE IEDM 多篇一作"
+  },
+  {
+   "name_cn": "魏家琦",
+   "name_en": "Wei Jiaqi",
+   "title": "副研究员",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "超快磁动力学",
+    "集成电路装备嵌入式系统",
+    "光学工程"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/weijiaqi1/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "郑天宁",
+   "name_en": "Zheng Tianning",
+   "title": "副研究员",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "无源射频芯片设计",
+    "微纳加工",
+    "超导滤波器",
+    "系统集成"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/zhengtianning/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张金娥",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路检测设备",
+    "氧化物自旋电子学",
+    "集成电路测试技术"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/zhangjine1/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "石海燕",
+   "name_en": "Shi Haiyan",
+   "title": "副研究员",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路激光加工工艺",
+    "半导体材料激光改质",
+    "加工表征与测试"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/shihaiyan/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "林钰登",
+   "name_en": "Yudeng Lin",
+   "title": "副教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "新型存储器",
+    "存算一体系统",
+    "存算一体算法"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/linyudeng/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张婕",
+   "name_en": "Zhang Jie",
+   "title": "副教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "自旋电子存储与逻辑器件",
+    "自旋轨道矩",
+    "二维磁性材料与器件"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/zj10623/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "蔡文龙",
+   "name_en": "Cai Wenlong",
+   "title": "副教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "超低功耗自旋电子器件",
+    "超高速自旋电子器件",
+    "自旋协同矩效应",
+    "皮秒级磁存储器件"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/caiwenlong1/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张志仲",
+   "name_en": "zhangzhizhong",
+   "title": "副教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "自旋电子器件设计与仿真",
+    "AI+EDA",
+    "集成电路仪器设计"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/zhangzhizhong1/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张和",
+   "name_en": "Zhang He",
+   "title": "副教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "人工智能芯片设计",
+    "MRAM存储芯片设计",
+    "非易失存储芯片"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/zhanghe12/zh_CN/index.htm",
+   "email": null,
+   "notes": "中国科协青年人才托举工程"
+  },
+  {
+   "name_cn": "张博宇",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "超快磁学",
+    "磁随机存储器(MRAM)",
+    "磁存储器件"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/zhangboyu/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王雪岩",
+   "name_en": "Wang Xueyan",
+   "title": "副教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "高能效计算架构与芯片设计",
+    "存算一体软硬件协同",
+    "领域专用加速器",
+    "芯片安全"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/wangxueyan/zh_CN/index.htm",
+   "email": null,
+   "notes": "中国科协“青年人才托举工程”入选者"
+  },
+  {
+   "name_cn": "朱道乾",
+   "name_en": "ZHU Daoqian",
+   "title": "副教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "自旋电子学",
+    "磁存储器件",
+    "自旋轨道矩"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/ZHU_Daoqian/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李赛",
+   "name_en": "Sai Li",
+   "title": "副教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "自旋电子学",
+    "智能计算器件",
+    "智能计算芯片"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/lisai1/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "靳晓笛",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "太赫兹收发芯片",
+    "量子比特操控与读取电路",
+    "半导体器件建模"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/jinxiaodi/zh_CN/index.htm",
+   "email": null,
+   "notes": "国家级青年人才"
+  },
+  {
+   "name_cn": "尉国栋",
+   "name_en": "weiguodong",
+   "title": "副教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "自旋电子材料与器件",
+    "测试测量设备研制",
+    "自旋电子学"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/weiguodong1/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "杨光",
+   "name_en": "Yang Guang",
+   "title": "副教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "超导自旋电子学",
+    "非易失存储器",
+    "磁性功能薄膜"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/rightpalmprint/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "成元庆",
+   "name_en": "chengyuanqing",
+   "title": "副教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "2.5D/3D集成电路设计自动化",
+    "三维集成电路体系结构",
+    "低功耗设计"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/chengyuanqing/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "贾小涛",
+   "name_en": "Jia Xiaotao",
+   "title": "副教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "EDA大规模集成电路物理设计",
+    "存内计算架构",
+    "随机计算"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/xiaotaojia/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "史可文",
+   "name_en": "shikewen",
+   "title": "副教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "磁存储器超快电学特性",
+    "反铁磁自旋电子学",
+    "磁动力学"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/shikewen/zh_CN/index.htm",
+   "email": null,
+   "notes": "中国科协“青年人才托举工程”入选者"
+  },
+  {
+   "name_cn": "杨皓哲",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "后摩尔低功耗自旋电子器件",
+    "自旋电荷转换器件",
+    "蓄水池神经网络"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/zhangman/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王碧",
+   "name_en": "Wang Bi",
+   "title": "副教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "抗辐射集成电路设计",
+    "非易失存储器件",
+    "辐射损伤与调控"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/wangbi1/zh_CN/index.htm",
+   "email": null,
+   "notes": "北京市科技新星"
+  },
+  {
+   "name_cn": "方霄",
+   "name_en": null,
+   "title": "副教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "毫米波/太赫兹片上系统",
+    "生物医疗通信系统",
+    "毫米波集成电路"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/fangxiao/zh_CN/index.htm",
+   "email": null,
+   "notes": "国家级青年人才"
+  },
+  {
+   "name_cn": "王一娇",
+   "name_en": "Wang Yijiao",
+   "title": "助理教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "存算一体电路与芯片设计",
+    "感算一体电路",
+    "设计工艺协同优化"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/ukiwong/zh_CN/index.htm",
+   "email": null,
+   "notes": "北京市课程思政教学名师"
+  },
+  {
+   "name_cn": "杨怀文",
+   "name_en": "yanghuaiwen",
+   "title": "助理研究员",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "自旋轨道转矩存储",
+    "自旋传感芯片",
+    "仪器装备设计制造"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/yanghuaiwen1/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "范志强",
+   "name_en": null,
+   "title": "助理研究员",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "半导体器件制备",
+    "微纳加工工艺",
+    "MEMS传感器与探测器"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/fanzhiqiang1/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "郑翔宇",
+   "name_en": "zheng Xiangyu",
+   "title": "助理研究员",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "新型磁存储技术",
+    "存算一体架构",
+    "自旋电子学"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/zhengxiangyu/zh_CN/index.htm",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "柳洋",
+   "name_en": null,
+   "title": "助理研究员",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "微纳米加工技术",
+    "自旋电子材料",
+    "自旋电子器件"
+   ],
+   "homepage": null,
+   "email": null,
+   "notes": "来源：集成电路科学与工程学院官网助理教授页 http://ic.buaa.edu.cn/szll/szdw1/zljsx.htm （该教师未开设 shi.buaa.edu.cn 个人主页）"
+  },
+  {
+   "name_cn": "张慧（自旋电子学）",
+   "name_en": "Zhang Hui",
+   "title": "副教授",
+   "department": "集成电路科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "自旋电子学",
+    "关联电子低维体系",
+    "微纳器件制备",
+    "电子输运与磁性表征"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/zhanghui2021/zh_CN/index.htm",
+   "email": null,
+   "notes": "集成电路科学与工程学院副教授（中国科学院物理研究所博士）。注意：本院另有同名教授张慧（射频SoC方向）；本项目为消歧标注：同名者，见「自旋电子学」"
+  },
+  {
+   "name_cn": "阮存军",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子信息工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "毫米波与太赫兹功率器件",
+    "集成微波电子学",
+    "太赫兹电子学",
+    "真空电子器件"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/ruancunjun/zh_CN/index.htm",
+   "email": null,
+   "notes": "教授；电子科学与技术系"
+  },
+  {
+   "name_cn": "诸葛晓栋",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子信息工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "超宽带微波",
+    "毫米波近距成像",
+    "稀疏阵列",
+    "近距探测成像"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/zhugexiaodong/zh_CN/index.htm",
+   "email": null,
+   "notes": "电子科学与技术系副主任；欧洲微波会议最佳青年工程师奖"
+  },
+  {
+   "name_cn": "洪韬",
+   "name_en": "hong tao",
+   "title": "副教授",
+   "department": "电子信息工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微波感知",
+    "微波通信系统",
+    "射频系统"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/07872/zh_CN/index.htm",
+   "email": null,
+   "notes": "电子科学与技术系；省部级科技进步奖2项"
+  },
+  {
+   "name_cn": "陈赛",
+   "name_en": "chen sai",
+   "title": "副教授",
+   "department": "电子信息工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "太赫兹功能器件",
+    "微纳光学超构表面",
+    "可重构电磁波束器件"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/chensai/zh_CN/index.htm",
+   "email": null,
+   "notes": "电子科学与技术系"
+  },
+  {
+   "name_cn": "刘巧梅",
+   "name_en": "Liu Qiaomei",
+   "title": "副教授",
+   "department": "电子信息工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "强场太赫兹",
+    "太赫兹波段材料电磁参数表征",
+    "超快光谱"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/liuqiaomei/zh_CN/index.htm",
+   "email": null,
+   "notes": "电子科学与技术系"
+  },
+  {
+   "name_cn": "吴晓君",
+   "name_en": "wuxiaojun",
+   "title": "教授",
+   "department": "电子信息工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "太赫兹强源",
+    "太赫兹器件与系统",
+    "超快光电子学"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/wuxiaojun/zh_CN/index.htm",
+   "email": null,
+   "notes": "北航蓝天杰出教授（二级）；德国洪堡学者、美国光学学会会士；国际太赫兹科创中心主任"
+  },
+  {
+   "name_cn": "夏同生",
+   "name_en": "xiatongsheng",
+   "title": "副教授",
+   "department": "电子信息工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光电混合芯片设计",
+    "集成电路设计",
+    "模拟版图人工智能设计"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/xiatongsheng/zh_CN/index.htm",
+   "email": null,
+   "notes": "电子科学与技术系"
+  },
+  {
+   "name_cn": "刘大伟",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子信息工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "GaN射频与功率器件",
+    "微波半导体器件",
+    "电磁防护"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/09100/zh_CN/index.htm",
+   "email": null,
+   "notes": "电磁兼容与电磁环境系；中国电子学会电波传播分会委员"
+  },
+  {
+   "name_cn": "许鼎",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "电子信息工程学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "微波毫米波电路",
+    "毫米波天线",
+    "成像雷达"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/07586/zh_CN/index.htm",
+   "email": null,
+   "notes": "电子科学与技术系"
+  },
+  {
+   "name_cn": "孙国琳",
+   "name_en": "sunguolin",
+   "title": "副教授",
+   "department": "电子信息工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "毫米波射频集成电路系统",
+    "微波成像系统",
+    "射频电路"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/sunguolin/zh_CN/index.htm",
+   "email": null,
+   "notes": "电子科学与技术系"
+  },
+  {
+   "name_cn": "李洪革",
+   "name_en": "Li hongge",
+   "title": "教授",
+   "department": "电子信息工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "AI智能芯片与计算",
+    "混合概率逻辑计算",
+    "类脑计算芯片"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/lihongge/zh_CN/index.htm",
+   "email": null,
+   "notes": "电子科学与技术系；中国电子学会集成电路专委会副主任委员、CCF集成电路设计专委委员"
+  },
+  {
+   "name_cn": "陈航",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子信息工程学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成光子芯片",
+    "光子神经网络",
+    "智能光电计算",
+    "电磁安全"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/ChenHang/zh_CN/index.htm",
+   "email": null,
+   "notes": "电磁兼容与电磁环境系；2025年入职"
+  },
+  {
+   "name_cn": "杨顺川",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子信息工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "高密度集成电路参数快速提取",
+    "多物理场仿真",
+    "微波器件设计"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/yangshunchuan/zh_CN/index.htm",
+   "email": null,
+   "notes": "电磁兼容与电磁环境系；北航“卓越百人”"
+  },
+  {
+   "name_cn": "杨昕欣",
+   "name_en": "yangxinxin",
+   "title": "副教授",
+   "department": "电子信息工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路与嵌入式系统",
+    "射频电路设计",
+    "智能感知与通信系统"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/yangxinxin/zh_CN/index.htm",
+   "email": null,
+   "notes": "通信工程系"
+  },
+  {
+   "name_cn": "陈曦",
+   "name_en": "chenxi",
+   "title": "助理研究员",
+   "department": "电子信息工程学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "芯片级电磁安全测试",
+    "电磁兼容建模与评估",
+    "电磁发射"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/chenxi/zh_CN/index.htm",
+   "email": null,
+   "notes": "电磁兼容与电磁环境系；电磁兼容研究团队骨干"
+  },
+  {
+   "name_cn": "郑铮",
+   "name_en": null,
+   "title": "教授",
+   "department": "电子信息工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光电信息技术",
+    "微纳光子器件",
+    "超快与非线性光学"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/zhengzheng1/zh_CN/index.htm",
+   "email": null,
+   "notes": "光电与信息工程系教授"
+  },
+  {
+   "name_cn": "万育航",
+   "name_en": "Wan Yuhang",
+   "title": "副教授",
+   "department": "电子信息工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "硅基光子芯片",
+    "微纳光子器件",
+    "生物光学传感"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/09467/zh_CN/index.htm",
+   "email": null,
+   "notes": "光电与信息工程系；教育部首届“学术新人奖”"
+  },
+  {
+   "name_cn": "赵欣",
+   "name_en": "Zhao Xin",
+   "title": "副教授",
+   "department": "电子信息工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微纳集成光子芯片",
+    "微波光子学",
+    "超宽带信号感知"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/09562/zh_CN/index.htm",
+   "email": null,
+   "notes": "光电与信息工程系"
+  },
+  {
+   "name_cn": "闫娟娟",
+   "name_en": null,
+   "title": "副教授",
+   "department": "电子信息工程学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "光电信息处理",
+    "微波光子技术",
+    "光通信"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/08113/zh_CN/index.htm",
+   "email": null,
+   "notes": "光电与信息工程系"
+  },
+  {
+   "name_cn": "何云涛",
+   "name_en": "he yun tao",
+   "title": "副教授",
+   "department": "电子信息工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "新型光子学技术",
+    "神经形态计算",
+    "智能检测技术"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/yuntaohe/zh_CN/index.htm",
+   "email": null,
+   "notes": "光电与信息工程系"
+  },
+  {
+   "name_cn": "李建利",
+   "name_en": null,
+   "title": "教授",
+   "department": "仪器科学与光电工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "芯片化核磁共振陀螺仪",
+    "原子磁强计",
+    "量子导航系统",
+    "惯性测量"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/08951/zh_CN/index.htm",
+   "email": null,
+   "notes": "国家级人才；仪器科学与光电工程学院院长、惯性测量全国重点实验室副主任"
+  },
+  {
+   "name_cn": "董海峰",
+   "name_en": "donghaifeng",
+   "title": "副教授",
+   "department": "仪器科学与光电工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "量子传感",
+    "微机电系统(MEMS)",
+    "微电子学与固体电子学"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/donghaifeng/zh_CN/index.htm",
+   "email": null,
+   "notes": "北京大学微电子学与固体电子学博士；MIT博士后"
+  },
+  {
+   "name_cn": "郭占社",
+   "name_en": "guozhanshe",
+   "title": "副教授",
+   "department": "仪器科学与光电工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微机电系统(MEMS)",
+    "硅MEMS加速度传感器",
+    "MEMS陀螺",
+    "压力传感器"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/guozhanshe/zh_CN/index.htm",
+   "email": null,
+   "notes": "测控系；中科院长春光机所博士"
+  },
+  {
+   "name_cn": "叶茂",
+   "name_en": "yemao",
+   "title": "研究员",
+   "department": "仪器科学与光电工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "芯片集成光电子器件",
+    "集成光子学",
+    "芯片集成纳米制造"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/yemao/zh_CN/index.htm",
+   "email": null,
+   "notes": "研究员；国家高层次青年人才（海外）、北航“卓越百人”"
+  },
+  {
+   "name_cn": "袁珩",
+   "name_en": "yuanheng",
+   "title": "研究员",
+   "department": "仪器科学与光电工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微纳传感芯片技术",
+    "芯片气体传感器",
+    "量子传感"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/yuanheng/zh_CN/index.htm",
+   "email": null,
+   "notes": "研究员；中国仪器仪表学会量子传感与精密测量仪器分会理事"
+  },
+  {
+   "name_cn": "唐钧剑",
+   "name_en": "tangjunjian",
+   "title": "副研究员",
+   "department": "仪器科学与光电工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "芯片化原子磁强计",
+    "原子系综磁光精密调控",
+    "医疗设备与成像"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/tangjunjian1/zh_CN/index.htm",
+   "email": null,
+   "notes": "副研究员；大科学装置研究院"
+  },
+  {
+   "name_cn": "王国华",
+   "name_en": "wangguohua",
+   "title": "副教授",
+   "department": "仪器科学与光电工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路测试",
+    "混合信号电路测试生成",
+    "先进传感技术"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/wgh/zh_CN/index.htm",
+   "email": null,
+   "notes": "副教授；国家科技进步二等奖（排名第4）"
+  },
+  {
+   "name_cn": "李慧",
+   "name_en": "lihui",
+   "title": "教授",
+   "department": "仪器科学与光电工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成光学陀螺",
+    "集成光电子器件",
+    "光学传感器"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/lihui/zh_CN/index.htm",
+   "email": null,
+   "notes": "教授；光电系本科教学副主任"
+  },
+  {
+   "name_cn": "张祖琛",
+   "name_en": "Zhang Zuchen",
+   "title": "副教授",
+   "department": "仪器科学与光电工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微小光学陀螺",
+    "集成光电子器件",
+    "光学传感与测量"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/zhangzuchen/zh_CN/index.htm",
+   "email": null,
+   "notes": "副教授；光电技术研究所骨干、惯性测量全国重点实验室成员"
+  },
+  {
+   "name_cn": "王良",
+   "name_en": "Wang Liang",
+   "title": "副教授",
+   "department": "计算机学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "可重构计算",
+    "SoC设计",
+    "GPU体系结构",
+    "芯粒与片上互连",
+    "定制芯片结构"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/lwanguhk/zh_CN/index.htm",
+   "email": null,
+   "notes": "副教授；计算机学院系统结构所（肖利民团队）"
+  },
+  {
+   "name_cn": "王锐",
+   "name_en": "wangrui",
+   "title": "副教授",
+   "department": "计算机学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "计算机体系结构",
+    "机器学习处理器体系结构",
+    "并行计算"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/wangrui/zh_CN/index.htm",
+   "email": null,
+   "notes": "副教授"
+  },
+  {
+   "name_cn": "杨海龙",
+   "name_en": "yanghailong",
+   "title": "教授",
+   "department": "计算机学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "计算机系统结构",
+    "高性能计算",
+    "深度学习编译优化"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/yanghailong/zh_CN/index.htm",
+   "email": null,
+   "notes": "教授；密歇根大学安娜堡分校体系结构方向博士后"
+  },
+  {
+   "name_cn": "肖利民",
+   "name_en": null,
+   "title": "教授",
+   "department": "计算机学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "高性能计算机与服务器系统",
+    "低功耗安全嵌入式处理器芯片",
+    "国产CPU自主可控系统",
+    "分布式存储系统"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/xiaolimin/zh_CN/index.htm",
+   "email": null,
+   "notes": "教授；计算机学院系统结构所负责人"
+  },
+  {
+   "name_cn": "丁晓峰",
+   "name_en": "dingxiaofeng",
+   "title": "教授",
+   "department": "自动化科学与电气工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "宽禁带功率器件",
+    "特种电机系统",
+    "电机驱控芯片应用"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/dingxiaofeng/zh_CN/index.htm",
+   "email": null,
+   "notes": "国家级领军人才；电气工程系主任"
+  },
+  {
+   "name_cn": "李晓",
+   "name_en": "Li Xiao",
+   "title": "副教授",
+   "department": "自动化科学与电气工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "宽禁带功率器件表征测试",
+    "功率集成产品",
+    "电力电子变换",
+    "嵌入式系统"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/lixiao/zh_CN/index.htm",
+   "email": null,
+   "notes": "国家级青年人才；曾任美国Intersil、EPC公司研发"
+  },
+  {
+   "name_cn": "李阳",
+   "name_en": "liyang",
+   "title": "教授",
+   "department": "自动化科学与电气工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "生物信号采集与处理芯片",
+    "脑机接口",
+    "类脑计算",
+    "智能传感"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/liyang/zh_CN/index.htm",
+   "email": null,
+   "notes": "国家级领军人才；自动化科学与电气工程学院教授"
+  },
+  {
+   "name_cn": "胡堃",
+   "name_en": "hukun",
+   "title": "副研究员",
+   "department": "人工智能学院（人工智能研究院）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "端侧AI芯片部署与优化",
+    "AI类脑计算",
+    "边缘实时计算",
+    "星载实时计算系统"
+   ],
+   "homepage": "http://shi.buaa.edu.cn/hukun/zh_CN/index.htm",
+   "email": null,
+   "notes": "副研究员；北航拔尖人才"
+  }
+ ]
+}

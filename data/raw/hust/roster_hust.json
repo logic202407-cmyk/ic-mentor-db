@@ -1,0 +1,2014 @@
+{
+  "school": "华中科技大学",
+  "school_key": "hust",
+  "harvested_at": "2026-09-26",
+  "sources": [
+    "https://ic.hust.edu.cn/szdw/xysz.htm",
+    "https://ic.hust.edu.cn/szdw/jcxz.htm",
+    "https://ic.hust.edu.cn/szdw/dzkxyjsx.htm",
+    "https://ic.hust.edu.cn/szdw/jcdlkxygcx.htm",
+    "https://ic.hust.edu.cn/szdw/wdzkxygcx.htm",
+    "https://ic.hust.edu.cn/yjsjy/dsxx.htm",
+    "https://ic.hust.edu.cn/kxyj/xkfx.htm",
+    "https://ic.hust.edu.cn/info/1146/1238.htm",
+    "https://ic.hust.edu.cn/info/1146/1231.htm",
+    "https://ic.hust.edu.cn/info/1146/1233.htm",
+    "https://ic.hust.edu.cn/info/1146/1236.htm",
+    "https://ic.hust.edu.cn/info/1146/1234.htm",
+    "https://ic.hust.edu.cn/info/1146/1239.htm",
+    "https://ic.hust.edu.cn/info/1146/1266.htm",
+    "https://ic.hust.edu.cn/info/1146/2447.htm",
+    "https://ic.hust.edu.cn/info/1146/3033.htm",
+    "https://ic.hust.edu.cn/info/1146/3406.htm",
+    "https://ic.hust.edu.cn/info/1146/2420.htm",
+    "https://ic.hust.edu.cn/info/1146/1228.htm",
+    "https://ic.hust.edu.cn/info/1146/5724.htm",
+    "https://ic.hust.edu.cn/info/1147/1273.htm",
+    "https://ic.hust.edu.cn/info/1147/2014.htm",
+    "https://ic.hust.edu.cn/info/1147/2421.htm",
+    "https://ic.hust.edu.cn/info/1148/1873.htm",
+    "https://ic.hust.edu.cn/info/1148/5380.htm",
+    "http://faculty.hust.edu.cn/ 教师个人主页系统（约 500 个教师主页，逐一抓取）",
+    "https://oei.hust.edu.cn/szdw/wbygdjcx.htm",
+    "https://oei.hust.edu.cn/szdw/jcgzxyjb.htm",
+    "https://oei.hust.edu.cn/szdw/gdgcx.htm",
+    "https://oei.hust.edu.cn/szdw/gtxygwlx.htm",
+    "https://oei.hust.edu.cn/szdw/nygzxyjb.htm",
+    "https://wnlo.hust.edu.cn/rcdw/szdw/jcgzxyjb.htm",
+    "https://wnlo.hust.edu.cn/rcdw/szdw/swyxgzxyjb.htm",
+    "https://wnlo.hust.edu.cn/rcdw/gdrw/ys.htm",
+    "https://cs.hust.edu.cn/szdw/jsml/axmpyszmlb.htm",
+    "https://aia.hust.edu.cn/szdw/xysz/axmpyszmlb.htm",
+    "https://aia.hust.edu.cn/szdw/xysz/axlb.htm",
+    "https://aia.hust.edu.cn/szdw/jcxz.htm",
+    "https://ei.hust.edu.cn/xygk/szdw/dzgcx.htm",
+    "https://seee.hust.edu.cn/szdw/jsml1/bssds_2027_.htm"
+  ],
+  "coverage_note": "共 127 人，全部来自实际抓取的页面。覆盖院系与页面：①集成电路学院 73 人（学院师资总表按职称分组 + 电子科学与技术系/集成电路科学与工程系/微电子科学与工程系三个系页定系 + 杰出学者页取人才称号 + 学院内部教师详情页 + faculty.hust.edu.cn 个人主页）；②光学与电子信息学院 13 人（微波与光电集成系、集成光子学研究部，核对光电工程系/光通信与光网络系/能源光子学/激光/生医光子学研究部后仅取偏芯片器件电路者）；③武汉光电国家研究中心 20 人（集成光子学研究部、光子探测与通信研究部、信息存储功能实验室）；④计算机科学与技术学院 14 人（教师名录全量 145 个主页抓取后按体系结构/存储器件/AI 加速器/EDA 筛取）；⑤人工智能与自动化学院 3 人（91 个主页中仅取智能芯片/数字集成电路/忆阻类脑/纳机电传感器）；⑥电气与电子工程学院与国家脉冲强磁场科学中心 4 人（功率半导体器件封装、强电磁器件、脉冲强磁场新器件）。未抓到与排除原因：a) ise.hust.edu.cn、eei.hust.edu.cn 域名解析失败，集成电路学院实际域名为 ic.hust.edu.cn；b) 电气学院旧域名 ee.hust.edu.cn 不可达，改用 seee.hust.edu.cn；c) 光学与电子信息学院部分教师（黄黎蓉、李蔚、王健、贺扬、陈燎等）及张新亮教授在 oei.hust.edu.cn 的详情链接为占位符 '#' 或返回 404，无可核实的研究方向，故未收录（不编造）；d) 武汉光电国家研究中心激光/能源/生医光子学研究部、EI 电子信息与通信学院（以雷达、微波、通信系统为主，非芯片）未纳入；e) 按任务要求排除荣休教师、兼职/企业兼职/客座教授、博士后，以及纯实验教学与工艺设备工程师岗（邱亚琴、王海玲、贾涵、刘云洲、陈毅、郝吉年、谭波、左文彬、龚韦、罗白云、王海珍、郑立新、熊炫——岗位为工程师/实验员，超出“教授/副教授/讲师/研究员”范围）；f) 排除纯材料化学与电催化方向（王成栋、王成亮、毛明磊、姜胜林、张道礼、李园园、汪小红）与纯光学理论（陈云天）；g) 初筛得到 147 人后，剔除 20 位方向偏软件系统而非芯片者（云存储/文件系统类：万继光、王芳、童薇、谭志虎、曹强、姚杰、周游；吸波与天线材料类：江建军、别少伟、王晓川；光电材料/器件偏材料或系统类：邵明、孙雷蒙、曾祥斌、张桃、李华曜、司马朝坦、温兴林、周英、周佳骏、罗风光、宗良佳），最终 127 人落在 60–130 目标区间。email 字段按项目要求一律为 null；所有 homepage 均为实际抓取到的页面地址。",
+  "faculty": [
+    {
+      "name_cn": "缪向水",
+      "name_en": "Miao Xiangshui",
+      "title": "教授",
+      "department": "集成电路学院（信息存储材料及器件研究所）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "信息存储材料与器件",
+        "忆阻器",
+        "相变存储器",
+        "三维集成",
+        "存算一体"
+      ],
+      "homepage": "https://ic.hust.edu.cn/info/1146/1238.htm",
+      "email": null,
+      "notes": "长江学者特聘教授、国务院政府特殊津贴专家；集成电路学院院长、武汉国际微电子学院院长；中国存储器产业联盟副理事长"
+    },
+    {
+      "name_cn": "邹雪城",
+      "name_en": "Zou Xuecheng",
+      "title": "教授",
+      "department": "集成电路学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "超大规模集成电路",
+        "SoC设计",
+        "多核处理器",
+        "三维堆叠封装",
+        "安全SRAM"
+      ],
+      "homepage": "https://ic.hust.edu.cn/info/1146/1231.htm",
+      "email": null,
+      "notes": "华中科技大学物联网研究院院长、武汉国际微电子学院执行院长"
+    },
+    {
+      "name_cn": "程晓敏",
+      "name_en": "Cheng Xiaomin",
+      "title": "教授",
+      "department": "集成电路学院（信息存储材料及器件研究所）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "相变随机存储器",
+        "磁随机存储器",
+        "半导体存储器器件",
+        "磁记录介质",
+        "功能薄膜材料"
+      ],
+      "homepage": "https://ic.hust.edu.cn/info/1146/1233.htm",
+      "email": null,
+      "notes": "国家级领军人才计划入选者"
+    },
+    {
+      "name_cn": "龚荣洲",
+      "name_en": "Gong Rongzhou",
+      "title": "二级教授",
+      "department": "集成电路学院（磁性材料与器件研究所）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "超材料技术",
+        "微波控制材料",
+        "磁光电器件",
+        "超晶格与红外波调控"
+      ],
+      "homepage": "https://ic.hust.edu.cn/info/1146/1234.htm",
+      "email": null,
+      "notes": "磁性材料与器件研究所所长；博士生导师（微电子学与固体电子学、材料物理化学）"
+    },
+    {
+      "name_cn": "胡作启",
+      "name_en": "Hu Zuoqi",
+      "title": "教授",
+      "department": "集成电路学院（先进材料与信息存储技术研究所）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "电子材料与器件",
+        "信息存储技术",
+        "信号处理技术"
+      ],
+      "homepage": "https://ic.hust.edu.cn/info/1146/1236.htm",
+      "email": null,
+      "notes": null
+    },
+    {
+      "name_cn": "聂彦",
+      "name_en": "Nie Yan",
+      "title": "教授",
+      "department": "集成电路学院（微波工程系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "微波磁性功能材料",
+        "磁性薄膜与器件",
+        "电磁功能材料"
+      ],
+      "homepage": "https://ic.hust.edu.cn/info/1146/1239.htm",
+      "email": null,
+      "notes": null
+    },
+    {
+      "name_cn": "郑志平",
+      "name_en": "Zheng Zhiping",
+      "title": "教授",
+      "department": "集成电路学院（教育部敏感陶瓷工程研究中心）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "钙钛矿半导体单晶",
+        "射线探测器件",
+        "信息功能陶瓷传感器"
+      ],
+      "homepage": "https://ic.hust.edu.cn/info/1146/1266.htm",
+      "email": null,
+      "notes": null
+    },
+    {
+      "name_cn": "吴豪",
+      "name_en": "Wu Hao",
+      "title": "教授",
+      "department": "集成电路学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "柔性电子器件与系统集成",
+        "异质异构芯片制造工艺与装备",
+        "先进电子封装",
+        "可穿戴健康监测"
+      ],
+      "homepage": "https://ic.hust.edu.cn/info/1146/2447.htm",
+      "email": null,
+      "notes": "曾任美国英特尔公司电子封装测试技术研发部高级工程师"
+    },
+    {
+      "name_cn": "李鹏",
+      "name_en": "Li Peng",
+      "title": "教授",
+      "department": "集成电路学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "低维材料微纳传感器",
+        "MEMS传感器与微系统",
+        "原子尺度制造",
+        "近零功耗感知微系统"
+      ],
+      "homepage": "https://ic.hust.edu.cn/info/1146/3033.htm",
+      "email": null,
+      "notes": null
+    },
+    {
+      "name_cn": "肖鸣飞",
+      "name_en": "Xiao Mingfei",
+      "title": "教授",
+      "department": "集成电路学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "印刷电子器件制造",
+        "可印刷半导体电路与传感器",
+        "AI辅助半导体设计",
+        "神经形态电路"
+      ],
+      "homepage": "https://ic.hust.edu.cn/info/1146/3406.htm",
+      "email": null,
+      "notes": null
+    },
+    {
+      "name_cn": "马波",
+      "name_en": "Ma Bo",
+      "title": "教授",
+      "department": "集成电路学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "MEMS芯片与智能传感器",
+        "三维微纳系统集成",
+        "先进微纳加工",
+        "医疗超声芯片"
+      ],
+      "homepage": "https://ic.hust.edu.cn/info/1146/2420.htm",
+      "email": null,
+      "notes": null
+    },
+    {
+      "name_cn": "杨晓非",
+      "name_en": "Yang Xiaofei",
+      "title": "教授",
+      "department": "集成电路学院（薄膜传感器与智能系统研究所）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "微磁传感器",
+        "高密度信息存储",
+        "薄膜传感器与智能系统",
+        "微弱信号检测与处理"
+      ],
+      "homepage": "https://ic.hust.edu.cn/info/1146/1228.htm",
+      "email": null,
+      "notes": "薄膜传感器与智能系统研究所所长；湖北省自然科学一等奖获得者"
+    },
+    {
+      "name_cn": "陈实",
+      "name_en": "Chen Shi",
+      "title": "教授",
+      "department": "集成电路学院（微电子科学与工程系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "磁传感器（TMR/GMR）",
+        "微电子器件与工艺",
+        "传感器噪声"
+      ],
+      "homepage": "https://ic.hust.edu.cn/info/1146/1221.htm",
+      "email": null,
+      "notes": null
+    },
+    {
+      "name_cn": "刘世元",
+      "name_en": "Liu Shiyuan",
+      "title": "教授",
+      "department": "集成电路学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "计算光刻",
+        "集成电路测量与检测",
+        "计算成像与计算测量",
+        "EUV掩模检测"
+      ],
+      "homepage": "https://ic.hust.edu.cn/info/1146/5670.htm",
+      "email": null,
+      "notes": "国家杰出青年科学基金获得者；中国微米纳米技术学会会士"
+    },
+    {
+      "name_cn": "张光祖",
+      "name_en": "Zhang Guangzu",
+      "title": "教授",
+      "department": "集成电路学院（电子科学与技术系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "信息功能材料与器件",
+        "柔性压力传感",
+        "力电超材料"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/zhangguangzu/zh_CN/index.htm",
+      "email": null,
+      "notes": "国家级青年人才计划入选者；团队成果发表于Science"
+    },
+    {
+      "name_cn": "刘欢",
+      "name_en": "Liu Huan",
+      "title": "教授",
+      "department": "集成电路学院（电子科学与技术系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "气体传感器芯片",
+        "人工嗅觉系统",
+        "红外光电图像传感芯片",
+        "半导体免疫传感器芯片"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/liuhuan8/zh_CN/index.htm",
+      "email": null,
+      "notes": "国家级青年人才计划入选者；量子点传感器芯片与人工嗅觉系统团队负责人"
+    },
+    {
+      "name_cn": "罗为",
+      "name_en": "Luo Wei",
+      "title": "教授",
+      "department": "集成电路学院（电子科学与技术系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "压电智能微系统",
+        "声学MEMS器件",
+        "传感器芯片"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/luowei2/zh_CN/index.htm",
+      "email": null,
+      "notes": "国家级青年人才计划入选者；集成电路学院院长助理"
+    },
+    {
+      "name_cn": "段国韬",
+      "name_en": "Duan Guotao",
+      "title": "教授",
+      "department": "集成电路学院（电子科学与技术系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "MEMS传感器与集成微系统",
+        "半导体气体与生物传感",
+        "第一性原理计算"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/DuanGuotao/zh_CN/index.htm",
+      "email": null,
+      "notes": null
+    },
+    {
+      "name_cn": "傅邱云",
+      "name_en": "Fu Qiuyun",
+      "title": "教授",
+      "department": "集成电路学院（电子科学与技术系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "电子器件与混合集成",
+        "信息材料与传感技术"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/fuqiuyun/zh_CN/index.htm",
+      "email": null,
+      "notes": "信息材料与传感技术研究所团队负责人；曾任烽火通信ASIC中心芯片设计工程师"
+    },
+    {
+      "name_cn": "黎步银",
+      "name_en": "Li Buyin",
+      "title": "教授",
+      "department": "集成电路学院（电子科学与技术系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "敏感陶瓷传感器",
+        "仪器仪表与自动测试系统",
+        "传感器特性测试"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/libuyin/zh_CN/index.htm",
+      "email": null,
+      "notes": "教育部敏感陶瓷工程中心仪器仪表与传感器研究室主任"
+    },
+    {
+      "name_cn": "占腊民",
+      "name_en": "Zhan Lamin",
+      "title": "教授",
+      "department": "集成电路学院（微波技术应用研究所）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "射频器件及电路",
+        "微波集成电路",
+        "微波技术应用"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/zhanlamin/zh_CN/index.htm",
+      "email": null,
+      "notes": null
+    },
+    {
+      "name_cn": "王鲜",
+      "name_en": "Wang Xian",
+      "title": "教授",
+      "department": "集成电路学院（磁性材料与器件研究所）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "磁性材料与器件",
+        "高频磁性元器件片上集成",
+        "电磁波调控"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/wangxian/zh_CN/index.htm",
+      "email": null,
+      "notes": "全国磁性元件与铁氧体材料标准化委员会委员"
+    },
+    {
+      "name_cn": "臧剑锋",
+      "name_en": "Zang Jianfeng",
+      "title": "教授",
+      "department": "集成电路学院（电子科学与技术系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "超声传感器件",
+        "柔性可穿戴电子",
+        "智能微系统"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/zangjianfeng/zh_CN/index.htm",
+      "email": null,
+      "notes": "国家级领军人才计划入选者；国际柔性电子研讨会共同主席"
+    },
+    {
+      "name_cn": "朱本鹏",
+      "name_en": "Zhu Benpeng",
+      "title": "教授",
+      "department": "集成电路学院（集成电路科学与工程系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "医学超声芯片",
+        "超声微系统与诊疗装备",
+        "生物医学电子"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/zhubenpeng/zh_CN/index.htm",
+      "email": null,
+      "notes": "教育部长江学者奖励计划特聘教授、中组部万人计划青年拔尖人才、湖北省杰青"
+    },
+    {
+      "name_cn": "张建兵",
+      "name_en": "Zhang Jianbing",
+      "title": "教授",
+      "department": "集成电路学院（微电子科学与工程系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "短波红外探测及成像",
+        "光谱探测及成像",
+        "量子点光电探测器件"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/zhangjianbing/zh_CN/index.htm",
+      "email": null,
+      "notes": null
+    },
+    {
+      "name_cn": "张悦",
+      "name_en": "Zhang Yue",
+      "title": "教授",
+      "department": "集成电路学院（传感器与智能系统研究所）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "多功能磁传感器",
+        "多物理场耦合器件",
+        "传感器与智能系统"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/zhangyue6/zh_CN/index.htm",
+      "email": null,
+      "notes": null
+    },
+    {
+      "name_cn": "周文利",
+      "name_en": "Zhou Wenli",
+      "title": "教授",
+      "department": "集成电路学院（集成电路科学与工程系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "感算一体芯片",
+        "混合精度边缘计算SoC",
+        "碳基神经形态器件与系统",
+        "微纳电子器件"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/zhouwenli/zh_CN/index.htm",
+      "email": null,
+      "notes": "集成电路学院、武汉光电国家研究中心双聘教授"
+    },
+    {
+      "name_cn": "毕晓君",
+      "name_en": "Bi Xiaojun",
+      "title": "教授",
+      "department": "集成电路学院（集成电路科学与工程系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "毫米波集成电路",
+        "高速光通信集成电路",
+        "射频宽带收发电路",
+        "高速模拟集成电路"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/bixiaojun/zh_CN/index.htm",
+      "email": null,
+      "notes": "国家级青年人才计划入选者；微波与光通信集成电路团队负责人；IEEE Access副主编"
+    },
+    {
+      "name_cn": "雷鑑铭",
+      "name_en": "Lei Jianming",
+      "title": "教授",
+      "department": "集成电路学院（集成电路科学与工程系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "超大规模集成电路设计",
+        "芯粒（Chiplet）异质异构集成",
+        "节点处理器设计"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/leijianming/zh_CN/index.htm",
+      "email": null,
+      "notes": "集成电路学院党委副书记、副院长；超大规模集成电路与系统研究中心团队负责人"
+    },
+    {
+      "name_cn": "刘冬生",
+      "name_en": "Liu Dongsheng",
+      "title": "教授",
+      "department": "集成电路学院（集成电路科学与工程系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "生物医疗人工智能芯片",
+        "后量子密码芯片",
+        "远/近场无线通信芯片",
+        "智能传感芯片"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/liudongsheng/zh_CN/index.htm",
+      "email": null,
+      "notes": "国家级领军人才计划入选者；IEEE ASICON技术委员会委员"
+    },
+    {
+      "name_cn": "刘政林",
+      "name_en": "Liu Zhenglin",
+      "title": "教授",
+      "department": "集成电路学院（集成电路科学与工程系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "数字集成电路",
+        "硬件安全与安全CPU",
+        "存储器测试",
+        "算法硬件加速",
+        "超低功耗设计"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/liuzhenglin1/zh_CN/index.htm",
+      "email": null,
+      "notes": "2007年入选教育部新世纪优秀人才计划"
+    },
+    {
+      "name_cn": "游龙",
+      "name_en": "You Long",
+      "title": "教授",
+      "department": "集成电路学院（集成电路科学与工程系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "自旋电子技术",
+        "自旋随机存储器",
+        "自旋神经网络计算",
+        "低功耗电子器件"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/youlong/zh_CN/index.htm",
+      "email": null,
+      "notes": "国家高层次科技领军人才、国家级青年人才；集成电路学院与武汉光电国家研究中心双聘教授"
+    },
+    {
+      "name_cn": "徐明",
+      "name_en": "Xu Ming",
+      "title": "教授",
+      "department": "集成电路学院（微电子科学与工程系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "三维相变存储材料与器件",
+        "超低功耗忆阻器",
+        "存储材料基因工程"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/xuming/zh_CN/index.htm",
+      "email": null,
+      "notes": "国家领军人才；微电子科学与工程系主任"
+    },
+    {
+      "name_cn": "童浩",
+      "name_en": "Tong Hao",
+      "title": "教授",
+      "department": "集成电路学院（微电子科学与工程系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "相变存储器与三维相变存储器",
+        "OTS选通管芯片",
+        "存算通显一体化芯片"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/tonghao/zh_CN/index.htm",
+      "email": null,
+      "notes": "国家级青年人才计划入选者；中国半导体三维集成制造产业联盟副秘书长"
+    },
+    {
+      "name_cn": "李祎",
+      "name_en": "Li Yi",
+      "title": "教授",
+      "department": "集成电路学院（微电子科学与工程系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "高性能忆阻器",
+        "忆阻存算一体芯片",
+        "先进存储器"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/liyi1/zh_CN/index.htm",
+      "email": null,
+      "notes": "国家高层次人才计划（青年）；集成电路学院副院长；先进存储器湖北省重点实验室副主任"
+    },
+    {
+      "name_cn": "王兴晟",
+      "name_en": "Wang Xingsheng",
+      "title": "教授",
+      "department": "集成电路学院（EDA研究中心）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "存算一体芯片",
+        "DTCO设计工艺协同优化",
+        "TCAD与EDA",
+        "三维集成多物理场仿真"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/wangxingsheng/zh_CN/index.htm",
+      "email": null,
+      "notes": "国家网信优秀人才计划、湖北省百人计划；集成电路学院EDA研究中心负责人；武汉光电国家研究中心双聘教授"
+    },
+    {
+      "name_cn": "叶镭",
+      "name_en": "Ye Lei",
+      "title": "教授",
+      "department": "集成电路学院（微电子科学与工程系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "类脑器件与芯片",
+        "人工智能硬件",
+        "生物信号处理硬件",
+        "脑机接口"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/yelei/zh_CN/index.htm",
+      "email": null,
+      "notes": "国家领军人才、国家自然科学基金优秀青年科学基金获得者；国家级青年人才计划入选者"
+    },
+    {
+      "name_cn": "何毓辉",
+      "name_en": "He Yuhui",
+      "title": "教授",
+      "department": "集成电路学院（微电子科学与工程系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "类脑计算与器件",
+        "神经形态计算芯片",
+        "纳米孔DNA测序芯片",
+        "微纳电子学"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/heyuhui/zh_CN/index.htm",
+      "email": null,
+      "notes": "国家海外高层次人才计划青年项目入选者；类脑计算与芯片团队负责人"
+    },
+    {
+      "name_cn": "杨蕊",
+      "name_en": "Yang Rui",
+      "title": "教授",
+      "department": "集成电路学院（信息存储材料及器件研究所）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "相变光子器件",
+        "忆阻器",
+        "类脑运算"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/yangrui2/zh_CN/index.htm",
+      "email": null,
+      "notes": "国家级青年人才计划入选者"
+    },
+    {
+      "name_cn": "童磊",
+      "name_en": "Tong Lei",
+      "title": "教授",
+      "department": "集成电路学院（微电子科学与工程系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "半导体神经形态计算器件",
+        "神经形态计算芯片",
+        "新型半导体器件"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/tonglei93/zh_CN/index.htm",
+      "email": null,
+      "notes": "国家海外高层次人才计划（青年）、湖北省百人计划创新人才、华为东湖青年学者"
+    },
+    {
+      "name_cn": "薛堪豪",
+      "name_en": "Xue Kanhao",
+      "title": "教授",
+      "department": "集成电路学院（微电子科学与工程系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "铁电存储材料设计",
+        "晶体管SPICE模型",
+        "集成电路TCAD",
+        "半导体能带计算"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/xkh/zh_CN/index.htm",
+      "email": null,
+      "notes": "国家级青年人才计划入选者"
+    },
+    {
+      "name_cn": "韩恺桢",
+      "name_en": "Han Kaizhen",
+      "title": "教授",
+      "department": "集成电路学院（微电子科学与工程系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "氧化物半导体微电子器件",
+        "先进逻辑器件",
+        "后道兼容晶体管"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/HANKAIZHEN/zh_CN/index.htm",
+      "email": null,
+      "notes": "国家海外高层次人才计划（青年）；VLSI Symposium最佳论文奖获得者"
+    },
+    {
+      "name_cn": "曾双双",
+      "name_en": "Zeng Shuangshuang",
+      "title": "教授",
+      "department": "集成电路学院（微电子科学与工程系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "微纳加工技术",
+        "纳米图案化技术",
+        "脑机接口器件",
+        "单分子生物检测"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/ZengShuangshuang/zh_CN/index.htm",
+      "email": null,
+      "notes": "国家级青年人才计划入选者"
+    },
+    {
+      "name_cn": "余愿",
+      "name_en": "Yu Yuan",
+      "title": "教授",
+      "department": "集成电路学院（微电子科学与工程系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "相变信息存储",
+        "三维原子探针技术",
+        "超价键理论",
+        "热电材料"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/YuYuan/zh_CN/index.htm",
+      "email": null,
+      "notes": "国家级青年人才计划入选者"
+    },
+    {
+      "name_cn": "刘璐",
+      "name_en": "Liu Lu",
+      "title": "教授",
+      "department": "集成电路学院（微电子科学与工程系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "异质集成场效应晶体管",
+        "低功耗晶体管",
+        "3D NAND存储器"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/liulu1/zh_CN/index.htm",
+      "email": null,
+      "notes": null
+    },
+    {
+      "name_cn": "孙华军",
+      "name_en": "Sun Huajun",
+      "title": "教授",
+      "department": "集成电路学院（微电子科学与工程系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "先进信息存储器",
+        "相变存储器件",
+        "存储芯片工艺"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/sunhuajun/zh_CN/index.htm",
+      "email": null,
+      "notes": "2017年获Lam Research微电子论文奖"
+    },
+    {
+      "name_cn": "方楠",
+      "name_en": "Fang Nan",
+      "title": "教授",
+      "department": "集成电路学院（微电子科学与工程系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "半导体异质结",
+        "低维材料光电器件",
+        "激子发光器件"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/fangnan1/zh_CN/index.htm",
+      "email": null,
+      "notes": "国家海外高层次人才计划（青年）、湖北省百人计划"
+    },
+    {
+      "name_cn": "李帅锋",
+      "name_en": "Li Shuaifeng",
+      "title": "教授",
+      "department": "集成电路学院（微电子科学与工程系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "物理神经网络",
+        "类脑训练方法",
+        "多物理场耦合器件建模"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/LISHUAIFENG/zh_CN/index/2760681/list/index.htm",
+      "email": null,
+      "notes": "国家海外高层次人才计划（青年）、湖北省百人计划"
+    },
+    {
+      "name_cn": "谭旻",
+      "name_en": "Tan Min",
+      "title": "研究员",
+      "department": "集成电路学院（集成电路科学与工程系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "光电融合芯片设计",
+        "光电融合芯片实验室"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/tanmin/zh_CN/index.htm",
+      "email": null,
+      "notes": "省部级人才计划入选者"
+    },
+    {
+      "name_cn": "童乔凌",
+      "name_en": "Tong Qiaoling",
+      "title": "教授",
+      "department": "集成电路学院（集成电路科学与工程系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "模拟集成电路设计",
+        "电力电子技术",
+        "功率集成电路"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/tongqiaoling/zh_CN/index.htm",
+      "email": null,
+      "notes": "集成电路工程系副系主任、微电子学院院长助理；东湖高新区3551人才计划"
+    },
+    {
+      "name_cn": "王寰宇",
+      "name_en": "Wang Huanyu",
+      "title": "教授",
+      "department": "集成电路学院（集成电路科学与工程系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "数字IC设计",
+        "集成电路硬件安全",
+        "EDA与设计自动化",
+        "低功耗设计"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/WANGHUANYU/zh_CN/index.htm",
+      "email": null,
+      "notes": "国家级青年人才计划入选者"
+    },
+    {
+      "name_cn": "叶大蔚",
+      "name_en": "Ye Dawei",
+      "title": "研究员",
+      "department": "集成电路学院（集成电路科学与工程系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "模拟射频芯片设计",
+        "CMOS射频集成电路",
+        "混合信号电路"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/yedaywei/zh_CN/index.htm",
+      "email": null,
+      "notes": "博士毕业于复旦大学微电子学院，具10年以上模拟射频芯片设计经验"
+    },
+    {
+      "name_cn": "蔡凯明",
+      "name_en": "Cai Kaiming",
+      "title": "教授",
+      "department": "集成电路学院（物理学院双聘）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "自旋电子学",
+        "自旋存储器件",
+        "微电子学与固体电子学"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/caikaiming/zh_CN/index.htm",
+      "email": null,
+      "notes": "曾任比利时欧洲微电子中心（IMEC）计算与存储部"
+    },
+    {
+      "name_cn": "陈晓飞",
+      "name_en": "Chen Xiaofei",
+      "title": "副教授",
+      "department": "集成电路学院（集成电路科学与工程系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "信号链模拟前端",
+        "ADC模数转换器",
+        "电源管理与转换",
+        "射频前端IC"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/chenxiaofei/zh_CN/index.htm",
+      "email": null,
+      "notes": null
+    },
+    {
+      "name_cn": "邹志革",
+      "name_en": "Zou Zhige",
+      "title": "副教授",
+      "department": "集成电路学院（集成电路科学与工程系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "深亚微米模拟电路设计",
+        "智能电源管理芯片",
+        "消费类电子芯片",
+        "混合信号集成电路"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/zouzhige/zh_CN/index.htm",
+      "email": null,
+      "notes": "2019年获评“华中学者”"
+    },
+    {
+      "name_cn": "胡昂",
+      "name_en": "Hu Ang",
+      "title": "副教授",
+      "department": "集成电路学院（集成电路科学与工程系）",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "锁相环芯片",
+        "高速接口电路",
+        "光互连芯片",
+        "时钟数据恢复电路"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/huang12/zh_CN/index.htm",
+      "email": null,
+      "notes": "武汉英才优秀青年人才、武汉晨光计划、华中卓越学者"
+    },
+    {
+      "name_cn": "何强",
+      "name_en": "He Qiang",
+      "title": "副教授",
+      "department": "集成电路学院（微电子科学与工程系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "光电协同智能化信息处理芯片",
+        "集成电路处理器"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/heqiang/zh_CN/index.htm",
+      "email": null,
+      "notes": "省部级人才计划入选者；国家集成电路处理器产业计量测试中心副主任"
+    },
+    {
+      "name_cn": "王韬",
+      "name_en": "Wang Tao",
+      "title": "副教授",
+      "department": "集成电路学院（微电子科学与工程系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "自旋电子学",
+        "多功能超材料与超表面",
+        "电磁器件"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/WangTao/zh_CN/index.htm",
+      "email": null,
+      "notes": "省部级人才计划入选者"
+    },
+    {
+      "name_cn": "陈佳",
+      "name_en": "Chen Jia",
+      "title": "副教授",
+      "department": "集成电路学院（微电子科学与工程系）",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "非易失存储电路",
+        "存算一体（CIM）电路",
+        "忆阻器",
+        "AI硬件能效优化"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/CHENJIA/zh_CN/index.htm",
+      "email": null,
+      "notes": "曾任香港科技大学ACCESS中心博士后"
+    },
+    {
+      "name_cn": "程伟明",
+      "name_en": "Cheng Weiming",
+      "title": "副教授",
+      "department": "集成电路学院（微电子科学与工程系）",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "磁存储技术",
+        "多铁忆阻器",
+        "拓扑相变忆阻器",
+        "忆阻交叉阵列"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/chengweiming1/zh_CN/index.htm",
+      "email": null,
+      "notes": null
+    },
+    {
+      "name_cn": "李学飞",
+      "name_en": "Li Xuefei",
+      "title": "副研究员",
+      "department": "集成电路学院／国家脉冲强磁场科学中心",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "先进逻辑器件",
+        "新型存储器件",
+        "宽禁带半导体器件",
+        "感存算一体器件",
+        "器件可靠性"
+      ],
+      "homepage": "https://ic.hust.edu.cn/info/1147/2421.htm",
+      "email": null,
+      "notes": "2022年湖北省青年人才计划；主持“后摩尔时代新器件基础研究”重大研究计划培育项目"
+    },
+    {
+      "name_cn": "董文",
+      "name_en": "Dong Wen",
+      "title": "副研究员",
+      "department": "集成电路学院（微电子科学与工程系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "铁电存储器晶体管",
+        "铁电电光调制器",
+        "压电薄膜与传感器件",
+        "铁电器件仿真"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/WenDong/zh_CN/index.htm",
+      "email": null,
+      "notes": "湖北省海外高层次人才、武汉英才计划；省部级人才计划入选者"
+    },
+    {
+      "name_cn": "冯卓明",
+      "name_en": "Feng Zhuoming",
+      "title": "副研究员",
+      "department": "集成电路学院（微电子科学与工程系）",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "嵌入式系统",
+        "数字信号处理",
+        "智能传感器"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/fengzhuoming/zh_CN/index.htm",
+      "email": null,
+      "notes": null
+    },
+    {
+      "name_cn": "唐瀚川",
+      "name_en": "Tang Hanchuan",
+      "title": "副研究员",
+      "department": "集成电路学院（电子科学与技术系）",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "可穿戴电子",
+        "无线医疗电子",
+        "声学传感器件",
+        "生物医学电子"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/TANGHANCHUAN/zh_CN/index.htm",
+      "email": null,
+      "notes": null
+    },
+    {
+      "name_cn": "梁飞",
+      "name_en": "Liang Fei",
+      "title": "副教授",
+      "department": "集成电路学院（电子科学与技术系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "微波毫米波器件设计",
+        "新型微波材料",
+        "射频无源器件"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/liangfei/zh_CN/index.htm",
+      "email": null,
+      "notes": null
+    },
+    {
+      "name_cn": "李康华",
+      "name_en": "Li Kanghua",
+      "title": "副教授",
+      "department": "集成电路学院（电子科学与技术系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "铁电薄膜与MEMS器件",
+        "光电转换器件",
+        "先进功能材料与器件"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/likanghua1/zh_CN/index.htm",
+      "email": null,
+      "notes": null
+    },
+    {
+      "name_cn": "李禾耕",
+      "name_en": "Li Hegeng",
+      "title": "副教授",
+      "department": "集成电路学院（电子科学与技术系）",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "有机电化学晶体管生化传感器",
+        "柔性场效应晶体管气体传感器",
+        "微纳集成工艺"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/lihegeng/zh_CN/index.htm",
+      "email": null,
+      "notes": null
+    },
+    {
+      "name_cn": "郑朝霞",
+      "name_en": "Zheng Zhaoxia",
+      "title": "副教授",
+      "department": "集成电路学院（超大规模集成电路与系统研究中心）",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "超大规模数字集成电路设计",
+        "嵌入式系统与安全",
+        "数字基带处理器",
+        "硬件木马检测"
+      ],
+      "homepage": "https://ic.hust.edu.cn/info/1147/1273.htm",
+      "email": null,
+      "notes": null
+    },
+    {
+      "name_cn": "余国义",
+      "name_en": "Yu Guoyi",
+      "title": "副教授",
+      "department": "集成电路学院（集成电路科学与工程系）",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "低功耗集成电路芯片设计",
+        "电源芯片与SoC",
+        "智能传感电路",
+        "高能效AIoT芯片"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/yuguoyi/zh_CN/index.htm",
+      "email": null,
+      "notes": "硕士生导师；曾赴比利时IMEC进修"
+    },
+    {
+      "name_cn": "高俊雄",
+      "name_en": "Gao Junxiong",
+      "title": "讲师",
+      "department": "集成电路学院（微电子科学与工程系）",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "微电子器件与IC设计",
+        "半导体器件物理"
+      ],
+      "homepage": "https://ic.hust.edu.cn/info/1148/1304.htm",
+      "email": null,
+      "notes": "湖北省精品课程《微电子器件与IC设计》主讲教师"
+    },
+    {
+      "name_cn": "亢玉烨",
+      "name_en": "Kang Yuye",
+      "title": "讲师",
+      "department": "集成电路学院（微电子科学与工程系）",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "氧化物半导体逻辑器件",
+        "存储单元器件",
+        "单片三维集成",
+        "后道兼容器件"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/KANGYUYE/zh_CN/index.htm",
+      "email": null,
+      "notes": "博士毕业于新加坡国立大学；研究生导师"
+    },
+    {
+      "name_cn": "靳田丽",
+      "name_en": "Jin Tianli",
+      "title": "讲师",
+      "department": "集成电路学院（微电子科学与工程系）",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "自旋轨道矩磁存储器",
+        "自旋忆阻器",
+        "器件设计与优化",
+        "先进工艺流片"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/JinTianli/zh_CN/index.htm",
+      "email": null,
+      "notes": "与GlobalFoundries合作参与12英寸先进工艺节点流片"
+    },
+    {
+      "name_cn": "陆家昊",
+      "name_en": "Lu Jiahao",
+      "title": "讲师",
+      "department": "集成电路学院（集成电路科学与工程系）",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "后量子密码与安全SoC",
+        "密码硬件实现"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/lujiahao1/zh_CN/index.htm",
+      "email": null,
+      "notes": null
+    },
+    {
+      "name_cn": "梁琳",
+      "name_en": "Liang Lin",
+      "title": "研究员",
+      "department": "电气与电子工程学院（强电磁技术全国重点实验室）／集成电路学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "宽禁带功率半导体",
+        "电力电子器件及封装",
+        "脉冲功率器件"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/lianglin1/zh_CN/index.htm",
+      "email": null,
+      "notes": "国际宽禁带器件技术路线图ITRW成员；中国电源学会元器件专委会副主任委员"
+    },
+    {
+      "name_cn": "李红斌",
+      "name_en": "Li Hongbin",
+      "title": "教授",
+      "department": "电气与电子工程学院（强电磁技术全国重点实验室）／集成电路学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "电磁量传感器",
+        "电子式互感器",
+        "直流电流电压传感器",
+        "电能计量"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/lihongbin/zh_CN/index.htm",
+      "email": null,
+      "notes": "电子式互感器国家标准工作组成员；国家科技进步二等奖获得者"
+    },
+    {
+      "name_cn": "刘骅锋",
+      "name_en": "Liu Huafeng",
+      "title": "教授",
+      "department": "国家精密重力测量科学中心／集成电路学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "MEMS惯性传感器",
+        "MEMS加速度计",
+        "微纳加工",
+        "MEMS重力仪"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/liuhuafeng/zh_CN/index.htm",
+      "email": null,
+      "notes": "2020年国际微系统及纳米工程（MINE2020）青年科学家奖"
+    },
+    {
+      "name_cn": "陈材",
+      "name_en": "Chen Cai",
+      "title": "教授",
+      "department": "电气与电子工程学院（电能高密度转换全国重点实验室）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "宽禁带半导体器件封装集成",
+        "功率半导体模块",
+        "高功率密度电源",
+        "3D封装"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/chencai/zh_CN/index.htm",
+      "email": null,
+      "notes": "国家高层次青年人才项目入选者；先进电工材料与器件研究中心副主任"
+    },
+    {
+      "name_cn": "张敏明",
+      "name_en": "Zhang Minming",
+      "title": "教授",
+      "department": "光学与电子信息学院（集成光子学研究部）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "芯片级光互连器件与集成",
+        "硅基超表面光子器件",
+        "高速半导体激光器",
+        "光子器件智能化设计"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/zhangminming/zh_CN/index.htm",
+      "email": null,
+      "notes": "国家级高层次人才计划入选者；华中卓越学者首席教授"
+    },
+    {
+      "name_cn": "夏金松",
+      "name_en": "Xia Jinsong",
+      "title": "二级教授",
+      "department": "光学与电子信息学院／武汉光电国家研究中心（集成光子学研究部）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "薄膜铌酸锂光电子芯片",
+        "PPLN非线性光子芯片",
+        "光电子器件封装",
+        "宽带光电子器件"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/xiajinsong/zh_CN/index.htm",
+      "email": null,
+      "notes": "国家高层次人才计划领军人才、教育部新世纪优秀人才、国家重点研发计划项目首席科学家"
+    },
+    {
+      "name_cn": "国伟华",
+      "name_en": "Guo Weihua",
+      "title": "教授",
+      "department": "武汉光电国家研究中心（集成光子学研究部）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "光子集成芯片",
+        "激光雷达光电集成芯片",
+        "单片集成相干光接收器",
+        "高速直调激光器"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/guoweihua/zh_CN/index.htm",
+      "email": null,
+      "notes": "国家海外高层次人才引进计划；光电集成研究实验室负责人"
+    },
+    {
+      "name_cn": "黄庆忠",
+      "name_en": "Huang Qingzhong",
+      "title": "研究员",
+      "department": "武汉光电国家研究中心（集成光子学研究部）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "硅基光电子器件与集成",
+        "光学微谐振腔",
+        "光收发芯片",
+        "半导体微纳工艺"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/huangqingzhong/zh_CN/index.htm",
+      "email": null,
+      "notes": "武汉光电国家研究中心微纳工艺与表征平台主任"
+    },
+    {
+      "name_cn": "施雷",
+      "name_en": "Shi Lei",
+      "title": "教授",
+      "department": "武汉光电国家研究中心（集成光子学研究部）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "微腔光子学",
+        "集成光子学",
+        "微型激光器",
+        "片上非线性光学"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/lshi/zh_CN/index.htm",
+      "email": null,
+      "notes": "张新亮教授课题组（光子集成与信号处理实验室）；湖北光谷实验室光谷产业教授"
+    },
+    {
+      "name_cn": "陈林",
+      "name_en": "Chen Lin",
+      "title": "教授",
+      "department": "武汉光电国家研究中心（集成光子学研究部）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "集成光子器件与芯片",
+        "硅基集成光子器件",
+        "超构表面光子器件"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/chenlin6/zh_CN/index.htm",
+      "email": null,
+      "notes": "教育部青年长江学者"
+    },
+    {
+      "name_cn": "郜定山",
+      "name_en": "Gao Dingshan",
+      "title": "教授",
+      "department": "武汉光电国家研究中心（集成光子学研究部）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "硅基光子学",
+        "光电子器件与集成技术",
+        "纳米光学",
+        "集成量子光学"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/gaodingshan/zh_CN/index.htm",
+      "email": null,
+      "notes": "中法PHOTONET联合研究网络中方负责人；IET Optoelectronics副主编"
+    },
+    {
+      "name_cn": "余宇",
+      "name_en": "Yu Yu",
+      "title": "教授",
+      "department": "武汉光电国家研究中心（集成光子学研究部）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "光电子集成器件",
+        "高速光通信芯片",
+        "智能光感知",
+        "光信号处理"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/yuyu/zh_CN/index.htm",
+      "email": null,
+      "notes": "国家杰出青年科学基金（青A）、优秀青年科学基金（青B）、教育部青年长江学者"
+    },
+    {
+      "name_cn": "徐竞",
+      "name_en": "Xu Jing",
+      "title": "教授",
+      "department": "光学与电子信息学院／武汉光电国家研究中心（集成光子学研究部）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "光子集成芯片",
+        "微波光子学",
+        "光通信芯片"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/xujing2013/zh_CN/index.htm",
+      "email": null,
+      "notes": "中国光学学会光学教育专业委员会副秘书长"
+    },
+    {
+      "name_cn": "赵彦立",
+      "name_en": "Zhao Yanli",
+      "title": "教授",
+      "department": "武汉光电国家研究中心（集成光子学研究部）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "半导体光电探测器",
+        "通信用光探测器芯片",
+        "高速光电探测"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/zhaoyanli2/zh_CN/index.htm",
+      "email": null,
+      "notes": "曾任武汉邮电科学研究院（WTD）光探测器研发"
+    },
+    {
+      "name_cn": "孙军强",
+      "name_en": "Sun Junqiang",
+      "title": "教授",
+      "department": "武汉光电国家研究中心（集成光子学研究部）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "集成光电子器件",
+        "微波光子学",
+        "全光信号处理",
+        "光纤通信器件"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/sunjunqiang/zh_CN/index.htm",
+      "email": null,
+      "notes": "国家科技计划项目首席专家；华中学者特聘教授"
+    },
+    {
+      "name_cn": "赵文宇",
+      "name_en": "Zhao Wenyu",
+      "title": "教授",
+      "department": "武汉光电国家研究中心（集成光子学研究部）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "集成纳米光子学",
+        "片上太赫兹光谱芯片",
+        "超表面全息器件"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/zhaowenyu/zh_CN/index.htm",
+      "email": null,
+      "notes": "海外高层次人才引进计划、湖北高层次人才计划"
+    },
+    {
+      "name_cn": "容科秀",
+      "name_en": "Rong Kexiu",
+      "title": "教授",
+      "department": "武汉光电国家研究中心（集成光子学研究部）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "集成光电子器件",
+        "低维材料纳米光子学",
+        "多维光场调控"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/rongkexiu/zh_CN/index.htm",
+      "email": null,
+      "notes": "国家海外高层次青年人才项目入选者"
+    },
+    {
+      "name_cn": "曾成",
+      "name_en": "Zeng Cheng",
+      "title": "副研究员",
+      "department": "武汉光电国家研究中心（集成光子学研究部）",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "薄膜铌酸锂光电子芯片",
+        "PPLN非线性光子芯片",
+        "宽带光电子器件封装"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/zengcheng/zh_CN/index.htm",
+      "email": null,
+      "notes": null
+    },
+    {
+      "name_cn": "汪毅",
+      "name_en": "Wang Yi",
+      "title": "副教授",
+      "department": "武汉光电国家研究中心（集成光子学研究部）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "硅基光电子芯片",
+        "面向人工智能与大数据的光计算芯片"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/wangyi7/zh_CN/index.htm",
+      "email": null,
+      "notes": null
+    },
+    {
+      "name_cn": "赖建军",
+      "name_en": "Lai Jianjun",
+      "title": "副教授",
+      "department": "武汉光电国家研究中心（集成光子学研究部）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "微纳光机电系统（MOEMS）",
+        "红外传感技术",
+        "超表面光学器件"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/laijianjun/zh_CN/index.htm",
+      "email": null,
+      "notes": null
+    },
+    {
+      "name_cn": "郑爽",
+      "name_en": "Zheng Shuang",
+      "title": "副教授",
+      "department": "光学与电子信息学院（集成光子学研究部）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "高速光电子器件",
+        "光互连器件",
+        "光计算芯片"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/Zhengshuang/zh_CN/index.htm",
+      "email": null,
+      "notes": "湖北省高层次青年人才计划入选者"
+    },
+    {
+      "name_cn": "董文婵",
+      "name_en": "Dong Wenchan",
+      "title": "讲师",
+      "department": "光学与电子信息学院（集成光子学研究部）",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "可重构数字光计算",
+        "光子集成芯片",
+        "非线性信号处理"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/dongwenchan1/zh_CN/index.htm",
+      "email": null,
+      "notes": "硕士生导师"
+    },
+    {
+      "name_cn": "严思琦",
+      "name_en": "Yan Siqi",
+      "title": "副教授",
+      "department": "光学与电子信息学院（集成光子学研究部）",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "高带宽光探测器芯片",
+        "全光神经网络与信号处理",
+        "光域偏振追踪与解复用"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/YANSIQI/zh_CN/index_2407976_list_index.htm",
+      "email": null,
+      "notes": "曾任职华为技术有限公司高级工程师"
+    },
+    {
+      "name_cn": "邓孙斌",
+      "name_en": "Deng Sunbin",
+      "title": "教授",
+      "department": "光学与电子信息学院（微波与光电集成系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "单片三维集成电路",
+        "光电融合智能芯片",
+        "先进光电子封装",
+        "半导体器件与电路"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/DENGSUNBIN/zh_CN/index.htm",
+      "email": null,
+      "notes": "国家级青年人才计划入选者"
+    },
+    {
+      "name_cn": "王超",
+      "name_en": "Wang Chao",
+      "title": "研究员",
+      "department": "光学与电子信息学院／武汉光电国家研究中心（微波与光电集成系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "超低功耗集成电路设计",
+        "新型人工智能处理器",
+        "光电融合智能传感集成电路"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/WangChao/zh_CN/index.htm",
+      "email": null,
+      "notes": "光电信息学院与武汉光电国家研究中心双聘研究员"
+    },
+    {
+      "name_cn": "陈长清",
+      "name_en": "Chen Changqing",
+      "title": "教授",
+      "department": "光学与电子信息学院（微波与光电集成系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "第三代半导体光电材料与芯片",
+        "宽禁带半导体光电器件",
+        "半导体紫外探测芯片"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/chenzhangqing1/zh_CN/index.htm",
+      "email": null,
+      "notes": "先进半导体材料与器件（ASMD）团队负责人；湖北楚天学者计划入选者"
+    },
+    {
+      "name_cn": "蓝新正",
+      "name_en": "Lan Xinzheng",
+      "title": "教授",
+      "department": "光学与电子信息学院／武汉光电国家研究中心（微波与光电集成系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "半导体光电探测器件",
+        "新型半导体物性调控",
+        "光伏与光电探测芯片"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/LANXINZHENG/zh_CN/index.htm",
+      "email": null,
+      "notes": "光学与电子信息学院、武汉光电国家研究中心双聘教授"
+    },
+    {
+      "name_cn": "王晓川",
+      "name_en": "Wang Xiaochuan",
+      "title": "教授",
+      "department": "光学与电子信息学院（微波与光电集成系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "微波毫米波天线及阵列",
+        "电磁兼容设计与仿真",
+        "RCS计算及隐身设计"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/wangxiaochuan/zh_CN/index.htm",
+      "email": null,
+      "notes": "电子信息功能材料教育部重点实验室主任助理"
+    },
+    {
+      "name_cn": "梅鹏",
+      "name_en": "Mei Peng",
+      "title": "教授",
+      "department": "光学与电子信息学院（微波与光电集成系）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "电磁波智能调控",
+        "天线理论与技术",
+        "微波器件"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/MEIPENG/zh_CN/index.htm",
+      "email": null,
+      "notes": "2024年国家海外高层次青年人才计划入选者；电磁波智能调控课题组负责人"
+    },
+    {
+      "name_cn": "牛广达",
+      "name_en": "Niu Guangda",
+      "title": "教授",
+      "department": "武汉光电国家研究中心（光子探测与通信研究部）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "智能探测材料与器件",
+        "异质集成芯片设计与工艺",
+        "超快光电探测",
+        "X射线成像"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/niuguangda/zh_CN/index.htm",
+      "email": null,
+      "notes": "国家杰出青年科学基金（青A）、万人计划青年拔尖人才、湖北省杰青"
+    },
+    {
+      "name_cn": "戴江南",
+      "name_en": "Dai Jiangnan",
+      "title": "教授",
+      "department": "武汉光电国家研究中心（光子探测与通信研究部）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "超宽禁带半导体材料与芯片",
+        "AlN基深紫外固态光源器件",
+        "氮化物半导体器件"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/daijiangnan/zh_CN/index.htm",
+      "email": null,
+      "notes": "氮化物超宽禁带半导体材料与芯片团队负责人；中国电子学会科技进步一等奖"
+    },
+    {
+      "name_cn": "吴峰",
+      "name_en": "Wu Feng",
+      "title": "副研究员",
+      "department": "武汉光电国家研究中心（先进半导体材料与器件团队ASMD）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "宽禁带半导体材料与光电器件",
+        "二维半导体及范德华异质结",
+        "光电功能器件"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/wufeng1/zh_CN/index.htm",
+      "email": null,
+      "notes": null
+    },
+    {
+      "name_cn": "陈长虹",
+      "name_en": "Chen Changhong",
+      "title": "教授",
+      "department": "武汉光电国家研究中心（集成光子学研究部）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "红外探测材料与集成器件",
+        "超材料光学天线",
+        "光子晶体微腔与红外传感"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/CHEN_Changhong/zh_CN/index.htm",
+      "email": null,
+      "notes": null
+    },
+    {
+      "name_cn": "甘棕松",
+      "name_en": "Gan Zongsong",
+      "title": "教授",
+      "department": "武汉光电国家研究中心（激光科学与技术研究部）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "双光束超分辨光刻",
+        "三维半导体微纳结构制造",
+        "高密度微纳电子器件"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/ganzongsong/zh_CN/index.htm",
+      "email": null,
+      "notes": "长期研究超衍射极限光学精密技术，攻关第六代双光束超分辨光刻机技术"
+    },
+    {
+      "name_cn": "周宜雨",
+      "name_en": "Zhou Yiyu",
+      "title": "教授",
+      "department": "光学与电子信息学院（集成光子学研究部）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "集成非线性光学",
+        "片上超导单光子探测器",
+        "电光频率转换芯片"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/ZHOUYIYU/zh_CN/index.htm",
+      "email": null,
+      "notes": "国家级海外高层次青年人才"
+    },
+    {
+      "name_cn": "陈瑶",
+      "name_en": "Chen Yao",
+      "title": "教授",
+      "department": "计算机科学与技术学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "超智融合体系结构",
+        "专用计算架构软硬协同设计",
+        "电子设计自动化",
+        "FPGA加速系统"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/chenyao_cs/zh_CN/index/2699631/list/index.htm",
+      "email": null,
+      "notes": "2026年加入华中科技大学；发表SIGMOD/DAC/FPGA/MICRO/ISCA论文50余篇"
+    },
+    {
+      "name_cn": "郑龙",
+      "name_en": "Zheng Long",
+      "title": "教授",
+      "department": "计算机科学与技术学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "计算机体系结构",
+        "存算一体",
+        "近数据处理",
+        "并行编程与运行时系统"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/ZhengLong/zh_CN/index.htm",
+      "email": null,
+      "notes": "国家优秀青年科学基金获得者、湖北省杰出青年基金获得者"
+    },
+    {
+      "name_cn": "刘海坤",
+      "name_en": "Liu Haikun",
+      "title": "教授",
+      "department": "计算机科学与技术学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "内存型存储系统",
+        "新型非易失存储器",
+        "分布式共享内存",
+        "异构计算"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/liuhaikun/zh_CN/index.htm",
+      "email": null,
+      "notes": "国家级人才计划入选者"
+    },
+    {
+      "name_cn": "段卓辉",
+      "name_en": "Duan Zhuohui",
+      "title": "教授",
+      "department": "计算机科学与技术学院／集成电路学院双聘",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "新型非易失内存",
+        "异构内存存储系统",
+        "内存池化与共享",
+        "近数据计算"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/DUANZHUOHUI/zh_CN/index.htm",
+      "email": null,
+      "notes": "国家级高层次青年人才计划入选者；中国博士后创新人才支持计划"
+    },
+    {
+      "name_cn": "吕志鹏",
+      "name_en": "Lv Zhipeng",
+      "title": "教授",
+      "department": "计算机科学与技术学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "EDA电子设计自动化",
+        "工业优化与调度",
+        "计算智能与启发式优化"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/lzp/zh_CN/index.htm",
+      "email": null,
+      "notes": "EDA与工业优化团队负责人"
+    },
+    {
+      "name_cn": "毛伏兵",
+      "name_en": "Mao Fubing",
+      "title": "副教授",
+      "department": "计算机科学与技术学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "FPGA/ASIC物理设计",
+        "EDA工具研发",
+        "高性能计算与大模型系统"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/maofubing/zh_CN/index.htm",
+      "email": null,
+      "notes": "博士毕业于新加坡南洋理工大学；曾在清华大学软件所参与EDA工具研发"
+    },
+    {
+      "name_cn": "刘康",
+      "name_en": "Liu Kang",
+      "title": "副研究员",
+      "department": "计算机科学与技术学院／武汉光电国家研究中心",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "芯片设计自动化",
+        "数据压缩",
+        "人工智能安全与隐私"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/kangliu/zh_CN/index.htm",
+      "email": null,
+      "notes": "美国纽约大学电子工程博士；华科计算机-新华三存储创新实验室"
+    },
+    {
+      "name_cn": "胡迪青",
+      "name_en": "Hu Diqing",
+      "title": "教授",
+      "department": "计算机科学与技术学院",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "嵌入式系统与SoC",
+        "新型存储技术与器件",
+        "存储系统",
+        "计算机体系结构"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/hudiqing/zh_CN/index.htm",
+      "email": null,
+      "notes": "硕士生导师；信息存储系统教育部重点实验室"
+    },
+    {
+      "name_cn": "张猛",
+      "name_en": "Zhang Meng",
+      "title": "副教授",
+      "department": "计算机科学与技术学院",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "闪存存储",
+        "新型非易失存储",
+        "全息光存储",
+        "纠错编码"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/zhangmeng12345/zh_CN/index.htm",
+      "email": null,
+      "notes": "师从缪向水教授；发表IEEE TCAD/TED、DATE、MSST等论文"
+    },
+    {
+      "name_cn": "王庆刚",
+      "name_en": "Wang Qinggang",
+      "title": "副教授",
+      "department": "计算机科学与技术学院",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "GPU/FPGA/近存计算芯片设计",
+        "大模型推理系统",
+        "稀疏智能计算系统"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/QinggangWang/zh_CN/index.htm",
+      "email": null,
+      "notes": "硕士生导师；ACM ChinaSys优秀博士论文奖、CCF体系结构专委博士学位论文激励计划"
+    },
+    {
+      "name_cn": "崔金华",
+      "name_en": "Cui Jinhua",
+      "title": "副教授",
+      "department": "计算机科学与技术学院",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "计算机系统结构",
+        "新型存储技术与器件",
+        "嵌入式系统"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/cuijinhua/zh_CN/index.htm",
+      "email": null,
+      "notes": "硕士生导师"
+    },
+    {
+      "name_cn": "邵志远",
+      "name_en": "Shao Zhiyuan",
+      "title": "教授",
+      "department": "计算机科学与技术学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "FPGA",
+        "计算机体系结构",
+        "操作系统",
+        "并行计算"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/zyshao/zh_CN/index.htm",
+      "email": null,
+      "notes": "服务计算技术与系统教育部重点实验室"
+    },
+    {
+      "name_cn": "陈俭喜",
+      "name_en": "Chen Jianxi",
+      "title": "副教授",
+      "department": "武汉光电国家研究中心（信息存储功能实验室）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "新型非易失存储系统",
+        "混合存储系统",
+        "磁盘阵列体系结构",
+        "大数据存储"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/chenjianxi/zh_CN/index.htm",
+      "email": null,
+      "notes": null
+    },
+    {
+      "name_cn": "华宇",
+      "name_en": "Hua Yu",
+      "title": "教授",
+      "department": "武汉光电国家研究中心",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "新型存储器件",
+        "非易失内存系统",
+        "云存储系统",
+        "数据中心存储"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/huayu/zh_CN/index.htm",
+      "email": null,
+      "notes": "CCF杰出会员；成果发表于OSDI/MICRO/FAST/HPCA/SC"
+    },
+    {
+      "name_cn": "吴兵",
+      "name_en": "Wu Bing",
+      "title": "讲师",
+      "department": "计算机科学与技术学院",
+      "is_phd_advisor": false,
+      "research_keywords": [
+        "计算机系统结构",
+        "非易失存储技术",
+        "存算融合技术"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/7EQvEFbe/zh_CN/index.htm",
+      "email": null,
+      "notes": "2026年起任讲师；主持国家自然科学基金青年项目"
+    },
+    {
+      "name_cn": "汪承宁",
+      "name_en": "Wang Chengning",
+      "title": "副教授",
+      "department": "计算机科学与技术学院（信息存储系统教育部重点实验室）",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "人工智能计算加速",
+        "AI大模型推理加速",
+        "异构并行计算",
+        "存储器设计",
+        "ARM与RISC-V"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/cnwang/zh_CN/index.htm",
+      "email": null,
+      "notes": null
+    },
+    {
+      "name_cn": "王小平",
+      "name_en": "Wang Xiaoping",
+      "title": "教授",
+      "department": "人工智能与自动化学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "忆阻系统及其应用",
+        "类脑计算",
+        "机器学习与深度学习",
+        "智能控制"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/wangxiaoping4/zh_CN/index.htm",
+      "email": null,
+      "notes": "IEEE Senior Member；湖北省系统工程学会常务理事"
+    },
+    {
+      "name_cn": "桑红石",
+      "name_en": "Sang Hongshi",
+      "title": "教授",
+      "department": "人工智能与自动化学院／多谱信息智能处理技术全国重点实验室",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "数字集成电路设计",
+        "图像与激光点云算法实时实现",
+        "嵌入式硬件加速"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/sanghongshi/zh_CN/index.htm",
+      "email": null,
+      "notes": "2007、2018年教育部科技进步一等奖；2024年挑战杯揭榜挂帅一等奖"
+    },
+    {
+      "name_cn": "刘桐君",
+      "name_en": "Liu Tongjun",
+      "title": "教授",
+      "department": "人工智能与自动化学院",
+      "is_phd_advisor": true,
+      "research_keywords": [
+        "纳光机电智能传感器",
+        "智能光学精密测量",
+        "多模态触觉与视觉感知器件"
+      ],
+      "homepage": "http://faculty.hust.edu.cn/LIUTONGJUN/zh_CN/index.htm",
+      "email": null,
+      "notes": "国家级青年人才项目、湖北省百人计划；Nature Materials/Nature Physics/Science Advances论文"
+    }
+  ]
+}

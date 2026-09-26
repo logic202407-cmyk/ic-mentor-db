@@ -1,4 +1,4 @@
-﻿// reenrich_topic.mjs — 针对低召回导师，按「作者名 × IC 核心期刊 ISSN」精确检索，绕开同校同名者挤占
+// reenrich_topic.mjs — 针对低召回导师，按「作者名 × IC 核心期刊 ISSN」精确检索，绕开同校同名者挤占
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -24,7 +24,13 @@ const ISSN = [
   '0885-8993', // TPEL
 ];
 
-const variants = JSON.parse(fs.readFileSync(path.join(PROC, 'name_variants.json'), 'utf8'));
+const variantsRaw = JSON.parse(fs.readFileSync(path.join(PROC, 'name_variants.json'), 'utf8'));
+// 可选：只处理指定学校，例如 `node reenrich_topic.mjs 2 cas hit buaa`
+const ONLY = process.argv.slice(3).filter((x) => !/^\d+$/.test(x));
+const variants = ONLY.length
+  ? Object.fromEntries(Object.entries(variantsRaw).filter(([k]) => ONLY.includes(k)))
+  : variantsRaw;
+if (ONLY.length) console.log('限定学校:', ONLY.join(', '));
 const compact = (s) => (s || '').toLowerCase().replace(/[^a-z\s-]/g, ' ').split(/[\s-]+/).filter((t) => t.length > 1).join('');
 function compactSet(vs) {
   const set = new Set();
