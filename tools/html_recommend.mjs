@@ -1,4 +1,4 @@
-﻿// html_recommend.mjs — 生成中性的「集成电路设计与 AI 交叉方向 · 导师推荐」交互页面
+// html_recommend.mjs — 生成中性的「集成电路设计与 AI 交叉方向 · 导师推荐」交互页面
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -65,6 +65,10 @@ const html = `<!DOCTYPE html>
  textarea{width:100%;height:210px;font-family:ui-monospace,Consolas,monospace;font-size:12px;border:1px solid #c9d0da;border-radius:8px;padding:9px;display:none;margin-top:8px}
  .foot{padding:16px 24px 34px;font-size:12px;color:#5a6880;line-height:1.8}
  .warn{color:#a63a3a;font-weight:700}
+ .star{cursor:pointer;font-size:15px;color:#cfd6e0;user-select:none;line-height:1}
+ .star.on{color:#e8a600}
+ tr.row.faved{background:#fffcf0}
+ tr.row.faved:hover{background:#fff7e0}
 </style></head><body>
 <header>
   <h1>集成电路设计与 AI 交叉方向 · 导师推荐与招生信息</h1>
@@ -85,9 +89,12 @@ const html = `<!DOCTYPE html>
       <option value="c">学术综合分</option><option value="S">顶刊顶会数</option><option value="r3">近三年产出</option>
       <option value="cite">总引用</option><option value="cpp">篇均引用</option><option value="rsc">招生信号</option><option value="stu">组内学生数</option>
     </select></label>
+    <label class="f"><input type="checkbox" id="favOnly"/> 只看收藏 (<span id="favN">0</span>)</label>
+    <button class="alt" id="expBtn" style="font-size:12px;padding:6px 11px">导出收藏</button>
     <span class="stat" id="stat"></span>
   </div>
   <table id="tb"><thead><tr>
+    <th style="width:26px">★</th>
     <th data-k="n">姓名</th><th data-k="s">学校</th><th data-k="t">职称</th><th data-k="g">方向</th>
     <th data-k="c" class="num">综合分</th><th data-k="tier">梯队</th><th data-k="S" class="num">S/A</th>
     <th data-k="ic" class="num">论文</th><th data-k="r3" class="num">近3年</th><th data-k="cite" class="num">引用</th>
@@ -95,6 +102,7 @@ const html = `<!DOCTYPE html>
   </tr></thead><tbody></tbody></table>
 </div>
 <div class="foot">
+  <b>★ 收藏</b>：点每行最左侧的星标可收藏，收藏记录保存在浏览器本地（换设备不同步）。<b>导出收藏</b>可生成一份 Markdown 候选清单，方便对比与记录。<br/>
   <b>梯队</b>（仅反映公开文献计量证据的多少）：T0 顶刊顶会密集（综合分≥72）｜T1 一流产出稳定（58–72）｜T2 有稳定产出（42–58）｜T3 公开证据较少（26–42）｜T4 公开证据不足（&lt;26 或论文&lt;3）。<br/>
   <b>学生(估)</b>：论文一作中非本校在职教师的去重人数，是团队规模的下限估计，非实际在读人数。<br/>
   <b class="warn">"公开证据不足"≠ 水平低</b>：多为英文名重名或拼写差异导致自动匹配失败（标 ⚠️ 者请以官方主页为准）。<br/>
@@ -112,7 +120,9 @@ const $ = (id) => document.getElementById(id);
 let sortK='c', asc=false, openRow=null;
 function filtered(){
   const q=$('q').value.trim().toLowerCase(), g=$('g').value, sc=$('sc').value, ti=$('ti').value, rc=$('rc').value, sp=$('sp').value;
+  const favOnly = $('favOnly').checked;
   return DATA.filter(d=>{
+    if(favOnly && !FAV.has(d.n)) return false;
     if(sp && d.scope!==sp) return false;
     if(g && !d.gn.includes(g)) return false;
     if(sc && d.s!==sc) return false;
@@ -191,21 +201,65 @@ function render(){
   let html='';
   list.forEach(d=>{
     const rc = d.rsc>0 ? '<span class="rec">在招 '+d.rsc+'</span>' : '<span class="maybe">未明</span>';
-    html += \`<tr class="row" data-n="\${d.n}">
+    const fv = FAV.has(d.n);
+    html += \`<tr class="row\${fv?' faved':''}" data-n="\${d.n}">
+      <td><span class="star\${fv?' on':''}" data-fav="\${d.n}" title="收藏/取消收藏">\${fv?'★':'☆'}</span></td>
       <td><b>\${d.n}</b></td><td><small>\${d.s}</small></td><td><small>\${d.t||'—'}</small></td>
       <td><small>\${d.gn[0]}\${d.gn.length>1?' +'+(d.gn.length-1):''}</small></td>
       <td class="num"><b>\${d.c}</b></td><td><span class="pill \${d.tier}">\${d.tier}</span></td>
       <td class="num">\${d.S}/\${d.A}</td><td class="num">\${d.ic}</td><td class="num">\${d.r3}</td>
       <td class="num">\${d.cite}</td><td class="num">\${d.stu}</td><td>\${rc}</td>
       <td><small>\${d.hp?'<a href="'+d.hp+'" target="_blank">主页</a>':'—'}</small></td></tr>\`;
-    if(openRow===d.n) html += \`<tr class="detail"><td colspan="13">\${detail(d)}</td></tr>\`;
+    if(openRow===d.n) html += \`<tr class="detail"><td colspan="14">\${detail(d)}</td></tr>\`;
   });
   tb.innerHTML = html;
+  tb.querySelectorAll('td .star').forEach(s=>s.addEventListener('click',(e)=>{
+    e.stopPropagation();
+    const n = s.dataset.fav;
+    if(FAV.has(n)) FAV.delete(n); else FAV.add(n);
+    saveFav(); render();
+  }));
   tb.querySelectorAll('tr.row').forEach(r=>r.addEventListener('click',()=>{
     openRow = (openRow===r.dataset.n) ? null : r.dataset.n; render();
   }));
-  $('stat').textContent = \`显示 \${list.length} / 本页 \${DATA.length} 人 ｜ 其中主页明确在招 \${list.filter(x=>x.rsc>0).length} 人\`;
+  $('favN').textContent = FAV.size;
+  $('stat').textContent = \`显示 \${list.length} / 本页 \${DATA.length} 人 ｜ 主页明确在招 \${list.filter(x=>x.rsc>0).length} 人 ｜ 已收藏 \${FAV.size} 人\`;
 }
+function exportFav(){
+  if(!FAV.size){ alert('还没有收藏任何导师。点击每行最左侧的 ☆ 即可收藏。'); return; }
+  const rows = DATA.filter(d=>FAV.has(d.n)).sort((a,b)=>b.c-a.c);
+  let out = '# 我的导师候选清单\\n\\n';
+  out += '| 姓名 | 学校 | 职称 | 方向 | 综合分 | 梯队 | S/A | 论文 | 在招 | 主页 |\\n';
+  out += '|:--|:--|:--|:--|--:|:--|:--|--:|:--|:--|\\n';
+  rows.forEach(d=>{
+    out += \`| \${d.n} | \${d.s} | \${d.t||'—'} | \${d.gn[0]} | \${d.c} | \${d.tier} | \${d.S}/\${d.A} | \${d.ic} | \${d.rsc>0?'✅':'—'} | \${d.hp||'—'} |\\n\`;
+  });
+  out += '\\n> 数据来源：集成电路 / AI 芯片 方向导师库（ic-mentor-db）。\\n';
+  out += '> 本清单为公开文献计量证据的整理，不构成学术评价或报考建议；联系方式请通过主页获取。\\n\\n';
+  rows.forEach(d=>{
+    out += \`## \${d.n} · \${d.sc} · \${d.t||''}\\n\\n\`;
+    out += \`- 方向：\${d.gn.join(' / ')}\\n- 院系：\${d.dp||'—'}\\n- 课题组：\${d.lab||'（未识别）'}\\n\`;
+    out += \`- 综合分 \${d.c}（\${d.tier}）｜ S\${d.S} / A\${d.A} ｜ 论文 \${d.ic} 篇 ｜ 近3年 \${d.r3} ｜ 引用 \${d.cite}\\n\`;
+    out += \`- 主页：\${d.hp||'—'}\\n\`;
+    if(d.sig.length) out += \`- 主页招生原话：\${d.sig[0]}\\n\`;
+    out += '\\n';
+  });
+  const blob = new Blob([out], {type:'text/markdown;charset=utf-8'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = '我的导师候选清单.md';
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  setTimeout(()=>URL.revokeObjectURL(a.href), 3000);
+  if(confirm('已生成《我的导师候选清单.md》并开始下载。\\n\\n是否同时复制到剪贴板？')) {
+    try{ navigator.clipboard.writeText(out); }catch(e){}
+  }
+}
+const FAV_KEY = 'icmd_fav_v1';
+let FAV = new Set();
+try{ FAV = new Set(JSON.parse(localStorage.getItem(FAV_KEY) || '[]')); }catch(e){ FAV = new Set(); }
+function saveFav(){ try{ localStorage.setItem(FAV_KEY, JSON.stringify([...FAV])); }catch(e){} }
+$('favOnly').addEventListener('input',render);
+$('expBtn').addEventListener('click',exportFav);
 ['q','g','sc','ti','rc','sp'].forEach(id=>$(id).addEventListener('input',render));
 $('sortSel').addEventListener('input',()=>{sortK=$('sortSel').value; asc=(sortK==='cpp'); render();});
 document.querySelectorAll('th[data-k]').forEach(th=>th.addEventListener('click',()=>{
