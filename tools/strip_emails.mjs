@@ -1,4 +1,4 @@
-﻿// strip_emails.mjs — 兜底清洗：从所有对外产物中移除邮箱字段与邮箱地址
+// strip_emails.mjs — 兜底清洗：从所有对外产物中移除邮箱字段与邮箱地址
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -19,7 +19,7 @@ function walk(o, file) {
     }
     return out;
   }
-  // 字符串值里嵌的邮箱（例如主页招生原话"请发送简历至 xxx@yy.edu.cn"）同样要清洗
+  // 字符串值里嵌的邮箱（例如主页招生原话中的"请发送简历至〈邮箱〉"）同样要清洗
   if (typeof o === 'string' && EMAIL_RE.test(o)) {
     EMAIL_RE.lastIndex = 0;
     jsonVals++;
