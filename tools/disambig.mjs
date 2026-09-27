@@ -12,7 +12,7 @@ const ABBR = {
 };
 let total = 0;
 for (const k of TARGETS) {
-  const p = `E:\\ytm\\mentor-db\\data\\raw\\${k}\\roster_${k}.json`;
+  const p = path.join(REPO, 'data', 'raw', k, `roster_${k}.json`);
   const j = JSON.parse(fs.readFileSync(p, 'utf8'));
   // 统一括号为中文全角
   for (const f of j.faculty) f.name_cn = String(f.name_cn).replace(/\(/g, '（').replace(/\)/g, '）');

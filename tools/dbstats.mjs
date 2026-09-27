@@ -1,6 +1,12 @@
 // dbstats.mjs — 数据库质量体检
 import fs from 'node:fs';
-const db = JSON.parse(fs.readFileSync('E:\\ytm\\mentor-db\\data\\processed\\mentor_db.json', 'utf8'));
+
+// ── 仓库根目录解析（可移植：以本脚本上一级目录为根）──
+import { fileURLToPath } from 'node:url';
+import path from 'node:path';
+const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+
+const db = JSON.parse(fs.readFileSync(path.join(REPO, 'data', 'processed', 'mentor_db.json'), 'utf8'));
 const buckets = { 0: 0, '1-2': 0, '3-9': 0, '10-29': 0, '30+': 0 };
 for (const r of db) {
   const n = r.n_ic_papers;

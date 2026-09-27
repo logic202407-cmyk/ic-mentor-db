@@ -3,7 +3,12 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const OUT = 'E:\\ytm\\mentor-db\\data\\raw\\crossref';
+// ── 仓库根目录解析（可移植：以本脚本上一级目录为根）──
+import { fileURLToPath } from 'node:url';
+const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+
+
+const OUT = path.join(REPO, 'data', 'raw', 'crossref');
 fs.mkdirSync(OUT, { recursive: true });
 const UA = 'mentor-db/1.0 (mailto:ic-mentor-db@users.noreply.github.com)';
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));

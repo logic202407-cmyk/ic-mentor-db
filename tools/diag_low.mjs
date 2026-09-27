@@ -1,8 +1,14 @@
 ﻿// diag_low.mjs — 诊断低召回导师的真实原因
 import fs from 'node:fs';
+
+// ── 仓库根目录解析（可移植：以本脚本上一级目录为根）──
+import { fileURLToPath } from 'node:url';
+import path from 'node:path';
+const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+
 const UA = 'mentor-db/1.0 (mailto:ic-mentor-db@users.noreply.github.com)';
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-const db = JSON.parse(fs.readFileSync('E:\\ytm\\mentor-db\\data\\processed\\mentor_ranked.json', 'utf8'));
+const db = JSON.parse(fs.readFileSync(path.join(REPO, 'data', 'processed', 'mentor_ranked.json'), 'utf8'));
 
 const names = process.argv.slice(2);
 const targets = names.length ? db.filter((d) => names.includes(d.name_cn)) : db.filter((d) => d.recall_risk === 'yes').slice(0, 8);

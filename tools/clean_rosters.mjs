@@ -2,7 +2,12 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const RAW = 'E:\\ytm\\mentor-db\\data\\raw';
+// ── 仓库根目录解析（可移植：以本脚本上一级目录为根）──
+import { fileURLToPath } from 'node:url';
+const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+
+
+const RAW = path.join(REPO, 'data', 'raw');
 const JUNK = /^(教育背景|工作经历|个人简介|简历|研究方向|简介|职称|学位|学历|邮箱|电话|地址|邮编|性别|出生|民族|政治面貌|导师|招生|备注|获奖|荣誉|论文|项目|专利|著作|主讲|课程)/;
 const JUNK2 = /^[\d０-９\-—－~～年月日.、\s]+$/;
 const JUNK3 = /(博士学位|硕士学位|学士学位|毕业|就读|工作于|任教|博士后|访问学者|课题组主页|点击|详见|以上|如下)/;

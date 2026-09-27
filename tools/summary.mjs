@@ -1,6 +1,12 @@
 // summary.mjs — 汇总最终数字，用于更新 README
 import fs from 'node:fs';
-const P = 'E:\\ytm\\mentor-db\\data\\processed\\';
+
+// ── 仓库根目录解析（可移植：以本脚本上一级目录为根）──
+import { fileURLToPath } from 'node:url';
+import path from 'node:path';
+const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+
+const P = path.join(REPO, 'data', 'processed') + path.sep;
 const ranked = JSON.parse(fs.readFileSync(P + 'mentor_ranked.json', 'utf8'));
 const curated = JSON.parse(fs.readFileSync(P + 'curated.json', 'utf8'));
 const labs = JSON.parse(fs.readFileSync(P + 'lab_pages.json', 'utf8'));

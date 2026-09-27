@@ -3,7 +3,12 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const PROC = 'E:\\ytm\\mentor-db\\data\\processed';
+// ── 仓库根目录解析（可移植：以本脚本上一级目录为根）──
+import { fileURLToPath } from 'node:url';
+const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+
+
+const PROC = path.join(REPO, 'data', 'processed');
 const UA = 'mentor-db/1.0 (mailto:ic-mentor-db@users.noreply.github.com)';
 const MAILTO = 'ic-mentor-db@users.noreply.github.com';
 const CONCURRENCY = Number(process.env.CONC || 8);

@@ -57,6 +57,7 @@
 | `data/processed/mentor_ranked.csv` | 全库排名表（Excel 可直接分析） |
 | `data/processed/curated.csv` | 推荐集表（717 人，含招生信号、课题组、主页链接） |
 | `data/raw/<校名>/roster_*.json` | 各校官方师资原始名录（每条带抓取来源 URL，可溯源；**不含邮箱**） |
+| `tools/` | 全部脚本，**无硬编码路径**，克隆到任意目录均可直接运行 |
 | `index.html` | 落地页（GitHub Pages 入口，汇总所有产出的导航） |
 | `docs/使用指南.md` | 面向学生的完整使用教程 |
 | `docs/维护指南.md` | 面向后续维护者：数据更新节奏、全量重建流程、排错表、红线 |
@@ -137,6 +138,10 @@ AI 芯片/加速器/体系结构 · 存算一体/新型存储 · 模拟/混合�
 
 需要 Node.js ≥ 18 与 Python ≥ 3.10（`pip install pypinyin python-docx`）。
 
+> **关于体积**：整仓约 30 MB，其中 `data/processed/mentor_ranked.json`（19 MB）保存了每位导师的逐篇论文证据，是核验与二次分析的基础。
+> 只想看结论的话，下载 `reports/` 下的单个 HTML 即可（自包含单文件，200–1500 KB）。
+> **关于可移植性**：所有脚本以自身所在目录的上一级作为仓库根目录，不含任何绝对路径，可克隆到任意位置运行。
+
 ```bash
 node tools/clean_rosters.mjs             # 0. 清洗名录（去邮箱、过滤垃圾关键词）
 python tools/prepare_names.py            # 1. 中文姓名 → 英文变体（多音字异读组合）
@@ -174,7 +179,9 @@ python tools/make_docx.py ...            # 14. 生成 Word
 | `html_db.mjs` / `html_recommend.mjs` | 生成两个交互页面 |
 | `report_final.mjs` / `report_recommend.mjs` / `make_docx.py` | 生成 Markdown / Word 报告 |
 | `strip_emails.mjs` | 隐私兜底：清除产物中的邮箱字段与文本内邮箱 |
-| `verify_html.mjs` / `dbstats.mjs` / `summary.mjs` / `gaps.mjs` / `git_size.py` | 产出校验 / 数据体检 / 汇总统计 / 缺口统计 / 仓库体积 |
+| `verify_html.mjs` / `check_roster.mjs` / `check_fav.mjs` | 产出校验 / 名录结构校验 / 推荐页功能校验 |
+| `dbstats.mjs` / `summary.mjs` / `gaps.mjs` / `git_size.py` | 数据体检 / 汇总统计 / 缺口统计 / 仓库体积 |
+| **`audit_prepublish.mjs`** | **公开前审计**：邮箱残留、个人信息与本地路径泄漏、评价性用语、失效链接、凭证扫描、提交者身份等 15 项 |
 
 ---
 
@@ -182,7 +189,7 @@ python tools/make_docx.py ...            # 14. 生成 Word
 
 最欢迎的是**信息更正**——如果你是名单中的老师，或发现某条信息有误：
 
-- 提 [Issue](../../issues/new?template=correction.yml)（**无需提供任何证件**）；
+- 提 [Issue](https://github.com/logic202407-cmyk/ic-mentor-db/issues/new?template=correction.yml)（**无需提供任何证件**）；
 - 可申请更正信息、移除整条记录、移除主页链接；
 - **我们承诺 7 个工作日内处理**。
 
@@ -246,6 +253,7 @@ node tools/verify_html.mjs reports/导师推荐.html reports/导师库.html
 | 2026-09-26 | 移除「主页明确写了不招」清单（避免对个人形成负面指向）；纯负面招生表述不再计入"在招" |
 | 2026-09-26 | 新增落地页 `index.html`、`docs/维护指南.md`、GitHub Actions 自动校验、Pages 部署说明 |
 | 2026-09-26 | 推荐页新增**收藏夹与候选清单导出**（localStorage 持久化，可导出 Markdown 对比表） |
+| 2026-09-26 | **公开前审计与可移植性改造**：29 个脚本去除硬编码绝对路径（改为以脚本位置解析仓库根目录）；`make_docx.py` 内联为自包含实现（不再依赖仓库外模块）；修正 9 处失效相对链接；`skill_heuristics.py` 改为环境变量注入外部依赖并在缺失时安全跳过；新增 `tools/audit_prepublish.mjs` 公开前审计脚本（15 项检查全部通过） |
 | 2026-09-26 | **修复 Crossref 机构串 HTML 实体导致的召回崩塌**（西交 31/156 → 119/156；全库有论文记录 2477 → 2768 人），`enrich_crossref.mjs` 及各补检脚本内置实体解码 |
 | 2026-09-26 | 新增 **西安交通大学** 156 人；全库 17 校 3190 人；主页抓取 1521 → 1594 位，明确在招 249 → **257 位** |
 | 2026-09-26 | **扩校至 16 校 / 3034 人**：新增中国科学院（6 个研究所）、哈工大、天津大学、华中科技大学、北京航空航天大学；主页抓取 1030 → 1521 位，明确在招 151 → **249 位**；新增同校同名消歧机制与 `check_roster.mjs` 名录校验 |

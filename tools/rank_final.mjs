@@ -2,7 +2,12 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const PROC = 'E:\\ytm\\mentor-db\\data\\processed';
+// ── 仓库根目录解析（可移植：以本脚本上一级目录为根）──
+import { fileURLToPath } from 'node:url';
+const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+
+
+const PROC = path.join(REPO, 'data', 'processed');
 const db = JSON.parse(fs.readFileSync(path.join(PROC, 'mentor_db.json'), 'utf8'));
 const heurPath = path.join(PROC, 'heuristics_all.json');
 const integPath = path.join(PROC, 'integrity_check.json');

@@ -1,6 +1,12 @@
 // gaps.mjs — 统计"未完善"的具体缺口
 import fs from 'node:fs';
-const PROC = 'E:\\ytm\\mentor-db\\data\\processed';
+
+// ── 仓库根目录解析（可移植：以本脚本上一级目录为根）──
+import { fileURLToPath } from 'node:url';
+import path from 'node:path';
+const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+
+const PROC = path.join(REPO, 'data', 'processed');
 const ranked = JSON.parse(fs.readFileSync(`${PROC}\\mentor_ranked.json`, 'utf8'));
 const curated = JSON.parse(fs.readFileSync(`${PROC}\\curated.json`, 'utf8'));
 const labs = JSON.parse(fs.readFileSync(`${PROC}\\lab_pages.json`, 'utf8'));

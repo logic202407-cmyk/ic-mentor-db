@@ -2,8 +2,13 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const PROC = 'E:\\ytm\\mentor-db\\data\\processed';
-const OUT = 'E:\\ytm\\mentor-db\\reports\\导师库.html';
+// ── 仓库根目录解析（可移植：以本脚本上一级目录为根）──
+import { fileURLToPath } from 'node:url';
+const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+
+
+const PROC = path.join(REPO, 'data', 'processed');
+const OUT = path.join(REPO, 'reports', '导师库.html');
 const rows = JSON.parse(fs.readFileSync(path.join(PROC, 'mentor_ranked.json'), 'utf8'));
 
 const DIRNAME = {

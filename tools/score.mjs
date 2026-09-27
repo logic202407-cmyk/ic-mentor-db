@@ -4,7 +4,12 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { classifyPaper, DIRECTIONS, STRONG_KW } from './classify.mjs';
 
-const PROC = 'E:\\ytm\\mentor-db\\data\\processed';
+// ── 仓库根目录解析（可移植：以本脚本上一级目录为根）──
+import { fileURLToPath } from 'node:url';
+const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+
+
+const PROC = path.join(REPO, 'data', 'processed');
 const CURRENT_YEAR = 2026;
 
 // 明显不属于电子/信息/工程领域的期刊 → 判为同名污染，排除出计量口径

@@ -8,7 +8,7 @@
 
 如果你是名单中的教师本人，或是了解准确信息的同学：
 
-**请使用 Issue 模板**：[信息更正 / 删除申请](../../issues/new?template=correction.yml)
+**请使用 Issue 模板**：[信息更正 / 删除申请](https://github.com/logic202407-cmyk/ic-mentor-db/issues/new?template=correction.yml)
 
 需要的只有三样：
 
@@ -138,7 +138,7 @@ python tools/git_size.py                    # 确认提交体积（建议 <40 MB
 
 提交贡献即表示你同意：
 
-- 代码部分按 [MIT](../LICENSE) 许可；
-- 数据与文档部分按 [CC BY-NC-SA 4.0](../LICENSE-DATA) 许可。
+- 代码部分按 [MIT](LICENSE) 许可；
+- 数据与文档部分按 [CC BY-NC-SA 4.0](LICENSE-DATA) 许可。
 
 *感谢每一位贡献者。*

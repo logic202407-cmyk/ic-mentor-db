@@ -17,8 +17,12 @@ import itertools
 
 from pypinyin import pinyin, Style
 
-RAW = r"E:\ytm\mentor-db\data\raw"
-OUT = r"E:\ytm\mentor-db\data\processed"
+# ── 仓库根目录解析（可移植：以本脚本上一级目录为根）──
+REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+RAW = os.path.join(REPO, 'data', 'raw')
+OUT = os.path.join(REPO, 'data', 'processed')
 os.makedirs(OUT, exist_ok=True)
 
 # ── 多音字姓氏纠错表（作为姓氏时的正确读音）──

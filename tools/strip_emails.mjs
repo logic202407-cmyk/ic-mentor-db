@@ -2,7 +2,12 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const ROOT = 'E:\\ytm\\mentor-db';
+// ── 仓库根目录解析（可移植：以本脚本上一级目录为根）──
+import { fileURLToPath } from 'node:url';
+const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+
+
+const ROOT = REPO;
 const TARGETS = ['data/processed', 'data/raw', 'reports'];
 const CHECK_ONLY = process.argv.includes('--check');   // --check：只报告不修改（供 CI 使用）
 const EMAIL_RE = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/g;

@@ -2,8 +2,13 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const PROC = 'E:\\ytm\\mentor-db\\data\\processed';
-const RAWDIR = 'E:\\ytm\\mentor-db\\data\\raw\\lab_pages';
+// ── 仓库根目录解析（可移植：以本脚本上一级目录为根）──
+import { fileURLToPath } from 'node:url';
+const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+
+
+const PROC = path.join(REPO, 'data', 'processed');
+const RAWDIR = path.join(REPO, 'data', 'raw', 'lab_pages');
 fs.mkdirSync(RAWDIR, { recursive: true });
 
 // 抓取范围：全部有个人主页、且论文数 ≥3 的导师（覆盖推荐集之外的院系）

@@ -3,23 +3,36 @@
 对导师库中每位导师的论文列表运行 CommonHeuristicsClassifier（C01–C07），
 并把 flagged 结果与人工解读一并落盘。
 
-用法（必须在 skill 的 scripts 目录下、PYTHONPATH 指向该目录）:
-    cd <skill>/scripts
-    python E:\\ytm\\mentor-db\\tools\\skill_heuristics.py [限制人数]
+用法（需把环境变量 ACADEMIC_SKILL_SCRIPTS 指向该 skill 的 scripts 目录）:
+    ACADEMIC_SKILL_SCRIPTS=/path/to/skills/academic-investigation/scripts \\
+        python tools/skill_heuristics.py [限制人数]
+    （Windows PowerShell: $env:ACADEMIC_SKILL_SCRIPTS='...'; python tools/skill_heuristics.py）
+
+未设置该环境变量时本步骤会安全跳过（不阻塞其余流程）。
 输出:
-    E:\\ytm\\mentor-db\\data\\processed\\heuristics_all.json
+    data/processed/heuristics_all.json
 """
 import json
 import os
 import sys
 from collections import Counter
 
-SKILL_SCRIPTS = r"E:\CodexTools\deepseek-harness\dsh-home\skills\academic-investigation\scripts"
+# 依赖 academic-investigation skill 的通用启发式规则。
+# 该 skill 不在本仓库内，故用环境变量指定；未设置时跳过本步骤。
+SKILL_SCRIPTS = os.environ.get("ACADEMIC_SKILL_SCRIPTS", "")
+if not SKILL_SCRIPTS or not os.path.isdir(SKILL_SCRIPTS):
+    print("[跳过] 未设置 ACADEMIC_SKILL_SCRIPTS（academic-investigation skill 的 scripts 目录）。")
+    print("       如需运行异常规则筛查，请先设置该环境变量后重试。")
+    sys.exit(0)
 sys.path.insert(0, SKILL_SCRIPTS)
 
 from analysis.common_heuristics import CommonHeuristicsClassifier  # noqa: E402
 
-PROC = r"E:\ytm\mentor-db\data\processed"
+# ── 仓库根目录解析（可移植：以本脚本上一级目录为根）──
+REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+PROC = os.path.join(REPO, 'data', 'processed')
 db = json.load(open(os.path.join(PROC, "mentor_db.json"), encoding="utf-8"))
 limit = int(sys.argv[1]) if len(sys.argv) > 1 else 0
 if limit:

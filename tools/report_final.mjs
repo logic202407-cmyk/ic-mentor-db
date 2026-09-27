@@ -2,8 +2,13 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const PROC = 'E:\\ytm\\mentor-db\\data\\processed';
-const OUT = 'E:\\ytm\\mentor-db\\reports\\导师库-详细排名报告.md';
+// ── 仓库根目录解析（可移植：以本脚本上一级目录为根）──
+import { fileURLToPath } from 'node:url';
+const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+
+
+const PROC = path.join(REPO, 'data', 'processed');
+const OUT = path.join(REPO, 'reports', '导师库-详细排名报告.md');
 const rows = JSON.parse(fs.readFileSync(path.join(PROC, 'mentor_ranked.json'), 'utf8'));
 
 const DIRNAME = {
@@ -64,7 +69,7 @@ let md = `# 集成电路 / 微电子 / 电子信息 / AI 芯片 —— 导师库
 > 其中的「综合分」与「梯队」**只反映公开文献计量证据的多少**，
 > **不构成学术评价、人事评价或报考建议，也不对任何个人作出负面判断**。
 > T3「公开证据较少」与 T4「公开证据不足」**通常源于姓名重名、英文署名不一致或中文文献未覆盖等数据原因，不代表导师水平或指导质量**。
-> 完整说明见仓库 [DISCLAIMER.md](../../DISCLAIMER.md)（免责与合规）与 [docs/使用指南.md](../../docs/使用指南.md)（使用教程）。
+> 完整说明见仓库 [DISCLAIMER.md](../DISCLAIMER.md)（免责与合规）与 [docs/使用指南.md](../docs/使用指南.md)（使用教程）。
 > 本项目采用 CC BY-NC-SA 4.0（**非商业性使用**），**禁止将文中联系方式用于批量群发或其他骚扰行为**；如需更正或删除信息，请提 Issue，我们将在 7 个工作日内处理。
 
 > **覆盖院校（11 所）**：清华大学、清华大学深圳国际研究生院、北京大学、复旦大学、上海交通大学、浙江大学、南京大学、中国科学技术大学、东南大学、西安电子科技大学、电子科技大学
@@ -95,7 +100,7 @@ let md = `# 集成电路 / 微电子 / 电子信息 / AI 芯片 —— 导师库
 
 ### 三个必须知道的坑
 
-1. **"公开证据不足"≠ 水平低**。T4 里有院士、杰青，原因是英文名重名或拼写差异导致自动匹配失败；正高职称但只检索到 ≤2 篇论文的，已标 **⚠️疑似漏检**。
+1. **"公开证据不足"≠ 学术水平低**。T4 里有院士、杰青，原因是英文名重名或拼写差异导致自动匹配失败；正高职称但只检索到 ≤2 篇论文的，已标 **⚠️疑似漏检**。
 2. **同名污染已被量化并剔除**：全库共剔除 **${rows.reduce((a, b) => a + (b.n_off_field || 0), 0)} 篇**明显不属于电子/信息领域的论文（医学、化学、农学等），但残留污染仍可能存在。标 **低置信** 的记录请核对官方主页。
 3. **文献数据回答不了"导师人怎么样"**：push 程度、补助、毕业去向、是否允许实习，必须问师兄师姐。
 
