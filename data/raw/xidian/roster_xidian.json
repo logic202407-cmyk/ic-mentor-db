@@ -851,7 +851,7 @@
    "notes": "国家级人才"
   },
   {
-   "name_cn": "刘阳",
+   "name_cn": "刘阳（微电子学院）",
    "name_en": null,
    "title": "教授",
    "department": "微电子学院",
@@ -864,7 +864,7 @@
    ],
    "homepage": "https://faculty.xidian.edu.cn/LY39/zh_CN/index.htm",
    "email": null,
-   "notes": null
+   "notes": "本校有同名者，已标注「微电子学院」以区分；两人论文无法自动分离"
   },
   {
    "name_cn": "刘翊中",
@@ -1876,7 +1876,7 @@
    "notes": null
   },
   {
-   "name_cn": "张鹏",
+   "name_cn": "张鹏（微电子学院）",
    "name_en": null,
    "title": "副教授",
    "department": "微电子学院",
@@ -1886,10 +1886,10 @@
    ],
    "homepage": "https://faculty.xidian.edu.cn/ZP6/zh_CN/index.htm",
    "email": null,
-   "notes": null
+   "notes": "本校有同名者，已标注「微电子学院」以区分；两人论文无法自动分离；本校有同名者（另一位做 GaN 功率器件），两人论文无法自动分离"
   },
   {
-   "name_cn": "张鹏",
+   "name_cn": "张鹏（GaN功率器件）",
    "name_en": null,
    "title": "副教授",
    "department": "微电子学院",
@@ -1900,7 +1900,7 @@
    ],
    "homepage": "https://faculty.xidian.edu.cn/ZP8/zh_CN/index.htm",
    "email": null,
-   "notes": null
+   "notes": "本校有同名者，已标注「微电子学院」以区分；两人论文无法自动分离；本校有同名者（另一位方向标注为微电子），两人论文无法自动分离"
   },
   {
    "name_cn": "张启东",
@@ -1920,7 +1920,7 @@
    "notes": null
   },
   {
-   "name_cn": "张涛",
+   "name_cn": "张涛（微电子学院）",
    "name_en": null,
    "title": "副教授",
    "department": "微电子学院",
@@ -1931,7 +1931,7 @@
    ],
    "homepage": "https://faculty.xidian.edu.cn/ZHANGTAO2/zh_CN/index.htm",
    "email": null,
-   "notes": null
+   "notes": "本校有同名者，已标注「微电子学院」以区分；两人论文无法自动分离"
   },
   {
    "name_cn": "张雅超",
@@ -2134,7 +2134,7 @@
   },
   {
    "name_cn": "GONG,XIAOWU",
-   "name_en": null,
+   "name_en": "GONG,XIAOWU",
    "title": "教授",
    "department": "微电子学院",
    "is_phd_advisor": true,
@@ -2285,7 +2285,7 @@
    "notes": null
   },
   {
-   "name_cn": "张涛",
+   "name_cn": "张涛（杭州研究院）",
    "name_en": null,
    "title": "副教授",
    "department": "集成电路学部（杭州研究院）",
@@ -2300,7 +2300,7 @@
    ],
    "homepage": "https://faculty.xidian.edu.cn/ZT9/zh_CN/index.htm",
    "email": null,
-   "notes": "华山菁英学者"
+   "notes": "华山菁英学者；本校有同名者，已标注「杭州研究院」以区分；两人论文无法自动分离"
   },
   {
    "name_cn": "钟龙杰",
@@ -2590,7 +2590,7 @@
    "notes": "IEEE Senior Member"
   },
   {
-   "name_cn": "苏涛",
+   "name_cn": "苏涛（雷达国重）",
    "name_en": null,
    "title": "教授",
    "department": "电子工程学院（雷达信号处理全国重点实验室）",
@@ -2604,10 +2604,10 @@
    ],
    "homepage": "https://faculty.xidian.edu.cn/ST1/zh_CN/index.htm",
    "email": null,
-   "notes": null
+   "notes": "本校有同名者，已标注「雷达国重」以区分；两人论文无法自动分离"
   },
   {
-   "name_cn": "苏涛",
+   "name_cn": "苏涛（本科生院）",
    "name_en": null,
    "title": "教授",
    "department": "电子工程学院（本科生院）",
@@ -2619,7 +2619,7 @@
    ],
    "homepage": "https://faculty.xidian.edu.cn/ST2/zh_CN/index.htm",
    "email": null,
-   "notes": null
+   "notes": "本校有同名者，已标注「本科生院」以区分；两人论文无法自动分离"
   },
   {
    "name_cn": "汤建龙",
@@ -3735,7 +3735,7 @@
    "notes": "国家级青年人才；团队负责人"
   },
   {
-   "name_cn": "刘阳",
+   "name_cn": "刘阳（杭州研究院）",
    "name_en": null,
    "title": "教授",
    "department": "杭州研究院",
@@ -3750,7 +3750,7 @@
    ],
    "homepage": "https://faculty.xidian.edu.cn/icliu/zh_CN/index.htm",
    "email": null,
-   "notes": "国家级青年人才"
+   "notes": "国家级青年人才；本校有同名者，已标注「杭州研究院」以区分；两人论文无法自动分离"
   },
   {
    "name_cn": "毛伟",

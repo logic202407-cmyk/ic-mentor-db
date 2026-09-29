@@ -2207,7 +2207,7 @@
   },
   {
    "name_cn": "Mark Neisser",
-   "name_en": null,
+   "name_en": "Mark Neisser",
    "title": "教授",
    "department": "集成电路学院·讲席教授团组",
    "is_phd_advisor": true,
@@ -2418,7 +2418,7 @@
     "可重构加速单元设计",
     "国产众核处理器"
    ],
-   "homepage": "wenlai.life",
+   "homepage": "https://wenlai.life",
    "email": null,
    "notes": "国家超级计算无锡中心人工智能研发中心主任"
   },

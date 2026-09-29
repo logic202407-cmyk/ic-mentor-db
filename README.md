@@ -23,11 +23,11 @@
 | 指标 | 数值 |
 |:--|--:|
 | 入库导师总数 | **3190 人**（17 校/单位） |
-| 检索到可核实论文 | 2584 人（覆盖率 81%） |
-| 顶刊顶会（S 级）合计 | 1466 篇（390 位导师有 S 级产出） |
-| 一流期刊会议（A 级）合计 | 5784 篇 |
-| 抓取个人/课题组主页 | 1594 位（成功 1525） |
-| **主页明确写了在招** | **257 位** |
+| 检索到可核实论文 | **3014 人（94.5%）** |
+| 顶刊顶会（S 级）合计 | **2322 篇**（544 位导师有 S 级产出） |
+| 一流期刊会议（A 级）合计 | **15918 篇** |
+| 抓取个人/课题组主页 | **2206 位**（成功 1999） |
+| **主页明确写了在招** | **393 位** |
 
 ---
 
@@ -50,12 +50,12 @@
 
 | 文件 | 用途 |
 |:--|:--|
-| **`reports/导师推荐.html`** | **推荐页**：717 位导师，可按范围/方向/学校/梯队/招生状态筛选排序，含课题组与招生原话，一键生成邮件草稿，支持**收藏夹与候选清单导出** |
-| **`reports/导师推荐与招生信息.md`** / `.docx` | 推荐报告：**257 位主页明确在招**的导师逐人卡片、学校×方向交叉矩阵、分方向/分学校榜单、青年 PI 榜、署名结构健康榜、邮件模板与时间线 |
+| **`reports/导师推荐.html`** | **推荐页**：972 位导师，可按范围/方向/学校/梯队/招生状态筛选排序，含课题组与招生原话，一键生成邮件草稿，支持**收藏夹与候选清单导出** |
+| **`reports/导师推荐与招生信息.md`** / `.docx` | 推荐报告：**393 位主页明确在招**的导师逐人卡片、学校×方向交叉矩阵、分方向/分学校榜单、青年 PI 榜、署名结构健康榜、邮件模板与时间线 |
 | `reports/导师库.html` | 全库检索页（17 校 3190 人） |
 | `reports/导师库-详细排名报告.md` / `.docx` | 全库排名报告（8 维综合分、分方向与分学校榜单、诚信与异常检测结果） |
 | `data/processed/mentor_ranked.csv` | 全库排名表（Excel 可直接分析） |
-| `data/processed/curated.csv` | 推荐集表（717 人，含招生信号、课题组、主页链接） |
+| `data/processed/curated.csv` | 推荐集表（972 人，含招生信号、课题组、主页链接） |
 | `data/raw/<校名>/roster_*.json` | 各校官方师资原始名录（每条带抓取来源 URL，可溯源；**不含邮箱**） |
 | `tools/` | 全部脚本，**无硬编码路径**，克隆到任意目录均可直接运行 |
 | `index.html` | 落地页（GitHub Pages 入口，汇总所有产出的导航） |
@@ -66,8 +66,8 @@
 
 **推荐页收录范围（两类）**：
 
-- **集成电路设计与 AI 交叉方向 559 位** —— 数字/AI 芯片 · 体系结构 · 存算一体 · 模拟/电源 · EDA · 类脑 · 芯片安全 · 算力相关器件；
-- **其他 IC 方向但主页明确在招 158 位** —— 射频/毫米波 · 光电/硅光 · MEMS/生医 · 器件/工艺 · 量子等。
+- **集成电路设计与 AI 交叉方向 712 位** —— 数字/AI 芯片 · 体系结构 · 存算一体 · 模拟/电源 · EDA · 类脑 · 芯片安全 · 算力相关器件；
+- **其他 IC 方向但主页明确在招 260 位** —— 射频/毫米波 · 光电/硅光 · MEMS/生医 · 器件/工艺 · 量子等。
 
 > 两个 `.html` 都是**自包含单文件**（数据已内嵌），可直接分享给同学。
 
@@ -80,10 +80,41 @@
 | 师资名录 | 各高校院系官网公开的教师名录页与个人主页 | 姓名、职称、院系、研究方向、荣誉（**不含邮箱**） |
 | 课题组信息 | 教师个人/课题组主页公开内容 | 课题组名称、**招生表述原文** |
 | 文献元数据 | Crossref REST API（2008–2026） | 标题、作者、期刊/会议、年份、被引、DOI |
+| **论文池反向匹配** | Crossref 按 **44 本 IC 相关期刊的 ISSN** 全量抓取（2008 年至今，约 **96 万篇**） | 解决「按人名检索时同名者挤占结果」的召回难题，见下节 |
 | 撤稿/更正 | Crossref 作品关系字段 | 撤稿、更正、关注声明 |
 
 **未使用**任何需要登录、付费或绕过访问控制的数据（知网/万方全文、IEEE/Elsevier 订阅内容、需登录的基金与专利库等一律不涉及）。
 采集遵守公开可访问原则，设置请求间隔与并发上限，不对目标站点造成负担。详见 [DISCLAIMER.md](DISCLAIMER.md)。
+
+---
+
+## 🔍 关键方法：为什么用「论文池反向匹配」
+
+**问题**：中文拼音重名极严重。按人名去 Crossref 检索时，常见名（如「刘明」「王磊」「Xiao Wang」）
+会被大量同名者挤占相关性排序，本人论文即使存在也排在数百条之外——早期版本因此有 606 位导师显示为「零论文」，
+其中包含院士与资深教授，明显是召回失败而非真的没有产出。
+
+**做法**：反转检索方向。
+
+1. 按 **44 本 IC 相关期刊的 ISSN**（JSSC / TCAS-I/II / TVLSI / TCAD / TED / EDL / MTT / TPEL /
+   Nature Electronics / APL / Optics Express / PRL / ACS Nano 等）用 Crossref 游标深分页**全量抓取**
+   2008 年至今的论文（约 **96 万篇**）；
+2. 对每篇论文的**每一位作者**，用「姓名精确匹配（去空格小写归一）+ **该作者本人的机构字段**校验」回查名录；
+3. 因为不经过相关性排序，同名者的干扰被彻底绕开，匹配完全由「姓名 + 机构」两个硬条件决定。
+
+**效果**：可核实论文的导师从 2584 人提升到 **3014 人（94.5%）**，
+零论文记录从 606 人降到 **176 人**，S 级产出者从 390 人增至 **544 人**。
+
+**质量保障**：采集完成后有独立的产出侧校验（`tools/validate_pool.mjs`），
+逐条重新核验「被匹配作者的机构是否真的属于该校」，不通过即剔除——当前剔除率 0.1%，
+且高产学者的机构一致率约 99%。
+
+> 已知取舍：论文若挂在其**前单位**（如入职前在海外高校），因机构不符会被排除，
+> 因此本库反映的是**在本机构期间的公开产出**，不等于学者的完整学术生涯。
+
+> 踩坑记录：采集脚本曾把 `SCHOOL_META` 的字段名 `include` / `exclude` 误写成 `src.inc` / `src.exc`，
+> 导致 `new RegExp(undefined)` 匹配一切、机构校验静默失效（81.7% 匹配失真）。
+> 这正是「产出侧校验」存在的意义——**不要只信任采集过程，要独立复核最终数据。**
 
 ---
 
@@ -148,17 +179,20 @@ python tools/prepare_names.py            # 1. 中文姓名 → 英文变体（�
 node tools/enrich_crossref.mjs           # 2. 逐人 Crossref 检索（2114 人约 15 分钟）
 node tools/reenrich_low.mjs              # 3. 低召回者二次检索（仅按姓名）
 node tools/reenrich_topic.mjs            # 4. 低召回者按 IC 期刊 ISSN 定向补检
-node tools/score.mjs                     # 5. 指标计算 + 评分
-python tools/skill_heuristics.py         # 6. 异常规则筛查（C01–C07）
-node tools/integrity_check.mjs top260    # 7. 撤稿/更正核查
-node tools/rank_final.mjs                # 8. 全库排名
-node tools/fetch_labs_all.mjs            # 9. 抓取课题组主页
-node tools/analyze_labs.mjs              # 10. 提取招生原话与课题组名
-node tools/curate.mjs                    # 11. 构建推荐集（多标签归类）
-node tools/html_db.mjs && node tools/html_recommend.mjs   # 12. 生成交互页面
+node tools/harvest_pool_match.mjs        # 5. 【关键】按 44 本期刊 ISSN 抓全量论文池并反向匹配（约 6 分钟）
+node tools/validate_pool.mjs             # 6. 产出侧校验：逐条复核机构归属
+node tools/merge_pool.mjs                # 7. 合并进各校数据（按 DOI 去重）
+node tools/score.mjs                     # 8. 指标计算 + 评分
+python tools/skill_heuristics.py         # 9. 异常规则筛查（C01–C07）
+node tools/integrity_check.mjs top260    # 10. 撤稿/更正核查
+node tools/rank_final.mjs                # 11. 全库排名
+node tools/fetch_labs_all.mjs            # 12. 抓取课题组主页
+node tools/analyze_labs.mjs              # 13. 提取招生原话与课题组名
+node tools/curate.mjs                    # 14. 构建推荐集（多标签归类）
+node tools/html_db.mjs && node tools/html_recommend.mjs   # 15. 生成交互页面
 node tools/report_final.mjs && node tools/report_recommend.mjs
-node tools/strip_emails.mjs              # 13. 兜底：清除任何残留邮箱
-python tools/make_docx.py ...            # 14. 生成 Word
+node tools/strip_emails.mjs              # 16. 兜底：清除任何残留邮箱
+python tools/make_docx.py ...            # 17. 生成 Word
 ```
 
 **想增加一所学校？** 见 [CONTRIBUTING.md](CONTRIBUTING.md) 第二节（含名录 JSON 结构模板与采集规范）。
@@ -171,6 +205,10 @@ python tools/make_docx.py ...            # 14. 生成 Word
 | `prepare_names.py` | 中文姓名 → 英文变体（多音字姓氏纠错 + 异读组合匹配集） |
 | `harvest_crossref.mjs` / `enrich_crossref.mjs` | 按校抓取论文池 / 逐人 Crossref 检索并双校验 |
 | `reenrich_low.mjs` / `reenrich_topic.mjs` | 低召回者补检（按姓名 / 按 IC 期刊 ISSN 定向） |
+| **`harvest_pool_match.mjs`** | **论文池反向匹配**：按 44 本期刊 ISSN 全量抓取 + 姓名/机构双条件回查 |
+| **`validate_pool.mjs`** / `merge_pool.mjs` | 产出侧机构复核 / 合并进主数据 |
+| `disambig_all.py` / `find_dups.mjs` / `fill_name_en.py` | 同校同名消歧 / 重名排查 / 外文姓名补全 |
+| `who_zero.mjs` / `why_still_zero.mjs` / `assess_filter.mjs` / `probe_missing.mjs` | 缺口诊断：零记录成因、过滤影响与漏检个体 |
 | `classify.mjs` / `score.mjs` | venue 分层与方向关键词表 / 指标计算与评分 |
 | `skill_heuristics.py` / `integrity_check.mjs` | 异常规则筛查 / 撤稿更正核查 |
 | `rank_final.mjs` | 8 维综合分与全库排名 |
@@ -253,6 +291,7 @@ node tools/verify_html.mjs reports/导师推荐.html reports/导师库.html
 | 2026-09-26 | 移除「主页明确写了不招」清单（避免对个人形成负面指向）；纯负面招生表述不再计入"在招" |
 | 2026-09-26 | 新增落地页 `index.html`、`docs/维护指南.md`、GitHub Actions 自动校验、Pages 部署说明 |
 | 2026-09-26 | 推荐页新增**收藏夹与候选清单导出**（localStorage 持久化，可导出 Markdown 对比表） |
+| 2026-09-27 | **论文池反向匹配补齐证据**：按 44 本 IC 期刊 ISSN 全量抓取 96 万篇论文并反向匹配；可核实论文的导师 2584 → **3014 人**，零记录 606 → **176 人**，S 级 1466 → **2322 篇**（产出者 390 → 544 人），主页抓取 1594 → **2206 位**，明确在招 257 → **393 位**，推荐集 717 → **972 人**；修复 `src.inc`/`src.exc` 字段名错误导致的机构校验失效；全库同校同名消歧 23 条、外文姓名变体修复 |
 | 2026-09-26 | **公开前审计与可移植性改造**：29 个脚本去除硬编码绝对路径（改为以脚本位置解析仓库根目录）；`make_docx.py` 内联为自包含实现（不再依赖仓库外模块）；修正 9 处失效相对链接；`skill_heuristics.py` 改为环境变量注入外部依赖并在缺失时安全跳过；新增 `tools/audit_prepublish.mjs` 公开前审计脚本（15 项检查全部通过） |
 | 2026-09-26 | **修复 Crossref 机构串 HTML 实体导致的召回崩塌**（西交 31/156 → 119/156；全库有论文记录 2477 → 2768 人），`enrich_crossref.mjs` 及各补检脚本内置实体解码 |
 | 2026-09-26 | 新增 **西安交通大学** 156 人；全库 17 校 3190 人；主页抓取 1521 → 1594 位，明确在招 249 → **257 位** |

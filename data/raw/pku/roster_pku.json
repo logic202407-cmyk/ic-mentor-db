@@ -421,7 +421,7 @@
    "notes": null
   },
   {
-   "name_cn": "杨玉超",
+   "name_cn": "杨玉超（集成电路学院）",
    "name_en": null,
    "title": "长聘教授",
    "department": "北京大学集成电路学院 集成微纳电子系",
@@ -433,7 +433,7 @@
    ],
    "homepage": "https://ic.pku.edu.cn/szdw/zzjs/yyc/index.htm",
    "email": null,
-   "notes": null
+   "notes": "本校有同名者，已标注「集成电路学院」以区分；两人论文无法自动分离"
   },
   {
    "name_cn": "张兴",
@@ -2288,7 +2288,7 @@
    "notes": null
   },
   {
-   "name_cn": "杨玉超",
+   "name_cn": "杨玉超（深研院）",
    "name_en": null,
    "title": "长聘教授/博雅特聘教授",
    "department": "北京大学深圳研究生院 信息工程学院",
@@ -2300,7 +2300,7 @@
    ],
    "homepage": "https://www.ece.pku.edu.cn/info/1045/2542.htm\r",
    "email": null,
-   "notes": null
+   "notes": "本校有同名者，已标注「深研院」以区分；两人论文无法自动分离"
   },
   {
    "name_cn": "张盛东",

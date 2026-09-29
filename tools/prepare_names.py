@@ -111,6 +111,20 @@ def build(name_cn, name_en):
     if not name_cn:
         return out, out
 
+    # 外文姓名（无汉字）：不能用拼音逐字拆分，直接用原名的词序变体
+    if not re.search(r"[\u4e00-\u9fa5]", name_cn):
+        base = re.sub(r"[（(][^）)]*[）)]", "", (name_en or name_cn)).strip()
+        base = re.sub(r"\s+", " ", base)
+        add(base)
+        parts = base.split()
+        if len(parts) >= 2:
+            add(" ".join(parts[1:] + parts[:1]))          # Family Given...
+            add(f"{parts[-1]}, {' '.join(parts[:-1])}")   # Family, Given
+            if len(parts) >= 3:
+                add(f"{parts[-1]} {parts[0]}")            # Family FirstGiven
+        out = [x for x in out if x]
+        return out, list(dict.fromkeys(out))
+
     per_char = readings(name_cn)
     combos = list(itertools.product(*per_char))
     # 主读音组合排在最前（每个字的第一个读音）

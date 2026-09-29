@@ -1,1973 +1,1973 @@
 {
-  "school": "哈尔滨工业大学",
-  "school_key": "hit",
-  "harvested_at": "2026-09-26",
-  "sources": [
-    "http://seie.hit.edu.cn/",
-    "http://seie.hit.edu.cn/jsml/list.htm",
-    "http://seie.hit.edu.cn/szgk/list.htm",
-    "http://seie.hit.edu.cn/zzjg/list.htm",
-    "http://seie.hit.edu.cn/kyfx/list.htm",
-    "http://seie.hit.edu.cn/ys/list.htm",
-    "http://seie.hit.edu.cn/jcxz/list.htm",
-    "http://seie.hit.edu.cn/19281/list.htm",
-    "http://seie.hit.edu.cn/19282/list.htm",
-    "http://seie.hit.edu.cn/19283/list.htm",
-    "http://seie.hit.edu.cn/19284/list.htm",
-    "http://seie.hit.edu.cn/19285/list.htm",
-    "http://computing.hit.edu.cn/",
-    "http://computing.hit.edu.cn/jsml/list.htm",
-    "http://computing.hit.edu.cn/yjsds/list.htm",
-    "http://computing.hit.edu.cn/22195/list.htm",
-    "http://sa.hit.edu.cn/",
-    "http://sa.hit.edu.cn/szdw_21460/list.htm",
-    "http://sa.hit.edu.cn/21463/list.htm",
-    "http://sa.hit.edu.cn/21478/list.htm",
-    "http://sa.hit.edu.cn/21472/list.htm",
-    "http://hitee.hit.edu.cn/",
-    "http://hitee.hit.edu.cn/17037/list.htm",
-    "http://hitee.hit.edu.cn/17036/list.htm",
-    "http://hitee.hit.edu.cn/17080/list.htm",
-    "http://ise.hit.edu.cn/",
-    "http://ise.hit.edu.cn/16180/list.htm",
-    "http://ise.hit.edu.cn/16179/list.htm",
-    "http://ic.hitsz.edu.cn/",
-    "http://ic.hitsz.edu.cn/szll.htm",
-    "http://ic.hitsz.edu.cn/szll/qzjs.htm",
-    "http://ic.hitsz.edu.cn/szll/qzjs/js.htm",
-    "http://ic.hitsz.edu.cn/szll/qzjs/fjs.htm",
-    "http://ic.hitsz.edu.cn/szll/yjy.htm",
-    "https://www.hitsz.edu.cn/index.html",
-    "http://ai.hit.edu.cn/",
-    "http://ai.hit.edu.cn/12789/list.htm",
-    "http://physics.hit.edu.cn/",
-    "http://mse.hit.edu.cn/",
-    "http://sme.hit.edu.cn/",
-    "http://eelab.hit.edu.cn/",
-    "https://www.hitwh.edu.cn/",
-    "http://www.hit.edu.cn/",
-    "https://homepage.hit.edu.cn/home-index",
-    "https://homepage.hit.edu.cn/api/h5/index.html",
-    "POST https://homepage.hit.edu.cn/sysBrowseShow/executeBrowseAllOfSchoolDepartNew.do",
-    "POST https://homepage.hit.edu.cn/sysBrowseShow/executeBrowseAllOfSchoolDepart.do",
-    "POST https://homepage.hit.edu.cn/sysBrowseShow/executeBrowseAllOfSchoolDepartWh.do",
-    "POST https://homepage.hit.edu.cn/sysBrowseShow/executeBrowseAllOfSchoolDepartSz.do",
-    "POST https://homepage.hit.edu.cn/sysBrowseShow/getUserInfoByDeptId.do (69 个校内单位, 4825 条教师记录)",
-    "https://homepage.hit.edu.cn/school-dept?id=1&browseName=校内单位&browseEnName=UNIT",
-    "https://homepage.hit.edu.cn/scripts/home-index.js",
-    "https://homepage.hit.edu.cn/scripts/base.js",
-    "https://homepage.hit.edu.cn/scripts/homepage/school-dept.js",
-    "https://www.lingboyan.com/academicinfo-3-2723 (2026年哈工大博士招生专业目录-航天学院-集成电路科学与工程)",
-    "http://school.freekaoyan.com/heilongjiang/hit/daoshi/2016/04-01/1459455063545869.shtml (张宇峰导师简介)",
-    "http://zri.hit.edu.cn/ 导师名录 PDF",
-    "https://homepage.hit.edu.cn/<工号或拼音> 及 https://faculty.hitsz.edu.cn/<拼音> 教师个人主页共 1759 个（逐页抓取，用于提取职称/学科/研究方向/标签）"
-  ],
-  "coverage_note": "已抓取并覆盖：\n1) 电子与信息工程学院（电信学院）全部 5 个系——通信工程系、电子工程系、测控工程系、信息工程系、微波工程系，共 161 名教师（seie.hit.edu.cn 教师名录 + 各系 list 页 + 个人主页），本名录收录其中做微波/毫米波/太赫兹器件与电路、嵌入式与测控硬件、雷达系统与射频前端等的 49 人；纯通信理论/纯遥感图像算法者已按规则排除。\n2) 航天学院——经 sa.hit.edu.cn「基层单位」页确认 HIT 的「微电子科学与技术系（所）」隶属航天学院（非电信学院），已按 2026 年博士招生专业目录（0873 集成电路科学与工程）+ 个人主页交叉核对，收录 25 人（王进祥、肖立伊、陈伟平、张宇峰、霍明学、高志强、付强、尹亮、张文博、桑胜田、曹伽牧、金辉、张海峰、刘超铭、李玲、袁玮键等）；航天学院的力学/复合材料/控制/光机方向已排除。\n3) 计算学部 / 计算机科学与技术学院（含深圳、威海）——收录体系结构、存储系统、容错计算与硬件安全、AI 系统等 5 人（董剑、吴晋、史先俊、李诗逸、张策）。计算学部 214 名教师中绝大多数为 AI/NLP/CV/软件方向，按「排除纯软件算法」规则未收。\n4) 集成电路学院（深圳）——ic.hitsz.edu.cn 师资力量页（教授 24 人 / 副教授 7 人 / 研究员 3 人，去重后 42 人）中的芯片相关方向收录 17 人（射频微波 IC、算存一体、集成光子芯片、光量子芯片、集成电路硬件安全、微纳电子封装等）；纯材料/纯物理理论者（如电子封装材料、纳米药物载体）已排除。\n5) 信息科学与技术学院（深圳）收录射频微波集成电路、光电融合集成芯片方向 4 人；信息科学与工程学院（威海）收录集成电路设计方向 4 人（王新胜、罗敏、韩良、刘晓宁）。\n6) 材料科学与工程学院收录电子封装/芯片键合/极端环境集成电路方向 8 人（田艳红、王晨曦、李兴冀、崔秀海、张墅野等）；仪器科学与工程学院收录集成电路装备超精密测量、生物芯片方向 4 人；电气工程及自动化学院收录电力电子/功率变换/FPGA 方向 6 人；物理学院收录太赫兹器件、半导体材料检测方向 4 人。\n\n未抓到 / 未覆盖及原因：\n- 「微系统与微结构制造教育部重点实验室」与哈工大 MEMS 中心没有独立可抓取的师资页面（官方站点无公开教师名录页，校内站点仅见实验室简介），仅能通过张宇峰等个人主页确认其 MEMS 中心任职，未能系统枚举该实验室全部成员。\n- 未来技术学院 / 人工智能研究院：ai.hit.edu.cn「研究人员」页(/12789/)为动态加载且接口需登录，仅能确认研究院为「专兼职研究人员 70 余人」的总体规模，未获逐人名单；未来技术学院(future.hit.edu.cn)以书院导师名单 PDF 形式发布，未含芯片硬件方向教师。\n- 威海校区信息科学与工程学院官网(ise.hitwh.edu.cn)无法解析，改由哈工大教师主页系统按单位抓取（69 人），覆盖面可能略有遗漏。\n- 校本部无独立「集成电路学院」；哈工大集成电路科学与工程学科博士点设在航天学院微电子科学与技术系，深圳校区另设集成电路学院，已分别覆盖。\n- 哈工大教师主页系统对「职称」字段未开放批量接口（TeacherHome/queryAllTeacherTitle.do 与 getUserInfoByDeptId.do 均不返回职称，getUserInfoByDeptId.do 的 id/orderType 过滤参数无效），部分教师本人未在主页填写职称，故 126 人中有 33 人 title 为 null；is_phd_advisor 中 56 人为 null（主页与列表页均无博导/硕导标注）。\n- 邮箱按要求一律写 null，未采集。\n- 第三方面试/导师库（考博猫、freekaoyan）仅用于交叉核对航天学院微电子系的研究方向与职称，未作为唯一来源。",
-  "faculty": [
-    {
-      "name_cn": "王进祥",
-      "name_en": "Wang Jinxiang",
-      "title": "教授",
-      "department": "航天学院 微电子科学与技术系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "高可靠集成电路设计",
-        "嵌入式系统",
-        "SoC建模方法",
-        "集成电路科学与工程"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/wangjinxiang",
-      "email": null,
-      "notes": "2026年集成电路科学与工程学科博导"
-    },
-    {
-      "name_cn": "肖立伊",
-      "name_en": "Xiao Liyi",
-      "title": "教授",
-      "department": "航天学院 微电子科学与技术系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计",
-        "EDA技术",
-        "集成电路科学与工程",
-        "电子科学与技术"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/xiaoliyi",
-      "email": null,
-      "notes": "2026年集成电路科学与工程学科博导"
-    },
-    {
-      "name_cn": "陈伟平",
-      "name_en": "Chen Weiping",
-      "title": "教授",
-      "department": "航天学院 微电子科学与技术系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路设计与应用",
-        "微纳米器件与微系统",
-        "集成电路科学与工程"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/chenwp",
-      "email": null,
-      "notes": "2026年集成电路科学与工程学科博导"
-    },
-    {
-      "name_cn": "张宇峰",
-      "name_en": "Zhang Yufeng",
-      "title": "教授",
-      "department": "航天学院 微电子科学与技术系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "MEMS微能源",
-        "能量管理电路设计",
-        "集成传感器",
-        "微纳器件与系统"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/zhangyf",
-      "email": null,
-      "notes": "微电子科学与技术系副主任、哈工大MEMS中心副主任"
-    },
-    {
-      "name_cn": "霍明学",
-      "name_en": "Huo Mingxue",
-      "title": "研究员",
-      "department": "航天学院 微电子科学与技术系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路安全可靠性设计",
-        "数字和模拟集成电路设计",
-        "微纳器件与系统",
-        "半导体材料与器件"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/huomingxue",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "高志强",
-      "name_en": "Gao Zhiqiang",
-      "title": null,
-      "department": "航天学院 微电子科学与技术系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "射频集成电路设计",
-        "数模混合信号集成电路",
-        "微波传感器",
-        "无线通信"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/gaozhiqiang",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "付强",
-      "name_en": "Qiang Fu",
-      "title": null,
-      "department": "航天学院 微电子科学与技术系",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "数模混合集成电路设计",
-        "射频集成电路",
-        "混合信号电路"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/fuqiang",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "尹亮",
-      "name_en": "Liang Yin",
-      "title": null,
-      "department": "航天学院 微电子科学与技术系",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "数字集成电路设计",
-        "模拟集成电路设计",
-        "MEMS传感器接口ASIC",
-        "集成电路设计及应用"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/yinliang",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "张文博",
-      "name_en": "zhang wenbo",
-      "title": null,
-      "department": "航天学院 微电子科学与技术系",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "模拟数字混合集成电路设计",
-        "芯片设计",
-        "嵌入式系统"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/zhangwenbo",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "桑胜田",
-      "name_en": "sang shengtian",
-      "title": null,
-      "department": "航天学院 微电子科学与技术系",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "芯片设计",
-        "嵌入式系统",
-        "电子科学与技术"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/sangshengtian",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "曹伽牧",
-      "name_en": "cao jiamu",
-      "title": null,
-      "department": "航天学院 微电子科学与技术系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "微纳器件与系统",
-        "集成电路设计与应用",
-        "集成电路科学与工程"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/caojiamu",
-      "email": null,
-      "notes": "2026年集成电路科学与工程学科博导"
-    },
-    {
-      "name_cn": "金辉",
-      "name_en": "Hui Jin",
-      "title": "研究员",
-      "department": "航天学院 微电子科学与技术系",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "固态存储可靠性",
-        "集成电路安全可靠性设计",
-        "数字和模拟集成电路设计",
-        "脑机接口"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/jinhui",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "张海峰",
-      "name_en": "Zhang Haifeng",
-      "title": "教授",
-      "department": "航天学院 微电子科学与技术系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "数字和模拟集成电路设计",
-        "微系统技术",
-        "微电子学与固体电子学"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/Haifeng",
-      "email": null,
-      "notes": "哈尔滨杰出青年"
-    },
-    {
-      "name_cn": "刘超铭",
-      "name_en": "Liu Chaoming",
-      "title": "教授",
-      "department": "航天学院 电子科学与技术系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "宇航集成电路可靠性设计",
-        "宽禁带半导体器件",
-        "极端环境电子学",
-        "航天电子系统故障识别"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/liuchaoming",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "李玲",
-      "name_en": "LI LING",
-      "title": "教授",
-      "department": "航天学院 微电子科学与技术系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "纳米传感器材料与器件",
-        "微纳光电子",
-        "MEMS器件"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/lingli",
-      "email": null,
-      "notes": "省级人才，系副主任"
-    },
-    {
-      "name_cn": "袁玮键",
-      "name_en": "Yuan WeiJian",
-      "title": "副教授",
-      "department": "航天学院 微电子科学与技术系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "MEMS微能源",
-        "电子皮肤",
-        "柔性传感器",
-        "微纳器件与系统"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/yuanweijian",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "刘小强",
-      "name_en": "liu xiaoqiang",
-      "title": null,
-      "department": "航天学院 电子科学与技术系",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "微系统技术",
-        "MEMS",
-        "电子科学与技术"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/liuxiaoqiang",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "李晓明",
-      "name_en": "li xiaoming",
-      "title": null,
-      "department": "航天学院 电子科学与技术系",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "嵌入式系统设计",
-        "嵌入式系统",
-        "电子科学与技术"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/lixiaoming",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "刘雨",
-      "name_en": "Yu Liu",
-      "title": null,
-      "department": "航天学院 电子科学与技术系",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "嵌入式系统开发",
-        "智能信号处理",
-        "目标检测与识别"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/liuyu2192",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "刘康",
-      "name_en": "Liu Kang",
-      "title": null,
-      "department": "航天学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "宽禁带半导体物理与器件",
-        "宽禁带半导体",
-        "电子科学与技术"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/KangLIU",
-      "email": null,
-      "notes": "国家高层次青年人才"
-    },
-    {
-      "name_cn": "刘本建",
-      "name_en": "Liu Benjian",
-      "title": "教授",
-      "department": "航天学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "半导体材料",
-        "金刚石材料及器件应用",
-        "电子科学与技术"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/LiuBenjian",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "张海",
-      "name_en": "Zhang Hai",
-      "title": "教授",
-      "department": "航天学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "毫米波太赫兹成像",
-        "红外热成像",
-        "光学工程"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/hzhang",
-      "email": null,
-      "notes": "国家级青年人才"
-    },
-    {
-      "name_cn": "康冬鹏",
-      "name_en": "Kang Dongpeng",
-      "title": "研究员",
-      "department": "航天学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成光学",
-        "量子光子学",
-        "光通信"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/kangdongpeng",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "郜键",
-      "name_en": "Gao Jian",
-      "title": null,
-      "department": "航天学院",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "激光成像雷达技术",
-        "EUV光刻光源技术",
-        "电子科学与技术"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/gaussking",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "温兴月",
-      "name_en": "wen xingyue",
-      "title": "助理研究员",
-      "department": "航天学院",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "光纤传感技术",
-        "纳米传感器材料与器件",
-        "电子科学与技术"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/wenxingyue",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "王琮",
-      "name_en": "Wang Cong",
-      "title": "教授",
-      "department": "电子与信息工程学院 微波工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "微波毫米波集成电路",
-        "微波传感器系统",
-        "集成电路设计与工艺"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/wangcong1",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "程亚运",
-      "name_en": "Cheng Yayun",
-      "title": "研究员",
-      "department": "电子与信息工程学院 微波工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "微波毫米波太赫兹信号特性",
-        "成像探测",
-        "电磁场与微波技术"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/chengyayun",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "宗华",
-      "name_en": "Zong Hua",
-      "title": "教授",
-      "department": "电子与信息工程学院 微波工程系",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "毫米波太赫兹成像",
-        "时空信息智能感知与处理",
-        "电磁场与微波技术"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/zonghua",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "兰盛昌",
-      "name_en": "Lan Shengchang",
-      "title": "副研究员",
-      "department": "电子与信息工程学院 微波工程系",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "毫米波太赫兹智能组件",
-        "毫米波系统应用",
-        "电磁场与微波技术"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/sclan",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "王禹忠",
-      "name_en": "Wang Yuzhong",
-      "title": "副研究员",
-      "department": "电子与信息工程学院 微波工程系",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "微波光子芯片",
-        "光计算",
-        "超构表面",
-        "太赫兹无线传感"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/wangyuzhong",
-      "email": null,
-      "notes": "博新计划"
-    },
-    {
-      "name_cn": "祁嘉然",
-      "name_en": "Qi Jiaran",
-      "title": "教授",
-      "department": "电子与信息工程学院 微波工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "全光/光电融合深度网络",
-        "光信息处理",
-        "电磁场与微波技术"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/qijiaran",
-      "email": null,
-      "notes": "院长助理"
-    },
-    {
-      "name_cn": "张狂",
-      "name_en": "Zhang Kuang",
-      "title": null,
-      "department": "电子与信息工程学院 微波工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "微波级联超构表面",
-        "电磁超材料",
-        "电磁场与微波技术"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/zhangkuang",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "李红梅",
-      "name_en": "Li Hongmei",
-      "title": "教授",
-      "department": "电子与信息工程学院 微波工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "高密度天线阵列",
-        "阵列去耦理论与智能设计",
-        "电磁场与微波技术"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/lihongmei",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "王楠楠",
-      "name_en": "Wang Nannan",
-      "title": "副教授",
-      "department": "电子与信息工程学院 微波工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "天线及阵列天线技术",
-        "毫米波太赫兹成像技术",
-        "电磁场与微波技术"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/wangnannan",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "林澍",
-      "name_en": "Shu Lin",
-      "title": null,
-      "department": "电子与信息工程学院 微波工程系",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "天线及阵列天线技术",
-        "阵列天线",
-        "电磁场与微波技术"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/linshu",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "杨国辉",
-      "name_en": "Yang Guohui",
-      "title": "副教授",
-      "department": "电子与信息工程学院 微波工程系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "电磁表面",
-        "电磁兼容",
-        "天线及微波电路"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/ygh",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "袁乐眙",
-      "name_en": "yuan yueyi",
-      "title": "研究员",
-      "department": "电子与信息工程学院 微波工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "电磁表面",
-        "电磁兼容",
-        "天线及微波电路",
-        "电磁场与微波技术"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/yuanleyi",
-      "email": null,
-      "notes": "中国科协青年人才托举工程"
-    },
-    {
-      "name_cn": "王禹翔",
-      "name_en": "wang yuxiang",
-      "title": "副研究员",
-      "department": "电子与信息工程学院 微波工程系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "电磁表面",
-        "电磁兼容",
-        "天线及微波电路"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/wangyuxiang",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "王鹏程",
-      "name_en": "wang pengcheng",
-      "title": "副研究员",
-      "department": "电子与信息工程学院 微波工程系",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "电磁场与微波技术",
-        "微波技术",
-        "电磁场理论"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/wangpengcheng",
-      "email": null,
-      "notes": "春雁英才计划"
-    },
-    {
-      "name_cn": "李伟",
-      "name_en": "Li Wei",
-      "title": "副教授",
-      "department": "电子与信息工程学院 微波工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "电磁场与微波技术",
-        "微波电路",
-        "电磁场理论"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/liwei",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "张红军",
-      "name_en": "zhang hongjun",
-      "title": null,
-      "department": "电子与信息工程学院 微波工程系",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "雷达成像技术",
-        "雷达信号处理",
-        "电磁场与微波技术"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/hongjunzhang",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "彭喜元",
-      "name_en": "Peng Xiyuan",
-      "title": "教授",
-      "department": "电子与信息工程学院 测控工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "自动测试技术",
-        "电子系统设计",
-        "嵌入式系统"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/pengxiyuan",
-      "email": null,
-      "notes": "自动测试及仪器技术教育部工程中心主任"
-    },
-    {
-      "name_cn": "付平",
-      "name_en": "Fu Ping",
-      "title": "教授",
-      "department": "电子与信息工程学院 测控工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "自动测试技术",
-        "电子系统设计",
-        "仪器科学与技术"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/fuping",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "乔立岩",
-      "name_en": "Qiao Liyan",
-      "title": "教授",
-      "department": "电子与信息工程学院 测控工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "嵌入式人工智能",
-        "自动测试技术",
-        "虚拟仪器"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/qiaoliyan",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "姜守达",
-      "name_en": "Jiang Shouda",
-      "title": "教授",
-      "department": "电子与信息工程学院 测控工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "自动测试技术",
-        "虚拟仪器",
-        "电子系统设计"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/jiangshouda",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "赵光权",
-      "name_en": "Zhao Guangquan",
-      "title": "教授",
-      "department": "电子与信息工程学院 测控工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "电子系统设计",
-        "人工智能算法及应用",
-        "仪器科学与技术"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/zhaoguangquan",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "魏德宝",
-      "name_en": "Wei Debao",
-      "title": "研究员",
-      "department": "电子与信息工程学院 测控工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "固态存储可靠性",
-        "自动测试技术",
-        "嵌入式系统设计"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/weidebao",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "乔家庆",
-      "name_en": "Qiao Jiaqing",
-      "title": "研究员",
-      "department": "电子与信息工程学院 测控工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "嵌入式智能系统",
-        "实时调度理论",
-        "自动测试"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/qiaojiaqing",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "付宁",
-      "name_en": "Fu Ning",
-      "title": "教授",
-      "department": "电子与信息工程学院 测控工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "智能感知与信号处理",
-        "嵌入式人工智能",
-        "稀疏信号处理与压缩感知"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/funing",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "张京超",
-      "name_en": "Zhang Jingchao",
-      "title": "研究员",
-      "department": "电子与信息工程学院 测控工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "稀疏信号处理",
-        "先进总线测试技术",
-        "仪器科学与技术"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/zhangjingchao",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "刘连胜",
-      "name_en": "Liu Liansheng",
-      "title": "教授",
-      "department": "电子与信息工程学院 测控工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "嵌入式系统",
-        "自动测试技术",
-        "仪器科学与技术"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/liuliansheng",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "魏长安",
-      "name_en": "wei Chang'an",
-      "title": "教授",
-      "department": "电子与信息工程学院 测控工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "嵌入式人工智能",
-        "机器学习与图像处理",
-        "自动测试技术"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/weichangan",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "许永辉",
-      "name_en": "许永辉",
-      "title": null,
-      "department": "电子与信息工程学院 测控工程系",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "嵌入式人工智能",
-        "机器学习与图像处理",
-        "自动测试技术"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/xuyonghui",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "刘冰",
-      "name_en": "Liu Bing",
-      "title": "教授",
-      "department": "电子与信息工程学院 测控工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "嵌入式人工智能",
-        "计算视觉",
-        "仪器科学与技术"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/liubing",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "孟升卫",
-      "name_en": "Meng Shengwei",
-      "title": "副教授",
-      "department": "电子与信息工程学院 测控工程系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "信号检测与处理",
-        "自动测试技术",
-        "嵌入式系统设计"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/mengsw",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "刘兆庆",
-      "name_en": "liu zhaoqing",
-      "title": "副教授",
-      "department": "电子与信息工程学院 测控工程系",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "自动测试技术",
-        "嵌入式系统设计",
-        "工程逻辑设计"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/liuzhaoqing",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "宋宇晨",
-      "name_en": "Song Yuchen",
-      "title": "副教授",
-      "department": "电子与信息工程学院 测控工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "边缘AI",
-        "嵌入式人工智能",
-        "复杂系统状态监测",
-        "智能感知"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/songyuchen",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "尹洪涛",
-      "name_en": "Hongtao Yin",
-      "title": "副教授",
-      "department": "电子与信息工程学院 测控工程系",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "嵌入式系统",
-        "人工智能",
-        "仪器科学与技术"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/yinhongtao",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "张佳岩",
-      "name_en": "张佳岩",
-      "title": null,
-      "department": "电子与信息工程学院 测控工程系",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "嵌入式人工智能",
-        "机器学习与图像处理",
-        "自动测试技术",
-        "物联网"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/zhangjiayan",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "白旭",
-      "name_en": "Bai Xu",
-      "title": "副教授",
-      "department": "电子与信息工程学院 信息工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "嵌入式人工智能",
-        "传感网与物联网",
-        "探地雷达"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/baixu",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "姚博文",
-      "name_en": "yao bowen",
-      "title": "研究员",
-      "department": "电子与信息工程学院",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "软硬件协同智能计算",
-        "智能计算系统",
-        "信息与通信工程"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/yaobowen",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "刘东洋",
-      "name_en": "liu dongyang",
-      "title": null,
-      "department": "电子与信息工程学院 信息工程系",
-      "is_phd_advisor": false,
-      "research_keywords": [
-        "边缘AI",
-        "嵌入式人工智能",
-        "遥感图像智能处理"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/liudongyang",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "郑文斌",
-      "name_en": "Zheng Wenbin",
-      "title": null,
-      "department": "电子与信息工程学院",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "嵌入式人工智能",
-        "数据驱动智能诊断",
-        "动力电池数据分析"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/zhengwenbin",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "毛兴鹏",
-      "name_en": "Xingpeng Mao",
-      "title": null,
-      "department": "电子与信息工程学院 电子工程系",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "信号检测与处理",
-        "新体制雷达探测",
-        "认知雷达与智能信号处理"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/XingpengMao",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "位寅生",
-      "name_en": "Wei Yinsheng",
-      "title": "教授",
-      "department": "电子与信息工程学院 电子工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "新体制雷达探测技术",
-        "雷达信号处理",
-        "信息与通信工程"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/weiyinsheng",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "赵彬",
-      "name_en": "Zhao Bin",
-      "title": "教授",
-      "department": "电子与信息工程学院 电子工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "雷达成像技术",
-        "新体制雷达信号处理",
-        "医工融合"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/zhaobinhit1988",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "张云",
-      "name_en": "Zhang Yun",
-      "title": "教授",
-      "department": "电子与信息工程学院 电子工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "认知探测与智能信号处理",
-        "雷达系统",
-        "信息与通信工程"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/zhangyun",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "李杨",
-      "name_en": "Li Yang",
-      "title": "教授",
-      "department": "电子与信息工程学院 电子工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "认知探测系统",
-        "智能信号处理",
-        "信息与通信工程"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/liyang",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "周共健",
-      "name_en": "Zhou Gongjian",
-      "title": "教授",
-      "department": "电子与信息工程学院 电子工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "新体制雷达",
-        "雷达信息处理",
-        "信息与通信工程"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/zhougj",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "吴小川",
-      "name_en": "Wu Xiaochuan",
-      "title": "研究员",
-      "department": "电子与信息工程学院 电子工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "新体制雷达智能信号处理",
-        "目标检测与识别",
-        "雷达成像"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/wuxiaochuan",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "李鸿志",
-      "name_en": "Li Hongzhi",
-      "title": "副研究员",
-      "department": "电子与信息工程学院 电子工程系",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "雷达成像技术",
-        "新体制雷达信号处理",
-        "信息与通信工程"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/lihongzhi",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "谢俊好",
-      "name_en": "Xie Junhao",
-      "title": "教授",
-      "department": "电子与信息工程学院 电子工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "雷达目标检测新体制",
-        "海洋遥感",
-        "智能统计信号处理"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/xiejunhao",
-      "email": null,
-      "notes": "全国百篇优秀博士论文"
-    },
-    {
-      "name_cn": "姜义成",
-      "name_en": "Jiang Yicheng",
-      "title": "教授",
-      "department": "电子与信息工程学院 电子工程系",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "雷达信号处理与成像",
-        "目标环境感知",
-        "信息与通信工程"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/jiangyicheng",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "董英凝",
-      "name_en": "Dong Yingning",
-      "title": null,
-      "department": "电子与信息工程学院 电子工程系",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "新体制探测与海洋智能感知",
-        "信号与信息处理",
-        "信息与通信工程"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/dongyn",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "曲龙跃",
-      "name_en": "qu longyue",
-      "title": null,
-      "department": "信息科学与技术学院（深圳）",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "射频电路",
-        "微波电路",
-        "天线"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/qulongyue",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "闫旭",
-      "name_en": "Xu Yan",
-      "title": "副教授",
-      "department": "信息科学与技术学院（深圳）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "射频微波集成电路设计",
-        "集成电路设计",
-        "电子科学与技术"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/yanxu",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "徐小川",
-      "name_en": "Xu Xiaochuan",
-      "title": null,
-      "department": "信息科学与技术学院（深圳）",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "光电融合集成芯片",
-        "光电子集成",
-        "电子科学与技术"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/xuxiaochuan",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "段嘉楠",
-      "name_en": "Jianan Duan",
-      "title": null,
-      "department": "信息科学与技术学院（深圳）",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "半导体激光器",
-        "光电子器件",
-        "电子科学与技术"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/jiananduan",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "秦敬凯",
-      "name_en": "Qin Jing-Kai ",
-      "title": "教授",
-      "department": "集成电路学院（深圳）",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "微纳信息器件与芯片集成",
-        "半导体材料与器件集成",
-        "集成电路科学与工程"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/qinjingkai",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "刘郝亮",
-      "name_en": "Liu Haoliang",
-      "title": "教授",
-      "department": "集成电路学院（深圳）",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "自旋电子",
-        "光自旋芯片",
-        "自旋器件"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/liuhaoliang",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "周宇",
-      "name_en": "ZHOU YU",
-      "title": "教授",
-      "department": "集成电路学院（深圳）",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "光量子芯片",
-        "量子光学",
-        "量子计算"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/recgardening",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "王嘉威",
-      "name_en": "wang jiawei",
-      "title": "教授",
-      "department": "集成电路学院（深圳）",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "微纳光子器件",
-        "集成芯片",
-        "电子科学与技术"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/wangjiawei",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "巫凯意",
-      "name_en": "wu kaiyi",
-      "title": null,
-      "department": "集成电路学院（深圳）",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "集成光子芯片与系统",
-        "光电材料与器件",
-        "集成电路科学与工程"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/wukaiyi",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "王怡",
-      "name_en": "WANG YI",
-      "title": null,
-      "department": "集成电路学院（深圳）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "光子集成",
-        "集成光电子",
-        "集成电路科学与工程"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/ywang",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "徐科",
-      "name_en": "ke xu",
-      "title": "教授",
-      "department": "集成电路学院（深圳）",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "微纳光学",
-        "集成光学",
-        "集成电路科学与工程"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/xuke",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "肖君军",
-      "name_en": "Xiao Junjun",
-      "title": "教授",
-      "department": "集成电路学院（深圳）",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "微纳光信息技术",
-        "光学工程",
-        "电子科学与技术"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/xiaojunjun",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "陈怡沐",
-      "name_en": "Chen Yimu",
-      "title": "教授",
-      "department": "集成电路学院（深圳）",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "光电器件",
-        "集成系统",
-        "物理学"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/chenyimu",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "胡竞天",
-      "name_en": "Hu Jingtian",
-      "title": "教授",
-      "department": "集成电路学院（深圳）",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "集成电路",
-        "光学工程",
-        "物理学科交叉"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/hujingtian",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "戴明志",
-      "name_en": "dai mingzhi",
-      "title": "教授",
-      "department": "集成电路学院（深圳）",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "算存一体器件",
-        "缺陷表征",
-        "电子科学与技术"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/daimingzhihit",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "崔爱娇",
-      "name_en": "Cui Aijiao",
-      "title": "教授",
-      "department": "集成电路学院（深圳）",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "集成电路硬件安全",
-        "硬件安全",
-        "集成电路科学与工程"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/cuiaijiao",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "王永杰",
-      "name_en": "WANG YONGJIE",
-      "title": "教授",
-      "department": "集成电路学院（深圳）",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "半导体材料",
-        "新能源器件",
-        "集成电路科学与工程"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/wangyongjie",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "计红军",
-      "name_en": "Ji Hongjun",
-      "title": "教授",
-      "department": "集成电路学院（深圳）",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "电子封装技术",
-        "微电子封装",
-        "集成电路科学与工程"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/jihongjun",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "钟颖",
-      "name_en": "Zhong Ying (Sarah)",
-      "title": "教授",
-      "department": "集成电路学院（深圳）",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "微纳电子封装技术",
-        "电子封装",
-        "柔性电子"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/zhongying",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "祝温泊",
-      "name_en": "zhu wenbo",
-      "title": "副教授",
-      "department": "集成电路学院（深圳）",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "微纳连接",
-        "电子封装",
-        "集成电路科学与工程"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/zhuwenbo",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "阮琦锋",
-      "name_en": "Ruan Qifeng",
-      "title": "副教授",
-      "department": "集成电路学院（深圳）",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "微纳光学",
-        "先进制造",
-        "集成电路科学与工程"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/ruanqifeng",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "王新胜",
-      "name_en": "Wang Xinsheng",
-      "title": "教授",
-      "department": "信息科学与工程学院（威海）",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路安全可靠性设计",
-        "海洋物联网传感器芯片设计",
-        "数字和模拟集成电路设计"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/wangxinsheng",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "罗敏",
-      "name_en": "LUO min",
-      "title": null,
-      "department": "信息科学与工程学院（威海）",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "射频集成电路设计",
-        "数模混合信号集成电路设计",
-        "电子科学与技术"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/luomin",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "韩良",
-      "name_en": "han liang",
-      "title": "副教授",
-      "department": "信息科学与工程学院（威海）",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "模拟集成电路设计",
-        "模拟集成电路",
-        "电子科学与技术"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/hanliang",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "刘晓宁",
-      "name_en": "liu xiaoning",
-      "title": "讲师",
-      "department": "信息科学与工程学院（威海）",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "芯片设计与嵌入式系统",
-        "芯片设计",
-        "电子科学与技术"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/liuxiaoning",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "董剑",
-      "name_en": "Dong Jian",
-      "title": "教授",
-      "department": "计算学部 容错与移动计算研究中心",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "容错计算",
-        "硬件安全",
-        "区块链",
-        "计算机体系结构"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/dongjian",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "吴晋",
-      "name_en": "Jin Wu",
-      "title": "副研究员",
-      "department": "计算学部 计算机硬件实验中心",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "计算机系统结构",
-        "存储系统",
-        "计算机科学与技术"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/wujin",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "史先俊",
-      "name_en": "Shi Xianjun",
-      "title": null,
-      "department": "计算学部 计算机科学技术研究所",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "计算机体系结构",
-        "处理器体系结构",
-        "计算机科学与技术"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/shixianjun",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "李诗逸",
-      "name_en": "li shiyi",
-      "title": null,
-      "department": "计算机科学与技术学院（深圳）",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "计算机系统结构",
-        "AI系统",
-        "计算机科学与技术"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/lishiyi",
-      "email": null,
-      "notes": "国家级青年人才"
-    },
-    {
-      "name_cn": "张策",
-      "name_en": "ZHANG CE",
-      "title": "教授",
-      "department": "计算机科学与技术学院（威海）",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "计算机体系结构",
-        "可靠性与安全性",
-        "计算机科学与技术"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/ZHANGCE",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "田艳红",
-      "name_en": "Tian Yanhong",
-      "title": "教授",
-      "department": "材料科学与工程学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "电子封装与柔性电子",
-        "集成电路封装与可靠性",
-        "柔性可穿戴传感器件"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/tinatian",
-      "email": null,
-      "notes": "2026年集成电路科学与工程学科博导"
-    },
-    {
-      "name_cn": "王晨曦",
-      "name_en": "Wang Chenxi",
-      "title": "教授",
-      "department": "材料科学与工程学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "电子封装",
-        "芯片键合",
-        "生物材料连接"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/wangchenxi",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "李兴冀",
-      "name_en": "Li Xingji",
-      "title": "教授",
-      "department": "材料科学与工程学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "极端环境集成电路",
-        "电子器件基础理论与仿真",
-        "极端环境效应"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/lxj0218",
-      "email": null,
-      "notes": "2026年集成电路科学与工程学科博导"
-    },
-    {
-      "name_cn": "崔秀海",
-      "name_en": "Cui Xiuhai",
-      "title": "研究员",
-      "department": "材料科学与工程学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "认知物理融合芯片技术",
-        "智能计算技术",
-        "集成电路+AI"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/cuixiuhai",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "张墅野",
-      "name_en": "Zhang Shuye",
-      "title": "副教授",
-      "department": "材料科学与工程学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "电子封装",
-        "电子器件及系统可靠性评价",
-        "材料科学与工程"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/zhangshuye",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "刘宝磊",
-      "name_en": "liu baolei",
-      "title": null,
-      "department": "材料科学与工程学院",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "微纳连接",
-        "半导体封装技术",
-        "材料科学与工程"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/liubaolei",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "王尚",
-      "name_en": "Wang Shang",
-      "title": null,
-      "department": "材料科学与工程学院",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "先进封装",
-        "柔性器件",
-        "印刷电子"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/Wangshang",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "邢大伟",
-      "name_en": "xing dawei",
-      "title": null,
-      "department": "材料科学与工程学院",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "梯度硅铝合金电子封装材料",
-        "电子封装材料",
-        "材料科学与工程"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/xingdawei",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "赵勃",
-      "name_en": "Zhao Bo",
-      "title": "教授",
-      "department": "仪器科学与工程学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "超声无损检测",
-        "超声应力场测量",
-        "磁浮运动台",
-        "光刻机系统隔微振"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/hitzhaobo",
-      "email": null,
-      "notes": "国家级青年人才，2026年集成电路科学与工程学科博导"
-    },
-    {
-      "name_cn": "崔俊宁",
-      "name_en": "Cui Junning",
-      "title": "教授",
-      "department": "仪器科学与工程学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "精密仪器",
-        "集成电路装备测量",
-        "仪器科学与技术"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/cuijunning",
-      "email": null,
-      "notes": "2026年集成电路科学与工程学科博导"
-    },
-    {
-      "name_cn": "胡鹏程",
-      "name_en": "Hu Pengcheng",
-      "title": "教授",
-      "department": "仪器科学与工程学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "集成电路装备动态超精密测量",
-        "多轴超精密同步测量",
-        "光电传感"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/hupc",
-      "email": null,
-      "notes": "2026年集成电路科学与工程学科博导"
-    },
-    {
-      "name_cn": "孙晔",
-      "name_en": "Sun Ye",
-      "title": "教授",
-      "department": "仪器科学与工程学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "生物芯片",
-        "纳米传感器",
-        "仪器科学与技术"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/sunye",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "贲洪奇",
-      "name_en": "Bi Hongqi",
-      "title": "教授",
-      "department": "电气工程及自动化学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "电力电子技术及应用",
-        "功率变换",
-        "电气工程"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/fenhongqi",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "李彬彬",
-      "name_en": "Li Binbin",
-      "title": "教授",
-      "department": "电气工程及自动化学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "模块化电力电子技术",
-        "电力电子变换器",
-        "电气工程"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/libinbin",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "管乐诗",
-      "name_en": "yueshi guan",
-      "title": "教授",
-      "department": "电气工程及自动化学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "电力电子与电力传动",
-        "高频功率变换",
-        "电气工程"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/guanyueshi",
-      "email": null,
-      "notes": "国家级青年人才"
-    },
-    {
-      "name_cn": "张国强",
-      "name_en": "Zhang Guoqiang",
-      "title": "教授",
-      "department": "电气工程及自动化学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "电力电子与电力传动",
-        "功率变换器",
-        "电气工程"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/zhgq",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "张相军",
-      "name_en": "Zhang Xiangjun",
-      "title": "副教授",
-      "department": "电气工程及自动化学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "电力电子与电力传动",
-        "照明电子技术",
-        "航天特种电源"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/zhangxiangjun",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "张岩",
-      "name_en": "Zhang Yan",
-      "title": null,
-      "department": "电气工程及自动化学院",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "FPGA设计",
-        "人工智能",
-        "电气工程"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/zyhit",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "李立",
-      "name_en": "Li Li",
-      "title": "教授",
-      "department": "物理学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "太赫兹器件物理",
-        "光场调控",
-        "物理学"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/lilipys",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "刘伟龙",
-      "name_en": "Liu Weilong",
-      "title": "副教授",
-      "department": "物理学院",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "半导体材料新型检测技术",
-        "激光光谱学",
-        "超快激光技术"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/liuwl",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "曹永印",
-      "name_en": "Cao Yongyin",
-      "title": "副教授",
-      "department": "物理学院",
-      "is_phd_advisor": true,
-      "research_keywords": [
-        "微纳光电器件",
-        "光操控",
-        "物理学"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/caoyongyin",
-      "email": null,
-      "notes": null
-    },
-    {
-      "name_cn": "孟祥达",
-      "name_en": "meng xiangda",
-      "title": null,
-      "department": "物理学院",
-      "is_phd_advisor": null,
-      "research_keywords": [
-        "铁电/压电材料",
-        "光电功能材料与器件",
-        "THz功能材料与器件"
-      ],
-      "homepage": "https://homepage.hit.edu.cn/mengxiangda",
-      "email": null,
-      "notes": null
-    }
-  ]
+ "school": "哈尔滨工业大学",
+ "school_key": "hit",
+ "harvested_at": "2026-09-26",
+ "sources": [
+  "http://seie.hit.edu.cn/",
+  "http://seie.hit.edu.cn/jsml/list.htm",
+  "http://seie.hit.edu.cn/szgk/list.htm",
+  "http://seie.hit.edu.cn/zzjg/list.htm",
+  "http://seie.hit.edu.cn/kyfx/list.htm",
+  "http://seie.hit.edu.cn/ys/list.htm",
+  "http://seie.hit.edu.cn/jcxz/list.htm",
+  "http://seie.hit.edu.cn/19281/list.htm",
+  "http://seie.hit.edu.cn/19282/list.htm",
+  "http://seie.hit.edu.cn/19283/list.htm",
+  "http://seie.hit.edu.cn/19284/list.htm",
+  "http://seie.hit.edu.cn/19285/list.htm",
+  "http://computing.hit.edu.cn/",
+  "http://computing.hit.edu.cn/jsml/list.htm",
+  "http://computing.hit.edu.cn/yjsds/list.htm",
+  "http://computing.hit.edu.cn/22195/list.htm",
+  "http://sa.hit.edu.cn/",
+  "http://sa.hit.edu.cn/szdw_21460/list.htm",
+  "http://sa.hit.edu.cn/21463/list.htm",
+  "http://sa.hit.edu.cn/21478/list.htm",
+  "http://sa.hit.edu.cn/21472/list.htm",
+  "http://hitee.hit.edu.cn/",
+  "http://hitee.hit.edu.cn/17037/list.htm",
+  "http://hitee.hit.edu.cn/17036/list.htm",
+  "http://hitee.hit.edu.cn/17080/list.htm",
+  "http://ise.hit.edu.cn/",
+  "http://ise.hit.edu.cn/16180/list.htm",
+  "http://ise.hit.edu.cn/16179/list.htm",
+  "http://ic.hitsz.edu.cn/",
+  "http://ic.hitsz.edu.cn/szll.htm",
+  "http://ic.hitsz.edu.cn/szll/qzjs.htm",
+  "http://ic.hitsz.edu.cn/szll/qzjs/js.htm",
+  "http://ic.hitsz.edu.cn/szll/qzjs/fjs.htm",
+  "http://ic.hitsz.edu.cn/szll/yjy.htm",
+  "https://www.hitsz.edu.cn/index.html",
+  "http://ai.hit.edu.cn/",
+  "http://ai.hit.edu.cn/12789/list.htm",
+  "http://physics.hit.edu.cn/",
+  "http://mse.hit.edu.cn/",
+  "http://sme.hit.edu.cn/",
+  "http://eelab.hit.edu.cn/",
+  "https://www.hitwh.edu.cn/",
+  "http://www.hit.edu.cn/",
+  "https://homepage.hit.edu.cn/home-index",
+  "https://homepage.hit.edu.cn/api/h5/index.html",
+  "POST https://homepage.hit.edu.cn/sysBrowseShow/executeBrowseAllOfSchoolDepartNew.do",
+  "POST https://homepage.hit.edu.cn/sysBrowseShow/executeBrowseAllOfSchoolDepart.do",
+  "POST https://homepage.hit.edu.cn/sysBrowseShow/executeBrowseAllOfSchoolDepartWh.do",
+  "POST https://homepage.hit.edu.cn/sysBrowseShow/executeBrowseAllOfSchoolDepartSz.do",
+  "POST https://homepage.hit.edu.cn/sysBrowseShow/getUserInfoByDeptId.do (69 个校内单位, 4825 条教师记录)",
+  "https://homepage.hit.edu.cn/school-dept?id=1&browseName=校内单位&browseEnName=UNIT",
+  "https://homepage.hit.edu.cn/scripts/home-index.js",
+  "https://homepage.hit.edu.cn/scripts/base.js",
+  "https://homepage.hit.edu.cn/scripts/homepage/school-dept.js",
+  "https://www.lingboyan.com/academicinfo-3-2723 (2026年哈工大博士招生专业目录-航天学院-集成电路科学与工程)",
+  "http://school.freekaoyan.com/heilongjiang/hit/daoshi/2016/04-01/1459455063545869.shtml (张宇峰导师简介)",
+  "http://zri.hit.edu.cn/ 导师名录 PDF",
+  "https://homepage.hit.edu.cn/<工号或拼音> 及 https://faculty.hitsz.edu.cn/<拼音> 教师个人主页共 1759 个（逐页抓取，用于提取职称/学科/研究方向/标签）"
+ ],
+ "coverage_note": "已抓取并覆盖：\n1) 电子与信息工程学院（电信学院）全部 5 个系——通信工程系、电子工程系、测控工程系、信息工程系、微波工程系，共 161 名教师（seie.hit.edu.cn 教师名录 + 各系 list 页 + 个人主页），本名录收录其中做微波/毫米波/太赫兹器件与电路、嵌入式与测控硬件、雷达系统与射频前端等的 49 人；纯通信理论/纯遥感图像算法者已按规则排除。\n2) 航天学院——经 sa.hit.edu.cn「基层单位」页确认 HIT 的「微电子科学与技术系（所）」隶属航天学院（非电信学院），已按 2026 年博士招生专业目录（0873 集成电路科学与工程）+ 个人主页交叉核对，收录 25 人（王进祥、肖立伊、陈伟平、张宇峰、霍明学、高志强、付强、尹亮、张文博、桑胜田、曹伽牧、金辉、张海峰、刘超铭、李玲、袁玮键等）；航天学院的力学/复合材料/控制/光机方向已排除。\n3) 计算学部 / 计算机科学与技术学院（含深圳、威海）——收录体系结构、存储系统、容错计算与硬件安全、AI 系统等 5 人（董剑、吴晋、史先俊、李诗逸、张策）。计算学部 214 名教师中绝大多数为 AI/NLP/CV/软件方向，按「排除纯软件算法」规则未收。\n4) 集成电路学院（深圳）——ic.hitsz.edu.cn 师资力量页（教授 24 人 / 副教授 7 人 / 研究员 3 人，去重后 42 人）中的芯片相关方向收录 17 人（射频微波 IC、算存一体、集成光子芯片、光量子芯片、集成电路硬件安全、微纳电子封装等）；纯材料/纯物理理论者（如电子封装材料、纳米药物载体）已排除。\n5) 信息科学与技术学院（深圳）收录射频微波集成电路、光电融合集成芯片方向 4 人；信息科学与工程学院（威海）收录集成电路设计方向 4 人（王新胜、罗敏、韩良、刘晓宁）。\n6) 材料科学与工程学院收录电子封装/芯片键合/极端环境集成电路方向 8 人（田艳红、王晨曦、李兴冀、崔秀海、张墅野等）；仪器科学与工程学院收录集成电路装备超精密测量、生物芯片方向 4 人；电气工程及自动化学院收录电力电子/功率变换/FPGA 方向 6 人；物理学院收录太赫兹器件、半导体材料检测方向 4 人。\n\n未抓到 / 未覆盖及原因：\n- 「微系统与微结构制造教育部重点实验室」与哈工大 MEMS 中心没有独立可抓取的师资页面（官方站点无公开教师名录页，校内站点仅见实验室简介），仅能通过张宇峰等个人主页确认其 MEMS 中心任职，未能系统枚举该实验室全部成员。\n- 未来技术学院 / 人工智能研究院：ai.hit.edu.cn「研究人员」页(/12789/)为动态加载且接口需登录，仅能确认研究院为「专兼职研究人员 70 余人」的总体规模，未获逐人名单；未来技术学院(future.hit.edu.cn)以书院导师名单 PDF 形式发布，未含芯片硬件方向教师。\n- 威海校区信息科学与工程学院官网(ise.hitwh.edu.cn)无法解析，改由哈工大教师主页系统按单位抓取（69 人），覆盖面可能略有遗漏。\n- 校本部无独立「集成电路学院」；哈工大集成电路科学与工程学科博士点设在航天学院微电子科学与技术系，深圳校区另设集成电路学院，已分别覆盖。\n- 哈工大教师主页系统对「职称」字段未开放批量接口（TeacherHome/queryAllTeacherTitle.do 与 getUserInfoByDeptId.do 均不返回职称，getUserInfoByDeptId.do 的 id/orderType 过滤参数无效），部分教师本人未在主页填写职称，故 126 人中有 33 人 title 为 null；is_phd_advisor 中 56 人为 null（主页与列表页均无博导/硕导标注）。\n- 邮箱按要求一律写 null，未采集。\n- 第三方面试/导师库（考博猫、freekaoyan）仅用于交叉核对航天学院微电子系的研究方向与职称，未作为唯一来源。",
+ "faculty": [
+  {
+   "name_cn": "王进祥",
+   "name_en": "Wang Jinxiang",
+   "title": "教授",
+   "department": "航天学院 微电子科学与技术系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "高可靠集成电路设计",
+    "嵌入式系统",
+    "SoC建模方法",
+    "集成电路科学与工程"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/wangjinxiang",
+   "email": null,
+   "notes": "2026年集成电路科学与工程学科博导"
+  },
+  {
+   "name_cn": "肖立伊",
+   "name_en": "Xiao Liyi",
+   "title": "教授",
+   "department": "航天学院 微电子科学与技术系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "EDA技术",
+    "集成电路科学与工程",
+    "电子科学与技术"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/xiaoliyi",
+   "email": null,
+   "notes": "2026年集成电路科学与工程学科博导"
+  },
+  {
+   "name_cn": "陈伟平",
+   "name_en": "Chen Weiping",
+   "title": "教授",
+   "department": "航天学院 微电子科学与技术系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计与应用",
+    "微纳米器件与微系统",
+    "集成电路科学与工程"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/chenwp",
+   "email": null,
+   "notes": "2026年集成电路科学与工程学科博导"
+  },
+  {
+   "name_cn": "张宇峰",
+   "name_en": "Zhang Yufeng",
+   "title": "教授",
+   "department": "航天学院 微电子科学与技术系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS微能源",
+    "能量管理电路设计",
+    "集成传感器",
+    "微纳器件与系统"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/zhangyf",
+   "email": null,
+   "notes": "微电子科学与技术系副主任、哈工大MEMS中心副主任"
+  },
+  {
+   "name_cn": "霍明学",
+   "name_en": "Huo Mingxue",
+   "title": "研究员",
+   "department": "航天学院 微电子科学与技术系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路安全可靠性设计",
+    "数字和模拟集成电路设计",
+    "微纳器件与系统",
+    "半导体材料与器件"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/huomingxue",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "高志强",
+   "name_en": "Gao Zhiqiang",
+   "title": null,
+   "department": "航天学院 微电子科学与技术系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频集成电路设计",
+    "数模混合信号集成电路",
+    "微波传感器",
+    "无线通信"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/gaozhiqiang",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "付强",
+   "name_en": "Qiang Fu",
+   "title": null,
+   "department": "航天学院 微电子科学与技术系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "数模混合集成电路设计",
+    "射频集成电路",
+    "混合信号电路"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/fuqiang",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "尹亮",
+   "name_en": "Liang Yin",
+   "title": null,
+   "department": "航天学院 微电子科学与技术系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "数字集成电路设计",
+    "模拟集成电路设计",
+    "MEMS传感器接口ASIC",
+    "集成电路设计及应用"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/yinliang",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张文博",
+   "name_en": "zhang wenbo",
+   "title": null,
+   "department": "航天学院 微电子科学与技术系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "模拟数字混合集成电路设计",
+    "芯片设计",
+    "嵌入式系统"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/zhangwenbo",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "桑胜田",
+   "name_en": "sang shengtian",
+   "title": null,
+   "department": "航天学院 微电子科学与技术系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "芯片设计",
+    "嵌入式系统",
+    "电子科学与技术"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/sangshengtian",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "曹伽牧",
+   "name_en": "cao jiamu",
+   "title": null,
+   "department": "航天学院 微电子科学与技术系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微纳器件与系统",
+    "集成电路设计与应用",
+    "集成电路科学与工程"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/caojiamu",
+   "email": null,
+   "notes": "2026年集成电路科学与工程学科博导"
+  },
+  {
+   "name_cn": "金辉",
+   "name_en": "Hui Jin",
+   "title": "研究员",
+   "department": "航天学院 微电子科学与技术系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "固态存储可靠性",
+    "集成电路安全可靠性设计",
+    "数字和模拟集成电路设计",
+    "脑机接口"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/jinhui",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张海峰",
+   "name_en": "Zhang Haifeng",
+   "title": "教授",
+   "department": "航天学院 微电子科学与技术系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "数字和模拟集成电路设计",
+    "微系统技术",
+    "微电子学与固体电子学"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/Haifeng",
+   "email": null,
+   "notes": "哈尔滨杰出青年"
+  },
+  {
+   "name_cn": "刘超铭",
+   "name_en": "Liu Chaoming",
+   "title": "教授",
+   "department": "航天学院 电子科学与技术系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "宇航集成电路可靠性设计",
+    "宽禁带半导体器件",
+    "极端环境电子学",
+    "航天电子系统故障识别"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/liuchaoming",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李玲",
+   "name_en": "LI LING",
+   "title": "教授",
+   "department": "航天学院 微电子科学与技术系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "纳米传感器材料与器件",
+    "微纳光电子",
+    "MEMS器件"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/lingli",
+   "email": null,
+   "notes": "省级人才，系副主任"
+  },
+  {
+   "name_cn": "袁玮键",
+   "name_en": "Yuan WeiJian",
+   "title": "副教授",
+   "department": "航天学院 微电子科学与技术系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "MEMS微能源",
+    "电子皮肤",
+    "柔性传感器",
+    "微纳器件与系统"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/yuanweijian",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "刘小强",
+   "name_en": "liu xiaoqiang",
+   "title": null,
+   "department": "航天学院 电子科学与技术系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "微系统技术",
+    "MEMS",
+    "电子科学与技术"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/liuxiaoqiang",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李晓明",
+   "name_en": "li xiaoming",
+   "title": null,
+   "department": "航天学院 电子科学与技术系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "嵌入式系统设计",
+    "嵌入式系统",
+    "电子科学与技术"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/lixiaoming",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "刘雨",
+   "name_en": "Yu Liu",
+   "title": null,
+   "department": "航天学院 电子科学与技术系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "嵌入式系统开发",
+    "智能信号处理",
+    "目标检测与识别"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/liuyu2192",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "刘康",
+   "name_en": "Liu Kang",
+   "title": null,
+   "department": "航天学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "宽禁带半导体物理与器件",
+    "宽禁带半导体",
+    "电子科学与技术"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/KangLIU",
+   "email": null,
+   "notes": "国家高层次青年人才"
+  },
+  {
+   "name_cn": "刘本建",
+   "name_en": "Liu Benjian",
+   "title": "教授",
+   "department": "航天学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "半导体材料",
+    "金刚石材料及器件应用",
+    "电子科学与技术"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/LiuBenjian",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张海",
+   "name_en": "Zhang Hai",
+   "title": "教授",
+   "department": "航天学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "毫米波太赫兹成像",
+    "红外热成像",
+    "光学工程"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/hzhang",
+   "email": null,
+   "notes": "国家级青年人才"
+  },
+  {
+   "name_cn": "康冬鹏",
+   "name_en": "Kang Dongpeng",
+   "title": "研究员",
+   "department": "航天学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成光学",
+    "量子光子学",
+    "光通信"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/kangdongpeng",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "郜键",
+   "name_en": "Gao Jian",
+   "title": null,
+   "department": "航天学院",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "激光成像雷达技术",
+    "EUV光刻光源技术",
+    "电子科学与技术"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/gaussking",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "温兴月",
+   "name_en": "wen xingyue",
+   "title": "助理研究员",
+   "department": "航天学院",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "光纤传感技术",
+    "纳米传感器材料与器件",
+    "电子科学与技术"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/wenxingyue",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王琮",
+   "name_en": "Wang Cong",
+   "title": "教授",
+   "department": "电子与信息工程学院 微波工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微波毫米波集成电路",
+    "微波传感器系统",
+    "集成电路设计与工艺"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/wangcong1",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "程亚运",
+   "name_en": "Cheng Yayun",
+   "title": "研究员",
+   "department": "电子与信息工程学院 微波工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微波毫米波太赫兹信号特性",
+    "成像探测",
+    "电磁场与微波技术"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/chengyayun",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "宗华",
+   "name_en": "Zong Hua",
+   "title": "教授",
+   "department": "电子与信息工程学院 微波工程系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "毫米波太赫兹成像",
+    "时空信息智能感知与处理",
+    "电磁场与微波技术"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/zonghua",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "兰盛昌",
+   "name_en": "Lan Shengchang",
+   "title": "副研究员",
+   "department": "电子与信息工程学院 微波工程系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "毫米波太赫兹智能组件",
+    "毫米波系统应用",
+    "电磁场与微波技术"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/sclan",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王禹忠",
+   "name_en": "Wang Yuzhong",
+   "title": "副研究员",
+   "department": "电子与信息工程学院 微波工程系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "微波光子芯片",
+    "光计算",
+    "超构表面",
+    "太赫兹无线传感"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/wangyuzhong",
+   "email": null,
+   "notes": "博新计划"
+  },
+  {
+   "name_cn": "祁嘉然",
+   "name_en": "Qi Jiaran",
+   "title": "教授",
+   "department": "电子与信息工程学院 微波工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "全光/光电融合深度网络",
+    "光信息处理",
+    "电磁场与微波技术"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/qijiaran",
+   "email": null,
+   "notes": "院长助理"
+  },
+  {
+   "name_cn": "张狂",
+   "name_en": "Zhang Kuang",
+   "title": null,
+   "department": "电子与信息工程学院 微波工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微波级联超构表面",
+    "电磁超材料",
+    "电磁场与微波技术"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/zhangkuang",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李红梅",
+   "name_en": "Li Hongmei",
+   "title": "教授",
+   "department": "电子与信息工程学院 微波工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "高密度天线阵列",
+    "阵列去耦理论与智能设计",
+    "电磁场与微波技术"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/lihongmei",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王楠楠",
+   "name_en": "Wang Nannan",
+   "title": "副教授",
+   "department": "电子与信息工程学院 微波工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "天线及阵列天线技术",
+    "毫米波太赫兹成像技术",
+    "电磁场与微波技术"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/wangnannan",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "林澍",
+   "name_en": "Shu Lin",
+   "title": null,
+   "department": "电子与信息工程学院 微波工程系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "天线及阵列天线技术",
+    "阵列天线",
+    "电磁场与微波技术"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/linshu",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "杨国辉",
+   "name_en": "Yang Guohui",
+   "title": "副教授",
+   "department": "电子与信息工程学院 微波工程系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "电磁表面",
+    "电磁兼容",
+    "天线及微波电路"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/ygh",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "袁乐眙",
+   "name_en": "yuan yueyi",
+   "title": "研究员",
+   "department": "电子与信息工程学院 微波工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "电磁表面",
+    "电磁兼容",
+    "天线及微波电路",
+    "电磁场与微波技术"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/yuanleyi",
+   "email": null,
+   "notes": "中国科协青年人才托举工程"
+  },
+  {
+   "name_cn": "王禹翔",
+   "name_en": "wang yuxiang",
+   "title": "副研究员",
+   "department": "电子与信息工程学院 微波工程系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "电磁表面",
+    "电磁兼容",
+    "天线及微波电路"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/wangyuxiang",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王鹏程",
+   "name_en": "wang pengcheng",
+   "title": "副研究员",
+   "department": "电子与信息工程学院 微波工程系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "电磁场与微波技术",
+    "微波技术",
+    "电磁场理论"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/wangpengcheng",
+   "email": null,
+   "notes": "春雁英才计划"
+  },
+  {
+   "name_cn": "李伟",
+   "name_en": "Li Wei",
+   "title": "副教授",
+   "department": "电子与信息工程学院 微波工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "电磁场与微波技术",
+    "微波电路",
+    "电磁场理论"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/liwei",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张红军",
+   "name_en": "zhang hongjun",
+   "title": null,
+   "department": "电子与信息工程学院 微波工程系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "雷达成像技术",
+    "雷达信号处理",
+    "电磁场与微波技术"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/hongjunzhang",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "彭喜元",
+   "name_en": "Peng Xiyuan",
+   "title": "教授",
+   "department": "电子与信息工程学院 测控工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "自动测试技术",
+    "电子系统设计",
+    "嵌入式系统"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/pengxiyuan",
+   "email": null,
+   "notes": "自动测试及仪器技术教育部工程中心主任"
+  },
+  {
+   "name_cn": "付平",
+   "name_en": "Fu Ping",
+   "title": "教授",
+   "department": "电子与信息工程学院 测控工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "自动测试技术",
+    "电子系统设计",
+    "仪器科学与技术"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/fuping",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "乔立岩",
+   "name_en": "Qiao Liyan",
+   "title": "教授",
+   "department": "电子与信息工程学院 测控工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "嵌入式人工智能",
+    "自动测试技术",
+    "虚拟仪器"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/qiaoliyan",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "姜守达",
+   "name_en": "Jiang Shouda",
+   "title": "教授",
+   "department": "电子与信息工程学院 测控工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "自动测试技术",
+    "虚拟仪器",
+    "电子系统设计"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/jiangshouda",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "赵光权",
+   "name_en": "Zhao Guangquan",
+   "title": "教授",
+   "department": "电子与信息工程学院 测控工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "电子系统设计",
+    "人工智能算法及应用",
+    "仪器科学与技术"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/zhaoguangquan",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "魏德宝",
+   "name_en": "Wei Debao",
+   "title": "研究员",
+   "department": "电子与信息工程学院 测控工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "固态存储可靠性",
+    "自动测试技术",
+    "嵌入式系统设计"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/weidebao",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "乔家庆",
+   "name_en": "Qiao Jiaqing",
+   "title": "研究员",
+   "department": "电子与信息工程学院 测控工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "嵌入式智能系统",
+    "实时调度理论",
+    "自动测试"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/qiaojiaqing",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "付宁",
+   "name_en": "Fu Ning",
+   "title": "教授",
+   "department": "电子与信息工程学院 测控工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "智能感知与信号处理",
+    "嵌入式人工智能",
+    "稀疏信号处理与压缩感知"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/funing",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张京超",
+   "name_en": "Zhang Jingchao",
+   "title": "研究员",
+   "department": "电子与信息工程学院 测控工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "稀疏信号处理",
+    "先进总线测试技术",
+    "仪器科学与技术"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/zhangjingchao",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "刘连胜",
+   "name_en": "Liu Liansheng",
+   "title": "教授",
+   "department": "电子与信息工程学院 测控工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "嵌入式系统",
+    "自动测试技术",
+    "仪器科学与技术"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/liuliansheng",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "魏长安",
+   "name_en": "wei Chang'an",
+   "title": "教授",
+   "department": "电子与信息工程学院 测控工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "嵌入式人工智能",
+    "机器学习与图像处理",
+    "自动测试技术"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/weichangan",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "许永辉",
+   "name_en": "许永辉",
+   "title": null,
+   "department": "电子与信息工程学院 测控工程系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "嵌入式人工智能",
+    "机器学习与图像处理",
+    "自动测试技术"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/xuyonghui",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "刘冰",
+   "name_en": "Liu Bing",
+   "title": "教授",
+   "department": "电子与信息工程学院 测控工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "嵌入式人工智能",
+    "计算视觉",
+    "仪器科学与技术"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/liubing",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "孟升卫",
+   "name_en": "Meng Shengwei",
+   "title": "副教授",
+   "department": "电子与信息工程学院 测控工程系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "信号检测与处理",
+    "自动测试技术",
+    "嵌入式系统设计"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/mengsw",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "刘兆庆",
+   "name_en": "liu zhaoqing",
+   "title": "副教授",
+   "department": "电子与信息工程学院 测控工程系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "自动测试技术",
+    "嵌入式系统设计",
+    "工程逻辑设计"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/liuzhaoqing",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "宋宇晨",
+   "name_en": "Song Yuchen",
+   "title": "副教授",
+   "department": "电子与信息工程学院 测控工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "边缘AI",
+    "嵌入式人工智能",
+    "复杂系统状态监测",
+    "智能感知"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/songyuchen",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "尹洪涛",
+   "name_en": "Hongtao Yin",
+   "title": "副教授",
+   "department": "电子与信息工程学院 测控工程系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "嵌入式系统",
+    "人工智能",
+    "仪器科学与技术"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/yinhongtao",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张佳岩",
+   "name_en": "张佳岩",
+   "title": null,
+   "department": "电子与信息工程学院 测控工程系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "嵌入式人工智能",
+    "机器学习与图像处理",
+    "自动测试技术",
+    "物联网"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/zhangjiayan",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "白旭",
+   "name_en": "Bai Xu",
+   "title": "副教授",
+   "department": "电子与信息工程学院 信息工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "嵌入式人工智能",
+    "传感网与物联网",
+    "探地雷达"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/baixu",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "姚博文",
+   "name_en": "yao bowen",
+   "title": "研究员",
+   "department": "电子与信息工程学院",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "软硬件协同智能计算",
+    "智能计算系统",
+    "信息与通信工程"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/yaobowen",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "刘东洋",
+   "name_en": "liu dongyang",
+   "title": null,
+   "department": "电子与信息工程学院 信息工程系",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "边缘AI",
+    "嵌入式人工智能",
+    "遥感图像智能处理"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/liudongyang",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "郑文斌",
+   "name_en": "Zheng Wenbin",
+   "title": null,
+   "department": "电子与信息工程学院",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "嵌入式人工智能",
+    "数据驱动智能诊断",
+    "动力电池数据分析"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/zhengwenbin",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "毛兴鹏",
+   "name_en": "Xingpeng Mao",
+   "title": null,
+   "department": "电子与信息工程学院 电子工程系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "信号检测与处理",
+    "新体制雷达探测",
+    "认知雷达与智能信号处理"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/XingpengMao",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "位寅生",
+   "name_en": "Wei Yinsheng",
+   "title": "教授",
+   "department": "电子与信息工程学院 电子工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "新体制雷达探测技术",
+    "雷达信号处理",
+    "信息与通信工程"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/weiyinsheng",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "赵彬",
+   "name_en": "Zhao Bin",
+   "title": "教授",
+   "department": "电子与信息工程学院 电子工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "雷达成像技术",
+    "新体制雷达信号处理",
+    "医工融合"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/zhaobinhit1988",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张云",
+   "name_en": "Zhang Yun",
+   "title": "教授",
+   "department": "电子与信息工程学院 电子工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "认知探测与智能信号处理",
+    "雷达系统",
+    "信息与通信工程"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/zhangyun",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李杨",
+   "name_en": "Li Yang",
+   "title": "教授",
+   "department": "电子与信息工程学院 电子工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "认知探测系统",
+    "智能信号处理",
+    "信息与通信工程"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/liyang",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "周共健",
+   "name_en": "Zhou Gongjian",
+   "title": "教授",
+   "department": "电子与信息工程学院 电子工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "新体制雷达",
+    "雷达信息处理",
+    "信息与通信工程"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/zhougj",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "吴小川",
+   "name_en": "Wu Xiaochuan",
+   "title": "研究员",
+   "department": "电子与信息工程学院 电子工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "新体制雷达智能信号处理",
+    "目标检测与识别",
+    "雷达成像"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/wuxiaochuan",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李鸿志",
+   "name_en": "Li Hongzhi",
+   "title": "副研究员",
+   "department": "电子与信息工程学院 电子工程系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "雷达成像技术",
+    "新体制雷达信号处理",
+    "信息与通信工程"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/lihongzhi",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "谢俊好",
+   "name_en": "Xie Junhao",
+   "title": "教授",
+   "department": "电子与信息工程学院 电子工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "雷达目标检测新体制",
+    "海洋遥感",
+    "智能统计信号处理"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/xiejunhao",
+   "email": null,
+   "notes": "全国百篇优秀博士论文"
+  },
+  {
+   "name_cn": "姜义成",
+   "name_en": "Jiang Yicheng",
+   "title": "教授",
+   "department": "电子与信息工程学院 电子工程系",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "雷达信号处理与成像",
+    "目标环境感知",
+    "信息与通信工程"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/jiangyicheng",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "董英凝",
+   "name_en": "Dong Yingning",
+   "title": null,
+   "department": "电子与信息工程学院 电子工程系",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "新体制探测与海洋智能感知",
+    "信号与信息处理",
+    "信息与通信工程"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/dongyn",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "曲龙跃",
+   "name_en": "qu longyue",
+   "title": null,
+   "department": "信息科学与技术学院（深圳）",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "射频电路",
+    "微波电路",
+    "天线"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/qulongyue",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "闫旭",
+   "name_en": "Xu Yan",
+   "title": "副教授",
+   "department": "信息科学与技术学院（深圳）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "射频微波集成电路设计",
+    "集成电路设计",
+    "电子科学与技术"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/yanxu",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "徐小川",
+   "name_en": "Xu Xiaochuan",
+   "title": null,
+   "department": "信息科学与技术学院（深圳）",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "光电融合集成芯片",
+    "光电子集成",
+    "电子科学与技术"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/xuxiaochuan",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "段嘉楠",
+   "name_en": "Jianan Duan",
+   "title": null,
+   "department": "信息科学与技术学院（深圳）",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "半导体激光器",
+    "光电子器件",
+    "电子科学与技术"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/jiananduan",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "秦敬凯",
+   "name_en": "Qin Jing-Kai ",
+   "title": "教授",
+   "department": "集成电路学院（深圳）",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "微纳信息器件与芯片集成",
+    "半导体材料与器件集成",
+    "集成电路科学与工程"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/qinjingkai",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "刘郝亮",
+   "name_en": "Liu Haoliang",
+   "title": "教授",
+   "department": "集成电路学院（深圳）",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "自旋电子",
+    "光自旋芯片",
+    "自旋器件"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/liuhaoliang",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "周宇",
+   "name_en": "ZHOU YU",
+   "title": "教授",
+   "department": "集成电路学院（深圳）",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "光量子芯片",
+    "量子光学",
+    "量子计算"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/recgardening",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王嘉威",
+   "name_en": "wang jiawei",
+   "title": "教授",
+   "department": "集成电路学院（深圳）",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "微纳光子器件",
+    "集成芯片",
+    "电子科学与技术"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/wangjiawei",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "巫凯意",
+   "name_en": "wu kaiyi",
+   "title": null,
+   "department": "集成电路学院（深圳）",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "集成光子芯片与系统",
+    "光电材料与器件",
+    "集成电路科学与工程"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/wukaiyi",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王怡",
+   "name_en": "WANG YI",
+   "title": null,
+   "department": "集成电路学院（深圳）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "光子集成",
+    "集成光电子",
+    "集成电路科学与工程"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/ywang",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "徐科",
+   "name_en": "ke xu",
+   "title": "教授",
+   "department": "集成电路学院（深圳）",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "微纳光学",
+    "集成光学",
+    "集成电路科学与工程"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/xuke",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "肖君军",
+   "name_en": "Xiao Junjun",
+   "title": "教授",
+   "department": "集成电路学院（深圳）",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "微纳光信息技术",
+    "光学工程",
+    "电子科学与技术"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/xiaojunjun",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "陈怡沐",
+   "name_en": "Chen Yimu",
+   "title": "教授",
+   "department": "集成电路学院（深圳）",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "光电器件",
+    "集成系统",
+    "物理学"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/chenyimu",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "胡竞天",
+   "name_en": "Hu Jingtian",
+   "title": "教授",
+   "department": "集成电路学院（深圳）",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "集成电路",
+    "光学工程",
+    "物理学科交叉"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/hujingtian",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "戴明志",
+   "name_en": "dai mingzhi",
+   "title": "教授",
+   "department": "集成电路学院（深圳）",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "算存一体器件",
+    "缺陷表征",
+    "电子科学与技术"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/daimingzhihit",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "崔爱娇",
+   "name_en": "Cui Aijiao",
+   "title": "教授",
+   "department": "集成电路学院（深圳）",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "集成电路硬件安全",
+    "硬件安全",
+    "集成电路科学与工程"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/cuiaijiao",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王永杰",
+   "name_en": "WANG YONGJIE",
+   "title": "教授",
+   "department": "集成电路学院（深圳）",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "半导体材料",
+    "新能源器件",
+    "集成电路科学与工程"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/wangyongjie",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "计红军",
+   "name_en": "Ji Hongjun",
+   "title": "教授",
+   "department": "集成电路学院（深圳）",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "电子封装技术",
+    "微电子封装",
+    "集成电路科学与工程"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/jihongjun",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "钟颖",
+   "name_en": "Zhong Ying (Sarah)",
+   "title": "教授",
+   "department": "集成电路学院（深圳）",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "微纳电子封装技术",
+    "电子封装",
+    "柔性电子"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/zhongying",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "祝温泊",
+   "name_en": "zhu wenbo",
+   "title": "副教授",
+   "department": "集成电路学院（深圳）",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "微纳连接",
+    "电子封装",
+    "集成电路科学与工程"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/zhuwenbo",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "阮琦锋",
+   "name_en": "Ruan Qifeng",
+   "title": "副教授",
+   "department": "集成电路学院（深圳）",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "微纳光学",
+    "先进制造",
+    "集成电路科学与工程"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/ruanqifeng",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王新胜",
+   "name_en": "Wang Xinsheng",
+   "title": "教授",
+   "department": "信息科学与工程学院（威海）",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路安全可靠性设计",
+    "海洋物联网传感器芯片设计",
+    "数字和模拟集成电路设计"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/wangxinsheng",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "罗敏",
+   "name_en": "LUO min",
+   "title": null,
+   "department": "信息科学与工程学院（威海）",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "射频集成电路设计",
+    "数模混合信号集成电路设计",
+    "电子科学与技术"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/luomin",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "韩良",
+   "name_en": "han liang",
+   "title": "副教授",
+   "department": "信息科学与工程学院（威海）",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "模拟集成电路设计",
+    "模拟集成电路",
+    "电子科学与技术"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/hanliang",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "刘晓宁",
+   "name_en": "liu xiaoning",
+   "title": "讲师",
+   "department": "信息科学与工程学院（威海）",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "芯片设计与嵌入式系统",
+    "芯片设计",
+    "电子科学与技术"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/liuxiaoning",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "董剑",
+   "name_en": "Dong Jian",
+   "title": "教授",
+   "department": "计算学部 容错与移动计算研究中心",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "容错计算",
+    "硬件安全",
+    "区块链",
+    "计算机体系结构"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/dongjian",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "吴晋",
+   "name_en": "Jin Wu",
+   "title": "副研究员",
+   "department": "计算学部 计算机硬件实验中心",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "计算机系统结构",
+    "存储系统",
+    "计算机科学与技术"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/wujin",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "史先俊",
+   "name_en": "Shi Xianjun",
+   "title": null,
+   "department": "计算学部 计算机科学技术研究所",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "计算机体系结构",
+    "处理器体系结构",
+    "计算机科学与技术"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/shixianjun",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李诗逸",
+   "name_en": "li shiyi",
+   "title": null,
+   "department": "计算机科学与技术学院（深圳）",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "计算机系统结构",
+    "AI系统",
+    "计算机科学与技术"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/lishiyi",
+   "email": null,
+   "notes": "国家级青年人才"
+  },
+  {
+   "name_cn": "张策",
+   "name_en": "ZHANG CE",
+   "title": "教授",
+   "department": "计算机科学与技术学院（威海）",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "计算机体系结构",
+    "可靠性与安全性",
+    "计算机科学与技术"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/ZHANGCE",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "田艳红",
+   "name_en": "Tian Yanhong",
+   "title": "教授",
+   "department": "材料科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "电子封装与柔性电子",
+    "集成电路封装与可靠性",
+    "柔性可穿戴传感器件"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/tinatian",
+   "email": null,
+   "notes": "2026年集成电路科学与工程学科博导"
+  },
+  {
+   "name_cn": "王晨曦",
+   "name_en": "Wang Chenxi",
+   "title": "教授",
+   "department": "材料科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "电子封装",
+    "芯片键合",
+    "生物材料连接"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/wangchenxi",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李兴冀",
+   "name_en": "Li Xingji",
+   "title": "教授",
+   "department": "材料科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "极端环境集成电路",
+    "电子器件基础理论与仿真",
+    "极端环境效应"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/lxj0218",
+   "email": null,
+   "notes": "2026年集成电路科学与工程学科博导"
+  },
+  {
+   "name_cn": "崔秀海",
+   "name_en": "Cui Xiuhai",
+   "title": "研究员",
+   "department": "材料科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "认知物理融合芯片技术",
+    "智能计算技术",
+    "集成电路+AI"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/cuixiuhai",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张墅野",
+   "name_en": "Zhang Shuye",
+   "title": "副教授",
+   "department": "材料科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "电子封装",
+    "电子器件及系统可靠性评价",
+    "材料科学与工程"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/zhangshuye",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "刘宝磊",
+   "name_en": "liu baolei",
+   "title": null,
+   "department": "材料科学与工程学院",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "微纳连接",
+    "半导体封装技术",
+    "材料科学与工程"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/liubaolei",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "王尚",
+   "name_en": "Wang Shang",
+   "title": null,
+   "department": "材料科学与工程学院",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "先进封装",
+    "柔性器件",
+    "印刷电子"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/Wangshang",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "邢大伟",
+   "name_en": "xing dawei",
+   "title": null,
+   "department": "材料科学与工程学院",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "梯度硅铝合金电子封装材料",
+    "电子封装材料",
+    "材料科学与工程"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/xingdawei",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "赵勃",
+   "name_en": "Zhao Bo",
+   "title": "教授",
+   "department": "仪器科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "超声无损检测",
+    "超声应力场测量",
+    "磁浮运动台",
+    "光刻机系统隔微振"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/hitzhaobo",
+   "email": null,
+   "notes": "国家级青年人才，2026年集成电路科学与工程学科博导"
+  },
+  {
+   "name_cn": "崔俊宁",
+   "name_en": "Cui Junning",
+   "title": "教授",
+   "department": "仪器科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "精密仪器",
+    "集成电路装备测量",
+    "仪器科学与技术"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/cuijunning",
+   "email": null,
+   "notes": "2026年集成电路科学与工程学科博导"
+  },
+  {
+   "name_cn": "胡鹏程",
+   "name_en": "Hu Pengcheng",
+   "title": "教授",
+   "department": "仪器科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路装备动态超精密测量",
+    "多轴超精密同步测量",
+    "光电传感"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/hupc",
+   "email": null,
+   "notes": "2026年集成电路科学与工程学科博导"
+  },
+  {
+   "name_cn": "孙晔",
+   "name_en": "Sun Ye",
+   "title": "教授",
+   "department": "仪器科学与工程学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "生物芯片",
+    "纳米传感器",
+    "仪器科学与技术"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/sunye",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "贲洪奇",
+   "name_en": "Bi Hongqi",
+   "title": "教授",
+   "department": "电气工程及自动化学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "电力电子技术及应用",
+    "功率变换",
+    "电气工程"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/fenhongqi",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李彬彬",
+   "name_en": "Li Binbin",
+   "title": "教授",
+   "department": "电气工程及自动化学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "模块化电力电子技术",
+    "电力电子变换器",
+    "电气工程"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/libinbin",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "管乐诗",
+   "name_en": "yueshi guan",
+   "title": "教授",
+   "department": "电气工程及自动化学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "电力电子与电力传动",
+    "高频功率变换",
+    "电气工程"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/guanyueshi",
+   "email": null,
+   "notes": "国家级青年人才"
+  },
+  {
+   "name_cn": "张国强",
+   "name_en": "Zhang Guoqiang",
+   "title": "教授",
+   "department": "电气工程及自动化学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "电力电子与电力传动",
+    "功率变换器",
+    "电气工程"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/zhgq",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张相军",
+   "name_en": "Zhang Xiangjun",
+   "title": "副教授",
+   "department": "电气工程及自动化学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "电力电子与电力传动",
+    "照明电子技术",
+    "航天特种电源"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/zhangxiangjun",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "张岩",
+   "name_en": "Zhang Yan",
+   "title": null,
+   "department": "电气工程及自动化学院",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "FPGA设计",
+    "人工智能",
+    "电气工程"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/zyhit",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "李立",
+   "name_en": "Li Li",
+   "title": "教授",
+   "department": "物理学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "太赫兹器件物理",
+    "光场调控",
+    "物理学"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/lilipys",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "刘伟龙",
+   "name_en": "Liu Weilong",
+   "title": "副教授",
+   "department": "物理学院",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "半导体材料新型检测技术",
+    "激光光谱学",
+    "超快激光技术"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/liuwl",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "曹永印",
+   "name_en": "Cao Yongyin",
+   "title": "副教授",
+   "department": "物理学院",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "微纳光电器件",
+    "光操控",
+    "物理学"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/caoyongyin",
+   "email": null,
+   "notes": null
+  },
+  {
+   "name_cn": "孟祥达",
+   "name_en": "meng xiangda",
+   "title": null,
+   "department": "物理学院",
+   "is_phd_advisor": null,
+   "research_keywords": [
+    "铁电/压电材料",
+    "光电功能材料与器件",
+    "THz功能材料与器件"
+   ],
+   "homepage": "https://homepage.hit.edu.cn/mengxiangda",
+   "email": null,
+   "notes": null
+  }
+ ]
 }
