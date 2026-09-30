@@ -16,14 +16,16 @@ const ranked = JSON.parse(fs.readFileSync(path.join(PROC, 'mentor_ranked.json'),
 const targets = ranked
   .filter((d) => d.homepage && /^https?:\/\//i.test(d.homepage))
   .map((d) => ({
-    name_cn: d.name_cn, school: d.school, title: d.title, department: d.department,
+    name_cn: d.name_cn, school: d.school, school_key: d.school_key,
+    title: d.title, department: d.department,
     homepage: d.homepage, primary_direction: d.primary_direction,
   }));
 console.log(`全库 ${ranked.length} 人 → 抓取目标 ${targets.length} 人`);
 
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36';
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-const txtPath = (school, name) => path.join(RAWDIR, `${school.slice(0, 4)}_${name}.txt`);
+// 文件名用 school_key（中文学校名前 4 字会撞车：清华 vs 清华深研院、6 个中科院所）
+const txtPath = (key, name) => path.join(RAWDIR, `${key}_${name}.txt`);
 
 function toText(html) {
   return html
@@ -65,9 +67,9 @@ async function worker() {
     const i = idx++;
     if (i >= targets.length) return;
     const d = targets[i];
-    const f = txtPath(d.school, d.name_cn);
+    const f = txtPath(d.school_key, d.name_cn);
     let rec = {
-      name: d.name_cn, school: d.school, title: d.title, department: d.department,
+      name: d.name_cn, school: d.school, school_key: d.school_key, title: d.title, department: d.department,
       homepage: d.homepage, db_email: d.email, primary_direction: d.primary_direction,
       ai_score: d.ai_score, recruit_score: d.recruit_score, fit: d.fit,
       status: 'ok', lab_names: [], recruit_hits: [], page_email: null, page_title: null, text_len: 0,

@@ -11,7 +11,7 @@ const PROC = path.join(REPO, 'data', 'processed');
 const OUT = path.join(REPO, 'reports', '导师推荐.html');
 const rows = JSON.parse(fs.readFileSync(path.join(PROC, 'curated.json'), 'utf8'));
 
-const SHORT = { 清华大学深圳国际研究生院: '清华深研院', 清华大学: '清华', 复旦大学: '复旦', 上海交通大学: '上交', 浙江大学: '浙大', 南京大学: '南大', 中国科学技术大学: '中科大', 北京大学: '北大', 东南大学: '东南', 西安电子科技大学: '西电', 电子科技大学: '成电' };
+const SHORT = { 清华大学深圳国际研究生院: '清华深研院', 清华大学: '清华', 复旦大学: '复旦', 上海交通大学: '上交', 浙江大学: '浙大', 南京大学: '南大', 中国科学技术大学: '中科大', 北京大学: '北大', 东南大学: '东南', 西安电子科技大学: '西电', 电子科技大学: '成电', 哈尔滨工业大学: '哈工大', 天津大学: '天大', 华中科技大学: '华科', 北京航空航天大学: '北航', 西安交通大学: '西交', 中国科学院微电子研究所: '中科院微电子所', 中国科学院半导体研究所: '中科院半导体所', 中国科学院上海微系统与信息技术研究所: '中科院上海微系统所', 中国科学院计算技术研究所: '中科院计算所', 中国科学院自动化研究所: '中科院自动化所', 中国科学院上海高等研究院: '中科院上海高研院', 中国科学院: '中科院' };
 
 const data = rows.map((d) => ({
   n: d.name, s: SHORT[d.school] || d.school, sc: d.school, t: d.title || '', dp: d.department || '',
@@ -28,6 +28,7 @@ const data = rows.map((d) => ({
   v: (d.top_venues || []).map((x) => `${x[0]}×${x[1]}`).join(' / ').slice(0, 90),
 }));
 
+const schoolList = [...new Set(rows.map((d) => SHORT[d.school] || d.school))].join(' · ');
 const allGroups = [...new Set(rows.flatMap((d) => d.group_names))].sort();
 
 const html = `<!DOCTYPE html>

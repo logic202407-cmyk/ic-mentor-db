@@ -54,6 +54,13 @@ SCHOOL_META = {
     "hust":  {"name": "华中科技大学", "query": "Huazhong University of Science and Technology", "include": r"huazhong university of science and technology", "exclude": None},
     "xjtu":  {"name": "西安交通大学", "query": "Xi'an Jiaotong University", "include": r"xi[\s'’′´‘`]*an\s*jiao\s*tong|xjtu", "exclude": r"liverpool"},
     "buaa":  {"name": "北京航空航天大学", "query": "Beihang University", "include": r"beihang|beijing university of aeronautics", "exclude": None},
+    # ── 中国科学院按研究所拆分（各所独立配置机构匹配规则，避免所间串号）──
+    "cas_ime":   {"name": "中国科学院微电子研究所", "query": "Institute of Microelectronics, Chinese Academy of Sciences", "include": r"institute of microelectronics", "exclude": r"university of chinese academy"},
+    "cas_semi":  {"name": "中国科学院半导体研究所", "query": "Institute of Semiconductors, Chinese Academy of Sciences", "include": r"institute of semiconductors?\b", "exclude": r"university of chinese academy"},
+    "cas_simit": {"name": "中国科学院上海微系统与信息技术研究所", "query": "Shanghai Institute of Microsystem and Information Technology", "include": r"shanghai institute of microsystem|simit", "exclude": r"university of chinese academy"},
+    "cas_ict":   {"name": "中国科学院计算技术研究所", "query": "Institute of Computing Technology, Chinese Academy of Sciences", "include": r"institute of computing technology", "exclude": r"university of chinese academy"},
+    "cas_ia":    {"name": "中国科学院自动化研究所", "query": "Institute of Automation, Chinese Academy of Sciences", "include": r"institute of automation", "exclude": r"fraunhofer|german|university of chinese academy"},
+    "cas_sari":  {"name": "中国科学院上海高等研究院", "query": "Shanghai Advanced Research Institute, Chinese Academy of Sciences", "include": r"shanghai advanced research institute", "exclude": r"university of chinese academy"},
 }
 
 MAX_COMBOS = 40

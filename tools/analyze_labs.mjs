@@ -12,6 +12,11 @@ const RAWDIR = path.join(REPO, 'data', 'raw', 'lab_pages');
 const pages = JSON.parse(fs.readFileSync(path.join(PROC, 'lab_pages.json'), 'utf8'));
 const ranked = JSON.parse(fs.readFileSync(path.join(PROC, 'mentor_ranked.json'), 'utf8'));
 const rankMap = new Map(ranked.map((r) => [`${r.school}|${r.name_cn}`, r]));
+// 中文校名 -> school_key（lab_pages 文件按 school_key 命名）
+const schoolKey = new Map();
+for (const [k, m] of Object.entries(JSON.parse(fs.readFileSync(path.join(PROC, 'name_variants.json'), 'utf8')))) {
+  schoolKey.set(m.school, m.school_key || k);
+}
 
 // 精确招生句式（避免导航栏 "招生信息" 菜单项）
 const RECRUIT_STRONG = [
@@ -61,8 +66,14 @@ for (const p of pages) {
   const key = `${p.school}|${p.name}`;
   const r = rankMap.get(key);
   let text = '';
-  const f = path.join(RAWDIR, `${p.school.slice(0, 4)}_${p.name}.txt`);
+  // 文件名用 school_key（旧数据兼容：退回「学校前 4 字」命名）
+  const sk = p.school_key || schoolKey.get(p.school) || (p.school || '').slice(0, 4);
+  const f = path.join(RAWDIR, `${sk}_${p.name}.txt`);
   if (fs.existsSync(f)) text = fs.readFileSync(f, 'utf8');
+  else {
+    const legacy = path.join(RAWDIR, `${(p.school || '').slice(0, 4)}_${p.name}.txt`);
+    if (fs.existsSync(legacy)) text = fs.readFileSync(legacy, 'utf8');
+  }
 
   const snips = text ? cleanSnips(text) : [];
   // 近两年学生一作（活跃度/组内是否真有学生在干活）：只要求"导师不是一作"

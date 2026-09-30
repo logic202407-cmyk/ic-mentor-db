@@ -16,7 +16,7 @@ const DIRNAME = {
   eda: 'EDA/设计自动化', device: '器件/工艺/存储', photonics: '光电/硅光/光计算',
   mems: 'MEMS/传感器/生医电子', power: '电力电子/功率集成', quantum: '量子芯片/低温电子', other: '其他/交叉',
 };
-const SHORT = { 清华大学深圳国际研究生院: '清华深研院', 清华大学: '清华', 复旦大学: '复旦', 上海交通大学: '上交', 浙江大学: '浙大', 南京大学: '南大', 中国科学技术大学: '中科大', 北京大学: '北大', 东南大学: '东南', 西安电子科技大学: '西电', 电子科技大学: '成电' };
+const SHORT = { 清华大学深圳国际研究生院: '清华深研院', 清华大学: '清华', 复旦大学: '复旦', 上海交通大学: '上交', 浙江大学: '浙大', 南京大学: '南大', 中国科学技术大学: '中科大', 北京大学: '北大', 东南大学: '东南', 西安电子科技大学: '西电', 电子科技大学: '成电', 哈尔滨工业大学: '哈工大', 天津大学: '天大', 华中科技大学: '华科', 北京航空航天大学: '北航', 西安交通大学: '西交', 中国科学院微电子研究所: '中科院微电子所', 中国科学院半导体研究所: '中科院半导体所', 中国科学院上海微系统与信息技术研究所: '中科院上海微系统所', 中国科学院计算技术研究所: '中科院计算所', 中国科学院自动化研究所: '中科院自动化所', 中国科学院上海高等研究院: '中科院上海高研院', 中国科学院: '中科院' };
 const tierOf = (d) => (d.n_ic_papers < 3 && d.S === 0) ? 'T4' : d.composite >= 55 ? 'T0' : d.composite >= 42 ? 'T1' : d.composite >= 28 ? 'T2' : d.composite >= 15 ? 'T3' : 'T4';
 
 const data = rows.map((r) => ({
@@ -33,9 +33,10 @@ const data = rows.map((r) => ({
   dim: r.dim,
 }));
 
+const schoolList = [...new Set(rows.map((r) => SHORT[r.school] || r.school))].join(' · ');
 const html = `<!DOCTYPE html>
 <html lang="zh-CN"><head><meta charset="utf-8"/>
-<title>集成电路/AI芯片 导师库（11校 · 详细排名）</title>
+<title>集成电路 / AI 芯片 导师库（全库检索）</title>
 <style>
  body{font-family:"Microsoft YaHei",-apple-system,Segoe UI,sans-serif;margin:0;background:#f4f6f9;color:#1c2330}
  header{background:linear-gradient(135deg,#12294f,#2f5fa8);color:#fff;padding:16px 22px}
@@ -61,7 +62,7 @@ const html = `<!DOCTYPE html>
 </style></head><body>
 <header>
   <h1>集成电路 / 微电子 / 电子信息 / AI 芯片 —— 导师库（11 校 · 详细排名）</h1>
-  <p>清华 · 清华深研院 · 北大 · 复旦 · 上交 · 浙大 · 南大 · 中科大 · 东南 · 西电 · 成电 ｜ ${rows.length} 位导师 ｜ 数据源：各校官方师资页 + Crossref（2008–2026）+ 撤稿/更正核查 ｜ 2026-09-24<br/><span style="display:inline-block;margin-top:8px;background:rgba(255,255,255,.16);padding:6px 10px;border-radius:7px;font-size:12px;line-height:1.6">⚠️ 本页为<b>公开文献计量证据的分层</b>，<b>不构成学术评价、人事评价或报考建议</b>。T3/T4 通常源于姓名重名、英文署名不一致或中文文献未覆盖等数据原因，<b>不代表导师水平或指导质量</b>。使用前请阅读仓库 <code>DISCLAIMER.md</code> 与 <code>docs/使用指南.md</code>。</span></p>
+  <p>${schoolList} ｜ ${rows.length} 位导师 ｜ 数据源：各校官方师资页 + Crossref（2008–2026）+ 撤稿/更正核查 ｜ 2026-09-24<br/><span style="display:inline-block;margin-top:8px;background:rgba(255,255,255,.16);padding:6px 10px;border-radius:7px;font-size:12px;line-height:1.6">⚠️ 本页为<b>公开文献计量证据的分层</b>，<b>不构成学术评价、人事评价或报考建议</b>。T3/T4 通常源于姓名重名、英文署名不一致或中文文献未覆盖等数据原因，<b>不代表导师水平或指导质量</b>。使用前请阅读仓库 <code>DISCLAIMER.md</code> 与 <code>docs/使用指南.md</code>。</span></p>
 </header>
 <div class="wrap">
   <div class="bar">
