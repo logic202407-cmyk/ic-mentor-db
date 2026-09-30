@@ -6,7 +6,20 @@ const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const PROC = path.join(REPO, 'data', 'processed');
 const RAW = path.join(REPO, 'data', 'raw');
 
-const variants = JSON.parse(fs.readFileSync(path.join(PROC, 'name_variants.json'), 'utf8'));
+// 本脚本依赖两个**未入库的中间产物**（可由 tools/ 重跑生成）：
+//   data/processed/name_variants.json   ← python tools/prepare_names.py
+//   data/processed/enriched_<key>.json  ← node tools/enrich_crossref.mjs
+// 全新克隆的仓库里没有这两类文件，此时给出提示而不是抛栈。
+const NV = path.join(PROC, 'name_variants.json');
+if (!fs.existsSync(NV)) {
+  console.log('⚠ 未找到 data/processed/name_variants.json —— 本脚本需要完整的中间产物。');
+  console.log('  请先按 docs/维护指南.md 的「全量重建流程」跑完第 1–3 步：');
+  console.log('    node tools/clean_rosters.mjs && python tools/prepare_names.py');
+  console.log('    node tools/enrich_crossref.mjs && node tools/harvest_pool_match.mjs && node tools/merge_pool.mjs');
+  console.log('  若只想核验已入库数据的文档一致性，请改用 node tools/check_doc_numbers.mjs');
+  process.exit(0);
+}
+const variants = JSON.parse(fs.readFileSync(NV, 'utf8'));
 const incCache = new Map();
 const re = (k) => {
   if (!incCache.has(k)) {

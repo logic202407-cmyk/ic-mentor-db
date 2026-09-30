@@ -8,7 +8,6 @@ const PROC = path.join(REPO, 'data', 'processed');
 const ranked = JSON.parse(fs.readFileSync(path.join(PROC, 'mentor_ranked.json'), 'utf8'));
 const curated = JSON.parse(fs.readFileSync(path.join(PROC, 'curated.json'), 'utf8'));
 const labs = JSON.parse(fs.readFileSync(path.join(PROC, 'lab_pages.json'), 'utf8'));
-const variants = JSON.parse(fs.readFileSync(path.join(PROC, 'name_variants.json'), 'utf8'));
 
 const FACT = {
   全库人数: ranked.length,

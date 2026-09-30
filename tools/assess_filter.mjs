@@ -5,9 +5,13 @@ import { fileURLToPath } from 'node:url';
 const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const PROC = path.join(REPO, 'data', 'processed');
 const ranked = JSON.parse(fs.readFileSync(path.join(PROC, 'mentor_ranked.json'), 'utf8'));
-const variants = JSON.parse(fs.readFileSync(path.join(PROC, 'name_variants.json'), 'utf8'));
+// name_variants.json 是未入库的中间产物（python tools/prepare_names.py 生成）。
+// 全新克隆里没有它时，退化为只按 school 名统计，不中断。
+const NV = path.join(PROC, 'name_variants.json');
+const variants = fs.existsSync(NV) ? JSON.parse(fs.readFileSync(NV, 'utf8')) : null;
+if (!variants) console.log('提示：未找到 name_variants.json，本次仅按 school 字段统计（跑 python tools/prepare_names.py 可生成）');
 const schoolOf = {};
-for (const [k, m] of Object.entries(variants)) schoolOf[m.school] = k;
+if (variants) for (const [k, m] of Object.entries(variants)) schoolOf[m.school] = k;
 
 const zero = ranked.filter((d) => (d.n_ic_papers || 0) === 0);
 let trulyZero = 0, filteredOut = 0;

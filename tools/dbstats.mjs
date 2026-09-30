@@ -6,7 +6,18 @@ import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
-const db = JSON.parse(fs.readFileSync(path.join(REPO, 'data', 'processed', 'mentor_db.json'), 'utf8'));
+// mentor_db.json 是未入库的中间产物（跑完 score.mjs 后生成）。
+// 全新克隆里没有它时，改用已入库的 mentor_ranked.json，保持脚本可用。
+const DB_PATH = path.join(REPO, 'data', 'processed', 'mentor_db.json');
+const FALLBACK = path.join(REPO, 'data', 'processed', 'mentor_ranked.json');
+if (!fs.existsSync(DB_PATH) && !fs.existsSync(FALLBACK)) {
+  console.log('⚠ 未找到 data/processed/mentor_db.json 或 mentor_ranked.json，无法体检。');
+  console.log('  请先按 docs/维护指南.md 跑完数据生产流程，或从仓库获取已入库的 mentor_ranked.json。');
+  process.exit(0);
+}
+const useFallback = !fs.existsSync(DB_PATH);
+if (useFallback) console.log('提示：未找到 mentor_db.json，改用已入库的 mentor_ranked.json');
+const db = JSON.parse(fs.readFileSync(useFallback ? FALLBACK : DB_PATH, 'utf8'));
 const buckets = { 0: 0, '1-2': 0, '3-9': 0, '10-29': 0, '30+': 0 };
 for (const r of db) {
   const n = r.n_ic_papers;
