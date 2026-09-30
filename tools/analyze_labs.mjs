@@ -41,8 +41,11 @@ function looksLikeNav(s) {
   return n >= 2;
 }
 
-function cleanSnips(text) {
+function cleanSnips(text, name) {
   const out = [];
+  // 姓名在正文中的所有位置，用于判断招生语句是否与该人相关
+  const namePos = [];
+  if (name) { let i = text.indexOf(name); while (i >= 0) { namePos.push(i); i = text.indexOf(name, i + 1); } }
   for (const re of RECRUIT_STRONG) {
     for (const m of text.matchAll(re)) {
       const s = Math.max(0, m.index - 60), e = Math.min(text.length, m.index + 120);
@@ -52,7 +55,9 @@ function cleanSnips(text) {
       if (looksLikeNav(snip)) continue;
       if ((snip.match(/[|·]/g) || []).length >= 3) continue;
       if (snip.replace(/[^\u4e00-\u9fa5A-Za-z]/g, '').length < 14) continue;
-      out.push({ kw: m[0].trim(), snippet: snip });
+      // 姓名是否落在该语句附近（±200 字）
+      const near = namePos.some((p) => Math.abs(p - m.index) <= 200);
+      out.push({ kw: m[0].trim(), snippet: snip, near });
     }
   }
   // 去重
@@ -75,7 +80,7 @@ for (const p of pages) {
     if (fs.existsSync(legacy)) text = fs.readFileSync(legacy, 'utf8');
   }
 
-  const snips = text ? cleanSnips(text) : [];
+  const snips = text ? cleanSnips(text, p.name) : [];
   // 近两年学生一作（活跃度/组内是否真有学生在干活）：只要求"导师不是一作"
   const recentStu = new Set();
   let lastYear = 0;
@@ -100,8 +105,7 @@ for (const p of pages) {
     primary_direction: p.primary_direction, ai_score: p.ai_score, recruit_score: p.recruit_score, fit: p.fit,
     lab_names: labs,
     recruit_signals: snips,
-    recruit_signal_count: snips.length,
-    recent_student_first_authors: recentStu.size,
+    recruit_signal_count: snips.length,    recent_student_first_authors: recentStu.size,
     last_paper_year: lastYear,
     page_ok: p.status === 'ok',
     page_len: p.text_len || 0,
@@ -119,6 +123,25 @@ for (const p of pages) {
       .map((x) => `${x.year} ${x.title}`) : [],
   });
 }
+
+// ── 站点模板过滤：同一句话若在**同一学校 ≥4 人**的页面上出现，即为该站点的
+//    新闻栏/导航模板（例：中科院微电子所官网的「夏令营报名通知」「拟录取名单公示」
+//    曾让该所 78/78 人全部被误判为"在招"），而非本人招生表述，一律剔除。
+const prefixCount = new Map();
+for (const d of out) {
+  for (const s of d.recruit_signals) {
+    const k = `${d.school}||${s.snippet.slice(0, 36)}`;
+    prefixCount.set(k, (prefixCount.get(k) || 0) + 1);
+  }
+}
+let droppedTemplate = 0;
+for (const d of out) {
+  const kept = d.recruit_signals.filter((s) => (prefixCount.get(`${d.school}||${s.snippet.slice(0, 36)}`) || 0) < 4);
+  droppedTemplate += d.recruit_signals.length - kept.length;
+  d.recruit_signals = kept;
+  d.recruit_signal_count = kept.length;
+}
+console.log(`站点模板过滤：剔除 ${droppedTemplate} 条跨多人重复的招生语句`);
 
 // 综合"在招可能性"
 for (const d of out) {
