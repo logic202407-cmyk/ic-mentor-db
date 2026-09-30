@@ -462,8 +462,7 @@
    "is_phd_advisor": true,
    "research_keywords": [
     "集成电路设计",
-    "模拟/混合信号电路",
-    "ADC"
+    "模拟/混合信号电路"
    ],
    "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/201703/t20170329_4765803.html",
    "email": null,
@@ -594,7 +593,7 @@
    "title": "院士",
    "department": "微电子研究所",
    "is_phd_advisor": true,
-   "research_keywords": null,
+   "research_keywords": [],
    "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/201512/t20151216_4497277.html",
    "email": null,
    "notes": "微电子器件与集成技术重点实验室；中国科学院院士；官方页面未列出研究方向"
@@ -1101,8 +1100,7 @@
    "is_phd_advisor": false,
    "research_keywords": [
     "集成电路设计",
-    "模拟/混合信号电路",
-    "DAC"
+    "模拟/混合信号电路"
    ],
    "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202111/t20211126_6272435.html",
    "email": null,
@@ -1159,7 +1157,6 @@
    "is_phd_advisor": false,
    "research_keywords": [
     "EDA/设计自动化",
-    "PDK",
     "标准单元库"
    ],
    "homepage": "https://www.ime.ac.cn/sourcedb/zw/zjrck/202009/t20200904_5686437.html",

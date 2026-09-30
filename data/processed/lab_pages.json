@@ -455,20 +455,6 @@
   "text_len": 1703
  },
  {
-  "name": "赵博",
-  "school": "浙江大学",
-  "school_key": "zju",
-  "title": "长聘教授",
-  "department": "集成电路学院·超大规模集成电路设计研究所",
-  "homepage": "https://person.zju.edu.cn/zhaobo",
-  "primary_direction": "mems",
-  "status": "ok",
-  "lab_names": [],
-  "recruit_hits": [],
-  "page_title": "赵博-浙江大学个人主页",
-  "text_len": 462
- },
- {
   "name": "闫娜",
   "school": "复旦大学",
   "school_key": "fudan",
@@ -483,6 +469,20 @@
   "recruit_hits": [],
   "page_title": null,
   "text_len": 6594
+ },
+ {
+  "name": "赵博",
+  "school": "浙江大学",
+  "school_key": "zju",
+  "title": "长聘教授",
+  "department": "集成电路学院·超大规模集成电路设计研究所",
+  "homepage": "https://person.zju.edu.cn/zhaobo",
+  "primary_direction": "mems",
+  "status": "ok",
+  "lab_names": [],
+  "recruit_hits": [],
+  "page_title": "赵博-浙江大学个人主页",
+  "text_len": 462
  },
  {
   "name": "李永福",
@@ -808,6 +808,22 @@
   "text_len": 6526
  },
  {
+  "name": "潘纲",
+  "school": "浙江大学",
+  "school_key": "zju",
+  "title": "教授",
+  "department": "计算机科学与技术学院·系统结构与脑机工程研究所",
+  "homepage": "https://person.zju.edu.cn/gpan",
+  "primary_direction": "digital_ai",
+  "status": "ok",
+  "lab_names": [
+   "士\n教授\n单位\n计算机科学与技术学院\n职务\n脑机智能全国重点实验室"
+  ],
+  "recruit_hits": [],
+  "page_title": "潘纲的个人主页-浙江大学个人主页",
+  "text_len": 380
+ },
+ {
   "name": "李巍",
   "school": "复旦大学",
   "school_key": "fudan",
@@ -839,22 +855,6 @@
   "recruit_hits": [],
   "page_title": null,
   "text_len": 5824
- },
- {
-  "name": "潘纲",
-  "school": "浙江大学",
-  "school_key": "zju",
-  "title": "教授",
-  "department": "计算机科学与技术学院·系统结构与脑机工程研究所",
-  "homepage": "https://person.zju.edu.cn/gpan",
-  "primary_direction": "digital_ai",
-  "status": "ok",
-  "lab_names": [
-   "士\n教授\n单位\n计算机科学与技术学院\n职务\n脑机智能全国重点实验室"
-  ],
-  "recruit_hits": [],
-  "page_title": "潘纲的个人主页-浙江大学个人主页",
-  "text_len": 380
  },
  {
   "name": "蔡浩",
@@ -1326,20 +1326,6 @@
   "text_len": 2885
  },
  {
-  "name": "屈万园",
-  "school": "浙江大学",
-  "school_key": "zju",
-  "title": "教授",
-  "department": "集成电路学院·超大规模集成电路设计研究所",
-  "homepage": "https://person.zju.edu.cn/wanyuanqu",
-  "primary_direction": "analog",
-  "status": "ok",
-  "lab_names": [],
-  "recruit_hits": [],
-  "page_title": "屈万园博士的个人主页-浙江大学个人主页",
-  "text_len": 345
- },
- {
   "name": "高鸣宇",
   "school": "清华大学",
   "school_key": "tsinghua",
@@ -1389,6 +1375,20 @@
   "recruit_hits": [],
   "page_title": null,
   "text_len": 1510
+ },
+ {
+  "name": "屈万园",
+  "school": "浙江大学",
+  "school_key": "zju",
+  "title": "教授",
+  "department": "集成电路学院·超大规模集成电路设计研究所",
+  "homepage": "https://person.zju.edu.cn/wanyuanqu",
+  "primary_direction": "analog",
+  "status": "ok",
+  "lab_names": [],
+  "recruit_hits": [],
+  "page_title": "屈万园博士的个人主页-浙江大学个人主页",
+  "text_len": 345
  },
  {
   "name": "何卫锋",
@@ -1516,6 +1516,20 @@
   "text_len": 3157
  },
  {
+  "name": "虞小鹏",
+  "school": "浙江大学",
+  "school_key": "zju",
+  "title": "教授",
+  "department": "集成电路学院·超大规模集成电路设计研究所",
+  "homepage": "https://person.zju.edu.cn/yu",
+  "primary_direction": "rf",
+  "status": "ok",
+  "lab_names": [],
+  "recruit_hits": [],
+  "page_title": "虞小鹏-浙江大学个人主页",
+  "text_len": 359
+ },
+ {
   "name": "胡三明",
   "school": "东南大学",
   "school_key": "seu",
@@ -1623,20 +1637,6 @@
   "recruit_hits": [],
   "page_title": null,
   "text_len": 1359
- },
- {
-  "name": "虞小鹏",
-  "school": "浙江大学",
-  "school_key": "zju",
-  "title": "教授",
-  "department": "集成电路学院·超大规模集成电路设计研究所",
-  "homepage": "https://person.zju.edu.cn/yu",
-  "primary_direction": "rf",
-  "status": "ok",
-  "lab_names": [],
-  "recruit_hits": [],
-  "page_title": "虞小鹏-浙江大学个人主页",
-  "text_len": 359
  },
  {
   "name": "孟凡易",
@@ -3815,6 +3815,22 @@
   "text_len": 6507
  },
  {
+  "name": "王昭昊",
+  "school": "北京航空航天大学",
+  "school_key": "buaa",
+  "title": "教授",
+  "department": "集成电路科学与工程学院",
+  "homepage": "http://shi.buaa.edu.cn/howard/zh_CN/index.htm",
+  "primary_direction": "device",
+  "status": "ok(reused)",
+  "lab_names": [
+   "空天信自旋电子技术工业和信息化部重点实验室"
+  ],
+  "recruit_hits": [],
+  "page_title": null,
+  "text_len": 1810
+ },
+ {
   "name": "邹雪城",
   "school": "华中科技大学",
   "school_key": "hust",
@@ -3867,22 +3883,6 @@
   "text_len": 2233
  },
  {
-  "name": "王昭昊",
-  "school": "北京航空航天大学",
-  "school_key": "buaa",
-  "title": "教授",
-  "department": "集成电路科学与工程学院",
-  "homepage": "http://shi.buaa.edu.cn/howard/zh_CN/index.htm",
-  "primary_direction": "device",
-  "status": "ok(reused)",
-  "lab_names": [
-   "空天信自旋电子技术工业和信息化部重点实验室"
-  ],
-  "recruit_hits": [],
-  "page_title": null,
-  "text_len": 1810
- },
- {
   "name": "杨轶",
   "school": "清华大学",
   "school_key": "tsinghua",
@@ -3909,6 +3909,20 @@
   "recruit_hits": [],
   "page_title": null,
   "text_len": 3683
+ },
+ {
+  "name": "高翔",
+  "school": "浙江大学",
+  "school_key": "zju",
+  "title": "百人计划研究员",
+  "department": "集成电路学院·超大规模集成电路设计研究所",
+  "homepage": "https://person.zju.edu.cn/xianggao",
+  "primary_direction": "analog",
+  "status": "ok",
+  "lab_names": [],
+  "recruit_hits": [],
+  "page_title": "高翔-浙江大学个人主页",
+  "text_len": 380
  },
  {
   "name": "刘景全",
@@ -3940,20 +3954,6 @@
   "recruit_hits": [],
   "page_title": null,
   "text_len": 1647
- },
- {
-  "name": "高翔",
-  "school": "浙江大学",
-  "school_key": "zju",
-  "title": "百人计划研究员",
-  "department": "集成电路学院·超大规模集成电路设计研究所",
-  "homepage": "https://person.zju.edu.cn/xianggao",
-  "primary_direction": "analog",
-  "status": "ok",
-  "lab_names": [],
-  "recruit_hits": [],
-  "page_title": "高翔-浙江大学个人主页",
-  "text_len": 380
  },
  {
   "name": "张进成",
@@ -5693,6 +5693,22 @@
   "text_len": 4059
  },
  {
+  "name": "游天桂",
+  "school": "中国科学院上海微系统与信息技术研究所",
+  "school_key": "cas_simit",
+  "title": "研究员",
+  "department": "上海微系统与信息技术研究所",
+  "homepage": "https://people.ucas.ac.cn/~0067558",
+  "primary_direction": "device",
+  "status": "ok",
+  "lab_names": [
+   "养博士研究生\n2012-12--2015-12 德国HZDR研究中心"
+  ],
+  "recruit_hits": [],
+  "page_title": "游天桂-中国科学院大学-UCAS",
+  "text_len": 648
+ },
+ {
   "name": "王建勋",
   "school": "电子科技大学",
   "school_key": "uestc",
@@ -5870,22 +5886,6 @@
   "recruit_hits": [],
   "page_title": null,
   "text_len": 1669
- },
- {
-  "name": "游天桂",
-  "school": "中国科学院上海微系统与信息技术研究所",
-  "school_key": "cas_simit",
-  "title": "研究员",
-  "department": "上海微系统与信息技术研究所",
-  "homepage": "https://people.ucas.ac.cn/~0067558",
-  "primary_direction": "device",
-  "status": "ok",
-  "lab_names": [
-   "养博士研究生\n2012-12--2015-12 德国HZDR研究中心"
-  ],
-  "recruit_hits": [],
-  "page_title": "游天桂-中国科学院大学-UCAS",
-  "text_len": 648
  },
  {
   "name": "余显斌",
@@ -8259,6 +8259,22 @@
   "text_len": 4455
  },
  {
+  "name": "李欢",
+  "school": "浙江大学",
+  "school_key": "zju",
+  "title": "百人计划研究员",
+  "department": "光电科学与工程学院·光及电磁波研究中心",
+  "homepage": "https://person.zju.edu.cn/lihuan20",
+  "primary_direction": "photonics",
+  "status": "ok",
+  "lab_names": [
+   "算与光开关器件\n个人简介\n研究与成果\n链接\n硅基光子集成研究团队"
+  ],
+  "recruit_hits": [],
+  "page_title": "李欢-光电科学与工程学院-浙江大学个人主页",
+  "text_len": 448
+ },
+ {
   "name": "陈智",
   "school": "电子科技大学",
   "school_key": "uestc",
@@ -8338,22 +8354,6 @@
   "recruit_hits": [],
   "page_title": null,
   "text_len": 9581
- },
- {
-  "name": "李欢",
-  "school": "浙江大学",
-  "school_key": "zju",
-  "title": "百人计划研究员",
-  "department": "光电科学与工程学院·光及电磁波研究中心",
-  "homepage": "https://person.zju.edu.cn/lihuan20",
-  "primary_direction": "photonics",
-  "status": "ok",
-  "lab_names": [
-   "算与光开关器件\n个人简介\n研究与成果\n链接\n硅基光子集成研究团队"
-  ],
-  "recruit_hits": [],
-  "page_title": "李欢-光电科学与工程学院-浙江大学个人主页",
-  "text_len": 448
  },
  {
   "name": "彭浩",
@@ -9039,6 +9039,20 @@
   "text_len": 1021
  },
  {
+  "name": "李昕欣",
+  "school": "中国科学院上海微系统与信息技术研究所",
+  "school_key": "cas_simit",
+  "title": "研究员",
+  "department": "上海微系统与信息技术研究所",
+  "homepage": "http://sim.cas.cn/dwjs2016/zgjrc/cgqjs/202505/t20250509_7648127.html",
+  "primary_direction": "mems",
+  "status": "ok(reused)",
+  "lab_names": [],
+  "recruit_hits": [],
+  "page_title": null,
+  "text_len": 2579
+ },
+ {
   "name": "杨峰",
   "school": "电子科技大学",
   "school_key": "uestc",
@@ -9258,20 +9272,6 @@
   "text_len": 3821
  },
  {
-  "name": "李昕欣",
-  "school": "中国科学院上海微系统与信息技术研究所",
-  "school_key": "cas_simit",
-  "title": "研究员",
-  "department": "上海微系统与信息技术研究所",
-  "homepage": "http://sim.cas.cn/dwjs2016/zgjrc/cgqjs/202505/t20250509_7648127.html",
-  "primary_direction": "mems",
-  "status": "ok(reused)",
-  "lab_names": [],
-  "recruit_hits": [],
-  "page_title": null,
-  "text_len": 2579
- },
- {
   "name": "康晋锋",
   "school": "北京大学",
   "school_key": "pku",
@@ -9448,6 +9448,20 @@
   "text_len": 2208
  },
  {
+  "name": "高大为",
+  "school": "浙江大学",
+  "school_key": "zju",
+  "title": "研究员",
+  "department": "集成电路学院·先进集成电路制造技术研究所",
+  "homepage": "https://person.zju.edu.cn/0021056",
+  "primary_direction": "device",
+  "status": "ok",
+  "lab_names": [],
+  "recruit_hits": [],
+  "page_title": "高大为-浙江大学个人主页",
+  "text_len": 361
+ },
+ {
   "name": "董树荣",
   "school": "浙江大学",
   "school_key": "zju",
@@ -9511,20 +9525,6 @@
   "recruit_hits": [],
   "page_title": null,
   "text_len": 1764
- },
- {
-  "name": "高大为",
-  "school": "浙江大学",
-  "school_key": "zju",
-  "title": "研究员",
-  "department": "集成电路学院·先进集成电路制造技术研究所",
-  "homepage": "https://person.zju.edu.cn/0021056",
-  "primary_direction": "device",
-  "status": "ok",
-  "lab_names": [],
-  "recruit_hits": [],
-  "page_title": "高大为-浙江大学个人主页",
-  "text_len": 361
  },
  {
   "name": "巫江",
@@ -10543,6 +10543,20 @@
   "text_len": 0
  },
  {
+  "name": "张昆",
+  "school": "北京航空航天大学",
+  "school_key": "buaa",
+  "title": "副教授",
+  "department": "集成电路科学与工程学院",
+  "homepage": "http://shi.buaa.edu.cn/KunZHANG/zh_CN/index.htm",
+  "primary_direction": "device",
+  "status": "ok(reused)",
+  "lab_names": [],
+  "recruit_hits": [],
+  "page_title": null,
+  "text_len": 9027
+ },
+ {
   "name": "陈飞良",
   "school": "电子科技大学",
   "school_key": "uestc",
@@ -11324,20 +11338,6 @@
   "text_len": 86107
  },
  {
-  "name": "张昆",
-  "school": "北京航空航天大学",
-  "school_key": "buaa",
-  "title": "副教授",
-  "department": "集成电路科学与工程学院",
-  "homepage": "http://shi.buaa.edu.cn/KunZHANG/zh_CN/index.htm",
-  "primary_direction": "device",
-  "status": "ok(reused)",
-  "lab_names": [],
-  "recruit_hits": [],
-  "page_title": null,
-  "text_len": 9027
- },
- {
   "name": "蔡金赤",
   "school": "电子科技大学",
   "school_key": "uestc",
@@ -11740,11 +11740,11 @@
   "department": "信息科学技术学院 电子工程与信息科学系",
   "homepage": "https://eeis.ustc.edu.cn/2017/0807/c2648a190436/page.htm",
   "primary_direction": "rf",
-  "status": "ok",
+  "status": "fetch_failed",
   "lab_names": [],
   "recruit_hits": [],
-  "page_title": "陈畅",
-  "text_len": 561
+  "page_title": null,
+  "text_len": 0
  },
  {
   "name": "杨志",
@@ -12106,6 +12106,20 @@
   "text_len": 9567
  },
  {
+  "name": "郑飞君",
+  "school": "浙江大学",
+  "school_key": "zju",
+  "title": "研究员",
+  "department": "集成电路学院·超大规模集成电路设计研究所",
+  "homepage": "https://person.zju.edu.cn/frank_zheng",
+  "primary_direction": "analog",
+  "status": "ok",
+  "lab_names": [],
+  "recruit_hits": [],
+  "page_title": "郑飞君-浙江大学个人主页",
+  "text_len": 335
+ },
+ {
   "name": "李秀妍",
   "school": "上海交通大学",
   "school_key": "sjtu",
@@ -12211,20 +12225,6 @@
   "recruit_hits": [],
   "page_title": null,
   "text_len": 2305
- },
- {
-  "name": "郑飞君",
-  "school": "浙江大学",
-  "school_key": "zju",
-  "title": "研究员",
-  "department": "集成电路学院·超大规模集成电路设计研究所",
-  "homepage": "https://person.zju.edu.cn/frank_zheng",
-  "primary_direction": "analog",
-  "status": "ok",
-  "lab_names": [],
-  "recruit_hits": [],
-  "page_title": "郑飞君-浙江大学个人主页",
-  "text_len": 335
  },
  {
   "name": "张猛",
@@ -13053,20 +13053,6 @@
   "text_len": 765
  },
  {
-  "name": "金浩",
-  "school": "浙江大学",
-  "school_key": "zju",
-  "title": "副教授",
-  "department": "信息与电子工程学院·智能传感与微纳集成研究所",
-  "homepage": "https://person.zju.edu.cn/hjin",
-  "primary_direction": "device",
-  "status": "ok",
-  "lab_names": [],
-  "recruit_hits": [],
-  "page_title": "金浩-浙江大学个人主页",
-  "text_len": 393
- },
- {
   "name": "薛仲明",
   "school": "西安交通大学",
   "school_key": "xjtu",
@@ -13582,6 +13568,20 @@
   "recruit_hits": [],
   "page_title": null,
   "text_len": 2421
+ },
+ {
+  "name": "金浩",
+  "school": "浙江大学",
+  "school_key": "zju",
+  "title": "副教授",
+  "department": "信息与电子工程学院·智能传感与微纳集成研究所",
+  "homepage": "https://person.zju.edu.cn/hjin",
+  "primary_direction": "device",
+  "status": "ok",
+  "lab_names": [],
+  "recruit_hits": [],
+  "page_title": "金浩-浙江大学个人主页",
+  "text_len": 393
  },
  {
   "name": "刘玉玺",
@@ -15103,6 +15103,22 @@
   "text_len": 15436
  },
  {
+  "name": "阮存军",
+  "school": "北京航空航天大学",
+  "school_key": "buaa",
+  "title": "教授",
+  "department": "电子信息工程学院",
+  "homepage": "http://shi.buaa.edu.cn/ruancunjun/zh_CN/index.htm",
+  "primary_direction": "rf",
+  "status": "ok(reused)",
+  "lab_names": [
+   "微波感知与安防应用北京市重点实验室"
+  ],
+  "recruit_hits": [],
+  "page_title": null,
+  "text_len": 974
+ },
+ {
   "name": "易波",
   "school": "电子科技大学",
   "school_key": "uestc",
@@ -15567,22 +15583,6 @@
   "recruit_hits": [],
   "page_title": null,
   "text_len": 1090
- },
- {
-  "name": "阮存军",
-  "school": "北京航空航天大学",
-  "school_key": "buaa",
-  "title": "教授",
-  "department": "电子信息工程学院",
-  "homepage": "http://shi.buaa.edu.cn/ruancunjun/zh_CN/index.htm",
-  "primary_direction": "rf",
-  "status": "ok(reused)",
-  "lab_names": [
-   "微波感知与安防应用北京市重点实验室"
-  ],
-  "recruit_hits": [],
-  "page_title": null,
-  "text_len": 974
  },
  {
   "name": "衣建甲",
@@ -16240,23 +16240,6 @@
   "text_len": 2177
  },
  {
-  "name": "武震宇",
-  "school": "中国科学院上海微系统与信息技术研究所",
-  "school_key": "cas_simit",
-  "title": "研究员",
-  "department": "上海微系统与信息技术研究所",
-  "homepage": "http://sim.cas.cn/dwjs2016/zgjrc/cgqjs/202505/t20250509_7648165.html",
-  "primary_direction": "mems",
-  "status": "ok(reused)",
-  "lab_names": [
-   "现任传感技术实验室",
-   "传感器技术全国重点实验室"
-  ],
-  "recruit_hits": [],
-  "page_title": null,
-  "text_len": 1372
- },
- {
   "name": "刘科",
   "school": "电子科技大学",
   "school_key": "uestc",
@@ -16695,6 +16678,23 @@
   "recruit_hits": [],
   "page_title": null,
   "text_len": 1948
+ },
+ {
+  "name": "武震宇",
+  "school": "中国科学院上海微系统与信息技术研究所",
+  "school_key": "cas_simit",
+  "title": "研究员",
+  "department": "上海微系统与信息技术研究所",
+  "homepage": "http://sim.cas.cn/dwjs2016/zgjrc/cgqjs/202505/t20250509_7648165.html",
+  "primary_direction": "mems",
+  "status": "ok(reused)",
+  "lab_names": [
+   "现任传感技术实验室",
+   "传感器技术全国重点实验室"
+  ],
+  "recruit_hits": [],
+  "page_title": null,
+  "text_len": 1372
  },
  {
   "name": "刘放",
@@ -18774,6 +18774,20 @@
   "text_len": 5478
  },
  {
+  "name": "吴汉明",
+  "school": "浙江大学",
+  "school_key": "zju",
+  "title": "教授",
+  "department": "集成电路学院·先进集成电路制造技术研究所",
+  "homepage": "https://person.zju.edu.cn/0019828",
+  "primary_direction": "eda",
+  "status": "ok",
+  "lab_names": [],
+  "recruit_hits": [],
+  "page_title": "吴汉明-浙江大学个人主页",
+  "text_len": 304
+ },
+ {
   "name": "陈蕾",
   "school": "西安电子科技大学",
   "school_key": "xidian",
@@ -20022,20 +20036,6 @@
   "text_len": 2273
  },
  {
-  "name": "吴汉明",
-  "school": "浙江大学",
-  "school_key": "zju",
-  "title": "教授",
-  "department": "集成电路学院·先进集成电路制造技术研究所",
-  "homepage": "https://person.zju.edu.cn/0019828",
-  "primary_direction": "eda",
-  "status": "ok",
-  "lab_names": [],
-  "recruit_hits": [],
-  "page_title": "吴汉明-浙江大学个人主页",
-  "text_len": 304
- },
- {
   "name": "朱荣",
   "school": "清华大学",
   "school_key": "tsinghua",
@@ -20103,6 +20103,22 @@
   "recruit_hits": [],
   "page_title": "肖君军 - 哈尔滨工业大学教师个人主页",
   "text_len": 243
+ },
+ {
+  "name": "高士明",
+  "school": "浙江大学",
+  "school_key": "zju",
+  "title": "教授",
+  "department": "光电科学与工程学院·光及电磁波研究中心",
+  "homepage": "https://person.zju.edu.cn/gaosm",
+  "primary_direction": "photonics",
+  "status": "ok",
+  "lab_names": [
+   "高速空间激光通信\n个人简介\n教学与课程\n研究组"
+  ],
+  "recruit_hits": [],
+  "page_title": "高士明-浙江大学个人主页",
+  "text_len": 374
  },
  {
   "name": "孙璐",
@@ -20219,23 +20235,6 @@
   "recruit_hits": [],
   "page_title": null,
   "text_len": 2634
- },
- {
-  "name": "刘峰",
-  "school": "浙江大学",
-  "school_key": "zju",
-  "title": "长聘副教授",
-  "department": "信息与电子工程学院·微电子集成系统研究所",
-  "homepage": "https://person.zju.edu.cn/0019025",
-  "primary_direction": "device",
-  "status": "ok",
-  "lab_names": [
-   "基于人工智能的全自动量子光与实验室",
-   "63190\n个人简介\n团队成员\n课题组"
-  ],
-  "recruit_hits": [],
-  "page_title": "刘峰-Zhejiang University Personal homepage",
-  "text_len": 493
  },
  {
   "name": "陈炜",
@@ -20409,6 +20408,23 @@
   "recruit_hits": [],
   "page_title": null,
   "text_len": 1419
+ },
+ {
+  "name": "刘峰",
+  "school": "浙江大学",
+  "school_key": "zju",
+  "title": "长聘副教授",
+  "department": "信息与电子工程学院·微电子集成系统研究所",
+  "homepage": "https://person.zju.edu.cn/0019025",
+  "primary_direction": "device",
+  "status": "ok",
+  "lab_names": [
+   "基于人工智能的全自动量子光与实验室",
+   "63195\n个人简介\n团队成员\n课题组"
+  ],
+  "recruit_hits": [],
+  "page_title": "刘峰-Zhejiang University Personal homepage",
+  "text_len": 493
  },
  {
   "name": "李鹏",
@@ -20966,22 +20982,6 @@
   "recruit_hits": [],
   "page_title": "秦敬凯 - 哈尔滨工业大学教师个人主页",
   "text_len": 244
- },
- {
-  "name": "高士明",
-  "school": "浙江大学",
-  "school_key": "zju",
-  "title": "教授",
-  "department": "光电科学与工程学院·光及电磁波研究中心",
-  "homepage": "https://person.zju.edu.cn/gaosm",
-  "primary_direction": "photonics",
-  "status": "ok",
-  "lab_names": [
-   "高速空间激光通信\n个人简介\n教学与课程\n研究组"
-  ],
-  "recruit_hits": [],
-  "page_title": "高士明-浙江大学个人主页",
-  "text_len": 374
  },
  {
   "name": "计红军",
@@ -21752,6 +21752,23 @@
   "text_len": 2132
  },
  {
+  "name": "刘鹏",
+  "school": "浙江大学",
+  "school_key": "zju",
+  "title": "教授",
+  "department": "信息与电子工程学院·信息与通信网络工程研究所",
+  "homepage": "https://mypage.zju.edu.cn/liupeng",
+  "primary_direction": "digital_ai",
+  "status": "ok",
+  "lab_names": [
+   "硬件安全\n个人简介\n实验室",
+   "博士生\n硕士生\n本科生\n办公室\n实验室"
+  ],
+  "recruit_hits": [],
+  "page_title": "Peng Liu's Homepage-浙江大学个人主页",
+  "text_len": 491
+ },
+ {
   "name": "杨军",
   "school": "电子科技大学",
   "school_key": "uestc",
@@ -21804,23 +21821,6 @@
   "recruit_hits": [],
   "page_title": null,
   "text_len": 2366
- },
- {
-  "name": "刘鹏",
-  "school": "浙江大学",
-  "school_key": "zju",
-  "title": "教授",
-  "department": "信息与电子工程学院·信息与通信网络工程研究所",
-  "homepage": "https://mypage.zju.edu.cn/liupeng",
-  "primary_direction": "digital_ai",
-  "status": "ok",
-  "lab_names": [
-   "硬件安全\n个人简介\n实验室",
-   "博士生\n硕士生\n本科生\n办公室\n实验室"
-  ],
-  "recruit_hits": [],
-  "page_title": "Peng Liu's Homepage-浙江大学个人主页",
-  "text_len": 491
  },
  {
   "name": "余玉揆",
@@ -22415,6 +22415,20 @@
   "text_len": 4007
  },
  {
+  "name": "李云龙",
+  "school": "浙江大学",
+  "school_key": "zju",
+  "title": "教授",
+  "department": "集成电路学院·先进集成电路制造技术研究所",
+  "homepage": "https://person.zju.edu.cn/0022217",
+  "primary_direction": "device",
+  "status": "ok",
+  "lab_names": [],
+  "recruit_hits": [],
+  "page_title": "浙江大学集成电路学院李云龙-浙江大学个人主页",
+  "text_len": 424
+ },
+ {
   "name": "江彬彬",
   "school": "电子科技大学",
   "school_key": "uestc",
@@ -22478,20 +22492,6 @@
   "recruit_hits": [],
   "page_title": "赵贻玖 中文主页 电子科技大学主页平台管理系统",
   "text_len": 686
- },
- {
-  "name": "李云龙",
-  "school": "浙江大学",
-  "school_key": "zju",
-  "title": "教授",
-  "department": "集成电路学院·先进集成电路制造技术研究所",
-  "homepage": "https://person.zju.edu.cn/0022217",
-  "primary_direction": "device",
-  "status": "ok",
-  "lab_names": [],
-  "recruit_hits": [],
-  "page_title": "浙江大学集成电路学院李云龙-浙江大学个人主页",
-  "text_len": 424
  },
  {
   "name": "牛雪",
@@ -22637,6 +22637,22 @@
   "recruit_hits": [],
   "page_title": null,
   "text_len": 2811
+ },
+ {
+  "name": "倪东",
+  "school": "浙江大学",
+  "school_key": "zju",
+  "title": "教授",
+  "department": "集成电路学院·先进集成电路制造技术研究所",
+  "homepage": "https://person.zju.edu.cn/nidong",
+  "primary_direction": "device",
+  "status": "ok",
+  "lab_names": [
+   "主页\n退出登录\n登录\n相关教师\n换一批\n链接\n工业解析与控制实验室"
+  ],
+  "recruit_hits": [],
+  "page_title": "倪东-浙江大学个人主页",
+  "text_len": 407
  },
  {
   "name": "李洋",
@@ -22803,22 +22819,6 @@
   "recruit_hits": [],
   "page_title": null,
   "text_len": 1180
- },
- {
-  "name": "倪东",
-  "school": "浙江大学",
-  "school_key": "zju",
-  "title": "教授",
-  "department": "集成电路学院·先进集成电路制造技术研究所",
-  "homepage": "https://person.zju.edu.cn/nidong",
-  "primary_direction": "device",
-  "status": "ok",
-  "lab_names": [
-   "主页\n退出登录\n登录\n相关教师\n换一批\n链接\n工业解析与控制实验室"
-  ],
-  "recruit_hits": [],
-  "page_title": "倪东-浙江大学个人主页",
-  "text_len": 407
  },
  {
   "name": "魏德宝",
@@ -23864,6 +23864,20 @@
   "text_len": 1197
  },
  {
+  "name": "叶茂",
+  "school": "北京航空航天大学",
+  "school_key": "buaa",
+  "title": "研究员",
+  "department": "仪器科学与光电工程学院",
+  "homepage": "http://shi.buaa.edu.cn/yemao/zh_CN/index.htm",
+  "primary_direction": "photonics",
+  "status": "ok(reused)",
+  "lab_names": [],
+  "recruit_hits": [],
+  "page_title": null,
+  "text_len": 1223
+ },
+ {
   "name": "朱彬武",
   "school": "东南大学",
   "school_key": "seu",
@@ -24422,6 +24436,20 @@
   "text_len": 868
  },
  {
+  "name": "林星",
+  "school": "浙江大学",
+  "school_key": "zju",
+  "title": "特聘研究员",
+  "department": "信息与电子工程学院·微电子集成系统研究所",
+  "homepage": "https://person.zju.edu.cn/0618098?fulltext=林星",
+  "primary_direction": "photonics",
+  "status": "ok",
+  "lab_names": [],
+  "recruit_hits": [],
+  "page_title": "林星-浙江大学个人主页",
+  "text_len": 372
+ },
+ {
   "name": "寇君龙",
   "school": "南京大学",
   "school_key": "nju",
@@ -24514,6 +24542,20 @@
   "recruit_hits": [],
   "page_title": null,
   "text_len": 1128
+ },
+ {
+  "name": "王锐",
+  "school": "北京航空航天大学",
+  "school_key": "buaa",
+  "title": "副教授",
+  "department": "计算机学院",
+  "homepage": "http://shi.buaa.edu.cn/wangrui/zh_CN/index.htm",
+  "primary_direction": "digital_ai",
+  "status": "ok(reused)",
+  "lab_names": [],
+  "recruit_hits": [],
+  "page_title": null,
+  "text_len": 928
  },
  {
   "name": "肖夏",
@@ -24688,20 +24730,6 @@
   "text_len": 1539
  },
  {
-  "name": "王锐",
-  "school": "北京航空航天大学",
-  "school_key": "buaa",
-  "title": "副教授",
-  "department": "计算机学院",
-  "homepage": "http://shi.buaa.edu.cn/wangrui/zh_CN/index.htm",
-  "primary_direction": "digital_ai",
-  "status": "ok(reused)",
-  "lab_names": [],
-  "recruit_hits": [],
-  "page_title": null,
-  "text_len": 928
- },
- {
   "name": "孙乐嘉",
   "school": "西安电子科技大学",
   "school_key": "xidian",
@@ -24764,20 +24792,6 @@
   "recruit_hits": [],
   "page_title": null,
   "text_len": 1412
- },
- {
-  "name": "林星",
-  "school": "浙江大学",
-  "school_key": "zju",
-  "title": "特聘研究员",
-  "department": "信息与电子工程学院·微电子集成系统研究所",
-  "homepage": "https://person.zju.edu.cn/0618098?fulltext=林星",
-  "primary_direction": "photonics",
-  "status": "ok",
-  "lab_names": [],
-  "recruit_hits": [],
-  "page_title": "林星-浙江大学个人主页",
-  "text_len": 372
  },
  {
   "name": "王鹏程",
@@ -25169,6 +25183,22 @@
   "text_len": 241
  },
  {
+  "name": "蔡文龙",
+  "school": "北京航空航天大学",
+  "school_key": "buaa",
+  "title": "副教授",
+  "department": "集成电路科学与工程学院",
+  "homepage": "http://shi.buaa.edu.cn/caiwenlong1/zh_CN/index.htm",
+  "primary_direction": "device",
+  "status": "ok(reused)",
+  "lab_names": [
+   "空航天学\n个人简介\n研究方向\n社会兼职\n教育经历\n工作经历\n团队"
+  ],
+  "recruit_hits": [],
+  "page_title": null,
+  "text_len": 4601
+ },
+ {
   "name": "吴德馨",
   "school": "中国科学院微电子研究所",
   "school_key": "cas_ime",
@@ -25421,22 +25451,6 @@
   "recruit_hits": [],
   "page_title": null,
   "text_len": 919
- },
- {
-  "name": "蔡文龙",
-  "school": "北京航空航天大学",
-  "school_key": "buaa",
-  "title": "副教授",
-  "department": "集成电路科学与工程学院",
-  "homepage": "http://shi.buaa.edu.cn/caiwenlong1/zh_CN/index.htm",
-  "primary_direction": "device",
-  "status": "ok(reused)",
-  "lab_names": [
-   "空航天学\n个人简介\n研究方向\n社会兼职\n教育经历\n工作经历\n团队"
-  ],
-  "recruit_hits": [],
-  "page_title": null,
-  "text_len": 4601
  },
  {
   "name": "施雷",
@@ -26726,6 +26740,24 @@
   "text_len": 1490
  },
  {
+  "name": "刘晨晨",
+  "school": "北京航空航天大学",
+  "school_key": "buaa",
+  "title": "教授",
+  "department": "集成电路科学与工程学院",
+  "homepage": "http://shi.buaa.edu.cn/liuchenchen/zh_CN/index.htm",
+  "primary_direction": "digital_ai",
+  "status": "ok(reused)",
+  "lab_names": [
+   "e42eb7c8f9281ac22011f3c55f8ab\n团队",
+   "成员\n团队",
+   "ICAS\n团队"
+  ],
+  "recruit_hits": [],
+  "page_title": null,
+  "text_len": 1449
+ },
+ {
   "name": "甄少伟",
   "school": "电子科技大学",
   "school_key": "uestc",
@@ -26801,24 +26833,6 @@
   "recruit_hits": [],
   "page_title": null,
   "text_len": 1496
- },
- {
-  "name": "刘晨晨",
-  "school": "北京航空航天大学",
-  "school_key": "buaa",
-  "title": "教授",
-  "department": "集成电路科学与工程学院",
-  "homepage": "http://shi.buaa.edu.cn/liuchenchen/zh_CN/index.htm",
-  "primary_direction": "digital_ai",
-  "status": "ok(reused)",
-  "lab_names": [
-   "e42eb7c8f9281ac22011f3c55f8ab\n团队",
-   "成员\n团队",
-   "ICAS\n团队"
-  ],
-  "recruit_hits": [],
-  "page_title": null,
-  "text_len": 1449
  },
  {
   "name": "张琰",
@@ -27163,6 +27177,20 @@
   "text_len": 3003
  },
  {
+  "name": "曹臻",
+  "school": "浙江大学",
+  "school_key": "zju",
+  "title": "教授",
+  "department": "信息与电子工程学院·智能传感与微纳集成研究所",
+  "homepage": "https://person.zju.edu.cn/eezcao",
+  "primary_direction": "mems",
+  "status": "ok",
+  "lab_names": [],
+  "recruit_hits": [],
+  "page_title": "曹臻-浙江大学个人主页",
+  "text_len": 362
+ },
+ {
   "name": "马忠元",
   "school": "南京大学",
   "school_key": "nju",
@@ -27342,6 +27370,23 @@
   "text_len": 2371
  },
  {
+  "name": "郑铮",
+  "school": "北京航空航天大学",
+  "school_key": "buaa",
+  "title": "教授",
+  "department": "电子信息工程学院",
+  "homepage": "http://shi.buaa.edu.cn/zhengzheng1/zh_CN/index.htm",
+  "primary_direction": "photonics",
+  "status": "ok(reused)",
+  "lab_names": [
+   "cb\n查看更多\n其他联系方式\n暂无内容\n科研项目\n论文成果\n团队",
+   "成员\n暂无内容\n暂无内容\n光电信息系统实验室"
+  ],
+  "recruit_hits": [],
+  "page_title": null,
+  "text_len": 963
+ },
+ {
   "name": "董文婵",
   "school": "华中科技大学",
   "school_key": "hust",
@@ -27437,23 +27482,6 @@
   "recruit_hits": [],
   "page_title": null,
   "text_len": 1468
- },
- {
-  "name": "郑铮",
-  "school": "北京航空航天大学",
-  "school_key": "buaa",
-  "title": "教授",
-  "department": "电子信息工程学院",
-  "homepage": "http://shi.buaa.edu.cn/zhengzheng1/zh_CN/index.htm",
-  "primary_direction": "photonics",
-  "status": "ok(reused)",
-  "lab_names": [
-   "cb\n查看更多\n其他联系方式\n暂无内容\n科研项目\n论文成果\n团队",
-   "成员\n暂无内容\n暂无内容\n光电信息系统实验室"
-  ],
-  "recruit_hits": [],
-  "page_title": null,
-  "text_len": 963
  },
  {
   "name": "魏同波",
@@ -27621,6 +27649,20 @@
   "text_len": 345
  },
  {
+  "name": "李渝",
+  "school": "浙江大学",
+  "school_key": "zju",
+  "title": "百人计划研究员",
+  "department": "集成电路学院·先进集成电路制造技术研究所",
+  "homepage": "https://person.zju.edu.cn/liyu",
+  "primary_direction": "digital_ai",
+  "status": "ok",
+  "lab_names": [],
+  "recruit_hits": [],
+  "page_title": "李渝-浙江大学个人主页",
+  "text_len": 366
+ },
+ {
   "name": "陈昭福",
   "school": "东南大学",
   "school_key": "seu",
@@ -27673,20 +27715,6 @@
   "text_len": 694
  },
  {
-  "name": "曹臻",
-  "school": "浙江大学",
-  "school_key": "zju",
-  "title": "教授",
-  "department": "信息与电子工程学院·智能传感与微纳集成研究所",
-  "homepage": "https://person.zju.edu.cn/eezcao",
-  "primary_direction": "mems",
-  "status": "ok",
-  "lab_names": [],
-  "recruit_hits": [],
-  "page_title": "曹臻-浙江大学个人主页",
-  "text_len": 362
- },
- {
   "name": "岳文成",
   "school": "中国科学院上海微系统与信息技术研究所",
   "school_key": "cas_simit",
@@ -27713,20 +27741,6 @@
   "recruit_hits": [],
   "page_title": null,
   "text_len": 3903
- },
- {
-  "name": "李渝",
-  "school": "浙江大学",
-  "school_key": "zju",
-  "title": "百人计划研究员",
-  "department": "集成电路学院·先进集成电路制造技术研究所",
-  "homepage": "https://person.zju.edu.cn/liyu",
-  "primary_direction": "digital_ai",
-  "status": "ok",
-  "lab_names": [],
-  "recruit_hits": [],
-  "page_title": "李渝-浙江大学个人主页",
-  "text_len": 366
  },
  {
   "name": "徐绍夫",
@@ -28992,6 +29006,27 @@
   "text_len": 0
  },
  {
+  "name": "成元庆",
+  "school": "北京航空航天大学",
+  "school_key": "buaa",
+  "title": "副教授",
+  "department": "集成电路科学与工程学院",
+  "homepage": "http://shi.buaa.edu.cn/chengyuanqing/zh_CN/index.htm",
+  "primary_direction": "eda",
+  "status": "ok(reused)",
+  "lab_names": [
+   "航空航天大学主页平台系统 成元庆--中文主页--首页\n首页\n实验室",
+   "动态\nCADET实验室新闻\n实验室简介\nCADET实验室",
+   "简介\n实验室研究方向\n实验室",
+   "2012-2013在法国CNRS-LIRMM实验室",
+   "2015-2016年在美国加州大学圣芭芭拉分校谢源教授课题组",
+   "基于新兴半导体器件的集成电路设计自动化和低功耗设计\n团队"
+  ],
+  "recruit_hits": [],
+  "page_title": null,
+  "text_len": 2399
+ },
+ {
   "name": "李宇波",
   "school": "浙江大学",
   "school_key": "zju",
@@ -29100,41 +29135,6 @@
   "recruit_hits": [],
   "page_title": null,
   "text_len": 1312
- },
- {
-  "name": "成元庆",
-  "school": "北京航空航天大学",
-  "school_key": "buaa",
-  "title": "副教授",
-  "department": "集成电路科学与工程学院",
-  "homepage": "http://shi.buaa.edu.cn/chengyuanqing/zh_CN/index.htm",
-  "primary_direction": "eda",
-  "status": "ok(reused)",
-  "lab_names": [
-   "航空航天大学主页平台系统 成元庆--中文主页--首页\n首页\n实验室",
-   "动态\nCADET实验室新闻\n实验室简介\nCADET实验室",
-   "简介\n实验室研究方向\n实验室",
-   "2012-2013在法国CNRS-LIRMM实验室",
-   "2015-2016年在美国加州大学圣芭芭拉分校谢源教授课题组",
-   "基于新兴半导体器件的集成电路设计自动化和低功耗设计\n团队"
-  ],
-  "recruit_hits": [],
-  "page_title": null,
-  "text_len": 2399
- },
- {
-  "name": "叶茂",
-  "school": "北京航空航天大学",
-  "school_key": "buaa",
-  "title": "研究员",
-  "department": "仪器科学与光电工程学院",
-  "homepage": "http://shi.buaa.edu.cn/yemao/zh_CN/index.htm",
-  "primary_direction": "photonics",
-  "status": "ok(reused)",
-  "lab_names": [],
-  "recruit_hits": [],
-  "page_title": null,
-  "text_len": 1223
  },
  {
   "name": "王军喜",
@@ -30231,6 +30231,20 @@
   "recruit_hits": [],
   "page_title": null,
   "text_len": 2203
+ },
+ {
+  "name": "李湃",
+  "school": "中国科学院上海微系统与信息技术研究所",
+  "school_key": "cas_simit",
+  "title": "副研究员",
+  "department": "上海微系统与信息技术研究所",
+  "homepage": "http://www.sim.cas.cn/dwjs2016/fgjrc/jcdl/202505/t20250512_7649879.html",
+  "primary_direction": "photonics",
+  "status": "ok(reused)",
+  "lab_names": [],
+  "recruit_hits": [],
+  "page_title": null,
+  "text_len": 1142
  },
  {
   "name": "林树靖",
@@ -31403,20 +31417,6 @@
   "recruit_hits": [],
   "page_title": null,
   "text_len": 1177
- },
- {
-  "name": "李湃",
-  "school": "中国科学院上海微系统与信息技术研究所",
-  "school_key": "cas_simit",
-  "title": "副研究员",
-  "department": "上海微系统与信息技术研究所",
-  "homepage": "http://www.sim.cas.cn/dwjs2016/fgjrc/jcdl/202505/t20250512_7649879.html",
-  "primary_direction": "photonics",
-  "status": "ok(reused)",
-  "lab_names": [],
-  "recruit_hits": [],
-  "page_title": null,
-  "text_len": 1142
  },
  {
   "name": "胡哲峰",
@@ -32875,6 +32875,20 @@
   "text_len": 41225
  },
  {
+  "name": "徐炜鸿",
+  "school": "浙江大学",
+  "school_key": "zju",
+  "title": "百人计划研究员",
+  "department": "集成电路学院·先进集成电路制造技术研究所",
+  "homepage": "https://person.zju.edu.cn/weihongxu",
+  "primary_direction": "digital_ai",
+  "status": "ok",
+  "lab_names": [],
+  "recruit_hits": [],
+  "page_title": "徐炜鸿-浙江大学个人主页",
+  "text_len": 388
+ },
+ {
   "name": "肖太龙",
   "school": "上海交通大学",
   "school_key": "sjtu",
@@ -32999,20 +33013,6 @@
   "recruit_hits": [],
   "page_title": null,
   "text_len": 843
- },
- {
-  "name": "徐炜鸿",
-  "school": "浙江大学",
-  "school_key": "zju",
-  "title": "百人计划研究员",
-  "department": "集成电路学院·先进集成电路制造技术研究所",
-  "homepage": "https://person.zju.edu.cn/weihongxu",
-  "primary_direction": "digital_ai",
-  "status": "ok",
-  "lab_names": [],
-  "recruit_hits": [],
-  "page_title": "徐炜鸿-浙江大学个人主页",
-  "text_len": 388
  },
  {
   "name": "王志昂",
@@ -34024,6 +34024,41 @@
   "text_len": 2126
  },
  {
+  "name": "王鹏",
+  "school": "北京航空航天大学",
+  "school_key": "buaa",
+  "title": "教授",
+  "department": "集成电路科学与工程学院",
+  "homepage": "http://shi.buaa.edu.cn/wangpeng1/zh_CN/index.htm",
+  "primary_direction": "eda",
+  "status": "ok(reused)",
+  "lab_names": [
+   "随后加入美国能源部太平洋西北国家实验室",
+   "并于2013年4月成为实验室",
+   "nbsp美国太平洋西北国家实验室",
+   "fd28aa0d73652253e61\n科研项目\n论文成果\n团队"
+  ],
+  "recruit_hits": [],
+  "page_title": null,
+  "text_len": 5230
+ },
+ {
+  "name": "陈曦",
+  "school": "北京航空航天大学",
+  "school_key": "buaa",
+  "title": "助理研究员",
+  "department": "电子信息工程学院",
+  "homepage": "http://shi.buaa.edu.cn/chenxi/zh_CN/index.htm",
+  "primary_direction": "rf",
+  "status": "ok",
+  "lab_names": [
+   "北 京航空航天大学电磁兼容研究团队"
+  ],
+  "recruit_hits": [],
+  "page_title": "北京航空航天大学主页平台系统 陈曦--中文主页--首页",
+  "text_len": 761
+ },
+ {
   "name": "张学莹",
   "school": "北京航空航天大学",
   "school_key": "buaa",
@@ -34180,25 +34215,6 @@
   "recruit_hits": [],
   "page_title": null,
   "text_len": 2147
- },
- {
-  "name": "王鹏",
-  "school": "北京航空航天大学",
-  "school_key": "buaa",
-  "title": "教授",
-  "department": "集成电路科学与工程学院",
-  "homepage": "http://shi.buaa.edu.cn/wangpeng1/zh_CN/index.htm",
-  "primary_direction": "eda",
-  "status": "ok(reused)",
-  "lab_names": [
-   "随后加入美国能源部太平洋西北国家实验室",
-   "并于2013年4月成为实验室",
-   "nbsp美国太平洋西北国家实验室",
-   "fd28aa0d73652253e61\n科研项目\n论文成果\n团队"
-  ],
-  "recruit_hits": [],
-  "page_title": null,
-  "text_len": 5230
  },
  {
   "name": "谷宇",
@@ -34732,22 +34748,6 @@
   "recruit_hits": [],
   "page_title": null,
   "text_len": 5630
- },
- {
-  "name": "陈曦",
-  "school": "北京航空航天大学",
-  "school_key": "buaa",
-  "title": "助理研究员",
-  "department": "电子信息工程学院",
-  "homepage": "http://shi.buaa.edu.cn/chenxi/zh_CN/index.htm",
-  "primary_direction": "rf",
-  "status": "ok",
-  "lab_names": [
-   "北 京航空航天大学电磁兼容研究团队"
-  ],
-  "recruit_hits": [],
-  "page_title": "北京航空航天大学主页平台系统 陈曦--中文主页--首页",
-  "text_len": 761
  },
  {
   "name": "陈荣梅",
@@ -35287,7 +35287,7 @@
   "primary_direction": "digital_ai",
   "status": "ok",
   "lab_names": [
-   "86555\n链接\n开源算法平台与工具\n个人简介\n实验室"
+   "86561\n链接\n开源算法平台与工具\n个人简介\n实验室"
   ],
   "recruit_hits": [],
   "page_title": "唐华锦-Zhejiang University Personal homepage",
@@ -36272,6 +36272,20 @@
   "text_len": 2758
  },
  {
+  "name": "林志荣",
+  "school": "中国科学院上海微系统与信息技术研究所",
+  "school_key": "cas_simit",
+  "title": "研究员",
+  "department": "上海微系统与信息技术研究所",
+  "homepage": "http://www.sim.cas.cn/dwjs2016/zgjrc/lzkj/202505/t20250509_7648420.html",
+  "primary_direction": "rf",
+  "status": "ok(reused)",
+  "lab_names": [],
+  "recruit_hits": [],
+  "page_title": null,
+  "text_len": 3283
+ },
+ {
   "name": "凡俊兴",
   "school": "电子科技大学",
   "school_key": "uestc",
@@ -37224,20 +37238,6 @@
   "recruit_hits": [],
   "page_title": null,
   "text_len": 8405
- },
- {
-  "name": "林志荣",
-  "school": "中国科学院上海微系统与信息技术研究所",
-  "school_key": "cas_simit",
-  "title": "研究员",
-  "department": "上海微系统与信息技术研究所",
-  "homepage": "http://www.sim.cas.cn/dwjs2016/zgjrc/lzkj/202505/t20250509_7648420.html",
-  "primary_direction": "rf",
-  "status": "ok(reused)",
-  "lab_names": [],
-  "recruit_hits": [],
-  "page_title": null,
-  "text_len": 3283
  },
  {
   "name": "葛立新",
@@ -39863,6 +39863,20 @@
   "text_len": 0
  },
  {
+  "name": "朱大鹏",
+  "school": "北京航空航天大学",
+  "school_key": "buaa",
+  "title": "教授",
+  "department": "集成电路科学与工程学院",
+  "homepage": "http://shi.buaa.edu.cn/zhudapeng/zh_CN/index.htm",
+  "primary_direction": "device",
+  "status": "ok(reused)",
+  "lab_names": [],
+  "recruit_hits": [],
+  "page_title": null,
+  "text_len": 4310
+ },
+ {
   "name": "陆荣国",
   "school": "电子科技大学",
   "school_key": "uestc",
@@ -39926,20 +39940,6 @@
   "recruit_hits": [],
   "page_title": null,
   "text_len": 6614
- },
- {
-  "name": "朱大鹏",
-  "school": "北京航空航天大学",
-  "school_key": "buaa",
-  "title": "教授",
-  "department": "集成电路科学与工程学院",
-  "homepage": "http://shi.buaa.edu.cn/zhudapeng/zh_CN/index.htm",
-  "primary_direction": "device",
-  "status": "ok(reused)",
-  "lab_names": [],
-  "recruit_hits": [],
-  "page_title": null,
-  "text_len": 4310
  },
  {
   "name": "翟路生",
@@ -40312,22 +40312,6 @@
   "text_len": 3256
  },
  {
-  "name": "蔺杰",
-  "school": "西安交通大学",
-  "school_key": "xjtu",
-  "title": "教授",
-  "department": "电子与信息学部 计算机科学与技术学院",
-  "homepage": "https://gr.xjtu.edu.cn/jielin/zh_CN/index.htm",
-  "primary_direction": "digital_ai",
-  "status": "ok(reused)",
-  "lab_names": [
-   "Blank\n招生信息\n讲授课程\n论文发表\n毕业生去向\n教师团队"
-  ],
-  "recruit_hits": [],
-  "page_title": null,
-  "text_len": 1876
- },
- {
   "name": "尉国栋",
   "school": "北京航空航天大学",
   "school_key": "buaa",
@@ -40342,6 +40326,22 @@
   "recruit_hits": [],
   "page_title": null,
   "text_len": 3988
+ },
+ {
+  "name": "蔺杰",
+  "school": "西安交通大学",
+  "school_key": "xjtu",
+  "title": "教授",
+  "department": "电子与信息学部 计算机科学与技术学院",
+  "homepage": "https://gr.xjtu.edu.cn/jielin/zh_CN/index.htm",
+  "primary_direction": "digital_ai",
+  "status": "ok(reused)",
+  "lab_names": [
+   "Blank\n招生信息\n讲授课程\n论文发表\n毕业生去向\n教师团队"
+  ],
+  "recruit_hits": [],
+  "page_title": null,
+  "text_len": 1876
  },
  {
   "name": "李玲霞",
@@ -40505,6 +40505,20 @@
   "recruit_hits": [],
   "page_title": null,
   "text_len": 4749
+ },
+ {
+  "name": "张达",
+  "school": "浙江大学",
+  "school_key": "zju",
+  "title": "长聘教授",
+  "department": "集成电路学院·先进集成电路制造技术研究所",
+  "homepage": "https://person.zju.edu.cn/person/0026155",
+  "primary_direction": "device",
+  "status": "ok",
+  "lab_names": [],
+  "recruit_hits": [],
+  "page_title": "张达-浙江大学个人主页",
+  "text_len": 418
  },
  {
   "name": "孟升卫",
@@ -45213,20 +45227,6 @@
   "text_len": 3490
  },
  {
-  "name": "张达",
-  "school": "浙江大学",
-  "school_key": "zju",
-  "title": "长聘教授",
-  "department": "集成电路学院·先进集成电路制造技术研究所",
-  "homepage": "https://person.zju.edu.cn/person/0026155",
-  "primary_direction": "device",
-  "status": "ok",
-  "lab_names": [],
-  "recruit_hits": [],
-  "page_title": "张达-浙江大学个人主页",
-  "text_len": 418
- },
- {
   "name": "祁康成",
   "school": "电子科技大学",
   "school_key": "uestc",
@@ -49418,11 +49418,11 @@
   "department": "信息科学技术学院 电子工程与信息科学系",
   "homepage": "https://eeis.ustc.edu.cn/2017/0807/c2593a190450/page.htm",
   "primary_direction": "other",
-  "status": "ok",
+  "status": "fetch_failed",
   "lab_names": [],
   "recruit_hits": [],
-  "page_title": "黄自龙",
-  "text_len": 564
+  "page_title": null,
+  "text_len": 0
  },
  {
   "name": "张普华",
@@ -49432,11 +49432,11 @@
   "department": "信息科学技术学院 电子工程与信息科学系",
   "homepage": "https://eeis.ustc.edu.cn/2017/0807/c2593a190457/page.htm",
   "primary_direction": "other",
-  "status": "ok",
+  "status": "fetch_failed",
   "lab_names": [],
   "recruit_hits": [],
-  "page_title": "张普华",
-  "text_len": 564
+  "page_title": null,
+  "text_len": 0
  },
  {
   "name": "樊永祥",
