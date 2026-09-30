@@ -29,6 +29,9 @@ const data = rows.map((d) => ({
 }));
 
 const schoolList = [...new Set(rows.map((d) => SHORT[d.school] || d.school))].join(' · ');
+const RANKED = JSON.parse(fs.readFileSync(path.join(PROC, 'mentor_ranked.json'), 'utf8'));
+const TOTAL = RANKED.length;
+const N_SCHOOLS = new Set(RANKED.map((d) => d.school)).size;
 const allGroups = [...new Set(rows.flatMap((d) => d.group_names))].sort();
 
 const html = `<!DOCTYPE html>
@@ -78,7 +81,7 @@ const html = `<!DOCTYPE html>
 </style></head><body>
 <header>
   <h1>集成电路设计与 AI 交叉方向 · 导师推荐与招生信息</h1>
-  <p>覆盖 11 校 2114 位导师的全库排名 → 本页收录 <b>${rows.length} 位</b>：集成电路设计与 AI 交叉方向 ${rows.filter((d) => d.scope === 'focus').length} 位 ＋ 其他 IC 方向但<b>主页明确在招</b> ${rows.filter((d) => d.scope === 'recruiting').length} 位<br/>
+  <p>覆盖 ${N_SCHOOLS} 校/单位 ${TOTAL} 位导师的全库排名 → 本页收录 <b>${rows.length} 位</b>：集成电路设计与 AI 交叉方向 ${rows.filter((d) => d.scope === 'focus').length} 位 ＋ 其他 IC 方向但<b>主页明确在招</b> ${rows.filter((d) => d.scope === 'recruiting').length} 位<br/>
   课题组主页实抓 ${rows.filter((d) => d.page_status.startsWith('ok')).length} 位，其中 <b>${rows.filter((d) => d.recruit_signal_count > 0).length} 位有明确招生表述</b> ｜ 数据源：各校官网师资页 + Crossref（2008–2026）+ 撤稿/更正核查 ｜ 截至 2026-09-24<br/>
   <span style="display:inline-block;margin-top:8px;background:rgba(255,255,255,.16);padding:6px 10px;border-radius:7px;font-size:12px;line-height:1.6">
   ⚠️ 本页为<b>公开文献计量证据的分层</b>，<b>不构成学术评价、人事评价或报考建议</b>。T3/T4 通常源于姓名重名、英文署名不一致或中文文献未覆盖等数据原因，<b>不代表导师水平或指导质量</b>。使用前请阅读 <a href="../DISCLAIMER.md" style="color:#ffe9a8">免责声明</a> 与 <a href="../docs/使用指南.md" style="color:#ffe9a8">使用指南</a>。</span></p>
