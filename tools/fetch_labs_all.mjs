@@ -70,9 +70,9 @@ async function worker() {
     const f = txtPath(d.school_key, d.name_cn);
     let rec = {
       name: d.name_cn, school: d.school, school_key: d.school_key, title: d.title, department: d.department,
-      homepage: d.homepage, db_email: d.email, primary_direction: d.primary_direction,
+      homepage: d.homepage, primary_direction: d.primary_direction,
       ai_score: d.ai_score, recruit_score: d.recruit_score, fit: d.fit,
-      status: 'ok', lab_names: [], recruit_hits: [], page_email: null, page_title: null, text_len: 0,
+      status: 'ok', lab_names: [], recruit_hits: [], page_title: null, text_len: 0,
     };
     let txt = null;
     if (fs.existsSync(f) && fs.statSync(f).size > 1500) {
@@ -94,8 +94,7 @@ async function worker() {
       const labs = new Set();
       for (const m of txt.matchAll(LAB_PAT)) { const v = m[1].trim(); if (v.length >= 4 && v.length <= 34) labs.add(v); }
       rec.lab_names = [...labs].slice(0, 6);
-      const em = txt.match(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/g) || [];
-      rec.page_email = em.length ? [...new Set(em)].slice(0, 3).join(' ; ') : null;
+      // 注意：本项目不收录邮箱，因此不提取页面中的任何邮箱字段
     }
     results[i] = rec;
     done++;
@@ -109,4 +108,4 @@ const out = results.filter(Boolean);
 fs.writeFileSync(path.join(PROC, 'lab_pages.json'), JSON.stringify(out, null, 1));
 console.log(`\n完成 ${out.length} 人（新抓 ${fetched}，复用 ${reused}）`);
 console.log('有主页文本:', out.filter((r) => r.text_len > 0).length);
-console.log('页面自带邮箱:', out.filter((r) => r.page_email).length);
+console.log('识别到课题组名:', out.filter((r) => (r.lab_names || []).length).length);

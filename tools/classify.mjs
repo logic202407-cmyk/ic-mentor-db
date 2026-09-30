@@ -2,11 +2,14 @@
 // 供 score.mjs 引用
 export const VENUE_TIER = [
   // S：IC 领域最高殿堂 / 顶级体系结构会议（全部使用「整体词」匹配，避免 Microwave 误命中 MICRO）
-  [/(international )?solid-state circuits conference|(^|\W)ISSCC(\W|$)/i, 'S', 'ISSCC'],
+  // 注意 "international" 不可省略：否则会把 Asian/European Solid-State Circuits Conference 也判成 ISSCC
+  [/\binternational solid-state circuits conference\b|(^|\W)ISSCC(\W|$)/i, 'S', 'ISSCC'],
   [/journal of solid-state circuits|(^|\W)JSSC(\W|$)/i, 'S', 'JSSC'],
   [/symposium on vlsi (circuits|technology)/i, 'S', 'VLSI Symposium'],
   [/international symposium on computer architecture|(^|\W)ISCA(\W|$)/i, 'S', 'ISCA'],
-  [/international symposium on microarchitecture|(^|\W)MICRO-?\d*(\W|$)/i, 'S', 'MICRO'],
+  // MICRO 体系结构会议：必须区分大小写——带 i 标志时 "Micro & Nano Letters"、
+  // "Micro Electro Mechanical Systems"、"IEEE Micro" 都会被误判为 S 级
+  [/[Ii]nternational [Ss]ymposium on [Mm]icroarchitecture|(^|\W)MICRO-?\d*(\W|$)/, 'S', 'MICRO'],
   [/high-performance computer architecture|(^|\W)HPCA(\W|$)/i, 'S', 'HPCA'],
   [/architectural support for programming languages|(^|\W)ASPLOS(\W|$)/i, 'S', 'ASPLOS'],
   [/nature electronics/i, 'S', 'Nature Electronics'],
@@ -36,6 +39,12 @@ export const VENUE_TIER = [
   [/emerging and selected topics in circuits|(^|\W)JETCAS(\W|$)/i, 'B', 'JETCAS'],
   [/open journal of the solid-state circuits|(^|\W)OJSSCS(\W|$)/i, 'B', 'OJSSCS'],
   [/^IEEE Micro$/i, 'B', 'IEEE Micro'],
+  // 微纳/MEMS 方向的正规会议与期刊（此前被 MICRO 正则误判为 S 级，现按实际层级归 B）
+  [/international conference on micro electro mechanical systems|(^|\W)MEMS\s*\d{4}(\W|$)/i, 'B', 'IEEE MEMS'],
+  [/international conference on nano\/?micro engineered|(^|\W)NEMS(\W|$)/i, 'B', 'IEEE NEMS'],
+  [/micro\s*&\s*nano letters|(^|\W)MNL(\W|$)/i, 'B', 'Micro & Nano Letters'],
+  [/micro\/?nano sensors|international conference on micro and nan|journal of microelectromechanical systems|(^|\W)JMEMS(\W|$)/i, 'B', '微纳传感/JMEMS'],
+  [/micro\/nanopatterning|micro\/nanolithography|nanoscale|micro- and nano-systems/i, 'B', '微纳制造'],
   [/low power electronics and design|(^|\W)ISLPED(\W|$)/i, 'B', 'ISLPED'],
   [/asian and south pacific design automation|(^|\W)ASP-?DAC(\W|$)/i, 'B', 'ASP-DAC'],
   [/international symposium on circuits and systems|(^|\W)ISCAS(\W|$)/i, 'B', 'ISCAS'],
