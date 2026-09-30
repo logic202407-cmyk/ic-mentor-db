@@ -1,0 +1,112 @@
+{
+ "school": "中国科学院自动化研究所",
+ "school_key": "cas_ia",
+ "harvested_at": "2026-09-26",
+ "sources": [
+  "https://www.ime.ac.cn/kjrh/dsjs/ssds/ (+index_1..3)",
+  "https://www.ime.ac.cn/kjrh/dsjs/bsds/ (+index_1..3)",
+  "https://bdt.semi.ac.cn/yanjiusheng/channels/695.html",
+  "https://bdt.semi.ac.cn/yanjiusheng/ (导师简介 123 人详情页)",
+  "http://sim.cas.cn/yjs/dsjs/",
+  "http://www.sim.cas.cn/dwjs2016/zgjrc/jcdl/",
+  "http://www.sim.cas.cn/dwjs2016/fgjrc/jcdl/",
+  "https://sklp.ict.ac.cn/gysys/yjdw/yjy/ (+index_1,index_2)",
+  "https://sklp.ict.ac.cn/gysys/yjdw/fyjy/ (+index_1)",
+  "http://www.ia.cas.cn/yjsjy/dsjj/",
+  "http://www.sari.cas.cn/gradedu/szdw/znxx/"
+ ],
+ "coverage_note": "【由「中国科学院」总名录拆分】原口径：覆盖（共 449 人）：微电子研究所 106 人，半导体研究所 117 人，上海微系统与信息技术研究所 155 人，计算技术研究所 50 人，自动化研究所 6 人，上海高等研究院 15 人。\n微电子研究所：抓取所网「研究生教育-导师介绍」博士导师 4 页 + 硕士导师 4 页共 114 人去重名单，并逐人抓取所内专家库详情页，取得职称/所属研究中心/研究方向/获奖荣誉（涵盖设计、器件、工艺、EDA、封装、光刻、MEMS、AI 芯片等方向）。\n半导体研究所：抓取 bdt.semi.ac.cn「导师简介」全量 123 条（含实验室、职称、博导/硕导、招生专业、研究方向），并逐人抓取详情页补充简历与荣誉。\n上海微系统与信息技术研究所：抓取所网「研究生教育-导师介绍」表格全部 166 条（含研究室、课题组、博导/硕导、学科代码、研究方向），并从「队伍建设-正高级/副高级人才」五个领域名录（集成电路/传感器技术/量子科技/人工智能/通信与信息系统）解析 232 条职称记录，用于回填导师职称。\n计算技术研究所：仅收「处理器芯片全国重点实验室」(sklp.ict.ac.cn) 研究队伍 70 人（研究员 3 页 + 副研究员 2 页），逐人抓取详情页取得研究方向/导师类别/个人主页/荣誉。\n自动化研究所：仅收所网导师介绍中「集成电路设计」方向 6 人，并抓取各人国科大主页补全职称与研究领域。\n上海高等研究院：仅收「智能信息通信技术研究与发展中心」4 个方向（下一代移动通信网络/物联网与智能系统/感知与计算/工业人工智能）20 名研究生导师，逐人抓取详情页。\n未取得或未纳入：①上海微系统所 51 人的「个人主页」为 sourcedb.sim.cas.cn 域名，该主机不可达（fetch failed），故 homepage 记 null，职称已由人才名录回填；②18 人职称在公开页面未标注，title 记 null；③中国科学院大学集成电路学院（sme.ucas.ac.cn）研究生导师名录为按拼音排序的纯姓名列表，无研究方向字段，且其师资主体即微电子研究所导师，故未重复收录；④计算所非芯片方向（编译/操作系统/大数据/网络/深度学习算法等 20 人）与自动化所非集成电路方向、上海高研院纯 AI 软件方向按排除规则剔除；⑤未纳入纯材料化学、纯物理理论（第一性原理/凝聚态理论）、纯生物医学（脑机接口/医学影像）、纯激光与光纤器件、光伏/催化等方向共 50 人。\n筛选口径：方向关键词命中「集成电路设计、模拟/混合信号、射频/毫米波/太赫兹、处理器/体系结构、AI 加速器/智能芯片、存算一体/新型存储、EDA、集成电路测试与可靠性、半导体器件、半导体工艺与制造、封装与三维集成、半导体材料与器件、光电子/硅光、光电探测、MEMS/传感器、通信基带/SoC、量子芯片、宽禁带半导体、二维材料器件、功率半导体、光刻与半导体装备」之一即收录；仅命中纯材料化学、纯物理理论、纯软件算法、纯生物医学者剔除。\n全部记录均来自实际抓取的官方页面，原始 HTML/TXT 保留在 data/raw/cas/ 及各 *_detail 子目录以便复核；email 字段按要求一律为 null。\n拆分后本所共 6 人，department 字段统一为「自动化研究所」。",
+ "faculty": [
+  {
+   "name_cn": "张志伟",
+   "name_en": null,
+   "title": "研究员",
+   "department": "自动化研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "集成电路设计",
+    "处理器/体系结构",
+    "通信基带/无线SoC"
+   ],
+   "homepage": "https://people.ucas.ac.cn/~zhangzw",
+   "email": null,
+   "notes": "国家专用集成电路设计工程技术研究中心/集成电路设计方向"
+  },
+  {
+   "name_cn": "蒿杰",
+   "name_en": null,
+   "title": "研究员",
+   "department": "自动化研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "处理器/体系结构",
+    "AI加速器/智能芯片",
+    "量子芯片/量子计算"
+   ],
+   "homepage": "https://people.ucas.ac.cn/~haojie",
+   "email": null,
+   "notes": "国家专用集成电路设计工程技术研究中心/集成电路设计方向"
+  },
+  {
+   "name_cn": "程健",
+   "name_en": null,
+   "title": "研究员",
+   "department": "自动化研究所",
+   "is_phd_advisor": true,
+   "research_keywords": [
+    "处理器/体系结构",
+    "AI加速器/智能芯片",
+    "实现轻量化人工智能部署和应用"
+   ],
+   "homepage": "https://people.ucas.ac.cn/~chengjian",
+   "email": null,
+   "notes": "国家专用集成电路设计工程技术研究中心/集成电路设计方向"
+  },
+  {
+   "name_cn": "陈亮",
+   "name_en": null,
+   "title": "高级工程师",
+   "department": "自动化研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路设计",
+    "处理器/体系结构",
+    "AI加速器/智能芯片",
+    "通信基带/无线SoC"
+   ],
+   "homepage": "https://people.ucas.ac.cn/~liangchen",
+   "email": null,
+   "notes": "国家专用集成电路设计工程技术研究中心/集成电路设计方向"
+  },
+  {
+   "name_cn": "舒琳",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "自动化研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "AI加速器/智能芯片",
+    "MEMS/传感器",
+    "FPGA加速计算"
+   ],
+   "homepage": "https://people.ucas.ac.cn/~shulin",
+   "email": null,
+   "notes": "国家专用集成电路设计工程技术研究中心/集成电路设计方向"
+  },
+  {
+   "name_cn": "毛静娜",
+   "name_en": null,
+   "title": "副研究员",
+   "department": "自动化研究所",
+   "is_phd_advisor": false,
+   "research_keywords": [
+    "集成电路设计",
+    "通信基带/无线SoC",
+    "生物医学电路与系统"
+   ],
+   "homepage": "https://people.ucas.ac.cn/~maojn",
+   "email": null,
+   "notes": "国家专用集成电路设计工程技术研究中心/集成电路设计方向"
+  }
+ ]
+}

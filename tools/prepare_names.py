@@ -155,8 +155,16 @@ def build(name_cn, name_en):
 
 
 result = {}
+# 已拆分/归档的名录：data/raw/cas/roster_cas.json 是拆分前的「中国科学院」总名录，
+# 拆分后由 cas_ime / cas_semi / cas_simit / cas_ict / cas_ia / cas_sari 六个所分别承载，
+# 故此处跳过，避免同一批人被重复登记两次。
+SKIP_KEYS = {"cas"}
 for f in sorted(glob.glob(os.path.join(RAW, "*", "roster_*.json"))):
-    if "draft" in os.path.basename(f).lower() or "stage" in os.path.basename(f).lower():
+    base = os.path.basename(f).lower()
+    if "draft" in base or "stage" in base:
+        continue
+    if os.path.basename(os.path.dirname(f)) in SKIP_KEYS:
+        print("  跳过（已拆分）:", f)
         continue
     with open(f, encoding="utf-8") as fh:
         data = json.load(fh)
