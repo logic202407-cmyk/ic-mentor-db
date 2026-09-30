@@ -13,6 +13,10 @@ const rows = JSON.parse(fs.readFileSync(path.join(PROC, 'curated.json'), 'utf8')
 // 全库规模动态读取，避免文案与数据脱节
 const RANKED = JSON.parse(fs.readFileSync(path.join(PROC, 'mentor_ranked.json'), 'utf8'));
 const TOTAL = RANKED.length;
+// 口径数字全部动态计算，避免与数据脱节
+const OFF_FIELD_N = RANKED.reduce((a, b) => a + (b.n_off_field || 0), 0);
+const PAGE_OK = rows.filter((d) => String(d.page_status).startsWith('ok')).length;
+const DATA_DATE = new Date().toISOString().slice(0, 10);
 const N_SCHOOLS = new Set(RANKED.map((d) => d.school)).size;
 
 const schoolNames = [...new Set(RANKED.map((d) => d.school))];
@@ -51,9 +55,10 @@ let md = `# 集成电路设计与 AI 交叉方向 · 导师推荐与招生信息
 > **收录范围**：从 ${TOTAL} 位导师的全库排名（${N_SCHOOLS} 校/单位）中收录 **${rows.length} 位**，分两类：
 > ① **集成电路设计与 AI 交叉方向** ${rows.filter((d) => d.scope === 'focus').length} 位（数字/AI 芯片 · 体系结构 · 存算一体 · 模拟/电源 · EDA · 类脑 · 芯片安全 · 算力相关器件）；
 > ② **其他 IC 方向但主页明确在招** ${rows.filter((d) => d.scope === 'recruiting').length} 位（射频/毫米波 · 光电/硅光 · MEMS/生医 · 器件/工艺 · 量子等）。
-> **招生信息覆盖**：抓取 ${rows.filter((d) => d.page_status.startsWith('ok')).length} 位导师的个人/课题组主页，其中 **${recruiting.length} 位**主页有明确招生表述
+> **招生信息覆盖**：本页收录的 ${rows.length} 位中，有 ${PAGE_OK} 位的个人/课题组主页被抓取并解析，其中 **${recruiting.length} 位**主页有明确招生表述
+> **全库主页覆盖**：${N_SCHOOLS} 校/单位共 ${RANKED.filter((d) => d.homepage).length} 位导师有可访问的个人主页（占 ${(RANKED.filter((d) => d.homepage).length / TOTAL * 100).toFixed(1)}%）
 > **数据来源**：各高校官方师资页面 + Crossref 文献库（2008–2026）+ Crossref 撤稿/更正关系核查
-> **截至日期**：2026-09-24
+> **数据更新日期**：${DATA_DATE}
 
 ---
 
@@ -62,10 +67,11 @@ let md = `# 集成电路设计与 AI 交叉方向 · 导师推荐与招生信息
 | 步骤 | 口径 |
 |:--|:--|
 | 1. 全库构建 | ${N_SCHOOLS} 校/单位的相关院系官网逐人抓取师资名录（${TOTAL} 人），按「姓名拼音（含多音字异读组合）× 机构」逐人检索 Crossref 并做作者名 + 机构双校验 |
-| 2. 清洗 | 姓名精确匹配 + 作者本人机构校验 + 非工科期刊剔除（全库剔除 1400+ 篇同名他人论文） |
+| 2. 清洗 | 姓名精确匹配 + 作者本人机构校验 + 非工科期刊剔除（全库剔除 ${OFF_FIELD_N} 篇非电子/信息领域的同名他人论文） |
+| 2b. 反向补全 | 按 44 本 IC 期刊 ISSN 全量抓取 96 万篇论文并反向匹配（解决同名者挤占检索排序导致的漏检） |
 | 3. 评分 | 8 维综合分：产出强度 40% + 顶刊顶会密度 13% + 影响力 10% + 近期活跃 10% + 署名伦理 8% + 头衔平台 8% + 团队规模 6% + 诚信 5% |
 | 4. 范围筛选 | 保留集成电路设计本体及其 AI/算力交叉方向；剔除以射频/微波无源、光电材料、生物医学为主业者 |
-| 5. 课题组主页 | 抓取 ${rows.filter((d) => d.page_status.startsWith('ok')).length} 位导师主页，用精确句式提取**招生原话** |
+| 5. 课题组主页 | 抓取本页 ${PAGE_OK} 位导师主页，用精确句式提取**招生原话**；并做站点模板过滤，避免把研究所新闻栏当成本人招生表述 |
 | 6. 方向归类 | 按研究内容做多标签归类（一人可属多个方向，平均 2.5 个标签） |
 
 **S 级（顶刊顶会）**＝ISSCC / JSSC / VLSI Symposium / ISCA / MICRO / HPCA / ASPLOS / IEDM / Nature Electronics

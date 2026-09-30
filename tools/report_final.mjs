@@ -19,6 +19,7 @@ const DIRNAME = {
   quantum: '量子芯片 / 低温电子学', other: '其他 / 交叉方向',
 };
 // 按数据动态生成院校清单，避免写死后随扩校过时
+const DATA_DATE = new Date().toISOString().slice(0, 10);
 const schoolNames = [...new Set(rows.map((r) => r.school))];
 const schoolNamesStr = schoolNames.join('、');
 const schoolNamesDot = schoolNames.join(' · ');
@@ -79,8 +80,9 @@ let md = `# 集成电路 / 微电子 / 电子信息 / AI 芯片 —— 导师库
 > **覆盖院校（${schoolNames.length} 校/单位）**：${schoolNamesStr}
 > **入库规模**：**${rows.length} 位在职教师/导师**（${rows.filter((r) => r.n_ic_papers > 0).length} 位检索到可核实论文）
 > **分析框架**：academic-investigation skill 七步法（产出核实 → 质量评估 → 关系网络 → 异常检测 → 多源验证）
+> **检索方式**：逐人「姓名 × 机构」检索 + 按 44 本 IC 期刊 ISSN 全量抓取论文池反向匹配 + 产出侧机构复核
 > **数据源**：${schoolNames.length} 校/单位官方师资页（逐人抓取）＋ Crossref REST API（2008–2026，含作者机构校验）＋ 撤稿/更正关系核查
-> **生成日期**：2026-09-24
+> **生成日期**：${DATA_DATE}
 
 ---
 
