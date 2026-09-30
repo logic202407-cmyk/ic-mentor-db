@@ -109,7 +109,8 @@ async function enrichPerson(p, meta) {
         my_order: me.i + 1,
         n_authors: authors.length,
         aff_unknown: !!me.affUnknown,
-        coauthors: authors.map((a, idx) => ({ name: [a.given, a.family].filter(Boolean).join(' ') || a.name || '', order: idx + 1, aff: (a.affiliation || []).map((x) => x.name || '').join(' | ').slice(0, 160) })),
+        // 机构串必须经 affText 解码 HTML 实体后再存（否则下游正则匹配不到，如 Xi&#x2019;an ...）
+        coauthors: authors.map((a, idx) => ({ name: [a.given, a.family].filter(Boolean).join(' ') || a.name || '', order: idx + 1, aff: affText(a).slice(0, 400) })),
       });
     }
     return { papers, fetched: items.length, err: null };
