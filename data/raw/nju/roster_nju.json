@@ -2356,7 +2356,7 @@
   {
    "name_cn": "张志勇",
    "name_en": null,
-   "title": null,
+   "title": "教授",
    "department": "物理学院",
    "is_phd_advisor": false,
    "research_keywords": [
@@ -2364,7 +2364,7 @@
    ],
    "homepage": "http://physics.nju.edu.cn/szdw/qbmd/20240321/i262027.html",
    "email": null,
-   "notes": null
+   "notes": "职称由公开页面文本提取（严格窗口匹配）"
   }
  ]
 }

@@ -1304053,6 +1304053,112 @@
   "rank": 2226
  },
  {
+  "school": "南京大学",
+  "school_key": "nju",
+  "name_cn": "张志勇",
+  "title": "教授",
+  "department": "物理学院",
+  "is_phd_advisor": false,
+  "research_keywords": [
+   "半导体器件与量子器件"
+  ],
+  "homepage": "http://physics.nju.edu.cn/szdw/qbmd/20240321/i262027.html",
+  "notes": "职称由公开页面文本提取（严格窗口匹配）",
+  "primary_direction": "device",
+  "direction_scores": {
+   "device": 10,
+   "quantum": 9,
+   "rf": 1
+  },
+  "n_ic_papers": 3,
+  "n_all_papers": 4,
+  "n_off_field": 0,
+  "n_related_papers": 4,
+  "S": 0,
+  "A": 0,
+  "B": 0,
+  "recent3": 2,
+  "recent5": 2,
+  "citations": 66,
+  "first_author": 0,
+  "last_author": 1,
+  "advisor_first_ratio": 0,
+  "student_led_ratio": 1,
+  "n_students_est": 3,
+  "top_venues": [],
+  "score": 10.8,
+  "confidence": "medium",
+  "ambiguity": "low",
+  "recall_risk": "no",
+  "papers": [
+   {
+    "doi": "10.1021/acs.nanolett.6c03848",
+    "title": "Bridging-Carbon Reconstruction of π Conjugation Enables Bright Blue Emission from Crystalline Carbon Nitride Quantum Dots",
+    "year": 2026,
+    "venue": "Nano Letters",
+    "tier": null,
+    "venueKey": null,
+    "cited": 0,
+    "my_order": 9,
+    "n_authors": 10,
+    "dirs": [
+     "device",
+     "quantum"
+    ]
+   },
+   {
+    "doi": "10.1021/acsnano.5c02072",
+    "title": "Enhancing Interfacial Polarization through Electron Accumulation in Carbon Nanotube-Encapsulated α-Fe 2 O 3 for Highly Efficient Microwave Absorption",
+    "year": 2025,
+    "venue": "ACS Nano",
+    "tier": null,
+    "venueKey": null,
+    "cited": 56,
+    "my_order": 11,
+    "n_authors": 12,
+    "dirs": [
+     "rf"
+    ]
+   },
+   {
+    "doi": "10.1063/1.4948689",
+    "title": "Negative differential thermal conductance and thermal rectification effects across a graphene-based superconducting junction",
+    "year": 2016,
+    "venue": "Journal of Applied Physics",
+    "tier": null,
+    "venueKey": null,
+    "cited": 10,
+    "my_order": 2,
+    "n_authors": 2,
+    "dirs": [
+     "device"
+    ]
+   }
+  ],
+  "composite": 32.3,
+  "dim": {
+   "strength": 10.8,
+   "density": 0,
+   "impact": 76,
+   "active": 28.3,
+   "ethics": 94.3,
+   "team": 22.1,
+   "title": 55,
+   "integrity": null
+  },
+  "heur_flags": [
+   {
+    "rule_id": "C01",
+    "rule_name": "产出数量异常偏低",
+    "severity": "low",
+    "confidence": "L2",
+    "description": "年均发表 0.3 篇，低于 engineering 正常区间 (2.0-6.0 篇/年)"
+   }
+  ],
+  "integrity": null,
+  "rank": 2227
+ },
+ {
   "school": "华中科技大学",
   "school_key": "hust",
   "name_cn": "毛伏兵",
@@ -1304295,7 +1304401,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2227
+  "rank": 2228
  },
  {
   "school": "北京航空航天大学",
@@ -1304568,7 +1304674,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2228
+  "rank": 2229
  },
  {
   "school": "哈尔滨工业大学",
@@ -1304895,7 +1305001,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2229
+  "rank": 2230
  },
  {
   "school": "上海交通大学",
@@ -1305193,7 +1305299,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2230
+  "rank": 2231
  },
  {
   "school": "清华大学",
@@ -1305339,7 +1305445,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2231
+  "rank": 2232
  },
  {
   "school": "清华大学",
@@ -1305566,7 +1305672,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2232
+  "rank": 2233
  },
  {
   "school": "中国科学技术大学",
@@ -1305692,7 +1305798,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2233
+  "rank": 2234
  },
  {
   "school": "哈尔滨工业大学",
@@ -1306229,7 +1306335,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2234
+  "rank": 2235
  },
  {
   "school": "中国科学院",
@@ -1306506,7 +1306612,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2235
+  "rank": 2236
  },
  {
   "school": "中国科学院",
@@ -1306742,7 +1306848,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2236
+  "rank": 2237
  },
  {
   "school": "中国科学院",
@@ -1306911,7 +1307017,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2237
+  "rank": 2238
  },
  {
   "school": "电子科技大学",
@@ -1307053,7 +1307159,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2238
+  "rank": 2239
  },
  {
   "school": "电子科技大学",
@@ -1307227,7 +1307333,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2239
+  "rank": 2240
  },
  {
   "school": "东南大学",
@@ -1307371,7 +1307477,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2240
+  "rank": 2241
  },
  {
   "school": "电子科技大学",
@@ -1307490,7 +1307596,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2241
+  "rank": 2242
  },
  {
   "school": "上海交通大学",
@@ -1307627,7 +1307733,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2242
+  "rank": 2243
  },
  {
   "school": "清华大学",
@@ -1307760,7 +1307866,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2243
+  "rank": 2244
  },
  {
   "school": "西安电子科技大学",
@@ -1307871,7 +1307977,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2244
+  "rank": 2245
  },
  {
   "school": "北京大学",
@@ -1307962,7 +1308068,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2245
+  "rank": 2246
  },
  {
   "school": "哈尔滨工业大学",
@@ -1308229,7 +1308335,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2246
+  "rank": 2247
  },
  {
   "school": "天津大学",
@@ -1308545,7 +1308651,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2247
+  "rank": 2248
  },
  {
   "school": "北京航空航天大学",
@@ -1308790,7 +1308896,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2248
+  "rank": 2249
  },
  {
   "school": "天津大学",
@@ -1309070,7 +1309176,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2249
+  "rank": 2250
  },
  {
   "school": "西安交通大学",
@@ -1309225,7 +1309331,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2250
+  "rank": 2251
  },
  {
   "school": "华中科技大学",
@@ -1309809,7 +1309915,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2251
+  "rank": 2252
  },
  {
   "school": "西安电子科技大学",
@@ -1309947,7 +1310053,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2252
+  "rank": 2253
  },
  {
   "school": "中国科学院",
@@ -1310132,7 +1310238,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2253
+  "rank": 2254
  },
  {
   "school": "电子科技大学",
@@ -1310361,7 +1310467,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2254
+  "rank": 2255
  },
  {
   "school": "电子科技大学",
@@ -1310510,7 +1310616,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2255
+  "rank": 2256
  },
  {
   "school": "北京大学",
@@ -1310655,7 +1310761,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2256
+  "rank": 2257
  },
  {
   "school": "南京大学",
@@ -1310763,7 +1310869,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2257
+  "rank": 2258
  },
  {
   "school": "中国科学院",
@@ -1310978,7 +1311084,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2258
+  "rank": 2259
  },
  {
   "school": "北京大学",
@@ -1311167,7 +1311273,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2259
+  "rank": 2260
  },
  {
   "school": "中国科学技术大学",
@@ -1311327,7 +1311433,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2260
+  "rank": 2261
  },
  {
   "school": "北京大学",
@@ -1311461,7 +1311567,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2261
+  "rank": 2262
  },
  {
   "school": "电子科技大学",
@@ -1311682,7 +1311788,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2262
+  "rank": 2263
  },
  {
   "school": "南京大学",
@@ -1311828,7 +1311934,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2263
+  "rank": 2264
  },
  {
   "school": "哈尔滨工业大学",
@@ -1312152,7 +1312258,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2264
+  "rank": 2265
  },
  {
   "school": "西安电子科技大学",
@@ -1312310,7 +1312416,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2265
+  "rank": 2266
  },
  {
   "school": "东南大学",
@@ -1312466,7 +1312572,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2266
+  "rank": 2267
  },
  {
   "school": "中国科学院",
@@ -1312584,7 +1312690,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2267
+  "rank": 2268
  },
  {
   "school": "华中科技大学",
@@ -1312960,7 +1313066,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2268
+  "rank": 2269
  },
  {
   "school": "哈尔滨工业大学",
@@ -1313462,7 +1313568,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2269
+  "rank": 2270
  },
  {
   "school": "哈尔滨工业大学",
@@ -1313917,7 +1314023,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2270
+  "rank": 2271
  },
  {
   "school": "西安交通大学",
@@ -1314225,7 +1314331,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2271
+  "rank": 2272
  },
  {
   "school": "北京航空航天大学",
@@ -1314489,7 +1314595,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2272
+  "rank": 2273
  },
  {
   "school": "电子科技大学",
@@ -1314642,7 +1314748,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2273
+  "rank": 2274
  },
  {
   "school": "清华大学",
@@ -1314795,7 +1314901,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2274
+  "rank": 2275
  },
  {
   "school": "电子科技大学",
@@ -1314969,7 +1315075,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2275
+  "rank": 2276
  },
  {
   "school": "清华大学",
@@ -1315083,7 +1315189,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2276
+  "rank": 2277
  },
  {
   "school": "电子科技大学",
@@ -1315185,7 +1315291,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2277
+  "rank": 2278
  },
  {
   "school": "上海交通大学",
@@ -1315283,7 +1315389,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2278
+  "rank": 2279
  },
  {
   "school": "南京大学",
@@ -1315373,7 +1315479,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2279
+  "rank": 2280
  },
  {
   "school": "北京航空航天大学",
@@ -1315763,7 +1315869,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2280
+  "rank": 2281
  },
  {
   "school": "北京大学",
@@ -1315877,7 +1315983,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2281
+  "rank": 2282
  },
  {
   "school": "西安交通大学",
@@ -1315997,7 +1316103,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2282
+  "rank": 2283
  },
  {
   "school": "电子科技大学",
@@ -1316158,7 +1316264,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2283
+  "rank": 2284
  },
  {
   "school": "复旦大学",
@@ -1316278,7 +1316384,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2284
+  "rank": 2285
  },
  {
   "school": "南京大学",
@@ -1316415,7 +1316521,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2285
+  "rank": 2286
  },
  {
   "school": "中国科学院",
@@ -1316649,7 +1316755,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2286
+  "rank": 2287
  },
  {
   "school": "北京航空航天大学",
@@ -1316802,7 +1316908,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2287
+  "rank": 2288
  },
  {
   "school": "华中科技大学",
@@ -1317356,7 +1317462,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2288
+  "rank": 2289
  },
  {
   "school": "哈尔滨工业大学",
@@ -1317768,7 +1317874,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2289
+  "rank": 2290
  },
  {
   "school": "北京航空航天大学",
@@ -1318022,7 +1318128,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2290
+  "rank": 2291
  },
  {
   "school": "西安电子科技大学",
@@ -1318194,7 +1318300,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2291
+  "rank": 2292
  },
  {
   "school": "中国科学院",
@@ -1318302,7 +1318408,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2292
+  "rank": 2293
  },
  {
   "school": "电子科技大学",
@@ -1318556,7 +1318662,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2293
+  "rank": 2294
  },
  {
   "school": "东南大学",
@@ -1318663,7 +1318769,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2294
+  "rank": 2295
  },
  {
   "school": "西安电子科技大学",
@@ -1318780,7 +1318886,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2295
+  "rank": 2296
  },
  {
   "school": "西安交通大学",
@@ -1319049,7 +1319155,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2296
+  "rank": 2297
  },
  {
   "school": "华中科技大学",
@@ -1319337,7 +1319443,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2297
+  "rank": 2298
  },
  {
   "school": "中国科学院",
@@ -1319670,7 +1319776,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2298
+  "rank": 2299
  },
  {
   "school": "中国科学技术大学",
@@ -1319763,7 +1319869,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2299
+  "rank": 2300
  },
  {
   "school": "西安交通大学",
@@ -1319982,7 +1320088,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2300
+  "rank": 2301
  },
  {
   "school": "清华大学",
@@ -1320223,7 +1320329,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2301
+  "rank": 2302
  },
  {
   "school": "复旦大学",
@@ -1320447,7 +1320553,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2302
+  "rank": 2303
  },
  {
   "school": "东南大学",
@@ -1320599,7 +1320705,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2303
+  "rank": 2304
  },
  {
   "school": "电子科技大学",
@@ -1320748,7 +1320854,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2304
+  "rank": 2305
  },
  {
   "school": "浙江大学",
@@ -1320839,7 +1320945,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2305
+  "rank": 2306
  },
  {
   "school": "中国科学院",
@@ -1321021,7 +1321127,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2306
+  "rank": 2307
  },
  {
   "school": "哈尔滨工业大学",
@@ -1321421,7 +1321527,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2307
+  "rank": 2308
  },
  {
   "school": "哈尔滨工业大学",
@@ -1321672,7 +1321778,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2308
+  "rank": 2309
  },
  {
   "school": "北京大学",
@@ -1321792,7 +1321898,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2309
+  "rank": 2310
  },
  {
   "school": "哈尔滨工业大学",
@@ -1322377,7 +1322483,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2310
+  "rank": 2311
  },
  {
   "school": "华中科技大学",
@@ -1322702,7 +1322808,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2311
+  "rank": 2312
  },
  {
   "school": "西安电子科技大学",
@@ -1322882,7 +1322988,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2312
+  "rank": 2313
  },
  {
   "school": "北京大学",
@@ -1323037,7 +1323143,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2313
+  "rank": 2314
  },
  {
   "school": "清华大学",
@@ -1323163,7 +1323269,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2314
+  "rank": 2315
  },
  {
   "school": "哈尔滨工业大学",
@@ -1323478,7 +1323584,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2315
+  "rank": 2316
  },
  {
   "school": "天津大学",
@@ -1323808,7 +1323914,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2316
+  "rank": 2317
  },
  {
   "school": "电子科技大学",
@@ -1323943,7 +1324049,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2317
+  "rank": 2318
  },
  {
   "school": "北京航空航天大学",
@@ -1324185,7 +1324291,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2318
+  "rank": 2319
  },
  {
   "school": "电子科技大学",
@@ -1324305,7 +1324411,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2319
+  "rank": 2320
  },
  {
   "school": "西安电子科技大学",
@@ -1324458,7 +1324564,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2320
+  "rank": 2321
  },
  {
   "school": "华中科技大学",
@@ -1324622,7 +1324728,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2321
+  "rank": 2322
  },
  {
   "school": "中国科学技术大学",
@@ -1324769,7 +1324875,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2322
+  "rank": 2323
  },
  {
   "school": "西安电子科技大学",
@@ -1324943,7 +1325049,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2323
+  "rank": 2324
  },
  {
   "school": "中国科学院",
@@ -1325119,7 +1325225,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2324
+  "rank": 2325
  },
  {
   "school": "中国科学技术大学",
@@ -1325281,7 +1325387,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2325
+  "rank": 2326
  },
  {
   "school": "上海交通大学",
@@ -1325386,7 +1325492,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2326
+  "rank": 2327
  },
  {
   "school": "复旦大学",
@@ -1325476,7 +1325582,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2327
+  "rank": 2328
  },
  {
   "school": "西安交通大学",
@@ -1325765,7 +1325871,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2328
+  "rank": 2329
  },
  {
   "school": "东南大学",
@@ -1325871,7 +1325977,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2329
+  "rank": 2330
  },
  {
   "school": "电子科技大学",
@@ -1325974,7 +1326080,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2330
+  "rank": 2331
  },
  {
   "school": "南京大学",
@@ -1326150,7 +1326256,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2331
+  "rank": 2332
  },
  {
   "school": "电子科技大学",
@@ -1326321,7 +1326427,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2332
+  "rank": 2333
  },
  {
   "school": "北京大学",
@@ -1326479,7 +1326585,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2333
+  "rank": 2334
  },
  {
   "school": "哈尔滨工业大学",
@@ -1326600,7 +1326706,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2334
+  "rank": 2335
  },
  {
   "school": "北京大学",
@@ -1326756,7 +1326862,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2335
+  "rank": 2336
  },
  {
   "school": "华中科技大学",
@@ -1326941,7 +1327047,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2336
+  "rank": 2337
  },
  {
   "school": "西安交通大学",
@@ -1327231,7 +1327337,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2337
+  "rank": 2338
  },
  {
   "school": "天津大学",
@@ -1327430,7 +1327536,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2338
+  "rank": 2339
  },
  {
   "school": "中国科学院",
@@ -1327579,7 +1327685,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2339
+  "rank": 2340
  },
  {
   "school": "天津大学",
@@ -1327946,7 +1328052,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2340
+  "rank": 2341
  },
  {
   "school": "天津大学",
@@ -1328195,7 +1328301,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2341
+  "rank": 2342
  },
  {
   "school": "电子科技大学",
@@ -1328347,7 +1328453,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2342
+  "rank": 2343
  },
  {
   "school": "中国科学院",
@@ -1328544,7 +1328650,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2343
+  "rank": 2344
  },
  {
   "school": "南京大学",
@@ -1328650,7 +1328756,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2344
+  "rank": 2345
  },
  {
   "school": "电子科技大学",
@@ -1328760,7 +1328866,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2345
+  "rank": 2346
  },
  {
   "school": "北京大学",
@@ -1328920,7 +1329026,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2346
+  "rank": 2347
  },
  {
   "school": "西安交通大学",
@@ -1329177,7 +1329283,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2347
+  "rank": 2348
  },
  {
   "school": "中国科学院",
@@ -1329372,7 +1329478,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2348
+  "rank": 2349
  },
  {
   "school": "电子科技大学",
@@ -1329569,7 +1329675,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2349
+  "rank": 2350
  },
  {
   "school": "西安电子科技大学",
@@ -1329737,7 +1329843,7 @@
    }
   ],
   "integrity": null,
-  "rank": 2350
+  "rank": 2351
  },
  {
   "school": "电子科技大学",
@@ -1329893,7 +1329999,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2351
+  "rank": 2352
  },
  {
   "school": "电子科技大学",
@@ -1330036,7 +1330142,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 2352
+  "rank": 2353
  },
  {
   "school": "上海交通大学",
@@ -1330153,112 +1330259,6 @@
     "severity": "low",
     "confidence": "L2",
     "description": "年均发表 0.2 篇，低于 engineering 正常区间 (2.0-6.0 篇/年)"
-   }
-  ],
-  "integrity": null,
-  "rank": 2353
- },
- {
-  "school": "南京大学",
-  "school_key": "nju",
-  "name_cn": "张志勇",
-  "title": null,
-  "department": "物理学院",
-  "is_phd_advisor": false,
-  "research_keywords": [
-   "半导体器件与量子器件"
-  ],
-  "homepage": "http://physics.nju.edu.cn/szdw/qbmd/20240321/i262027.html",
-  "notes": null,
-  "primary_direction": "device",
-  "direction_scores": {
-   "device": 10,
-   "quantum": 9,
-   "rf": 1
-  },
-  "n_ic_papers": 3,
-  "n_all_papers": 4,
-  "n_off_field": 0,
-  "n_related_papers": 4,
-  "S": 0,
-  "A": 0,
-  "B": 0,
-  "recent3": 2,
-  "recent5": 2,
-  "citations": 66,
-  "first_author": 0,
-  "last_author": 1,
-  "advisor_first_ratio": 0,
-  "student_led_ratio": 1,
-  "n_students_est": 3,
-  "top_venues": [],
-  "score": 10.8,
-  "confidence": "medium",
-  "ambiguity": "low",
-  "recall_risk": "no",
-  "papers": [
-   {
-    "doi": "10.1021/acs.nanolett.6c03848",
-    "title": "Bridging-Carbon Reconstruction of π Conjugation Enables Bright Blue Emission from Crystalline Carbon Nitride Quantum Dots",
-    "year": 2026,
-    "venue": "Nano Letters",
-    "tier": null,
-    "venueKey": null,
-    "cited": 0,
-    "my_order": 9,
-    "n_authors": 10,
-    "dirs": [
-     "device",
-     "quantum"
-    ]
-   },
-   {
-    "doi": "10.1021/acsnano.5c02072",
-    "title": "Enhancing Interfacial Polarization through Electron Accumulation in Carbon Nanotube-Encapsulated α-Fe 2 O 3 for Highly Efficient Microwave Absorption",
-    "year": 2025,
-    "venue": "ACS Nano",
-    "tier": null,
-    "venueKey": null,
-    "cited": 56,
-    "my_order": 11,
-    "n_authors": 12,
-    "dirs": [
-     "rf"
-    ]
-   },
-   {
-    "doi": "10.1063/1.4948689",
-    "title": "Negative differential thermal conductance and thermal rectification effects across a graphene-based superconducting junction",
-    "year": 2016,
-    "venue": "Journal of Applied Physics",
-    "tier": null,
-    "venueKey": null,
-    "cited": 10,
-    "my_order": 2,
-    "n_authors": 2,
-    "dirs": [
-     "device"
-    ]
-   }
-  ],
-  "composite": 30.3,
-  "dim": {
-   "strength": 10.8,
-   "density": 0,
-   "impact": 76,
-   "active": 28.3,
-   "ethics": 94.3,
-   "team": 22.1,
-   "title": 30,
-   "integrity": null
-  },
-  "heur_flags": [
-   {
-    "rule_id": "C01",
-    "rule_name": "产出数量异常偏低",
-    "severity": "low",
-    "confidence": "L2",
-    "description": "年均发表 0.3 篇，低于 engineering 正常区间 (2.0-6.0 篇/年)"
    }
   ],
   "integrity": null,
@@ -1423174,6 +1423174,60 @@
  {
   "school": "浙江大学",
   "school_key": "zju",
+  "name_cn": "谭年熊",
+  "title": "教授",
+  "department": "集成电路学院·超大规模集成电路设计研究所",
+  "is_phd_advisor": true,
+  "research_keywords": [
+   "集成电路设计",
+   "模拟/混合信号集成电路",
+   "电力物联网芯片及其应用系统设计"
+  ],
+  "homepage": "https://mypage.zju.edu.cn/0005012",
+  "notes": "职称由公开页面文本提取（严格窗口匹配）",
+  "primary_direction": "analog",
+  "direction_scores": {
+   "analog": 8
+  },
+  "n_ic_papers": 0,
+  "n_all_papers": 0,
+  "n_off_field": 0,
+  "n_related_papers": 0,
+  "S": 0,
+  "A": 0,
+  "B": 0,
+  "recent3": 0,
+  "recent5": 0,
+  "citations": 0,
+  "first_author": 0,
+  "last_author": 0,
+  "advisor_first_ratio": null,
+  "student_led_ratio": null,
+  "n_students_est": 0,
+  "top_venues": [],
+  "score": 0,
+  "confidence": "low",
+  "ambiguity": "low",
+  "recall_risk": "yes",
+  "papers": [],
+  "composite": 12.3,
+  "dim": {
+   "strength": 0,
+   "density": 0,
+   "impact": 0,
+   "active": 0,
+   "ethics": 45,
+   "team": 0,
+   "title": 55,
+   "integrity": null
+  },
+  "heur_flags": [],
+  "integrity": null,
+  "rank": 3134
+ },
+ {
+  "school": "浙江大学",
+  "school_key": "zju",
   "name_cn": "周金芳",
   "title": "副教授",
   "department": "信息与电子工程学院·智能信号处理研究所",
@@ -1423222,7 +1423276,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 3134
+  "rank": 3135
  },
  {
   "school": "浙江大学",
@@ -1423275,7 +1423329,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 3135
+  "rank": 3136
  },
  {
   "school": "浙江大学",
@@ -1423331,7 +1423385,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 3136
+  "rank": 3137
  },
  {
   "school": "浙江大学",
@@ -1423388,7 +1423442,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 3137
+  "rank": 3138
  },
  {
   "school": "浙江大学",
@@ -1423444,7 +1423498,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 3138
+  "rank": 3139
  },
  {
   "school": "浙江大学",
@@ -1423501,7 +1423555,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 3139
+  "rank": 3140
  },
  {
   "school": "西安电子科技大学",
@@ -1423599,7 +1423653,7 @@
    }
   ],
   "integrity": null,
-  "rank": 3140
+  "rank": 3141
  },
  {
   "school": "东南大学",
@@ -1423679,7 +1423733,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 3141
+  "rank": 3142
  },
  {
   "school": "东南大学",
@@ -1423757,7 +1423811,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 3142
+  "rank": 3143
  },
  {
   "school": "天津大学",
@@ -1423857,7 +1423911,7 @@
    }
   ],
   "integrity": null,
-  "rank": 3143
+  "rank": 3144
  },
  {
   "school": "北京航空航天大学",
@@ -1423929,7 +1423983,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 3144
+  "rank": 3145
  },
  {
   "school": "中国科学院",
@@ -1424016,7 +1424070,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 3145
+  "rank": 3146
  },
  {
   "school": "华中科技大学",
@@ -1424106,7 +1424160,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 3146
+  "rank": 3147
  },
  {
   "school": "中国科学院",
@@ -1424182,7 +1424236,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 3147
+  "rank": 3148
  },
  {
   "school": "天津大学",
@@ -1424258,7 +1424312,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 3148
+  "rank": 3149
  },
  {
   "school": "电子科技大学",
@@ -1424338,7 +1424392,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 3149
+  "rank": 3150
  },
  {
   "school": "电子科技大学",
@@ -1424412,7 +1424466,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 3150
+  "rank": 3151
  },
  {
   "school": "电子科技大学",
@@ -1424489,7 +1424543,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 3151
+  "rank": 3152
  },
  {
   "school": "电子科技大学",
@@ -1424566,7 +1424620,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 3152
+  "rank": 3153
  },
  {
   "school": "西安交通大学",
@@ -1424643,7 +1424697,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 3153
+  "rank": 3154
  },
  {
   "school": "北京航空航天大学",
@@ -1424714,7 +1424768,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 3154
+  "rank": 3155
  },
  {
   "school": "中国科学院",
@@ -1424788,7 +1424842,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 3155
+  "rank": 3156
  },
  {
   "school": "中国科学院",
@@ -1424859,7 +1424913,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 3156
+  "rank": 3157
  },
  {
   "school": "中国科学院",
@@ -1424929,7 +1424983,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 3157
+  "rank": 3158
  },
  {
   "school": "中国科学院",
@@ -1424999,7 +1425053,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 3158
+  "rank": 3159
  },
  {
   "school": "北京大学",
@@ -1425072,7 +1425126,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 3159
+  "rank": 3160
  },
  {
   "school": "中国科学院",
@@ -1425148,7 +1425202,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 3160
+  "rank": 3161
  },
  {
   "school": "华中科技大学",
@@ -1425204,7 +1425258,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 3161
+  "rank": 3162
  },
  {
   "school": "东南大学",
@@ -1425260,7 +1425314,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 3162
+  "rank": 3163
  },
  {
   "school": "电子科技大学",
@@ -1425308,7 +1425362,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 3163
+  "rank": 3164
  },
  {
   "school": "中国科学技术大学",
@@ -1425363,7 +1425417,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 3164
+  "rank": 3165
  },
  {
   "school": "中国科学技术大学",
@@ -1425413,7 +1425467,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 3165
+  "rank": 3166
  },
  {
   "school": "中国科学技术大学",
@@ -1425463,7 +1425517,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 3166
+  "rank": 3167
  },
  {
   "school": "西安电子科技大学",
@@ -1425513,7 +1425567,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 3167
+  "rank": 3168
  },
  {
   "school": "西安电子科技大学",
@@ -1425569,7 +1425623,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 3168
+  "rank": 3169
  },
  {
   "school": "西安交通大学",
@@ -1425623,7 +1425677,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 3169
+  "rank": 3170
  },
  {
   "school": "西安交通大学",
@@ -1425678,7 +1425732,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 3170
+  "rank": 3171
  },
  {
   "school": "中国科学院",
@@ -1425733,7 +1425787,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 3171
+  "rank": 3172
  },
  {
   "school": "中国科学院",
@@ -1425788,7 +1425842,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 3172
+  "rank": 3173
  },
  {
   "school": "中国科学院",
@@ -1425842,7 +1425896,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 3173
+  "rank": 3174
  },
  {
   "school": "中国科学院",
@@ -1425897,7 +1425951,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 3174
+  "rank": 3175
  },
  {
   "school": "中国科学院",
@@ -1425951,7 +1426005,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 3175
+  "rank": 3176
  },
  {
   "school": "中国科学院",
@@ -1426006,7 +1426060,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 3176
+  "rank": 3177
  },
  {
   "school": "中国科学院",
@@ -1426061,7 +1426115,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 3177
+  "rank": 3178
  },
  {
   "school": "哈尔滨工业大学",
@@ -1426115,7 +1426169,7 @@
   },
   "heur_flags": [],
   "integrity": null,
-  "rank": 3178
+  "rank": 3179
  },
  {
   "school": "哈尔滨工业大学",
@@ -1426139,60 +1426193,6 @@
   "n_all_papers": 3,
   "n_off_field": 0,
   "n_related_papers": 3,
-  "S": 0,
-  "A": 0,
-  "B": 0,
-  "recent3": 0,
-  "recent5": 0,
-  "citations": 0,
-  "first_author": 0,
-  "last_author": 0,
-  "advisor_first_ratio": null,
-  "student_led_ratio": null,
-  "n_students_est": 0,
-  "top_venues": [],
-  "score": 0,
-  "confidence": "low",
-  "ambiguity": "low",
-  "recall_risk": "no",
-  "papers": [],
-  "composite": 10.3,
-  "dim": {
-   "strength": 0,
-   "density": 0,
-   "impact": 0,
-   "active": 0,
-   "ethics": 45,
-   "team": 0,
-   "title": 30,
-   "integrity": null
-  },
-  "heur_flags": [],
-  "integrity": null,
-  "rank": 3179
- },
- {
-  "school": "浙江大学",
-  "school_key": "zju",
-  "name_cn": "谭年熊",
-  "title": null,
-  "department": "集成电路学院·超大规模集成电路设计研究所",
-  "is_phd_advisor": true,
-  "research_keywords": [
-   "集成电路设计",
-   "模拟/混合信号集成电路",
-   "电力物联网芯片及其应用系统设计"
-  ],
-  "homepage": "https://mypage.zju.edu.cn/0005012",
-  "notes": null,
-  "primary_direction": "analog",
-  "direction_scores": {
-   "analog": 8
-  },
-  "n_ic_papers": 0,
-  "n_all_papers": 0,
-  "n_off_field": 0,
-  "n_related_papers": 0,
   "S": 0,
   "A": 0,
   "B": 0,

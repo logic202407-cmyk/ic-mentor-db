@@ -11,10 +11,10 @@ const PROC = path.join(REPO, 'data', 'processed');
 const RAWDIR = path.join(REPO, 'data', 'raw', 'lab_pages');
 fs.mkdirSync(RAWDIR, { recursive: true });
 
-// 抓取范围：全部有个人主页、且论文数 ≥3 的导师（覆盖推荐集之外的院系）
+// 抓取范围：全部有个人主页的导师（不限论文数——论文少的人也可能是活跃招生的青年教师）
 const ranked = JSON.parse(fs.readFileSync(path.join(PROC, 'mentor_ranked.json'), 'utf8'));
 const targets = ranked
-  .filter((d) => d.homepage && (d.n_ic_papers || 0) >= 3 && d.primary_direction !== 'other')
+  .filter((d) => d.homepage && /^https?:\/\//i.test(d.homepage))
   .map((d) => ({
     name_cn: d.name_cn, school: d.school, title: d.title, department: d.department,
     homepage: d.homepage, primary_direction: d.primary_direction,

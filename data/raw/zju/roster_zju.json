@@ -732,7 +732,7 @@
   {
    "name_cn": "谭年熊",
    "name_en": null,
-   "title": null,
+   "title": "教授",
    "department": "集成电路学院·超大规模集成电路设计研究所",
    "is_phd_advisor": true,
    "research_keywords": [
@@ -742,7 +742,7 @@
    ],
    "homepage": "https://mypage.zju.edu.cn/0005012",
    "email": null,
-   "notes": null
+   "notes": "职称由公开页面文本提取（严格窗口匹配）"
   },
   {
    "name_cn": "张培勇",
