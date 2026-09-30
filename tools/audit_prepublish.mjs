@@ -2,6 +2,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { execSync } from 'node:child_process';
+import vm from 'node:vm';
 
 const ROOT = process.cwd();
 const SELF = 'tools/audit_prepublish.mjs';   // 本脚本自身含有检测模式，跳过自检
@@ -114,6 +115,25 @@ const idx = fs.readFileSync('index.html', 'utf8');
 const idxLinks = [...idx.matchAll(/href="([^"#][^"]*)"/g)].map((m) => m[1]).filter((x) => !/^https?:/.test(x));
 const idxBad = idxLinks.filter((l) => !fs.existsSync(decodeURIComponent(l)));
 idxBad.length ? add(issues, `index.html 失效链接: ${idxBad.join(', ')}`) : add(oks, `落地页 ${idxLinks.length} 个链接全部有效`);
+
+// ── 9b. HTML 内嵌脚本的语法与 DOM 引用自洽（页面有 JS 错误就是白屏）──
+const htmlFiles = ['reports/导师推荐.html', 'reports/导师库.html'].filter((f) => fs.existsSync(f));
+const htmlErrs = [];
+for (const f of htmlFiles) {
+  const h = fs.readFileSync(f, 'utf8');
+  const m = h.match(/<script>([\s\S]*?)<\/script>/);
+  if (!m) { htmlErrs.push(`${path.basename(f)} 无 script 块`); continue; }
+  const js = m[1];
+  try { new vm.Script(js, { filename: f }); }
+  catch (e) { htmlErrs.push(`${path.basename(f)} JS 语法错误: ${e.message.slice(0, 80)}`); continue; }
+  const ids = [...new Set([...js.matchAll(/\$\('([\w-]+)'\)/g)].map((x) => x[1]))];
+  const missId = ids.filter((id) => !h.includes(`id="${id}"`));
+  if (missId.length) htmlErrs.push(`${path.basename(f)} 引用了不存在的 DOM id: ${missId.join(',')}`);
+  if (!/const DATA = \[/.test(js)) htmlErrs.push(`${path.basename(f)} 未内嵌数据`);
+  if (/fetch\s*\(|XMLHttpRequest/.test(js)) htmlErrs.push(`${path.basename(f)} 含网络请求（应为离线单文件）`);
+}
+htmlErrs.length ? add(issues, `HTML 页面问题: ${htmlErrs.join(' | ')}`)
+  : add(oks, `两个 HTML 页面 JS 语法正确、DOM 引用自洽、数据已内嵌且无网络请求`);
 
 // ── 10. 仓库体积与大文件 ──
 const sizes = tracked.filter((f) => fs.existsSync(f)).map((f) => [f, fs.statSync(f).size]);
