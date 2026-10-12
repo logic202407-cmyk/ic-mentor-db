@@ -1,9 +1,13 @@
-// net_html.mjs — 生成关系网络可视化（单文件 HTML，离线可用）
+// net_html.mjs — 关系网络可视化 v3：按院校分区
 //
-// v2 重写布局引擎，修复三类问题：
-//   ① 无自适应视口 —— 节点散落画布一角或溢出。现在每次布局后自动 fit-to-view
-//   ② 力导向塌成糊 —— 近似斥力太弱。改为 Barnes-Hut 四叉树精确斥力
-//   ③ 标签互相压叠 —— 改为分层显示 + 网格避让，只在缩放足够或节点重要时标名
+// 设计动机（用户反馈「太杂乱、关系不明确」）：
+//   力导向图与全量树状图都把「跨校流动」这一最有价值的信息淹没在数百条校内关系中。
+//   实测：师承子图 431 人分布在 20 所学校，但**跨校师承只有 8 条**。
+//
+// 新形式：
+//   视图1 院校分区族谱 —— 每校一个面板，校内师承画在面板内，跨校师承用高亮曲线跨面板连接
+//   视图2 院校关系矩阵 —— 20×20 矩阵，格值 = 两校之间的关系条数，一眼看出人员流动格局
+//   视图3 合作网络     —— 保留力导向，但按院校着色聚团
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -45,47 +49,45 @@ for (const [k, p] of Object.entries(net.nodes)) {
     team: (pr.roster || []).slice(0, 20),
   };
 }
-const trim = (e) => ({ s: e.s, t: e.t, n: e.n, lv: e.lv, sp: e.span, nt: e.note || '', inst: e.inst || '', ty: e.type || '' });
 const DATA = {
-  meta: net.meta, nodes: N, colors: COLORS,
-  advisor: net.advisor.map(trim),
+  meta: net.meta, nodes: N, colors: COLORS, short: SHORT,
+  advisor: net.advisor.map((e) => ({ s: e.s, t: e.t, n: e.n, lv: e.lv, sp: e.span || '', nt: e.note || '', inst: e.inst || '', ty: e.type || '' })),
   collab: net.collab.map((e) => ({ s: e.s, t: e.t, n: e.n, lv: 4 })),
   sibling: net.sibling.map((e) => ({ s: e.s, t: e.t, v: e.via })),
-  schoolCount: Object.keys(SHORT).length,
 };
 
 const html = `<!DOCTYPE html>
 <html lang="zh-CN"><head><meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>微电子导师关系网络</title>
+<title>微电子导师关系网络 · 按院校分区</title>
 <style>
 *{box-sizing:border-box}
 html,body{margin:0;height:100%;overflow:hidden}
 body{font:13px/1.6 -apple-system,"Segoe UI","Microsoft YaHei",sans-serif;background:#0b0e14;color:#e5e7eb}
 #app{display:flex;height:100%}
-#side{width:310px;flex:0 0 310px;background:#12161f;border-right:1px solid #232936;overflow-y:auto;padding:14px}
+#side{width:308px;flex:0 0 308px;background:#12161f;border-right:1px solid #232936;overflow-y:auto;padding:14px}
 #main{flex:1;position:relative;overflow:hidden}
 canvas{display:block;cursor:grab}
 canvas.drag{cursor:grabbing}
 h1{font-size:15px;margin:0 0 3px}
 h2{font-size:11px;margin:15px 0 6px;color:#7c8ba1;letter-spacing:.6px;text-transform:uppercase}
 .sub{font-size:11px;color:#5a6472;margin-bottom:11px}
-.tabs{display:flex;gap:5px;margin-bottom:10px}
-.tab{flex:1;padding:8px 4px;text-align:center;background:#1a1f2b;border:1px solid #232936;border-radius:7px;cursor:pointer;font-size:12px;color:#8b98a9;transition:.15s}
+.tabs{display:flex;gap:4px;margin-bottom:10px}
+.tab{flex:1;padding:7px 2px;text-align:center;background:#1a1f2b;border:1px solid #232936;border-radius:7px;cursor:pointer;font-size:11.5px;color:#8b98a9;transition:.15s}
 .tab:hover{background:#212736}
 .tab.on{background:#2563eb;border-color:#2563eb;color:#fff;font-weight:600}
 label{display:flex;align-items:center;gap:7px;padding:5px 0;cursor:pointer;font-size:12px;color:#c3ccd8}
 input[type=checkbox]{accent-color:#2563eb;width:14px;height:14px;cursor:pointer}
-input[type=range]{width:100%;accent-color:#2563eb;cursor:pointer}
-input[type=text],select{width:100%;padding:7px 9px;background:#0b0e14;border:1px solid #232936;border-radius:6px;color:#e5e7eb;font-size:12px;margin-top:3px}
-input[type=text]:focus,select:focus{outline:none;border-color:#2563eb}
+input[type=range]{width:100%;accent-color:#2563eb}
+input[type=text]{width:100%;padding:7px 9px;background:#0b0e14;border:1px solid #232936;border-radius:6px;color:#e5e7eb;font-size:12px;margin-top:3px}
+input[type=text]:focus{outline:none;border-color:#2563eb}
 .stat{display:flex;justify-content:space-between;padding:2px 0;font-size:12px;color:#8b98a9}
 .stat b{color:#e5e7eb}
 .lg{display:flex;align-items:center;gap:8px;padding:3px 0;color:#8b98a9;font-size:11px}
 .sw{width:24px;height:0;border-top-width:2px;border-top-style:solid;flex:0 0 24px}
 .dot{width:10px;height:10px;border-radius:50%;flex:0 0 10px}
-#tip{position:absolute;background:#1a1f2bee;border:1px solid #2f3744;border-radius:8px;padding:8px 11px;font-size:12px;pointer-events:none;display:none;max-width:270px;z-index:20;line-height:1.55;box-shadow:0 6px 20px #0008}
-#panel{position:absolute;right:0;top:0;width:340px;height:100%;background:#12161ff2;border-left:1px solid #232936;padding:14px;overflow-y:auto;display:none;backdrop-filter:blur(6px)}
+#tip{position:absolute;background:#1a1f2bee;border:1px solid #2f3744;border-radius:8px;padding:8px 11px;font-size:12px;pointer-events:none;display:none;max-width:280px;z-index:20;line-height:1.55;box-shadow:0 6px 20px #0008}
+#panel{position:absolute;right:0;top:0;width:342px;height:100%;background:#12161ff2;border-left:1px solid #232936;padding:14px;overflow-y:auto;display:none;backdrop-filter:blur(6px)}
 #panel h3{margin:0 0 2px;font-size:15px}
 .tag{display:inline-block;padding:1px 7px;border-radius:4px;font-size:11px;margin:2px 3px 2px 0;background:#1e2430;color:#9aa7b8}
 .rel{border-top:1px solid #1e2430;margin-top:9px;padding-top:7px;font-size:12px}
@@ -98,14 +100,17 @@ input[type=text]:focus,select:focus{outline:none;border-color:#2563eb}
 #zoom button:hover{background:#2a3242}
 .warn{background:#78350f1a;border:1px solid #92400e;border-radius:7px;padding:8px 10px;font-size:11px;color:#fbbf24;line-height:1.65;margin-top:9px}
 .warn b{color:#fcd34d}
+.cross{border-left:3px solid #f472b6;padding-left:8px;margin:8px 0;font-size:11.5px;color:#c3ccd8;line-height:1.75}
+.cross i{color:#f472b6;font-style:normal}
 </style></head><body>
 <div id="app">
   <div id="side">
     <h1>微电子导师关系网络</h1>
-    <div class="sub">基于 31,689 条共同署名记录的姓名+机构双校验结果</div>
+    <div class="sub">31,689 条共同署名记录 · 姓名+机构双校验</div>
     <div class="tabs">
-      <div class="tab on" data-v="lineage">师承图谱</div>
-      <div class="tab" data-v="collab">合作网络</div>
+      <div class="tab on" data-v="school">院校分区</div>
+      <div class="tab" data-v="matrix">关系矩阵</div>
+      <div class="tab" data-v="force">合作网络</div>
     </div>
 
     <h2>搜索</h2>
@@ -113,34 +118,35 @@ input[type=text]:focus,select:focus{outline:none;border-color:#2563eb}
     <div id="qres" style="font-size:11px;color:#5a6472;margin-top:5px;line-height:1.9"></div>
 
     <h2>过滤</h2>
-    <div style="font-size:11px;color:#7c8ba1">单位</div>
-    <select id="school"><option value="">全部（22 校/单位）</option></select>
-    <div style="font-size:11px;color:#7c8ba1;margin-top:9px">最小合作篇数：<b id="wv" style="color:#e5e7eb">3</b></div>
-    <input type="range" id="w" min="2" max="20" value="3"/>
+    <label><input type="checkbox" id="onlyCross"> <b style="color:#f472b6">只看跨校关系</b></label>
     <label><input type="checkbox" id="showAdv" checked> 显示师承关系</label>
     <label><input type="checkbox" id="showSib" checked> 显示同门关系</label>
-    <label><input type="checkbox" id="minComp"> 只显示 ≥3 人的师承组</label>
+    <div id="wWrap" style="display:none">
+      <div style="font-size:11px;color:#7c8ba1;margin-top:8px">最小合作篇数：<b id="wv" style="color:#e5e7eb">5</b></div>
+      <input type="range" id="w" min="2" max="25" value="5"/>
+    </div>
+
+    <div id="crossBox"></div>
 
     <h2>图例</h2>
     <div class="lg"><div class="sw" style="border-color:#fbbf24;border-top-width:3px"></div>L1 自述师承（页面明写）</div>
     <div class="lg"><div class="sw" style="border-color:#f59e0b;border-top-width:2px"></div>L2 学历×论文交叉证据</div>
-    <div class="lg"><div class="sw" style="border-color:#a16207"></div>L3 署名推断（无学历佐证）</div>
-    <div class="lg"><div class="sw" style="border-color:#3b82f6;border-top-style:dashed"></div>共同署名合作</div>
-    <div class="lg"><div class="sw" style="border-color:#10b981;border-top-style:dotted"></div>同门（同一导师）</div>
-    <div class="lg"><div class="dot" style="background:#2563eb"></div>节点大小 = 论文数</div>
+    <div class="lg"><div class="sw" style="border-color:#a16207"></div>L3 署名推断</div>
+    <div class="lg"><div class="sw" style="border-color:#f472b6;border-top-width:3px"></div><b style="color:#f472b6">跨校师承</b></div>
+    <div class="lg"><div class="sw" style="border-color:#10b981;border-top-style:dotted"></div>同门</div>
 
     <h2>统计</h2>
     <div class="stat"><span>当前显示节点</span><b id="sN">0</b></div>
     <div class="stat"><span>师承关系</span><b id="sA">0</b></div>
-    <div class="stat"><span>合作关系</span><b id="sC">0</b></div>
+    <div class="stat"><span>其中跨校</span><b id="sX" style="color:#f472b6">0</b></div>
     <div class="stat"><span>同门关系</span><b id="sS">0</b></div>
 
     <div class="warn">
-      <b>关系判定依据（按可靠性分四级）</b><br/>
+      <b>关系判定依据</b><br/>
       <b style="color:#fbbf24">L1</b>：本人页面<b>明写</b>「导师为／师从 XX」。<br/>
       <b style="color:#f59e0b">L2</b>：页面自述<b>毕业院校</b>＋该院校教授在其<b>早期论文中固定为末位作者</b>。<br/>
-      <b style="color:#a16207">L3</b>：仅「早期一作＋固定末位作者」署名模式，<b>无学历佐证</b>。<br/>
-      所有署名均经<b>姓名＋机构双重校验</b>；机构不符或无法判定者一律丢弃。<br/>
+      <b style="color:#a16207">L3</b>：仅署名模式推断，<b>无学历佐证</b>。<br/>
+      图上位置＝<b>现所在院校</b>；箭头由导师指向学生。<br/>
       本图只反映公开页面自述与论文署名可推断的关系，<b>不代表完整师承，也不构成任何评价</b>。
     </div>
   </div>
@@ -157,30 +163,156 @@ const DATA = ${JSON.stringify(DATA)};
 const N = DATA.nodes, COL = DATA.colors, ADV = DATA.advisor, COLB = DATA.collab, SIB = DATA.sibling;
 const $ = id => document.getElementById(id);
 const NAME = k => (N[k] ? N[k].n : k);
-const SCHOOL = k => (N[k] ? N[k].s : '?');
+const SCH = k => (N[k] ? N[k].s : '?');
 const NP = k => (N[k] ? (N[k].p || 0) : 0);
 
 const cv = $('cv'), ctx = cv.getContext('2d');
 let W = 0, H = 0, DPR = 1;
-let view = 'lineage', minW = 3, showAdv = true, showSib = true, minComp = false, schoolF = '';
-let pos = {}, sel = null, hover = null, G = null;
+let view = 'school', minW = 5, showAdv = true, showSib = true, onlyCross = false;
+let pos = {}, panels = [], sel = null, hover = null, G = null, rank = {};
 let scale = 1, ox = 0, oy = 0;
 
-// ══ 自适应视口：布局完成后把整图缩放到刚好填满画布 ══
+// ══════════ 通用：自适应视口 ══════════
 function fitView(pad = 40) {
   const xs = [], ys = [];
   for (const k of G.list) { const p = pos[k]; if (p) { xs.push(p.x); ys.push(p.y); } }
   if (!xs.length) return;
   const x0 = Math.min(...xs), x1 = Math.max(...xs), y0 = Math.min(...ys), y1 = Math.max(...ys);
   const gw = Math.max(x1 - x0, 1), gh = Math.max(y1 - y0, 1);
-  const s = Math.min((W - pad * 2) / gw, (H - pad * 2) / gh, 3.2);
-  scale = Math.max(0.05, s);
+  scale = Math.max(0.05, Math.min((W - pad * 2) / gw, (H - pad * 2) / gh, 3));
   ox = (W - gw * scale) / 2 - x0 * scale;
   oy = (H - gh * scale) / 2 - y0 * scale;
   $('zlv').textContent = Math.round(scale * 100) + '%';
 }
 
-// ══ Barnes-Hut 四叉树（力导向用，O(n log n) 而非 O(n²)）══
+// ══════════ 建图 ══════════
+function buildGraph() {
+  const mentorOf = {}, studentsOf = {};
+  const set = new Set(), edges = [];
+  const isCross = (e) => N[e.s] && N[e.t] && N[e.s].sc !== N[e.t].sc;
+  if (showAdv) {
+    for (const e of ADV) {
+      if (!N[e.s] || !N[e.t]) continue;
+      if (onlyCross && !isCross(e)) continue;
+      edges.push({ ...e, k: 'adv', cross: isCross(e) }); set.add(e.s); set.add(e.t);
+      (mentorOf[e.s] = mentorOf[e.s] || []).push(e.t);
+      (studentsOf[e.t] = studentsOf[e.t] || []).push(e.s);
+    }
+  }
+  if (showSib) {
+    for (const e of SIB) {
+      if (!N[e.s] || !N[e.t]) continue;
+      if (onlyCross && !isCross(e)) continue;
+      edges.push({ ...e, k: 'sib', cross: isCross(e) }); set.add(e.s); set.add(e.t);
+    }
+  }
+  if (view === 'force') {
+    for (const e of COLB) {
+      if (e.n < minW || !N[e.s] || !N[e.t]) continue;
+      edges.push({ ...e, k: 'col', cross: isCross(e) }); set.add(e.s); set.add(e.t);
+    }
+  }
+  let list = [...set];
+  const deg = {};
+  for (const e of edges) { deg[e.s] = (deg[e.s] || 0) + 1; deg[e.t] = (deg[e.t] || 0) + 1; }
+  list = list.filter((k) => deg[k]);
+  const ls = new Set(list);
+  return { list, edges: edges.filter((e) => ls.has(e.s) && ls.has(e.t)), mentorOf, studentsOf };
+}
+
+// ══════════ 视图1：院校分区族谱 ══════════
+function layoutSchool(list, g) {
+  const bySchool = {};
+  for (const k of list) (bySchool[SCH(k)] = bySchool[SCH(k)] || []).push(k);
+  // HEAD 需容纳「面板标题条」+ 首行节点标签（标签在节点上方约 17px）
+  const HEAD = 52, PADX = 22, PADY = 16, LABELPAD = 22;
+  const DX = 96, DY = 104, CGX = 44, CGY = 34;
+
+  // 每个学校内部：求连通分量 -> 每分量做树形布局
+  const blocks = [];
+  for (const [school, mem] of Object.entries(bySchool)) {
+    const mset = new Set(mem);
+    const adj = {}; for (const k of mem) adj[k] = new Set();
+    for (const e of g.edges) if (mset.has(e.s) && mset.has(e.t)) { adj[e.s].add(e.t); adj[e.t].add(e.s); }
+    const comp = {}, comps = [];
+    for (const k of mem) {
+      if (comp[k] !== undefined) continue;
+      const cid = comps.length, st = [k], m2 = []; comp[k] = cid;
+      while (st.length) { const x = st.pop(); m2.push(x); for (const y of adj[x]) if (comp[y] === undefined) { comp[y] = cid; st.push(y); } }
+      comps.push(m2);
+    }
+    comps.sort((a, b) => b.length - a.length);
+    const local = [];
+    let lx = 0, rowH = 0, maxX = 0;
+    for (const cm of comps) {
+      const cset = new Set(cm);
+      const depth = {};
+      const roots = cm.filter((k) => !(g.mentorOf[k] || []).some((m) => cset.has(m)));
+      const q = (roots.length ? roots : [cm[0]]).map((k) => [k, 0]);
+      const seen = new Set(q.map((x) => x[0]));
+      while (q.length) { const [k, d] = q.shift(); depth[k] = d; for (const s of (g.studentsOf[k] || [])) if (cset.has(s) && !seen.has(s)) { seen.add(s); q.push([s, d + 1]); } }
+      for (const k of cm) if (depth[k] === undefined) depth[k] = 0;
+      // 环安全的后代数
+      const sub = {};
+      for (const k of cm) {
+        const s2 = new Set([k]); const st = [...(g.studentsOf[k] || [])].filter((x) => cset.has(x)); let c = 0;
+        while (st.length) { const x = st.pop(); if (s2.has(x)) continue; s2.add(x); c++; for (const y of (g.studentsOf[x] || [])) if (cset.has(y) && !s2.has(y)) st.push(y); }
+        sub[k] = c;
+      }
+      const byD = {};
+      for (const k of cm) (byD[depth[k]] = byD[depth[k]] || []).push(k);
+      for (const d of Object.keys(byD)) byD[d].sort((a, b) => sub[b] - sub[a] || NP(b) - NP(a));
+      const rows = Object.keys(byD).map(Number).sort((a, b) => a - b);
+      const widest = Math.max(...rows.map((d) => byD[d].length));
+      const cw = Math.max(1, widest) * DX;
+      const chh = (rows[rows.length - 1] + 1) * DY;
+      if (lx > 0 && lx + cw > 900) { lx = 0; }
+      for (const d of rows) {
+        const arr = byD[d], rw = arr.length * DX;
+        const x0 = lx + (cw - rw) / 2 + DX / 2;
+        arr.forEach((k, i) => local.push({ k, x: x0 + i * DX, y: LABELPAD + d * DY }));
+      }
+      lx += cw + CGX; maxX = Math.max(maxX, lx);
+      rowH = Math.max(rowH, chh + CGY);
+      void rowH;
+    }
+    const w = Math.max(maxX, DX) + PADX * 2;
+    const h = (local.length ? Math.max(...local.map((p) => p.y)) + DY * 0.55 : DY) + PADY * 2 + HEAD;
+    blocks.push({ school, mem, local, w, h, color: COL[school] || '#64748b' });
+  }
+
+  // 面板打包：按面积降序，shelf 排布，宽度搜索贴合画布
+  blocks.sort((a, b) => b.w * b.h - a.w * a.h);
+  const pack = (MAXW) => {
+    let cx = 0, cy = 0, rowH = 0, maxRowW = 0;
+    const place = [];
+    for (const b of blocks) {
+      if (cx > 0 && cx + b.w > MAXW) { maxRowW = Math.max(maxRowW, cx - 16); cx = 0; cy += rowH + 16; rowH = 0; }
+      place.push({ b, x: cx, y: cy });
+      cx += b.w + 16; rowH = Math.max(rowH, b.h);
+    }
+    maxRowW = Math.max(maxRowW, cx - 16);
+    return { place, w: maxRowW, h: cy + rowH };
+  };
+  const target = (W && H) ? W / H : 1.58;
+  const totalW = blocks.reduce((a, b) => a + b.w + 16, 0) || 1;
+  let best = null;
+  for (let t = 0; t <= 44; t++) {
+    const MAXW = Math.max(900, totalW * (0.06 + t * 0.022));
+    const r = pack(MAXW);
+    const sc = Math.abs(Math.log((r.w / Math.max(r.h, 1)) / target)) + (r.w * r.h) / 4e7;
+    if (!best || sc < best.sc) best = { sc, ...r };
+  }
+  const res = {};
+  panels = [];
+  for (const { b, x, y } of best.place) {
+    for (const p of b.local) res[p.k] = { x: x + p.x, y: y + p.y + HEAD };
+    panels.push({ school: b.school, x, y, w: b.w, h: b.h, color: b.color, n: b.mem.length });
+  }
+  return res;
+}
+
+// ══════════ 视图3：力导向（含 Barnes-Hut） ══════════
 function buildTree(px, py, n) {
   let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
   for (let i = 0; i < n; i++) { if (px[i] < x0) x0 = px[i]; if (px[i] > x1) x1 = px[i]; if (py[i] < y0) y0 = py[i]; if (py[i] > y1) y1 = py[i]; }
@@ -189,14 +321,12 @@ function buildTree(px, py, n) {
   const ins = (node, i) => {
     if (node.c === null) {
       if (node.m === 0) { node.i = i; node.m = 1; node.cx = px[i]; node.cy = py[i]; return; }
-      // 拆分
       const oi = node.i; node.i = -1; node.c = [null, null, null, null];
       const half = node.s / 2;
       const q = (x, y) => (x >= node.x0 + half ? 1 : 0) + (y >= node.y0 + half ? 2 : 0);
       const oq = q(px[oi], py[oi]);
       node.c[oq] = { x0: node.x0 + (oq & 1 ? half : 0), y0: node.y0 + (oq & 2 ? half : 0), s: half, m: 1, cx: px[oi], cy: py[oi], c: null, i: oi };
-      ins(node, i);
-      return;
+      ins(node, i); return;
     }
     const half = node.s / 2;
     const q = (px[i] >= node.x0 + half ? 1 : 0) + (py[i] >= node.y0 + half ? 2 : 0);
@@ -211,8 +341,7 @@ function buildTree(px, py, n) {
     return m;
   };
   for (let i = 0; i < n; i++) ins(root, i);
-  acc(root);
-  return root;
+  acc(root); return root;
 }
 function bhForce(node, i, px, py, theta, out) {
   if (node.m === 0) return;
@@ -220,337 +349,313 @@ function bhForce(node, i, px, py, theta, out) {
   const d2 = dx * dx + dy * dy + 1e-6;
   if (node.c === null || (node.s * node.s) / d2 < theta * theta) {
     if (node.c === null && node.i === i) return;
-    const d = Math.sqrt(d2);
-    const f = node.m / d2;
-    out.x += (dx / d) * f; out.y += (dy / d) * f;
-    return;
+    const d = Math.sqrt(d2); const f = node.m / d2;
+    out.x += (dx / d) * f; out.y += (dy / d) * f; return;
   }
   for (const ch of node.c) if (ch) bhForce(ch, i, px, py, theta, out);
 }
-
 function layoutForce(list, edges) {
   const n = list.length;
-  const px = new Float32Array(n), py = new Float32Array(n);
-  const idx = {};
+  const px = new Float32Array(n), py = new Float32Array(n), idx = {};
   list.forEach((k, i) => { idx[k] = i; });
-  // 初始：黄金角螺旋，避免初始重叠
-  const R = Math.sqrt(n) * 26;
-  list.forEach((k, i) => {
-    const a = i * 2.399963, r = R * Math.sqrt((i + .5) / n);
-    px[i] = Math.cos(a) * r; py[i] = Math.sin(a) * r;
+  // 初始按院校分簇，让同校自然聚在一起
+  const byS = {};
+  list.forEach((k) => (byS[SCH(k)] = byS[SCH(k)] || []).push(k));
+  const schools = Object.keys(byS);
+  const R0 = Math.sqrt(n) * 24;
+  schools.forEach((s, si) => {
+    const a = (si / schools.length) * Math.PI * 2, r = R0 * (0.35 + 0.65 * ((si * 2654435761 % 1000) / 1000));
+    const cx0 = Math.cos(a) * r, cy0 = Math.sin(a) * r, arr = byS[s];
+    arr.forEach((k, i) => {
+      const ang = i * 2.399963, rr = 26 * Math.sqrt(i + 0.5);
+      px[idx[k]] = cx0 + Math.cos(ang) * rr; py[idx[k]] = cy0 + Math.sin(ang) * rr;
+    });
   });
-  // 度数与权重
-  const deg = new Float32Array(n), wsum = new Float32Array(n);
   const E = [];
-  for (const e of edges) {
-    const a = idx[e.s], b = idx[e.t];
-    if (a === undefined || b === undefined) continue;
-    const w = Math.min(4, 1 + (e.n || 1) * 0.25);
-    E.push([a, b, w]); deg[a] += w; deg[b] += w; wsum[a] += w; wsum[b] += w;
-  }
-  // 理想边长随节点数缩放
-  const k0 = Math.max(18, Math.min(90, 900 / Math.sqrt(n)));
-  const ITER = n > 1500 ? 320 : 420;
+  for (const e of edges) { const a = idx[e.s], b = idx[e.t]; if (a === undefined || b === undefined) continue; E.push([a, b, Math.min(4, 1 + (e.n || 1) * 0.25)]); }
+  const k0 = Math.max(16, Math.min(80, 820 / Math.sqrt(n)));
+  const ITER = n > 1800 ? 190 : n > 900 ? 280 : 400;
   const out = { x: 0, y: 0 };
   let temp = k0 * 1.6;
   for (let it = 0; it < ITER; it++) {
     const tree = buildTree(px, py, n);
     const fx = new Float32Array(n), fy = new Float32Array(n);
-    const theta = 0.9;
     for (let i = 0; i < n; i++) {
-      out.x = 0; out.y = 0;
-      bhForce(tree, i, px, py, theta, out);
-      const rep = (k0 * k0) * out.x, repY = (k0 * k0) * out.y;
-      const d = Math.sqrt(out.x * out.x + out.y * out.y) + 1e-9;
-      const cap = 900;
-      fx[i] += Math.max(-cap, Math.min(cap, rep / d * out.x / d * 0 + rep)) * 0;
-      fy[i] += 0;
+      out.x = 0; out.y = 0; bhForce(tree, i, px, py, 0.9, out);
+      const d = Math.hypot(out.x, out.y) + 1e-9, cap = 900;
       fx[i] += Math.max(-cap, Math.min(cap, out.x / d * (k0 * k0)));
       fy[i] += Math.max(-cap, Math.min(cap, out.y / d * (k0 * k0)));
     }
-    // 引力（沿边）
     for (const [a, b, w] of E) {
-      let dx = px[a] - px[b], dy = py[a] - py[b];
-      const d = Math.sqrt(dx * dx + dy * dy) + 1e-6;
+      const dx = px[a] - px[b], dy = py[a] - py[b], d = Math.hypot(dx, dy) + 1e-6;
       const f = (d * d) / (k0 * 1.1) * w * 0.55;
-      fx[a] -= dx / d * f; fy[a] -= dy / d * f;
-      fx[b] += dx / d * f; fy[b] += dy / d * f;
+      fx[a] -= dx / d * f; fy[a] -= dy / d * f; fx[b] += dx / d * f; fy[b] += dy / d * f;
     }
-    // 向心（孤立点别飞走）
     for (let i = 0; i < n; i++) {
-      const d = Math.sqrt(px[i] * px[i] + py[i] * py[i]) + 1e-6;
-      const g = deg[i] === 0 ? 0.06 : 0.012;
-      fx[i] -= px[i] / d * d * g; fy[i] -= py[i] / d * d * g;
+      const d = Math.hypot(px[i], py[i]) + 1e-6;
+      fx[i] -= px[i] * 0.012; fy[i] -= py[i] * 0.012; void d;
     }
-    // 位移限幅
     for (let i = 0; i < n; i++) {
-      const d = Math.sqrt(fx[i] * fx[i] + fy[i] * fy[i]) + 1e-9;
-      const step = Math.min(d, temp);
+      const d = Math.hypot(fx[i], fy[i]) + 1e-9, step = Math.min(d, temp);
       px[i] += fx[i] / d * step; py[i] += fy[i] / d * step;
     }
-    // 每轮归一化到稳定尺度，避免整体漂移
-    let mx = 0, my = 0;
-    for (let i = 0; i < n; i++) { mx += px[i]; my += py[i]; }
-    mx /= n; my /= n;
-    for (let i = 0; i < n; i++) { px[i] -= mx; py[i] -= my; }
+    let mx = 0, my = 0; for (let i = 0; i < n; i++) { mx += px[i]; my += py[i]; }
+    mx /= n; my /= n; for (let i = 0; i < n; i++) { px[i] -= mx; py[i] -= my; }
     temp = Math.max(k0 * 0.12, temp * 0.975);
   }
+  const res = {}; list.forEach((k, i) => { res[k] = { x: px[i], y: py[i] }; });
+  return res;
+}
+
+// ══════════ 视图2：院校关系矩阵 ══════════
+let M = null;
+function buildMatrix() {
+  const schools = [...new Set(G.list.map(SCH))].sort();
+  const cnt = {}, pairs = {};
+  for (const e of G.edges) {
+    const a = SCH(e.s), b = SCH(e.t);
+    if (a === b) { cnt[a + '|' + a] = (cnt[a + '|' + a] || 0) + 1; continue; }
+    const k = [a, b].sort().join('|');
+    cnt[k] = (cnt[k] || 0) + 1;
+    (pairs[k] = pairs[k] || []).push(e);
+  }
+  let maxOff = 1, maxDiag = 1;
+  for (const [k, v] of Object.entries(cnt)) {
+    const [a, b] = k.split('|');
+    if (a === b) maxDiag = Math.max(maxDiag, v); else maxOff = Math.max(maxOff, v);
+  }
+  const CELL = Math.max(22, Math.min(40, 720 / Math.max(schools.length, 1)));
+  const LEFT = 96, TOP = 96;
   const res = {};
-  list.forEach((k, i) => { res[k] = { x: px[i], y: py[i] }; });
-  void wsum;
+  panels = [];
+  for (let i = 0; i < schools.length; i++) {
+    for (let j = 0; j < schools.length; j++) {
+      const a = schools[i], b = schools[j];
+      const k = [a, b].sort().join('|');
+      const v = cnt[k] || 0;
+      panels.push({ mi: i, mj: j, a, b, v, x: LEFT + j * CELL, y: TOP + i * CELL, s: CELL, diag: a === b, list: pairs[k] || [] });
+    }
+  }
+  res._schools = schools; res._cell = CELL; res._left = LEFT; res._top = TOP;
+  res._maxOff = maxOff; res._maxDiag = maxDiag;
+  M = res;
   return res;
 }
 
-// ══ 师承图谱：每个连通分量做树形布局，分量按尺寸打包 ══
-function layoutLineage(list, g) {
-  const inSet = new Set(list);
-  const adj = {};
-  for (const k of list) adj[k] = new Set();
-  for (const e of g.edges) if (inSet.has(e.s) && inSet.has(e.t)) { adj[e.s].add(e.t); adj[e.t].add(e.s); }
-  const comp = {}, comps = [];
-  for (const k of list) {
-    if (comp[k] !== undefined) continue;
-    const cid = comps.length, st = [k], mem = [];
-    comp[k] = cid;
-    while (st.length) { const x = st.pop(); mem.push(x); for (const y of adj[x]) if (comp[y] === undefined) { comp[y] = cid; st.push(y); } }
-    comps.push(mem);
-  }
-  comps.sort((a, b) => b.length - a.length);
-  const LABELPAD = 10;
-  // 两档间距：
-  //   大组（≥3 人）—— 有结构可看，用宽间距，标签清晰
-  //   小组（2 人）  —— 数量多、形态雷同，压缩成密集「目录带」，避免霸占画面
-  const BIG = { DX: 116, DY: 124, GAPX: 74, GAPY: 88 };
-  const SMALL = { DX: 52, DY: 74, GAPX: 22, GAPY: 26 };
-
-  const buildBlock = (mem, cfg) => {
-    const mset = new Set(mem);
-    const depth = {};
-    const roots = mem.filter((k) => !(g.mentorOf[k] || []).some((m) => mset.has(m)));
-    const q = (roots.length ? roots : [mem[0]]).map((k) => [k, 0]);
-    const seen0 = new Set(q.map((x) => x[0]));
-    while (q.length) {
-      const [k, d] = q.shift(); depth[k] = d;
-      for (const s of (g.studentsOf[k] || [])) if (mset.has(s) && !seen0.has(s)) { seen0.add(s); q.push([s, d + 1]); }
-    }
-    for (const k of mem) if (depth[k] === undefined) depth[k] = 0;
-    // ⚠️ 师承图可能存在环（A↔B 互为导师），递归计数会栈溢出 —— 用带 visited 的迭代
-    const sub = {};
-    for (const k of mem) {
-      const seen2 = new Set([k]);
-      const stack = [...(g.studentsOf[k] || [])].filter((s) => mset.has(s));
-      let c = 0;
-      while (stack.length) {
-        const x = stack.pop();
-        if (seen2.has(x)) continue;
-        seen2.add(x); c++;
-        for (const y of (g.studentsOf[x] || [])) if (mset.has(y) && !seen2.has(y)) stack.push(y);
-      }
-      sub[k] = c;
-    }
-    const byD = {};
-    for (const k of mem) (byD[depth[k]] = byD[depth[k]] || []).push(k);
-    for (const d of Object.keys(byD)) byD[d].sort((a, b) => sub[b] - sub[a] || NP(b) - NP(a));
-    const maxRow = Math.max(...Object.values(byD).map((a) => a.length));
-    const maxD = Math.max(...Object.keys(byD).map(Number));
-    return { mem, byD, cfg, w: Math.max(2, maxRow) * cfg.DX + cfg.GAPX * 2, h: (maxD + 1) * cfg.DY + LABELPAD };
-  };
-  const bigBlocks = comps.filter((c) => c.length >= 3).map((c) => buildBlock(c, BIG));
-  const smallBlocks = comps.filter((c) => c.length < 3).map((c) => buildBlock(c, SMALL));
-
-  const packBlocks = (blocks, MAXW, startY) => {
-    const res = {};
-    let cx = 0, cy = startY, rowH = 0, maxRowW = 0;
-    for (const b of blocks) {
-      if (cx > 0 && cx + b.w > MAXW) { maxRowW = Math.max(maxRowW, cx - b.cfg.GAPX); cx = 0; cy += rowH + b.cfg.GAPY; rowH = 0; }
-      for (const d of Object.keys(b.byD)) {
-        const arr = b.byD[d];
-        const rowW = arr.length * b.cfg.DX;
-        const x0 = cx + b.cfg.GAPX + (b.w - b.cfg.GAPX * 2 - rowW) / 2 + b.cfg.DX / 2;
-        arr.forEach((k, i) => { res[k] = { x: x0 + i * b.cfg.DX, y: cy + LABELPAD + Number(d) * b.cfg.DY }; });
-      }
-      cx += b.w + b.cfg.GAPX; rowH = Math.max(rowH, b.h);
-    }
-    maxRowW = Math.max(maxRowW, cx - (blocks.length ? blocks[blocks.length - 1].cfg.GAPX : 0));
-    return { res, w: maxRowW, h: cy + rowH - startY };
-  };
-
-  // 搜索大组的最优打包宽度（贴合画布长宽比）
-  const target = (W && H) ? W / H : 1.58;
-  const totalW = bigBlocks.reduce((a, b) => a + b.w + b.cfg.GAPX, 0) || 1;
-  let best = null;
-  for (let t = 0; t <= 44; t++) {
-    const MAXW = Math.max(700, totalW * (0.05 + t * 0.024));
-    const r = packBlocks(bigBlocks, MAXW, 0);
-    const score = Math.abs(Math.log((r.w / Math.max(r.h, 1)) / target));
-    if (!best || score < best.score) best = { score, MAXW, ...r };
-  }
-  // 小组作为「目录带」放在大组下方，用其自身的紧凑间距横向铺开
-  const res = { ...best.res };
-  const smallMaxW = Math.max(best.w, 1400);
-  const small = packBlocks(smallBlocks, smallMaxW, 0);
-  const yOffset = best.h + (smallBlocks.length ? 110 : 0);
-  for (const [k, p] of Object.entries(small.res)) res[k] = { x: p.x, y: p.y + yOffset };
-  return res;
-}
-
-// ══ 建图 ══
-function buildGraph() {
-  const mentorOf = {}, studentsOf = {};
-  for (const e of ADV) { if (!N[e.s] || !N[e.t]) continue; (mentorOf[e.s] = mentorOf[e.s] || []).push(e.t); (studentsOf[e.t] = studentsOf[e.t] || []).push(e.s); }
-  const set = new Set(), edges = [];
-  if (showAdv) for (const e of ADV) if (N[e.s] && N[e.t]) { edges.push({ ...e, k: 'adv' }); set.add(e.s); set.add(e.t); }
-  if (showSib) for (const e of SIB) if (N[e.s] && N[e.t]) { edges.push({ ...e, k: 'sib' }); set.add(e.s); set.add(e.t); }
-  if (view === 'collab') {
-    for (const e of COLB) { if (e.n < minW || !N[e.s] || !N[e.t]) continue; edges.push({ ...e, k: 'col' }); set.add(e.s); set.add(e.t); }
-  }
-  let list = [...set];
-  if (schoolF) list = list.filter((k) => N[k].s === schoolF);
-  const keep = new Set(list);
-  let fe = edges.filter((e) => keep.has(e.s) && keep.has(e.t));
-  // 连接度
-  const deg = {};
-  for (const e of fe) { deg[e.s] = (deg[e.s] || 0) + 1; deg[e.t] = (deg[e.t] || 0) + 1; }
-  if (view !== 'collab') list = list.filter((k) => deg[k]);          // 师承视图去掉孤立点
-  if (minComp && view !== 'collab') {
-    // 只保留 ≥3 人的连通分量
-    const adj = {}; for (const k of list) adj[k] = new Set();
-    for (const e of fe) if (adj[e.s] && adj[e.t]) { adj[e.s].add(e.t); adj[e.t].add(e.s); }
-    const comp = {}; const big = new Set();
-    for (const k of list) {
-      if (comp[k] !== undefined) continue;
-      const st = [k], mem = []; comp[k] = 1;
-      while (st.length) { const x = st.pop(); mem.push(x); for (const y of adj[x]) if (comp[y] === undefined) { comp[y] = 1; st.push(y); } }
-      if (mem.length >= 3) for (const m of mem) big.add(m);
-    }
-    list = list.filter((k) => big.has(k));
-  }
-  const ls = new Set(list);
-  fe = fe.filter((e) => ls.has(e.s) && ls.has(e.t));
-  return { list, edges: fe, mentorOf, studentsOf };
-}
-
-let rank = null;   // 标签优先级：论文数排名
+// ══════════ 重建 ══════════
 function computeRank() {
   rank = {};
-  const arr = G.list.slice().sort((a, b) => NP(b) - NP(a));
-  arr.forEach((k, i) => { rank[k] = i; });
+  G.list.slice().sort((a, b) => NP(b) - NP(a)).forEach((k, i) => { rank[k] = i; });
 }
-
 function rebuild(refit) {
   G = buildGraph();
-  pos = view === 'collab' ? layoutForce(G.list, G.edges) : layoutLineage(G.list, G);
+  if (view === 'school') { pos = layoutSchool(G.list, G); }
+  else if (view === 'force') { pos = layoutForce(G.list, G.edges); panels = []; }
+  else { buildMatrix(); pos = {}; }
   computeRank();
-  $('sN').textContent = G.list.length;
+  $('sN').textContent = view === 'matrix' ? (M ? M._schools.length : 0) : G.list.length;
   $('sA').textContent = G.edges.filter((e) => e.k === 'adv').length;
-  $('sC').textContent = G.edges.filter((e) => e.k === 'col').length;
+  $('sX').textContent = G.edges.filter((e) => e.k === 'adv' && e.cross).length;
   $('sS').textContent = G.edges.filter((e) => e.k === 'sib').length;
-  if (refit) fitView();
+  if (refit) fitView(view === 'matrix' ? 30 : 40);
   render();
 }
 
-const radius = (k) => 4.5 + Math.min(14, Math.sqrt(NP(k)) * 1.15);
-const colorOf = (k) => COL[N[k] ? N[k].s : ''] || '#64748b';
+const radius = (k) => 5 + Math.min(13, Math.sqrt(NP(k)) * 1.12);
+const colorOf = (k) => COL[SCH(k)] || '#64748b';
 
-// ══ 渲染 ══
+// ══════════ 渲染 ══════════
 function render() {
   if (!G) return;
   ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
   ctx.fillStyle = '#0b0e14'; ctx.fillRect(0, 0, W, H);
+  if (view === 'matrix') { renderMatrix(); return; }
   ctx.setTransform(DPR * scale, 0, 0, DPR * scale, DPR * ox, DPR * oy);
 
-  // ── 边 ──
+  // 院校面板底板
+  if (view === 'school') {
+    for (const p of panels) {
+      ctx.fillStyle = p.color + '12';
+      ctx.strokeStyle = p.color + '55';
+      ctx.lineWidth = 1.4 / Math.max(scale, .3);
+      roundRect(p.x, p.y, p.w, p.h, 12); ctx.fill(); ctx.stroke();
+    }
+  }
+
+  // 边
+  // 跨校边数量不多但跨度大，默认淡显避免画面被长曲线割碎；
+  // 选中某节点时，与它相关的跨校边恢复高亮。
+  const selTouch = (e) => sel && (e.s === sel || e.t === sel);
   for (const e of G.edges) {
     const a = pos[e.s], b = pos[e.t]; if (!a || !b) continue;
     if (e.k === 'adv') {
-      ctx.strokeStyle = e.lv === 1 ? '#fbbf24' : e.lv === 2 ? '#f59e0b' : '#a16207';
-      ctx.lineWidth = (e.lv === 1 ? 2.8 : e.lv === 2 ? 1.9 : 1.0) / Math.max(scale, .35) + Math.min(1.8, (e.n || 2) * .18);
+      const isCross = e.cross;
+      const lit = selTouch(e);
+      const base = e.lv === 1 ? '#fbbf24' : e.lv === 2 ? '#f59e0b' : '#a16207';
+      const col = isCross ? (lit ? '#f472b6' : 'rgba(244,114,182,.42)') : (sel && !lit ? 'rgba(120,113,108,.35)' : base);
+      ctx.strokeStyle = col;
+      const wBase = isCross ? (lit ? 2.8 : 1.5) : (e.lv === 1 ? 2.4 : e.lv === 2 ? 1.7 : 0.9);
+      ctx.lineWidth = wBase / Math.max(scale, .3) + Math.min(1.6, (e.n || 2) * .16) * (isCross ? 0.4 : 1);
       ctx.setLineDash([]);
-      arrow(a, b, radius(e.t), e.lv === 1 ? '#fbbf24' : e.lv === 2 ? '#f59e0b' : '#a16207');
+      arrow(a, b, radius(e.t) + (isCross && lit ? 3 : 0), col === 'rgba(244,114,182,.42)' ? '#f472b6' : col);
     } else if (e.k === 'col') {
-      ctx.strokeStyle = 'rgba(59,130,246,' + Math.min(.55, .12 + e.n * .04) + ')';
-      ctx.lineWidth = (.6 + Math.min(2.2, e.n * .15)) / Math.max(scale, .4);
+      ctx.strokeStyle = 'rgba(99,102,241,' + Math.min(.5, .1 + e.n * .035) + ')';
+      ctx.lineWidth = (.6 + Math.min(2, e.n * .14)) / Math.max(scale, .35);
       ctx.setLineDash([]); line(a, b);
     } else {
-      ctx.strokeStyle = 'rgba(16,185,129,.32)';
-      ctx.lineWidth = .8 / Math.max(scale, .4); ctx.setLineDash([3, 3]); line(a, b);
+      // 同门边：跨校的稍微显一点，否则很淡
+      ctx.strokeStyle = e.cross ? 'rgba(16,185,129,.4)' : 'rgba(16,185,129,.2)';
+      ctx.lineWidth = .8 / Math.max(scale, .35); ctx.setLineDash([3, 3]); line(a, b);
     }
   }
   ctx.setLineDash([]);
 
-  // ── 节点（先画后标名，避免标签被节点盖住）──
+  // 节点
   for (const k of G.list) {
     const p = pos[k]; if (!p) continue;
     const r = radius(k);
     if (k === sel || k === hover) {
       ctx.beginPath(); ctx.arc(p.x, p.y, r + 7, 0, 7);
-      ctx.fillStyle = k === sel ? 'rgba(251,191,36,.3)' : 'rgba(255,255,255,.14)'; ctx.fill();
+      ctx.fillStyle = k === sel ? 'rgba(251,191,36,.32)' : 'rgba(255,255,255,.15)'; ctx.fill();
     }
     ctx.beginPath(); ctx.arc(p.x, p.y, r, 0, 7);
     ctx.fillStyle = colorOf(k); ctx.fill();
-    ctx.strokeStyle = 'rgba(11,14,20,.9)'; ctx.lineWidth = 1.3 / Math.max(scale, .4); ctx.stroke();
+    ctx.strokeStyle = 'rgba(11,14,20,.92)'; ctx.lineWidth = 1.3 / Math.max(scale, .35); ctx.stroke();
   }
 
-  // ── 标签：在**屏幕坐标系**绘制，保证任意缩放级别下字号恒定可读 ──
-  // （此前在图坐标系绘制，缩放到 0.23 时字只有 6px，完全看不清）
-  ctx.setTransform(DPR, 0, 0, DPR, 0, 0);   // 回到屏幕坐标
-  const CELL = 62;
+  // 标签（屏幕坐标，恒定字号）
+  ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
   const FS = 11.5;
-  ctx.font = FS + 'px -apple-system,"Microsoft YaHei",sans-serif';
-  ctx.textAlign = 'center';
-  ctx.textBaseline = 'alphabetic';
+  ctx.textAlign = 'center'; ctx.textBaseline = 'alphabetic';
+
+  // 面板标题（在屏幕坐标画，保证可读）
+  if (view === 'school') {
+    for (const p of panels) {
+      const x = p.x * scale + ox, y = p.y * scale + oy;
+      const w = p.w * scale, h = p.h * scale;
+      if (x + w < 0 || x > W || y + h < 0 || y > H) continue;
+      // 标题条：不透明底 + 分隔线，确保标题与下方节点标签互不干扰
+      ctx.fillStyle = '#0b0e14';
+      ctx.fillRect(x, y, w, 27);
+      ctx.fillStyle = p.color + '3a';
+      ctx.fillRect(x, y, Math.min(w, 280), 27);
+      ctx.strokeStyle = p.color + '70'; ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.moveTo(x, y + 27); ctx.lineTo(x + w, y + 27); ctx.stroke();
+      ctx.font = 'bold 13px -apple-system,"Microsoft YaHei",sans-serif';
+      ctx.fillStyle = p.color;
+      ctx.textAlign = 'left';
+      ctx.fillText(p.school, x + 9, y + 19);
+      ctx.font = '11px -apple-system,"Microsoft YaHei",sans-serif';
+      ctx.fillStyle = '#7c8ba1';
+      ctx.fillText(p.n + ' 人', x + 8 + ctx.measureText(p.school).width + 34, y + 16);
+      ctx.textAlign = 'center';
+    }
+  }
+
   const order = G.list.slice().sort((a, b) => {
     if (a === sel) return -2; if (b === sel) return 2;
     if (a === hover) return -1; if (b === hover) return 1;
     return (rank[a] || 0) - (rank[b] || 0);
   });
   const total = G.list.length;
-  // 标签预算：屏幕格子数决定，避免密图糊成一片
-  // 合作视图节点极密（2200+），普通标签需放大到 0.5 倍以上才显示，否则靠悬停查看
-  const dense = view === 'collab';
-  const CELL2 = dense ? 78 : 62;
-  const budget = Math.max(12, Math.min(total, Math.round((W * H) / (CELL2 * CELL2 * (dense ? 8 : 5.5)))));
+  const CELL2 = view === 'school' ? 58 : 74;
+  const budget = Math.max(20, Math.min(total, Math.round((W * H) / (CELL2 * CELL2 * (view === 'school' ? 3.2 : 5.5)))));
   const cells = new Set();
   let drawn = 0;
   for (const k of order) {
     const p = pos[k]; if (!p) continue;
     const sx = p.x * scale + ox, sy = p.y * scale + oy;
     if (sx < -60 || sx > W + 60 || sy < -30 || sy > H + 30) continue;
-    const important = k === sel || k === hover || (rank[k] || 0) < total * (dense ? 0.04 : 0.1);
-    if (!important) {
-      if (dense && scale < 0.5) continue;        // 密图缩小时不标名
-      if (drawn >= budget) continue;
-    }
+    const important = k === sel || k === hover || (rank[k] || 0) < total * 0.12;
+    if (!important && drawn >= budget) continue;
     const r = radius(k) * scale;
     const key = Math.floor(sx / CELL2) + ',' + Math.floor((sy - r - FS) / CELL2);
     if (cells.has(key) && !important) continue;
-    cells.add(key);
-    drawn++;
+    cells.add(key); drawn++;
     const label = NAME(k);
     ctx.font = (k === sel || k === hover ? 'bold ' : '') + FS + 'px -apple-system,"Microsoft YaHei",sans-serif';
-    const tw = ctx.measureText(label).width;
-    const ty = sy - r - 5;
-    ctx.fillStyle = 'rgba(11,14,20,.78)';
+    const tw = ctx.measureText(label).width, ty = sy - r - 5;
+    ctx.fillStyle = 'rgba(11,14,20,.8)';
     ctx.fillRect(sx - tw / 2 - 3, ty - FS + 1, tw + 6, FS + 3);
     ctx.fillStyle = k === sel ? '#fbbf24' : (important ? '#e8edf5' : '#9aa7b8');
     ctx.fillText(label, sx, ty);
   }
 }
+
+// 矩阵渲染
+function renderMatrix() {
+  if (!M) return;
+  const { _schools: schools, _cell: CELL, _left: LEFT, _top: TOP, _maxOff: mo, _maxDiag: md } = M;
+  ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+  const S = Math.min(scale, 2.4);
+  ctx.save();
+  ctx.translate(ox, oy); ctx.scale(S, S);
+  const FS = 11.5;
+  ctx.textBaseline = 'middle';
+  // 单元格
+  for (const c of panels) {
+    const isSel = sel && (c.list.some((e) => e.s === sel || e.t === sel));
+    let alpha;
+    if (c.diag) alpha = c.v ? 0.14 + 0.5 * (c.v / md) : 0;
+    else alpha = c.v ? 0.16 + 0.72 * (c.v / mo) : 0;
+    if (c.v) {
+      ctx.fillStyle = (c.diag ? 'rgba(99,102,241,' : 'rgba(244,114,182,') + alpha.toFixed(3) + ')';
+      ctx.fillRect(c.x, c.y, c.s - 1.5, c.s - 1.5);
+    } else {
+      ctx.fillStyle = 'rgba(255,255,255,.025)';
+      ctx.fillRect(c.x, c.y, c.s - 1.5, c.s - 1.5);
+    }
+    if (isSel) { ctx.strokeStyle = '#fbbf24'; ctx.lineWidth = 2; ctx.strokeRect(c.x, c.y, c.s - 1.5, c.s - 1.5); }
+    if (c.v && c.s >= 26) {
+      ctx.font = (c.diag ? 'bold ' : '') + Math.min(13, c.s * 0.42) + 'px -apple-system,sans-serif';
+      ctx.fillStyle = c.diag ? '#c7d2fe' : '#fbcfe8';
+      ctx.textAlign = 'center';
+      ctx.fillText(String(c.v), c.x + c.s / 2, c.y + c.s / 2);
+    }
+  }
+  // 行列标签
+  ctx.font = FS + 'px -apple-system,"Microsoft YaHei",sans-serif';
+  for (let i = 0; i < schools.length; i++) {
+    ctx.textAlign = 'right'; ctx.fillStyle = COL[schools[i]] || '#94a3b8';
+    ctx.fillText(schools[i], LEFT - 6, TOP + i * CELL + CELL / 2);
+    ctx.save();
+    ctx.translate(LEFT + i * CELL + CELL / 2, TOP - 8); ctx.rotate(-Math.PI / 3);
+    ctx.textAlign = 'left';
+    ctx.fillText(schools[i], 0, 0);
+    ctx.restore();
+  }
+  ctx.restore();
+  ctx.textAlign = 'left';
+  ctx.font = 'bold 13px -apple-system,"Microsoft YaHei",sans-serif';
+  ctx.fillStyle = '#e5e7eb';
+  ctx.fillText('院校关系矩阵', 16, 22);
+  ctx.font = '11.5px -apple-system,"Microsoft YaHei",sans-serif';
+  ctx.fillStyle = '#7c8ba1';
+  ctx.fillText('对角线（蓝）= 校内关系条数　非对角（粉）= 跨校关系条数　格内数字为条数，点击查看明细', 16, 42);
+}
+
+function roundRect(x, y, w, h, r) {
+  ctx.beginPath();
+  ctx.moveTo(x + r, y);
+  ctx.arcTo(x + w, y, x + w, y + h, r);
+  ctx.arcTo(x + w, y + h, x, y + h, r);
+  ctx.arcTo(x, y + h, x, y, r);
+  ctx.arcTo(x, y, x + w, y, r);
+  ctx.closePath();
+}
 function line(a, b) { ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke(); }
 function arrow(a, b, tr, col) {
-  const dx = b.x - a.x, dy = b.y - a.y, d = Math.hypot(dx, dy) || 1;
-  const ux = dx / d, uy = dy / d;
+  const dx = b.x - a.x, dy = b.y - a.y, d = Math.hypot(dx, dy) || 1, ux = dx / d, uy = dy / d;
   const ex = b.x - ux * (tr + 3), ey = b.y - uy * (tr + 3);
   ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(ex, ey); ctx.stroke();
-  const L = 9 / Math.max(scale, .5), ang = Math.atan2(dy, dx);
-  ctx.beginPath();
-  ctx.moveTo(ex, ey);
+  const L = 9 / Math.max(scale, .45), ang = Math.atan2(dy, dx);
+  ctx.beginPath(); ctx.moveTo(ex, ey);
   ctx.lineTo(ex - L * Math.cos(ang - .42), ey - L * Math.sin(ang - .42));
   ctx.lineTo(ex - L * Math.cos(ang + .42), ey - L * Math.sin(ang + .42));
   ctx.closePath(); ctx.fillStyle = col; ctx.fill();
 }
 
-// ══ 交互 ══
+// ══════════ 交互 ══════════
 function resize() {
   DPR = window.devicePixelRatio || 1;
   const r = $('main').getBoundingClientRect();
@@ -560,7 +665,6 @@ function resize() {
   rebuild(true);
 }
 window.addEventListener('resize', resize);
-
 let drag = null;
 cv.addEventListener('mousedown', (e) => { drag = { x: e.clientX, y: e.clientY, ox, oy, moved: false }; cv.classList.add('drag'); });
 window.addEventListener('mousemove', (e) => {
@@ -573,14 +677,19 @@ window.addEventListener('mousemove', (e) => {
   if (k !== hover) { hover = k; render(); }
   if (k) {
     tip.style.display = 'block';
-    tip.style.left = Math.min(e.clientX + 15, W - 280) + 'px';
+    tip.style.left = Math.min(e.clientX + 15, W - 290) + 'px';
     tip.style.top = (e.clientY + 15) + 'px';
-    tip.innerHTML = '<b>' + NAME(k) + '</b><br/>' + SCHOOL(k) + ' · ' + (N[k].t || '—') + '<br/>论文 ' + NP(k) + ' 篇' + (N[k].c ? '<br/><span style="color:#7c8ba1">' + N[k].c.slice(0, 34) + '</span>' : '');
+    tip.innerHTML = '<b>' + NAME(k) + '</b><br/>' + SCH(k) + ' · ' + (N[k].t || '—') + '<br/>论文 ' + NP(k) + ' 篇';
   } else tip.style.display = 'none';
 });
 window.addEventListener('mouseup', (e) => {
   cv.classList.remove('drag');
-  if (drag && !drag.moved) { const k = pick(e); if (k) select(k); else { sel = null; $('panel').style.display = 'none'; render(); } }
+  if (drag && !drag.moved) {
+    const k = pick(e);
+    if (k) select(k);
+    else if (view === 'matrix') { sel = null; $('panel').style.display = 'none'; render(); }
+    else { sel = null; $('panel').style.display = 'none'; render(); }
+  }
   drag = null;
 });
 cv.addEventListener('wheel', (e) => {
@@ -592,12 +701,17 @@ cv.addEventListener('wheel', (e) => {
   $('zlv').textContent = Math.round(scale * 100) + '%';
   render();
 }, { passive: false });
-cv.addEventListener('dblclick', () => fitView());
+cv.addEventListener('dblclick', () => fitView(view === 'matrix' ? 30 : 40));
 $('zin').onclick = () => { const f = 1.25; ox = W / 2 - (W / 2 - ox) * f; oy = H / 2 - (H / 2 - oy) * f; scale *= f; $('zlv').textContent = Math.round(scale * 100) + '%'; render(); };
 $('zout').onclick = () => { const f = 0.8; ox = W / 2 - (W / 2 - ox) * f; oy = H / 2 - (H / 2 - oy) * f; scale *= f; $('zlv').textContent = Math.round(scale * 100) + '%'; render(); };
 
 function pick(e) {
   const r = cv.getBoundingClientRect();
+  if (view === 'matrix') {
+    const x = (e.clientX - r.left - ox) / Math.min(scale, 2.4), y = (e.clientY - r.top - oy) / Math.min(scale, 2.4);
+    for (const c of panels) if (x >= c.x && x <= c.x + c.s && y >= c.y && y <= c.y + c.s) return { matrix: c };
+    return null;
+  }
   const x = (e.clientX - r.left - ox) / scale, y = (e.clientY - r.top - oy) / scale;
   let best = null, bd = Infinity;
   for (const k of G.list) {
@@ -610,6 +724,7 @@ function pick(e) {
 }
 
 function select(k) {
+  if (k && k.matrix) { selectCell(k.matrix); return; }
   sel = k; render();
   const st = G.studentsOf[k] || [], me = G.mentorOf[k] || [];
   const cols = COLB.filter((e) => (e.s === k || e.t === k) && e.n >= 2)
@@ -621,8 +736,8 @@ function select(k) {
   const lvTag = (other, dir) => {
     const e = ADV.find((x) => (dir === 'up' ? (x.s === k && x.t === other) : (x.t === k && x.s === other)));
     if (!e) return '';
-    const c = e.lv === 1 ? '#fbbf24' : e.lv === 2 ? '#f59e0b' : '#a16207';
-    const t = e.lv === 1 ? 'L1 自述' : e.lv === 2 ? 'L2 交叉' : 'L3 推断';
+    const c = e.cross ? '#f472b6' : e.lv === 1 ? '#fbbf24' : e.lv === 2 ? '#f59e0b' : '#a16207';
+    const t = (e.cross ? '跨校 ' : '') + (e.lv === 1 ? 'L1' : e.lv === 2 ? 'L2' : 'L3');
     return '<span title="' + String(e.nt || '').replace(/"/g, '&quot;') + '" style="color:' + c + ';font-size:10px;margin-left:3px">' + t + '</span>';
   };
   const eduH = (P.edu && P.edu.length) ? P.edu.map((x) => '<div style="font-size:11.5px;color:#8b98a9">· ' + x + '</div>').join('') : '';
@@ -632,7 +747,7 @@ function select(k) {
   $('panel').style.display = 'block';
   $('panel').innerHTML =
     '<h3>' + NAME(k) + '</h3>' +
-    '<div style="font-size:12px;color:#8b98a9">' + SCHOOL(k) + ' · ' + (P.t || '—') + '</div>' +
+    '<div style="font-size:12px;color:#8b98a9">' + SCH(k) + ' · ' + (P.t || '—') + '</div>' +
     '<div style="font-size:12px;color:#5a6472">' + (P.d || '') + '</div>' +
     '<div style="margin-top:7px"><span class="tag">论文 ' + NP(k) + ' 篇</span>' + (P.c ? '<span class="tag">' + P.c.slice(0, 40) + '</span>' : '') + '</div>' +
     (P.h ? '<div style="margin-top:6px"><a href="' + P.h + '" target="_blank" style="color:#60a5fa;font-size:12px">打开主页 ↗</a></div>' : '') +
@@ -641,53 +756,87 @@ function select(k) {
     '<div class="rel"><b>学生（' + st.length + '）</b>' + L(st, (s) => '<a data-k="' + s + '">' + NAME(s) + '</a>' + lvTag(s, 'down')) + '</div>' +
     (sib.length ? '<div class="rel"><b>同门（' + sib.length + '）</b>' + L(sib.slice(0, 40), (x) => '<a data-k="' + x.s + '">' + NAME(x.s) + '</a>') + '</div>' : '') +
     (teamH ? '<div class="rel"><b>课题组名单（页面所列）</b>' + teamH + '</div>' : '') +
-    '<div class="rel"><b>主要合作者（共同署名篇数）</b>' + L(cols, (c) => '<a data-k="' + c.k + '">' + NAME(c.k) + ' <span style="color:#5a6472">' + c.n + '</span></a>') + '</div>' +
-    '<div style="margin-top:10px;font-size:10.5px;color:#3f4855;line-height:1.65">L1 自述师承＝本人页面明写；L2＝毕业院校与论文署名两条独立证据交叉；L3＝仅署名模式推断。悬停标签可看具体依据。</div>';
+    '<div class="rel"><b>主要合作者（共同署名篇数）</b>' + L(cols, (c) => '<a data-k="' + c.k + '">' + NAME(c.k) + ' <span style="color:#5a6472">' + c.n + '</span></a>') + '</div>';
   $('panel').querySelectorAll('a[data-k]').forEach((a) => { a.onclick = () => select(a.dataset.k); });
 }
 
-// ══ 控件 ══
+function selectCell(c) {
+  sel = null; render();
+  $('panel').style.display = 'block';
+  const rows = c.list.slice(0, 40).map((e) => {
+    const lv = e.k === 'adv' ? (e.lv === 1 ? 'L1 自述' : e.lv === 2 ? 'L2 交叉' : 'L3 推断') : (e.k === 'sib' ? '同门' : '合作');
+    const extra = e.k === 'adv' ? '（' + (e.sp || '') + (e.inst ? ' · ' + e.inst : '') + '）' : (e.n ? '（共同署名 ' + e.n + ' 篇）' : '');
+    return '<div style="font-size:11.5px;line-height:1.9">' +
+      '<a data-k="' + e.t + '" style="color:#60a5fa;cursor:pointer">' + NAME(e.t) + '</a> ← ' +
+      '<a data-k="' + e.s + '" style="color:#60a5fa;cursor:pointer">' + NAME(e.s) + '</a> ' +
+      '<span style="color:#5a6472">' + lv + extra + '</span></div>';
+  }).join('');
+  $('panel').innerHTML =
+    '<h3>' + (c.diag ? c.a + ' 校内关系' : c.a + ' ↔ ' + c.b) + '</h3>' +
+    '<div style="font-size:12px;color:#8b98a9">共 ' + c.v + ' 条</div>' +
+    '<div class="rel"><b>关系明细' + (c.list.length > 40 ? '（前 40 条）' : '') + '</b>' + (rows || '—') + '</div>';
+  $('panel').querySelectorAll('a[data-k]').forEach((a) => {
+    a.onclick = () => { const kk = a.dataset.k; if (view === 'matrix') { view = 'school'; document.querySelectorAll('.tab').forEach((x) => x.classList.toggle('on', x.dataset.v === 'school')); rebuild(true); } select(kk); };
+  });
+}
+
+// ══════════ 控件 ══════════
 document.querySelectorAll('.tab').forEach((t) => {
   t.onclick = () => {
     document.querySelectorAll('.tab').forEach((x) => x.classList.remove('on'));
-    t.classList.add('on'); view = t.dataset.v; rebuild(true);
+    t.classList.add('on'); view = t.dataset.v;
+    $('wWrap').style.display = view === 'force' ? 'block' : 'none';
+    rebuild(true);
   };
 });
 $('q').addEventListener('input', (e) => {
   const v = e.target.value.trim(), res = $('qres');
   if (!v) { res.textContent = ''; return; }
   const hits = Object.keys(N).filter((k) => NAME(k).includes(v)).slice(0, 8);
-  res.innerHTML = hits.length ? hits.map((k) => '<a data-k="' + k + '" style="color:#60a5fa;cursor:pointer;margin-right:8px">' + NAME(k) + '(' + SCHOOL(k) + ')</a>').join('') : '<span style="color:#5a6472">无匹配</span>';
+  res.innerHTML = hits.length ? hits.map((k) => '<a data-k="' + k + '" style="color:#60a5fa;cursor:pointer;margin-right:8px">' + NAME(k) + '(' + SCH(k) + ')</a>').join('') : '<span style="color:#5a6472">无匹配</span>';
   res.querySelectorAll('a[data-k]').forEach((a) => {
     a.onclick = () => {
-      // 若当前视图中没有该节点，切到它所在的视图
-      if (!pos[a.dataset.k]) {
-        sel = null;
-        if (!G.list.includes(a.dataset.k)) {
-          // 尝试放宽过滤以纳入
-          minW = 2; $('w').value = 2; $('wv').textContent = 2; minComp = false; $('minComp').checked = false; schoolF = '';
-          $('school').value = ''; view = 'collab';
-          document.querySelectorAll('.tab').forEach((x) => x.classList.toggle('on', x.dataset.v === 'collab'));
-          rebuild(false);
-        }
+      const kk = a.dataset.k;
+      if (view === 'matrix' || !pos[kk]) {
+        view = 'school'; onlyCross = false; $('onlyCross').checked = false;
+        document.querySelectorAll('.tab').forEach((x) => x.classList.toggle('on', x.dataset.v === 'school'));
+        rebuild(false);
       }
-      select(a.dataset.k);
-      const p = pos[a.dataset.k];
+      select(kk);
+      const p = pos[kk];
       if (p) { scale = Math.max(scale, 1.1); ox = W / 2 - p.x * scale; oy = H / 2 - p.y * scale; $('zlv').textContent = Math.round(scale * 100) + '%'; render(); }
     };
   });
 });
-const schools = [...new Set(Object.values(N).map((x) => x.s))].sort();
-for (const s of schools) { const o = document.createElement('option'); o.value = s; o.textContent = s; $('school').appendChild(o); }
-$('school').onchange = (e) => { schoolF = e.target.value; rebuild(true); };
-$('w').oninput = (e) => { minW = +e.target.value; $('wv').textContent = minW; if (view === 'collab') rebuild(true); else render(); };
+$('onlyCross').onchange = (e) => { onlyCross = e.target.checked; rebuild(true); };
 $('showAdv').onchange = (e) => { showAdv = e.target.checked; rebuild(true); };
 $('showSib').onchange = (e) => { showSib = e.target.checked; rebuild(true); };
-$('minComp').onchange = (e) => { minComp = e.target.checked; rebuild(true); };
+$('w').oninput = (e) => { minW = +e.target.value; $('wv').textContent = minW; if (view === 'force') rebuild(true); };
+
+// 侧栏列出全部跨校师承（最有价值的信息，直接文字呈现）
+(function fillCross() {
+  const cross = ADV.filter((e) => N[e.s] && N[e.t] && N[e.s].sc !== N[e.t].sc);
+  const box = $('crossBox');
+  if (!cross.length) return;
+  box.innerHTML = '<h2>跨校师承（全部 ' + cross.length + ' 条）</h2>' +
+    cross.map((e) => '<div class="cross">' +
+      '<a data-k="' + e.s + '" style="color:#60a5fa;cursor:pointer">' + NAME(e.s) + '</a>（' + SCH(e.s) + '）<br/>← 师从 ' +
+      '<a data-k="' + e.t + '" style="color:#60a5fa;cursor:pointer">' + NAME(e.t) + '</a>（' + SCH(e.t) + '）' +
+      '<i> · ' + (e.lv === 1 ? 'L1 页面明写' : e.lv === 2 ? 'L2 交叉证据' : 'L3 署名推断') + '</i></div>').join('');
+  box.querySelectorAll('a[data-k]').forEach((a) => {
+    a.onclick = () => {
+      if (view === 'matrix') { view = 'school'; document.querySelectorAll('.tab').forEach((x) => x.classList.toggle('on', x.dataset.v === 'school')); rebuild(false); }
+      select(a.dataset.k);
+      const p = pos[a.dataset.k];
+      if (p) { scale = Math.max(scale, 1.1); ox = W / 2 - p.x * scale; oy = H / 2 - p.y * scale; render(); }
+    };
+  });
+})();
 
 resize();
 </script></body></html>`;
 
 fs.writeFileSync(path.join(REPO, 'reports', '导师关系网络.html'), html, 'utf8');
 console.log('saved reports/导师关系网络.html', (html.length / 1024).toFixed(0) + 'KB');
-console.log('节点', Object.keys(N).length, '| 师承', DATA.advisor.length, '| 合作', DATA.collab.length, '| 同门', DATA.sibling.length);
+const cross = DATA.advisor.filter((e) => N[e.s] && N[e.t] && N[e.s].sc !== N[e.t].sc);
+console.log('节点', Object.keys(N).length, '| 师承', DATA.advisor.length, '（跨校 ' + cross.length + '）| 合作', DATA.collab.length);

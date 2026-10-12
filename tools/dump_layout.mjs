@@ -11,10 +11,13 @@ js += `
   try{
     // 手动设置视口尺寸（原脚本的 resize() 依赖 DOM 布局，桩件下取不到值）
     W = 1500; H = 950;
-    if ('${VIEW}' === 'collab') { view = 'collab'; minW = 3; }
+    view = '${VIEW}';
+    if (view === 'force') minW = 5;
     rebuild(true);
-    const P={}; for(const k of G.list){ const p=pos[k]; if(p) P[k]={x:p.x,y:p.y,r:(typeof radius==='function'?radius(k):6),n:NAME(k),s:SCHOOL(k),pp:NP(k)}; }
-    __DUMP={pos:P, edges:G.edges.map(e=>({s:e.s,t:e.t,k:e.k,lv:e.lv||0})), scale, ox, oy, W, H, view};
+    const P={}; for(const k of G.list){ const p=pos[k]; if(p) P[k]={x:p.x,y:p.y,r:(typeof radius==='function'?radius(k):6),n:NAME(k),s:SCH(k),pp:NP(k)}; }
+    __DUMP={pos:P, edges:G.edges.map(e=>({s:e.s,t:e.t,k:e.k,lv:e.lv||0,cross:!!e.cross})), scale, ox, oy, W, H, view,
+      panels: panels.filter(p=>p.mi===undefined).map(p=>({school:p.school,x:p.x,y:p.y,w:p.w,h:p.h,color:p.color,n:p.n})),
+      matrix: (M&&M._schools)?{schools:M._schools,cell:M._cell,left:M._left,top:M._top,cells:panels.filter(c=>c.mi!==undefined)}:null};
   }catch(e){ __DUMP={err:e.message, stack:(e.stack||'').split('\\n').slice(0,2).join(' | ')}; }
 })();
 `;
