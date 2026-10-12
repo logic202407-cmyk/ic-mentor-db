@@ -552,12 +552,19 @@ function renderMentorList() {
     '<div style="color:#3f4855;font-size:12px;padding:8px">无</div>';
   box.querySelectorAll('.mentorItem').forEach(el => { el.onclick = () => setFocus(el.dataset.k); });
 }
+let boundCanvas = null;   // 记录已绑定事件的画布元素，避免重复绑定或漏绑定
 function restoreCanvas() {
-  if ($('cv')) return;
-  $('main').innerHTML = '<canvas id="cv"></canvas><div id="crumb"></div>' +
-    '<div id="hint">滚轮缩放 · 拖拽平移 · 点击节点看档案 · 双击适应窗口</div>' +
-    '<div id="tip"></div><div id="drawer"></div>';
-  bindCanvas();
+  // ⚠️ 原实现是「if ($('cv')) return;」—— 首次加载时画布已存在于 HTML 中，
+  //    函数直接返回，bindCanvas() 从未被调用，导致鼠标事件完全没绑上、点击无反应。
+  //    改为按「元素是否已绑定」判断。
+  const c = $('cv');
+  if (!c) {
+    $('main').innerHTML = '<canvas id="cv"></canvas><div id="crumb"></div>' +
+      '<div id="hint">滚轮缩放 · 拖拽平移 · 点击节点展开或看档案 · 双击适应窗口</div>' +
+      '<div id="tip"></div><div id="drawer"></div>';
+  }
+  const cur = $('cv');
+  if (boundCanvas !== cur) { boundCanvas = cur; bindCanvas(); }
 }
 let drag = null;
 function bindCanvas() {
@@ -570,33 +577,56 @@ function bindCanvas() {
     const mx = e.clientX - r.left, my = e.clientY - r.top;
     ox = mx - (mx - ox) * f; oy = my - (my - oy) * f; scale *= f; render();
   }, { passive: false });
-  c.addEventListener('dblclick', () => { fitView(90); render(); });
+  c.addEventListener('dblclick', () => { fitView(focus ? 90 : 70); render(); });
   c.addEventListener('mousemove', (e) => {
-    if (drag) { ox = drag.ox + e.clientX - drag.x; oy = drag.oy + e.clientY - drag.y; render(); return; }
+    if (drag) {
+      const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+      if (Math.abs(dx) + Math.abs(dy) > 3) drag.moved = true;   // 记录是否拖动过，避免拖动后被当成点击
+      ox = drag.ox + dx; oy = drag.oy + dy; render(); return;
+    }
     const k = pick(e);
+    c.style.cursor = k ? 'pointer' : 'grab';
     if (k !== hover) { hover = k; render(); }
     const tip = $('tip');
     if (!tip) return;
     if (k) {
       const st = (studentsOf[k] || []).length;
+      const inOv = (view === 'tree' && !focus);
       tip.style.display = 'block';
       tip.style.left = Math.min(e.clientX + 15, W - 300) + 'px';
       tip.style.top = (e.clientY + 15) + 'px';
       tip.innerHTML = '<b>' + esc(NAME(k)) + '</b><br/>' + esc(SCH(k)) + (N[k].t ? ' · ' + esc(N[k].t) : '') +
-        '<br/>论文 ' + NP(k) + ' 篇' + (st ? '<br/><span style="color:#93c5fd">' + st + ' 名学生（点击展开）</span>' : '');
+        '<br/>论文 ' + NP(k) + ' 篇' +
+        (st ? '<br/><span style="color:#fbbf24">' + st + ' 名学生' + (inOv ? '（点击展开师承树）' : '（点击展开）') + '</span>'
+            : (inOv ? '' : '<br/><span style="color:#5a6472">点击查看档案</span>'));
     } else tip.style.display = 'none';
   });
   c.addEventListener('click', (e) => {
-    if (drag && drag.moved) return;
+    if (drag && drag.moved) return;                 // 拖动结束不当作点击
     const k = pick(e);
-    if (k) showPerson(k);
+    if (!k) return;
+    const hasStu = (studentsOf[k] || []).length > 0;
+    // 总览里点击「有学生的导师」直接展开他的师承树（原来只弹档案抽屉，用户以为点击没反应）
+    if (view === 'tree' && !focus && hasStu) { setFocus(k); return; }
+    // 展开态里点击某个「有学生的节点」→ 以他为中心重新展开
+    if (view === 'tree' && focus && hasStu && k !== focus) { setFocus(k); return; }
+    showPerson(k);
   });
+  c.addEventListener('mouseleave', () => { if (hover) { hover = null; render(); } });
 }
-window.addEventListener('mouseup', () => { if (drag) drag = null; });
+window.addEventListener('mouseup', () => {
+  if (!drag) return;
+  const c = $('cv');
+  if (c) c.classList.remove('drag');
+  drag = null;
+});
+// 兜住「拖出画布外释放」的情况（画布自身的 mousemove 只在指针位于画布上时触发）
 window.addEventListener('mousemove', (e) => {
   if (!drag) return;
   const c = $('cv'); if (!c) return;
-  ox = drag.ox + e.clientX - drag.x; oy = drag.oy + e.clientY - drag.y; render();
+  const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+  if (Math.abs(dx) + Math.abs(dy) > 3) drag.moved = true;
+  ox = drag.ox + dx; oy = drag.oy + dy; render();
 });
 function pick(e) {
   const c = $('cv'); if (!c) return null;
