@@ -8,6 +8,7 @@ data/raw/crossref/
 # ── 大体积中间产物（可由 tools/ 重跑生成）──
 # ── 关系网络构建的中间产物（可由 tools/ 重跑生成，且体积大）──
 data/processed/_net_*.json
+data/processed/_layout_*.json
 data/processed/enriched_*.json
 data/processed/mentor_db.json
 data/processed/*_papers.json
