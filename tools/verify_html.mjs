@@ -4,9 +4,16 @@ const files = process.argv.slice(2);
 const BAD = ['你的背景', '编程负担', 'IC 科班', 'AI 重度使用者', '按你的', '适合你', '我的背景'];
 for (const f of files) {
   const h = fs.readFileSync(f, 'utf8');
-  const m = h.match(/const DATA = (\[[\s\S]*?\]);\n/);
+  // DATA 既可能是数组（列表页），也可能是对象（关系网络页）
+  const m = h.match(/const DATA = (\[[\s\S]*?\]|\{[\s\S]*?\});\n/);
   let rows = -1, ok = false;
-  if (m) { try { rows = JSON.parse(m[1]).length; ok = true; } catch (e) { ok = false; } }
+  if (m) {
+    try {
+      const v = JSON.parse(m[1]);
+      rows = Array.isArray(v) ? v.length : (v.nodes ? Object.keys(v.nodes).length : Object.keys(v).length);
+      ok = true;
+    } catch (e) { ok = false; }
+  }
   const hits = BAD.filter((k) => h.includes(k));
   const scriptOpen = (h.match(/<script/g) || []).length;
   const scriptClose = (h.match(/<\/script>/g) || []).length;

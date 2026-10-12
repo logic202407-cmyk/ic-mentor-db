@@ -41,12 +41,15 @@ for (const f of files) {
   if (/fetch\s*\(|XMLHttpRequest/.test(js)) dangers.push('存在网络请求（应为离线单文件）');
   console.log(dangers.length ? `  ⚠ ${dangers.join('; ')}` : '  ✓ 无网络请求/eval/document.write（保持离线单文件）');
 
-  // 5) 数据条数
-  const dm = js.match(/const DATA = (\[[\s\S]*?\]);\n/);
+  // 5) 数据（DATA 可能是数组，也可能是对象）
+  const dm = js.match(/const DATA = (\[[\s\S]*?\]|\{[\s\S]*?\});\n/);
   if (dm) {
-    try { console.log(`  ✓ 内嵌数据 ${JSON.parse(dm[1]).length} 条`); }
-    catch { console.log('  ✗ 内嵌数据 JSON 解析失败'); bad++; }
-  } else { console.log('  ✗ 未找到 DATA'); bad++; }
+    try {
+      const v = JSON.parse(dm[1]);
+      const n = Array.isArray(v) ? v.length : (v.nodes ? Object.keys(v.nodes).length : Object.keys(v).length);
+      console.log(`  ✓ 内嵌数据可解析（${Array.isArray(v) ? '数组' : '对象'}，${n} 条/键）`);
+    } catch { console.log('  ✗ 内嵌数据 JSON 解析失败'); bad++; }
+  } else { console.log('  ⚠ 未找到 DATA（该页若不用内嵌数据可忽略）'); }
 }
 console.log(bad ? `\n❌ ${bad} 项未通过` : '\n✅ 全部通过');
 process.exit(bad ? 1 : 0);
