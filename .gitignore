@@ -10,6 +10,7 @@ data/processed/enriched_*.json
 data/processed/mentor_db.json
 data/processed/*_papers.json
 data/processed/name_variants.json
+data/processed/timeline.json          # 含页面原文片段的中间产物（邮箱已在抽取阶段隐去，但原文不入库）
 data/processed/heuristics_all.json
 data/processed/score_log.txt
 data/processed/shortlist_2027.*

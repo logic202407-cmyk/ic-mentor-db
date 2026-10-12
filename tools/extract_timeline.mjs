@@ -18,6 +18,8 @@ const clean = (s) => String(s || '')
   .replace(/&nbsp;|&amp;/g, ' ')
   .replace(/\u00a0/g, ' ')
   .replace(/[\u200b\ufeff]/g, '')
+  // ⚠️ 隐私红线：原文片段可能夹带页面里的邮箱，抽取阶段就抹掉
+  .replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/g, '〔邮箱已隐去〕')
   .replace(/[ \t]+/g, ' ')
   .replace(/\n{2,}/g, '\n')
   .trim();
