@@ -13,6 +13,7 @@ js += `
     layoutTree(); fitView(70);
     const P = {};
     for (const n of nodes) P[n.k] = { x:n.x, y:n.y, r:n.r, root:true, cnt:n.cnt, tier:n.tier||'',
+      ndir:n.ndir||0, multi:!!n.multi,
       n:NAME(n.k), s:SCH(n.k), pp:NP(n.k), color:(COL[SCH(n.k)]||'#64748b'), cross:!!n.hasCross };
     R = { pos:P, edges:[], scale, ox, oy, W, H, mode:'${MODE}', n:nodes.length,
       groups: groups.map(g=>({key:g.key, name:g.name, color:g.color, x:g.x, y:g.y, w:g.w, h:g.h, n:g.n})) };

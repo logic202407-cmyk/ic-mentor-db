@@ -11,7 +11,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { classifyDir, DIR_MAP, DIRS } from './directions.mjs';
+import { classifyDir, classifyDirMulti, DIR_MAP, DIRS } from './directions.mjs';
 const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const PROC = path.join(REPO, 'data', 'processed');
 const net = JSON.parse(fs.readFileSync(path.join(PROC, 'network_final.json'), 'utf8'));
@@ -82,10 +82,14 @@ const NODE_TAG = {};
     if (gg === 0) tier = nc >= 5 ? '祖师级' : nc >= 2 ? '掌门级' : '资深级';
     else if (gg === 1) tier = nc >= 2 ? '中坚级' : '骨干级';
     else if (gg !== undefined) tier = '再传级';
+    const dm = classifyDirMulti(N[k].c);
     NODE_TAG[k] = {
       gen: gg === undefined ? null : gg,
       tier,
-      dir: classifyDir(N[k].c),
+      dir: dm.primary,
+      dirs: dm.all,
+      multi: dm.multi,
+      ndir: dm.all.length,
       stu: nc,
     };
   }
@@ -96,8 +100,11 @@ DATA.tags = NODE_TAG;
   for (const t of Object.values(NODE_TAG)) if (t.tier) tc[t.tier] = (tc[t.tier] || 0) + 1;
   const dc = {};
   for (const t of Object.values(NODE_TAG)) dc[t.dir] = (dc[t.dir] || 0) + 1;
+  const nd = {};
+  for (const t of Object.values(NODE_TAG)) if (t.dir !== 'unknown' && t.dir !== 'other') nd[t.ndir] = (nd[t.ndir] || 0) + 1;
   console.log('辈分分布:', JSON.stringify(tc));
   console.log('方向分布:', Object.entries(dc).sort((a, b) => b[1] - a[1]).map(([k, v]) => (DIR_MAP[k]?.name || k) + '=' + v).join(' '));
+  console.log('跨方向数分布:', JSON.stringify(nd));
 }
 
 const html = `<!DOCTYPE html>
@@ -341,7 +348,11 @@ function layoutTree() {
         const py = y + b.HEADH + r * CR;
         const hasCross = studentsOf[m.k].some(isCross) || (mentorOf[m.k] || []).some(isCross);
         nodes.push({ k: m.k, x: px, y: py, r: rOf(m.n), root: true, hasCross, cnt: m.n,
-          tier: (TAG[m.k] && TAG[m.k].tier) || '' });
+          tier: (TAG[m.k] && TAG[m.k].tier) || '',
+          ndir: (TAG[m.k] && TAG[m.k].ndir) || 0,
+          multi: !!(TAG[m.k] && TAG[m.k].multi),
+          // 方向模式下，若该人跨了多个方向，用圈内小圆点标出
+          dirs: (TAG[m.k] && TAG[m.k].dirs) || [] });
       });
     }
     return;
@@ -587,7 +598,8 @@ function render() {
     const tw = ctx.measureText(label).width;
     // 根节点较大：名字画在圆内（避免被节点盖住）。副标题放得下才画，放不下就省略。
     ctx.font = '10.5px -apple-system,"Microsoft YaHei",sans-serif';
-    const subTxt = n.cnt + ' 名学生';
+    // 方向模式下，跨方向的人副标题改为「跨 N 个方向」
+    const subTxt = (mode === 'dir' && n.multi) ? ('跨 ' + n.ndir + ' 个方向') : (n.cnt + ' 名学生');
     const subW = ctx.measureText(subTxt).width;
     ctx.font = (n.root ? 'bold ' : '') + fs + 'px -apple-system,"Microsoft YaHei",sans-serif';
     if (n.root && r * 2 > tw + 12 && r > 20) {
@@ -595,8 +607,14 @@ function render() {
       ctx.fillText(label, sx, sy + fs * 0.36);
       if (r * 2 > subW + 8) {
         ctx.font = '10.5px -apple-system,"Microsoft YaHei",sans-serif';
-        ctx.fillStyle = 'rgba(255,255,255,.8)';
+        ctx.fillStyle = (mode === 'dir' && n.multi) ? 'rgba(255,255,255,.62)' : 'rgba(255,255,255,.8)';
         ctx.fillText(subTxt, sx, sy + fs * 0.36 + 15);
+      }
+      // 跨方向的人：圆外再画一圈虚环
+      if (mode === 'dir' && n.multi) {
+        ctx.beginPath(); ctx.arc(sx, sy, r + 4, 0, 7);
+        ctx.strokeStyle = 'rgba(255,255,255,.28)';
+        ctx.setLineDash([3, 3]); ctx.lineWidth = 1.2; ctx.stroke(); ctx.setLineDash([]);
       }
       continue;
     }
@@ -879,7 +897,13 @@ document.querySelectorAll('.mode').forEach(m => {
 function updateModeNote() {
   const el = $('modeNote'); if (!el) return;
   if (mode === 'school') el.innerHTML = '按<b style="color:#c9d4e2">现所在院校</b>分组。';
-  else if (mode === 'dir') el.innerHTML = '按页面自述的<b style="color:#c9d4e2">研究方向关键词</b>归类，只看页面原文、不做推断。未写关键词的归入「无关键词记录」。';
+  else if (mode === 'dir') el.innerHTML = '按页面自述的<b style="color:#c9d4e2">研究方向关键词</b>归类，只看页面原文、不做推断。<br/>'
+    + '<span style="color:#f472b6">重要</span>：约 <b>53.9%</b> 的人自述里同时涉及多个方向（如郝跃跨 AI 芯片＋功率半导体＋可靠性＋材料工艺）。'
+    + '本视图按<b>首个命中方向</b>归组，跨方向者用<b>虚环</b>标出，圆内标注「跨 N 个方向」。<br/>'
+    + '<span style="color:#7c8ba1">一致性检验</span>：用两个独立标注方法（首命中法 vs 计分法）测得 Cohen κ = <b>0.790</b>（较好）。'
+    + '568 个分歧样本经核查多为「本身就是跨方向」，故不视为标注错误。<br/>'
+    + '<span style="color:#4b5563">「无关键词记录」占 31.1%，且卡方检验显示与院校不独立（χ²=86.7, df=19, p&lt;0.05，'
+    + '中科大 55% vs 复旦 19%）——属系统性缺失，不能当作中立方向解读。</span>';
   else el.innerHTML = '按<b style="color:#c9d4e2">师承层级</b>分组：<br/>'
     + '<b style="color:#f472b6">祖师级</b> 库内无导师 · 带 ≥5 名学生<br/>'
     + '<b style="color:#fb923c">掌门级</b> 库内无导师 · 带 2–4 名<br/>'

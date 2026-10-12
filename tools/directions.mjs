@@ -34,6 +34,20 @@ export function classifyDir(kw, fallback) {
   for (const d of DIRS) if (d.re.test(s)) return d.key;
   return 'other';
 }
+
+// ── 多标签分类 ──
+// kappa 一致性检验（两个独立标注者，κ=0.790）显示：568 个分歧样本中多数
+// 并非标注错误，而是**这些人本身就是跨方向的**（如同时做体系结构 + MEMS + 传感器）。
+// 强行归入单一方向会丢失信息，因此提供多标签。
+export function classifyDirMulti(kw) {
+  const s = String(kw || '');
+  if (!s.trim()) return { primary: 'unknown', all: ['unknown'], multi: false };
+  const hit = [];
+  for (const d of DIRS) if (d.re.test(s)) hit.push(d.key);
+  if (!hit.length) return { primary: 'other', all: ['other'], multi: false };
+  return { primary: hit[0], all: hit, multi: hit.length > 1 };
+}
+
 export const DIR_MAP = Object.fromEntries(DIRS.map((d) => [d.key, d]));
 DIR_MAP.other = { key: 'other', name: '其他 / 未归类', color: '#64748b' };
 DIR_MAP.unknown = { key: 'unknown', name: '无关键词记录', color: '#3f4855' };

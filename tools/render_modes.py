@@ -45,14 +45,18 @@ for k, p in P.items():
                    linewidths=1.8, zorder=3)
     ax.scatter([x], [y], s=r * r * 3.0, c=p["color"], zorder=4,
                edgecolors="#0b0e14", linewidths=1.0)
-    sub = "%d 名学生" % p["cnt"]
+    sub = ("跨 %d 个方向" % p.get("ndir", 0)) if (MODE == 'dir' and p.get("multi")) else ("%d 名学生" % p["cnt"])
     tw = len(p["n"]) * 14 * 0.95
     sw = len(sub) * 10.0   # 保守估计（中文全角，实际比 7.5 宽）
     if r * 2 > tw + 12 and r > 20:
         ax.text(x, y, p["n"], ha="center", va="center", fontsize=14, color="#ffffff",
                 fontweight="bold", zorder=6)
         if r * 2 > sw + 8:
-            ax.text(x, y + 15, sub, ha="center", va="center", fontsize=9, color="#ffffffcc", zorder=6)
+            ax.text(x, y + 15, sub, ha="center", va="center", fontsize=9,
+                    color="#ffffffa0" if (MODE == 'dir' and p.get("multi")) else "#ffffffcc", zorder=6)
+        if MODE == 'dir' and p.get("multi"):
+            ax.scatter([x], [y], s=(r + 4) ** 2 * 2.6, facecolors="none", edgecolors="#ffffff48",
+                       linewidths=1.2, linestyle="--", zorder=5)
     else:
         ax.text(x, y + r + 3, p["n"], ha="center", va="top", fontsize=8.5, color="#dbe3ee", zorder=5)
 
