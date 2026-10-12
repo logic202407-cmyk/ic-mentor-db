@@ -60,6 +60,30 @@ const L3 = net.advisor.filter((e) => !covered.has(`${e.s}||${e.t}`))
   .map((e) => ({ s: NORM(e.s), t: NORM(e.t), lv: 3, n: e.n, span: e.span, note: `早期 ${e.early} 篇一作论文中固定末位作者（${e.span}）`, conf: e.confidence }));
 const L4 = net.collab.map((e) => ({ s: NORM(e.s), t: NORM(e.t), lv: 4, n: e.n }));
 
+// ── L0：时间-机构重叠 + 同期共同署名（用户方法论）──
+// 两人在同一机构的时间段有重叠，且重叠期内有共同署名 => 直接的关系证据
+let ovData = null;
+try { ovData = JSON.parse(fs.readFileSync(path.join(PROC, 'overlap_screen.json'), 'utf8')); } catch { /* 可选 */ }
+const ovEdges = [];
+if (ovData) {
+  for (const r of ovData.results) {
+    const s = NORM(r.a), t = NORM(r.b);
+    if (!NORM(r.a) || !NORM(r.b)) continue;
+    ovEdges.push({
+      s, t, lv: 0,
+      n: r.nInWindow, inst: r.inst, span: `${r.y1}–${r.y2}`,
+      type: r.type, reason: r.reason, tierS: r.tierS, tierA: r.tierA,
+      note: `两人在「${r.inst}」的时间段重叠（${r.y1}–${r.y2}，共 ${r.years} 年），重叠期内共同署名 ${r.nInWindow} 篇。判定：${r.type}${r.reason ? '（' + r.reason + '）' : ''}`,
+    });
+  }
+}
+console.log(`\n时间-机构重叠边: ${ovEdges.length}（其中师徒候选 ${ovEdges.filter((e) => /师徒/.test(e.type)).length}）`);
+// 用重叠证据给已有师徒边加权
+const ovKey = new Set(ovEdges.map((e) => `${e.s}||${e.t}`).concat(ovEdges.map((e) => `${e.t}||${e.s}`)));
+let boosted = 0;
+for (const e of [...L1, ...L2, ...L3]) if (ovKey.has(`${e.s}||${e.t}`)) { e.ov = ovEdges.find((o) => (o.s === e.s && o.t === e.t) || (o.s === e.t && o.t === e.s)); boosted++; }
+console.log(`已有师徒边中，有重叠佐证的: ${boosted} 条`);
+
 console.log(`\n边分级:`);
 console.log(`  L1 自述师承   ${L1.length}`);
 console.log(`  L2 交叉证据   ${L2.length}`);
@@ -71,12 +95,13 @@ const out = {
   meta: {
     builtAt: new Date().toISOString().slice(0, 10),
     nodes: Object.keys(nodes).length,
-    L1: L1.length, L2: L2.length, L3: L3.length, L4: L4.length,
+    L1: L1.length, L2: L2.length, L3: L3.length, L4: L4.length, overlap: ovEdges.length,
     siblings: net.sibling.length, externalMentors: cvNet.external.length,
     withEdu,
   },
   nodes, profile,
   advisor: [...L1, ...L2, ...L3],
+  overlap: ovEdges,
   collab: L4,
   sibling: net.sibling,
   external: cvNet.external,
