@@ -6,11 +6,14 @@ data/raw/lab_pages/
 data/raw/crossref/
 
 # ── 大体积中间产物（可由 tools/ 重跑生成）──
+# ── 关系网络构建的中间产物（可由 tools/ 重跑生成，且体积大）──
+data/processed/_net_*.json
 data/processed/enriched_*.json
 data/processed/mentor_db.json
 data/processed/*_papers.json
 data/processed/name_variants.json
-data/processed/timeline.json          # 含页面原文片段的中间产物（邮箱已在抽取阶段隐去，但原文不入库）
+# 含页面原文片段的中间产物（邮箱已在抽取阶段隐去，但原文一律不入库）
+data/processed/timeline.json
 data/processed/heuristics_all.json
 data/processed/score_log.txt
 data/processed/shortlist_2027.*
@@ -29,3 +32,8 @@ desktop.ini
 
 # 本地备份目录（不入库）
 data/processed_bak_*/
+
+data/processed/network.json
+data/processed/cv_extracted.json
+data/processed/cv_lineage.json
+data/processed/cv_network.json
