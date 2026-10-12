@@ -11,6 +11,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { classifyDir, DIR_MAP, DIRS } from './directions.mjs';
 const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const PROC = path.join(REPO, 'data', 'processed');
 const net = JSON.parse(fs.readFileSync(path.join(PROC, 'network_final.json'), 'utf8'));
@@ -53,7 +54,51 @@ const DATA = {
   advisor: net.advisor.map((e) => ({ s: e.s, t: e.t, n: e.n, lv: e.lv, sp: e.span || '', nt: e.note || '', inst: e.inst || '' })),
   collab: net.collab.map((e) => ({ s: e.s, t: e.t, n: e.n })),
   sibling: net.sibling.map((e) => ({ s: e.s, t: e.t })),
+  dirs: DIRS.map((d) => ({ key: d.key, name: d.name, color: d.color })),
 };
+
+// ── 预计算：方向分类 + 辈分（在 Node 侧算好，避免页面里再跑一遍）──
+const NODE_TAG = {};
+{
+  const st = {}, men = {};
+  for (const e of DATA.advisor) {
+    if (!N[e.s] || !N[e.t]) continue;
+    (st[e.t] = st[e.t] || []).push(e.s);
+    (men[e.s] = men[e.s] || []).push(e.t);
+  }
+  // 辈分：库内无导师者为第 0 代，逐层 BFS（带环保护）
+  const gen = {};
+  let frontier = Object.keys(N).filter((k) => (st[k] || []).length && !(men[k] || []).length);
+  for (const k of frontier) gen[k] = 0;
+  for (let g = 0; g < 10 && frontier.length; g++) {
+    const next = [];
+    for (const k of frontier) for (const s of st[k] || []) if (gen[s] === undefined) { gen[s] = g + 1; next.push(s); }
+    frontier = next;
+  }
+  for (const k of Object.keys(N)) {
+    const nc = (st[k] || []).length;
+    const gg = gen[k];
+    let tier = null;
+    if (gg === 0) tier = nc >= 5 ? '祖师级' : nc >= 2 ? '掌门级' : '资深级';
+    else if (gg === 1) tier = nc >= 2 ? '中坚级' : '骨干级';
+    else if (gg !== undefined) tier = '再传级';
+    NODE_TAG[k] = {
+      gen: gg === undefined ? null : gg,
+      tier,
+      dir: classifyDir(N[k].c),
+      stu: nc,
+    };
+  }
+}
+DATA.tags = NODE_TAG;
+{
+  const tc = {};
+  for (const t of Object.values(NODE_TAG)) if (t.tier) tc[t.tier] = (tc[t.tier] || 0) + 1;
+  const dc = {};
+  for (const t of Object.values(NODE_TAG)) dc[t.dir] = (dc[t.dir] || 0) + 1;
+  console.log('辈分分布:', JSON.stringify(tc));
+  console.log('方向分布:', Object.entries(dc).sort((a, b) => b[1] - a[1]).map(([k, v]) => (DIR_MAP[k]?.name || k) + '=' + v).join(' '));
+}
 
 const html = `<!DOCTYPE html>
 <html lang="zh-CN"><head><meta charset="utf-8"/>
@@ -74,6 +119,9 @@ h2{font-size:11px;margin:15px 0 6px;color:#7c8ba1;letter-spacing:.6px;text-trans
 .tab{display:block;width:100%;text-align:left;padding:8px 11px;margin-bottom:5px;background:#1a1f2b;border:1px solid #232936;border-radius:7px;cursor:pointer;font-size:12.5px;color:#8b98a9;transition:.15s}
 .tab:hover{background:#212736;color:#c3ccd8}
 .tab.on{background:#2563eb;border-color:#2563eb;color:#fff;font-weight:600}
+.mode{flex:1;text-align:center;padding:6px 2px;background:#1a1f2b;border:1px solid #232936;border-radius:6px;cursor:pointer;font-size:12px;color:#8b98a9;transition:.15s}
+.mode:hover{background:#212736;color:#c3ccd8}
+.mode.on{background:#f472b6;border-color:#f472b6;color:#0b0e14;font-weight:700}
 input[type=text]{width:100%;padding:8px 10px;background:#0b0e14;border:1px solid #232936;border-radius:6px;color:#e5e7eb;font-size:12.5px}
 input[type=text]:focus{outline:none;border-color:#2563eb}
 input[type=range]{width:100%;accent-color:#2563eb}
@@ -116,6 +164,14 @@ input[type=range]{width:100%;accent-color:#2563eb}
     <div class="tab on" data-v="tree">师承树（点导师展开）</div>
     <div class="tab" data-v="radial">放射聚焦</div>
     <div class="tab" data-v="heat">合作热力图</div>
+
+    <h2>分类方式</h2>
+    <div id="modes" style="display:flex;gap:5px">
+      <div class="mode on" data-m="school">按院校</div>
+      <div class="mode" data-m="dir">按方向</div>
+      <div class="mode" data-m="gen">按辈分</div>
+    </div>
+    <div id="modeNote" style="font-size:10.5px;color:#5a6472;line-height:1.6;margin-top:6px"></div>
 
     <h2>搜索导师</h2>
     <input type="text" id="q" placeholder="输入姓名…"/>
@@ -178,29 +234,116 @@ const MENTORS = Object.keys(studentsOf).map(k => ({ k, n: studentsOf[k].length }
 const cv = $('cv'), ctx = cv.getContext('2d');
 let W = 0, H = 0, DPR = 1;
 let view = 'tree', th = 3, focus = null, sel = null, hover = null;
-let nodes = [], edges = [], panels = [];
+let mode = 'school';        // 分类方式：school 院校 / dir 方向 / gen 辈分
+let nodes = [], edges = [], groups = [];
 let scale = 1, ox = 0, oy = 0;
+
+// ══════════ 三种分类方式 ══════════
+const TAG = DATA.tags || {};
+const DIRCOL = {}; (DATA.dirs || []).forEach(d => DIRCOL[d.key] = d.color);
+DIRCOL.other = '#64748b'; DIRCOL.unknown = '#3f4855';
+const DIRNAME = {}; (DATA.dirs || []).forEach(d => DIRNAME[d.key] = d.name);
+DIRNAME.other = '其他 / 未归类'; DIRNAME.unknown = '无关键词记录';
+const GENCOL = ['#f472b6', '#60a5fa', '#34d399', '#fbbf24', '#a78bfa', '#fb923c'];
+const GENNAME = ['第 0 代', '第 1 代', '第 2 代', '第 3 代', '第 4 代'];
+
+function groupKeyOf(k) {
+  if (mode === 'school') return SCH(k);
+  if (mode === 'dir') return (TAG[k] && TAG[k].dir) || 'unknown';
+  // 辈分模式按「层级」分组（比按代数好：代数受库内覆盖影响，层级直接把
+  // 「带多少学生」和「导师是否在库内」两个事实合在一起）
+  return (TAG[k] && TAG[k].tier) || '辈分未定';
+}
+const TIER_ORDER = ['祖师级', '掌门级', '中坚级', '资深级', '骨干级', '再传级', '辈分未定'];
+const TIER_DESC = {
+  祖师级: '库内无导师记录 · 带 ≥5 名学生',
+  掌门级: '库内无导师记录 · 带 2–4 名学生',
+  资深级: '库内无导师记录 · 带 0–1 名学生',
+  中坚级: '导师在库内 · 带 ≥2 名学生',
+  骨干级: '导师在库内 · 带 0–1 名学生',
+  再传级: '隔代（导师的导师也在库内）',
+  辈分未定: '存在师承环，代数无法确定',
+};
+const TIER_COLOR = {
+  祖师级: '#f472b6', 掌门级: '#fb923c', 资深级: '#fbbf24',
+  中坚级: '#60a5fa', 骨干级: '#34d399', 再传级: '#a78bfa', 辈分未定: '#64748b',
+};
+function groupNameOf(g) {
+  if (mode === 'school') return g;
+  if (mode === 'dir') return DIRNAME[g] || g;
+  return g;
+}
+function groupSubOf(g) {
+  if (mode === 'gen') return TIER_DESC[g] || '';
+  return '';
+}
+function groupColorOf(g, i) {
+  if (mode === 'school') return COL[g] || '#64748b';
+  if (mode === 'dir') return DIRCOL[g] || '#64748b';
+  return TIER_COLOR[g] || GENCOL[i % GENCOL.length];
+}
+function groupOrder(a, b) {
+  if (mode === 'gen') return TIER_ORDER.indexOf(a) - TIER_ORDER.indexOf(b);
+  return 0;
+}
 
 // ══════════ 视图1：师承树 ══════════
 // 总览：只画 MENTORS 中 n>=th 的导师，规则网格，画面极干净
 // 聚焦：某导师的完整师承树独占画布
 function layoutTree() {
-  nodes = []; edges = []; panels = [];
+  nodes = []; edges = []; groups = [];
   if (!focus) {
     const list = MENTORS.filter(m => m.n >= th);
-    const n = list.length;
-    const aspect = (W && H) ? W / H : 1.58;
-    const cols = Math.max(1, Math.round(Math.sqrt(n * aspect * 1.15)));
-    const rows = Math.ceil(n / cols);
-    const GX = Math.min(250, (W - 90) / Math.max(cols, 1));
-    const GY = Math.min(190, (H - 90) / Math.max(rows, 1));
-    list.forEach((m, i) => {
-      const r = Math.floor(i / cols), c = i % cols;
-      const x = (c - (cols - 1) / 2) * GX;
-      const y = (r - (rows - 1) / 2) * GY;
-      const hasCross = studentsOf[m.k].some(isCross) || (mentorOf[m.k] || []).some(isCross);
-      nodes.push({ k: m.k, x, y, r: 20 + Math.min(46, Math.sqrt(m.n) * 9), root: true, hasCross, cnt: m.n });
+    // 按当前分类方式分组
+    const byG = {};
+    for (const m of list) (byG[groupKeyOf(m.k)] = byG[groupKeyOf(m.k)] || []).push(m);
+    const gkeys = Object.keys(byG).sort((a, b) => groupOrder(a, b) || (byG[b].length - byG[a].length));
+    // 组内用网格排列，整组作为一个「块」，块再打包
+    const CR = 132;                 // 组内格距
+    const rOf = (n) => 17 + Math.min(34, Math.sqrt(n) * 7.5);
+    const blocks = gkeys.map((g, gi) => {
+      const arr = byG[g].sort((a, b) => b.n - a.n);
+      const cols = Math.max(1, Math.ceil(Math.sqrt(arr.length * 1.5)));
+      const rows = Math.ceil(arr.length / cols);
+      // 标题条高度要按组内最大圆的半径来定，否则大圆会压住标题
+      const maxR = Math.max(...arr.map(m => rOf(m.n)));
+      const HEADH = 40 + maxR;
+      // 高度只在「最后一行」加上半径，否则单词导师的面板下方会留一大片空白
+      return { g, gi, arr, cols, rows, maxR, HEADH, w: cols * CR + 36, h: (rows - 1) * CR + HEADH + maxR + 18 };
     });
+    // 块打包：搜索最优行宽，贴合画布长宽比
+    const target = (W && H) ? W / H : 1.58;
+    const pack = (MAXW) => {
+      let cx = 0, cy = 0, rowH = 0, maxRowW = 0;
+      const place = [];
+      for (const b of blocks) {
+        if (cx > 0 && cx + b.w > MAXW) { maxRowW = Math.max(maxRowW, cx - 18); cx = 0; cy += rowH + 18; rowH = 0; }
+        place.push({ b, x: cx, y: cy });
+        cx += b.w + 18; rowH = Math.max(rowH, b.h);
+      }
+      maxRowW = Math.max(maxRowW, cx - 18);
+      return { place, w: maxRowW, h: cy + rowH };
+    };
+    const totalW = blocks.reduce((a, b) => a + b.w + 18, 0) || 1;
+    let best = null;
+    for (let t = 0; t <= 40; t++) {
+      const MAXW = Math.max(700, totalW * (0.06 + t * 0.024));
+      const r = pack(MAXW);
+      const sc = Math.abs(Math.log((r.w / Math.max(r.h, 1)) / target));
+      if (!best || sc < best.sc) best = { sc, ...r };
+    }
+    for (const { b, x, y } of best.place) {
+      groups.push({ key: b.g, name: groupNameOf(b.g), color: groupColorOf(b.g, b.gi), x, y, w: b.w, h: b.h, n: b.arr.length });
+      b.arr.forEach((m, i) => {
+        const r = Math.floor(i / b.cols), c = i % b.cols;
+        const cnt = Math.min(b.arr.length - r * b.cols, b.cols);
+        const px = x + 18 + (c - (cnt - 1) / 2) * CR + (b.cols * CR) / 2 - CR / 2;
+        const py = y + b.HEADH + r * CR;
+        const hasCross = studentsOf[m.k].some(isCross) || (mentorOf[m.k] || []).some(isCross);
+        nodes.push({ k: m.k, x: px, y: py, r: rOf(m.n), root: true, hasCross, cnt: m.n,
+          tier: (TAG[m.k] && TAG[m.k].tier) || '' });
+      });
+    }
     return;
   }
   // 聚焦模式：分层布局，**每层超过 MAXROW 个就换行**
@@ -341,10 +484,12 @@ function fitView(pad) {
   if (view === 'radial') return;
   if (!nodes.length) return;
   // ⚠️ 必须把节点半径算进包围盒，否则大圆会被画布边缘切掉
-  const x0 = Math.min(...nodes.map(n => n.x - n.r)), x1 = Math.max(...nodes.map(n => n.x + n.r));
-  // 下方留出标签空间
-  const y0 = Math.min(...nodes.map(n => n.y - n.r));
-  const y1 = Math.max(...nodes.map(n => n.y + n.r + (n.root ? 44 : 26)));
+  const xs0 = nodes.map(n => n.x - n.r), xs1 = nodes.map(n => n.x + n.r);
+  const ys0 = nodes.map(n => n.y - n.r), ys1 = nodes.map(n => n.y + n.r + (n.root ? 44 : 26));
+  // 分组底板也要算进包围盒，否则标题条会被画布切掉
+  for (const g of groups) { xs0.push(g.x); xs1.push(g.x + g.w); ys0.push(g.y); ys1.push(g.y + g.h); }
+  const x0 = Math.min(...xs0), x1 = Math.max(...xs1);
+  const y0 = Math.min(...ys0), y1 = Math.max(...ys1);
   const gw = Math.max(x1 - x0, 1), gh = Math.max(y1 - y0, 1);
   const P = pad || 70;
   scale = Math.max(0.05, Math.min((W - P * 2) / gw, (H - P * 2) / gh, 2.2));
@@ -357,6 +502,21 @@ function render() {
   ctx.fillStyle = '#0b0e14'; ctx.fillRect(0, 0, W, H);
   if (view === 'radial') return renderRadial();
   ctx.setTransform(DPR * scale, 0, 0, DPR * scale, DPR * ox, DPR * oy);
+
+  // 分组底板（仅总览态）
+  if (!focus && groups.length) {
+    for (const g of groups) {
+      ctx.fillStyle = g.color + '12';
+      ctx.strokeStyle = g.color + '48';
+      ctx.lineWidth = 1.4 / Math.max(scale, .3);
+      ctx.beginPath();
+      const rr = 12, x = g.x, y = g.y, w2 = g.w, h2 = g.h;
+      ctx.moveTo(x + rr, y); ctx.arcTo(x + w2, y, x + w2, y + h2, rr);
+      ctx.arcTo(x + w2, y + h2, x, y + h2, rr); ctx.arcTo(x, y + h2, x, y, rr);
+      ctx.arcTo(x, y, x + w2, y, rr); ctx.closePath();
+      ctx.fill(); ctx.stroke();
+    }
+  }
 
   // 边
   for (const e of edges) {
@@ -390,6 +550,31 @@ function render() {
   // 标签（屏幕坐标恒字号）
   ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
   ctx.textAlign = 'center';
+
+  // 分组标题条（屏幕坐标，保证缩放后仍可读）
+  if (!focus) {
+    for (const g of groups) {
+      const gx = g.x * scale + ox, gy = g.y * scale + oy, gw = g.w * scale;
+      if (gx + gw < 0 || gx > W || gy > H) continue;
+      ctx.fillStyle = '#0b0e14';
+      ctx.fillRect(gx, gy, gw, 25);
+      ctx.fillStyle = g.color + '3a';
+      ctx.fillRect(gx, gy, Math.min(gw, 330), 25);
+      ctx.strokeStyle = g.color + '70'; ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.moveTo(gx, gy + 25); ctx.lineTo(gx + gw, gy + 25); ctx.stroke();
+      ctx.font = 'bold 13px -apple-system,"Microsoft YaHei",sans-serif';
+      ctx.textAlign = 'left';
+      ctx.fillStyle = g.color;
+      ctx.fillText(g.name, gx + 9, gy + 17);
+      ctx.font = '11px -apple-system,"Microsoft YaHei",sans-serif';
+      ctx.fillStyle = '#7c8ba1';
+      const sub = groupSubOf(g.key);
+      const after = g.n + ' 位导师' + (sub ? ' · ' + sub : '');
+      ctx.fillText(after, gx + 9 + ctx.measureText(g.name).width + 30, gy + 17);
+      ctx.textAlign = 'center';
+    }
+  }
+
   const placed = [];
   const order = nodes.slice().sort((a, b) => (b.root ? 1 : 0) - (a.root ? 1 : 0) || NP(b.k) - NP(a.k));
   for (const n of order) {
@@ -400,16 +585,19 @@ function render() {
     const label = NAME(n.k);
     ctx.font = (n.root ? 'bold ' : '') + fs + 'px -apple-system,"Microsoft YaHei",sans-serif';
     const tw = ctx.measureText(label).width;
-    // 根节点较大：名字直接画在圆内，避免被节点盖住
-    if (n.root && r * 2 > tw + 10 && r > 16) {
-      ctx.fillStyle = 'rgba(11,14,20,.55)';
-      ctx.fillText(label, sx, sy + fs * 0.36);
+    // 根节点较大：名字画在圆内（避免被节点盖住）。副标题放得下才画，放不下就省略。
+    ctx.font = '10.5px -apple-system,"Microsoft YaHei",sans-serif';
+    const subTxt = n.cnt + ' 名学生';
+    const subW = ctx.measureText(subTxt).width;
+    ctx.font = (n.root ? 'bold ' : '') + fs + 'px -apple-system,"Microsoft YaHei",sans-serif';
+    if (n.root && r * 2 > tw + 12 && r > 20) {
       ctx.fillStyle = '#ffffff';
       ctx.fillText(label, sx, sy + fs * 0.36);
-      const sub = n.cnt + ' 名学生';
-      ctx.font = '10.5px -apple-system,"Microsoft YaHei",sans-serif';
-      ctx.fillStyle = 'rgba(255,255,255,.75)';
-      ctx.fillText(sub, sx, sy + fs * 0.36 + 15);
+      if (r * 2 > subW + 8) {
+        ctx.font = '10.5px -apple-system,"Microsoft YaHei",sans-serif';
+        ctx.fillStyle = 'rgba(255,255,255,.8)';
+        ctx.fillText(subTxt, sx, sy + fs * 0.36 + 15);
+      }
       continue;
     }
     const ty = sy + r + fs + 1;
@@ -674,6 +862,33 @@ function setView(v) {
   renderCrumb();
 }
 document.querySelectorAll('.tab').forEach(t => { t.onclick = () => setView(t.dataset.v); });
+document.querySelectorAll('.mode').forEach(m => {
+  m.onclick = () => {
+    document.querySelectorAll('.mode').forEach(x => x.classList.remove('on'));
+    m.classList.add('on');
+    mode = m.dataset.m;
+    // 各模式的默认阈值：辈分模式下「≥3 学生」会几乎全是祖师/掌门两级，
+    // 用 ≥2 才能同时看到多个层级
+    const defTh = mode === 'gen' ? 2 : 3;
+    th = defTh; $('th').value = defTh; $('tv').textContent = defTh;
+    updateModeNote();
+    renderMentorList();
+    if (view === 'tree') { focus = null; layoutTree(); fitView(70); render(); renderCrumb(); }
+  };
+});
+function updateModeNote() {
+  const el = $('modeNote'); if (!el) return;
+  if (mode === 'school') el.innerHTML = '按<b style="color:#c9d4e2">现所在院校</b>分组。';
+  else if (mode === 'dir') el.innerHTML = '按页面自述的<b style="color:#c9d4e2">研究方向关键词</b>归类，只看页面原文、不做推断。未写关键词的归入「无关键词记录」。';
+  else el.innerHTML = '按<b style="color:#c9d4e2">师承层级</b>分组：<br/>'
+    + '<b style="color:#f472b6">祖师级</b> 库内无导师 · 带 ≥5 名学生<br/>'
+    + '<b style="color:#fb923c">掌门级</b> 库内无导师 · 带 2–4 名<br/>'
+    + '<b style="color:#fbbf24">资深级</b> 库内无导师 · 带 0–1 名<br/>'
+    + '<b style="color:#60a5fa">中坚级</b> 导师在库内 · 带 ≥2 名<br/>'
+    + '<b style="color:#34d399">骨干级</b> 导师在库内 · 带 0–1 名<br/>'
+    + '<b style="color:#a78bfa">再传级</b> 隔代<br/>'
+    + '<span style="color:#4b5563">注意：「库内无导师记录」不等于开山祖师，只表示其导师不在本库 22 校范围内。</span>';
+}
 $('q').addEventListener('input', (e) => {
   const v = e.target.value.trim(), res = $('qres');
   if (!v) { res.innerHTML = ''; return; }
@@ -700,6 +915,7 @@ $('sA').textContent = ADV.filter(e => N[e.s] && N[e.t]).length;
 $('sX').textContent = CROSS.length;
 $('sM').textContent = MENTORS.length;
 
+updateModeNote();
 renderMentorList();
 restoreCanvas();
 resize();
