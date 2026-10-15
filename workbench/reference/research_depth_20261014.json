@@ -1,0 +1,6911 @@
+{
+  "date": "2026-10-14",
+  "before": {
+    "papers": 589,
+    "relations": 58,
+    "recruitment": 6071,
+    "admission_notices": 439
+  },
+  "after": {
+    "readable_profiles": 6692,
+    "papers": 764,
+    "relations": 66,
+    "recruitment": 6071,
+    "admission_notices": 471
+  },
+  "profiles": [
+    {
+      "id": "official-84f2847498fff25f6496",
+      "name": "丁文江",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 10,
+        "relations": 0,
+        "biography": 3,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://smse.sjtu.edu.cn/people/detail_new/20187"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-90101ade56eca1a466fe",
+      "name": "丁显廷",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 2
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/dingxianting（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-bbfee8807ff38c9a196c",
+      "name": "丁烨",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://me.sjtu.edu.cn/teacher_directory1/dingye"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-f23b51c36d6a02975ffd",
+      "name": "严亚贤",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.agri.sjtu.edu.cn/Data/View/2262（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-9871ab8ccf84fac6665e",
+      "name": "严智明",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://web.tdli.sjtu.edu.cn/cmyim/（ValueError）"
+      ]
+    },
+    {
+      "id": "official-a1768ca0fbe20ead42b8",
+      "name": "伊合绵",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://tdli.sjtu.edu.cn/CN/people/all/634/HemianYi（ValueError）"
+      ]
+    },
+    {
+      "id": "official-eeda1c38af50c28b731b",
+      "name": "何义亮",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://sese.sjtu.edu.cn/faculty/view/19（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-665f0d8a58cca1561ecb",
+      "name": "何光宇",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.seiee.sjtu.edu.cn/szgk_jsml.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-43d52359dda75077c7d3",
+      "name": "余治平",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 2,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://shss.sjtu.edu.cn/Web/FacultyDetail/156"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-5d6e928d0d951f3c2fc8",
+      "name": "俞章盛",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/yuzhangsheng（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-6496af37b75795e3c7af",
+      "name": "傅小兰",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://psychology.sjtu.edu.cn/tsml/91.html"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-389c69bd5310808f7523",
+      "name": "兰丽",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/lanli（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-5e20db6b837663397333",
+      "name": "关新平",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://sais.sjtu.edu.cn/faculty.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-b9427cdefe64351a3bec",
+      "name": "冯冬涵",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.seiee.sjtu.edu.cn/szgk_jsml.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-c73c6f5282a493890c35",
+      "name": "冯原",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/fengyuan（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-3f9caedda6f8f2e31c11",
+      "name": "刘伟",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://ma.sjtu.edu.cn/szdw.htm（ValueError）"
+      ]
+    },
+    {
+      "id": "official-50932e14a31c8b8b8c9b",
+      "name": "刘帮成",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 2
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/liubangcheng（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-dfaf7baf0da1ea4b653c",
+      "name": "刘庆文",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.seiee.sjtu.edu.cn/szgk_jsml.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-07023a203a66e9e9b269",
+      "name": "刘德龙",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 1,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://pharm.sjtu.edu.cn/szdy/2356.html"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-91cd73f1641b9b3f5397",
+      "name": "刘成杰",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://faculty.sjtu.edu.cn/liuchengjie/zh_CN/index.htm（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-6fcfd4b57b8d52816756",
+      "name": "刘杰",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/liujie（ConnectionError）"
+      ]
+    },
+    {
+      "id": "official-21d0e56f4d354ae906b3",
+      "name": "刘桦",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://naoce.sjtu.edu.cn/teachers/5647.html"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-c2938fcba9242671cdda",
+      "name": "刘燕",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 3,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://scce.sjtu.edu.cn/"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-01464906a35be6c4ec30",
+      "name": "刘苹",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/liuping12（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-ef67484d87d53ca31c16",
+      "name": "卜祥记",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://ma.sjtu.edu.cn/szdw.htm（ValueError）"
+      ]
+    },
+    {
+      "id": "official-233f83166f6650ed02bb",
+      "name": "卢婷婷",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 1,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://www.sipa.sjtu.edu.cn/facultydetail/qzjs/96"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-cca449a57e14e69df1f8",
+      "name": "叶坚",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 2
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/yejian1（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-95c01fa8d60685fab527",
+      "name": "叶铮",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 1,
+        "biography": 5,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://psychology.sjtu.edu.cn/tsml/323.html"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-f9f644de1788e246dbdd",
+      "name": "吕守军",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/lvshoujun（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-e76f9e6afbc97bea6d83",
+      "name": "吕晓俊",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/lvxiaojun（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-a1163882b0c162db19fd",
+      "name": "吕晖",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/lvhui（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-58af111978c302f1bd9b",
+      "name": "吴俊",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 2
+      },
+      "sources": [
+        "https://shss.sjtu.edu.cn/Web/FacultyDetail/310"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-500b59e4e1359acbd835",
+      "name": "吴建东",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.seiee.sjtu.edu.cn/szgk_jsml.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-19f63d2f489aadd79ace",
+      "name": "吴建南",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/wujiannan（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-4dbcb5b8f6558f16a0fb",
+      "name": "吴开宇",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.seiee.sjtu.edu.cn/szgk_jsml.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-c3611a440ce2eac9f2fa",
+      "name": "吴方",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 3,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://scsb.sjtu.edu.cn/Professor/11838.html"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-da82c001c124cdd9abe9",
+      "name": "吴更",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/wugeng（ConnectionError）"
+      ]
+    },
+    {
+      "id": "official-947efb3c1256a5bdc7a8",
+      "name": "吴欣然",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 7,
+        "relations": 2,
+        "biography": 5,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://psychology.sjtu.edu.cn/tsml/438.html"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-51f50a62e880f092b477",
+      "name": "吴紫云",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 2
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.agri.sjtu.edu.cn/Data/View/5186（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-7d39942625edcd6b6f02",
+      "name": "吴红",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://ma.sjtu.edu.cn/szdw.htm（ValueError）"
+      ]
+    },
+    {
+      "id": "official-bf91f0680b4bf29fcb6b",
+      "name": "周凯",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://ma.sjtu.edu.cn/szdw.htm（ValueError）"
+      ]
+    },
+    {
+      "id": "official-a4ec6ecdcf52368418da",
+      "name": "周国伟",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 4,
+        "recruitment": 2
+      },
+      "sources": [
+        "https://naoce.sjtu.edu.cn/teachers/10375.html"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-9298eb14caabd85e1063",
+      "name": "周培",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.agri.sjtu.edu.cn/Data/View/2274（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-15955c8a5bd404ce014b",
+      "name": "周磊",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://soo.sjtu.edu.cn/teacher-list.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-08d5d174d17a4ca963ce",
+      "name": "周锋",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 3
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://soo.sjtu.edu.cn/teacher-list.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-37cd752b4ada553f93f0",
+      "name": "周韫韬",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 3
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://soo.sjtu.edu.cn/teacher-list.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-033a81ad19adccb8db04",
+      "name": "唐异垒",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://faculty.sjtu.edu.cn/tangyilei/zh_CN/index.htm（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-91f3630639192f33811e",
+      "name": "唐敏",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://ins.sjtu.edu.cn/people/mtang/（ValueError）"
+      ]
+    },
+    {
+      "id": "official-6bbf0a754b3ca7b003a2",
+      "name": "夏伟梁",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 2
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/xiaweiliang（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-7e3ce6d6ef3348cbaf6a",
+      "name": "夏燕靖",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 4,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://iah.sjtu.edu.cn/Web/FacultyDateil/7?idd=27"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-dd1bde829074d90c6ab8",
+      "name": "姚元",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://www.physics.sjtu.edu.cn/jsml/yaoyuan.html"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-4550d566102d166735e7",
+      "name": "姚振威",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 2
+      },
+      "sources": [
+        "https://www.physics.sjtu.edu.cn/jsml/yaozhenwei.html"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-1abd03dc05f6a395b7e4",
+      "name": "孔令和",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.seiee.sjtu.edu.cn/szgk_jsml.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-145a1e88eb8ba9da5971",
+      "name": "孔令逊",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 2
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.ji.sjtu.edu.cn/cn/about/faculty-staff/faculty-directory/faculty-detail/93/（SSLError）"
+      ]
+    },
+    {
+      "id": "official-6c2ab88f2b09d2505e1c",
+      "name": "孙建和",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.agri.sjtu.edu.cn/Data/View/2260（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-5e007a3df98be9d6e928",
+      "name": "安超",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 4,
+        "biography": 5,
+        "recruitment": 2
+      },
+      "sources": [
+        "https://naoce.sjtu.edu.cn/teachers/5673.html"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-c885dc5a014f96fbd81a",
+      "name": "屈子杰",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 2
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.ji.sjtu.edu.cn/about/faculty-staff/faculty-directory/faculty-detail/32777/（SSLError）"
+      ]
+    },
+    {
+      "id": "official-61a9aeea9b12ddf2a978",
+      "name": "崔可航",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/cuikehang（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-ae92150079588a741db3",
+      "name": "庞双子",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://sfl.sjtu.edu.cn/Data/View/4629（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-efa7c2de0408d8f1d991",
+      "name": "廖恩惠",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 3
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://soo.sjtu.edu.cn/teacher-list.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-cdbe93ac75d8a372bd66",
+      "name": "张乐",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.agri.sjtu.edu.cn/Data/View/6761（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-91f21de79148d0b8ca64",
+      "name": "张书宇",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/zhangshuyu（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-a249482d105a42a0ed22",
+      "name": "张会波",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/zhanghuibo（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-07bd60ac0f3e93c4aee6",
+      "name": "张传勇",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://www.sipa.sjtu.edu.cn/facultydetail/qzjs/86"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-7c63d72f0517bfa60c3e",
+      "name": "张全之",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 1,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://shss.sjtu.edu.cn/Web/FacultyDetail/209"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-efef152ba8cf619d05ca",
+      "name": "张召儒",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 3
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://soo.sjtu.edu.cn/teacher-list.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-71f7e7da76ac14f7ccd0",
+      "name": "张岩",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/zhangyan12345（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-65e1c32a0e287bf62887",
+      "name": "张川",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 3,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://scce.sjtu.edu.cn/"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-a5a603b9935b1888af4d",
+      "name": "张帆",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://scce.sjtu.edu.cn/jiaoshi.php?aid=173&c=3（ValueError）"
+      ]
+    },
+    {
+      "id": "official-7838373bc56bb4bc69be",
+      "name": "张录法",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/zhanglufa（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-7189cd9c4bd6bb580deb",
+      "name": "张律文",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 1,
+        "recruitment": 2
+      },
+      "sources": [
+        "https://naoce.sjtu.edu.cn/teachers/5671.html"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-a4b8d4810c2ab4e705ce",
+      "name": "张振锋",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://pharm.sjtu.edu.cn/szdy/2641.html"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-b48218f464c674a93b45",
+      "name": "张洳源",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 2
+      },
+      "sources": [
+        "https://psychology.sjtu.edu.cn/"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-23b54e66ba47217106b2",
+      "name": "张海斌",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 10,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://www.senergy.sjtu.edu.cn/index/ziyoushizi/60.html"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-6a6ddbaa3213ef1b978f",
+      "name": "张砚雨",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://psychology.sjtu.edu.cn/tsml/385.html"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-e034b6fbec54335fc442",
+      "name": "张绍东",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://scce.sjtu.edu.cn/jiaoshi.php?aid=2108&c=3（ValueError）"
+      ]
+    },
+    {
+      "id": "official-a031d66ce9ba0da1a5f7",
+      "name": "张维夏",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.seiee.sjtu.edu.cn/szgk_jsml.htmlhttps://www.seiee.sjtu.edu.cn/szgk_jsml.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-d01dc9eb77f6b30d85f7",
+      "name": "张蓓",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 8,
+        "relations": 1,
+        "biography": 5,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://psychology.sjtu.edu.cn/tsml/388.html"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-b297d3f194303cafbcd6",
+      "name": "张远新",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://ma.sjtu.edu.cn/szdw.htm（ValueError）"
+      ]
+    },
+    {
+      "id": "official-a33554054152fbd1f5b9",
+      "name": "张雪梅",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://ma.sjtu.edu.cn/szdw.htm（ValueError）"
+      ]
+    },
+    {
+      "id": "official-f7c9fc5cf08f1cbb0d29",
+      "name": "彭正德",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://ma.sjtu.edu.cn/szdw.htm（ValueError）"
+      ]
+    },
+    {
+      "id": "official-0296421e91a1082a3091",
+      "name": "徐东莲",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://tdli.sjtu.edu.cn/CN/people/t-d-lee-fellows/56/DonglianXu（ValueError）"
+      ]
+    },
+    {
+      "id": "official-09264305bc03d9164944",
+      "name": "徐学敏",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 2
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/xuxuemin（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-6f2647befd0f6ad16420",
+      "name": "徐恒",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://www.physics.sjtu.edu.cn/jsml/xuheng.html"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-264764d26115b7ca2193",
+      "name": "徐潇源",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.seiee.sjtu.edu.cn/szgk_jsml.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-3e4a008f4801015fcf6c",
+      "name": "惠楠",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.agri.sjtu.edu.cn/Data/View/4605（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-e08ec87039adfefb8e92",
+      "name": "戎锋",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://faculty.sjtu.edu.cn/rongfeng/zh_CN/index.htm（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-a836240cc8a92d1a488c",
+      "name": "文学武",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 5,
+        "relations": 0,
+        "biography": 2,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://shss.sjtu.edu.cn/Web/FacultyDetail/7"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-b7d1446594b88b65e0ea",
+      "name": "方北香",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://faculty.sjtu.edu.cn/fangbeixiang/zh_CN/index.htm（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-f1e56e4c54fda8dd7341",
+      "name": "朱勃",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.agri.sjtu.edu.cn/Data/View/6789（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-8edea82bf1d22312d3e9",
+      "name": "朱南文",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://sese.sjtu.edu.cn/faculty/view/24（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-f75e69fdc3ba39646d94",
+      "name": "朱荻彬",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.seiee.sjtu.edu.cn/szgk_jsml.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-baa58cd7ce7724fe45b7",
+      "name": "朱虹",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.ji.sjtu.edu.cn/about/faculty-staff/faculty-directory/faculty-detail/156/（SSLError）"
+      ]
+    },
+    {
+      "id": "official-464ba338b14031f807b1",
+      "name": "李亚纯",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 2,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://www.math.sjtu.edu.cn/Default/teachershow/tags/MDAwMDAwMDAwMLKIdt0"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-dc176e112bcbcb068344",
+      "name": "李伟鹏",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/liweipeng（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-1c2cf2f03dbc88f08768",
+      "name": "李俊祥",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/lijunxiang（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-85a1b627403c716daa69",
+      "name": "李保界",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 2,
+        "relations": 0,
+        "biography": 1,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://life.sjtu.edu.cn/teacher/BaojieLi"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-7bafffba346c680af62e",
+      "name": "李元祥",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/liyuanxiang（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-28540504a048be5b8d99",
+      "name": "李力",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/lili1234（ValueError）"
+      ]
+    },
+    {
+      "id": "official-0956fe2cd1d7abd6c866",
+      "name": "李卫东",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://life.sjtu.edu.cn/teacher/WeidongLi（ValueError）"
+      ]
+    },
+    {
+      "id": "official-c723fb1134fea929ba65",
+      "name": "李吉有",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://faculty.sjtu.edu.cn/lijiyou/zh_CN/index.htm（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-c8cede84fd23f6604114",
+      "name": "李大玮",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://soo.sjtu.edu.cn/teacher-list.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-ada521f24ee3d3c7e029",
+      "name": "李成陈",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://sfl.sjtu.edu.cn/Data/View/9277（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-92ff31bc5a230b262779",
+      "name": "李文涛",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://sese.sjtu.edu.cn/faculty/view/159（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-70b7de6f982b3e698cf8",
+      "name": "李新昊",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://scce.sjtu.edu.cn/jiaoshi.php?aid=442&c=3（ValueError）"
+      ]
+    },
+    {
+      "id": "official-8bb3b3044f757aad9562",
+      "name": "李新红",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.agri.sjtu.edu.cn/Data/View/2305（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-527a352e7e68b443fd6d",
+      "name": "李松挺",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://ins.sjtu.edu.cn/people/songtingli/（ValueError）"
+      ]
+    },
+    {
+      "id": "official-957fa5d6b6634a48c065",
+      "name": "李梁",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://ma.sjtu.edu.cn/szdw.htm（ValueError）"
+      ]
+    },
+    {
+      "id": "official-fb23fb559b9e26896de1",
+      "name": "李永福",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.seiee.sjtu.edu.cn/szgk_jsml.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-c0f37131ae143abdb78f",
+      "name": "李涛",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://scce.sjtu.edu.cn/jiaoshi.php?aid=1479&c=3（ValueError）"
+      ]
+    },
+    {
+      "id": "official-739e800d8c45e8bf81cf",
+      "name": "李磊",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://ins.sjtu.edu.cn/people/leili/（ValueError）"
+      ]
+    },
+    {
+      "id": "official-05bc2b259d90715c8857",
+      "name": "李金金",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.seiee.sjtu.edu.cn/szgk_jsml.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-bea104b8893d2691784e",
+      "name": "李鑫",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://sfl.sjtu.edu.cn/Data/View/1910（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-8ae3c3a709e906c712a6",
+      "name": "李银生",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.agri.sjtu.edu.cn/Data/View/2350（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-51452b48d373b3e293f2",
+      "name": "李长坤",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://scce.sjtu.edu.cn/jiaoshi.php?aid=1661&c=3（ValueError）"
+      ]
+    },
+    {
+      "id": "official-1655d1461fbd88d6f5a9",
+      "name": "李雨",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.seiee.sjtu.edu.cn/szgk_jsml.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-8635aa78985c8ebfc776",
+      "name": "李高进",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 1,
+        "recruitment": 2
+      },
+      "sources": [
+        "https://naoce.sjtu.edu.cn/teachers/10455.html"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-88b8a411638fb6a2e85d",
+      "name": "杜保瑞",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 5,
+        "relations": 0,
+        "biography": 1,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://shss.sjtu.edu.cn/Web/FacultyDetail/192"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-3f7925502dc7ac849c5c",
+      "name": "来米加",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://math.sjtu.edu.cn/faculty/mlai/（ValueError）"
+      ]
+    },
+    {
+      "id": "official-d2d509de395aab45a65f",
+      "name": "杨佳",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 8,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://www.senergy.sjtu.edu.cn/index/ziyoushizi/45.html"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-4ec2862037c750e4cfbc",
+      "name": "杨凤鹏",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 2
+      },
+      "sources": [
+        "https://naoce.sjtu.edu.cn/teachers/5617.html"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-19af08828a5efda71923",
+      "name": "杨勇",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 4,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://www.physics.sjtu.edu.cn/jsml/yangyong.html"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-e92c7d79aacb0295aa1d",
+      "name": "杨海军",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 1,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://www.physics.sjtu.edu.cn/jsml/yanghaijun.html"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-0e58aaabe2720bd63b7b",
+      "name": "杭超洵",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://soo.sjtu.edu.cn/teacher-list.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-18ca6a079bdde29e0262",
+      "name": "林双君",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/linshuangjun（ConnectionError）"
+      ]
+    },
+    {
+      "id": "official-7cc6a92259fc5fe988ed",
+      "name": "梁夫友",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 1,
+        "recruitment": 3
+      },
+      "sources": [
+        "https://naoce.sjtu.edu.cn/teachers/5676.html"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-59c996dbbf0325176625",
+      "name": "殷杉",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.agri.sjtu.edu.cn/Data/View/2366（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-d78c29688559f73b651c",
+      "name": "毕尤一",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 2
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.ji.sjtu.edu.cn/about/faculty-staff/faculty-directory/faculty-detail/24/（SSLError）"
+      ]
+    },
+    {
+      "id": "official-47ba5d88b878e935be05",
+      "name": "毕庆贞",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://me.sjtu.edu.cn/teacher_directory1/biqingzhen"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-16d1661e29d94d18f626",
+      "name": "汤耀辉",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/tangyaohui（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-f7846918d7db96fa201d",
+      "name": "汪云霞",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 1,
+        "relations": 0,
+        "biography": 1,
+        "recruitment": 2
+      },
+      "sources": [
+        "https://shss.sjtu.edu.cn/Web/FacultyDetail/32"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-2c0c64fd9280d9e76cb6",
+      "name": "沈泳星",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 2
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.ji.sjtu.edu.cn/about/faculty-staff/faculty-directory/faculty-detail/118/（SSLError）"
+      ]
+    },
+    {
+      "id": "official-4258b18597347d55a53b",
+      "name": "沈洋",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/shenyang（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-1ddd550e5e862a295697",
+      "name": "沈红斌",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://sais.sjtu.edu.cn/faculty.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-cad72d65871f88874b64",
+      "name": "洪亮",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 10,
+        "relations": 1,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://www.physics.sjtu.edu.cn/jsml/hongliang.html"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-c0135001e8906411a18f",
+      "name": "洪海超",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.aero.sjtu.edu.cn/Data/View/4613（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-8746574b356ecbfb3d5f",
+      "name": "游猎",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://faculty.sjtu.edu.cn/youlie（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-0050d2cfbd8095cce1c7",
+      "name": "潘小勇",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://sais.sjtu.edu.cn/faculty.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-7c86980a3da0e1074bc8",
+      "name": "潘浩之",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 5,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://www.sipa.sjtu.edu.cn/facultydetail/qzjs/93"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-26e5a1229da706d94d23",
+      "name": "潮群",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 3
+      },
+      "sources": [
+        "https://me.sjtu.edu.cn/teacher_directory1/chaoqun"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-98c607194a3e03506c06",
+      "name": "熊丽琴",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 2
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/xiongliqin（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-b14f88df307bddad272b",
+      "name": "熊辉明",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://scce.sjtu.edu.cn/jiaoshi.php?aid=100&c=3（ValueError）"
+      ]
+    },
+    {
+      "id": "official-a40911456ee450aba0b3",
+      "name": "王亚光",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://math.sjtu.edu.cn/faculty/ygwang/",
+        "https://math.sjtu.edu.cn/faculty/ygwang/list.htm"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-1a60f7fc7c66fc900dbf",
+      "name": "王利坡",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 2
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.ji.sjtu.edu.cn/about/faculty-staff/faculty-directory/faculty-detail/133/（SSLError）"
+      ]
+    },
+    {
+      "id": "official-7d751534f135460d44fe",
+      "name": "王华",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://sfl.sjtu.edu.cn/Data/View/1960（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-838a0a3658c4fdc38b69",
+      "name": "王哲",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.agri.sjtu.edu.cn/Data/View/5588（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-b5a44323369fc3c5293e",
+      "name": "王嘉松",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 1,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://naoce.sjtu.edu.cn/teachers/5674.html"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-661d653ddb6bfb53962e",
+      "name": "王宁",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 1,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://shss.sjtu.edu.cn/Web/FacultyDetail/226"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-0003eee01ffe9dc240bb",
+      "name": "王平",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://scce.sjtu.edu.cn/jiaoshi.php?aid=1655&c=3（ValueError）"
+      ]
+    },
+    {
+      "id": "official-7957e6cfd0bc0086b4d2",
+      "name": "王开学",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://scce.sjtu.edu.cn/jiaoshi.php?aid=172&c=3（ValueError）"
+      ]
+    },
+    {
+      "id": "official-2ead91d53f1597b89637",
+      "name": "王开志",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.seiee.sjtu.edu.cn/szgk_jsml.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-bf30bfbc6dfb4a315168",
+      "name": "王强",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://ma.sjtu.edu.cn/szdw.htm（ValueError）"
+      ]
+    },
+    {
+      "id": "official-dfad610ad94367b35143",
+      "name": "王承民",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.seiee.sjtu.edu.cn/szgk_jsml.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-650b9a9df2fcab5f3342",
+      "name": "王文冬",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.ji.sjtu.edu.cn/about/faculty-staff/faculty-directory/faculty-detail/5279/（SSLError）"
+      ]
+    },
+    {
+      "id": "official-1a8613a6262b07d00ab2",
+      "name": "王新兵",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.seiee.sjtu.edu.cn/szgk_jsml.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-998ad62e29fab9240586",
+      "name": "王旭",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.seiee.sjtu.edu.cn/szgk_jsml.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-0579507ab76e4d37b2b8",
+      "name": "王显威",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 2
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://soo.sjtu.edu.cn/teacher-list.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-f0c90666a1b175989960",
+      "name": "王本龙",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 2,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://naoce.sjtu.edu.cn/teachers/5653.html"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-087c1ffff91bf0ba5020",
+      "name": "王林",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/wanglin12（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-8abe25475db22d41f5c3",
+      "name": "王楷植",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 1,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://math.sjtu.edu.cn/Default/teachershow/tags/MDAwMDAwMDAwMLKIgt4"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-66d860d7528ccad856b7",
+      "name": "王欣",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 2
+      },
+      "sources": [
+        "https://pharm.sjtu.edu.cn/szdy/3431.html"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-903b3b539cb3e9e8ce21",
+      "name": "王欣泽",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://sese.sjtu.edu.cn/faculty/view/22（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-a97d440c8442c43c13c1",
+      "name": "王涛",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.seiee.sjtu.edu.cn/szgk_jsml.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-5eb48e50dab856ef29da",
+      "name": "王贺升",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://sais.sjtu.edu.cn/faculty.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-4eb9019111628e68dba2",
+      "name": "王郁",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 2
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/wangyu12（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-a8d97eda5535a24337e9",
+      "name": "王骏",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 1,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://shss.sjtu.edu.cn/Web/FacultyDetail/69"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-97052fb73d46d66dea65",
+      "name": "甄凤超",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://sfl.sjtu.edu.cn/Data/View/1931（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-e82a9b833988ec9f8594",
+      "name": "申岩峰",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.ji.sjtu.edu.cn/about/faculty-staff/faculty-directory/faculty-detail/119/（SSLError）"
+      ]
+    },
+    {
+      "id": "official-774b0d59050cd683a090",
+      "name": "白景峰",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/baijingfeng（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-0bb8cffbb95e44bd9668",
+      "name": "白晶",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://sese.sjtu.edu.cn/faculty/view/42（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-5cdb7e56b50bb7ee6804",
+      "name": "程浩忠",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.seiee.sjtu.edu.cn/szgk_jsml.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-2459bea11d4a5a714f78",
+      "name": "程秀兰",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.seiee.sjtu.edu.cn/szgk_jsml.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-b611b46e153a58b8a711",
+      "name": "程长明",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 2
+      },
+      "sources": [
+        "https://me.sjtu.edu.cn/teacher_directory1/chengzhangming"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-3b906206526790277739",
+      "name": "窦晓秋",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 11,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://smse.sjtu.edu.cn/people/detail_new/20152"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-cff21ca33d976ca69372",
+      "name": "窦红静",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 9,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://smse.sjtu.edu.cn/people/detail_new/20145"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-a1e106350305619ab2c1",
+      "name": "符杰祥",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 2,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://shss.sjtu.edu.cn/Web/FacultyDetail/15"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-256c032ca0c36560f3d7",
+      "name": "续晓云",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://sese.sjtu.edu.cn/faculty/view/37（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-13843dad55e36c29515b",
+      "name": "缪炎峰",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://sese.sjtu.edu.cn/faculty/view/96（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-1c4528f372f44d47011c",
+      "name": "罗金明",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://sese.sjtu.edu.cn/faculty/view/106（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-eab46e186837014e3c98",
+      "name": "耿涌",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://www.sipa.sjtu.edu.cn/facultydetail/qzjs/28"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-828cb243632818aaa711",
+      "name": "肖化云",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://sese.sjtu.edu.cn/faculty/view/79（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-4275442085f7da4bff64",
+      "name": "肖湘",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/xiaoxiang（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-7042a227a995b6f35fd8",
+      "name": "胡士强",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/hushiqiang（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-a5ba81360f4101514429",
+      "name": "胡建升",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 1,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://shss.sjtu.edu.cn/Web/FacultyDetail/16"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-7d33da6dc1abc02a1ddf",
+      "name": "胡洁",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://me.sjtu.edu.cn/teacher_directory1/hujie"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-788860126353eac5dc37",
+      "name": "胡祎乐",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.aero.sjtu.edu.cn/Data/View/3192（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-2938a848d7e681c72139",
+      "name": "胡韡",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 5,
+        "biography": 5,
+        "recruitment": 2
+      },
+      "sources": [
+        "https://naoce.sjtu.edu.cn/teachers/12548.html"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-a87251386ed173295131",
+      "name": "艾芊",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.seiee.sjtu.edu.cn/szgk_jsml.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-608525c691ddda7926e3",
+      "name": "范寅",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.aero.sjtu.edu.cn/Data/View/4056（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-9e46adc69454d43bee25",
+      "name": "葛一君",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://psychology.sjtu.edu.cn/tsml/389.html"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-6014959d0dfa914a41bb",
+      "name": "董伟",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 2
+      },
+      "sources": [
+        "https://me.sjtu.edu.cn/teacher_directory1/dongwei1"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-ff36211b5fc456f82ae7",
+      "name": "董占勋",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/dongzhanxun（ValueError）"
+      ]
+    },
+    {
+      "id": "official-39bf04e9054ae402ce33",
+      "name": "董安平",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://smse.sjtu.edu.cn/people/detail_new/20234"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-37dd0642e7845e551cfa",
+      "name": "董杰",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://smse.sjtu.edu.cn/people/detail_new/20195"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-18f09661590565d0ef9f",
+      "name": "董腾辉",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 3
+      },
+      "sources": [
+        "https://me.sjtu.edu.cn/teacher_directory1/dongtenghui"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-f8113e43a6bcac10544f",
+      "name": "董鹏",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.aero.sjtu.edu.cn/Data/View/2939（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-e626434e53ab04f07a62",
+      "name": "蒋东杰",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.aero.sjtu.edu.cn/Data/View/3556（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-b8adf2df3696db3e9ef4",
+      "name": "蔡宗远",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/caizongyuan（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-ee1b2d3d0534c7c0d512",
+      "name": "蔡旭",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.seiee.sjtu.edu.cn/szgk_jsml.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-4ff915dc8989d1591104",
+      "name": "薛松",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://sfl.sjtu.edu.cn/Data/View/5111（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-c9e36da12c9a9ab24546",
+      "name": "袁伟恩",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 5,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://pharm.sjtu.edu.cn/szdy/2888.html"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-8a096305abbfd88d0374",
+      "name": "袁璐琦",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 1,
+        "recruitment": 2
+      },
+      "sources": [
+        "https://www.physics.sjtu.edu.cn/jsml/yuanluqi.html"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-aec20d9615fb2d76b5b5",
+      "name": "袁聪俐",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.agri.sjtu.edu.cn/Data/View/2344（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-614e7d0933b9b3c38648",
+      "name": "袁逖飞",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 1,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://psychology.sjtu.edu.cn/tsml/211.html"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-308be1dfb85e43eb97b0",
+      "name": "褚祝杰",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/chuzhujie（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-46c8021467455841f659",
+      "name": "詹路",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://sese.sjtu.edu.cn/faculty/view/26（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-1814841fa066cc2e5959",
+      "name": "许霄琰",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://www.physics.sjtu.edu.cn/jsml/xuxiaoyan.html"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-318a906e1a6c80a8e4e6",
+      "name": "谢晓辉",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://soo.sjtu.edu.cn/teacher-list.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-b1489361bcb1057aaa1b",
+      "name": "谢纳",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://iah.sjtu.edu.cn/Web/FacultyDateil/7?idd=26"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-a3e1d04cb7090028757a",
+      "name": "谷朝臣",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://sais.sjtu.edu.cn/faculty.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-8700119b468226ed4a68",
+      "name": "贺兴",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.seiee.sjtu.edu.cn/szgk_jsml.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-2c1212edcc1ea4efb64a",
+      "name": "贺号",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 2
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/hehao1（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-bcad1fa456ccd7038b66",
+      "name": "贺玉莲",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.ji.sjtu.edu.cn/about/faculty-staff/faculty-directory/faculty-detail/32620/（SSLError）"
+      ]
+    },
+    {
+      "id": "official-3daf0888d51796cc3394",
+      "name": "贾金平",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://sese.sjtu.edu.cn/faculty/view/6（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-3c73c0b3ca3ffb8734a0",
+      "name": "赵一新",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://sese.sjtu.edu.cn/faculty/view/18（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-c77aa14203781c5ea746",
+      "name": "赵一雷",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/zhaoyilei（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-6129d4c4e659e5c26d69",
+      "name": "赵大海",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/zhaodahai（ConnectionError）"
+      ]
+    },
+    {
+      "id": "official-864ec68b0f2b1aa79675",
+      "name": "赵岳",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://sese.sjtu.edu.cn/faculty/view/29（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-87b41933743813ecc109",
+      "name": "车生泉",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/cheshengquan（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-5084613a6d02db413629",
+      "name": "连之伟",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/lianzhiwei（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-2713c4c838f0bb23ff05",
+      "name": "连涛",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 2
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://soo.sjtu.edu.cn/teacher-list.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-55c243f59ec3c98b2139",
+      "name": "邓宇君",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://me.sjtu.edu.cn/teacher_directory1/dengyujun"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-6e2c2baac4afe1ab3854",
+      "name": "邓师瑾",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://www.math.sjtu.edu.cn/Default/teachershow/tags/MDAwMDAwMDAwMLJ4nN4"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-e7789ee3afdea896035f",
+      "name": "邓涛",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://smse.sjtu.edu.cn/people/detail_new/20148"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-4f8200534cda1901d79e",
+      "name": "邢云文",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://ma.sjtu.edu.cn/szdw.htm（ValueError）"
+      ]
+    },
+    {
+      "id": "official-7e54ae5abd673cdf440b",
+      "name": "邢向军",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 1,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://www.physics.sjtu.edu.cn/jsml/xinxiangjun.html"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-9e1130ec68c5b4ac21fb",
+      "name": "邢晖",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://www.physics.sjtu.edu.cn/jsml/xinghui.html"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-dc2f6ca747b16ee29655",
+      "name": "邵磊",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 2
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.ji.sjtu.edu.cn/cn/about/faculty-staff/faculty-directory/faculty-detail/116/（SSLError）"
+      ]
+    },
+    {
+      "id": "official-22abd51a239b2c287bc6",
+      "name": "邹卫文",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.seiee.sjtu.edu.cn/szgk_jsml.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-7ba1ce92a1575852c813",
+      "name": "郁文贤",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.seiee.sjtu.edu.cn/szgk_jsml.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-4ec2af653619fa94c44f",
+      "name": "郑重",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://naoce.sjtu.edu.cn/teachers/9925.html"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-78c5f30fcabf6faed7cc",
+      "name": "郭云龙",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 2
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.ji.sjtu.edu.cn/about/faculty-staff/faculty-directory/faculty-detail/89/（SSLError）"
+      ]
+    },
+    {
+      "id": "official-08e32f4a4f17cb2e8c0f",
+      "name": "郭俊华",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/guojunhua（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-9497b553b2fa9cc349cf",
+      "name": "郭恋东",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 1,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://shss.sjtu.edu.cn/Web/FacultyDetail/49"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-3318886643a7f8286a35",
+      "name": "郭晓宇",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 1,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://naoce.sjtu.edu.cn/teachers/5665.html"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-0b9209501e214531f0e0",
+      "name": "郭熙志",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://life.sjtu.edu.cn/teacher/XizhiGuo"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-6889cf597a760f34bd15",
+      "name": "钟贻森",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://soo.sjtu.edu.cn/teacher-list.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-cff125b333831070e1d8",
+      "name": "钱峰",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://pharm.sjtu.edu.cn/szdy/2862.html"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-6f08a574ddea01bc9245",
+      "name": "闫文超",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 0,
+        "relations": 1,
+        "biography": 3,
+        "recruitment": 3
+      },
+      "sources": [
+        "https://www.physics.sjtu.edu.cn/jsml/yanwenchao.html"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-f49a1bc2e147ae2b4d6c",
+      "name": "阮昕",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://faculty.sjtu.edu.cn/ruanxin（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-f200b2ba60b19cf8b765",
+      "name": "陆邵明",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/lushaoming（ConnectionError）"
+      ]
+    },
+    {
+      "id": "official-3b8b998c0376359dd406",
+      "name": "陈东",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 5,
+        "relations": 0,
+        "biography": 1,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://smse.sjtu.edu.cn/people/detail_new/20243"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-bb4877163395c78e2d9f",
+      "name": "陈倩栎",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 2
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.ji.sjtu.edu.cn/about/faculty-staff/faculty-directory/faculty-detail/78/（SSLError）"
+      ]
+    },
+    {
+      "id": "official-f24791a7d2b94e068c73",
+      "name": "陈军",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/chenjun12（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-32c814e16a9d7df2625f",
+      "name": "陈华斌",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 5,
+        "relations": 0,
+        "biography": 3,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://smse.sjtu.edu.cn/people/detail_new/20310"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-5d9a822ed5e2c002b873",
+      "name": "陈卫星",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://me.sjtu.edu.cn/teacher_directory1/chenweixing"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-6b3cb9d4a970c24c0c81",
+      "name": "陈哲",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://smse.sjtu.edu.cn/people/detail/245（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-58e7d666618041ca37a8",
+      "name": "陈大可",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://soo.sjtu.edu.cn/teacher-list.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-cdea47ea27090b48c23c",
+      "name": "陈安涛",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://psychology.sjtu.edu.cn/tsml/413.html"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-abb38b3836d1f7d935de",
+      "name": "陈巨兵",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://naoce.sjtu.edu.cn/teachers/5628.html"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-a8d4b219404b9a052810",
+      "name": "陈思捷",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.seiee.sjtu.edu.cn/szgk_jsml.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-1bf8ffd5f41ce8ee3b76",
+      "name": "陈悦天",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://sese.sjtu.edu.cn/faculty/view/99（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-3b0c19db67f804af2b54",
+      "name": "陈接胜",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://scce.sjtu.edu.cn/jiaoshi.php?aid=161&c=3（ValueError）"
+      ]
+    },
+    {
+      "id": "official-0414cc279b39acd78afc",
+      "name": "陈斌",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://scce.sjtu.edu.cn/jiaoshi.php?aid=2380&c=3（ValueError）"
+      ]
+    },
+    {
+      "id": "official-59e17a9360d75468c06c",
+      "name": "陈明",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://me.sjtu.edu.cn/teacher_directory1/chenming"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-d5b3cd66c370911e71c7",
+      "name": "陈晓军",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 3
+      },
+      "sources": [
+        "https://me.sjtu.edu.cn/teacher_directory1/chenxiaojun"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-2cd3034be3382157710f",
+      "name": "陈晨",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 2
+      },
+      "sources": [
+        "https://me.sjtu.edu.cn/teacher_directory1/chenchen"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-f9ceeab35d7898e40a15",
+      "name": "陈根良",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://me.sjtu.edu.cn/teacher_directory1/chengenliang"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-47312b8c60140b453699",
+      "name": "陈汉",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/chenhan1（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-79db2c581dd03ff7dfe4",
+      "name": "陈泳",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/chenyong1（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-390d928ef27fb91d2b23",
+      "name": "陈海峰",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/chenhaifeng（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-ffd560379c007ba7fa75",
+      "name": "陈登科",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 2
+      },
+      "sources": [
+        "https://naoce.sjtu.edu.cn/teachers/10193.html"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-4423c3f0d3c52f2156d9",
+      "name": "陈秀华",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://www.aero.sjtu.edu.cn/szdw/szml/30"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-fd689df51854de2e20c6",
+      "name": "陈科",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://smse.sjtu.edu.cn/people/detail_new/20301"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-e329411bb09de59c85a9",
+      "name": "陈苏琳",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://me.sjtu.edu.cn/teacher_directory1/chensulin"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-682e0ea251f02f04394f",
+      "name": "陈锋",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://me.sjtu.edu.cn/teacher_directory2/chenfeng.html"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-67b8c65dccd6ee0764b7",
+      "name": "陈飞",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/chenfei（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-02d761635417a58efe66",
+      "name": "陈飞飞",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://me.sjtu.edu.cn/teacher_directory1/chenfeifei"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-740d5c8a54cf3446e519",
+      "name": "陶卫",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://sais.sjtu.edu.cn/faculty.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-b50759136ddb3430ef07",
+      "name": "陶有山",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://faculty.sjtu.edu.cn/taoyoushan/zh_CN/index.htm（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-4ae2070b45f706925e85",
+      "name": "陶生策",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://scsb.sjtu.edu.cn/Professor/11913.html"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-acdf0769c40d894b4052",
+      "name": "雷宇",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://sese.sjtu.edu.cn/faculty/view/162（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-c6de12472e1d6cecf1b0",
+      "name": "韦朝春",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/weichaochun（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-df81b2e245335a440878",
+      "name": "韩振江",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://ma.sjtu.edu.cn/szdw.htm（ValueError）"
+      ]
+    },
+    {
+      "id": "official-92c9d1f0659b2c440e01",
+      "name": "韩挺",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/hanting（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-fde24c5d1933d0155c8a",
+      "name": "顾小东",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.seiee.sjtu.edu.cn/szgk_jsml.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-f10d8f2b5d62d0b11c53",
+      "name": "顾思凡",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://soo.sjtu.edu.cn/teacher-list.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-d6f00a7ecf2581c126dd",
+      "name": "顾振宇",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/guzhenyu（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-303c7e17be64981a931e",
+      "name": "颜开",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 2,
+        "relations": 0,
+        "biography": 2,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://www.physics.sjtu.edu.cn/jsml/yankai.html"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-0ead4d02a7bbfea11ba7",
+      "name": "马少鹏",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 1,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://naoce.sjtu.edu.cn/teachers/9639.html"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-b4be7d8dd8a5dcb98d3c",
+      "name": "马建",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://soo.sjtu.edu.cn/teacher-list.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-51ea1c22beec6751e4b6",
+      "name": "马晓强",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 2
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.agri.sjtu.edu.cn/Data/View/6086（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-7abb9b5ab9d51b19c002",
+      "name": "马柯",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.seiee.sjtu.edu.cn/szgk_jsml.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-52afb34b00493f98dd77",
+      "name": "马麟",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.seiee.sjtu.edu.cn/szgk_jsml.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-2319a78db1c8d08b58b9",
+      "name": "高怡",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/gaoyi1（ConnectionError）"
+      ]
+    },
+    {
+      "id": "official-e90bd32c480bf95daa58",
+      "name": "高福进",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://ma.sjtu.edu.cn/szdw.htm（ValueError）"
+      ]
+    },
+    {
+      "id": "official-d424ee67eac33c1f9eae",
+      "name": "高维强",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 2
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/gaoweiqiang（ConnectionError）"
+      ]
+    },
+    {
+      "id": "official-7e2d141b2631bbbb2b73",
+      "name": "高飞",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.seiee.sjtu.edu.cn/szgk_jsml.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-54e1237843a74015af6d",
+      "name": "魏小东",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 2
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.ji.sjtu.edu.cn/about/faculty-staff/faculty-directory/faculty-detail/37794/（SSLError）"
+      ]
+    },
+    {
+      "id": "official-ac0d333c4d869b39cac2",
+      "name": "魏崇辉",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://ma.sjtu.edu.cn/szdw.htm（ValueError）"
+      ]
+    },
+    {
+      "id": "official-f3cc4598bf2b04543043",
+      "name": "鲍金",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://ma.sjtu.edu.cn/szdw.htm（ValueError）"
+      ]
+    },
+    {
+      "id": "official-702340adfd620e58319d",
+      "name": "麦亦勇",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://scce.sjtu.edu.cn/jiaoshi.php?aid=99&c=3（ValueError）"
+      ]
+    },
+    {
+      "id": "official-e2b420627a91bde837ef",
+      "name": "黄佩森",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 2
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.ji.sjtu.edu.cn/cn/about/faculty-staff/faculty-directory/faculty-detail/92/（SSLError）"
+      ]
+    },
+    {
+      "id": "official-2e77f65bc5dd143aa32e",
+      "name": "黄健哲",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/huangjianzhe（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-90a8f88b10999edf43f8",
+      "name": "黄小彬",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/huangxiaobin（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-3c812482a3a6e320162d",
+      "name": "黄志伟",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.aero.sjtu.edu.cn/Data/View/4610（HTTPError）"
+      ]
+    },
+    {
+      "id": "official-73de68e8e827b52288f9",
+      "name": "黄鹏辉",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://www.seiee.sjtu.edu.cn/szgk_jsml.html（ValueError）"
+      ]
+    },
+    {
+      "id": "official-77aeaefe0943ef58ea6d",
+      "name": "齐颖新",
+      "institution": "上海交通大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：http://faculty.sjtu.edu.cn/qiyingxin（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-46b8355b473d44b55afe",
+      "name": "龙其林",
+      "institution": "上海交通大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 2,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://shss.sjtu.edu.cn/Web/FacultyDetail/287"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-a607bd4f17e8c2181c40",
+      "name": "刘洪钟",
+      "institution": "上海外国语大学",
+      "status": "ready",
+      "counts": {
+        "papers": 15,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://saggas.shisu.edu.cn/ArticleDetail/ArticleDetail?ArticleId=3cecb02c-35a0-4f81-9fb8-4f08ec92ad6e"
+      ],
+      "errors": [
+        "未读到页面：https://saggas.shisu.edu.cn/ArticleDetail/ArticleDetail?ArticleId=3cecb02c-35a0-4f81-9fb8-4f08ec92ad6e（ValueError）"
+      ]
+    },
+    {
+      "id": "official-1262f2fa7d86589a355e",
+      "name": "刘琪",
+      "institution": "上海外国语大学",
+      "status": "ready",
+      "counts": {
+        "papers": 15,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://saggas.shisu.edu.cn/ArticleDetail/ArticleDetail?ArticleId=5d374856-9051-412d-a61d-80b97b2e4a2c"
+      ],
+      "errors": [
+        "未读到页面：https://saggas.shisu.edu.cn/ArticleDetail/ArticleDetail?ArticleId=5d374856-9051-412d-a61d-80b97b2e4a2c（ValueError）"
+      ]
+    },
+    {
+      "id": "official-778bbc71d992e4e9b46f",
+      "name": "姜锋",
+      "institution": "上海外国语大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 6,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "暂未找到可确认身份的个人主页"
+      ]
+    },
+    {
+      "id": "official-62443510abceff9244e1",
+      "name": "忻华",
+      "institution": "上海外国语大学",
+      "status": "ready",
+      "counts": {
+        "papers": 15,
+        "relations": 0,
+        "biography": 1,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://saggas.shisu.edu.cn/ArticleDetail/ArticleDetail?ArticleId=c8c16aea-3e06-4841-a48f-db3236892b63"
+      ],
+      "errors": [
+        "未读到页面：https://saggas.shisu.edu.cn/ArticleDetail/ArticleDetail?ArticleId=c8c16aea-3e06-4841-a48f-db3236892b63（ValueError）"
+      ]
+    },
+    {
+      "id": "official-1e6777778b0abfc4c454",
+      "name": "朱青生",
+      "institution": "上海外国语大学",
+      "status": "ready",
+      "counts": {
+        "papers": 4,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://saggas.shisu.edu.cn/ArticleDetail/ArticleDetail?ArticleId=5b0e79a6-c512-42bb-9e98-8c2308740598"
+      ],
+      "errors": [
+        "未读到页面：https://saggas.shisu.edu.cn/ArticleDetail/ArticleDetail?ArticleId=5b0e79a6-c512-42bb-9e98-8c2308740598（ValueError）"
+      ]
+    },
+    {
+      "id": "official-106d52290e1950bf7bd6",
+      "name": "杨成",
+      "institution": "上海外国语大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 2,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "暂未找到可确认身份的个人主页"
+      ]
+    },
+    {
+      "id": "official-8747df93743322d23c57",
+      "name": "王健",
+      "institution": "上海外国语大学",
+      "status": "catalog",
+      "counts": {
+        "papers": 2,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "暂未找到可确认身份的个人主页"
+      ]
+    },
+    {
+      "id": "official-6f50ef4d9d3d66d9c312",
+      "name": "薛江",
+      "institution": "上海外国语大学",
+      "status": "ready",
+      "counts": {
+        "papers": 2,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://saggas.shisu.edu.cn/ArticleDetail/ArticleDetail?ArticleId=ea619142-a8db-4640-bd13-f4770e5a80be"
+      ],
+      "errors": [
+        "未读到页面：https://saggas.shisu.edu.cn/ArticleDetail/ArticleDetail?ArticleId=ea619142-a8db-4640-bd13-f4770e5a80be（ValueError）"
+      ]
+    },
+    {
+      "id": "official-f78f481301b6c4e7939c",
+      "name": "邢广程",
+      "institution": "上海外国语大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://saggas.shisu.edu.cn/ArticleDetail/ArticleDetail?ArticleId=a411ea71-f25f-4a4c-aa04-9ebe87152721"
+      ],
+      "errors": [
+        "未读到页面：https://saggas.shisu.edu.cn/ArticleDetail/ArticleDetail?ArticleId=a411ea71-f25f-4a4c-aa04-9ebe87152721（ValueError）"
+      ]
+    },
+    {
+      "id": "official-b2174fbcb64951ee8fc9",
+      "name": "郭明",
+      "institution": "上海外国语大学",
+      "status": "ready",
+      "counts": {
+        "papers": 13,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://saggas.shisu.edu.cn/ArticleDetail/ArticleDetail?ArticleId=076f0977-5de5-4205-83dd-176f79196951"
+      ],
+      "errors": [
+        "未读到页面：https://saggas.shisu.edu.cn/ArticleDetail/ArticleDetail?ArticleId=076f0977-5de5-4205-83dd-176f79196951（ValueError）"
+      ]
+    },
+    {
+      "id": "official-7b3d93d24af0e38c289e",
+      "name": "钟志清",
+      "institution": "上海外国语大学",
+      "status": "ready",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://saggas.shisu.edu.cn/ArticleDetail/ArticleDetail?ArticleId=10ab0ea7-1f61-4039-a384-93fdfaa2195a"
+      ],
+      "errors": [
+        "未读到页面：https://saggas.shisu.edu.cn/ArticleDetail/ArticleDetail?ArticleId=10ab0ea7-1f61-4039-a384-93fdfaa2195a（ValueError）"
+      ]
+    },
+    {
+      "id": "official-9279890f582e24c5a000",
+      "name": "颜海英",
+      "institution": "上海外国语大学",
+      "status": "ready",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://saggas.shisu.edu.cn/ArticleDetail/ArticleDetail?ArticleId=42459bdf-dec6-4f13-aec1-f85d5403c250"
+      ],
+      "errors": [
+        "未读到页面：https://saggas.shisu.edu.cn/ArticleDetail/ArticleDetail?ArticleId=42459bdf-dec6-4f13-aec1-f85d5403c250（ValueError）"
+      ]
+    },
+    {
+      "id": "official-7549777bd4ffde8067da",
+      "name": "黄靖",
+      "institution": "上海外国语大学",
+      "status": "ready",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 1,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://saggas.shisu.edu.cn/ArticleDetail/ArticleDetail?ArticleId=a2551c10-38fb-42be-aa2b-88892e164f44"
+      ],
+      "errors": [
+        "未读到页面：https://saggas.shisu.edu.cn/ArticleDetail/ArticleDetail?ArticleId=a2551c10-38fb-42be-aa2b-88892e164f44（ValueError）"
+      ]
+    },
+    {
+      "id": "official-f9886220f1d4b2d87167",
+      "name": "乌云塔娜",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 10,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31736"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-79aedac321d4498e7d51",
+      "name": "何友均",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 1,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31657"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-6015d6b4e18ca61da41e",
+      "name": "何彩云",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31457"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-3f23ee3090dedf10d872",
+      "name": "余养伦",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 5,
+        "relations": 0,
+        "biography": 1,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31665"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-c819f8f63be155e9aa6d",
+      "name": "党宏忠",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31643"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-0400a8efb98e24fc62a6",
+      "name": "刘军利",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 7,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31707"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-11f3e6a6a549b0119fc8",
+      "name": "刘妍婧",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 10,
+        "relations": 0,
+        "biography": 1,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31757"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-498c365c501534bb6fd0",
+      "name": "刘宪钊",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31597"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-52a8917e21fa5006bbb6",
+      "name": "刘广路",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 1,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31775"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-36ddbb401a60473ce4ed",
+      "name": "刘志佳",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31770"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-9fe57a4146bc0db09f28",
+      "name": "刘杏娥",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 5,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31763"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-11151dfcab64e0709e48",
+      "name": "刘焕荣",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 8,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31773"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-f36378da2e375532107e",
+      "name": "刘鹤",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31712"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-ca5db387bb24ee7d608e",
+      "name": "卓仁英",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31488"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-134dc90db4359575bf36",
+      "name": "卢芸",
+      "institution": "中国林业科学研究院",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31678（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-3a7a475eea7695900fc6",
+      "name": "史胜青",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 3,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31455"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-cb6d1b8ea0c45b19cc20",
+      "name": "吕全",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 4,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31560"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-d425ca3d9b6aa784032f",
+      "name": "吴波",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31629"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-6fed02dcb5444c5e3e18",
+      "name": "周建波",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31793"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-8f2bbfb41dc0f1f2fc87",
+      "name": "周永红",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 5,
+        "relations": 0,
+        "biography": 1,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31702"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-2c955675258d2ea9e288",
+      "name": "周海宾",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 5,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31668"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-49de2ac0ba70fb2582ff",
+      "name": "唐守正",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 2,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31584"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-4a168fe5c471e1c252cd",
+      "name": "姚斌",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31644"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-f12ed1e82495dce8be31",
+      "name": "孔祥波",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 1,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31558"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-6fac1ed820d6e1f4e441",
+      "name": "孙启武",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31458"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-a34dc56bac9d258266f1",
+      "name": "孙康",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 1,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31709"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-e6d7b70f3011b299e94c",
+      "name": "孙晓梅",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31460"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-2819144a1d843ea0a389",
+      "name": "孙鹏",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31744"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-3f52c6a486fc103b59f3",
+      "name": "宋湛谦",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 3,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31698"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-a36d8649a16826469fd0",
+      "name": "官凤英",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31776"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-3935115fb2b6d2e8efca",
+      "name": "崔凯",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 2,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31608"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-1b084d288a3ec21956cc",
+      "name": "崔明",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 10,
+        "relations": 0,
+        "biography": 1,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31630"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-302647787165b870b871",
+      "name": "庞勇",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31588"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-57ca39aece78c5d376d0",
+      "name": "张亚慧",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 6,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31677"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-d9eae5c60fc754cd5b91",
+      "name": "张代晖",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 5,
+        "relations": 0,
+        "biography": 1,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31731"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-639f5e1b421334de6461",
+      "name": "张伟",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31673"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-f058bc656121728bf1cc",
+      "name": "张宁",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 9,
+        "relations": 0,
+        "biography": 4,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31719"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-9fe935862cc2f1fcc16e",
+      "name": "张守攻",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 2
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31449"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-75c9a0bd64d29d6c170a",
+      "name": "张怀清",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31587"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-bd3e6d999d2552fb3930",
+      "name": "张猛",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 10,
+        "relations": 0,
+        "biography": 1,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31714"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-bbd734986a5b2a1585ce",
+      "name": "张苏芳",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 5,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31552"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-fede7847485a338a071f",
+      "name": "彭立民",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 5,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31663"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-b78c898163b1e23664cc",
+      "name": "徐俊明",
+      "institution": "中国林业科学研究院",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31713（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-88e880293862fb95cd17",
+      "name": "成向荣",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31510"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-186e77b90a92211f8fd1",
+      "name": "房桂干",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31700"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-f1c0dbc1b704817a2b7d",
+      "name": "方长华",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 2,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31772"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-2e8cfd8a115cba404808",
+      "name": "曲良建",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31555"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-e6d97b02bc9257146c85",
+      "name": "曾庆银",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 10,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31756"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-aa2dc42b5f05863a1230",
+      "name": "曾炳山",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 4,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31525"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-a32ee2c25a7601183252",
+      "name": "李守海",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 2,
+        "biography": 5,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31721"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-b024c69b32c6d8ce0e45",
+      "name": "李志强",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 1,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31779"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-295260c6060c29580943",
+      "name": "李改云",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 1,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31662"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-fc7005dfa088585ca887",
+      "name": "李春杰",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31634"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-e5fa9bf5a56d46f67939",
+      "name": "杨子祥",
+      "institution": "中国林业科学研究院",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=34625（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-4e40e316c1d86d9f096a",
+      "name": "杨忠",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31661"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-d310a5eeb395f42994ae",
+      "name": "杨璞",
+      "institution": "中国林业科学研究院",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31609（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-0e50a2f265e84da0e3a2",
+      "name": "杨锦昌",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31530"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-9b6547a061b138f75080",
+      "name": "林兰英",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31690"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-53286d1a15d683bf559f",
+      "name": "梁俊峰",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 10,
+        "relations": 0,
+        "biography": 1,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31524"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-c0590e11d67c596d880a",
+      "name": "段爱国",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 5,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31450"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-9572c0e7c3d6dbc8823d",
+      "name": "殷亚方",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31670"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-e93c25fea05cd54d4381",
+      "name": "殷恒福",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 7,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31496"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-b406ba8d4236b8194498",
+      "name": "江红星",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31578"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-bdb900f7ed9fd96d6874",
+      "name": "汤锋",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 5,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31766"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-f45ca17ba9a487c79678",
+      "name": "汪阳东",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31491"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-532d69a9c4316d55ae47",
+      "name": "汪阳东",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31491"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-55f1832bb86030fce556",
+      "name": "沈葵忠",
+      "institution": "中国林业科学研究院",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31704（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-8e61ed6efdf8814485f7",
+      "name": "熊伟",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 5,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31645"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-c93fbc324e9e6ef1df19",
+      "name": "王丹",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 4,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31711"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-96c3324f2010fed66385",
+      "name": "王军辉",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 5,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31452"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-1b460eb7d3e406589c0a",
+      "name": "王基夫",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31710"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-54278b1d8cddf081fd4e",
+      "name": "王奎",
+      "institution": "中国林业科学研究院",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31715（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-049e74afea6f00bfcdd6",
+      "name": "王小艺",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31548"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-4ab679f9a662519397c8",
+      "name": "王小青",
+      "institution": "中国林业科学研究院",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31664（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-2c429a14970ae7854ebd",
+      "name": "王成章",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 10,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31701"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-47be82e0d5658404b9c3",
+      "name": "王春鹏",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 10,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31705"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-9edbe60cb82a90d87687",
+      "name": "王汉坤",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 5,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31781"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-24d568c1958877329f4a",
+      "name": "王玉荣",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 5,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31692"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-e721661db6f3c70c4e6a",
+      "name": "王锋",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 2
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31627"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-8dde95cb398c66e285d2",
+      "name": "理永霞",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31565"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-ce26c31f15fed069b0a6",
+      "name": "田昕",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 10,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31592"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-e4b8999b7e48edd54149",
+      "name": "田晓瑞",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31562"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-e42d01bead15ae2ae18c",
+      "name": "程海涛",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 10,
+        "relations": 0,
+        "biography": 1,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31771"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-d18624c815b6c8b9f676",
+      "name": "符利勇",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31593"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-50851f33d9133ad2d5c1",
+      "name": "罗建中",
+      "institution": "中国林业科学研究院",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31745（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-a940d8bd3a9a887ccf2d",
+      "name": "罗志斌",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 1,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31633"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-3d809f4ef5c0772465bf",
+      "name": "胡建军",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 5,
+        "relations": 0,
+        "biography": 1,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31453"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-7e33cbd68dddd25bf52d",
+      "name": "胡立红",
+      "institution": "中国林业科学研究院",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31708（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-c8fcf093a47e8683a693",
+      "name": "舒立福",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31550"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-b8573454bd3c2912d82d",
+      "name": "舒金平",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 8,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31497"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-b7ca3e96e85ab293a97f",
+      "name": "范东斌",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 8,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31682"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-03d3a2aaf26479976d73",
+      "name": "蒋佳荔",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 10,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31666"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-826ba7f27dd397d69f00",
+      "name": "蒋剑春",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31699"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-6eca4cd317c81aaee612",
+      "name": "袁志林",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 5,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31493"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-4df0777e85ea252d24c2",
+      "name": "褚建民",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31448"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-34846dd05d178ea69a43",
+      "name": "覃先林",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31591"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-08e1d07c4e29f6283d6f",
+      "name": "覃道春",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31765"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-8e93ccd0d243fc836c97",
+      "name": "赵树堂",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 5,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31472"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-0a2e402f48ce57013f0a",
+      "name": "赵韩生",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31774"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-2a7f95a85715b243093f",
+      "name": "郭文静",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31669"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-54ba70050c1feaad1ffa",
+      "name": "陆俊锟",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31527"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-a785886063e3a68a0ebf",
+      "name": "陈复明",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 7,
+        "relations": 0,
+        "biography": 3,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31791"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-46ba5b87d34b6a89431b",
+      "name": "陈尔学",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 3,
+        "relations": 0,
+        "biography": 1,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31585"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-68fc8188f77281d656af",
+      "name": "陈玉湘",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 6,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31706"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-2abb7027c3635367176e",
+      "name": "陈航",
+      "institution": "中国林业科学研究院",
+      "status": "catalog",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [],
+      "errors": [
+        "未读到页面：https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31606（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-f56b4066080aa9861e4e",
+      "name": "雷相东",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 1,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31586"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-12636d12590c4a827426",
+      "name": "马星霞",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31688"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-099126f22f7b36cc0ac4",
+      "name": "高健",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 5,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31769"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-2c5550c2b1ca4c22aadd",
+      "name": "高志民",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 1,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31768"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-8a198c46d030e9fdef05",
+      "name": "黄安民",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31667"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-72402beb2830f67c1a98",
+      "name": "黄秦军",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31454"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-66ba69b8e4024ebcf7e9",
+      "name": "黄立新",
+      "institution": "中国林业科学研究院",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31703"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-9581721dbe618a95ace4",
+      "name": "蒋小红",
+      "institution": "中国社会科学院大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 1,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://law.ucass.edu.cn/info/1941/8726.htm"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-7d1661442a16aeb01263",
+      "name": "叶小菁",
+      "institution": "中山大学",
+      "status": "ready",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://zssom.sysu.edu.cn/teacher/yexiaojing"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-f7e1b57eb42cb9b9f3b8",
+      "name": "孙宏钰",
+      "institution": "中山大学",
+      "status": "ready",
+      "counts": {
+        "papers": 9,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://zssom.sysu.edu.cn/node/492"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-98b7340848ee992db532",
+      "name": "李倩",
+      "institution": "吉林大学",
+      "status": "ready",
+      "counts": {
+        "papers": 15,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://marx.jlu.edu.cn/info/1217/8617.htm"
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-60750d9480a2eb32f30e",
+      "name": "郭永虎",
+      "institution": "吉林大学",
+      "status": "ready",
+      "counts": {
+        "papers": 0,
+        "relations": 0,
+        "biography": 5,
+        "recruitment": 1
+      },
+      "sources": [
+        "https://marx.jlu.edu.cn/info/1217/8619.htm"
+      ],
+      "errors": []
+    }
+  ],
+  "profiles_in_scope": 429,
+  "note": "个人主页与公开成果表中的摘录，论文包括著作和报刊文章；并非所有导师调查完成。失败条目保留招生目录。",
+  "validation": {
+    "python_tests": 51,
+    "javascript_tests": 10,
+    "live_dossier_and_export_papers": 15,
+    "formal_disciplines": 117
+  }
+}

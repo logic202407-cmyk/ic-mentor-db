@@ -1,7 +1,8 @@
 # 数据与文档许可协议
 
-本许可适用于本仓库中除 `tools/` 目录（代码，适用 [MIT](LICENSE)）之外的全部内容，
-包括但不限于：
+本许可适用于本仓库原创的数据整理与文字材料，不覆盖第三方网页原文，
+也不覆盖 `tools/` 与 `workbench/` 的程序代码（适用 [MIT](LICENSE)）。
+主要包括：
 
 - `data/`：师资名录、文献计量数据、派生数据集（CSV / JSON）
 - `reports/`：排名报告、交互页面（HTML / Markdown / Word）
@@ -32,17 +33,14 @@
 
 ---
 
-## 额外使用限制（项目方补充条款）
+## 负责任使用倡议（不是许可附加条件）
 
-除上述许可条件外，使用本项目数据还须遵守：
+以下是项目方倡议，不是 CC BY-NC-SA 4.0 的额外许可条件：
 
-1. **禁止批量联系**：不得将本项目包含的任何联系方式用于批量群发邮件、短信、
-   即时消息或其他形式的未经请求的联络；
-2. **禁止用于自动化决策**：不得将本项目数据接入任何对个人作出评价、筛选、
-   排序、拒绝决定的自动化系统（包括但不限于招聘筛选、信贷评估、保险定价）；
-3. **禁止断章取义**：不得脱离 [DISCLAIMER.md](DISCLAIMER.md) 的说明，
-   单独引用排名或梯队结果，作为对某位教师学术水平或指导质量的评价依据；
-4. **更正义务**：若权利人提出更正或删除请求，基于本数据创作的作品应在合理期限内同步更新。
+1. 不从公开页面收集联系方式用于未经请求的批量联络；
+2. 不把有缺失或歧义的数据用于影响个人权益的自动化评价和决策；
+3. 引用旧排名时保留 [DISCLAIMER.md](DISCLAIMER.md) 的方法边界；
+4. 收到可核实的更正请求后，及时检查并更新可控制的材料。
 
 ---
 
@@ -68,6 +66,6 @@
 
 ---
 
-*English: Data and documents in this repository are licensed under
-CC BY-NC-SA 4.0. **Non-commercial use only.** Bulk unsolicited contact using the
-included contact information is prohibited. See [DISCLAIMER.md](DISCLAIMER.md).*
+*English: Original data compilations and text documents in this repository are
+licensed under CC BY-NC-SA 4.0; program code in `tools/` and `workbench/` is MIT.
+Third-party source pages retain their own rights. See [DISCLAIMER.md](DISCLAIMER.md).*

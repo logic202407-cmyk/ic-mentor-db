@@ -1,0 +1,116 @@
+{
+  "checked_at": "2026-10-15",
+  "new_profiles": 7,
+  "profiles": [
+    {
+      "id": "official-bbe76ab2d29a945e34c8",
+      "name": "唐波",
+      "institution": "国防科技大学",
+      "counts": {
+        "papers": 1,
+        "relations": 0,
+        "biography": 1,
+        "recruitment": 1,
+        "admission_notices": 1
+      }
+    },
+    {
+      "id": "official-8411495292461feed41e",
+      "name": "曾芳玲",
+      "institution": "国防科技大学",
+      "counts": {
+        "papers": 2,
+        "relations": 1,
+        "biography": 0,
+        "recruitment": 1,
+        "admission_notices": 1
+      }
+    },
+    {
+      "id": "official-d5592aa053e79c4b6153",
+      "name": "计科峰",
+      "institution": "国防科技大学",
+      "counts": {
+        "papers": 1,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1,
+        "admission_notices": 1
+      }
+    },
+    {
+      "id": "official-04bccbb496fe00d46675",
+      "name": "施龙飞",
+      "institution": "国防科技大学",
+      "counts": {
+        "papers": 1,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1,
+        "admission_notices": 1
+      }
+    },
+    {
+      "id": "official-c4a2930472a326a9c679",
+      "name": "李永祯",
+      "institution": "国防科技大学",
+      "counts": {
+        "papers": 1,
+        "relations": 0,
+        "biography": 0,
+        "recruitment": 1,
+        "admission_notices": 1
+      }
+    },
+    {
+      "id": "official-25c483ad776758864565",
+      "name": "葛武滇",
+      "institution": "陆军工程大学",
+      "counts": {
+        "papers": 2,
+        "relations": 0,
+        "biography": 1,
+        "recruitment": 1,
+        "admission_notices": 1
+      }
+    },
+    {
+      "id": "official-b89c993fef4bc86efd45",
+      "name": "孙天威",
+      "institution": "陆军工程大学",
+      "counts": {
+        "papers": 1,
+        "relations": 0,
+        "biography": 1,
+        "recruitment": 1,
+        "admission_notices": 1
+      }
+    }
+  ],
+  "limitations": [
+    "1104学科对应依据仍为转载名录；学校2025博士目录核对的是0810招生。",
+    "1110新增两位的实名招生依据为2024历史目录转载。",
+    "仅曾芳玲补得明确博士指导关系；其余六位未发现足够的师承证据。",
+    "排除清华出版社05184702书页：作者栏与简介不一致，未将该书记给葛武滇。",
+    "排除JR15103：李永祯仅出现在参考文献，非该文作者。"
+  ],
+  "validation": {
+    "http_dossiers": 7,
+    "markdown_exports": 7,
+    "nonempty_filter_branches": 2685,
+    "minimum_subject_count": 6,
+    "unchanged_note_files": 2,
+    "replay_preserved_data": true,
+    "python_tests": 72
+  },
+  "subject_counts": {
+    "1104 军兵种作战学": {
+      "before": 4,
+      "after": 9
+    },
+    "1110 军事训练学": {
+      "before": 4,
+      "after": 6
+    }
+  }
+}

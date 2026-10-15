@@ -1,0 +1,686 @@
+{
+  "description": "从学校2026年博士目录第1-2页人工核对的部分学术学位导师；不是全校完整目录。",
+  "profiles": [
+    {
+      "name": "邹纯朴",
+      "institution": "上海中医药大学",
+      "department": "中医学院",
+      "discipline": "中医学",
+      "first_level_discipline": "1005 中医学",
+      "direction_group": "内经理论与应用",
+      "interests": "内经理论与应用",
+      "homepage": "",
+      "classification_basis": "招生目录专业代码与实名导师对应；方向为目录所列",
+      "discipline_assignments": [
+        {
+          "first_level_discipline": "1005 中医学",
+          "subject": "100501 中医基础理论",
+          "direction": "内经理论与应用",
+          "year": 2026,
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=1"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=1",
+          "title": "上海中医药大学2026 年博士招生目录",
+          "claim": "招生目录实名列出邹纯朴；专业、方向和年份见招生记录，不表示仍有名额。"
+        }
+      ],
+      "collected_at": "2026-10-14"
+    },
+    {
+      "name": "胡静",
+      "institution": "上海中医药大学",
+      "department": "中医学院",
+      "discipline": "中医学",
+      "first_level_discipline": "1005 中医学",
+      "direction_group": "经方治疗肺病及其效应机制研究",
+      "interests": "经方治疗肺病及其效应机制研究",
+      "homepage": "",
+      "classification_basis": "招生目录专业代码与实名导师对应；方向为目录所列",
+      "discipline_assignments": [
+        {
+          "first_level_discipline": "1005 中医学",
+          "subject": "100502 中医临床基础",
+          "direction": "经方治疗肺病及其效应机制研究",
+          "year": 2026,
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=1"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=1",
+          "title": "上海中医药大学2026 年博士招生目录",
+          "claim": "招生目录实名列出胡静；专业、方向和年份见招生记录，不表示仍有名额。"
+        }
+      ],
+      "collected_at": "2026-10-14"
+    },
+    {
+      "name": "何建成",
+      "institution": "上海中医药大学",
+      "department": "中医学院",
+      "discipline": "中医学",
+      "first_level_discipline": "1005 中医学",
+      "direction_group": "中医证候研究",
+      "interests": "中医证候研究",
+      "homepage": "",
+      "classification_basis": "招生目录专业代码与实名导师对应；方向为目录所列",
+      "discipline_assignments": [
+        {
+          "first_level_discipline": "1005 中医学",
+          "subject": "100505 中医诊断学",
+          "direction": "中医证候研究",
+          "year": 2026,
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=1"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=1",
+          "title": "上海中医药大学2026 年博士招生目录",
+          "claim": "招生目录实名列出何建成；专业、方向和年份见招生记录，不表示仍有名额。"
+        }
+      ],
+      "collected_at": "2026-10-14"
+    },
+    {
+      "name": "李福凤",
+      "institution": "上海中医药大学",
+      "department": "中医学院",
+      "discipline": "中医学",
+      "first_level_discipline": "1005 中医学",
+      "direction_group": "中医四诊信息化与临床应用研究",
+      "interests": "中医四诊信息化与临床应用研究",
+      "homepage": "",
+      "classification_basis": "招生目录专业代码与实名导师对应；方向为目录所列",
+      "discipline_assignments": [
+        {
+          "first_level_discipline": "1005 中医学",
+          "subject": "100505 中医诊断学",
+          "direction": "中医四诊信息化与临床应用研究",
+          "year": 2026,
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=1"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=1",
+          "title": "上海中医药大学2026 年博士招生目录",
+          "claim": "招生目录实名列出李福凤；专业、方向和年份见招生记录，不表示仍有名额。"
+        }
+      ],
+      "collected_at": "2026-10-14"
+    },
+    {
+      "name": "刘国萍",
+      "institution": "上海中医药大学",
+      "department": "中医学院",
+      "discipline": "中医学",
+      "first_level_discipline": "1005 中医学",
+      "direction_group": "诊法和证候数字化及智能化诊断",
+      "interests": "诊法和证候数字化及智能化诊断",
+      "homepage": "",
+      "classification_basis": "招生目录专业代码与实名导师对应；方向为目录所列",
+      "discipline_assignments": [
+        {
+          "first_level_discipline": "1005 中医学",
+          "subject": "100505 中医诊断学",
+          "direction": "诊法和证候数字化及智能化诊断",
+          "year": 2026,
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=1"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=1",
+          "title": "上海中医药大学2026 年博士招生目录",
+          "claim": "招生目录实名列出刘国萍；专业、方向和年份见招生记录，不表示仍有名额。"
+        }
+      ],
+      "collected_at": "2026-10-14"
+    },
+    {
+      "name": "许朝霞",
+      "institution": "上海中医药大学",
+      "department": "中医学院",
+      "discipline": "中医学",
+      "first_level_discipline": "1005 中医学",
+      "direction_group": "中诊断客观化标准化研究",
+      "interests": "中诊断客观化标准化研究",
+      "homepage": "",
+      "classification_basis": "招生目录专业代码与实名导师对应；方向为目录所列",
+      "discipline_assignments": [
+        {
+          "first_level_discipline": "1005 中医学",
+          "subject": "100505 中医诊断学",
+          "direction": "中诊断客观化标准化研究",
+          "year": 2026,
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=1"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=1",
+          "title": "上海中医药大学2026 年博士招生目录",
+          "claim": "招生目录实名列出许朝霞；专业、方向和年份见招生记录，不表示仍有名额。"
+        }
+      ],
+      "collected_at": "2026-10-14"
+    },
+    {
+      "name": "吕嵘",
+      "institution": "上海中医药大学",
+      "department": "中医学院",
+      "discipline": "中西医结合",
+      "first_level_discipline": "1006 中西医结合",
+      "direction_group": "中医药防治心血管疾病的基础研究",
+      "interests": "中医药防治心血管疾病的基础研究",
+      "homepage": "",
+      "classification_basis": "招生目录专业代码与实名导师对应；方向为目录所列",
+      "discipline_assignments": [
+        {
+          "first_level_discipline": "1006 中西医结合",
+          "subject": "100601 中西医结合基础",
+          "direction": "中医药防治心血管疾病的基础研究",
+          "year": 2026,
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=1"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=1",
+          "title": "上海中医药大学2026 年博士招生目录",
+          "claim": "招生目录实名列出吕嵘；专业、方向和年份见招生记录，不表示仍有名额。"
+        }
+      ],
+      "collected_at": "2026-10-14"
+    },
+    {
+      "name": "肖俊杰",
+      "institution": "上海中医药大学",
+      "department": "中医学院",
+      "discipline": "中西医结合",
+      "first_level_discipline": "1006 中西医结合",
+      "direction_group": "中医药防治心力衰竭的机制研究",
+      "interests": "中医药防治心力衰竭的机制研究",
+      "homepage": "",
+      "classification_basis": "招生目录专业代码与实名导师对应；方向为目录所列",
+      "discipline_assignments": [
+        {
+          "first_level_discipline": "1006 中西医结合",
+          "subject": "100601 中西医结合基础",
+          "direction": "中医药防治心力衰竭的机制研究",
+          "year": 2026,
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=1"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=1",
+          "title": "上海中医药大学2026 年博士招生目录",
+          "claim": "招生目录实名列出肖俊杰；专业、方向和年份见招生记录，不表示仍有名额。"
+        }
+      ],
+      "collected_at": "2026-10-14"
+    },
+    {
+      "name": "国海东",
+      "institution": "上海中医药大学",
+      "department": "中西医结合学院/中西医结合研究院",
+      "discipline": "中西医结合",
+      "first_level_discipline": "1006 中西医结合",
+      "direction_group": "中西医结合防治心脑血管疾病",
+      "interests": "中西医结合防治心脑血管疾病",
+      "homepage": "",
+      "classification_basis": "招生目录专业代码与实名导师对应；方向为目录所列",
+      "discipline_assignments": [
+        {
+          "first_level_discipline": "1006 中西医结合",
+          "subject": "100601 中西医结合基础",
+          "direction": "中西医结合防治心脑血管疾病",
+          "year": 2026,
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=1"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=1",
+          "title": "上海中医药大学2026 年博士招生目录",
+          "claim": "招生目录实名列出国海东；专业、方向和年份见招生记录，不表示仍有名额。"
+        }
+      ],
+      "collected_at": "2026-10-14"
+    },
+    {
+      "name": "何锋",
+      "institution": "上海中医药大学",
+      "department": "中西医结合学院/中西医结合研究院",
+      "discipline": "中西医结合",
+      "first_level_discipline": "1006 中西医结合",
+      "direction_group": "肿瘤发生发展和中西医结合防治",
+      "interests": "肿瘤发生发展和中西医结合防治",
+      "homepage": "",
+      "classification_basis": "招生目录专业代码与实名导师对应；方向为目录所列",
+      "discipline_assignments": [
+        {
+          "first_level_discipline": "1006 中西医结合",
+          "subject": "100601 中西医结合基础",
+          "direction": "肿瘤发生发展和中西医结合防治",
+          "year": 2026,
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=1"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=1",
+          "title": "上海中医药大学2026 年博士招生目录",
+          "claim": "招生目录实名列出何锋；专业、方向和年份见招生记录，不表示仍有名额。"
+        }
+      ],
+      "collected_at": "2026-10-14"
+    },
+    {
+      "name": "邵水金",
+      "institution": "上海中医药大学",
+      "department": "中西医结合学院/中西医结合研究院",
+      "discipline": "中西医结合",
+      "first_level_discipline": "1006 中西医结合",
+      "direction_group": "周围神经损伤的针灸康复研究",
+      "interests": "周围神经损伤的针灸康复研究",
+      "homepage": "",
+      "classification_basis": "招生目录专业代码与实名导师对应；方向为目录所列",
+      "discipline_assignments": [
+        {
+          "first_level_discipline": "1006 中西医结合",
+          "subject": "100601 中西医结合基础",
+          "direction": "周围神经损伤的针灸康复研究",
+          "year": 2026,
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=1"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=1",
+          "title": "上海中医药大学2026 年博士招生目录",
+          "claim": "招生目录实名列出邵水金；专业、方向和年份见招生记录，不表示仍有名额。"
+        }
+      ],
+      "collected_at": "2026-10-14"
+    },
+    {
+      "name": "王海坤",
+      "institution": "上海中医药大学",
+      "department": "中西医结合学院/中西医结合研究院",
+      "discipline": "中西医结合",
+      "first_level_discipline": "1006 中西医结合",
+      "direction_group": "中药干预抗体免疫应答的机制",
+      "interests": "中药干预抗体免疫应答的机制",
+      "homepage": "",
+      "classification_basis": "招生目录专业代码与实名导师对应；方向为目录所列",
+      "discipline_assignments": [
+        {
+          "first_level_discipline": "1006 中西医结合",
+          "subject": "100601 中西医结合基础",
+          "direction": "中药干预抗体免疫应答的机制",
+          "year": 2026,
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=1"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=1",
+          "title": "上海中医药大学2026 年博士招生目录",
+          "claim": "招生目录实名列出王海坤；专业、方向和年份见招生记录，不表示仍有名额。"
+        }
+      ],
+      "collected_at": "2026-10-14"
+    },
+    {
+      "name": "徐见容",
+      "institution": "上海中医药大学",
+      "department": "中西医结合学院/中西医结合研究院",
+      "discipline": "中药学",
+      "first_level_discipline": "1008 中药学",
+      "direction_group": "神经退变病靶标的中药药理学研究",
+      "interests": "神经退变病靶标的中药药理学研究",
+      "homepage": "",
+      "classification_basis": "招生目录专业代码与实名导师对应；方向为目录所列",
+      "discipline_assignments": [
+        {
+          "first_level_discipline": "1008 中药学",
+          "subject": "100800 中药学",
+          "direction": "神经退变病靶标的中药药理学研究",
+          "year": 2026,
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=1"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=1",
+          "title": "上海中医药大学2026 年博士招生目录",
+          "claim": "招生目录实名列出徐见容；专业、方向和年份见招生记录，不表示仍有名额。"
+        }
+      ],
+      "collected_at": "2026-10-14"
+    },
+    {
+      "name": "姚斐",
+      "institution": "上海中医药大学",
+      "department": "针灸推拿学院",
+      "discipline": "中医学",
+      "first_level_discipline": "1005 中医学",
+      "direction_group": "针灸推拿效应及作用机制研究",
+      "interests": "针灸推拿效应及作用机制研究",
+      "homepage": "",
+      "classification_basis": "招生目录专业代码与实名导师对应；方向为目录所列",
+      "discipline_assignments": [
+        {
+          "first_level_discipline": "1005 中医学",
+          "subject": "100512 针灸推拿学",
+          "direction": "针灸推拿效应及作用机制研究",
+          "year": 2026,
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=2"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=2",
+          "title": "上海中医药大学2026 年博士招生目录",
+          "claim": "招生目录实名列出姚斐；专业、方向和年份见招生记录，不表示仍有名额。"
+        }
+      ],
+      "collected_at": "2026-10-14"
+    },
+    {
+      "name": "周爽",
+      "institution": "上海中医药大学",
+      "department": "针灸推拿学院",
+      "discipline": "中医学",
+      "first_level_discipline": "1005 中医学",
+      "direction_group": "针灸防治脑病的临床与基础研究",
+      "interests": "针灸防治脑病的临床与基础研究",
+      "homepage": "",
+      "classification_basis": "招生目录专业代码与实名导师对应；方向为目录所列",
+      "discipline_assignments": [
+        {
+          "first_level_discipline": "1005 中医学",
+          "subject": "100512 针灸推拿学",
+          "direction": "针灸防治脑病的临床与基础研究",
+          "year": 2026,
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=2"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=2",
+          "title": "上海中医药大学2026 年博士招生目录",
+          "claim": "招生目录实名列出周爽；专业、方向和年份见招生记录，不表示仍有名额。"
+        }
+      ],
+      "collected_at": "2026-10-14"
+    },
+    {
+      "name": "刘振国",
+      "institution": "上海中医药大学",
+      "department": "针灸推拿学院",
+      "discipline": "中西医结合",
+      "first_level_discipline": "1006 中西医结合",
+      "direction_group": "帕金森病中西医结合",
+      "interests": "帕金森病中西医结合",
+      "homepage": "",
+      "classification_basis": "招生目录专业代码与实名导师对应；方向为目录所列",
+      "discipline_assignments": [
+        {
+          "first_level_discipline": "1006 中西医结合",
+          "subject": "100602 中西医结合临床",
+          "direction": "帕金森病中西医结合",
+          "year": 2026,
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=2"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=2",
+          "title": "上海中医药大学2026 年博士招生目录",
+          "claim": "招生目录实名列出刘振国；专业、方向和年份见招生记录，不表示仍有名额。"
+        }
+      ],
+      "collected_at": "2026-10-14"
+    },
+    {
+      "name": "陈凯先",
+      "institution": "上海中医药大学",
+      "department": "中药学院",
+      "discipline": "中药学",
+      "first_level_discipline": "1008 中药学",
+      "direction_group": "中药药效物质基础研究",
+      "interests": "中药药效物质基础研究",
+      "homepage": "",
+      "classification_basis": "招生目录专业代码与实名导师对应；方向为目录所列",
+      "discipline_assignments": [
+        {
+          "first_level_discipline": "1008 中药学",
+          "subject": "100800 中药学",
+          "direction": "中药药效物质基础研究",
+          "year": 2026,
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=2"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=2",
+          "title": "上海中医药大学2026 年博士招生目录",
+          "claim": "招生目录实名列出陈凯先；专业、方向和年份见招生记录，不表示仍有名额。"
+        }
+      ],
+      "collected_at": "2026-10-14"
+    },
+    {
+      "name": "丁越",
+      "institution": "上海中医药大学",
+      "department": "中药学院",
+      "discipline": "中药学",
+      "first_level_discipline": "1008 中药学",
+      "direction_group": "中药药效物质及制药技术",
+      "interests": "中药药效物质及制药技术",
+      "homepage": "",
+      "classification_basis": "招生目录专业代码与实名导师对应；方向为目录所列",
+      "discipline_assignments": [
+        {
+          "first_level_discipline": "1008 中药学",
+          "subject": "100800 中药学",
+          "direction": "中药药效物质及制药技术",
+          "year": 2026,
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=2"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=2",
+          "title": "上海中医药大学2026 年博士招生目录",
+          "claim": "招生目录实名列出丁越；专业、方向和年份见招生记录，不表示仍有名额。"
+        }
+      ],
+      "collected_at": "2026-10-14"
+    },
+    {
+      "name": "郭夫江",
+      "institution": "上海中医药大学",
+      "department": "中药学院",
+      "discipline": "中药学",
+      "first_level_discipline": "1008 中药学",
+      "direction_group": "中药药效物质及活性成分",
+      "interests": "中药药效物质及活性成分",
+      "homepage": "",
+      "classification_basis": "招生目录专业代码与实名导师对应；方向为目录所列",
+      "discipline_assignments": [
+        {
+          "first_level_discipline": "1008 中药学",
+          "subject": "100800 中药学",
+          "direction": "中药药效物质及活性成分",
+          "year": 2026,
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=2"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=2",
+          "title": "上海中医药大学2026 年博士招生目录",
+          "claim": "招生目录实名列出郭夫江；专业、方向和年份见招生记录，不表示仍有名额。"
+        }
+      ],
+      "collected_at": "2026-10-14"
+    },
+    {
+      "name": "李后开",
+      "institution": "上海中医药大学",
+      "department": "中药学院",
+      "discipline": "中药学",
+      "first_level_discipline": "1008 中药学",
+      "direction_group": "中药抗代谢性疾病的药理研究",
+      "interests": "中药抗代谢性疾病的药理研究",
+      "homepage": "",
+      "classification_basis": "招生目录专业代码与实名导师对应；方向为目录所列",
+      "discipline_assignments": [
+        {
+          "first_level_discipline": "1008 中药学",
+          "subject": "100800 中药学",
+          "direction": "中药抗代谢性疾病的药理研究",
+          "year": 2026,
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=2"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=2",
+          "title": "上海中医药大学2026 年博士招生目录",
+          "claim": "招生目录实名列出李后开；专业、方向和年份见招生记录，不表示仍有名额。"
+        }
+      ],
+      "collected_at": "2026-10-14"
+    },
+    {
+      "name": "李医明",
+      "institution": "上海中医药大学",
+      "department": "中药学院",
+      "discipline": "中药学",
+      "first_level_discipline": "1008 中药学",
+      "direction_group": "中药药效物质的基础研究",
+      "interests": "中药药效物质的基础研究",
+      "homepage": "",
+      "classification_basis": "招生目录专业代码与实名导师对应；方向为目录所列",
+      "discipline_assignments": [
+        {
+          "first_level_discipline": "1008 中药学",
+          "subject": "100800 中药学",
+          "direction": "中药药效物质的基础研究",
+          "year": 2026,
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=2"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=2",
+          "title": "上海中医药大学2026 年博士招生目录",
+          "claim": "招生目录实名列出李医明；专业、方向和年份见招生记录，不表示仍有名额。"
+        }
+      ],
+      "collected_at": "2026-10-14"
+    },
+    {
+      "name": "刘颖",
+      "institution": "上海中医药大学",
+      "department": "中药学院",
+      "discipline": "中药学",
+      "first_level_discipline": "1008 中药学",
+      "direction_group": "中药口服及抗肿瘤纳米递药系统",
+      "interests": "中药口服及抗肿瘤纳米递药系统",
+      "homepage": "",
+      "classification_basis": "招生目录专业代码与实名导师对应；方向为目录所列",
+      "discipline_assignments": [
+        {
+          "first_level_discipline": "1008 中药学",
+          "subject": "100800 中药学",
+          "direction": "中药口服及抗肿瘤纳米递药系统",
+          "year": 2026,
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=2"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=2",
+          "title": "上海中医药大学2026 年博士招生目录",
+          "claim": "招生目录实名列出刘颖；专业、方向和年份见招生记录，不表示仍有名额。"
+        }
+      ],
+      "collected_at": "2026-10-14"
+    },
+    {
+      "name": "潘璐",
+      "institution": "上海中医药大学",
+      "department": "中药学院",
+      "discipline": "中药学",
+      "first_level_discipline": "1008 中药学",
+      "direction_group": "中药天然产物全合成",
+      "interests": "中药天然产物全合成",
+      "homepage": "",
+      "classification_basis": "招生目录专业代码与实名导师对应；方向为目录所列",
+      "discipline_assignments": [
+        {
+          "first_level_discipline": "1008 中药学",
+          "subject": "100800 中药学",
+          "direction": "中药天然产物全合成",
+          "year": 2026,
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=2"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=2",
+          "title": "上海中医药大学2026 年博士招生目录",
+          "claim": "招生目录实名列出潘璐；专业、方向和年份见招生记录，不表示仍有名额。"
+        }
+      ],
+      "collected_at": "2026-10-14"
+    },
+    {
+      "name": "徐宏喜",
+      "institution": "上海中医药大学",
+      "department": "中药学院",
+      "discipline": "中药学",
+      "first_level_discipline": "1008 中药学",
+      "direction_group": "中药药效物质与药理研究",
+      "interests": "中药药效物质与药理研究",
+      "homepage": "",
+      "classification_basis": "招生目录专业代码与实名导师对应；方向为目录所列",
+      "discipline_assignments": [
+        {
+          "first_level_discipline": "1008 中药学",
+          "subject": "100800 中药学",
+          "direction": "中药药效物质与药理研究",
+          "year": 2026,
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=2"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf#page=2",
+          "title": "上海中医药大学2026 年博士招生目录",
+          "claim": "招生目录实名列出徐宏喜；专业、方向和年份见招生记录，不表示仍有名额。"
+        }
+      ],
+      "collected_at": "2026-10-14"
+    }
+  ],
+  "pages": [
+    {
+      "url": "https://yjsy.shutcm.edu.cn/_upload/article/files/02/f6/70eda58f4b08b330edf6d82ad03d/5ae3d6fe-4a61-4f1b-8398-71753380cea9.pdf",
+      "collected_at": "2026-10-14",
+      "records_before_dedup": 24,
+      "method": "official PDF text, manually checked pages 1-2"
+    }
+  ],
+  "failures": []
+}

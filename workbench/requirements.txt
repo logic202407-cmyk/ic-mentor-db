@@ -1,0 +1,6 @@
+fastapi==0.118.0
+fastembed==0.9.0
+uvicorn==0.37.0
+requests==2.34.2
+beautifulsoup4==4.14.3
+

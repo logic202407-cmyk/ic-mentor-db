@@ -1,0 +1,1837 @@
+{
+  "checked_at": "2026-10-14T02:23:16+00:00",
+  "profiles": [
+    {
+      "id": "official-a2088b8cbf4635e79a9f",
+      "name": "严正",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/yanzheng.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-dfad610ad94367b35143",
+      "name": "王承民",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/wangchengmin.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-500b59e4e1359acbd835",
+      "name": "吴建东",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/wujiandong.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-998ad62e29fab9240586",
+      "name": "王旭",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/wangxu.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-264764d26115b7ca2193",
+      "name": "徐潇源",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/xuxiaoyuan.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-7abb9b5ab9d51b19c002",
+      "name": "马柯",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/make.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-f75e69fdc3ba39646d94",
+      "name": "朱荻彬",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/zhudibin.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-a87251386ed173295131",
+      "name": "艾芊",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/aiqian.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-ee1b2d3d0534c7c0d512",
+      "name": "蔡旭",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/caixu.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-a8d4b219404b9a052810",
+      "name": "陈思捷",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/chensijie.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-5cdb7e56b50bb7ee6804",
+      "name": "程浩忠",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/chenghaozhong.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-b9427cdefe64351a3bec",
+      "name": "冯冬涵",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/fengdonghan.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-7e2d141b2631bbbb2b73",
+      "name": "高飞",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/gaofei.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-665f0d8a58cca1561ecb",
+      "name": "何光宇",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/heguangyu.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-8700119b468226ed4a68",
+      "name": "贺兴",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/hexing.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-0fa0746f551dbdfc1f13",
+      "name": "胡岳",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/huyue.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-06671d5afe1ea81c53c5",
+      "name": "华浩",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/huahao.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-f987c497b4e1e85fca1e",
+      "name": "黄文焘",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/huangwendao.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-34ee327cc3f661ff2dc1",
+      "name": "江秀臣",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/jiangxiuchen.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-137677b7d219bfa47d32",
+      "name": "蒋传文",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/jiangchuanwen.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-89c0c3b455dc01cb00e1",
+      "name": "金之俭",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/jinzhijian.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-e2da2e835fe74816b14b",
+      "name": "黎灿兵",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/licanbing.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-f4d7dca2535354f3f16f",
+      "name": "李然",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/liran.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-23440a26e766555c8f21",
+      "name": "李睿",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/lirui.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-53b0c3364d6536649a2c",
+      "name": "李小汾",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/lixiaofen.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-51c09dd17199e7d4b467",
+      "name": "李喆",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/lizhe.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-f36b5ddecf7393955846",
+      "name": "林鹏峰",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/linpengfeng.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-691a5f8c1244a6a7a049",
+      "name": "刘东",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/liudong.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-99f53812fe2c57e4420c",
+      "name": "刘健哲",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/liujianzhe.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-cb95d4acc701af5b9e64",
+      "name": "刘明",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/liuming.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-bae101198d37d5e4f820",
+      "name": "刘亚东",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/liuyadong.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-48afa146d64d6f9f7c23",
+      "name": "刘亚坤",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/liuyakun.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-bd5e291115a3341b933f",
+      "name": "柳璐",
+      "department": "电气工程学院",
+      "old_homepage": "",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/liulu.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-273564bcbe3852e0f3b8",
+      "name": "吕敬",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/lyujing.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-fdff2a75a5497a7b34cd",
+      "name": "秦江超",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/qinjiangchao.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-9893167d8868213e1a47",
+      "name": "尚策",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/shangce.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-f565462379cf39307bc9",
+      "name": "盛戈皞",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/shenggehao.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-dab7d13e00c2132fd9ac",
+      "name": "盛杰",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/shengjie.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-31f46da5b4b082432042",
+      "name": "邰能灵",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/tainengling.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-0166954adaf270a1352b",
+      "name": "谭振飞",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/tanzhenfei.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-deb26f2a4573c3c94f52",
+      "name": "汪可友",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/wangkeyou.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-4bbd931f5b3e0bb53e17",
+      "name": "王明阳",
+      "department": "电气工程学院",
+      "old_homepage": "",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/wangmingyang.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-5188a97ce67c4e55c209",
+      "name": "王亚林",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/wangyalin.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-32bf4d7bd2dd9a0a1618",
+      "name": "王亚伟",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/wangyawei.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-ebe1caf6e264a6036623",
+      "name": "王勇",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/wangyong.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-898c8add28e15774a33d",
+      "name": "文书礼",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/wenshuli.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-213d4bf21e91edaea1e6",
+      "name": "吴超",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/wuchao.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-c5d9eb890f5ed8e7fb0b",
+      "name": "吴蔚",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/wuwei.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-3615f5f9c62d102094c0",
+      "name": "徐晋",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/xujin.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-d2c571befb28b89eb4af",
+      "name": "徐军忠",
+      "department": "电气工程学院",
+      "old_homepage": "",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/xujunzhong.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-7050861621158563a8c2",
+      "name": "姚钢",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/yaogang.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-dfa9578a981d4ae7385b",
+      "name": "尹毅",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/yinyi.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-b8b3aa75b5ecc97b42f5",
+      "name": "张琛",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/zhangchen.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-b15f16a6edb9cc888873",
+      "name": "张建文",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/zhangjianwen.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-d0fcc4f57d953f6788c5",
+      "name": "张沈习",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/zhangshenxi.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-89549893516d284ea49e",
+      "name": "赵孝磊",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/zhaoxiaolei.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-1d17663333137aba5fa7",
+      "name": "赵跃",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/zhaoyue.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-8a02ed923510aa16b61c",
+      "name": "郑晓冬",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/zhengxiaodong.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-ff2a0e41ab6ccf73edc5",
+      "name": "周南",
+      "department": "电气工程学院",
+      "old_homepage": "",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/zhounan.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-a7f6fc73bff7fdde9d93",
+      "name": "朱淼",
+      "department": "电气工程学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/zhumiao.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-c571d1c49202117545fd",
+      "name": "范帅",
+      "department": "电气工程学院",
+      "old_homepage": "",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/fanshuai.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-1aae00366a84d213999f",
+      "name": "高强",
+      "department": "电气工程学院",
+      "old_homepage": "",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/gaoqiang.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-fbb40b4410df6a4cc098",
+      "name": "江俊杰",
+      "department": "电气工程学院",
+      "old_homepage": "",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/jiangjunjie.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-7e9bba1a7291dd6ac4c8",
+      "name": "严英杰",
+      "department": "电气工程学院",
+      "old_homepage": "",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/yanyingjie.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-57679ed8ece3d1e960bc",
+      "name": "杨仁炘",
+      "department": "电气工程学院",
+      "old_homepage": "",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/yangrenxin.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-bb0e18fd28515984f9e8",
+      "name": "余墨多",
+      "department": "电气工程学院",
+      "old_homepage": "",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/yumoduo.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-ca0074cabaab62114e50",
+      "name": "周剑桥",
+      "department": "电气工程学院",
+      "old_homepage": "",
+      "homepage": "https://see.sjtu.edu.cn/jiaoshiml/zhoujianqiao.html",
+      "identity_url": "https://see.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-2864670da957752fe38a",
+      "name": "蒋力",
+      "department": "计算机学院（可扩展计算研究所）",
+      "old_homepage": "https://jianglisjtu.github.io/index.html",
+      "homepage": "https://cs.sjtu.edu.cn/jiaoshiml/jiangli.html",
+      "identity_url": "https://cs.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-04fabcfe94b4834cdeed",
+      "name": "冷静文",
+      "department": "计算机学院（先进计算研究所）",
+      "old_homepage": "https://cs.sjtu.edu.cn/jiaoshiml/lengjingwen.html",
+      "homepage": "https://cs.sjtu.edu.cn/jiaoshiml/lengjingwen.html",
+      "identity_url": "https://cs.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-6882852d802db17c9074",
+      "name": "李超",
+      "department": "计算机学院（先进计算研究所）",
+      "old_homepage": "https://cs.sjtu.edu.cn/~lichao/",
+      "homepage": "https://cs.sjtu.edu.cn/jiaoshiml/lichao.html",
+      "identity_url": "https://cs.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-a4c3f253e0879fe52a16",
+      "name": "冯宇",
+      "department": "计算机学院（先进计算研究所,约翰·霍普克罗夫特计算机科学中心）",
+      "old_homepage": "https://yufenguofr.github.io/",
+      "homepage": "https://cs.sjtu.edu.cn/jiaoshiml/fengyu.html",
+      "identity_url": "https://cs.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-e5855eeeba8b2a4398a4",
+      "name": "梁晓峣",
+      "department": "计算机学院（可扩展计算研究所）",
+      "old_homepage": "https://cs.sjtu.edu.cn/jiaoshiml/liangxiaoyao.html",
+      "homepage": "https://cs.sjtu.edu.cn/jiaoshiml/liangxiaoyao.html",
+      "identity_url": "https://cs.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-0ec89e2a6c57e3d41099",
+      "name": "刘方鑫",
+      "department": "计算机学院（可扩展计算研究所）",
+      "old_homepage": "https://mxhx7199.github.io/",
+      "homepage": "https://cs.sjtu.edu.cn/jiaoshiml/liufangxin.html",
+      "identity_url": "https://cs.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-c014364c3bf0cd4a512e",
+      "name": "侯小凤",
+      "department": "计算机学院（先进计算研究所）",
+      "old_homepage": "https://xfhelen.github.io/",
+      "homepage": "https://cs.sjtu.edu.cn/jiaoshiml/houxiaofeng.html",
+      "identity_url": "https://cs.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-6792345c7a085eb27a4d",
+      "name": "宋卓然",
+      "department": "计算机学院（可扩展计算研究所）",
+      "old_homepage": "https://cs.sjtu.edu.cn/jiaoshiml/songzhuoran.html",
+      "homepage": "https://cs.sjtu.edu.cn/jiaoshiml/songzhuoran.html",
+      "identity_url": "https://cs.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-fc822f85b0a5e49d9eaa",
+      "name": "赵杰茹",
+      "department": "计算机学院（先进计算研究所）",
+      "old_homepage": "https://zjru.github.io/",
+      "homepage": "https://cs.sjtu.edu.cn/jiaoshiml/zhaojieru.html",
+      "identity_url": "https://cs.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-b85aea0ccb31eb74b570",
+      "name": "纪幸辰",
+      "department": "计算机学院 / 光子传输与通信全国重点实验室",
+      "old_homepage": "https://jhc.sjtu.edu.cn/~xingchenji/",
+      "homepage": "https://cs.sjtu.edu.cn/jiaoshiml/jixingchen.html",
+      "identity_url": "https://cs.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-2f58f7808eaf7f68d155",
+      "name": "何哲陟",
+      "department": "计算机学院（人工智能与认知安全研究所）",
+      "old_homepage": "https://elliothe.github.io/",
+      "homepage": "https://cs.sjtu.edu.cn/jiaoshiml/hezhezhi.html",
+      "identity_url": "https://cs.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-878122fd8ab1cc40cd94",
+      "name": "顾磊磊",
+      "department": "计算机学院（清源研究院）",
+      "old_homepage": "https://cs.sjtu.edu.cn/jiaoshiml/guleilei.html",
+      "homepage": "https://cs.sjtu.edu.cn/jiaoshiml/guleilei.html",
+      "identity_url": "https://cs.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-d53ce0e59941172f1dfe",
+      "name": "张爱新",
+      "department": "计算机学院（交叉前沿研究所）",
+      "old_homepage": "https://cs.sjtu.edu.cn/jiaoshiml/zhangaixin.html",
+      "homepage": "https://cs.sjtu.edu.cn/jiaoshiml/zhangaixin.html",
+      "identity_url": "https://cs.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-1abd03dc05f6a395b7e4",
+      "name": "孔令和",
+      "department": "计算机学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://cs.sjtu.edu.cn/jiaoshiml/konglinghe.html",
+      "identity_url": "https://cs.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-a031d66ce9ba0da1a5f7",
+      "name": "张维夏",
+      "department": "计算机学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.htmlhttps://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://cs.sjtu.edu.cn/jiaoshiml/zhangweixia.html",
+      "identity_url": "https://cs.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-0f1235740a294a45bf12",
+      "name": "张一鸣",
+      "department": "计算机学院",
+      "old_homepage": "",
+      "homepage": "https://cs.sjtu.edu.cn/jiaoshiml/zhangyiming.html",
+      "identity_url": "https://cs.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-fde24c5d1933d0155c8a",
+      "name": "顾小东",
+      "department": "计算机学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://cs.sjtu.edu.cn/jiaoshiml/guxiaodong.html",
+      "identity_url": "https://cs.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-fb2673e34cea7d12c6e8",
+      "name": "张谦",
+      "department": "计算机学院",
+      "old_homepage": "",
+      "homepage": "https://cs.sjtu.edu.cn/jiaoshiml/zhangqian.html",
+      "identity_url": "https://cs.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-a38ff80d523609c62e2a",
+      "name": "化存卿",
+      "department": "计算机学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://cs.sjtu.edu.cn/jiaoshiml/huacunqing.html",
+      "identity_url": "https://cs.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-9ed0e2d8da3108a7f98a",
+      "name": "李平",
+      "department": "自动化与感知学院",
+      "old_homepage": "https://sais.sjtu.edu.cn/faculty/liping.html",
+      "homepage": "https://sais.sjtu.edu.cn/faculty/liping.html",
+      "identity_url": "https://sais.sjtu.edu.cn/faculty.html"
+    },
+    {
+      "id": "legacy-4dc185684817f1108efc",
+      "name": "韩韬",
+      "department": "自动化与感知学院",
+      "old_homepage": "https://sais.sjtu.edu.cn/faculty/hantao.html",
+      "homepage": "https://sais.sjtu.edu.cn/faculty/hantao.html",
+      "identity_url": "https://sais.sjtu.edu.cn/faculty.html"
+    },
+    {
+      "id": "legacy-593b63cbe73d9521c92f",
+      "name": "李洪婧",
+      "department": "自动化与感知学院 / 光子传输与通信全国重点实验室",
+      "old_homepage": "https://faculty.sjtu.edu.cn/lihongjing/zh_CN/index.htm",
+      "homepage": "https://sais.sjtu.edu.cn/faculty/lihongjing.html",
+      "identity_url": "https://sais.sjtu.edu.cn/faculty.html"
+    },
+    {
+      "id": "legacy-debeb0cb0b4e4e4713fe",
+      "name": "罗骋韬",
+      "department": "自动化与感知学院",
+      "old_homepage": "https://sais.sjtu.edu.cn/faculty/luochengtao.html",
+      "homepage": "https://sais.sjtu.edu.cn/faculty/luochengtao.html",
+      "identity_url": "https://sais.sjtu.edu.cn/faculty.html"
+    },
+    {
+      "id": "legacy-d11d86098d3ec0c621ab",
+      "name": "杨天",
+      "department": "自动化与感知学院 / 光子传输与通信全国重点实验室",
+      "old_homepage": "https://faculty.sjtu.edu.cn/yangtian/zh_CN/index.htm",
+      "homepage": "https://sais.sjtu.edu.cn/faculty/yangtian.html",
+      "identity_url": "https://sais.sjtu.edu.cn/faculty.html"
+    },
+    {
+      "id": "legacy-c1a48a78e8bbc4e21590",
+      "name": "杨佳苗",
+      "department": "自动化与感知学院",
+      "old_homepage": "https://sais.sjtu.edu.cn/faculty/yangjiamiao.html",
+      "homepage": "https://sais.sjtu.edu.cn/faculty/yangjiamiao.html",
+      "identity_url": "https://sais.sjtu.edu.cn/faculty.html"
+    },
+    {
+      "id": "legacy-8c77c3eb55a0bf66b07a",
+      "name": "石剑虹",
+      "department": "自动化与感知学院 / 光子传输与通信全国重点实验室",
+      "old_homepage": "https://sais.sjtu.edu.cn/faculty/shijianhong.html",
+      "homepage": "https://sais.sjtu.edu.cn/faculty/shijianhong.html",
+      "identity_url": "https://sais.sjtu.edu.cn/faculty.html"
+    },
+    {
+      "id": "legacy-3fea3812203898a504f7",
+      "name": "毛逸飞",
+      "department": "自动化与感知学院",
+      "old_homepage": "https://www.x-mol.com/groups/mao_yifei",
+      "homepage": "https://sais.sjtu.edu.cn/faculty/maoyifei.html",
+      "identity_url": "https://sais.sjtu.edu.cn/faculty.html"
+    },
+    {
+      "id": "legacy-e9d4d38f49db18945ff9",
+      "name": "肖太龙",
+      "department": "自动化与感知学院 / 光子传输与通信全国重点实验室",
+      "old_homepage": "https://sais.sjtu.edu.cn/faculty/xiaotailong.html",
+      "homepage": "https://sais.sjtu.edu.cn/faculty/xiaotailong.html",
+      "identity_url": "https://sais.sjtu.edu.cn/faculty.html"
+    },
+    {
+      "id": "legacy-f1d69b1c66aa8675443a",
+      "name": "史汝川",
+      "department": "自动化与感知学院",
+      "old_homepage": "https://sais.sjtu.edu.cn/faculty/shiruchuan.html",
+      "homepage": "https://sais.sjtu.edu.cn/faculty/shiruchuan.html",
+      "identity_url": "https://sais.sjtu.edu.cn/faculty.html"
+    },
+    {
+      "id": "legacy-1baf87b1d048ec6b51dd",
+      "name": "李世阳",
+      "department": "自动化与感知学院",
+      "old_homepage": "https://sais.sjtu.edu.cn/faculty/lishiyang.html",
+      "homepage": "https://sais.sjtu.edu.cn/faculty/lishiyang.html",
+      "identity_url": "https://sais.sjtu.edu.cn/faculty.html"
+    },
+    {
+      "id": "legacy-31bdaf55aca9c3e3aa3c",
+      "name": "许齐敏",
+      "department": "自动化与感知学院",
+      "old_homepage": "https://iwin.sjtu.edu.cn/",
+      "homepage": "https://sais.sjtu.edu.cn/faculty/xuqimin.html",
+      "identity_url": "https://sais.sjtu.edu.cn/faculty.html"
+    },
+    {
+      "id": "pilot-5976b9bf3d16f36e386e",
+      "name": "张涛",
+      "department": "自动化与感知学院",
+      "old_homepage": "https://sais.sjtu.edu.cn/faculty/zhangtao.html",
+      "homepage": "https://sais.sjtu.edu.cn/faculty/zhangtao.html",
+      "identity_url": "https://sais.sjtu.edu.cn/faculty.html"
+    },
+    {
+      "id": "official-17a2c934146e55903320",
+      "name": "刘岩磊",
+      "department": "自动化与感知学院",
+      "old_homepage": "https://sais.sjtu.edu.cn/faculty.html",
+      "homepage": "https://sais.sjtu.edu.cn/faculty/liuyanlei.html",
+      "identity_url": "https://sais.sjtu.edu.cn/faculty.html"
+    },
+    {
+      "id": "official-740d5c8a54cf3446e519",
+      "name": "陶卫",
+      "department": "自动化与感知学院",
+      "old_homepage": "https://sais.sjtu.edu.cn/faculty.html",
+      "homepage": "https://sais.sjtu.edu.cn/faculty/taowei.html",
+      "identity_url": "https://sais.sjtu.edu.cn/faculty.html"
+    },
+    {
+      "id": "official-a9f7019c36296de40995",
+      "name": "陈卫东",
+      "department": "自动化与感知学院",
+      "old_homepage": "https://sais.sjtu.edu.cn/faculty.html",
+      "homepage": "https://sais.sjtu.edu.cn/faculty/chenweidong.html",
+      "identity_url": "https://sais.sjtu.edu.cn/faculty.html"
+    },
+    {
+      "id": "official-a3e1d04cb7090028757a",
+      "name": "谷朝臣",
+      "department": "自动化与感知学院",
+      "old_homepage": "https://sais.sjtu.edu.cn/faculty.html",
+      "homepage": "https://sais.sjtu.edu.cn/faculty/guchaochen.html",
+      "identity_url": "https://sais.sjtu.edu.cn/faculty.html"
+    },
+    {
+      "id": "official-5e20db6b837663397333",
+      "name": "关新平",
+      "department": "自动化与感知学院",
+      "old_homepage": "https://sais.sjtu.edu.cn/faculty.html",
+      "homepage": "https://sais.sjtu.edu.cn/faculty/guanxinping.html",
+      "identity_url": "https://sais.sjtu.edu.cn/faculty.html"
+    },
+    {
+      "id": "official-0050d2cfbd8095cce1c7",
+      "name": "潘小勇",
+      "department": "自动化与感知学院",
+      "old_homepage": "https://sais.sjtu.edu.cn/faculty.html",
+      "homepage": "https://sais.sjtu.edu.cn/faculty/panxiaoyong.html",
+      "identity_url": "https://sais.sjtu.edu.cn/faculty.html"
+    },
+    {
+      "id": "official-1ddd550e5e862a295697",
+      "name": "沈红斌",
+      "department": "自动化与感知学院",
+      "old_homepage": "https://sais.sjtu.edu.cn/faculty.html",
+      "homepage": "https://sais.sjtu.edu.cn/faculty/shenhongbin.html",
+      "identity_url": "https://sais.sjtu.edu.cn/faculty.html"
+    },
+    {
+      "id": "official-5eb48e50dab856ef29da",
+      "name": "王贺升",
+      "department": "自动化与感知学院",
+      "old_homepage": "https://sais.sjtu.edu.cn/faculty.html",
+      "homepage": "https://sais.sjtu.edu.cn/faculty/wanghesheng.html",
+      "identity_url": "https://sais.sjtu.edu.cn/faculty.html"
+    },
+    {
+      "id": "legacy-8b89ea67aa68a732f9bd",
+      "name": "赵健",
+      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/zhaojian.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/zhaojian.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-b58d32f2206bba582136",
+      "name": "祁亮",
+      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/qiliang.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/qiliang.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-2766bd3fd150042d2e53",
+      "name": "王国兴",
+      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/wangguoxing.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/wangguoxing.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-5633323d038792104ef3",
+      "name": "王辉",
+      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+      "old_homepage": "https://ace.sjtu.edu.cn",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/wanghui.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-3745b4159a0353144824",
+      "name": "金晶",
+      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/jinjing.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/jinjing.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-cf6f146a66e125f8096a",
+      "name": "何卫锋",
+      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/heweifeng.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/heweifeng.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-64ae12fdd3008f6cd2a4",
+      "name": "周健军",
+      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/zhoujianjun.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/zhoujianjun.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-ea86b6f8879be1a910ca",
+      "name": "姜红兰",
+      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/jianghonglan.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/jianghonglan.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-5ab2c0dbe2c2bda4ff97",
+      "name": "陈铭易",
+      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/chenmingyi.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/chenmingyi.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-cc6c71d188aaf59faa1a",
+      "name": "郭小军",
+      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/guoxiaojun.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/guoxiaojun.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-25de91f4b291742a69fd",
+      "name": "毛军发",
+      "department": "集成电路学院",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/maojunfa.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/maojunfa.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-de699ad3474c016167d1",
+      "name": "刘彦",
+      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/liuyan.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/liuyan.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-3c8bf5511ea0503afe51",
+      "name": "过悦康",
+      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/guoyuekang.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/guoyuekang.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-faad13624d8e7cf87e86",
+      "name": "周亮",
+      "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/zhouliang.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/zhouliang.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-c5f978d398cd92a38039",
+      "name": "王琴",
+      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/wangqin.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/wangqin.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-c306b4e3dbd7fd70c99d",
+      "name": "贺光辉",
+      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/heguanghui.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/heguanghui.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-4f9969d73159c32084ea",
+      "name": "司梦维",
+      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+      "old_homepage": "https://sigroup.sjtu.edu.cn/",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/simengwei.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-2b0f29d0a4a16a4984ba",
+      "name": "孙亚男",
+      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/sunyanan.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/sunyanan.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-52d2122374ce444b9e0b",
+      "name": "刘景全",
+      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+      "old_homepage": "http://mems.sjtu.edu.cn",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/liujingquan.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-c86850c74e5d4343d396",
+      "name": "毛志刚",
+      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/maozhigang.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/maozhigang.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-f34509b78356f8cfc6b2",
+      "name": "何祖源",
+      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/hezuyuan.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/hezuyuan.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-9e60bd0feb24f1e00eba",
+      "name": "纪志罡",
+      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/jizhigang.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/jizhigang.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-799c67c415fd15b92110",
+      "name": "陈建平",
+      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/chenjianping.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/chenjianping.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-18d1c5a415f7dc0f720c",
+      "name": "义理林",
+      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+      "old_homepage": "http://olife.sjtu.edu.cn",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/yililin.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-8de59cf935242172e335",
+      "name": "顾昌展",
+      "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
+      "old_homepage": "https://changzhan.sjtu.edu.cn",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/2725.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-403c14e0d7390b9f8885",
+      "name": "李晓春",
+      "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
+      "old_homepage": "http://hsic.sjtu.edu.cn",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/lixiaochun.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-fda22261b9ce9c12d8bf",
+      "name": "周林杰",
+      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/zhoulinjie.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/zhoulinjie.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-8e2fad356122d4c3df5e",
+      "name": "庞健",
+      "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
+      "old_homepage": "https://siliconrf.sjtu.edu.cn/",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/pangjian.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-ddafc38037b66a991fbc",
+      "name": "任鹏鹏",
+      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+      "old_homepage": "https://faculty.sjtu.edu.cn/renpengpeng/zh_CN/index.htm",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/renpengpeng.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-102f9bab0d401ae532b0",
+      "name": "唐旻",
+      "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
+      "old_homepage": "http://rfeda.sjtu.edu.cn",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/tangmin.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-7af9c9fd9e328b9e0561",
+      "name": "陆梁军",
+      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/luliangjun.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/luliangjun.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-d4d677c0498b1a7f5812",
+      "name": "朱逸萧",
+      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/2987.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/2987.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-d9b6af1a5647d1b0a193",
+      "name": "吴林晟",
+      "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
+      "old_homepage": "http://cmrft.sjtu.edu.cn/newsinfo/news_view.asp?newsid=74",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/wulincheng.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-958b4326a99a31166151",
+      "name": "陈诚",
+      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/chencheng.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/chencheng.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-2ed456ef9484f7b06e4b",
+      "name": "苏翼凯",
+      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+      "old_homepage": "http://otip.sjtu.edu.cn",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/suyikai.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-df54e3bc28586a759036",
+      "name": "陈文超",
+      "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/2810.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/2810.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-6d33d989ff0d4af9906a",
+      "name": "王静",
+      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/3048.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/3048.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-5b59378e40cf13cb26b1",
+      "name": "尤敏敏",
+      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/youminmin.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/youminmin.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-5b53e9e8478cfdc8ce00",
+      "name": "杨斌",
+      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/yangbin.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/yangbin.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-a12659c423e618578f44",
+      "name": "杨超",
+      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/yangchao.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/yangchao.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-425fd6da0807a13b168e",
+      "name": "蒋剑飞",
+      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/jiangjianfei.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/jiangjianfei.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-a99447de2854db9e4398",
+      "name": "景乃锋",
+      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/jingnaifeng.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/jingnaifeng.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-94fc5234eb4f8859dc8d",
+      "name": "赵昕",
+      "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
+      "old_homepage": "http://xinzhao.sjtu.edu.cn/",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/zhaoxin.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-b9d4e56f4b8a3a9d3ffc",
+      "name": "夏彬",
+      "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/xiabin.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/xiabin.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-b7716083b0fc6da5892b",
+      "name": "郭衍束",
+      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+      "old_homepage": "https://cryo-x.sjtu.edu.cn",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/3079.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-196c4c57d77a46d323f7",
+      "name": "陈海宝",
+      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+      "old_homepage": "https://haibaochen.sjtu.edu.cn",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/chenhaibao.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-af44b62c4da753930996",
+      "name": "杨志",
+      "department": "集成电路学院（信息与电子工程学院）· 纳电子材料与器件研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/yangzhi.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/yangzhi.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-8ee146ee2ce751276379",
+      "name": "李秀妍",
+      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/lixiuyan.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/lixiuyan.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-28d1457b59b957e7ceab",
+      "name": "郭宇耀",
+      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/guoyuyao.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/guoyuyao.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-c46b8ea9c13201970327",
+      "name": "何谷峰",
+      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+      "old_homepage": "http://oodl.sjtu.edu.cn",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/hegufeng.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-af7238ba11fb04ed03b0",
+      "name": "李靖驰",
+      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+      "old_homepage": "https://otip.sjtu.edu.cn/member/JingchiLi",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/2575.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-dfc23cf20f5dedfd766a",
+      "name": "王尧",
+      "department": "集成电路学院（信息与电子工程学院）· 未来媒体网络协同创新中心",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/wangyao.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/wangyao.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-391221ac31f71c1de288",
+      "name": "杜江兵",
+      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+      "old_homepage": "http://cip.sjtu.edu.cn/www/index.php/teacher/dujia",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/dujiangbing.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-f1ff47deb50cc78a1f15",
+      "name": "杨卓青",
+      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+      "old_homepage": "https://gpmems.sjtu.edu.cn/",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/yangzhuoqing.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-f3dfc3633fadaa694c18",
+      "name": "唐伟",
+      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+      "old_homepage": "http://smil.sjtu.edu.cn/",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/tangwei.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-51de89ec4cd3183a077d",
+      "name": "吴茂坤",
+      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/wumaokun.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/wumaokun.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-f942ad39a0f62dbf12c5",
+      "name": "胡亮",
+      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/huliang.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/huliang.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-94cc991949570234d462",
+      "name": "张宸",
+      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+      "old_homepage": "https://chenzhangsjtu.github.io/",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/zhangchen.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-fe55ba95e30a086442d3",
+      "name": "丁桂甫",
+      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/dingguifu.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/dingguifu.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-4e642eeec545abca2e2c",
+      "name": "吴龟灵",
+      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+      "old_homepage": "https://faculty.sjtu.edu.cn/wuguiling/zh_CN/index.htm",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/wuguiling.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-f4164555afbb125a109f",
+      "name": "邱良丰",
+      "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
+      "old_homepage": "http://microwave.eu.org:8000/",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/qiuliangfeng.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-d4ea7cb4e251bf635c1f",
+      "name": "吴侃",
+      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+      "old_homepage": "https://faculty.sjtu.edu.cn/wukan/zh_CN/index.htm",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/wukan.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-bb1756993c67118ed30d",
+      "name": "樊昕昱",
+      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+      "old_homepage": "https://cip.sjtu.edu.cn/",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/fanxinyu.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-7267c660701c89b7133d",
+      "name": "何广强",
+      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+      "old_homepage": "http://qnp.sjtu.edu.cn",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/heguangqiang.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-94d60a7310f3aa20df68",
+      "name": "绳伟光",
+      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/shengweiguang.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/shengweiguang.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-9e0613146d50baface83",
+      "name": "曾敏",
+      "department": "集成电路学院（信息与电子工程学院）· 纳电子材料与器件研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/zengmin.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/zengmin.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-71fd6d9fef43ec8c036b",
+      "name": "叶瑶瑶",
+      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/yeyaoyao.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/yeyaoyao.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-3e55b32de16f504a8921",
+      "name": "王隆春",
+      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/wanglongchun.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/wanglongchun.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-70834bbd2be8bfa0dd25",
+      "name": "孙璐",
+      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+      "old_homepage": "http://otip.sjtu.edu.cn/member/LuSun",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/sunlu.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-872061c3b6aac79c5f9a",
+      "name": "李杏",
+      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+      "old_homepage": "https://imlic.sjtu.edu.cn/?p=555",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/lixing.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-3554f663605fff51be92",
+      "name": "何宇",
+      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/heyu.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/heyu.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-9d6c34d817767cda608f",
+      "name": "肖高标",
+      "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/xiaogaobiao.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/xiaogaobiao.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-ca2b8a953fec72564a43",
+      "name": "郭旭涵",
+      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+      "old_homepage": "https://guoxuhan.sjtu.edu.cn/; http://otip.sjtu.edu.cn/member/XuhanGuo",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/guoxuhan.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-af9fc2ed22184e31aef6",
+      "name": "张文甲",
+      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+      "old_homepage": "https://faculty.sjtu.edu.cn/zhangwenjia/zh_CN/index.htm",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/zhangwenjia.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-1896a0e9455cf6d11bb3",
+      "name": "李金波",
+      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/2765.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/2765.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-553d1108532627c6c114",
+      "name": "尹琛",
+      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/3477.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/3477.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-080e0db97d1fe6810b37",
+      "name": "胡南滔",
+      "department": "集成电路学院（信息与电子工程学院）· 纳电子材料与器件研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/hunantao.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/hunantao.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-c87a0a211ae7aa84af28",
+      "name": "杨建华",
+      "department": "集成电路学院（信息与电子工程学院）· 纳电子材料与器件研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/yangjianhua.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/yangjianhua.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-7e266d96d6f8151fe77b",
+      "name": "谢卫强",
+      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+      "old_homepage": "https://otip.sjtu.edu.cn/member/WeiqiangXie",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/xieweiqiang.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-82b538db61c6c70c67f5",
+      "name": "王庆康",
+      "department": "集成电路学院（信息与电子工程学院）· 纳电子材料与器件研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/wangqingkang.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/wangqingkang.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-6c404f2303591499efbf",
+      "name": "吴校生",
+      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/wuxiaosheng.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/wuxiaosheng.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-806b4cde363061f5659f",
+      "name": "林祖德",
+      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/linzude.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/linzude.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-68a102e2a23d59c14512",
+      "name": "朱敏",
+      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+      "old_homepage": "https://www.researchgate.net/profile/Min-Zhu-28?ev=hdr_xprf",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/2852.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-ede3c1387f87fd453036",
+      "name": "闫浩",
+      "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/yanhao.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/yanhao.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-6adfd7e42c1bc29a5c12",
+      "name": "蔡星汉",
+      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+      "old_homepage": "https://2dkitchen.sjtu.edu.cn/",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/caixinghan.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-81b122a731c6809538da",
+      "name": "徐绍夫",
+      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+      "old_homepage": "https://imlic.sjtu.edu.cn/?p=3096",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/xushaofu.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-747ad397e7f66acb0fbf",
+      "name": "应忍冬",
+      "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
+      "old_homepage": "http://bat.sjtu.edu.cn",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/yingrendong.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-40fe15af12c1a1ab92ad",
+      "name": "张丛春",
+      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/zhangcongchun.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/zhangcongchun.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-9fd1106d45ee0b40d5b6",
+      "name": "臧法珩",
+      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+      "old_homepage": "https://gpmems.sjtu.edu.cn",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/zangfahang.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-5d8e04447572a4ed02fb",
+      "name": "施国勇",
+      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/shiguoyong.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/shiguoyong.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-839621ba806b00f7d9dc",
+      "name": "万阳阳",
+      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+      "old_homepage": "https://cip.sjtu.edu.cn/wordpress/（团队主页）",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/3348.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-8ee67640626ce6f96c71",
+      "name": "钱娜",
+      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/qianna.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/qianna.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-65e5187ada0ec09e4d45",
+      "name": "苏言杰",
+      "department": "集成电路学院（信息与电子工程学院）· 纳电子材料与器件研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/suyanjie.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/suyanjie.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-c6d241e846f9491636b8",
+      "name": "林树靖",
+      "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
+      "old_homepage": "https://sais.sjtu.edu.cn/faculty/linshujing.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/3382.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-0ad26bbb91bbb2693bbd",
+      "name": "彭争春",
+      "department": "集成电路学院（信息与电子工程学院）· 纳电子材料与器件研究所",
+      "old_homepage": "https://faculty.sjtu.edu.cn/pengzhengchun/zh_CN/index.htm",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/pengzhengchun.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-7952dd77999333eb3ab7",
+      "name": "邱辞源",
+      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/qiuciyuan.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/qiuciyuan.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-33ccb4b81baea2ef5910",
+      "name": "张文军",
+      "department": "集成电路学院（信息与电子工程学院）· 图像通信与网络工程研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/zhangwenjun.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/zhangwenjun.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-978bac21aa52e2f77e8f",
+      "name": "付宇卓",
+      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/fuyuzhuo.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/fuyuzhuo.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-0e66274b3890d67702b5",
+      "name": "马伯文",
+      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/3105.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/3105.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-5d8a093e7198c98fe727",
+      "name": "文惠敏",
+      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/wenhuimin.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/wenhuimin.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-5ecb9f0eac9feb538776",
+      "name": "孙云娜",
+      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/sunyunna.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/sunyunna.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-d870d96fdbf14268e2c1",
+      "name": "雷冲",
+      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/leichong.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/leichong.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-dde5458b7965089ee221",
+      "name": "陈一彤",
+      "department": "集成电路学院（信息与电子工程学院）· 图像通信与网络工程研究所",
+      "old_homepage": "https://opticompt-lab.sjtu.edu.cn/",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/chenyitong.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-b04ce47a51cbb58f8df4",
+      "name": "陈苏杰",
+      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/chensujie.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/chensujie.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-61a168da13dcd1f91951",
+      "name": "刘武",
+      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/liuwu.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/liuwu.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-cf91c4fc5031d6fe7a14",
+      "name": "何大治",
+      "department": "集成电路学院（信息与电子工程学院）· 未来媒体网络协同创新中心",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/hedazhi.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/hedazhi.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-df8f96ae1ab63e886797",
+      "name": "戴旭涵",
+      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/daixuhan.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/daixuhan.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-d6a6245656c71e5ef3ba",
+      "name": "周志华",
+      "department": "集成电路学院（信息与电子工程学院）· 纳电子材料与器件研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/zhouzhihua.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/zhouzhihua.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-3639b93d0cc3f4275322",
+      "name": "莫亭亭",
+      "department": "集成电路学院（信息与电子工程学院）· 电子信息与集成电路实验教学中心",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/motingting.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/motingting.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-fe907b7d2cbf20e04b66",
+      "name": "王霆",
+      "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/3389.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/3389.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-1619ebe6a84b12d5a41e",
+      "name": "董承远",
+      "department": "集成电路学院（信息与电子工程学院）· 微纳器件与集成系统研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/dongchengyuan.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/dongchengyuan.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-bea15c7c15395bc0841c",
+      "name": "吴子涵",
+      "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/3373.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/3373.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-bf8668b270ca75043754",
+      "name": "郭亮",
+      "department": "集成电路学院",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/2825.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/2825.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-d716ca6e80a66e4107fa",
+      "name": "田晓华",
+      "department": "集成电路学院（信息与电子工程学院）· 无线通信技术研究所",
+      "old_homepage": "http://xtian.sjtu.edu.cn",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/tianxiaohua.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-7a7b6da6a26d6b395c19",
+      "name": "黄其煜",
+      "department": "集成电路学院",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/huangqiyu.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/huangqiyu.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-c26aecdc50f6692cc659",
+      "name": "李海华",
+      "department": "集成电路学院（信息与电子工程学院）· 纳电子材料与器件研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/lihaihua.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/lihaihua.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-c5cd4d881e9cca0a7c09",
+      "name": "林艳霞",
+      "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
+      "old_homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/linyanxia.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/linyanxia.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "legacy-00b6ec5e5f4c044579c5",
+      "name": "卢佳青",
+      "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
+      "old_homepage": "https://jiaqing-lu.github.io",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/3107.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-05bc2b259d90715c8857",
+      "name": "李金金",
+      "department": "集成电路学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/lijinjin.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-73de68e8e827b52288f9",
+      "name": "黄鹏辉",
+      "department": "集成电路学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/huangpenghui.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-2ead91d53f1597b89637",
+      "name": "王开志",
+      "department": "集成电路学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/wangkaizhi.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    },
+    {
+      "id": "official-1a8613a6262b07d00ab2",
+      "name": "王新兵",
+      "department": "集成电路学院",
+      "old_homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+      "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/wangxinbing.html",
+      "identity_url": "https://icisee.sjtu.edu.cn/jiaoshiml.html"
+    }
+  ]
+}

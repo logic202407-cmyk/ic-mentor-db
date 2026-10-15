@@ -1,0 +1,1234 @@
+{
+  "date": "2026-10-14",
+  "scope": "699 official-directory and pilot profiles; excludes other legacy profiles",
+  "total": 699,
+  "before": {
+    "readable": 616,
+    "profiles": {
+      "papers": 410,
+      "relations": 34,
+      "recruitment": 21,
+      "admission_notices": 332
+    },
+    "records": {
+      "papers": 3800,
+      "relations": 51,
+      "recruitment": 23,
+      "admission_notices": 1561
+    }
+  },
+  "after": {
+    "readable": 699,
+    "profiles": {
+      "papers": 581,
+      "relations": 57,
+      "recruitment": 161,
+      "admission_notices": 438
+    },
+    "records": {
+      "papers": 5456,
+      "relations": 113,
+      "recruitment": 248,
+      "admission_notices": 1799
+    }
+  },
+  "previously_unreadable": [
+    {
+      "id": "pilot-40d36030eb5264c8c3e9",
+      "name": "李威",
+      "institution": "中国农业科学院",
+      "counts": {
+        "papers": 5,
+        "relations": 0,
+        "recruitment": 0,
+        "admission_notices": 0
+      },
+      "paper_sources": [
+        "https://cri.caas.cn/yjsjy/dsjs/bssds/20a345475bab4cc289ee0ab0fe377b6d.htm"
+      ]
+    },
+    {
+      "id": "official-d702325da08e9db12b68",
+      "name": "俞书宏",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 13,
+        "relations": 0,
+        "recruitment": 2,
+        "admission_notices": 2
+      },
+      "paper_sources": [
+        "http://faculty.ustc.edu.cn/yushuhong/zh_CN/lwcg/245164/list/index.htm",
+        "http://faculty.ustc.edu.cn/yushuhong/zh_CN/zhym/245162/list/index.htm"
+      ]
+    },
+    {
+      "id": "official-5a0e3e4e63318deb7ae4",
+      "name": "徐小龙",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 10,
+        "relations": 0,
+        "recruitment": 0,
+        "admission_notices": 2
+      },
+      "paper_sources": [
+        "https://chem.ustc.edu.cn/2012/1029/c2470a17126/page.htm"
+      ]
+    },
+    {
+      "id": "official-8ed55811d068eb330de6",
+      "name": "顾振华",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 15,
+        "relations": 0,
+        "recruitment": 1,
+        "admission_notices": 2
+      },
+      "paper_sources": [
+        "http://faculty.ustc.edu.cn/guzhenhua/zh_CN/lwcg/48396/list/index.htm",
+        "http://faculty.ustc.edu.cn/guzhenhua/zh_CN/zhym/48394/list/index.htm"
+      ]
+    },
+    {
+      "id": "official-08f5a0cd1efb04998799",
+      "name": "韩志勇",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 1,
+        "relations": 0,
+        "recruitment": 0,
+        "admission_notices": 2
+      },
+      "paper_sources": [
+        "https://just.ustc.edu.cn/cn/article/id/180"
+      ]
+    },
+    {
+      "id": "official-b1a7160376cca4f185da",
+      "name": "罗时玮",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 5,
+        "relations": 0,
+        "recruitment": 0,
+        "admission_notices": 7
+      },
+      "paper_sources": [
+        "https://www.hfnl.ustc.edu.cn/2022/0905/c36714a705458/page.htm"
+      ]
+    },
+    {
+      "id": "official-6f68391b6f3c9e022345",
+      "name": "江万权",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 7,
+        "relations": 0,
+        "recruitment": 0,
+        "admission_notices": 2
+      },
+      "paper_sources": [
+        "https://chem.ustc.edu.cn/2012/1023/c2470a17180/page.htm"
+      ]
+    },
+    {
+      "id": "official-fae2e57875cd02d01291",
+      "name": "薄立军",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 15,
+        "relations": 1,
+        "recruitment": 1,
+        "admission_notices": 0
+      },
+      "paper_sources": [
+        "http://faculty.ustc.edu.cn/bolijun/zh_CN/lwcg/276012/list/index.htm",
+        "http://faculty.ustc.edu.cn/bolijun/zh_CN/zhym/276010/list/index.htm",
+        "http://staff.ustc.edu.cn/~lijunbo/"
+      ]
+    },
+    {
+      "id": "official-185c13306db09df561f7",
+      "name": "曹培根",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 1,
+        "relations": 0,
+        "recruitment": 1,
+        "admission_notices": 0
+      },
+      "paper_sources": [
+        "https://arxiv.org/abs/2602.07929"
+      ]
+    },
+    {
+      "id": "official-45c12c023b43e68d677e",
+      "name": "陈仁杰",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 10,
+        "relations": 0,
+        "recruitment": 1,
+        "admission_notices": 0
+      },
+      "paper_sources": [
+        "http://faculty.ustc.edu.cn/chenrenjie/zh_CN/lwcg/30252/list/index.htm"
+      ]
+    },
+    {
+      "id": "official-9749bbe207a29dfbc2e8",
+      "name": "陈士祥",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 12,
+        "relations": 1,
+        "recruitment": 1,
+        "admission_notices": 0
+      },
+      "paper_sources": [
+        "https://chenshixiang.github.io/Publications.html"
+      ]
+    },
+    {
+      "id": "official-5e0a884acbe845d4aab5",
+      "name": "陈小伍",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 15,
+        "relations": 0,
+        "recruitment": 1,
+        "admission_notices": 0
+      },
+      "paper_sources": [
+        "http://faculty.ustc.edu.cn/chenxiaowu/zh_CN/zhym/244106/list/index.htm",
+        "http://home.ustc.edu.cn/~xwchen/publication.htm"
+      ]
+    },
+    {
+      "id": "official-a370fb5c823aff23c3a5",
+      "name": "邓建松",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 6,
+        "relations": 0,
+        "recruitment": 1,
+        "admission_notices": 0
+      },
+      "paper_sources": [
+        "http://dslx.ustc.edu.cn/?menu=expert_paper_detail&expertid=859"
+      ]
+    },
+    {
+      "id": "official-863888096cf2b1368954",
+      "name": "李平",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 3,
+        "relations": 0,
+        "recruitment": 0,
+        "admission_notices": 0
+      },
+      "paper_sources": [
+        "http://faculty.ustc.edu.cn/liping12345/zh_CN/zhym/254154/list/index.htm"
+      ]
+    },
+    {
+      "id": "official-b6483aec4ed3fd038e65",
+      "name": "李新",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 15,
+        "relations": 0,
+        "recruitment": 1,
+        "admission_notices": 0
+      },
+      "paper_sources": [
+        "http://faculty.ustc.edu.cn/lixustc/zh_CN/lwcg/142828/list/index.htm",
+        "http://staff.ustc.edu.cn/~lixustc/Selected Publications.html"
+      ]
+    },
+    {
+      "id": "official-3cc1e1b80d4b2206c094",
+      "name": "李皓昭",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "recruitment": 1,
+        "admission_notices": 0
+      },
+      "paper_sources": [
+        "http://staff.ustc.edu.cn/~hzli/"
+      ]
+    },
+    {
+      "id": "official-efa66d9ae1e28ceb18c3",
+      "name": "李嘉禹",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 15,
+        "relations": 0,
+        "recruitment": 1,
+        "admission_notices": 0
+      },
+      "paper_sources": [
+        "http://staff.ustc.edu.cn/~jiayuli/",
+        "http://staff.ustc.edu.cn/~jiayuli/Publications.html"
+      ]
+    },
+    {
+      "id": "official-91cee770578b4f0beea8",
+      "name": "廖羽晨",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 15,
+        "relations": 2,
+        "recruitment": 1,
+        "admission_notices": 0
+      },
+      "paper_sources": [
+        "http://faculty.ustc.edu.cn/liaoyuchen/zh_CN/zdylm/1014141/list/index.htm",
+        "https://ycl95.github.io/YuchenLiao/"
+      ]
+    },
+    {
+      "id": "official-30f2bbc0595b8569e7ec",
+      "name": "刘世平",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 12,
+        "relations": 3,
+        "recruitment": 1,
+        "admission_notices": 0
+      },
+      "paper_sources": [
+        "http://staff.ustc.edu.cn/~spliu/PreprintP.html"
+      ]
+    },
+    {
+      "id": "official-0cd49fcda6f994844de2",
+      "name": "刘西之",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "recruitment": 1,
+        "admission_notices": 0
+      },
+      "paper_sources": [
+        "https://xliu2022.github.io/"
+      ]
+    },
+    {
+      "id": "official-52f91cb1f793968566de",
+      "name": "罗宇杰",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 4,
+        "relations": 2,
+        "recruitment": 0,
+        "admission_notices": 0
+      },
+      "paper_sources": [
+        "https://yujieluo96.github.io/"
+      ]
+    },
+    {
+      "id": "official-e0bbc767a1eae04a44aa",
+      "name": "麻希南",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "recruitment": 1,
+        "admission_notices": 0
+      },
+      "paper_sources": [
+        "http://staff.ustc.edu.cn/~xinan/Publications_en.html"
+      ]
+    },
+    {
+      "id": "official-1b2bf5652cf02bedb5b4",
+      "name": "马杰",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 15,
+        "relations": 1,
+        "recruitment": 1,
+        "admission_notices": 0
+      },
+      "paper_sources": [
+        "http://faculty.ustc.edu.cn/majie/zh_CN/lwcg/86508/list/index.htm",
+        "http://faculty.ustc.edu.cn/majie/zh_CN/zhym/86506/list/index.htm"
+      ]
+    },
+    {
+      "id": "official-6c9045e5218157e559ad",
+      "name": "邵松",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "recruitment": 1,
+        "admission_notices": 0
+      },
+      "paper_sources": [
+        "http://faculty.ustc.edu.cn/shaosong/zh_CN/zdylm/1031780/list/index.htm"
+      ]
+    },
+    {
+      "id": "official-d6e49ae348f794e1b479",
+      "name": "沈舜麟",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 13,
+        "relations": 1,
+        "recruitment": 1,
+        "admission_notices": 0
+      },
+      "paper_sources": [
+        "https://shunlinshen.github.io/publications/",
+        "https://www.lmam.pku.edu.cn/docs/20241220085711231552.pdf"
+      ]
+    },
+    {
+      "id": "official-c9d8541d11974dd69fb5",
+      "name": "盛茂",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 10,
+        "relations": 0,
+        "recruitment": 1,
+        "admission_notices": 0
+      },
+      "paper_sources": [
+        "http://faculty.ustc.edu.cn/shengmao/zh_CN/lwcg/262924/list/index.htm",
+        "http://faculty.ustc.edu.cn/shengmao/zh_CN/zhym/262922/list/index.htm"
+      ]
+    },
+    {
+      "id": "official-9e47457c908ef217b296",
+      "name": "孙雯",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 9,
+        "relations": 0,
+        "recruitment": 1,
+        "admission_notices": 0
+      },
+      "paper_sources": [
+        "http://faculty.ustc.edu.cn/sunwen/zh_CN/zdylm/936598/list/index.htm"
+      ]
+    },
+    {
+      "id": "official-4c0ed469b8a90e4a0daa",
+      "name": "孙凯文",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 1,
+        "relations": 1,
+        "recruitment": 1,
+        "admission_notices": 5
+      },
+      "paper_sources": [
+        "https://www.math.sissa.it/users/kaiwen-sun"
+      ]
+    },
+    {
+      "id": "official-792916edce25efb2ae53",
+      "name": "王兵",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 9,
+        "relations": 0,
+        "recruitment": 1,
+        "admission_notices": 0
+      },
+      "paper_sources": [
+        "http://faculty.ustc.edu.cn/wangbing/zh_CN/lwcg/24684/list/index.htm",
+        "http://faculty.ustc.edu.cn/wangbing/zh_CN/zhym/24682/list/index.htm"
+      ]
+    },
+    {
+      "id": "official-6468ef7ba18ba103716e",
+      "name": "王毅",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 15,
+        "relations": 0,
+        "recruitment": 3,
+        "admission_notices": 0
+      },
+      "paper_sources": [
+        "http://faculty.ustc.edu.cn/wangyi/zh_CN/index.htm",
+        "http://staff.ustc.edu.cn/~wangyi/publications.htm"
+      ]
+    },
+    {
+      "id": "official-24ff6087a6e72c83ab99",
+      "name": "王作勤",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 3,
+        "relations": 0,
+        "recruitment": 1,
+        "admission_notices": 0
+      },
+      "paper_sources": [
+        "http://faculty.ustc.edu.cn/wangzuoqin/zh_CN/index.htm",
+        "http://staff.ustc.edu.cn/~wangzuoq/"
+      ]
+    },
+    {
+      "id": "official-1c35c7c8f4001de697c0",
+      "name": "吴志翔",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 3,
+        "relations": 1,
+        "recruitment": 0,
+        "admission_notices": 0
+      },
+      "paper_sources": [
+        "https://wzxmath.github.io/"
+      ]
+    },
+    {
+      "id": "official-e278d3fbcc778ead6af3",
+      "name": "熊涛",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 10,
+        "relations": 0,
+        "recruitment": 1,
+        "admission_notices": 0
+      },
+      "paper_sources": [
+        "https://faculty.ustc.edu.cn/xiongtao/zh_CN/zdylm/938098/list/index.htm"
+      ]
+    },
+    {
+      "id": "official-ddeef5d95d41d223edf0",
+      "name": "徐岩",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 4,
+        "relations": 1,
+        "recruitment": 1,
+        "admission_notices": 0
+      },
+      "paper_sources": [
+        "http://faculty.ustc.edu.cn/yxu/zh_CN/index.htm"
+      ]
+    },
+    {
+      "id": "official-09cd0e6d1fe4092df588",
+      "name": "杨迪",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 6,
+        "relations": 0,
+        "recruitment": 2,
+        "admission_notices": 0
+      },
+      "paper_sources": [
+        "http://faculty.ustc.edu.cn/yangdi/zh_CN/lwcg/68300/list/index.htm",
+        "http://faculty.ustc.edu.cn/yangdi/zh_CN/zhym/68298/list/index.htm"
+      ]
+    },
+    {
+      "id": "official-6137c42e1dc58eda7680",
+      "name": "杨周旺",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 15,
+        "relations": 0,
+        "recruitment": 3,
+        "admission_notices": 0
+      },
+      "paper_sources": [
+        "http://faculty.ustc.edu.cn/yangzhouwang/zh_CN/lwcg/35148/list/index.htm",
+        "http://faculty.ustc.edu.cn/yangzhouwang/zh_CN/zhym/35146/list/index.htm",
+        "http://staff.ustc.edu.cn/~yangzw/"
+      ]
+    },
+    {
+      "id": "official-f23012fa141157e8985c",
+      "name": "叶向东",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 15,
+        "relations": 1,
+        "recruitment": 1,
+        "admission_notices": 0
+      },
+      "paper_sources": [
+        "http://faculty.ustc.edu.cn/yexiangdong/zh_CN/lwcg/182380/list/index.htm",
+        "http://faculty.ustc.edu.cn/yexiangdong/zh_CN/zhym/182378/list/index.htm",
+        "http://staff.ustc.edu.cn/~yexd/",
+        "http://staff.ustc.edu.cn/~yexd/Publications.html"
+      ]
+    },
+    {
+      "id": "official-9e861aa2a21f8509d39c",
+      "name": "殷峥",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 1,
+        "relations": 0,
+        "recruitment": 1,
+        "admission_notices": 0
+      },
+      "paper_sources": [
+        "https://arxiv.org/abs/hep-th/0601160"
+      ]
+    },
+    {
+      "id": "official-cf5e472caa220fd25fd9",
+      "name": "张先得",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 15,
+        "relations": 1,
+        "recruitment": 2,
+        "admission_notices": 0
+      },
+      "paper_sources": [
+        "http://faculty.ustc.edu.cn/zhangxiande/zh_CN/lwcg/126476/list/index.htm",
+        "http://faculty.ustc.edu.cn/zhangxiande/zh_CN/zhym/126474/list/index.htm",
+        "http://staff.ustc.edu.cn/~drzhangx/"
+      ]
+    },
+    {
+      "id": "official-c9536e10a719da3b14a5",
+      "name": "赵立璐",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "recruitment": 1,
+        "admission_notices": 0
+      },
+      "paper_sources": [
+        "http://www.prime.sdu.edu.cn/info/1023/1578.htm"
+      ]
+    },
+    {
+      "id": "official-74bc3ade67ad32266a58",
+      "name": "傅孝明",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 15,
+        "relations": 0,
+        "recruitment": 1,
+        "admission_notices": 0
+      },
+      "paper_sources": [
+        "http://staff.ustc.edu.cn/~fuxm/",
+        "http://staff.ustc.edu.cn/~fuxm/publications/"
+      ]
+    },
+    {
+      "id": "official-a9cf7726be514e615d34",
+      "name": "黄腾",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 1,
+        "relations": 0,
+        "recruitment": 0,
+        "admission_notices": 0
+      },
+      "paper_sources": [
+        "https://just.ustc.edu.cn/article/pdf/preview/JUSTC-2023-0136.pdf"
+      ]
+    },
+    {
+      "id": "official-7a7a39677d7ab2a644a4",
+      "name": "兰小红",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 2,
+        "relations": 0,
+        "recruitment": 0,
+        "admission_notices": 0
+      },
+      "paper_sources": [
+        "http://faculty.ustc.edu.cn/lanxiaohong/zh_CN/lwcg/50380/list/index.htm",
+        "http://faculty.ustc.edu.cn/lanxiaohong/zh_CN/zhym/50378/list/index.htm"
+      ]
+    },
+    {
+      "id": "official-c387de03f215d39b1cf6",
+      "name": "宋百林",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 1,
+        "relations": 0,
+        "recruitment": 1,
+        "admission_notices": 0
+      },
+      "paper_sources": [
+        "http://faculty.ustc.edu.cn/songbailin/zh_CN/zhym/200362/list/index.htm"
+      ]
+    },
+    {
+      "id": "official-2ced709ebe06cd4721b2",
+      "name": "宋艳枝",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 1,
+        "relations": 1,
+        "recruitment": 0,
+        "admission_notices": 0
+      },
+      "paper_sources": [
+        "https://faculty.ustc.edu.cn/dengjiansong/en/lwcg/28371/content/65313.htm"
+      ]
+    },
+    {
+      "id": "official-2f4dff9961d1e9af8e33",
+      "name": "陈仙辉",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 15,
+        "relations": 0,
+        "recruitment": 2,
+        "admission_notices": 1
+      },
+      "paper_sources": [
+        "http://faculty.ustc.edu.cn/chenxianhui1/zh_CN/lwcg/246668/list/index.htm",
+        "http://faculty.ustc.edu.cn/chenxianhui1/zh_CN/zhym/246666/list/index.htm"
+      ]
+    },
+    {
+      "id": "official-ae650946e1d730779717",
+      "name": "丁泽军",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "recruitment": 0,
+        "admission_notices": 6
+      },
+      "paper_sources": [
+        "https://www.hfnl.ustc.edu.cn/2022/0905/c36714a705478/page.htm"
+      ]
+    },
+    {
+      "id": "official-990a4d612b11dc95fde4",
+      "name": "段昌奎",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 8,
+        "relations": 0,
+        "recruitment": 2,
+        "admission_notices": 1
+      },
+      "paper_sources": [
+        "http://faculty.ustc.edu.cn/ckduan/zh_CN/lwcg/113388/list/index.htm",
+        "http://faculty.ustc.edu.cn/ckduan/zh_CN/zhym/113386/list/index.htm"
+      ]
+    },
+    {
+      "id": "official-a36d602c0204764b60cd",
+      "name": "郭国平",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 9,
+        "relations": 0,
+        "recruitment": 0,
+        "admission_notices": 1
+      },
+      "paper_sources": [
+        "https://sz.ustc.edu.cn/kxyj_show/62.html"
+      ]
+    },
+    {
+      "id": "official-0413bfcba2b92e0d00e8",
+      "name": "何俊峰",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 9,
+        "relations": 0,
+        "recruitment": 1,
+        "admission_notices": 6
+      },
+      "paper_sources": [
+        "https://www.hfnl.ustc.edu.cn/2022/0905/c36713a705436/page.htm"
+      ]
+    },
+    {
+      "id": "official-512e47bc9b0e2768dd1b",
+      "name": "林子敬",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 15,
+        "relations": 0,
+        "recruitment": 0,
+        "admission_notices": 1
+      },
+      "paper_sources": [
+        "http://faculty.ustc.edu.cn/linzijing/zh_CN/lwcg/245484/list/index.htm",
+        "http://faculty.ustc.edu.cn/linzijing/zh_CN/zhym/245482/list/index.htm"
+      ]
+    },
+    {
+      "id": "official-909ce980efbc5e16c4f1",
+      "name": "牛谦",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 1,
+        "relations": 0,
+        "recruitment": 0,
+        "admission_notices": 6
+      },
+      "paper_sources": [
+        "https://djena.engineering.cornell.edu/hws/rmp10_niu_berryphase.pdf"
+      ]
+    },
+    {
+      "id": "official-71957e9128b75743ead1",
+      "name": "潘必才",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 15,
+        "relations": 0,
+        "recruitment": 0,
+        "admission_notices": 1
+      },
+      "paper_sources": [
+        "http://faculty.ustc.edu.cn/panbicai/zh_CN/lwcg/119564/list/index.htm",
+        "http://faculty.ustc.edu.cn/panbicai/zh_CN/zhym/119562/list/index.htm"
+      ]
+    },
+    {
+      "id": "official-96f0e312a784bbe48e51",
+      "name": "乔振华",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 10,
+        "relations": 0,
+        "recruitment": 0,
+        "admission_notices": 1
+      },
+      "paper_sources": [
+        "http://faculty.ustc.edu.cn/qiaozhenhua/zh_CN/lwcg/125900/list/index.htm"
+      ]
+    },
+    {
+      "id": "official-6e4d19bbc8fc6062b598",
+      "name": "秦胜勇",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 10,
+        "relations": 0,
+        "recruitment": 1,
+        "admission_notices": 1
+      },
+      "paper_sources": [
+        "http://faculty.ustc.edu.cn/qinshengyong/zh_CN/lwcg/122220/list/index.htm"
+      ]
+    },
+    {
+      "id": "official-98ac7993b119ea3f4965",
+      "name": "孙学峰",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 9,
+        "relations": 0,
+        "recruitment": 0,
+        "admission_notices": 1
+      },
+      "paper_sources": [
+        "https://phys.ustc.edu.cn/2019/0125/c17732a372024/pagem.htm"
+      ]
+    },
+    {
+      "id": "official-8d33aa89180175ea7eae",
+      "name": "童华",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 10,
+        "relations": 0,
+        "recruitment": 2,
+        "admission_notices": 1
+      },
+      "paper_sources": [
+        "https://order.ustc.edu.cn/25478/list.htm"
+      ]
+    },
+    {
+      "id": "official-d564bd692a3f614c1461",
+      "name": "陶靖",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 15,
+        "relations": 0,
+        "recruitment": 1,
+        "admission_notices": 1
+      },
+      "paper_sources": [
+        "http://faculty.ustc.edu.cn/taojing/zh_CN/lwcg/395380/list/index.htm",
+        "http://faculty.ustc.edu.cn/taojing/zh_CN/zhym/395378/list/index.htm"
+      ]
+    },
+    {
+      "id": "official-90c725135f6b02625345",
+      "name": "王冠中",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 4,
+        "relations": 0,
+        "recruitment": 0,
+        "admission_notices": 1
+      },
+      "paper_sources": [
+        "http://faculty.ustc.edu.cn/wangguanzhong/zh_CN/zhym/254826/list/index.htm"
+      ]
+    },
+    {
+      "id": "official-4b0065fe989b9bee47f3",
+      "name": "王晓平",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 10,
+        "relations": 0,
+        "recruitment": 1,
+        "admission_notices": 1
+      },
+      "paper_sources": [
+        "http://faculty.ustc.edu.cn/wangxiaoping/zh_CN/lwcg/183468/list/index.htm",
+        "http://faculty.ustc.edu.cn/wangxiaoping/zh_CN/zhym/183466/list/index.htm"
+      ]
+    },
+    {
+      "id": "official-d1e9361d0666a2f630ab",
+      "name": "王震宇",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "recruitment": 1,
+        "admission_notices": 1
+      },
+      "paper_sources": [
+        "https://iqm.ustc.edu.cn/Publication/list.htm"
+      ]
+    },
+    {
+      "id": "official-948e651ca96b18b0addf",
+      "name": "吴明卫",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 10,
+        "relations": 0,
+        "recruitment": 0,
+        "admission_notices": 1
+      },
+      "paper_sources": [
+        "http://faculty.ustc.edu.cn/wumingwei/zh_CN/lwcg/178060/list/index.htm",
+        "http://faculty.ustc.edu.cn/wumingwei/zh_CN/zhym/178058/list/index.htm"
+      ]
+    },
+    {
+      "id": "official-9adabc64ba49650e3761",
+      "name": "许小亮",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "recruitment": 0,
+        "admission_notices": 1
+      },
+      "paper_sources": [
+        "https://www.hanspub.org/journal/detailedinforofeditorialboard?personid=16070"
+      ]
+    },
+    {
+      "id": "official-bd14ccb005de7ac39f4f",
+      "name": "肖正国",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 10,
+        "relations": 0,
+        "recruitment": 1,
+        "admission_notices": 6
+      },
+      "paper_sources": [
+        "https://www.hfnl.ustc.edu.cn/2022/0905/c36718a705643/page.htm"
+      ]
+    },
+    {
+      "id": "official-4e1a7c4fde8fa95ece20",
+      "name": "应剑俊",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 10,
+        "relations": 0,
+        "recruitment": 1,
+        "admission_notices": 6
+      },
+      "paper_sources": [
+        "https://www.hfnl.ustc.edu.cn/2026/0512/c36713a738140/page.htm"
+      ]
+    },
+    {
+      "id": "official-198e2066b183b4210cbb",
+      "name": "袁军华",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "recruitment": 2,
+        "admission_notices": 1
+      },
+      "paper_sources": [
+        "http://faculty.ustc.edu.cn/yuanjunhua/zh_CN/zdylm/999694/list/index.htm"
+      ]
+    },
+    {
+      "id": "official-7b433a53e9049ea9f4b6",
+      "name": "尹民",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 2,
+        "relations": 0,
+        "recruitment": 0,
+        "admission_notices": 1
+      },
+      "paper_sources": [
+        "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4867014",
+        "https://pubs.rsc.org/de-at/content/articlelanding/2024/dt/d4dt01480d"
+      ]
+    },
+    {
+      "id": "official-bfa677cbaa4e761e493d",
+      "name": "曾长淦",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 1,
+        "relations": 0,
+        "recruitment": 2,
+        "admission_notices": 1
+      },
+      "paper_sources": [
+        "https://ldp.ustc.edu.cn/PUBLICATIONS/list.htm"
+      ]
+    },
+    {
+      "id": "official-a0fb155e7efa104ef3f1",
+      "name": "赵瑾",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 8,
+        "relations": 0,
+        "recruitment": 1,
+        "admission_notices": 6
+      },
+      "paper_sources": [
+        "https://www.hfnl.ustc.edu.cn/2022/0905/c36714a705481/page.htm"
+      ]
+    },
+    {
+      "id": "official-719c54cfd14fd77ab89b",
+      "name": "朱弘",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 15,
+        "relations": 0,
+        "recruitment": 0,
+        "admission_notices": 1
+      },
+      "paper_sources": [
+        "https://faculty.ustc.edu.cn/zhuhong1/zh_CN/lwcg/250860/list/index.htm",
+        "https://faculty.ustc.edu.cn/zhuhong1/zh_CN/zhym/250858/list/index.htm"
+      ]
+    },
+    {
+      "id": "official-ce96732819a8e6b93eea",
+      "name": "朱文光",
+      "institution": "中国科学技术大学",
+      "counts": {
+        "papers": 10,
+        "relations": 0,
+        "recruitment": 0,
+        "admission_notices": 1
+      },
+      "paper_sources": [
+        "https://faculty.ustc.edu.cn/zhuwenguang/zh_CN/lwcg/89100/list/index.htm",
+        "https://faculty.ustc.edu.cn/zhuwenguang/zh_CN/zhym/89098/list/index.htm"
+      ]
+    },
+    {
+      "id": "official-c16d9ff467991f67309c",
+      "name": "丁帆",
+      "institution": "北京大学",
+      "counts": {
+        "papers": 5,
+        "relations": 0,
+        "recruitment": 0,
+        "admission_notices": 0
+      },
+      "paper_sources": [
+        "https://math.pku.edu.cn/jsdw/js_20180628175159671361/d_20180628175159671361/69897.htm"
+      ]
+    },
+    {
+      "id": "official-081740bd29bb7ec8fdaa",
+      "name": "柳彬",
+      "institution": "北京大学",
+      "counts": {
+        "papers": 5,
+        "relations": 0,
+        "recruitment": 0,
+        "admission_notices": 0
+      },
+      "paper_sources": [
+        "https://math.pku.edu.cn/jsdw/js_20180628175159671361/l_20180628175159671361/69945.htm"
+      ]
+    },
+    {
+      "id": "official-75ba5be178ae2435f5bf",
+      "name": "束琳",
+      "institution": "北京大学",
+      "counts": {
+        "papers": 1,
+        "relations": 0,
+        "recruitment": 0,
+        "admission_notices": 0
+      },
+      "paper_sources": [
+        "https://www.maths.ox.ac.uk/members/library/new-books-2023/february-2023"
+      ]
+    },
+    {
+      "id": "official-879e1dd470c9523eab69",
+      "name": "李简",
+      "institution": "北京大学",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "recruitment": 0,
+        "admission_notices": 5
+      },
+      "paper_sources": [
+        "https://chinese.pku.edu.cn/szdw/zzjs/0bcd8b0b7f4b45c1954fb1fa44e4b572.htm"
+      ]
+    },
+    {
+      "id": "official-16da2bd8505adc4c9de8",
+      "name": "孙琳",
+      "institution": "北京师范大学",
+      "counts": {
+        "papers": 2,
+        "relations": 0,
+        "recruitment": 0,
+        "admission_notices": 5
+      },
+      "paper_sources": [
+        "https://history.bnu.edu.cn/szdw/07cdd7aecba145c9b3a8317961950020.htm"
+      ]
+    },
+    {
+      "id": "official-8d196ce6689aac8fc7cf",
+      "name": "湛晓白",
+      "institution": "北京师范大学",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "recruitment": 0,
+        "admission_notices": 5
+      },
+      "paper_sources": [
+        "https://history.bnu.edu.cn/szdw/6531250ef8fe45d1b5e05fb1655010ae.htm"
+      ]
+    },
+    {
+      "id": "official-5a2e7c4db51daff1bf2b",
+      "name": "陈其泰",
+      "institution": "北京师范大学",
+      "counts": {
+        "papers": 3,
+        "relations": 0,
+        "recruitment": 0,
+        "admission_notices": 5
+      },
+      "paper_sources": [
+        "https://history.bnu.edu.cn/szdw/692abc7c449e43d193fc78e5b060a32d.htm"
+      ]
+    },
+    {
+      "id": "official-da0430f135e94796b304",
+      "name": "刘涛",
+      "institution": "华东理工大学",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "recruitment": 0,
+        "admission_notices": 5
+      },
+      "paper_sources": [
+        "https://hgxy.ecust.edu.cn/_s24/2016/0419/c1270a9666/page.psp"
+      ]
+    },
+    {
+      "id": "official-2ccaf682a67210dba067",
+      "name": "袁佩青",
+      "institution": "华东理工大学",
+      "counts": {
+        "papers": 12,
+        "relations": 0,
+        "recruitment": 0,
+        "admission_notices": 5
+      },
+      "paper_sources": [
+        "https://hgxy.ecust.edu.cn/_s24/2016/0419/c1270a9688/page.psp"
+      ]
+    },
+    {
+      "id": "official-c5de93fa988bfa9333e9",
+      "name": "施尧",
+      "institution": "华东理工大学",
+      "counts": {
+        "papers": 12,
+        "relations": 3,
+        "recruitment": 0,
+        "admission_notices": 5
+      },
+      "paper_sources": [
+        "https://hgxy.ecust.edu.cn/2026/0908/c1270a193183/page.htm"
+      ]
+    },
+    {
+      "id": "official-ed65550f30f8bdac320d",
+      "name": "杨虎",
+      "institution": "华东理工大学",
+      "counts": {
+        "papers": 5,
+        "relations": 0,
+        "recruitment": 0,
+        "admission_notices": 5
+      },
+      "paper_sources": [
+        "https://hgxy.ecust.edu.cn/_s24/2016/0419/c1270a9610/page.psp"
+      ]
+    },
+    {
+      "id": "official-f0b5c13f03b14c052d61",
+      "name": "王霞",
+      "institution": "华东师范大学",
+      "counts": {
+        "papers": 1,
+        "relations": 0,
+        "recruitment": 0,
+        "admission_notices": 0
+      },
+      "paper_sources": [
+        "https://qks.sufe.edu.cn/J/CJYJ/Article/Details/A160824000943/CN"
+      ]
+    }
+  ],
+  "note": "Paper counts include books, theses and preprints, not a deduplicated publication total. Admissions listings do not indicate remaining vacancies. Lineage requires explicit evidence."
+}

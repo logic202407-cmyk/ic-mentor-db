@@ -28,6 +28,7 @@ data/processed/shortlist_final.*
 *.pyc
 __pycache__/
 .venv/
+.workbench-data/
 node_modules/
 Thumbs.db
 desktop.ini

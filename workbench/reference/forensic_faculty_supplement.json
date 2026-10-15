@@ -1,0 +1,145 @@
+{
+  "profiles": [
+    {
+      "name": "王小广",
+      "institution": "中山大学",
+      "department": "中山医学院·法医学系",
+      "discipline": "法医学",
+      "first_level_discipline": "1012 法医学",
+      "direction_group": "法医精神病学",
+      "interests": "法医精神病学",
+      "homepage": "https://zssom.sysu.edu.cn/teacher/WangXiaoguang",
+      "classification_basis": "按公开院系名录和研究领域归入学科导航；不代替招生专业认定",
+      "discipline_assignments": [
+        {
+          "first_level_discipline": "1012 法医学",
+          "subject": "101200 法医学",
+          "direction": "法医精神病学",
+          "year": null,
+          "degree_level": "",
+          "url": "https://zssom.sysu.edu.cn/graduate/faculty",
+          "record_kind": "faculty_directory",
+          "source_kind": "学院在职教师名录",
+          "classification_basis": "按公开院系名录和研究领域归入学科导航；不代替招生专业认定",
+          "note": "按院系与研究领域归入学科导航；导师资格、招生专业与名额以当年招生公告为准。"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://zssom.sysu.edu.cn/graduate/faculty",
+          "title": "中山大学 · 学院在职教师名录",
+          "claim": "导师名录列出王小广及学科方向；未注明招生年份。"
+        }
+      ],
+      "collected_at": "2026-10-14"
+    },
+    {
+      "name": "欧雪玲",
+      "institution": "中山大学",
+      "department": "中山医学院·法医学系",
+      "discipline": "法医学",
+      "first_level_discipline": "1012 法医学",
+      "direction_group": "法医物证学",
+      "interests": "法医物证学",
+      "homepage": "https://zssom.sysu.edu.cn/teacher/OuXueling",
+      "classification_basis": "按公开院系名录和研究领域归入学科导航；不代替招生专业认定",
+      "discipline_assignments": [
+        {
+          "first_level_discipline": "1012 法医学",
+          "subject": "101200 法医学",
+          "direction": "法医物证学",
+          "year": null,
+          "degree_level": "",
+          "url": "https://zssom.sysu.edu.cn/graduate/faculty",
+          "record_kind": "faculty_directory",
+          "source_kind": "学院在职教师名录",
+          "classification_basis": "按公开院系名录和研究领域归入学科导航；不代替招生专业认定",
+          "note": "按院系与研究领域归入学科导航；导师资格、招生专业与名额以当年招生公告为准。"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://zssom.sysu.edu.cn/graduate/faculty",
+          "title": "中山大学 · 学院在职教师名录",
+          "claim": "导师名录列出欧雪玲及学科方向；未注明招生年份。"
+        }
+      ],
+      "collected_at": "2026-10-14"
+    },
+    {
+      "name": "赵虎",
+      "institution": "中山大学",
+      "department": "中山医学院·法医学系",
+      "discipline": "法医学",
+      "first_level_discipline": "1012 法医学",
+      "direction_group": "法医精神病学与法医临床学",
+      "interests": "法医精神病学与法医临床学",
+      "homepage": "https://zssom.sysu.edu.cn/teacher/ZhaoHu",
+      "classification_basis": "按公开院系名录和研究领域归入学科导航；不代替招生专业认定",
+      "discipline_assignments": [
+        {
+          "first_level_discipline": "1012 法医学",
+          "subject": "101200 法医学",
+          "direction": "法医精神病学与法医临床学",
+          "year": null,
+          "degree_level": "",
+          "url": "https://zssom.sysu.edu.cn/graduate/faculty",
+          "record_kind": "faculty_directory",
+          "source_kind": "学院在职教师名录",
+          "classification_basis": "按公开院系名录和研究领域归入学科导航；不代替招生专业认定",
+          "note": "按院系与研究领域归入学科导航；导师资格、招生专业与名额以当年招生公告为准。"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://zssom.sysu.edu.cn/graduate/faculty",
+          "title": "中山大学 · 学院在职教师名录",
+          "claim": "导师名录列出赵虎及学科方向；未注明招生年份。"
+        }
+      ],
+      "collected_at": "2026-10-14"
+    },
+    {
+      "name": "时燕薇",
+      "institution": "中山大学",
+      "department": "中山医学院·法医学系",
+      "discipline": "法医学",
+      "first_level_discipline": "1012 法医学",
+      "direction_group": "法医精神病学",
+      "interests": "法医精神病学",
+      "homepage": "https://zssom.sysu.edu.cn/teacher/shiyanwei",
+      "classification_basis": "按公开院系名录和研究领域归入学科导航；不代替招生专业认定",
+      "discipline_assignments": [
+        {
+          "first_level_discipline": "1012 法医学",
+          "subject": "101200 法医学",
+          "direction": "法医精神病学",
+          "year": null,
+          "degree_level": "",
+          "url": "https://zssom.sysu.edu.cn/graduate/faculty",
+          "record_kind": "faculty_directory",
+          "source_kind": "学院在职教师名录",
+          "classification_basis": "按公开院系名录和研究领域归入学科导航；不代替招生专业认定",
+          "note": "按院系与研究领域归入学科导航；导师资格、招生专业与名额以当年招生公告为准。"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://zssom.sysu.edu.cn/graduate/faculty",
+          "title": "中山大学 · 学院在职教师名录",
+          "claim": "导师名录列出时燕薇及学科方向；未注明招生年份。"
+        }
+      ],
+      "collected_at": "2026-10-14"
+    }
+  ],
+  "pages": [
+    {
+      "url": "https://zssom.sysu.edu.cn/graduate/faculty",
+      "collected_at": "2026-10-14"
+    }
+  ],
+  "failures": [],
+  "collected_at": "2026-10-14",
+  "retrieval": "官方页面经网页检索读取并人工核对；直接抓取返回403，未绕过访问限制。"
+}

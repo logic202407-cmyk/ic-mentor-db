@@ -1,0 +1,3387 @@
+{
+  "description": "经原表逐项核对的补充记录，非完整学校名录。",
+  "batches": [
+    {
+      "institution": "吉林大学",
+      "department": "马克思主义学院",
+      "url": "https://marx.jlu.edu.cn/info/1046/9921.htm",
+      "subject": "030700 中共党史党建学",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "中国共产党历史",
+          "names": [
+            "李倩"
+          ],
+          "homepages": {
+            "李倩": "https://marx.jlu.edu.cn/info/1217/8617.htm"
+          }
+        },
+        {
+          "direction": "中国共产党治国理政的历史与经验",
+          "names": [
+            "郭永虎"
+          ],
+          "homepages": {
+            "郭永虎": "https://marx.jlu.edu.cn/info/1217/8619.htm"
+          }
+        }
+      ]
+    },
+    {
+      "institution": "中国社会科学院大学",
+      "department": "法学院",
+      "url": "https://skdzs.ucass.edu.cn/system/_content/download.jsp?owner=1552267061&urltype=news.DownloadAttachUrl&wbfileid=16649796",
+      "subject": "030800 纪检监察学",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "监察法学、国际法学、党的纪律学",
+          "names": [
+            "蒋小红"
+          ],
+          "homepages": {
+            "蒋小红": "https://law.ucass.edu.cn/info/1941/8726.htm"
+          }
+        },
+        {
+          "direction": "监察法学、党内法规、监察制度",
+          "names": [
+            "李忠"
+          ]
+        },
+        {
+          "direction": "廉政学理论、国际廉政学",
+          "names": [
+            "蒋来用"
+          ]
+        },
+        {
+          "direction": "党内法规学、党的纪律学、政党政治学",
+          "names": [
+            "柴宝勇"
+          ]
+        }
+      ],
+      "note": "2026年第二批次博士招生目录。"
+    },
+    {
+      "institution": "中山大学",
+      "department": "中山医学院",
+      "url": "https://zssom.sysu.edu.cn/node/12063",
+      "subject": "101200 法医学",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "不分方向",
+          "names": [
+            "孙宏钰",
+            "叶小菁"
+          ],
+          "homepages": {
+            "孙宏钰": "https://zssom.sysu.edu.cn/node/492",
+            "叶小菁": "https://zssom.sysu.edu.cn/teacher/yexiaojing"
+          }
+        }
+      ],
+      "note": "2026年春季公开招考批次。"
+    },
+    {
+      "institution": "湖北工业大学",
+      "department": "材料与化学工程学院",
+      "url": "https://smce.hbut.edu.cn/info/1137/17791.htm",
+      "subject": "082200 轻工技术与工程",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "制浆造纸工程；天然纤维材料与加工",
+          "names": [
+            "李永熙",
+            "杨海涛",
+            "王鹏",
+            "王磊"
+          ]
+        }
+      ],
+      "note": "2026年第二批硕博连读公告；两个方向共用导师栏，未逐人指定方向。"
+    },
+    {
+      "institution": "江西理工大学",
+      "department": "冶金工程学院",
+      "url": "https://yz.jxust.edu.cn/pdf/fujian1-2026bsml.pdf#page=6",
+      "subject": "080600 冶金工程",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "有色金属冶金",
+          "names": [
+            "徐志峰",
+            "廖春发",
+            "佟志芳",
+            "梁勇",
+            "肖燕飞",
+            "王瑞祥"
+          ]
+        },
+        {
+          "direction": "冶金物理化学",
+          "names": [
+            "赵宝军",
+            "王旭",
+            "范鹤林",
+            "钟晓聪",
+            "姜怀"
+          ]
+        },
+        {
+          "direction": "钢铁冶金",
+          "names": [
+            "朱荣",
+            "余艾冰",
+            "周宗彦",
+            "佟志芳",
+            "鄂殿玉"
+          ]
+        }
+      ]
+    },
+    {
+      "institution": "江西理工大学",
+      "department": "矿业工程学院（原资源与环境工程学院）",
+      "url": "https://yz.jxust.edu.cn/pdf/fujian1-2026bsml.pdf#page=9",
+      "subject": "081900 矿业工程",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "稀土与关键矿产资源开采",
+          "names": [
+            "葛世荣",
+            "王运敏",
+            "赵奎",
+            "兰小机",
+            "丰土根",
+            "王观石"
+          ]
+        },
+        {
+          "direction": "岩石力学与灾害防控",
+          "names": [
+            "杨春和",
+            "王运敏",
+            "赖远明",
+            "赵奎",
+            "丰土根",
+            "兰小机"
+          ]
+        },
+        {
+          "direction": "岩土工程爆破理论与技术",
+          "names": [
+            "王运敏"
+          ]
+        }
+      ]
+    },
+    {
+      "institution": "上海外国语大学",
+      "department": "上海全球治理与区域国别研究院",
+      "url": "https://info.shisu.edu.cn/_upload/article/files/37/70/2bdde421428ca79e1fe378ead491/56f0afc3-2297-42cb-823d-10059a057184.pdf",
+      "subject": "140700 区域国别学",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "区域国别学理论方法",
+          "names": [
+            "杨成"
+          ],
+          "url": "https://info.shisu.edu.cn/_upload/article/files/37/70/2bdde421428ca79e1fe378ead491/56f0afc3-2297-42cb-823d-10059a057184.pdf#page=1",
+          "note": "历史学/世界史、地理学、人类学、外国语言文学专业背景优先"
+        },
+        {
+          "direction": "区域国别学理论方法",
+          "names": [
+            "邢广程"
+          ],
+          "url": "https://info.shisu.edu.cn/_upload/article/files/37/70/2bdde421428ca79e1fe378ead491/56f0afc3-2297-42cb-823d-10059a057184.pdf#page=1",
+          "note": "兼职导师。",
+          "homepages": {
+            "邢广程": "https://saggas.shisu.edu.cn/ArticleDetail/ArticleDetail?ArticleId=a411ea71-f25f-4a4c-aa04-9ebe87152721"
+          }
+        },
+        {
+          "direction": "区域国别学理论方法",
+          "names": [
+            "刘琪"
+          ],
+          "url": "https://info.shisu.edu.cn/_upload/article/files/37/70/2bdde421428ca79e1fe378ead491/56f0afc3-2297-42cb-823d-10059a057184.pdf#page=1",
+          "note": "人类学、民族学、历史学专业背景优先",
+          "homepages": {
+            "刘琪": "https://saggas.shisu.edu.cn/ArticleDetail/ArticleDetail?ArticleId=5d374856-9051-412d-a61d-80b97b2e4a2c"
+          }
+        },
+        {
+          "direction": "区域国别比较研究",
+          "names": [
+            "姜锋"
+          ],
+          "url": "https://info.shisu.edu.cn/_upload/article/files/37/70/2bdde421428ca79e1fe378ead491/56f0afc3-2297-42cb-823d-10059a057184.pdf#page=1",
+          "note": "有相关职业经验者优先"
+        },
+        {
+          "direction": "区域国别比较研究",
+          "names": [
+            "陈鹏"
+          ],
+          "url": "https://info.shisu.edu.cn/_upload/article/files/37/70/2bdde421428ca79e1fe378ead491/56f0afc3-2297-42cb-823d-10059a057184.pdf#page=1",
+          "note": "外语水平优秀者优先"
+        },
+        {
+          "direction": "区域国别比较研究",
+          "names": [
+            "黄靖"
+          ],
+          "url": "https://info.shisu.edu.cn/_upload/article/files/37/70/2bdde421428ca79e1fe378ead491/56f0afc3-2297-42cb-823d-10059a057184.pdf#page=1",
+          "note": "兼职导师。国际政治、美国政治、历史学专业背景优先，有相关职业经历者优先",
+          "homepages": {
+            "黄靖": "https://saggas.shisu.edu.cn/ArticleDetail/ArticleDetail?ArticleId=a2551c10-38fb-42be-aa2b-88892e164f44"
+          }
+        },
+        {
+          "direction": "区域国别比较研究",
+          "names": [
+            "王健"
+          ],
+          "url": "https://info.shisu.edu.cn/_upload/article/files/37/70/2bdde421428ca79e1fe378ead491/56f0afc3-2297-42cb-823d-10059a057184.pdf#page=1",
+          "note": "兼职导师。国际政治、世界经济、历史学专业背景优先"
+        },
+        {
+          "direction": "区域国别比较研究",
+          "names": [
+            "李开盛"
+          ],
+          "url": "https://info.shisu.edu.cn/_upload/article/files/37/70/2bdde421428ca79e1fe378ead491/56f0afc3-2297-42cb-823d-10059a057184.pdf#page=1",
+          "note": "兼职导师。"
+        },
+        {
+          "direction": "区域国别比较研究",
+          "names": [
+            "郑春荣"
+          ],
+          "url": "https://info.shisu.edu.cn/_upload/article/files/37/70/2bdde421428ca79e1fe378ead491/56f0afc3-2297-42cb-823d-10059a057184.pdf#page=1",
+          "note": "兼职导师。"
+        },
+        {
+          "direction": "中外文明交流互鉴",
+          "names": [
+            "朱青生"
+          ],
+          "url": "https://info.shisu.edu.cn/_upload/article/files/37/70/2bdde421428ca79e1fe378ead491/56f0afc3-2297-42cb-823d-10059a057184.pdf#page=1",
+          "note": "兼职导师。外国语言文学专业背景优先",
+          "homepages": {
+            "朱青生": "https://saggas.shisu.edu.cn/ArticleDetail/ArticleDetail?ArticleId=5b0e79a6-c512-42bb-9e98-8c2308740598"
+          }
+        },
+        {
+          "direction": "中外文明交流互鉴",
+          "names": [
+            "颜海英"
+          ],
+          "url": "https://info.shisu.edu.cn/_upload/article/files/37/70/2bdde421428ca79e1fe378ead491/56f0afc3-2297-42cb-823d-10059a057184.pdf#page=1",
+          "note": "兼职导师。外国语言文学、文史、考古专业背景优先",
+          "homepages": {
+            "颜海英": "https://saggas.shisu.edu.cn/ArticleDetail/ArticleDetail?ArticleId=42459bdf-dec6-4f13-aec1-f85d5403c250"
+          }
+        },
+        {
+          "direction": "中外文明交流互鉴",
+          "names": [
+            "郭明"
+          ],
+          "url": "https://info.shisu.edu.cn/_upload/article/files/37/70/2bdde421428ca79e1fe378ead491/56f0afc3-2297-42cb-823d-10059a057184.pdf#page=1",
+          "note": "考古学、历史学背景优先",
+          "homepages": {
+            "郭明": "https://saggas.shisu.edu.cn/ArticleDetail/ArticleDetail?ArticleId=076f0977-5de5-4205-83dd-176f79196951"
+          }
+        },
+        {
+          "direction": "中外文明交流互鉴",
+          "names": [
+            "薛江"
+          ],
+          "url": "https://info.shisu.edu.cn/_upload/article/files/37/70/2bdde421428ca79e1fe378ead491/56f0afc3-2297-42cb-823d-10059a057184.pdf#page=2",
+          "note": "文史、科技考古、文化遗产、外国语言文学专业背景优先",
+          "homepages": {
+            "薛江": "https://saggas.shisu.edu.cn/ArticleDetail/ArticleDetail?ArticleId=ea619142-a8db-4640-bd13-f4770e5a80be"
+          }
+        },
+        {
+          "direction": "中外文明交流互鉴",
+          "names": [
+            "钟志清"
+          ],
+          "url": "https://info.shisu.edu.cn/_upload/article/files/37/70/2bdde421428ca79e1fe378ead491/56f0afc3-2297-42cb-823d-10059a057184.pdf#page=2",
+          "note": "兼职导师。外国语（希伯来语、英语）、犹太学专业背景优先",
+          "homepages": {
+            "钟志清": "https://saggas.shisu.edu.cn/ArticleDetail/ArticleDetail?ArticleId=10ab0ea7-1f61-4039-a384-93fdfaa2195a"
+          }
+        },
+        {
+          "direction": "中外文明交流互鉴",
+          "names": [
+            "王晴佳"
+          ],
+          "url": "https://info.shisu.edu.cn/_upload/article/files/37/70/2bdde421428ca79e1fe378ead491/56f0afc3-2297-42cb-823d-10059a057184.pdf#page=2",
+          "note": "兼职导师。历史学、外语专业背景优先"
+        },
+        {
+          "direction": "全球与区域治理",
+          "names": [
+            "刘洪钟"
+          ],
+          "url": "https://info.shisu.edu.cn/_upload/article/files/37/70/2bdde421428ca79e1fe378ead491/56f0afc3-2297-42cb-823d-10059a057184.pdf#page=2",
+          "note": "仅限非定向就业考生报考（少民骨干除外）",
+          "homepages": {
+            "刘洪钟": "https://saggas.shisu.edu.cn/ArticleDetail/ArticleDetail?ArticleId=3cecb02c-35a0-4f81-9fb8-4f08ec92ad6e"
+          }
+        },
+        {
+          "direction": "全球与区域治理",
+          "names": [
+            "忻华"
+          ],
+          "url": "https://info.shisu.edu.cn/_upload/article/files/37/70/2bdde421428ca79e1fe378ead491/56f0afc3-2297-42cb-823d-10059a057184.pdf#page=2",
+          "note": "",
+          "homepages": {
+            "忻华": "https://saggas.shisu.edu.cn/ArticleDetail/ArticleDetail?ArticleId=c8c16aea-3e06-4841-a48f-db3236892b63"
+          }
+        },
+        {
+          "direction": "全球与区域治理",
+          "names": [
+            "丁纯"
+          ],
+          "url": "https://info.shisu.edu.cn/_upload/article/files/37/70/2bdde421428ca79e1fe378ead491/56f0afc3-2297-42cb-823d-10059a057184.pdf#page=2",
+          "note": "兼职导师。"
+        },
+        {
+          "direction": "中外文明交流互鉴",
+          "names": [
+            "Muhammad Nasim Khan"
+          ],
+          "url": "https://info.shisu.edu.cn/_upload/article/files/37/70/2bdde421428ca79e1fe378ead491/56f0afc3-2297-42cb-823d-10059a057184.pdf#page=1",
+          "note": "具备南亚历史与考古知识，熟悉犍陀罗文明者优先；具备英语应用能力者优先。"
+        },
+        {
+          "direction": "中外文明交流互鉴",
+          "names": [
+            "Andrzej Stefan Niwiński"
+          ],
+          "url": "https://info.shisu.edu.cn/_upload/article/files/37/70/2bdde421428ca79e1fe378ead491/56f0afc3-2297-42cb-823d-10059a057184.pdf#page=1",
+          "note": "兼职导师。仅限非定向就业考生报考（少民骨干除外）；埃及学研究背景优先，掌握法语或德语者优先。"
+        }
+      ]
+    },
+    {
+      "institution": "中国人民公安大学",
+      "department": "院系未列（学校博士生导师名录）",
+      "url": "https://www.ppsuc.edu.cn/szdw/bsyjsds.htm",
+      "subject": "030600 公安学",
+      "year": null,
+      "degree_level": "博士",
+      "record_kind": "faculty_directory",
+      "rows": [
+        {
+          "direction": "犯罪学",
+          "names": [
+            "靳高风",
+            "李春雷",
+            "刘洪广",
+            "刘志宏",
+            "梅建明",
+            "任士英",
+            "汪勇",
+            "王大为",
+            "张纯琍"
+          ],
+          "homepages": {
+            "靳高风": "https://xwb.ppsuc.edu.cn/info/1049/1671.htm",
+            "刘洪广": "https://xwb.ppsuc.edu.cn/info/1049/1663.htm",
+            "刘志宏": "https://xwb.ppsuc.edu.cn/info/1049/1674.htm",
+            "梅建明": "https://xwb.ppsuc.edu.cn/info/1049/1664.htm",
+            "汪勇": "https://xwb.ppsuc.edu.cn/info/1049/1665.htm",
+            "王大为": "https://xwb.ppsuc.edu.cn/info/1049/1662.htm",
+            "张纯琍": "https://xwb.ppsuc.edu.cn/info/1049/1673.htm"
+          }
+        },
+        {
+          "direction": "公安管理学",
+          "names": [
+            "李广仓",
+            "刘颖",
+            "秦立强",
+            "闫天池",
+            "张光",
+            "朱旭东"
+          ],
+          "homepages": {
+            "李广仓": "https://xwb.ppsuc.edu.cn/info/1049/1700.htm",
+            "秦立强": "https://xwb.ppsuc.edu.cn/info/1049/1702.htm",
+            "闫天池": "https://xwb.ppsuc.edu.cn/info/1049/1731.htm",
+            "张光": "https://xwb.ppsuc.edu.cn/info/1049/1703.htm",
+            "朱旭东": "https://xwb.ppsuc.edu.cn/info/1049/1699.htm"
+          }
+        },
+        {
+          "direction": "侦查学",
+          "names": [
+            "毕惜茜",
+            "陈刚",
+            "刘涛",
+            "马振超",
+            "马忠红",
+            "毛欣娟",
+            "彭知辉",
+            "王铼",
+            "杨郁娟",
+            "翟金鹏",
+            "赵桂芬"
+          ],
+          "homepages": {
+            "马振超": "https://xwb.ppsuc.edu.cn/info/1049/1705.htm",
+            "马忠红": "https://xwb.ppsuc.edu.cn/info/1049/1710.htm",
+            "毛欣娟": "https://xwb.ppsuc.edu.cn/info/1049/1704.htm",
+            "彭知辉": "https://xwb.ppsuc.edu.cn/info/1049/1715.htm",
+            "王铼": "https://xwb.ppsuc.edu.cn/info/1049/1714.htm",
+            "杨郁娟": "https://xwb.ppsuc.edu.cn/info/1049/1708.htm",
+            "赵桂芬": "https://xwb.ppsuc.edu.cn/info/1049/1706.htm"
+          }
+        },
+        {
+          "direction": "治安学",
+          "names": [
+            "宫志刚",
+            "陆晶",
+            "王新建",
+            "谢川豫",
+            "张杰",
+            "张小兵"
+          ],
+          "homepages": {
+            "宫志刚": "https://xwb.ppsuc.edu.cn/info/1049/1678.htm",
+            "陆晶": "https://xwb.ppsuc.edu.cn/info/1049/1676.htm",
+            "王新建": "https://xwb.ppsuc.edu.cn/info/1049/1680.htm",
+            "谢川豫": "https://xwb.ppsuc.edu.cn/info/1049/1679.htm",
+            "张杰": "https://xwb.ppsuc.edu.cn/info/1049/1677.htm",
+            "张小兵": "https://xwb.ppsuc.edu.cn/info/1049/1681.htm"
+          }
+        }
+      ]
+    },
+    {
+      "institution": "中国人民公安大学",
+      "department": "院系未列（学校博士生导师名录）",
+      "url": "https://www.ppsuc.edu.cn/szdw/bsyjsds.htm",
+      "subject": "083800 公安技术",
+      "year": null,
+      "degree_level": "博士",
+      "record_kind": "faculty_directory",
+      "rows": [
+        {
+          "direction": "网络空间安全执法技术",
+          "names": [
+            "杜彦辉",
+            "金波",
+            "王斌君"
+          ],
+          "homepages": {
+            "金波": "https://xwb.ppsuc.edu.cn/info/1049/1660.htm",
+            "王斌君": "https://xwb.ppsuc.edu.cn/info/1049/1661.htm"
+          }
+        },
+        {
+          "direction": "安全防范工程",
+          "names": [
+            "卜凡亮",
+            "洪卫军",
+            "霍宏涛",
+            "王蓉"
+          ],
+          "homepages": {
+            "洪卫军": "https://xwb.ppsuc.edu.cn/info/1049/1692.htm",
+            "王蓉": "https://xwb.ppsuc.edu.cn/info/1049/1690.htm"
+          }
+        },
+        {
+          "direction": "交通安全执法技术",
+          "names": [
+            "路峰",
+            "王军利",
+            "王长君"
+          ],
+          "homepages": {
+            "路峰": "https://xwb.ppsuc.edu.cn/info/1049/1717.htm",
+            "王军利": "https://xwb.ppsuc.edu.cn/info/1049/1716.htm",
+            "王长君": "https://xwb.ppsuc.edu.cn/info/1049/1718.htm"
+          }
+        },
+        {
+          "direction": "刑事科学技术",
+          "names": [
+            "刘耀",
+            "罗亚平",
+            "杨瑞琴",
+            "叶健"
+          ],
+          "homepages": {
+            "刘耀": "https://xwb.ppsuc.edu.cn/info/1049/1696.htm",
+            "罗亚平": "https://xwb.ppsuc.edu.cn/info/1049/1695.htm"
+          }
+        }
+      ]
+    },
+    {
+      "institution": "东华大学",
+      "department": "纺织学院",
+      "url": "https://yzbm.dhu.edu.cn/zsml/bszsml/zsmlYjfx/2026/001/082101?ksfs=null",
+      "subject": "082101 纺织工程",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "不区分研究方向",
+          "names": [
+            "曾泳春",
+            "丁彬",
+            "陈南梁",
+            "杜赵群",
+            "高晶",
+            "顾伯洪",
+            "关国平",
+            "郭雷鸣",
+            "胡吉永",
+            "黄晨",
+            "黄莉茜",
+            "季东晓",
+            "蒋金华",
+            "李发学",
+            "李炜",
+            "李晓然",
+            "李鑫",
+            "李召岭",
+            "刘丽芳",
+            "刘柳",
+            "刘书德",
+            "刘万军",
+            "刘晓艳",
+            "刘燕平",
+            "刘一涛",
+            "罗楚养",
+            "毛吉富",
+            "马莹",
+            "权震震",
+            "邵慧奇",
+            "斯阳",
+            "孙宝忠",
+            "孙以泽",
+            "覃小红",
+            "汪军",
+            "王富军",
+            "王黎明",
+            "王妮",
+            "王荣武",
+            "王先锋",
+            "王新厚",
+            "王学利",
+            "吴德群",
+            "夏鑫",
+            "熊佳庆",
+            "徐广标",
+            "许福军",
+            "薛文良",
+            "闫建华",
+            "印霞",
+            "俞建勇",
+            "张斌",
+            "张弘楠",
+            "张坤",
+            "张瑞云",
+            "张世超",
+            "张骁骅",
+            "张雪萍",
+            "赵帆",
+            "赵奕",
+            "钟跃崎"
+          ]
+        }
+      ],
+      "source_sha256": "e1c341df28ff0a60d2af52738954d0926f2f1bcbf527d2891b46f174d7698107"
+    },
+    {
+      "institution": "中国石油大学（北京）",
+      "department": "安全与海洋工程学院",
+      "url": "https://www.cup.edu.cn/safety/rcpy/zsjy/zsdt/ebf8c1259a524d458186647c6b396b17.htm",
+      "subject": "083700 安全科学与工程",
+      "year": null,
+      "degree_level": "硕士",
+      "rows": [
+        {
+          "direction": "安全监测与智能诊断",
+          "names": [
+            "张来斌"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "完整性管理及装备可靠性",
+          "names": [
+            "张来斌"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "过程风险及控制",
+          "names": [
+            "张来斌"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "安全大数据与人工智能",
+          "names": [
+            "张来斌"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "安全保障理论与应急技术",
+          "names": [
+            "张来斌"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "安全监测与智能诊断",
+          "names": [
+            "樊建春"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "完整性管理及装备可靠性",
+          "names": [
+            "樊建春"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "过程风险及控制",
+          "names": [
+            "樊建春"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "安全大数据与人工智能",
+          "names": [
+            "樊建春"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "安全保障理论与应急技术",
+          "names": [
+            "樊建春"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "安全监测与智能诊断",
+          "names": [
+            "董绍华"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "完整性管理及装备可靠性",
+          "names": [
+            "董绍华"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "过程风险及控制",
+          "names": [
+            "董绍华"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "安全大数据与人工智能",
+          "names": [
+            "董绍华"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "安全保障理论与应急技术",
+          "names": [
+            "董绍华"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "安全监测与智能诊断",
+          "names": [
+            "段礼祥"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "安全大数据与人工智能",
+          "names": [
+            "段礼祥"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "安全监测与智能诊断",
+          "names": [
+            "胡瑾秋"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "过程风险及控制",
+          "names": [
+            "胡瑾秋"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "安全大数据与人工智能",
+          "names": [
+            "胡瑾秋"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "完整性管理及装备可靠性",
+          "names": [
+            "李云涛"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "过程风险及控制",
+          "names": [
+            "李云涛"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "安全大数据与人工智能",
+          "names": [
+            "李云涛"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "安全保障理论与应急技术",
+          "names": [
+            "李云涛"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "安全监测与智能诊断",
+          "names": [
+            "梁伟"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "安全大数据与人工智能。",
+          "names": [
+            "梁伟"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "安全监测与智能诊断",
+          "names": [
+            "王金江"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "安全大数据与人工智能",
+          "names": [
+            "王金江"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "完整性管理及装备可靠性",
+          "names": [
+            "武胜男"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "过程风险及控制",
+          "names": [
+            "武胜男"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "安全大数据与人工智能",
+          "names": [
+            "武胜男"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "方向未列",
+          "names": [
+            "杨进"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "安全监测与智能诊断",
+          "names": [
+            "郑文培"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "安全大数据与人工智能",
+          "names": [
+            "郑文培"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "完整性管理及装备可靠性",
+          "names": [
+            "段庆全"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "安全保障理论与应急技术",
+          "names": [
+            "段庆全"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "安全大数据与人工智能",
+          "names": [
+            "段庆全"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "安全监测与智能诊断",
+          "names": [
+            "高富民"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "完整性管理及装备可靠性",
+          "names": [
+            "高富民"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "安全人工智能",
+          "names": [
+            "邱水来"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "安全保障理论与应急技术",
+          "names": [
+            "邱水来"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "完整性管理及装备可靠性",
+          "names": [
+            "帅义"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "安全大数据及人工智能",
+          "names": [
+            "帅义"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "完整性管理及装备可靠性",
+          "names": [
+            "殷启帅"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "安全大数据与人工智能",
+          "names": [
+            "殷启帅"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "过程风险及控制",
+          "names": [
+            "张杰城"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "安全保障理论与应急技术",
+          "names": [
+            "张杰城"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "安全监测与智能诊断",
+          "names": [
+            "赵天奉"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "完整性管理及装备可靠性",
+          "names": [
+            "赵天奉"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "过程风险及控制",
+          "names": [
+            "周涛涛"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "安全大数据与人工智能",
+          "names": [
+            "周涛涛"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "完整性管理及装备可靠性，",
+          "names": [
+            "陈林"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "过程风险及控制",
+          "names": [
+            "陈林"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "完整性管理及装备可靠性",
+          "names": [
+            "吕志阳"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "安全保障理论与应急技术",
+          "names": [
+            "吕志阳"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "安全监测与智能诊断",
+          "names": [
+            "熊毅"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "完整性管理及装备可靠性",
+          "names": [
+            "熊毅"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "安全保障理论与应急技术",
+          "names": [
+            "熊毅"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "安全监测与智能诊断",
+          "names": [
+            "徐晴晴"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "安全大数据与人工智能",
+          "names": [
+            "徐晴晴"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "安全监测与智能诊断",
+          "names": [
+            "安晨"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。"
+        },
+        {
+          "direction": "过程风险及控制",
+          "names": [
+            "安晨"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。"
+        },
+        {
+          "direction": "安全保障理论与应急技术",
+          "names": [
+            "安晨"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。"
+        },
+        {
+          "direction": "安全监测与智能诊断",
+          "names": [
+            "陈绪跃"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。"
+        },
+        {
+          "direction": "装备可靠性与完整性",
+          "names": [
+            "陈绪跃"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。"
+        },
+        {
+          "direction": "安全大数据与人工智能",
+          "names": [
+            "陈绪跃"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。"
+        },
+        {
+          "direction": "安全监测与智能诊断",
+          "names": [
+            "冯永存"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。"
+        },
+        {
+          "direction": "完整性管理及装备可靠性",
+          "names": [
+            "冯永存"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。"
+        },
+        {
+          "direction": "安全大数据与人工智能",
+          "names": [
+            "冯永存"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。"
+        },
+        {
+          "direction": "安全监测与智能诊断",
+          "names": [
+            "王琳琳"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。"
+        },
+        {
+          "direction": "安全监测与智能诊断",
+          "names": [
+            "闫伟"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。"
+        },
+        {
+          "direction": "完整性管理及装备可靠性",
+          "names": [
+            "闫伟"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。"
+        },
+        {
+          "direction": "安全大数据与人工智能",
+          "names": [
+            "闫伟"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。"
+        },
+        {
+          "direction": "安全监测与智能诊断",
+          "names": [
+            "张玉"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。"
+        },
+        {
+          "direction": "完整性管理及装备可靠性",
+          "names": [
+            "张玉"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。"
+        },
+        {
+          "direction": "安全大数据与人工智能",
+          "names": [
+            "张玉"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。"
+        },
+        {
+          "direction": "安全保障理论与应急技术",
+          "names": [
+            "张玉"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。"
+        },
+        {
+          "direction": "安全监测与智能诊断",
+          "names": [
+            "李晓蓉"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。"
+        },
+        {
+          "direction": "完整性管理及装备可靠性",
+          "names": [
+            "李晓蓉"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。"
+        },
+        {
+          "direction": "安全大数据与人工智能",
+          "names": [
+            "李晓蓉"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。"
+        },
+        {
+          "direction": "安全监测与智能诊断",
+          "names": [
+            "孙挺"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。"
+        },
+        {
+          "direction": "安全大数据与人工智能",
+          "names": [
+            "孙挺"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。"
+        },
+        {
+          "direction": "完整性管理及装备可靠性",
+          "names": [
+            "王懿"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。"
+        },
+        {
+          "direction": "安全保障理论与应急技术",
+          "names": [
+            "王懿"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。"
+        },
+        {
+          "direction": "完整性管理及装备可靠性",
+          "names": [
+            "朱霄霄"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。"
+        },
+        {
+          "direction": "安全保障理论与应急技术",
+          "names": [
+            "朱霄霄"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。"
+        },
+        {
+          "direction": "安全监测与智能诊断",
+          "names": [
+            "陈志明"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。备注：石油工程学院。"
+        },
+        {
+          "direction": "安全大数据与人工智能",
+          "names": [
+            "陈志明"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。备注：石油工程学院。"
+        },
+        {
+          "direction": "安全监测与智能诊断",
+          "names": [
+            "邓金根"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。备注：石油工程学院。"
+        },
+        {
+          "direction": "完整性管理及装备可靠性",
+          "names": [
+            "邓金根"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。备注：石油工程学院。"
+        },
+        {
+          "direction": "安全监测与智能诊断",
+          "names": [
+            "黄文君"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。备注：石油工程学院。"
+        },
+        {
+          "direction": "安全大数据与人工智能",
+          "names": [
+            "黄文君"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。备注：石油工程学院。"
+        },
+        {
+          "direction": "安全监测与智能诊断",
+          "names": [
+            "卢运虎"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。备注：石油工程学院。"
+        },
+        {
+          "direction": "完整性管理及装备可靠性",
+          "names": [
+            "卢运虎"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。备注：石油工程学院。"
+        },
+        {
+          "direction": "安全监测与智能诊断",
+          "names": [
+            "王海柱"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。备注：石油工程学院。"
+        },
+        {
+          "direction": "安全大数据与人工智能",
+          "names": [
+            "王海柱"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。备注：石油工程学院。"
+        },
+        {
+          "direction": "过程风险控制",
+          "names": [
+            "常程"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。备注：机械学院。"
+        },
+        {
+          "direction": "安全检测与监测",
+          "names": [
+            "陈锋"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。备注：机械学院。"
+        },
+        {
+          "direction": "过程风险控制",
+          "names": [
+            "陈锋"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。备注：机械学院。"
+        },
+        {
+          "direction": "安全监测与智能诊断",
+          "names": [
+            "刘啸奔"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。备注：机械学院。"
+        },
+        {
+          "direction": "完整性管理及装备可靠性",
+          "names": [
+            "刘啸奔"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。备注：机械学院。"
+        },
+        {
+          "direction": "安全监测与故障诊断",
+          "names": [
+            "刘震"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。备注：机械学院。"
+        },
+        {
+          "direction": "安全监测与智能诊断",
+          "names": [
+            "张凤丽"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。备注：机械学院。"
+        },
+        {
+          "direction": "安全大数据与人工智能",
+          "names": [
+            "张凤丽"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。备注：机械学院。"
+        }
+      ],
+      "source_sha256": "b4bd5cf9dd1eb4a44ff4c7c4aa08c0f3051cdd151250eaaa3fba0ba976223856",
+      "record_kind": "faculty_directory"
+    },
+    {
+      "institution": "中国石油大学（北京）",
+      "department": "安全与海洋工程学院",
+      "url": "https://www.cup.edu.cn/safety/rcpy/zsjy/zsdt/ebf8c1259a524d458186647c6b396b17.htm",
+      "subject": "082000 石油与天然气工程",
+      "year": null,
+      "degree_level": "硕士",
+      "rows": [
+        {
+          "direction": "海洋油气工程理论与技术",
+          "names": [
+            "杨进"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "海洋油气工程理论与技术",
+          "names": [
+            "王琳琳"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "海洋油气工程理论与技术",
+          "names": [
+            "陈浩"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "海洋油气工程理论与技术",
+          "names": [
+            "陈绪跃"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "海洋油气工程理论与技术",
+          "names": [
+            "闫伟"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "海洋油气工程理论与技术",
+          "names": [
+            "张逸群"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "海洋油气工程理论与技术",
+          "names": [
+            "安峰辰"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "海洋油气工程理论与技术",
+          "names": [
+            "安永生"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "海洋油气工程理论与技术",
+          "names": [
+            "李晓蓉"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "海洋油气工程理论与技术",
+          "names": [
+            "孙挺"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "海洋油气工程理论与技术",
+          "names": [
+            "叶智慧"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "海洋油气工程理论与技术",
+          "names": [
+            "赵海宁"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "海洋油气工程理论与技术",
+          "names": [
+            "朱舟元"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。"
+        },
+        {
+          "direction": "海洋油气工程理论与技术",
+          "names": [
+            "安晨"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。"
+        },
+        {
+          "direction": "海洋油气工程理论与技术",
+          "names": [
+            "王莹莹"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。"
+        },
+        {
+          "direction": "海洋油气工程理论与技术",
+          "names": [
+            "张玉"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。"
+        },
+        {
+          "direction": "海洋油气工程理论与技术",
+          "names": [
+            "赵天奉"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。"
+        },
+        {
+          "direction": "海洋油气工程理论与技术",
+          "names": [
+            "王宴滨"
+          ],
+          "note": "名录未注明年份，当年是否招生须以学校招生目录为准。原表标注：（兼任）。备注：石工学院。"
+        }
+      ],
+      "source_sha256": "b4bd5cf9dd1eb4a44ff4c7c4aa08c0f3051cdd151250eaaa3fba0ba976223856",
+      "record_kind": "faculty_directory"
+    },
+    {
+      "institution": "中国林业科学研究院",
+      "department": "林业所",
+      "url": "https://caf.teacher.360eol.com/caf/zsjh.html?schoolId=1604&type=2&year=2026",
+      "subject": "090701 林木遗传育种",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "林木分子育种",
+          "names": [
+            "胡建军"
+          ],
+          "homepages": {
+            "胡建军": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31453"
+          }
+        },
+        {
+          "direction": "林木基因型鉴定与分子育种",
+          "names": [
+            "史胜青"
+          ],
+          "homepages": {
+            "史胜青": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31455"
+          }
+        },
+        {
+          "direction": "林木遗传改良",
+          "names": [
+            "张守攻"
+          ],
+          "homepages": {
+            "张守攻": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31449"
+          }
+        },
+        {
+          "direction": "杨树遗传改良",
+          "names": [
+            "黄秦军"
+          ],
+          "homepages": {
+            "黄秦军": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31454"
+          }
+        },
+        {
+          "direction": "珍贵树种遗传改良",
+          "names": [
+            "王军辉"
+          ],
+          "homepages": {
+            "王军辉": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31452"
+          }
+        },
+        {
+          "direction": "木材形成的分子基础",
+          "names": [
+            "赵树堂"
+          ],
+          "homepages": {
+            "赵树堂": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31472"
+          }
+        }
+      ],
+      "source_sha256": "f7689f05abe0aa13e8facc1b3ad2944a7fe1edd4a3669eb52ab850372d908538",
+      "publisher_evidence": "https://rif.caf.ac.cn/info/1270/7851.htm",
+      "api_url": "https://caf.teacher.360eol.com/caf/getSchoolSpecialty?schoolId=1604&year=2026&type=2"
+    },
+    {
+      "institution": "中国林业科学研究院",
+      "department": "林业所",
+      "url": "https://caf.teacher.360eol.com/caf/zsjh.html?schoolId=1604&type=2&year=2026",
+      "subject": "090702 森林培育",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "森林生态系统管理",
+          "names": [
+            "张守攻"
+          ],
+          "homepages": {
+            "张守攻": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31449"
+          }
+        },
+        {
+          "direction": "人工林定向培育",
+          "names": [
+            "段爱国"
+          ],
+          "homepages": {
+            "段爱国": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31450"
+          }
+        },
+        {
+          "direction": "人工林培育与可持续经营",
+          "names": [
+            "孙晓梅"
+          ],
+          "homepages": {
+            "孙晓梅": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31460"
+          }
+        }
+      ],
+      "source_sha256": "f7689f05abe0aa13e8facc1b3ad2944a7fe1edd4a3669eb52ab850372d908538",
+      "publisher_evidence": "https://rif.caf.ac.cn/info/1270/7851.htm",
+      "api_url": "https://caf.teacher.360eol.com/caf/getSchoolSpecialty?schoolId=1604&year=2026&type=2"
+    },
+    {
+      "institution": "中国林业科学研究院",
+      "department": "林业所",
+      "url": "https://caf.teacher.360eol.com/caf/zsjh.html?schoolId=1604&type=2&year=2026",
+      "subject": "0907Z1 经济林学",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "经济林育种与栽培",
+          "names": [
+            "何彩云"
+          ],
+          "homepages": {
+            "何彩云": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31457"
+          }
+        }
+      ],
+      "source_sha256": "f7689f05abe0aa13e8facc1b3ad2944a7fe1edd4a3669eb52ab850372d908538",
+      "publisher_evidence": "https://rif.caf.ac.cn/info/1270/7851.htm",
+      "api_url": "https://caf.teacher.360eol.com/caf/getSchoolSpecialty?schoolId=1604&year=2026&type=2"
+    },
+    {
+      "institution": "中国林业科学研究院",
+      "department": "林业所",
+      "url": "https://caf.teacher.360eol.com/caf/zsjh.html?schoolId=1604&type=2&year=2026",
+      "subject": "0907Z3 森林土壤学",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "林草土壤质量提升",
+          "names": [
+            "孙启武"
+          ],
+          "homepages": {
+            "孙启武": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31458"
+          }
+        }
+      ],
+      "source_sha256": "f7689f05abe0aa13e8facc1b3ad2944a7fe1edd4a3669eb52ab850372d908538",
+      "publisher_evidence": "https://rif.caf.ac.cn/info/1270/7851.htm",
+      "api_url": "https://caf.teacher.360eol.com/caf/getSchoolSpecialty?schoolId=1604&year=2026&type=2"
+    },
+    {
+      "institution": "中国林业科学研究院",
+      "department": "亚林所",
+      "url": "https://caf.teacher.360eol.com/caf/zsjh.html?schoolId=1604&type=2&year=2026",
+      "subject": "090701 林木遗传育种",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "林木抗逆分子生物学",
+          "names": [
+            "卓仁英"
+          ],
+          "homepages": {
+            "卓仁英": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31488"
+          }
+        },
+        {
+          "direction": "特色林木遗传育种",
+          "names": [
+            "汪阳东"
+          ],
+          "homepages": {
+            "汪阳东": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31491"
+          }
+        },
+        {
+          "direction": "园林植物分子育种",
+          "names": [
+            "殷恒福"
+          ],
+          "homepages": {
+            "殷恒福": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31496"
+          }
+        }
+      ],
+      "source_sha256": "f7689f05abe0aa13e8facc1b3ad2944a7fe1edd4a3669eb52ab850372d908538",
+      "publisher_evidence": "https://rif.caf.ac.cn/info/1270/7851.htm",
+      "api_url": "https://caf.teacher.360eol.com/caf/getSchoolSpecialty?schoolId=1604&year=2026&type=2"
+    },
+    {
+      "institution": "中国林业科学研究院",
+      "department": "亚林所",
+      "url": "https://caf.teacher.360eol.com/caf/zsjh.html?schoolId=1604&type=2&year=2026",
+      "subject": "090703 森林保护学",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "共生真菌调控林木表型与生理",
+          "names": [
+            "袁志林"
+          ],
+          "homepages": {
+            "袁志林": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31493"
+          }
+        },
+        {
+          "direction": "微生物介导的昆虫与植物互作",
+          "names": [
+            "舒金平"
+          ],
+          "homepages": {
+            "舒金平": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31497"
+          }
+        }
+      ],
+      "source_sha256": "f7689f05abe0aa13e8facc1b3ad2944a7fe1edd4a3669eb52ab850372d908538",
+      "publisher_evidence": "https://rif.caf.ac.cn/info/1270/7851.htm",
+      "api_url": "https://caf.teacher.360eol.com/caf/getSchoolSpecialty?schoolId=1604&year=2026&type=2"
+    },
+    {
+      "institution": "中国林业科学研究院",
+      "department": "亚林所",
+      "url": "https://caf.teacher.360eol.com/caf/zsjh.html?schoolId=1604&type=2&year=2026",
+      "subject": "091000 水土保持与荒漠化防治学",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "森林结构与功能",
+          "names": [
+            "成向荣"
+          ],
+          "homepages": {
+            "成向荣": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31510"
+          }
+        }
+      ],
+      "source_sha256": "f7689f05abe0aa13e8facc1b3ad2944a7fe1edd4a3669eb52ab850372d908538",
+      "publisher_evidence": "https://rif.caf.ac.cn/info/1270/7851.htm",
+      "api_url": "https://caf.teacher.360eol.com/caf/getSchoolSpecialty?schoolId=1604&year=2026&type=2"
+    },
+    {
+      "institution": "中国林业科学研究院",
+      "department": "热林所",
+      "url": "https://caf.teacher.360eol.com/caf/zsjh.html?schoolId=1604&type=2&year=2026",
+      "subject": "090701 林木遗传育种",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "林木生物技术",
+          "names": [
+            "曾炳山"
+          ],
+          "homepages": {
+            "曾炳山": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31525"
+          }
+        }
+      ],
+      "source_sha256": "f7689f05abe0aa13e8facc1b3ad2944a7fe1edd4a3669eb52ab850372d908538",
+      "publisher_evidence": "https://rif.caf.ac.cn/info/1270/7851.htm",
+      "api_url": "https://caf.teacher.360eol.com/caf/getSchoolSpecialty?schoolId=1604&year=2026&type=2"
+    },
+    {
+      "institution": "中国林业科学研究院",
+      "department": "热林所",
+      "url": "https://caf.teacher.360eol.com/caf/zsjh.html?schoolId=1604&type=2&year=2026",
+      "subject": "090702 森林培育",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "树木生理",
+          "names": [
+            "陆俊锟"
+          ],
+          "homepages": {
+            "陆俊锟": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31527"
+          }
+        },
+        {
+          "direction": "特色林木种质资源评价",
+          "names": [
+            "杨锦昌"
+          ],
+          "homepages": {
+            "杨锦昌": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31530"
+          }
+        }
+      ],
+      "source_sha256": "f7689f05abe0aa13e8facc1b3ad2944a7fe1edd4a3669eb52ab850372d908538",
+      "publisher_evidence": "https://rif.caf.ac.cn/info/1270/7851.htm",
+      "api_url": "https://caf.teacher.360eol.com/caf/getSchoolSpecialty?schoolId=1604&year=2026&type=2"
+    },
+    {
+      "institution": "中国林业科学研究院",
+      "department": "热林所",
+      "url": "https://caf.teacher.360eol.com/caf/zsjh.html?schoolId=1604&type=2&year=2026",
+      "subject": "090703 森林保护学",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "菌根菌对森林土壤生态系统的影响",
+          "names": [
+            "梁俊峰"
+          ],
+          "homepages": {
+            "梁俊峰": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31524"
+          }
+        }
+      ],
+      "source_sha256": "f7689f05abe0aa13e8facc1b3ad2944a7fe1edd4a3669eb52ab850372d908538",
+      "publisher_evidence": "https://rif.caf.ac.cn/info/1270/7851.htm",
+      "api_url": "https://caf.teacher.360eol.com/caf/getSchoolSpecialty?schoolId=1604&year=2026&type=2"
+    },
+    {
+      "institution": "中国林业科学研究院",
+      "department": "森环森保所",
+      "url": "https://caf.teacher.360eol.com/caf/zsjh.html?schoolId=1604&type=2&year=2026",
+      "subject": "090703 森林保护学",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "害虫生物防治",
+          "names": [
+            "王小艺"
+          ],
+          "homepages": {
+            "王小艺": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31548"
+          }
+        },
+        {
+          "direction": "森林病理",
+          "names": [
+            "吕全"
+          ],
+          "homepages": {
+            "吕全": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31560"
+          }
+        },
+        {
+          "direction": "森林防火",
+          "names": [
+            "舒立福"
+          ],
+          "homepages": {
+            "舒立福": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31550"
+          }
+        },
+        {
+          "direction": "昆虫化学生态",
+          "names": [
+            "孔祥波"
+          ],
+          "homepages": {
+            "孔祥波": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31558"
+          }
+        },
+        {
+          "direction": "昆虫分子生物学",
+          "names": [
+            "张苏芳"
+          ],
+          "homepages": {
+            "张苏芳": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31552"
+          }
+        },
+        {
+          "direction": "森林病理学",
+          "names": [
+            "理永霞"
+          ],
+          "homepages": {
+            "理永霞": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31565"
+          }
+        },
+        {
+          "direction": "昆虫病原微生物与害虫防治",
+          "names": [
+            "曲良建"
+          ],
+          "homepages": {
+            "曲良建": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31555"
+          }
+        },
+        {
+          "direction": "林火管理",
+          "names": [
+            "田晓瑞"
+          ],
+          "homepages": {
+            "田晓瑞": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31562"
+          }
+        }
+      ],
+      "source_sha256": "f7689f05abe0aa13e8facc1b3ad2944a7fe1edd4a3669eb52ab850372d908538",
+      "publisher_evidence": "https://rif.caf.ac.cn/info/1270/7851.htm",
+      "api_url": "https://caf.teacher.360eol.com/caf/getSchoolSpecialty?schoolId=1604&year=2026&type=2"
+    },
+    {
+      "institution": "中国林业科学研究院",
+      "department": "森环森保所",
+      "url": "https://caf.teacher.360eol.com/caf/zsjh.html?schoolId=1604&type=2&year=2026",
+      "subject": "090705 野生动植物保护与利用",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "鸟类学",
+          "names": [
+            "江红星"
+          ],
+          "homepages": {
+            "江红星": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31578"
+          }
+        }
+      ],
+      "source_sha256": "f7689f05abe0aa13e8facc1b3ad2944a7fe1edd4a3669eb52ab850372d908538",
+      "publisher_evidence": "https://rif.caf.ac.cn/info/1270/7851.htm",
+      "api_url": "https://caf.teacher.360eol.com/caf/getSchoolSpecialty?schoolId=1604&year=2026&type=2"
+    },
+    {
+      "institution": "中国林业科学研究院",
+      "department": "资源所",
+      "url": "https://caf.teacher.360eol.com/caf/zsjh.html?schoolId=1604&type=2&year=2026",
+      "subject": "090704 森林经理学",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "林业统计和生物数学模型",
+          "names": [
+            "唐守正"
+          ],
+          "homepages": {
+            "唐守正": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31584"
+          }
+        },
+        {
+          "direction": "林业统计和生物数学模型",
+          "names": [
+            "符利勇"
+          ],
+          "homepages": {
+            "符利勇": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31593"
+          }
+        },
+        {
+          "direction": "林草人工智能与可视化",
+          "names": [
+            "张怀清"
+          ],
+          "homepages": {
+            "张怀清": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31587"
+          }
+        },
+        {
+          "direction": "森林可持续经营理论与技术",
+          "names": [
+            "雷相东"
+          ],
+          "homepages": {
+            "雷相东": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31586"
+          }
+        },
+        {
+          "direction": "森林可持续经营理论与技术",
+          "names": [
+            "刘宪钊"
+          ],
+          "homepages": {
+            "刘宪钊": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31597"
+          }
+        },
+        {
+          "direction": "森林遥感监测技术",
+          "names": [
+            "陈尔学"
+          ],
+          "homepages": {
+            "陈尔学": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31585"
+          }
+        },
+        {
+          "direction": "林草灾害监测预警技术",
+          "names": [
+            "覃先林"
+          ],
+          "homepages": {
+            "覃先林": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31591"
+          }
+        },
+        {
+          "direction": "林业遥感",
+          "names": [
+            "庞勇"
+          ],
+          "homepages": {
+            "庞勇": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31588"
+          }
+        },
+        {
+          "direction": "定量遥感反演",
+          "names": [
+            "田昕"
+          ],
+          "homepages": {
+            "田昕": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31592"
+          }
+        }
+      ],
+      "source_sha256": "f7689f05abe0aa13e8facc1b3ad2944a7fe1edd4a3669eb52ab850372d908538",
+      "publisher_evidence": "https://rif.caf.ac.cn/info/1270/7851.htm",
+      "api_url": "https://caf.teacher.360eol.com/caf/getSchoolSpecialty?schoolId=1604&year=2026&type=2"
+    },
+    {
+      "institution": "中国林业科学研究院",
+      "department": "高原所",
+      "url": "https://caf.teacher.360eol.com/caf/zsjh.html?schoolId=1604&type=2&year=2026",
+      "subject": "090701 林木遗传育种",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "树木生物学",
+          "names": [
+            "崔凯"
+          ],
+          "homepages": {
+            "崔凯": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31608"
+          }
+        }
+      ],
+      "source_sha256": "f7689f05abe0aa13e8facc1b3ad2944a7fe1edd4a3669eb52ab850372d908538",
+      "publisher_evidence": "https://rif.caf.ac.cn/info/1270/7851.htm",
+      "api_url": "https://caf.teacher.360eol.com/caf/getSchoolSpecialty?schoolId=1604&year=2026&type=2"
+    },
+    {
+      "institution": "中国林业科学研究院",
+      "department": "高原所",
+      "url": "https://caf.teacher.360eol.com/caf/zsjh.html?schoolId=1604&type=2&year=2026",
+      "subject": "090703 森林保护学",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "资源昆虫学",
+          "names": [
+            "杨子祥"
+          ],
+          "homepages": {
+            "杨子祥": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=34625"
+          }
+        },
+        {
+          "direction": "资源昆虫学",
+          "names": [
+            "陈航"
+          ],
+          "homepages": {
+            "陈航": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31606"
+          }
+        },
+        {
+          "direction": "分子生物学",
+          "names": [
+            "杨璞"
+          ],
+          "homepages": {
+            "杨璞": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31609"
+          }
+        }
+      ],
+      "source_sha256": "f7689f05abe0aa13e8facc1b3ad2944a7fe1edd4a3669eb52ab850372d908538",
+      "publisher_evidence": "https://rif.caf.ac.cn/info/1270/7851.htm",
+      "api_url": "https://caf.teacher.360eol.com/caf/getSchoolSpecialty?schoolId=1604&year=2026&type=2"
+    },
+    {
+      "institution": "中国林业科学研究院",
+      "department": "生态所",
+      "url": "https://caf.teacher.360eol.com/caf/zsjh.html?schoolId=1604&type=2&year=2026",
+      "subject": "090701 林木遗传育种",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "树木逆境生理与抗性育种",
+          "names": [
+            "罗志斌"
+          ],
+          "homepages": {
+            "罗志斌": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31633"
+          }
+        }
+      ],
+      "source_sha256": "f7689f05abe0aa13e8facc1b3ad2944a7fe1edd4a3669eb52ab850372d908538",
+      "publisher_evidence": "https://rif.caf.ac.cn/info/1270/7851.htm",
+      "api_url": "https://caf.teacher.360eol.com/caf/getSchoolSpecialty?schoolId=1604&year=2026&type=2"
+    },
+    {
+      "institution": "中国林业科学研究院",
+      "department": "生态所",
+      "url": "https://caf.teacher.360eol.com/caf/zsjh.html?schoolId=1604&type=2&year=2026",
+      "subject": "0907Z5 草业科学",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "草原植物病害",
+          "names": [
+            "李春杰"
+          ],
+          "homepages": {
+            "李春杰": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31634"
+          }
+        }
+      ],
+      "source_sha256": "f7689f05abe0aa13e8facc1b3ad2944a7fe1edd4a3669eb52ab850372d908538",
+      "publisher_evidence": "https://rif.caf.ac.cn/info/1270/7851.htm",
+      "api_url": "https://caf.teacher.360eol.com/caf/getSchoolSpecialty?schoolId=1604&year=2026&type=2"
+    },
+    {
+      "institution": "中国林业科学研究院",
+      "department": "生态所",
+      "url": "https://caf.teacher.360eol.com/caf/zsjh.html?schoolId=1604&type=2&year=2026",
+      "subject": "091000 水土保持与荒漠化防治学",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "旱区生态水文",
+          "names": [
+            "熊伟"
+          ],
+          "homepages": {
+            "熊伟": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31645"
+          }
+        },
+        {
+          "direction": "石漠化治理",
+          "names": [
+            "崔明"
+          ],
+          "homepages": {
+            "崔明": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31630"
+          }
+        },
+        {
+          "direction": "荒漠景观生态",
+          "names": [
+            "吴波"
+          ],
+          "homepages": {
+            "吴波": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31629"
+          }
+        },
+        {
+          "direction": "土壤生态与植被恢复",
+          "names": [
+            "姚斌"
+          ],
+          "homepages": {
+            "姚斌": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31644"
+          }
+        },
+        {
+          "direction": "防护林生态水文过程",
+          "names": [
+            "党宏忠"
+          ],
+          "homepages": {
+            "党宏忠": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31643"
+          }
+        },
+        {
+          "direction": "生态遥感与模型",
+          "names": [
+            "王锋"
+          ],
+          "homepages": {
+            "王锋": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31627"
+          }
+        }
+      ],
+      "source_sha256": "f7689f05abe0aa13e8facc1b3ad2944a7fe1edd4a3669eb52ab850372d908538",
+      "publisher_evidence": "https://rif.caf.ac.cn/info/1270/7851.htm",
+      "api_url": "https://caf.teacher.360eol.com/caf/getSchoolSpecialty?schoolId=1604&year=2026&type=2"
+    },
+    {
+      "institution": "中国林业科学研究院",
+      "department": "科信所",
+      "url": "https://caf.teacher.360eol.com/caf/zsjh.html?schoolId=1604&type=2&year=2026",
+      "subject": "0907Z4 林业经济与管理",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "林草碳汇经济与政策",
+          "names": [
+            "何友均"
+          ],
+          "homepages": {
+            "何友均": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31657"
+          }
+        }
+      ],
+      "source_sha256": "f7689f05abe0aa13e8facc1b3ad2944a7fe1edd4a3669eb52ab850372d908538",
+      "publisher_evidence": "https://rif.caf.ac.cn/info/1270/7851.htm",
+      "api_url": "https://caf.teacher.360eol.com/caf/getSchoolSpecialty?schoolId=1604&year=2026&type=2"
+    },
+    {
+      "institution": "中国林业科学研究院",
+      "department": "木工所",
+      "url": "https://caf.teacher.360eol.com/caf/zsjh.html?schoolId=1604&type=2&year=2026",
+      "subject": "082902 木材科学与技术",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "木材构造与利用",
+          "names": [
+            "殷亚方"
+          ],
+          "homepages": {
+            "殷亚方": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31670"
+          }
+        },
+        {
+          "direction": "木材物理",
+          "names": [
+            "蒋佳荔"
+          ],
+          "homepages": {
+            "蒋佳荔": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31666"
+          }
+        },
+        {
+          "direction": "木材力学与利用",
+          "names": [
+            "王玉荣"
+          ],
+          "homepages": {
+            "王玉荣": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31692"
+          }
+        },
+        {
+          "direction": "木材成分与利用",
+          "names": [
+            "李改云"
+          ],
+          "homepages": {
+            "李改云": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31662"
+          }
+        },
+        {
+          "direction": "环保木材胶黏剂",
+          "names": [
+            "范东斌"
+          ],
+          "homepages": {
+            "范东斌": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31682"
+          }
+        },
+        {
+          "direction": "木材超分子科学",
+          "names": [
+            "卢芸"
+          ],
+          "homepages": {
+            "卢芸": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31678"
+          }
+        },
+        {
+          "direction": "重组材料",
+          "names": [
+            "余养伦"
+          ],
+          "homepages": {
+            "余养伦": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31665"
+          }
+        },
+        {
+          "direction": "高性能重组材",
+          "names": [
+            "张亚慧"
+          ],
+          "homepages": {
+            "张亚慧": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31677"
+          }
+        },
+        {
+          "direction": "轻质高强复合材料",
+          "names": [
+            "郭文静"
+          ],
+          "homepages": {
+            "郭文静": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31669"
+          }
+        },
+        {
+          "direction": "木质功能材料",
+          "names": [
+            "彭立民"
+          ],
+          "homepages": {
+            "彭立民": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31663"
+          }
+        },
+        {
+          "direction": "木竹功能材料",
+          "names": [
+            "林兰英"
+          ],
+          "homepages": {
+            "林兰英": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31690"
+          }
+        },
+        {
+          "direction": "木材保护、古建筑木结构保护",
+          "names": [
+            "马星霞"
+          ],
+          "homepages": {
+            "马星霞": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31688"
+          }
+        },
+        {
+          "direction": "木材改性",
+          "names": [
+            "王小青"
+          ],
+          "homepages": {
+            "王小青": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31664"
+          }
+        },
+        {
+          "direction": "木竹改性与利用",
+          "names": [
+            "黄安民"
+          ],
+          "homepages": {
+            "黄安民": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31667"
+          }
+        },
+        {
+          "direction": "木材光谱智能分析及应用",
+          "names": [
+            "杨忠"
+          ],
+          "homepages": {
+            "杨忠": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31661"
+          }
+        },
+        {
+          "direction": "木结构材料与技术",
+          "names": [
+            "周海宾"
+          ],
+          "homepages": {
+            "周海宾": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31668"
+          }
+        }
+      ],
+      "source_sha256": "f7689f05abe0aa13e8facc1b3ad2944a7fe1edd4a3669eb52ab850372d908538",
+      "publisher_evidence": "https://rif.caf.ac.cn/info/1270/7851.htm",
+      "api_url": "https://caf.teacher.360eol.com/caf/getSchoolSpecialty?schoolId=1604&year=2026&type=2"
+    },
+    {
+      "institution": "中国林业科学研究院",
+      "department": "木工所",
+      "url": "https://caf.teacher.360eol.com/caf/zsjh.html?schoolId=1604&type=2&year=2026",
+      "subject": "0829Z3 林业装备与信息化",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "木竹加工装备及智能化",
+          "names": [
+            "张伟"
+          ],
+          "homepages": {
+            "张伟": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31673"
+          }
+        }
+      ],
+      "source_sha256": "f7689f05abe0aa13e8facc1b3ad2944a7fe1edd4a3669eb52ab850372d908538",
+      "publisher_evidence": "https://rif.caf.ac.cn/info/1270/7851.htm",
+      "api_url": "https://caf.teacher.360eol.com/caf/getSchoolSpecialty?schoolId=1604&year=2026&type=2"
+    },
+    {
+      "institution": "中国林业科学研究院",
+      "department": "林化所",
+      "url": "https://caf.teacher.360eol.com/caf/zsjh.html?schoolId=1604&type=2&year=2026",
+      "subject": "082903 林产化学加工工程",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "松脂化学与利用",
+          "names": [
+            "宋湛谦"
+          ],
+          "homepages": {
+            "宋湛谦": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31698"
+          }
+        },
+        {
+          "direction": "松脂化学与利用",
+          "names": [
+            "陈玉湘"
+          ],
+          "homepages": {
+            "陈玉湘": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31706"
+          }
+        },
+        {
+          "direction": "制浆造纸清洁生产",
+          "names": [
+            "房桂干"
+          ],
+          "homepages": {
+            "房桂干": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31700"
+          }
+        },
+        {
+          "direction": "制浆造纸清洁生产",
+          "names": [
+            "沈葵忠"
+          ],
+          "homepages": {
+            "沈葵忠": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31704"
+          }
+        },
+        {
+          "direction": "胶黏剂及复合材料化学",
+          "names": [
+            "张代晖"
+          ],
+          "homepages": {
+            "张代晖": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31731"
+          }
+        },
+        {
+          "direction": "胶黏剂及复合材料化学",
+          "names": [
+            "王春鹏"
+          ],
+          "homepages": {
+            "王春鹏": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31705"
+          }
+        },
+        {
+          "direction": "胶黏剂及复合材料化学",
+          "names": [
+            "王基夫"
+          ],
+          "homepages": {
+            "王基夫": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31710"
+          }
+        },
+        {
+          "direction": "提取物化学与利用",
+          "names": [
+            "黄立新"
+          ],
+          "homepages": {
+            "黄立新": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31703"
+          }
+        },
+        {
+          "direction": "提取物化学与利用",
+          "names": [
+            "王成章"
+          ],
+          "homepages": {
+            "王成章": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31701"
+          }
+        },
+        {
+          "direction": "活性炭制备及应用",
+          "names": [
+            "孙康"
+          ],
+          "homepages": {
+            "孙康": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31709"
+          }
+        },
+        {
+          "direction": "生物质资源化学与利用",
+          "names": [
+            "王丹"
+          ],
+          "homepages": {
+            "王丹": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31711"
+          }
+        },
+        {
+          "direction": "工业微生物菌种遗传改良与发酵技术",
+          "names": [
+            "张宁"
+          ],
+          "homepages": {
+            "张宁": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31719"
+          }
+        },
+        {
+          "direction": "生物基高分子材料",
+          "names": [
+            "李守海"
+          ],
+          "homepages": {
+            "李守海": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31721"
+          }
+        }
+      ],
+      "source_sha256": "f7689f05abe0aa13e8facc1b3ad2944a7fe1edd4a3669eb52ab850372d908538",
+      "publisher_evidence": "https://rif.caf.ac.cn/info/1270/7851.htm",
+      "api_url": "https://caf.teacher.360eol.com/caf/getSchoolSpecialty?schoolId=1604&year=2026&type=2"
+    },
+    {
+      "institution": "中国林业科学研究院",
+      "department": "林化所",
+      "url": "https://caf.teacher.360eol.com/caf/zsjh.html?schoolId=1604&type=2&year=2026",
+      "subject": "0829Z1 生物质能源与材料",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "生物质先进/功能碳材料",
+          "names": [
+            "蒋剑春"
+          ],
+          "homepages": {
+            "蒋剑春": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31699"
+          }
+        },
+        {
+          "direction": "生物基功能材料",
+          "names": [
+            "周永红"
+          ],
+          "homepages": {
+            "周永红": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31702"
+          }
+        },
+        {
+          "direction": "生物基功能材料",
+          "names": [
+            "王奎"
+          ],
+          "homepages": {
+            "王奎": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31715"
+          }
+        },
+        {
+          "direction": "生物基功能材料",
+          "names": [
+            "刘鹤"
+          ],
+          "homepages": {
+            "刘鹤": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31712"
+          }
+        },
+        {
+          "direction": "生物基功能材料",
+          "names": [
+            "张猛"
+          ],
+          "homepages": {
+            "张猛": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31714"
+          }
+        },
+        {
+          "direction": "生物质先进液体燃料",
+          "names": [
+            "徐俊明"
+          ],
+          "homepages": {
+            "徐俊明": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31713"
+          }
+        },
+        {
+          "direction": "生物质热化学转化",
+          "names": [
+            "刘军利"
+          ],
+          "homepages": {
+            "刘军利": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31707"
+          }
+        },
+        {
+          "direction": "生物基功能化材料",
+          "names": [
+            "胡立红"
+          ],
+          "homepages": {
+            "胡立红": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31708"
+          }
+        }
+      ],
+      "source_sha256": "f7689f05abe0aa13e8facc1b3ad2944a7fe1edd4a3669eb52ab850372d908538",
+      "publisher_evidence": "https://rif.caf.ac.cn/info/1270/7851.htm",
+      "api_url": "https://caf.teacher.360eol.com/caf/getSchoolSpecialty?schoolId=1604&year=2026&type=2"
+    },
+    {
+      "institution": "中国林业科学研究院",
+      "department": "哈尔滨林机所",
+      "url": "https://caf.teacher.360eol.com/caf/zsjh.html?schoolId=1604&type=2&year=2026",
+      "subject": "0829Z3 林业装备与信息化",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "林草装备与智能化",
+          "names": [
+            "周建波"
+          ],
+          "homepages": {
+            "周建波": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31793"
+          }
+        }
+      ],
+      "source_sha256": "f7689f05abe0aa13e8facc1b3ad2944a7fe1edd4a3669eb52ab850372d908538",
+      "publisher_evidence": "https://rif.caf.ac.cn/info/1270/7851.htm",
+      "api_url": "https://caf.teacher.360eol.com/caf/getSchoolSpecialty?schoolId=1604&year=2026&type=2"
+    },
+    {
+      "institution": "中国林业科学研究院",
+      "department": "经济林所",
+      "url": "https://caf.teacher.360eol.com/caf/zsjh.html?schoolId=1604&type=2&year=2026",
+      "subject": "0907Z1 经济林学",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "仁用杏育种",
+          "names": [
+            "乌云塔娜"
+          ],
+          "homepages": {
+            "乌云塔娜": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31736"
+          }
+        },
+        {
+          "direction": "经济林学",
+          "names": [
+            "孙鹏"
+          ],
+          "homepages": {
+            "孙鹏": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31744"
+          }
+        }
+      ],
+      "source_sha256": "f7689f05abe0aa13e8facc1b3ad2944a7fe1edd4a3669eb52ab850372d908538",
+      "publisher_evidence": "https://rif.caf.ac.cn/info/1270/7851.htm",
+      "api_url": "https://caf.teacher.360eol.com/caf/getSchoolSpecialty?schoolId=1604&year=2026&type=2"
+    },
+    {
+      "institution": "中国林业科学研究院",
+      "department": "速生树木所",
+      "url": "https://caf.teacher.360eol.com/caf/zsjh.html?schoolId=1604&type=2&year=2026",
+      "subject": "090701 林木遗传育种",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "桉树遗传育种",
+          "names": [
+            "罗建中"
+          ],
+          "homepages": {
+            "罗建中": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31745"
+          }
+        }
+      ],
+      "source_sha256": "f7689f05abe0aa13e8facc1b3ad2944a7fe1edd4a3669eb52ab850372d908538",
+      "publisher_evidence": "https://rif.caf.ac.cn/info/1270/7851.htm",
+      "api_url": "https://caf.teacher.360eol.com/caf/getSchoolSpecialty?schoolId=1604&year=2026&type=2"
+    },
+    {
+      "institution": "中国林业科学研究院",
+      "department": "沙林中心",
+      "url": "https://caf.teacher.360eol.com/caf/zsjh.html?schoolId=1604&type=2&year=2026",
+      "subject": "091000 水土保持与荒漠化防治学",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "困难立地生态修复",
+          "names": [
+            "褚建民"
+          ],
+          "homepages": {
+            "褚建民": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31448"
+          }
+        }
+      ],
+      "source_sha256": "f7689f05abe0aa13e8facc1b3ad2944a7fe1edd4a3669eb52ab850372d908538",
+      "publisher_evidence": "https://rif.caf.ac.cn/info/1270/7851.htm",
+      "api_url": "https://caf.teacher.360eol.com/caf/getSchoolSpecialty?schoolId=1604&year=2026&type=2"
+    },
+    {
+      "institution": "中国林业科学研究院",
+      "department": "重点实验室",
+      "url": "https://caf.teacher.360eol.com/caf/zsjh.html?schoolId=1604&type=2&year=2026",
+      "subject": "090701 林木遗传育种",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "特色林木资源育种与培育",
+          "names": [
+            "汪阳东"
+          ],
+          "homepages": {
+            "汪阳东": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31491"
+          }
+        },
+        {
+          "direction": "林木分子育种",
+          "names": [
+            "曾庆银"
+          ],
+          "homepages": {
+            "曾庆银": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31756"
+          }
+        },
+        {
+          "direction": "林木比较基因组学",
+          "names": [
+            "刘妍婧"
+          ],
+          "homepages": {
+            "刘妍婧": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31757"
+          }
+        }
+      ],
+      "source_sha256": "f7689f05abe0aa13e8facc1b3ad2944a7fe1edd4a3669eb52ab850372d908538",
+      "publisher_evidence": "https://rif.caf.ac.cn/info/1270/7851.htm",
+      "api_url": "https://caf.teacher.360eol.com/caf/getSchoolSpecialty?schoolId=1604&year=2026&type=2"
+    },
+    {
+      "institution": "中国林业科学研究院",
+      "department": "国际竹藤中心",
+      "url": "https://caf.teacher.360eol.com/caf/zsjh.html?schoolId=1604&type=2&year=2026",
+      "subject": "082902 木材科学与技术",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "竹材防护",
+          "names": [
+            "覃道春"
+          ],
+          "homepages": {
+            "覃道春": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31765"
+          }
+        },
+        {
+          "direction": "生物质基碳材料",
+          "names": [
+            "刘杏娥"
+          ],
+          "homepages": {
+            "刘杏娥": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31763"
+          }
+        },
+        {
+          "direction": "竹木纤维复合材料",
+          "names": [
+            "程海涛"
+          ],
+          "homepages": {
+            "程海涛": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31771"
+          }
+        },
+        {
+          "direction": "竹质工程材料",
+          "names": [
+            "方长华"
+          ],
+          "homepages": {
+            "方长华": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31772"
+          }
+        },
+        {
+          "direction": "竹质工程材料",
+          "names": [
+            "刘焕荣"
+          ],
+          "homepages": {
+            "刘焕荣": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31773"
+          }
+        },
+        {
+          "direction": "竹质工程材料",
+          "names": [
+            "陈复明"
+          ],
+          "homepages": {
+            "陈复明": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31791"
+          }
+        },
+        {
+          "direction": "竹材基础性质",
+          "names": [
+            "王汉坤"
+          ],
+          "homepages": {
+            "王汉坤": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31781"
+          }
+        },
+        {
+          "direction": "木/竹材热解",
+          "names": [
+            "刘志佳"
+          ],
+          "homepages": {
+            "刘志佳": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31770"
+          }
+        }
+      ],
+      "source_sha256": "f7689f05abe0aa13e8facc1b3ad2944a7fe1edd4a3669eb52ab850372d908538",
+      "publisher_evidence": "https://rif.caf.ac.cn/info/1270/7851.htm",
+      "api_url": "https://caf.teacher.360eol.com/caf/getSchoolSpecialty?schoolId=1604&year=2026&type=2"
+    },
+    {
+      "institution": "中国林业科学研究院",
+      "department": "国际竹藤中心",
+      "url": "https://caf.teacher.360eol.com/caf/zsjh.html?schoolId=1604&type=2&year=2026",
+      "subject": "082903 林产化学加工工程",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "竹藤资源化学利用",
+          "names": [
+            "汤锋"
+          ],
+          "homepages": {
+            "汤锋": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31766"
+          }
+        },
+        {
+          "direction": "竹藤生物降解转化",
+          "names": [
+            "李志强"
+          ],
+          "homepages": {
+            "李志强": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31779"
+          }
+        }
+      ],
+      "source_sha256": "f7689f05abe0aa13e8facc1b3ad2944a7fe1edd4a3669eb52ab850372d908538",
+      "publisher_evidence": "https://rif.caf.ac.cn/info/1270/7851.htm",
+      "api_url": "https://caf.teacher.360eol.com/caf/getSchoolSpecialty?schoolId=1604&year=2026&type=2"
+    },
+    {
+      "institution": "中国林业科学研究院",
+      "department": "国际竹藤中心",
+      "url": "https://caf.teacher.360eol.com/caf/zsjh.html?schoolId=1604&type=2&year=2026",
+      "subject": "090701 林木遗传育种",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "竹藤生长发育的分子基础",
+          "names": [
+            "高志民"
+          ],
+          "homepages": {
+            "高志民": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31768"
+          }
+        },
+        {
+          "direction": "竹子重要性状的遗传调控",
+          "names": [
+            "高健"
+          ],
+          "homepages": {
+            "高健": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31769"
+          }
+        },
+        {
+          "direction": "竹子功能基因组学",
+          "names": [
+            "赵韩生"
+          ],
+          "homepages": {
+            "赵韩生": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31774"
+          }
+        }
+      ],
+      "source_sha256": "f7689f05abe0aa13e8facc1b3ad2944a7fe1edd4a3669eb52ab850372d908538",
+      "publisher_evidence": "https://rif.caf.ac.cn/info/1270/7851.htm",
+      "api_url": "https://caf.teacher.360eol.com/caf/getSchoolSpecialty?schoolId=1604&year=2026&type=2"
+    },
+    {
+      "institution": "中国林业科学研究院",
+      "department": "国际竹藤中心",
+      "url": "https://caf.teacher.360eol.com/caf/zsjh.html?schoolId=1604&type=2&year=2026",
+      "subject": "090702 森林培育",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "竹藤资源培育理论与技术",
+          "names": [
+            "刘广路"
+          ],
+          "homepages": {
+            "刘广路": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31775"
+          }
+        }
+      ],
+      "source_sha256": "f7689f05abe0aa13e8facc1b3ad2944a7fe1edd4a3669eb52ab850372d908538",
+      "publisher_evidence": "https://rif.caf.ac.cn/info/1270/7851.htm",
+      "api_url": "https://caf.teacher.360eol.com/caf/getSchoolSpecialty?schoolId=1604&year=2026&type=2"
+    },
+    {
+      "institution": "中国林业科学研究院",
+      "department": "国际竹藤中心",
+      "url": "https://caf.teacher.360eol.com/caf/zsjh.html?schoolId=1604&type=2&year=2026",
+      "subject": "090704 森林经理学",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "竹林经营与监测技术",
+          "names": [
+            "官凤英"
+          ],
+          "homepages": {
+            "官凤英": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31776"
+          }
+        }
+      ],
+      "source_sha256": "f7689f05abe0aa13e8facc1b3ad2944a7fe1edd4a3669eb52ab850372d908538",
+      "publisher_evidence": "https://rif.caf.ac.cn/info/1270/7851.htm",
+      "api_url": "https://caf.teacher.360eol.com/caf/getSchoolSpecialty?schoolId=1604&year=2026&type=2"
+    },
+    {
+      "institution": "上海海事大学",
+      "department": "商船学院",
+      "url": "https://yz.shmtu.edu.cn/2026/0120/c8926a287923/page.htm",
+      "subject": "082302 交通信息工程及控制",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "交通信息工程及控制",
+          "names": [
+            "胡勤友"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。"
+        },
+        {
+          "direction": "交通信息工程及控制",
+          "names": [
+            "刘卫"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。"
+        },
+        {
+          "direction": "交通信息工程及控制",
+          "names": [
+            "谭拂晓"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。"
+        },
+        {
+          "direction": "交通信息工程及控制",
+          "names": [
+            "曹德胜"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。原表标注外聘。"
+        },
+        {
+          "direction": "交通信息工程及控制",
+          "names": [
+            "赵建森"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。"
+        }
+      ],
+      "source_sha256": "5791f8516d16816418c848d8930b174dd08546e166687c98882a9febc5a4a86f"
+    },
+    {
+      "institution": "上海海事大学",
+      "department": "交通运输学院",
+      "url": "https://yz.shmtu.edu.cn/2026/0120/c8926a287923/page.htm",
+      "subject": "082303 交通运输规划与管理",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "交通运输规划与管理",
+          "names": [
+            "施欣"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。"
+        },
+        {
+          "direction": "交通运输规划与管理",
+          "names": [
+            "殷明"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。"
+        },
+        {
+          "direction": "交通运输规划与管理",
+          "names": [
+            "翁金贤"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。"
+        },
+        {
+          "direction": "交通运输规划与管理",
+          "names": [
+            "孙领"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。"
+        },
+        {
+          "direction": "交通运输规划与管理",
+          "names": [
+            "郑剑"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。"
+        },
+        {
+          "direction": "交通运输规划与管理",
+          "names": [
+            "付姗姗"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。"
+        },
+        {
+          "direction": "交通运输规划与管理",
+          "names": [
+            "陶学宗"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。"
+        },
+        {
+          "direction": "交通运输规划与管理",
+          "names": [
+            "周德全"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。"
+        },
+        {
+          "direction": "交通运输规划与管理",
+          "names": [
+            "雷超"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。"
+        },
+        {
+          "direction": "交通运输规划与管理",
+          "names": [
+            "沙梅"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。"
+        },
+        {
+          "direction": "交通运输规划与管理",
+          "names": [
+            "张明阳"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。原表标注特聘博导，限招非定向生源，原则上学士、硕士学位均从双一流高校获得。"
+        },
+        {
+          "direction": "交通运输规划与管理",
+          "names": [
+            "赵楠"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。"
+        },
+        {
+          "direction": "交通运输规划与管理",
+          "names": [
+            "毛文刚"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。原表标注外聘。"
+        },
+        {
+          "direction": "交通运输规划与管理",
+          "names": [
+            "万征"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。"
+        }
+      ],
+      "source_sha256": "5791f8516d16816418c848d8930b174dd08546e166687c98882a9febc5a4a86f"
+    },
+    {
+      "institution": "上海海事大学",
+      "department": "商船学院",
+      "url": "https://yz.shmtu.edu.cn/2026/0120/c8926a287923/page.htm",
+      "subject": "082304 载运工具运用工程",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "载运工具运用工程",
+          "names": [
+            "王胜正"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。"
+        },
+        {
+          "direction": "载运工具运用工程",
+          "names": [
+            "胡甚平"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。"
+        },
+        {
+          "direction": "载运工具运用工程",
+          "names": [
+            "韩冰"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。原表标注外聘。"
+        },
+        {
+          "direction": "载运工具运用工程",
+          "names": [
+            "周福娜"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。"
+        },
+        {
+          "direction": "载运工具运用工程",
+          "names": [
+            "席永涛"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。"
+        }
+      ],
+      "source_sha256": "5791f8516d16816418c848d8930b174dd08546e166687c98882a9febc5a4a86f"
+    },
+    {
+      "institution": "上海海事大学",
+      "department": "物流科学与工程研究院",
+      "url": "https://yz.shmtu.edu.cn/2026/0120/c8926a287923/page.htm",
+      "subject": "0823Z1 物流工程与技术",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "物流工程与技术",
+          "names": [
+            "杨勇生"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。"
+        },
+        {
+          "direction": "物流工程与技术",
+          "names": [
+            "苌道方"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。"
+        },
+        {
+          "direction": "物流工程与技术",
+          "names": [
+            "李朝锋"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。"
+        },
+        {
+          "direction": "物流工程与技术",
+          "names": [
+            "梁承姬"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。"
+        },
+        {
+          "direction": "物流工程与技术",
+          "names": [
+            "李波"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。"
+        },
+        {
+          "direction": "物流工程与技术",
+          "names": [
+            "张连钢"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。原表标注外聘。"
+        },
+        {
+          "direction": "物流工程与技术",
+          "names": [
+            "杨斌"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。"
+        },
+        {
+          "direction": "物流工程与技术",
+          "names": [
+            "Kannan Govindan"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。"
+        },
+        {
+          "direction": "物流工程与技术",
+          "names": [
+            "沈礼权"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。原表标注特聘博导，限招非定向生源，原则上学士、硕士学位均从双一流高校获得。"
+        },
+        {
+          "direction": "物流工程与技术",
+          "names": [
+            "孙友刚"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。原表标注特聘博导，限招非定向生源，原则上学士、硕士学位均从双一流高校获得。"
+        },
+        {
+          "direction": "物流工程与技术",
+          "names": [
+            "肖冰"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。原表标注特聘博导，限招非定向生源，原则上学士、硕士学位均从双一流高校获得。"
+        },
+        {
+          "direction": "物流工程与技术",
+          "names": [
+            "徐梁"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。原表标注特聘博导，限招非定向生源，原则上学士、硕士学位均从双一流高校获得。"
+        },
+        {
+          "direction": "物流工程与技术",
+          "names": [
+            "王志鹏"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。原表标注特聘博导，限招非定向生源，原则上学士、硕士学位均从双一流高校获得。"
+        },
+        {
+          "direction": "物流工程与技术",
+          "names": [
+            "高迪驹"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。"
+        }
+      ],
+      "source_sha256": "5791f8516d16816418c848d8930b174dd08546e166687c98882a9febc5a4a86f"
+    },
+    {
+      "institution": "上海海事大学",
+      "department": "海洋科学与工程学院",
+      "url": "https://yz.shmtu.edu.cn/2026/0120/c8926a287923/page.htm",
+      "subject": "0823Z4 交通运输安全与环境工程",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "交通运输安全与环境工程",
+          "names": [
+            "邵伟"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。"
+        },
+        {
+          "direction": "交通运输安全与环境工程",
+          "names": [
+            "赵姗"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。"
+        },
+        {
+          "direction": "交通运输安全与环境工程",
+          "names": [
+            "巢志明"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。"
+        },
+        {
+          "direction": "交通运输安全与环境工程",
+          "names": [
+            "刘家豪"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。"
+        },
+        {
+          "direction": "交通运输安全与环境工程",
+          "names": [
+            "吕宝一"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。"
+        },
+        {
+          "direction": "交通运输安全与环境工程",
+          "names": [
+            "肖秋平"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。原表标注外聘。"
+        },
+        {
+          "direction": "交通运输安全与环境工程",
+          "names": [
+            "汪金辉"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。"
+        },
+        {
+          "direction": "交通运输安全与环境工程",
+          "names": [
+            "周福宝"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。原表标注外聘。"
+        }
+      ],
+      "source_sha256": "5791f8516d16816418c848d8930b174dd08546e166687c98882a9febc5a4a86f"
+    },
+    {
+      "institution": "上海海事大学",
+      "department": "外国语学院",
+      "url": "https://yz.shmtu.edu.cn/2026/0120/c8926a287923/page.htm",
+      "subject": "0823Z6 海事语言及应用",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "海事语言及应用",
+          "names": [
+            "张滟"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。"
+        }
+      ],
+      "source_sha256": "5791f8516d16816418c848d8930b174dd08546e166687c98882a9febc5a4a86f"
+    },
+    {
+      "institution": "上海海事大学",
+      "department": "信息工程学院",
+      "url": "https://yz.shmtu.edu.cn/2026/0120/c8926a287923/page.htm",
+      "subject": "0823Z7 低空技术与工程",
+      "year": 2026,
+      "degree_level": "博士",
+      "rows": [
+        {
+          "direction": "低空技术与工程",
+          "names": [
+            "周日贵"
+          ],
+          "note": "按目录所列二级学科收录，未细分个人研究方向。"
+        }
+      ],
+      "source_sha256": "5791f8516d16816418c848d8930b174dd08546e166687c98882a9febc5a4a86f"
+    },
+    {
+      "institution": "国防科技大学",
+      "department": "电子对抗学院",
+      "url": "https://www.lingboyan.com/academicinfo-7-2174",
+      "subject": "110400 军兵种作战学",
+      "year": null,
+      "degree_level": "硕士",
+      "record_kind": "faculty_directory",
+      "source_kind": "转载导师名录（考博猫）",
+      "evidence_level": "secondary",
+      "identity_url": "https://edu.sh.gov.cn/mbjy_xwzx/20190102/0015-230E0496-3DF0-4D4C-8D71-14008C9D3814.html",
+      "note": "学科与导师资格来自第三方转载，尚未取得学校原始导师页。姓名和学校另与2018年教学成果获奖名单核对；该旧记录不证明当前任职、学科或招生资格。报考须另核对军队计划资格。",
+      "rows": [
+        {
+          "direction": "方向未列",
+          "names": [
+            "薛磊",
+            "韩道文",
+            "欧宗伟"
+          ]
+        }
+      ]
+    }
+  ]
+}

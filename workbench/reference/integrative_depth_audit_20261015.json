@@ -1,0 +1,107 @@
+{
+  "checked_at": "2026-10-15",
+  "new_profiles": 7,
+  "profiles": [
+    {
+      "id": "official-6f8d20249166890f7000",
+      "name": "贾立军",
+      "institution": "南京中医药大学",
+      "counts": {
+        "papers": 2,
+        "relations": 4,
+        "recruitment": 2,
+        "admission_notices": 1
+      }
+    },
+    {
+      "id": "official-554740a3e87f7c0f0037",
+      "name": "吕志刚",
+      "institution": "南京中医药大学",
+      "counts": {
+        "papers": 2,
+        "relations": 0,
+        "recruitment": 2,
+        "admission_notices": 1
+      }
+    },
+    {
+      "id": "official-dc115392a749d28b130e",
+      "name": "陶伟伟",
+      "institution": "南京中医药大学",
+      "counts": {
+        "papers": 2,
+        "relations": 0,
+        "recruitment": 2,
+        "admission_notices": 1
+      }
+    },
+    {
+      "id": "official-37ee1196538d552c6209",
+      "name": "黄熙",
+      "institution": "南京中医药大学",
+      "counts": {
+        "papers": 2,
+        "relations": 1,
+        "recruitment": 1,
+        "admission_notices": 1
+      }
+    },
+    {
+      "id": "official-61d835234bdf35fc1e2b",
+      "name": "章轶立",
+      "institution": "南京中医药大学",
+      "counts": {
+        "papers": 2,
+        "relations": 0,
+        "recruitment": 2,
+        "admission_notices": 1
+      }
+    },
+    {
+      "id": "official-f3ebb2ad0fd8bc185685",
+      "name": "成小兰",
+      "institution": "南京中医药大学",
+      "counts": {
+        "papers": 2,
+        "relations": 0,
+        "recruitment": 2,
+        "admission_notices": 1
+      }
+    },
+    {
+      "id": "official-9370211968decff9e25c",
+      "name": "胡玥",
+      "institution": "南京中医药大学",
+      "counts": {
+        "papers": 3,
+        "relations": 2,
+        "recruitment": 1,
+        "admission_notices": 1
+      }
+    }
+  ],
+  "subject_counts": {
+    "1006 中西医结合": 14
+  },
+  "limitations": [
+    "7位均有论文及2025硕士带教计划；未核实当前个人剩余名额。",
+    "黄熙2025硕士计划只在105600中药，不作为100601招生证据。",
+    "3位导师共7条明确指导关系；吕志刚、陶伟伟、章轶立、成小兰尚未取得足够公开师承证据。",
+    "胡玥学位论文原文已逐页核对；未从论文合著关系推断师承。未收录致谢中的私人关系。",
+    "15条期刊成果含贾立军2篇Letter；书目不等于全文阅读。"
+  ],
+  "validation": {
+    "old_ids_preserved": 10174,
+    "notes_unchanged": 2,
+    "nonempty_branches": 2697,
+    "total_records": 10181,
+    "public_records": 7008,
+    "minimum_subject_count": 8,
+    "http_dossiers": 7,
+    "http_exports": 7,
+    "python_tests": 75,
+    "browser_profile": "official-9370211968decff9e25c",
+    "screenshot": ".workbench-data/integrative-dossier.png",
+    "repeat_inserted": 0
+  }
+}

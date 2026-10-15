@@ -1,0 +1,5224 @@
+{
+  "before": {
+    "0101 哲学": 40,
+    "0201 理论经济学": 32,
+    "0202 应用经济学": 59,
+    "0301 法学": 28,
+    "0302 政治学": 1,
+    "0303 社会学": 24,
+    "0304 民族学": 8,
+    "0305 马克思主义理论": 41,
+    "0306 公安学": 32,
+    "0307 中共党史党建学": 2,
+    "0308 纪检监察学": 4,
+    "0401 教育学": 80,
+    "0402 心理学": 122,
+    "0403 体育学": 13,
+    "0501 中国语言文学": 164,
+    "0502 外国语言文学": 21,
+    "0503 新闻传播学": 14,
+    "0601 考古学": 2,
+    "0602 中国史": 52,
+    "0603 世界史": 24,
+    "0701 数学": 537,
+    "0702 物理学": 316,
+    "0703 化学": 322,
+    "0704 天文学": 70,
+    "0705 地理学": 219,
+    "0706 大气科学": 153,
+    "0707 海洋科学": 202,
+    "0708 地球物理学": 58,
+    "0709 地质学": 105,
+    "0710 生物学": 451,
+    "0711 系统科学": 49,
+    "0712 科学技术史": 2,
+    "0713 生态学": 103,
+    "0714 统计学": 83,
+    "0801 力学": 34,
+    "0802 机械工程": 183,
+    "0803 光学工程": 22,
+    "0804 仪器科学与技术": 10,
+    "0805 材料科学与工程": 244,
+    "0806 冶金工程": 15,
+    "0807 动力工程及工程热物理": 107,
+    "0808 电气工程": 71,
+    "0809 电子科学与技术": 69,
+    "0810 信息与通信工程": 78,
+    "0811 控制科学与工程": 15,
+    "0812 计算机科学与技术": 100,
+    "0813 建筑学": 24,
+    "0814 土木工程": 70,
+    "0815 水利工程": 17,
+    "0816 测绘科学与技术": 20,
+    "0817 化学工程与技术": 205,
+    "0818 地质资源与地质工程": 23,
+    "0819 矿业工程": 8,
+    "0820 石油与天然气工程": 18,
+    "0821 纺织科学与工程": 61,
+    "0822 轻工技术与工程": 4,
+    "0823 交通运输工程": 48,
+    "0824 船舶与海洋工程": 55,
+    "0825 航空宇航科学与技术": 62,
+    "0826 兵器科学与技术": 104,
+    "0827 核科学与技术": 38,
+    "0828 农业工程": 27,
+    "0829 林业工程": 49,
+    "0830 环境科学与工程": 160,
+    "0831 生物医学工程": 59,
+    "0832 食品科学与工程": 83,
+    "0833 城乡规划学": 1,
+    "0835 软件工程": 43,
+    "0836 生物工程": 35,
+    "0837 安全科学与工程": 43,
+    "0838 公安技术": 14,
+    "0839 网络空间安全": 5,
+    "0901 作物学": 101,
+    "0902 园艺学": 90,
+    "0903 农业资源与环境": 74,
+    "0904 植物保护": 65,
+    "0905 畜牧学": 57,
+    "0906 兽医学": 112,
+    "0907 林学": 55,
+    "0908 水产": 25,
+    "0909 草学": 12,
+    "0910 水土保持与荒漠化防治学": 8,
+    "1001 基础医学": 8,
+    "1002 临床医学": 34,
+    "1003 口腔医学": 3,
+    "1004 公共卫生与预防医学": 5,
+    "1005 中医学": 8,
+    "1006 中西医结合": 7,
+    "1007 药学": 12,
+    "1008 中药学": 9,
+    "1009 特种医学": 34,
+    "1011 护理学": 19,
+    "1012 法医学": 2,
+    "1101 军事思想与军事历史": 17,
+    "1102 战略学": 19,
+    "1103 联合作战学": 8,
+    "1104 军兵种作战学": 3,
+    "1105 军队指挥学": 19,
+    "1106 军队政治工作学": 6,
+    "1107 军事后勤学": 34,
+    "1108 军事装备学": 19,
+    "1109 军事管理学": 10,
+    "1110 军事训练学": 2,
+    "1111 军事智能": 30,
+    "1201 管理科学与工程": 39,
+    "1202 工商管理学": 29,
+    "1203 农林经济管理": 60,
+    "1204 公共管理学": 53,
+    "1205 信息资源管理": 18,
+    "1301 艺术学": 17,
+    "1401 集成电路科学与工程": 12,
+    "1402 国家安全学": 20,
+    "1403 设计学": 23,
+    "1404 遥感科学与技术": 23,
+    "1405 智能科学与技术": 13,
+    "1406 纳米科学与工程": 56,
+    "1407 区域国别学": 20,
+    "集成电路专题（一级学科待核定）": 3173
+  },
+  "profile_ids": [
+    "official-91485fef71c2981db0fc",
+    "official-380b7c398e1e6ccb5286",
+    "official-84aa3d7df8dd5f60bebf",
+    "official-5c2426a294eb617b6a73",
+    "official-7e0e0a6269583a2a2a8b",
+    "official-ef5418c6d57bfa9aca53",
+    "official-72a195f735440f10a482",
+    "official-0f8a6ed8195dc00d9b88",
+    "official-f568504ffe08456efb86",
+    "official-544a814be7951c13c44c",
+    "official-63d4cc2566632ec54e45",
+    "official-2b4d7da6bd9f7a715bc7",
+    "official-17f203a828d37448759b",
+    "official-287845744b51f848a8aa",
+    "official-882d078a43647494d45a",
+    "official-94d7ae63fbfc6a309396",
+    "official-6b15a503c004b9e67cc8",
+    "official-442b37226776df386e1e",
+    "official-ad8dfedcc766fd1f382a",
+    "official-50a7c9ff39df03fc3263",
+    "official-d013d2ec68187cde4a81",
+    "official-cab0d35f3d4703ae71b3",
+    "official-41d36cef032e7ee20fab",
+    "official-e6058d9400b782ed19b7",
+    "official-3fd8d60a51e0934ab30a",
+    "official-634330d125d8ffe48915",
+    "official-563d48d4224758ac7b7d",
+    "official-4f763e70720f72ef2675",
+    "official-7609dcffa76210462325",
+    "official-3a6086a46297e233e235",
+    "official-ea5fd400462aff4af8c8",
+    "official-1e74977b35652e27b291",
+    "official-98727a95ef185a1f437a",
+    "official-a0cedc261d08b25e7990",
+    "official-4c74d1722e4dc6eedfb0",
+    "official-0899da4d36911ff1647a",
+    "official-54f7e4233bdc7d750e07",
+    "official-3d5b9302ea459d079a17",
+    "official-e4ebe6710fb3df0c1949",
+    "official-98710a75bffb8b8250b4",
+    "official-9c0b4b9758961e60da41",
+    "official-6aa8fce08b69dda80460",
+    "official-b94f558e2395ffe99a48",
+    "official-e35dbe8de45f1f39ca20",
+    "official-8f21a3b13a9c7d5743fb",
+    "official-0b4860c748d5f866add4",
+    "official-f014c5f0fc708da2cc8a",
+    "official-b2448d7b7407e506a66f",
+    "official-ab9e71952a9a89d2c19e",
+    "official-0b506597b1195e57b0fd",
+    "official-2fb72326f66923cb6ea7",
+    "official-5129e2c49582ae44a1bb",
+    "official-b320f4a7fd72b3c0f20e",
+    "official-f53a7ee2d8a8fc1fff82",
+    "official-678d0ab5f6b8beb61b00",
+    "official-dbacb6bee1351a32bc9d",
+    "official-f958cbe0c26737cee081",
+    "official-eabed73387532271eade",
+    "official-23a16c0068d426978069",
+    "official-76e0eb8b410a173398e3",
+    "official-57549fc0239767c79d0d",
+    "official-72b03be66397fdb4501f",
+    "official-331533c65883eaa5df96",
+    "official-bca12dd7a16fd0e423b6",
+    "official-3666a10daaf4913b7e2a",
+    "official-58772e89320a89e6a370",
+    "official-fbf97af42a261e0ff0cc",
+    "official-fd80594680ad1067f025",
+    "official-fcc50cf1aaf2e28672c1",
+    "official-bc656bdb05be5cce6cdc",
+    "official-d79e65fd642dc4835485",
+    "official-2fe4d53efd50612c5cc6",
+    "official-ce3562de560fefa5a2d7",
+    "official-37de4a3c4edb23e15218",
+    "official-e3861c9d93968ea2b4ae",
+    "official-ae094e76b977f12df7de",
+    "official-a4c5dd15c390beedf686",
+    "official-ae63c0b7cbd831cd98d6",
+    "official-1134c178b38b0096be75",
+    "official-fbb2ceb7f556e74b933d",
+    "official-e96be9859512a13c6504",
+    "official-49fa33c4988d3969f375",
+    "official-733c14b329843e7f25f6",
+    "official-9ac836e27b7f20356993",
+    "official-dfd4882565156faf7bd4",
+    "official-e36b89ee9d5047eb2717",
+    "official-4c66790b390582dc029f",
+    "official-cdcc841ff8075955f7c2",
+    "official-e894695d5b35223b3c80",
+    "official-5f637a49d224c5bac44d",
+    "official-8b2d5f2b20200b98899c",
+    "official-33730f2134df0c47f254",
+    "official-d32c45b849f9f7ec7cd1",
+    "official-2a613aec53eb8c7c24df",
+    "official-600194baffd031224fef",
+    "official-1b582fa910371282ccc0",
+    "official-b8956cf95cd827263a51",
+    "official-158e2fe4bcd26a1c146f",
+    "official-f3afa4422ec6680f4098",
+    "official-7c09e4aeb067a0dc1f86",
+    "official-732a2e7d0949fce2939d",
+    "official-af3b08b16685ce4155eb",
+    "official-56b382211c499c3c7223",
+    "official-64306a39346f18b07c17",
+    "official-d9861d10e05a8a1131f5",
+    "official-31dd8e483dd51c2de685",
+    "official-1d898c9abd97169e6ebc",
+    "official-2f020517e8c1c247092a",
+    "official-f80a533f275d87c3a6f5",
+    "official-f1b53a97443df8534916",
+    "official-712e1bc88d131fc44f11",
+    "official-2f47603c91161d963169",
+    "official-b512ab96e95c8c9baddb",
+    "official-479c28c11aa04a0a9844",
+    "official-3bc77a05d2fd0b10f1a7",
+    "official-0fb89843837625e1f8cb",
+    "official-3f717a6144a6ac334482",
+    "official-0d6c543b7ed72288fbce",
+    "official-264459a84403813cec26",
+    "official-1e659da474222137fd7c",
+    "official-0d55bd1e03fce8098016",
+    "official-f4b30c036c98536287a2",
+    "official-e77f3c72884fb52e697c",
+    "official-26622190e70959073229",
+    "official-e65be194021c06aee1d8",
+    "official-616d17a9a8d7d6205c9a",
+    "official-5f68ab94dbe53f084eec",
+    "official-b59a3c05d762b3beee00",
+    "official-fe33f488cd77543c881e",
+    "official-31a6a9cda2db82ff5d68",
+    "official-5a3bb3da43fb03e0c0be",
+    "official-7e77768886982a358608",
+    "official-38006979e69903cf2bb5",
+    "official-f0a9012d70e0660e18b9",
+    "official-e435afbbbd5132277707",
+    "official-411ff56106636b01ed4f",
+    "official-5f61fd536a3f40bead7a",
+    "official-ef8df138886e33c3b465",
+    "official-b89241c1d71fc8d242d3",
+    "official-21dd9a4cd7f38b9d6d49",
+    "official-b5774b9f311f5c2c5975",
+    "official-b907558ec70910e22c40",
+    "official-33cb5613cf08d16ba75c",
+    "official-4d280d38c700aac2b7ac",
+    "official-eb488e8adf8f7517aedc",
+    "official-f8d802b2c0f20d5eb2c7",
+    "official-62bbd41b9a4ead9271f7",
+    "official-adcc3f11e7c3e615cb47",
+    "official-77868859234beb4e271f",
+    "official-988e65815002bb40a1d7",
+    "official-d1e57ab168ac5bb9ae6a",
+    "official-f561fb7779fd3b329ef2",
+    "official-34d07ac0b516b0a2f555",
+    "official-6ab5cca7233b3d430997",
+    "official-65f4748af1b999fab611",
+    "official-011d9e385016e5b22749",
+    "official-e65860f54dde463e91b4",
+    "official-45df9928c671dacaaab7",
+    "official-6fb6a860a0b912a57c67",
+    "official-383064e285b3aae5005b",
+    "official-b951da0cf36b59182f80",
+    "official-9f2ee81b6cef4687baae",
+    "official-123e2833f1f6679866d4",
+    "official-c298504b85743d995204",
+    "official-e8b4d0ff7db8a029dc68",
+    "official-b233a4c511e717e0498a",
+    "official-2a3f6c56a935e787790d",
+    "official-bcdb54cd01b68f6b3656",
+    "official-b33e51f67ca475bbc86f",
+    "official-4147e3934f28e46177b4",
+    "official-7ed3b5cfc91d7b66e253",
+    "official-07406818183283fb540b",
+    "official-2238d88f75702d3a9934",
+    "official-9c7caa559ac613e60754",
+    "official-6dfec406eea98b1dd574",
+    "official-0d073897ab08176a26dd",
+    "official-a436a7948e7d5b282319",
+    "official-3c80894f26d69787136d",
+    "official-27ded454300e05708a14",
+    "official-1f502f3f5999939fd15d",
+    "official-fed05937445b82acbc4d",
+    "official-9e00686e304c7a0ed14f",
+    "official-806cd76cf5f9063440bd",
+    "official-1b5a907b6baca6b612ad",
+    "official-dfe0a9aa0e3f93c3b578",
+    "official-0ae41a594a097de9d09a",
+    "official-e916a33ce4c4b7777190",
+    "official-5b5cd59891bc4b802a2b",
+    "official-71b29f00688911f8420e",
+    "official-ac6f35bdb547d01a27b7",
+    "official-e57e616cbaf2ff65474e",
+    "official-f66a96316d7c5de172bc",
+    "official-78e0267f13b5900a75b9",
+    "official-57422b16f4cc7eafeb02",
+    "official-4ac42d25d576c45f9118",
+    "official-2f05be10ee024780a1d7",
+    "official-72df12a9eab7ed4f306c",
+    "official-52827322a2fb61fe7b4e",
+    "official-4dec19b286afd825ddd3",
+    "official-4e6a1c140f86565d5992",
+    "official-ef47e163c278b7aa6035",
+    "official-a1ac10fd29ed16367488",
+    "official-1dabfa5b5e16d57f7e55",
+    "official-90dfad858d2f8daa5fc2",
+    "official-c07e76f6e06de05ae683"
+  ],
+  "after": {
+    "0101 哲学": 40,
+    "0201 理论经济学": 32,
+    "0202 应用经济学": 59,
+    "0301 法学": 28,
+    "0302 政治学": 17,
+    "0303 社会学": 24,
+    "0304 民族学": 8,
+    "0305 马克思主义理论": 41,
+    "0306 公安学": 32,
+    "0307 中共党史党建学": 2,
+    "0308 纪检监察学": 4,
+    "0401 教育学": 80,
+    "0402 心理学": 122,
+    "0403 体育学": 13,
+    "0501 中国语言文学": 164,
+    "0502 外国语言文学": 21,
+    "0503 新闻传播学": 14,
+    "0601 考古学": 41,
+    "0602 中国史": 52,
+    "0603 世界史": 24,
+    "0701 数学": 537,
+    "0702 物理学": 316,
+    "0703 化学": 322,
+    "0704 天文学": 70,
+    "0705 地理学": 219,
+    "0706 大气科学": 153,
+    "0707 海洋科学": 202,
+    "0708 地球物理学": 58,
+    "0709 地质学": 105,
+    "0710 生物学": 451,
+    "0711 系统科学": 49,
+    "0712 科学技术史": 16,
+    "0713 生态学": 103,
+    "0714 统计学": 83,
+    "0801 力学": 34,
+    "0802 机械工程": 183,
+    "0803 光学工程": 22,
+    "0804 仪器科学与技术": 56,
+    "0805 材料科学与工程": 244,
+    "0806 冶金工程": 15,
+    "0807 动力工程及工程热物理": 107,
+    "0808 电气工程": 71,
+    "0809 电子科学与技术": 69,
+    "0810 信息与通信工程": 78,
+    "0811 控制科学与工程": 15,
+    "0812 计算机科学与技术": 100,
+    "0813 建筑学": 24,
+    "0814 土木工程": 70,
+    "0815 水利工程": 17,
+    "0816 测绘科学与技术": 20,
+    "0817 化学工程与技术": 205,
+    "0818 地质资源与地质工程": 23,
+    "0819 矿业工程": 8,
+    "0820 石油与天然气工程": 18,
+    "0821 纺织科学与工程": 61,
+    "0822 轻工技术与工程": 4,
+    "0823 交通运输工程": 48,
+    "0824 船舶与海洋工程": 55,
+    "0825 航空宇航科学与技术": 62,
+    "0826 兵器科学与技术": 104,
+    "0827 核科学与技术": 38,
+    "0828 农业工程": 27,
+    "0829 林业工程": 49,
+    "0830 环境科学与工程": 160,
+    "0831 生物医学工程": 59,
+    "0832 食品科学与工程": 83,
+    "0833 城乡规划学": 63,
+    "0835 软件工程": 43,
+    "0836 生物工程": 35,
+    "0837 安全科学与工程": 43,
+    "0838 公安技术": 14,
+    "0839 网络空间安全": 34,
+    "0901 作物学": 101,
+    "0902 园艺学": 90,
+    "0903 农业资源与环境": 74,
+    "0904 植物保护": 65,
+    "0905 畜牧学": 57,
+    "0906 兽医学": 112,
+    "0907 林学": 55,
+    "0908 水产": 25,
+    "0909 草学": 12,
+    "0910 水土保持与荒漠化防治学": 8,
+    "1001 基础医学": 8,
+    "1002 临床医学": 34,
+    "1003 口腔医学": 3,
+    "1004 公共卫生与预防医学": 5,
+    "1005 中医学": 8,
+    "1006 中西医结合": 7,
+    "1007 药学": 12,
+    "1008 中药学": 9,
+    "1009 特种医学": 34,
+    "1011 护理学": 19,
+    "1012 法医学": 6,
+    "1101 军事思想与军事历史": 17,
+    "1102 战略学": 19,
+    "1103 联合作战学": 8,
+    "1104 军兵种作战学": 3,
+    "1105 军队指挥学": 19,
+    "1106 军队政治工作学": 6,
+    "1107 军事后勤学": 34,
+    "1108 军事装备学": 19,
+    "1109 军事管理学": 10,
+    "1110 军事训练学": 2,
+    "1111 军事智能": 30,
+    "1201 管理科学与工程": 39,
+    "1202 工商管理学": 29,
+    "1203 农林经济管理": 60,
+    "1204 公共管理学": 53,
+    "1205 信息资源管理": 18,
+    "1301 艺术学": 17,
+    "1401 集成电路科学与工程": 12,
+    "1402 国家安全学": 20,
+    "1403 设计学": 23,
+    "1404 遥感科学与技术": 23,
+    "1405 智能科学与技术": 13,
+    "1406 纳米科学与工程": 56,
+    "1407 区域国别学": 20,
+    "集成电路专题（一级学科待核定）": 3173
+  },
+  "deduplicated_cross_department_rows": 5,
+  "profiles": [
+    {
+      "id": "official-91485fef71c2981db0fc",
+      "name": "程农",
+      "institution": "中国人民大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 1,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "http://sis.ruc.edu.cn/ch/jzygzw/jxyyjzw/8896b351e7494e71b245e2d0688875aa.htm",
+          "fetched_at": "2026-10-14T03:43:46+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-380b7c398e1e6ccb5286",
+      "name": "陈华文",
+      "institution": "中国人民大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 3,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "http://sis.ruc.edu.cn/ch/jzygzw/jxyyjzw/e8f1027fe4f44ae4ac711e3e7c63ec08.htm",
+          "fetched_at": "2026-10-14T03:43:47+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-84aa3d7df8dd5f60bebf",
+      "name": "丁凡",
+      "institution": "中国人民大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 2,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "http://sis.ruc.edu.cn/ch/jzygzw/jxyyjzw/a1cf51d12bb742e49190161889c369aa.htm",
+          "fetched_at": "2026-10-14T03:43:48+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-5c2426a294eb617b6a73",
+      "name": "桂晓书",
+      "institution": "中国人民大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 1,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "http://sis.ruc.edu.cn/ch/jzygzw/jxyyjzw/76a598b390a44699aca2b81779ca4d3b.htm",
+          "fetched_at": "2026-10-14T03:43:47+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-7e0e0a6269583a2a2a8b",
+      "name": "何家丞",
+      "institution": "中国人民大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 5,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "http://sis.ruc.edu.cn/ch/jzygzw/jxyyjzw/17cc4305376f473a9f9e5c3c3b29708e.htm",
+          "fetched_at": "2026-10-14T03:43:49+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-ef5418c6d57bfa9aca53",
+      "name": "韩冬临",
+      "institution": "中国人民大学",
+      "status": "ready",
+      "papers": 5,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 4,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "http://sis.ruc.edu.cn/ch/jzygzw/jxyyjzw/1c2f375b107b45138bdfe440e2f86843.htm",
+          "fetched_at": "2026-10-14T03:43:50+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-72a195f735440f10a482",
+      "name": "黄晨",
+      "institution": "中国人民大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 2,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "http://sis.ruc.edu.cn/ch/jzygzw/jxyyjzw/e4df50f04efe4f549cc42b6da98fb833.htm",
+          "fetched_at": "2026-10-14T03:43:51+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-0f8a6ed8195dc00d9b88",
+      "name": "吕杰",
+      "institution": "中国人民大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 2,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "http://sis.ruc.edu.cn/ch/jzygzw/jxyyjzw/d0a8fbb47fb74adc856503de6196c3ff.htm",
+          "fetched_at": "2026-10-14T03:43:52+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-f568504ffe08456efb86",
+      "name": "林尚立",
+      "institution": "中国人民大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 1,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "http://sis.ruc.edu.cn/ch/jzygzw/jxyyjzw/c7e2da38c7834021aad72700e2e42552.htm",
+          "fetched_at": "2026-10-14T03:43:53+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-544a814be7951c13c44c",
+      "name": "牛彤",
+      "institution": "中国人民大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 4,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "http://sis.ruc.edu.cn/ch/jzygzw/jxyyjzw/e3db3a0c744a41d7a72716cbe91eb907.htm",
+          "fetched_at": "2026-10-14T03:43:53+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-63d4cc2566632ec54e45",
+      "name": "欧树军",
+      "institution": "中国人民大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "http://sis.ruc.edu.cn/ch/jzygzw/jxyyjzw/98b9698e561e4530a07b7533dcfe72d8.htm",
+          "fetched_at": "2026-10-14T03:43:54+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-2b4d7da6bd9f7a715bc7",
+      "name": "邱静",
+      "institution": "中国人民大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 2,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "http://sis.ruc.edu.cn/ch/jzygzw/jxyyjzw/a837dfc1a58d427395f600fd784f51f0.htm",
+          "fetched_at": "2026-10-14T03:43:55+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-17f203a828d37448759b",
+      "name": "任锋",
+      "institution": "中国人民大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 1,
+      "recruitment": 0,
+      "biography": 1,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "http://sis.ruc.edu.cn/ch/jzygzw/jxyyjzw/2b60b5cadd6740debcd75e5c09ce4f40.htm",
+          "fetched_at": "2026-10-14T03:43:56+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-287845744b51f848a8aa",
+      "name": "杨光斌",
+      "institution": "中国人民大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 4,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "http://sis.ruc.edu.cn/ch/jzygzw/jxyyjzw/3480c08086714358ae0e9a845070ab1c.htm",
+          "fetched_at": "2026-10-14T03:43:57+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-882d078a43647494d45a",
+      "name": "张广生",
+      "institution": "中国人民大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 2,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "http://sis.ruc.edu.cn/ch/jzygzw/jxyyjzw/c1d0fba47a9b416da5e07cc62a039fd5.htm",
+          "fetched_at": "2026-10-14T03:43:56+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-94d7ae63fbfc6a309396",
+      "name": "朱晓明",
+      "institution": "中国人民大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 5,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "http://sis.ruc.edu.cn/ch/jzygzw/jxyyjzw/7a74704438994efc8147fef4886dd143.htm",
+          "fetched_at": "2026-10-14T03:43:59+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-6b15a503c004b9e67cc8",
+      "name": "冯玥",
+      "institution": "北京大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 2,
+      "admission_notices": 5,
+      "pages": [
+        {
+          "url": "https://archaeology.pku.edu.cn/info/1409/5269.htm",
+          "fetched_at": "2026-10-14T03:43:58+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-442b37226776df386e1e",
+      "name": "何嘉宁",
+      "institution": "北京大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 2,
+      "admission_notices": 5,
+      "pages": [
+        {
+          "url": "https://archaeology.pku.edu.cn/info/1409/5272.htm",
+          "fetched_at": "2026-10-14T03:43:58+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-ad8dfedcc766fd1f382a",
+      "name": "李锋",
+      "institution": "北京大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 2,
+      "admission_notices": 5,
+      "pages": [
+        {
+          "url": "https://archaeology.pku.edu.cn/info/1409/5270.htm",
+          "fetched_at": "2026-10-14T03:43:58+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-50a7c9ff39df03fc3263",
+      "name": "曲彤丽",
+      "institution": "北京大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 1,
+      "admission_notices": 5,
+      "pages": [
+        {
+          "url": "https://archaeology.pku.edu.cn/info/1409/5268.htm",
+          "fetched_at": "2026-10-14T03:44:02+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-d013d2ec68187cde4a81",
+      "name": "曹大志",
+      "institution": "北京大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 4,
+      "admission_notices": 5,
+      "pages": [
+        {
+          "url": "https://archaeology.pku.edu.cn/info/1410/5280.htm",
+          "fetched_at": "2026-10-14T03:44:01+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-cab0d35f3d4703ae71b3",
+      "name": "邓振华",
+      "institution": "北京大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 2,
+      "admission_notices": 5,
+      "pages": [
+        {
+          "url": "https://archaeology.pku.edu.cn/info/1410/6038.htm",
+          "fetched_at": "2026-10-14T03:44:02+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-41d36cef032e7ee20fab",
+      "name": "秦岭",
+      "institution": "北京大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 2,
+      "admission_notices": 5,
+      "pages": [
+        {
+          "url": "https://archaeology.pku.edu.cn/info/1410/5279.htm",
+          "fetched_at": "2026-10-14T03:44:02+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-e6058d9400b782ed19b7",
+      "name": "田天",
+      "institution": "北京大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 2,
+      "admission_notices": 5,
+      "pages": [
+        {
+          "url": "https://archaeology.pku.edu.cn/info/1410/5275.htm",
+          "fetched_at": "2026-10-14T03:44:04+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-3fd8d60a51e0934ab30a",
+      "name": "张弛",
+      "institution": "北京大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 1,
+      "admission_notices": 5,
+      "pages": [
+        {
+          "url": "https://archaeology.pku.edu.cn/info/1410/5278.htm",
+          "fetched_at": "2026-10-14T03:44:03+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-634330d125d8ffe48915",
+      "name": "张海",
+      "institution": "北京大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 1,
+      "admission_notices": 5,
+      "pages": [
+        {
+          "url": "https://archaeology.pku.edu.cn/info/1410/5277.htm",
+          "fetched_at": "2026-10-14T03:44:04+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-563d48d4224758ac7b7d",
+      "name": "赵昊",
+      "institution": "北京大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 1,
+      "admission_notices": 5,
+      "pages": [
+        {
+          "url": "https://archaeology.pku.edu.cn/info/1410/5276.htm",
+          "fetched_at": "2026-10-14T03:44:05+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-4f763e70720f72ef2675",
+      "name": "陈凌",
+      "institution": "北京大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 3,
+      "admission_notices": 5,
+      "pages": [
+        {
+          "url": "https://archaeology.pku.edu.cn/info/1411/5289.htm",
+          "fetched_at": "2026-10-14T03:44:05+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-7609dcffa76210462325",
+      "name": "丁雨",
+      "institution": "北京大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 1,
+      "admission_notices": 5,
+      "pages": [
+        {
+          "url": "https://archaeology.pku.edu.cn/info/1411/5293.htm",
+          "fetched_at": "2026-10-14T03:44:05+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-3a6086a46297e233e235",
+      "name": "杭侃",
+      "institution": "北京大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 1,
+      "recruitment": 0,
+      "biography": 2,
+      "admission_notices": 5,
+      "pages": [
+        {
+          "url": "https://archaeology.pku.edu.cn/info/1411/5287.htm",
+          "fetched_at": "2026-10-14T03:44:06+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-ea5fd400462aff4af8c8",
+      "name": "李云河",
+      "institution": "北京大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 2,
+      "admission_notices": 5,
+      "pages": [
+        {
+          "url": "https://archaeology.pku.edu.cn/info/1411/5284.htm",
+          "fetched_at": "2026-10-14T03:44:06+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-1e74977b35652e27b291",
+      "name": "刘未",
+      "institution": "北京大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 1,
+      "admission_notices": 5,
+      "pages": [
+        {
+          "url": "https://archaeology.pku.edu.cn/info/1411/5290.htm",
+          "fetched_at": "2026-10-14T03:44:06+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-98727a95ef185a1f437a",
+      "name": "倪润安",
+      "institution": "北京大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 5,
+      "pages": [
+        {
+          "url": "https://archaeology.pku.edu.cn/info/1411/5292.htm",
+          "fetched_at": "2026-10-14T03:44:07+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-a0cedc261d08b25e7990",
+      "name": "沈睿文",
+      "institution": "北京大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 3,
+      "admission_notices": 5,
+      "pages": [
+        {
+          "url": "https://archaeology.pku.edu.cn/info/1411/5286.htm",
+          "fetched_at": "2026-10-14T03:44:07+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-4c74d1722e4dc6eedfb0",
+      "name": "韦正",
+      "institution": "北京大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 2,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 5,
+      "pages": [
+        {
+          "url": "https://archaeology.pku.edu.cn/info/1411/5285.htm",
+          "fetched_at": "2026-10-14T03:44:08+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-0899da4d36911ff1647a",
+      "name": "魏正中",
+      "institution": "北京大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 1,
+      "admission_notices": 5,
+      "pages": [
+        {
+          "url": "https://archaeology.pku.edu.cn/info/1411/5288.htm",
+          "fetched_at": "2026-10-14T03:44:08+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-54f7e4233bdc7d750e07",
+      "name": "杨哲峰",
+      "institution": "北京大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 4,
+      "admission_notices": 5,
+      "pages": [
+        {
+          "url": "https://archaeology.pku.edu.cn/info/1411/5291.htm",
+          "fetched_at": "2026-10-14T03:44:08+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-3d5b9302ea459d079a17",
+      "name": "王姝婧",
+      "institution": "北京大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 5,
+      "admission_notices": 5,
+      "pages": [
+        {
+          "url": "https://archaeology.pku.edu.cn/info/1412/5296.htm",
+          "fetched_at": "2026-10-14T03:44:09+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-e4ebe6710fb3df0c1949",
+      "name": "陈建立",
+      "institution": "北京大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 1,
+      "admission_notices": 5,
+      "pages": [
+        {
+          "url": "https://archaeology.pku.edu.cn/info/1413/5298.htm",
+          "fetched_at": "2026-10-14T03:44:14+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-98710a75bffb8b8250b4",
+      "name": "崔剑锋",
+      "institution": "北京大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 1,
+      "admission_notices": 5,
+      "pages": [
+        {
+          "url": "https://archaeology.pku.edu.cn/info/1413/5299.htm",
+          "fetched_at": "2026-10-14T03:44:10+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-9c0b4b9758961e60da41",
+      "name": "姜晓晨阳",
+      "institution": "北京大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 2,
+      "admission_notices": 5,
+      "pages": [
+        {
+          "url": "https://archaeology.pku.edu.cn/info/1413/5302.htm",
+          "fetched_at": "2026-10-14T03:44:11+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-6aa8fce08b69dda80460",
+      "name": "宁超",
+      "institution": "北京大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 3,
+      "admission_notices": 5,
+      "pages": [
+        {
+          "url": "https://archaeology.pku.edu.cn/info/1413/5301.htm",
+          "fetched_at": "2026-10-14T03:44:10+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-b94f558e2395ffe99a48",
+      "name": "宋殷",
+      "institution": "北京大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 2,
+      "admission_notices": 5,
+      "pages": [
+        {
+          "url": "https://archaeology.pku.edu.cn/info/1413/5300.htm",
+          "fetched_at": "2026-10-14T03:44:11+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-e35dbe8de45f1f39ca20",
+      "name": "吴小红",
+      "institution": "北京大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 4,
+      "admission_notices": 5,
+      "pages": [
+        {
+          "url": "https://archaeology.pku.edu.cn/info/1413/5297.htm",
+          "fetched_at": "2026-10-14T03:44:11+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-8f21a3b13a9c7d5743fb",
+      "name": "张予南",
+      "institution": "北京大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 2,
+      "admission_notices": 5,
+      "pages": [
+        {
+          "url": "https://archaeology.pku.edu.cn/info/1413/5303.htm",
+          "fetched_at": "2026-10-14T03:44:12+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-0b4860c748d5f866add4",
+      "name": "彭明浩",
+      "institution": "北京大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 1,
+      "admission_notices": 5,
+      "pages": [
+        {
+          "url": "https://archaeology.pku.edu.cn/info/1414/5304.htm",
+          "fetched_at": "2026-10-14T03:44:15+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-f014c5f0fc708da2cc8a",
+      "name": "徐怡涛",
+      "institution": "北京大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 1,
+      "admission_notices": 5,
+      "pages": [
+        {
+          "url": "https://archaeology.pku.edu.cn/info/1414/5305.htm",
+          "fetched_at": "2026-10-14T03:44:14+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-b2448d7b7407e506a66f",
+      "name": "俞莉娜",
+      "institution": "北京大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 5,
+      "admission_notices": 5,
+      "pages": [
+        {
+          "url": "https://archaeology.pku.edu.cn/info/1414/5306.htm",
+          "fetched_at": "2026-10-14T03:44:14+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-ab9e71952a9a89d2c19e",
+      "name": "张剑葳",
+      "institution": "北京大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 5,
+      "pages": [
+        {
+          "url": "https://archaeology.pku.edu.cn/info/1414/5307.htm",
+          "fetched_at": "2026-10-14T03:44:15+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-0b506597b1195e57b0fd",
+      "name": "胡东波",
+      "institution": "北京大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 1,
+      "admission_notices": 5,
+      "pages": [
+        {
+          "url": "https://archaeology.pku.edu.cn/info/1415/5309.htm",
+          "fetched_at": "2026-10-14T03:44:15+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-2fb72326f66923cb6ea7",
+      "name": "胡钢",
+      "institution": "北京大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 5,
+      "pages": [
+        {
+          "url": "https://archaeology.pku.edu.cn/info/1415/5308.htm",
+          "fetched_at": "2026-10-14T03:44:16+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-5129e2c49582ae44a1bb",
+      "name": "周双林",
+      "institution": "北京大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 1,
+      "admission_notices": 5,
+      "pages": [
+        {
+          "url": "https://archaeology.pku.edu.cn/info/1415/5310.htm",
+          "fetched_at": "2026-10-14T03:44:18+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-b320f4a7fd72b3c0f20e",
+      "name": "黎婉欣",
+      "institution": "北京大学",
+      "status": "ready",
+      "papers": 4,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 1,
+      "admission_notices": 5,
+      "pages": [
+        {
+          "url": "https://archaeology.pku.edu.cn/info/1416/5312.htm",
+          "fetched_at": "2026-10-14T03:44:17+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-f53a7ee2d8a8fc1fff82",
+      "name": "王思渝",
+      "institution": "北京大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 1,
+      "recruitment": 0,
+      "biography": 5,
+      "admission_notices": 5,
+      "pages": [
+        {
+          "url": "https://archaeology.pku.edu.cn/info/1416/5311.htm",
+          "fetched_at": "2026-10-14T03:44:18+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-678d0ab5f6b8beb61b00",
+      "name": "张成渝",
+      "institution": "北京大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 1,
+      "admission_notices": 5,
+      "pages": [
+        {
+          "url": "https://archaeology.pku.edu.cn/info/1416/5313.htm",
+          "fetched_at": "2026-10-14T03:44:18+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-dbacb6bee1351a32bc9d",
+      "name": "冯志华",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 2,
+      "biography": 4,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "http://faculty.ustc.edu.cn/%7EZrqaU3/zh_CN/index.htm",
+          "fetched_at": "2026-10-14T03:44:21+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-f958cbe0c26737cee081",
+      "name": "张世武",
+      "institution": "中国科学技术大学",
+      "status": "catalog",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 0,
+      "admission_notices": 0,
+      "pages": [],
+      "errors": [
+        "未读到页面：http://dslx.ustc.edu.cn/?menu=expert_paper&expertid=1439（ValueError）"
+      ]
+    },
+    {
+      "id": "official-eabed73387532271eade",
+      "name": "徐晓嵘",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 2,
+      "biography": 0,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "http://faculty.ustc.edu.cn/%7E2e6Vru/zh_CN/index.htm",
+          "fetched_at": "2026-10-14T03:44:22+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-23a16c0068d426978069",
+      "name": "赵旸",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 2,
+      "biography": 5,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://pmpi.ustc.edu.cn/2020/0307/c19780a414122/page.htm",
+          "fetched_at": "2026-10-14T03:44:20+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-76e0eb8b410a173398e3",
+      "name": "吴东",
+      "institution": "中国科学技术大学",
+      "status": "catalog",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 2,
+      "biography": 0,
+      "admission_notices": 0,
+      "pages": [],
+      "errors": [
+        "未读到页面：http://dslx.ustc.edu.cn/?menu=expert_paper&expertid=4035（ValueError）"
+      ]
+    },
+    {
+      "id": "official-57549fc0239767c79d0d",
+      "name": "胡衍雷",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 2,
+      "biography": 5,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://pmpi.ustc.edu.cn/2021/1222/c19780a540342/page.htm",
+          "fetched_at": "2026-10-14T03:44:25+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-72b03be66397fdb4501f",
+      "name": "刘诚",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 6,
+      "relations": 1,
+      "recruitment": 1,
+      "biography": 1,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://faculty.ustc.edu.cn/liucheng/zh_CN/index/23529/list/index.htm",
+          "fetched_at": "2026-10-14T03:44:25+00:00",
+          "source_kind": "学院教师主页"
+        },
+        {
+          "url": "https://faculty.ustc.edu.cn/liucheng/zh_CN/zhym/23530/list/index.htm",
+          "fetched_at": "2026-10-14T03:44:26+00:00",
+          "source_kind": "个人主页栏目"
+        },
+        {
+          "url": "https://faculty.ustc.edu.cn/liucheng/zh_CN/lwcg/23532/list/index.htm",
+          "fetched_at": "2026-10-14T03:44:28+00:00",
+          "source_kind": "个人主页栏目"
+        },
+        {
+          "url": "https://faculty.ustc.edu.cn/liucheng/zh_CN/zsxx/23541/list/index.htm",
+          "fetched_at": "2026-10-14T03:44:29+00:00",
+          "source_kind": "个人主页栏目"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-331533c65883eaa5df96",
+      "name": "盛东",
+      "institution": "中国科学技术大学",
+      "status": "catalog",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 0,
+      "admission_notices": 0,
+      "pages": [],
+      "errors": [
+        "未读到页面：http://dslx.ustc.edu.cn/?menu=expert_paper&expertid=5684（ValueError）"
+      ]
+    },
+    {
+      "id": "official-bca12dd7a16fd0e423b6",
+      "name": "田超",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 2,
+      "biography": 5,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://faculty.ustc.edu.cn/tianchao/index.htm",
+          "fetched_at": "2026-10-14T03:44:27+00:00",
+          "source_kind": "学院教师主页"
+        },
+        {
+          "url": "https://faculty.ustc.edu.cn/tianchao/zh_CN/zdylm/986663/list/index.htm",
+          "fetched_at": "2026-10-14T03:44:29+00:00",
+          "source_kind": "个人主页栏目"
+        },
+        {
+          "url": "https://faculty.ustc.edu.cn/tianchao/zh_CN/zdylm/986666/list/index.htm",
+          "fetched_at": "2026-10-14T03:44:31+00:00",
+          "source_kind": "个人主页栏目"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-3666a10daaf4913b7e2a",
+      "name": "金一",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 10,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 5,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "http://faculty.ustc.edu.cn/%7EnQjI3m/zh_CN/index.htm",
+          "fetched_at": "2026-10-14T03:44:32+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-58772e89320a89e6a370",
+      "name": "毛磊",
+      "institution": "中国科学技术大学",
+      "status": "catalog",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 2,
+      "biography": 0,
+      "admission_notices": 0,
+      "pages": [],
+      "errors": [
+        "未读到页面：http://dslx.ustc.edu.cn/?menu=expert_paper&expertid=6359（ValueError）"
+      ]
+    },
+    {
+      "id": "official-fbf97af42a261e0ff0cc",
+      "name": "孙帅帅",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 8,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 5,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://pmpi.ustc.edu.cn/2020/0922/c19780a450379/page.htm",
+          "fetched_at": "2026-10-14T03:44:33+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-fd80594680ad1067f025",
+      "name": "王柳",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 15,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 5,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://faculty.ustc.edu.cn/liuwang/",
+          "fetched_at": "2026-10-14T03:44:33+00:00",
+          "source_kind": "学院教师主页"
+        },
+        {
+          "url": "https://faculty.ustc.edu.cn/liuwang/zh_CN/zhym/996746/list/index.htm",
+          "fetched_at": "2026-10-14T03:44:35+00:00",
+          "source_kind": "个人主页栏目"
+        },
+        {
+          "url": "https://faculty.ustc.edu.cn/liuwang/zh_CN/lwcg/996748/list/index.htm",
+          "fetched_at": "2026-10-14T03:44:39+00:00",
+          "source_kind": "个人主页栏目"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-fcc50cf1aaf2e28672c1",
+      "name": "潘挺睿",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 2,
+      "biography": 4,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://sz.ustc.edu.cn/rcdw_show/26.html",
+          "fetched_at": "2026-10-14T03:44:35+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-bc656bdb05be5cce6cdc",
+      "name": "陈杨",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 3,
+      "recruitment": 2,
+      "biography": 2,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "http://faculty.ustc.edu.cn/%7ENb2u2m/zh_CN/index.htm",
+          "fetched_at": "2026-10-14T03:44:35+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-d79e65fd642dc4835485",
+      "name": "王洪波",
+      "institution": "中国科学技术大学",
+      "status": "catalog",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 2,
+      "biography": 0,
+      "admission_notices": 0,
+      "pages": [],
+      "errors": [
+        "未读到页面：http://dslx.ustc.edu.cn/?menu=expert_paper&expertid=6566487（ValueError）"
+      ]
+    },
+    {
+      "id": "official-2fe4d53efd50612c5cc6",
+      "name": "杨亮",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 5,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://faculty.ustc.edu.cn/Yang_Liang/zh_CN/index.htm",
+          "fetched_at": "2026-10-14T03:44:40+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-ce3562de560fefa5a2d7",
+      "name": "汪国睿",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 10,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 1,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "http://dslx.ustc.edu.cn/?menu=expert_paper_detail&expertid=6566554",
+          "fetched_at": "2026-10-14T03:44:40+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-37de4a3c4edb23e15218",
+      "name": "倪劲成",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 2,
+      "biography": 2,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://faculty.ustc.edu.cn/nijincheng/zh_CN/",
+          "fetched_at": "2026-10-14T03:44:41+00:00",
+          "source_kind": "学院教师主页"
+        },
+        {
+          "url": "https://faculty.ustc.edu.cn/nijincheng/zh_CN/zdylm/988904/list/index.htm",
+          "fetched_at": "2026-10-14T03:44:43+00:00",
+          "source_kind": "个人主页栏目"
+        },
+        {
+          "url": "https://faculty.ustc.edu.cn/nijincheng/zh_CN/zdylm/988907/list/index.htm",
+          "fetched_at": "2026-10-14T03:44:46+00:00",
+          "source_kind": "个人主页栏目"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-e3861c9d93968ea2b4ae",
+      "name": "刘之光",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 2,
+      "biography": 0,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "http://faculty.ustc.edu.cn/%7EqqYJFr/zh_CN/index.htm",
+          "fetched_at": "2026-10-14T03:44:41+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-ae094e76b977f12df7de",
+      "name": "刘果",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 2,
+      "biography": 5,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "http://faculty.ustc.edu.cn/%7EQ3AzAr/zh_CN/index.htm",
+          "fetched_at": "2026-10-14T03:44:43+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-a4c5dd15c390beedf686",
+      "name": "游尚挺",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 0,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://faculty.ustc.edu.cn/youshangting",
+          "fetched_at": "2026-10-14T03:44:46+00:00",
+          "source_kind": "学院教师主页"
+        },
+        {
+          "url": "https://faculty.ustc.edu.cn/youshangting/zh_CN/zhym/996415/list/index.htm",
+          "fetched_at": "2026-10-14T03:44:50+00:00",
+          "source_kind": "个人主页栏目"
+        },
+        {
+          "url": "https://faculty.ustc.edu.cn/youshangting/zh_CN/zdylm/996416/list/index.htm",
+          "fetched_at": "2026-10-14T03:44:51+00:00",
+          "source_kind": "个人主页栏目"
+        },
+        {
+          "url": "https://faculty.ustc.edu.cn/youshangting/zh_CN/zdylm/996418/list/index.htm",
+          "fetched_at": "2026-10-14T03:44:52+00:00",
+          "source_kind": "个人主页栏目"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-ae63c0b7cbd831cd98d6",
+      "name": "冯伟",
+      "institution": "中国科学技术大学",
+      "status": "catalog",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 0,
+      "admission_notices": 0,
+      "pages": [],
+      "errors": [
+        "未读到页面：http://dslx.ustc.edu.cn/?menu=expert_paper&expertid=6571294（ValueError）"
+      ]
+    },
+    {
+      "id": "official-1134c178b38b0096be75",
+      "name": "金熠",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 0,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "http://faculty.ustc.edu.cn/%7E7FRZ3m/zh_CN/index.htm",
+          "fetched_at": "2026-10-14T03:44:51+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-fbb2ceb7f556e74b933d",
+      "name": "翟超",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 5,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://pmpi.ustc.edu.cn/2020/0304/c19780a414023/page.htm",
+          "fetched_at": "2026-10-14T03:44:49+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-e96be9859512a13c6504",
+      "name": "李家文",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 1,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "http://faculty.ustc.edu.cn/%7Ee2mqQr/zh_CN/index.htm",
+          "fetched_at": "2026-10-14T03:44:51+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-49fa33c4988d3969f375",
+      "name": "石云里",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 2,
+      "biography": 5,
+      "admission_notices": 3,
+      "pages": [
+        {
+          "url": "https://hsta.ustc.edu.cn/2010/1008/c2770a21927/pagem.htm",
+          "fetched_at": "2026-10-14T03:44:50+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-733c14b329843e7f25f6",
+      "name": "付邦红",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 3,
+      "admission_notices": 3,
+      "pages": [
+        {
+          "url": "https://hsta.ustc.edu.cn/2010/1008/c2771a21914/pagem.htm",
+          "fetched_at": "2026-10-14T03:44:54+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-9ac836e27b7f20356993",
+      "name": "丁兆君",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 0,
+      "admission_notices": 3,
+      "pages": [
+        {
+          "url": "https://hsta.ustc.edu.cn/2016/0805/c2771a21845/pagem.htm",
+          "fetched_at": "2026-10-14T03:44:53+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-dfd4882565156faf7bd4",
+      "name": "范安川",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 5,
+      "admission_notices": 3,
+      "pages": [
+        {
+          "url": "https://hsta.ustc.edu.cn/2016/0831/c2771a21853/pagem.htm",
+          "fetched_at": "2026-10-14T03:48:29+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-e36b89ee9d5047eb2717",
+      "name": "张兴香",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 1,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 2,
+      "admission_notices": 3,
+      "pages": [
+        {
+          "url": "https://hsta.ustc.edu.cn/2021/0126/c2771a469727/pagem.htm",
+          "fetched_at": "2026-10-14T03:44:55+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-4c66790b390582dc029f",
+      "name": "王安轶",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 5,
+      "admission_notices": 3,
+      "pages": [
+        {
+          "url": "https://hsta.ustc.edu.cn/2021/0525/c2771a508343/pagem.htm",
+          "fetched_at": "2026-10-14T03:44:55+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-cdcc841ff8075955f7c2",
+      "name": "钮卫星",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 1,
+      "admission_notices": 3,
+      "pages": [
+        {
+          "url": "https://hsta.ustc.edu.cn/2019/0717/c2770a389129/pagem.htm",
+          "fetched_at": "2026-10-14T03:44:56+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-e894695d5b35223b3c80",
+      "name": "朱剑",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 8,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 0,
+      "admission_notices": 3,
+      "pages": [
+        {
+          "url": "https://hsta.ustc.edu.cn/2021/1020/c2771a526151/pagem.htm",
+          "fetched_at": "2026-10-14T03:44:56+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-5f637a49d224c5bac44d",
+      "name": "钱斌",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 6,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 0,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "http://dslx.ustc.edu.cn/?menu=expert_paper_detail&expertid=6566470",
+          "fetched_at": "2026-10-14T03:44:57+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-8b2d5f2b20200b98899c",
+      "name": "王程韡",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 5,
+      "admission_notices": 3,
+      "pages": [
+        {
+          "url": "https://hsta.ustc.edu.cn/2022/0725/c2770a563410/pagem.htm",
+          "fetched_at": "2026-10-14T03:44:57+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-33730f2134df0c47f254",
+      "name": "吴卫红",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 0,
+      "admission_notices": 3,
+      "pages": [
+        {
+          "url": "https://hsta.ustc.edu.cn/2023/1201/c2770a623143/pagem.htm",
+          "fetched_at": "2026-10-14T03:44:58+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-d32c45b849f9f7ec7cd1",
+      "name": "马啸",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 5,
+      "admission_notices": 3,
+      "pages": [
+        {
+          "url": "https://hsta.ustc.edu.cn/2024/0920/c2770a654132/pagem.htm",
+          "fetched_at": "2026-10-14T03:45:00+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-2a613aec53eb8c7c24df",
+      "name": "李为亚",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 0,
+      "admission_notices": 3,
+      "pages": [
+        {
+          "url": "https://hsta.ustc.edu.cn/2022/1005/c2770a573822/pagem.htm",
+          "fetched_at": "2026-10-14T03:44:59+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-600194baffd031224fef",
+      "name": "俞能海",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 5,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "http://faculty.ustc.edu.cn/%7Eii2uE3/zh_CN/index.htm",
+          "fetched_at": "2026-10-14T03:45:02+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-1b582fa910371282ccc0",
+      "name": "李厚强",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 4,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://eeis.ustc.edu.cn/2010/0825/c2648a21007/page.htm",
+          "fetched_at": "2026-10-14T03:45:03+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-b8956cf95cd827263a51",
+      "name": "李斌",
+      "institution": "中国科学技术大学",
+      "status": "catalog",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 0,
+      "admission_notices": 0,
+      "pages": [],
+      "errors": [
+        "未读到页面：http://dslx.ustc.edu.cn/?menu=expert_paper&expertid=1379（ValueError）"
+      ]
+    },
+    {
+      "id": "official-158e2fe4bcd26a1c146f",
+      "name": "刘斌",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 11,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 2,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://faculty.ustc.edu.cn/flowice/zh_CN/index.htm",
+          "fetched_at": "2026-10-14T03:45:01+00:00",
+          "source_kind": "学院教师主页"
+        },
+        {
+          "url": "https://faculty.ustc.edu.cn/flowice/zh_CN/zhym/222794/list/index.htm",
+          "fetched_at": "2026-10-14T03:45:02+00:00",
+          "source_kind": "个人主页栏目"
+        },
+        {
+          "url": "https://faculty.ustc.edu.cn/flowice/zh_CN/lwcg/222796/list/index.htm",
+          "fetched_at": "2026-10-14T03:45:06+00:00",
+          "source_kind": "个人主页栏目"
+        },
+        {
+          "url": "https://faculty.ustc.edu.cn/flowice/zh_CN/zsxx/222805/list/index.htm",
+          "fetched_at": "2026-10-14T03:45:07+00:00",
+          "source_kind": "个人主页栏目"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-f3afa4422ec6680f4098",
+      "name": "朱祖勍",
+      "institution": "中国科学技术大学",
+      "status": "catalog",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 0,
+      "admission_notices": 0,
+      "pages": [],
+      "errors": [
+        "未读到页面：http://dslx.ustc.edu.cn/?menu=expert_paper&expertid=1796（ValueError）"
+      ]
+    },
+    {
+      "id": "official-7c09e4aeb067a0dc1f86",
+      "name": "薛开平",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 0,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "http://faculty.ustc.edu.cn/%7EuAJBZn/zh_CN/index.htm",
+          "fetched_at": "2026-10-14T03:45:07+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-732a2e7d0949fce2939d",
+      "name": "彭承志",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 0,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "http://faculty.ustc.edu.cn/%7E6BJJRr/zh_CN/index.htm",
+          "fetched_at": "2026-10-14T03:45:13+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-af3b08b16685ce4155eb",
+      "name": "胡红钢",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 7,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 0,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "http://dslx.ustc.edu.cn/?menu=expert_paper_detail&expertid=3707",
+          "fetched_at": "2026-10-14T03:45:08+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-56b382211c499c3c7223",
+      "name": "张驰",
+      "institution": "中国科学技术大学",
+      "status": "catalog",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 0,
+      "admission_notices": 0,
+      "pages": [],
+      "errors": [
+        "未读到页面：http://dslx.ustc.edu.cn/?menu=expert_paper&expertid=3725（ValueError）"
+      ]
+    },
+    {
+      "id": "official-64306a39346f18b07c17",
+      "name": "查正军",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 4,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 1,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "http://dslx.ustc.edu.cn/?menu=expert_paper_detail&expertid=3918",
+          "fetched_at": "2026-10-14T03:45:09+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-d9861d10e05a8a1131f5",
+      "name": "张卫明",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 0,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "http://staff.ustc.edu.cn/~zhangwm/",
+          "fetched_at": "2026-10-14T03:45:12+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-31dd8e483dd51c2de685",
+      "name": "廖胜凯",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 3,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 0,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "http://quantum.ustc.edu.cn/web/node/365",
+          "fetched_at": "2026-10-14T03:45:10+00:00",
+          "source_kind": "学院教师主页"
+        },
+        {
+          "url": "http://quantum.ustc.edu.cn/web/node/762",
+          "fetched_at": "2026-10-14T03:45:11+00:00",
+          "source_kind": "个人主页栏目"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-1d898c9abd97169e6ebc",
+      "name": "龚晨",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 1,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://eeis.ustc.edu.cn/2016/0920/c2648a19447/page.htm",
+          "fetched_at": "2026-10-14T03:45:15+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-2f020517e8c1c247092a",
+      "name": "李向阳",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 0,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "http://staff.ustc.edu.cn/~xiangyangli/",
+          "fetched_at": "2026-10-14T03:45:15+00:00",
+          "source_kind": "学院教师主页"
+        },
+        {
+          "url": "http://staff.ustc.edu.cn/~xiangyangli/research.html",
+          "fetched_at": "2026-10-14T03:45:16+00:00",
+          "source_kind": "个人主页栏目"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-f80a533f275d87c3a6f5",
+      "name": "张先得",
+      "institution": "中国科学技术大学",
+      "status": "catalog",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 0,
+      "admission_notices": 0,
+      "pages": [],
+      "errors": [
+        "未读到页面：http://dslx.ustc.edu.cn/?menu=expert_paper&expertid=4757（ValueError）"
+      ]
+    },
+    {
+      "id": "official-f1b53a97443df8534916",
+      "name": "张勇东",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 5,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://eeis.ustc.edu.cn/2017/0807/c2648a190587/page.htm",
+          "fetched_at": "2026-10-14T03:45:16+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-712e1bc88d131fc44f11",
+      "name": "谢洪涛",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 2,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://faculty.ustc.edu.cn/xiehongtao/zh_CN/index/168425/list/",
+          "fetched_at": "2026-10-14T03:45:17+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-2f47603c91161d963169",
+      "name": "张天柱",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 2,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "http://faculty.ustc.edu.cn/%7E7NJZN3/zh_CN/index.htm",
+          "fetched_at": "2026-10-14T03:48:33+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-b512ab96e95c8c9baddb",
+      "name": "毛震东",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 4,
+      "biography": 5,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://faculty.ustc.edu.cn/maozhendong/zh_CN/index.htm",
+          "fetched_at": "2026-10-14T03:48:31+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-479c28c11aa04a0a9844",
+      "name": "陈彦",
+      "institution": "中国科学技术大学",
+      "status": "catalog",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 0,
+      "admission_notices": 0,
+      "pages": [],
+      "errors": [
+        "未读到页面：http://dslx.ustc.edu.cn/?menu=expert_paper&expertid=100765（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-3bc77a05d2fd0b10f1a7",
+      "name": "林璟锵",
+      "institution": "中国科学技术大学",
+      "status": "catalog",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 0,
+      "admission_notices": 0,
+      "pages": [],
+      "errors": [
+        "未读到页面：http://dslx.ustc.edu.cn/?menu=expert_paper&expertid=101889（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-0fb89843837625e1f8cb",
+      "name": "高洪波",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 5,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "http://faculty.ustc.edu.cn/%7EmMnABv/zh_CN/index.htm",
+          "fetched_at": "2026-10-14T03:48:36+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-3f717a6144a6ac334482",
+      "name": "吕琳媛",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 5,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "http://faculty.ustc.edu.cn/%7EUjUfmq/zh_CN/index.htm",
+          "fetched_at": "2026-10-14T03:48:39+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-0d6c543b7ed72288fbce",
+      "name": "刘武",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 14,
+      "relations": 0,
+      "recruitment": 2,
+      "biography": 2,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://faculty.ustc.edu.cn/liuwu/zh_CN/index.htm",
+          "fetched_at": "2026-10-14T03:48:40+00:00",
+          "source_kind": "学院教师主页"
+        },
+        {
+          "url": "https://faculty.ustc.edu.cn/liuwu/zh_CN/zdylm/989324/list/index.htm",
+          "fetched_at": "2026-10-14T03:48:41+00:00",
+          "source_kind": "个人主页栏目"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-264459a84403813cec26",
+      "name": "周文柏",
+      "institution": "中国科学技术大学",
+      "status": "catalog",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 0,
+      "admission_notices": 0,
+      "pages": [],
+      "errors": [
+        "未读到页面：http://dslx.ustc.edu.cn/?menu=expert_paper&expertid=6571027（ConnectionError）"
+      ]
+    },
+    {
+      "id": "official-1e659da474222137fd7c",
+      "name": "陈小良",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 11,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 2,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "http://dslx.ustc.edu.cn/?menu=expert_paper_detail&expertid=6571407",
+          "fetched_at": "2026-10-14T03:45:22+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-0d55bd1e03fce8098016",
+      "name": "王伟",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 1,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "http://faculty.ustc.edu.cn/%7Eu6BVby/zh_CN/index.htm",
+          "fetched_at": "2026-10-14T03:48:45+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-f4b30c036c98536287a2",
+      "name": "程存峰",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 10,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 0,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://faculty.ustc.edu.cn/cfcheng",
+          "fetched_at": "2026-10-14T03:48:45+00:00",
+          "source_kind": "学院教师主页"
+        },
+        {
+          "url": "https://faculty.ustc.edu.cn/cfcheng/zh_CN/zhym/86474/list/index.htm",
+          "fetched_at": "2026-10-14T03:48:48+00:00",
+          "source_kind": "个人主页栏目"
+        },
+        {
+          "url": "https://faculty.ustc.edu.cn/cfcheng/zh_CN/lwcg/86476/list/index.htm",
+          "fetched_at": "2026-10-14T03:48:49+00:00",
+          "source_kind": "个人主页栏目"
+        },
+        {
+          "url": "https://faculty.ustc.edu.cn/cfcheng/zh_CN/zsxx/86485/list/index.htm",
+          "fetched_at": "2026-10-14T03:48:52+00:00",
+          "source_kind": "个人主页栏目"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-e77f3c72884fb52e697c",
+      "name": "胡水明",
+      "institution": "中国科学技术大学",
+      "status": "catalog",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 0,
+      "admission_notices": 0,
+      "pages": [],
+      "errors": [
+        "未读到页面：http://dslx.ustc.edu.cn/?menu=expert_paper&expertid=901（ValueError）"
+      ]
+    },
+    {
+      "id": "official-26622190e70959073229",
+      "name": "刘文清",
+      "institution": "中国科学技术大学",
+      "status": "catalog",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 0,
+      "admission_notices": 0,
+      "pages": [],
+      "errors": [
+        "未读到页面：http://dslx.ustc.edu.cn/?menu=expert_paper&expertid=851（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-e65be194021c06aee1d8",
+      "name": "郑小兵",
+      "institution": "中国科学技术大学",
+      "status": "catalog",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 0,
+      "admission_notices": 0,
+      "pages": [],
+      "errors": [
+        "未读到页面：http://dslx.ustc.edu.cn/?menu=expert_paper&expertid=1624（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-616d17a9a8d7d6205c9a",
+      "name": "侯再红",
+      "institution": "中国科学技术大学",
+      "status": "catalog",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 0,
+      "admission_notices": 0,
+      "pages": [],
+      "errors": [
+        "未读到页面：http://dslx.ustc.edu.cn/?menu=expert_paper&expertid=3934（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-5f68ab94dbe53f084eec",
+      "name": "洪津",
+      "institution": "中国科学技术大学",
+      "status": "catalog",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 0,
+      "admission_notices": 0,
+      "pages": [],
+      "errors": [
+        "未读到页面：http://dslx.ustc.edu.cn/?menu=expert_paper&expertid=3938（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-b59a3c05d762b3beee00",
+      "name": "张天舒",
+      "institution": "中国科学技术大学",
+      "status": "catalog",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 0,
+      "admission_notices": 0,
+      "pages": [],
+      "errors": [
+        "未读到页面：http://dslx.ustc.edu.cn/?menu=expert_paper&expertid=3963（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-fe33f488cd77543c881e",
+      "name": "熊伟",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 8,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 0,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "http://dslx.ustc.edu.cn/?menu=expert_paper_detail&expertid=4009",
+          "fetched_at": "2026-10-14T03:45:35+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-31a6a9cda2db82ff5d68",
+      "name": "谢晨波",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 10,
+      "relations": 0,
+      "recruitment": 2,
+      "biography": 0,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "http://dslx.ustc.edu.cn/?menu=expert_paper_detail&expertid=4841",
+          "fetched_at": "2026-10-14T03:45:38+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-5a3bb3da43fb03e0c0be",
+      "name": "桂华侨",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 6,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 1,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "http://dslx.ustc.edu.cn/?menu=expert_paper_detail&expertid=4846",
+          "fetched_at": "2026-10-14T03:45:37+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-7e77768886982a358608",
+      "name": "李健军",
+      "institution": "中国科学技术大学",
+      "status": "catalog",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 0,
+      "admission_notices": 0,
+      "pages": [],
+      "errors": [
+        "未读到页面：http://dslx.ustc.edu.cn/?menu=expert_paper&expertid=5248（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-38006979e69903cf2bb5",
+      "name": "李新",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 5,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 1,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "http://dslx.ustc.edu.cn/?menu=expert_paper_detail&expertid=5256",
+          "fetched_at": "2026-10-14T03:45:38+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-f0a9012d70e0660e18b9",
+      "name": "陆坤",
+      "institution": "中国科学技术大学",
+      "status": "catalog",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 0,
+      "admission_notices": 0,
+      "pages": [],
+      "errors": [
+        "未读到页面：http://dslx.ustc.edu.cn/?menu=expert_paper&expertid=5857（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-e435afbbbd5132277707",
+      "name": "罗海燕",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 10,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 1,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "http://dslx.ustc.edu.cn/?menu=expert_paper_detail&expertid=6684",
+          "fetched_at": "2026-10-14T03:45:41+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-411ff56106636b01ed4f",
+      "name": "于磊",
+      "institution": "中国科学技术大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 1,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "http://dslx.ustc.edu.cn/?menu=expert_paper_detail&expertid=6707",
+          "fetched_at": "2026-10-14T03:45:42+00:00",
+          "source_kind": "学院教师主页"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "official-5f61fd536a3f40bead7a",
+      "name": "陈池来",
+      "institution": "中国科学技术大学",
+      "status": "catalog",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 0,
+      "admission_notices": 0,
+      "pages": [],
+      "errors": [
+        "未读到页面：http://dslx.ustc.edu.cn/?menu=expert_paper&expertid=100301（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-ef8df138886e33c3b465",
+      "name": "孙少明",
+      "institution": "中国科学技术大学",
+      "status": "catalog",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 0,
+      "admission_notices": 0,
+      "pages": [],
+      "errors": [
+        "未读到页面：http://dslx.ustc.edu.cn/?menu=expert_paper&expertid=100769（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-b89241c1d71fc8d242d3",
+      "name": "裘桢炜",
+      "institution": "中国科学技术大学",
+      "status": "catalog",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 0,
+      "admission_notices": 0,
+      "pages": [],
+      "errors": [
+        "未读到页面：http://dslx.ustc.edu.cn/?menu=expert_paper&expertid=6569891（ReadTimeout）"
+      ]
+    },
+    {
+      "id": "official-21dd9a4cd7f38b9d6d49",
+      "name": "吴志强",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=88240",
+          "fetched_at": "2026-10-14T03:42:27+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=88240（ValueError）"
+      ]
+    },
+    {
+      "id": "official-b5774b9f311f5c2c5975",
+      "name": "陈晨",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=15166",
+          "fetched_at": "2026-10-14T03:42:27+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=15166（ValueError）"
+      ]
+    },
+    {
+      "id": "official-b907558ec70910e22c40",
+      "name": "刁弥",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=20135",
+          "fetched_at": "2026-10-14T03:42:27+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=20135（ValueError）"
+      ]
+    },
+    {
+      "id": "official-33cb5613cf08d16ba75c",
+      "name": "耿慧志",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=99025",
+          "fetched_at": "2026-10-14T03:42:27+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=99025（ValueError）"
+      ]
+    },
+    {
+      "id": "official-4d280d38c700aac2b7ac",
+      "name": "黄建中",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=03213",
+          "fetched_at": "2026-10-14T03:42:27+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=03213（ValueError）"
+      ]
+    },
+    {
+      "id": "official-eb488e8adf8f7517aedc",
+      "name": "黄怡",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=96019",
+          "fetched_at": "2026-10-14T03:42:27+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=96019（ValueError）"
+      ]
+    },
+    {
+      "id": "official-f8d802b2c0f20d5eb2c7",
+      "name": "匡晓明",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=94053",
+          "fetched_at": "2026-10-14T03:42:27+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=94053（ValueError）"
+      ]
+    },
+    {
+      "id": "official-62bbd41b9a4ead9271f7",
+      "name": "刘冰",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=97108",
+          "fetched_at": "2026-10-14T03:42:27+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=97108（ValueError）"
+      ]
+    },
+    {
+      "id": "official-adcc3f11e7c3e615cb47",
+      "name": "栾峰",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=05133",
+          "fetched_at": "2026-10-14T03:42:27+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=05133（ValueError）"
+      ]
+    },
+    {
+      "id": "official-77868859234beb4e271f",
+      "name": "钮心毅",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=93174",
+          "fetched_at": "2026-10-14T03:42:27+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=93174（ValueError）"
+      ]
+    },
+    {
+      "id": "official-988e65815002bb40a1d7",
+      "name": "潘海啸",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 2,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=89023",
+          "fetched_at": "2026-10-14T03:42:27+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=89023（ValueError）"
+      ]
+    },
+    {
+      "id": "official-d1e57ab168ac5bb9ae6a",
+      "name": "彭震伟",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=89045",
+          "fetched_at": "2026-10-14T03:42:27+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=89045（ValueError）"
+      ]
+    },
+    {
+      "id": "official-f561fb7779fd3b329ef2",
+      "name": "邵甬",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=05001",
+          "fetched_at": "2026-10-14T03:42:27+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=05001（ValueError）"
+      ]
+    },
+    {
+      "id": "official-34d07ac0b516b0a2f555",
+      "name": "王德",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=98033",
+          "fetched_at": "2026-10-14T03:42:27+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=98033（ValueError）"
+      ]
+    },
+    {
+      "id": "official-6ab5cca7233b3d430997",
+      "name": "王兰",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=09134",
+          "fetched_at": "2026-10-14T03:42:28+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=09134（ValueError）"
+      ]
+    },
+    {
+      "id": "official-65f4748af1b999fab611",
+      "name": "肖扬",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=13147",
+          "fetched_at": "2026-10-14T03:42:28+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=13147（ValueError）"
+      ]
+    },
+    {
+      "id": "official-011d9e385016e5b22749",
+      "name": "杨贵庆",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=91045",
+          "fetched_at": "2026-10-14T03:42:28+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=91045（ValueError）"
+      ]
+    },
+    {
+      "id": "official-e65860f54dde463e91b4",
+      "name": "颜文涛",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=17022",
+          "fetched_at": "2026-10-14T03:42:28+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=17022（ValueError）"
+      ]
+    },
+    {
+      "id": "official-45df9928c671dacaaab7",
+      "name": "于一凡",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=96016",
+          "fetched_at": "2026-10-14T03:42:28+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=96016（ValueError）"
+      ]
+    },
+    {
+      "id": "official-6fb6a860a0b912a57c67",
+      "name": "卓健",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 4,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=96030",
+          "fetched_at": "2026-10-14T03:42:28+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=96030（ValueError）"
+      ]
+    },
+    {
+      "id": "official-383064e285b3aae5005b",
+      "name": "张尚武",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=98062",
+          "fetched_at": "2026-10-14T03:42:28+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=98062（ValueError）"
+      ]
+    },
+    {
+      "id": "official-b951da0cf36b59182f80",
+      "name": "张文佳",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=24147",
+          "fetched_at": "2026-10-14T03:42:28+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=24147（ValueError）"
+      ]
+    },
+    {
+      "id": "official-9f2ee81b6cef4687baae",
+      "name": "郭博雅",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=24511",
+          "fetched_at": "2026-10-14T03:42:28+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=24511（ValueError）"
+      ]
+    },
+    {
+      "id": "official-123e2833f1f6679866d4",
+      "name": "唐敏",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=23522",
+          "fetched_at": "2026-10-14T03:42:28+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=23522（ValueError）"
+      ]
+    },
+    {
+      "id": "official-c298504b85743d995204",
+      "name": "程遥",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=15156",
+          "fetched_at": "2026-10-14T03:42:28+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=15156（ValueError）"
+      ]
+    },
+    {
+      "id": "official-e8b4d0ff7db8a029dc68",
+      "name": "干靓",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=05065",
+          "fetched_at": "2026-10-14T03:42:28+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=05065（ValueError）"
+      ]
+    },
+    {
+      "id": "official-b233a4c511e717e0498a",
+      "name": "黄璜",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=21025",
+          "fetched_at": "2026-10-14T03:42:28+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=21025（ValueError）"
+      ]
+    },
+    {
+      "id": "official-2a3f6c56a935e787790d",
+      "name": "赫磊",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=16516",
+          "fetched_at": "2026-10-14T03:42:28+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=16516（ValueError）"
+      ]
+    },
+    {
+      "id": "official-bcdb54cd01b68f6b3656",
+      "name": "刘伯初",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 1,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=23135",
+          "fetched_at": "2026-10-14T03:42:30+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=23135（ValueError）"
+      ]
+    },
+    {
+      "id": "official-b33e51f67ca475bbc86f",
+      "name": "刘超",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=19001",
+          "fetched_at": "2026-10-14T03:42:32+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=19001（ValueError）"
+      ]
+    },
+    {
+      "id": "official-4147e3934f28e46177b4",
+      "name": "刘骝",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=21013",
+          "fetched_at": "2026-10-14T03:42:34+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=21013（ValueError）"
+      ]
+    },
+    {
+      "id": "official-7ed3b5cfc91d7b66e253",
+      "name": "李凌月",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=17117",
+          "fetched_at": "2026-10-14T03:42:36+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=17117（ValueError）"
+      ]
+    },
+    {
+      "id": "official-07406818183283fb540b",
+      "name": "李晴",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=95501",
+          "fetched_at": "2026-10-14T03:42:38+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=95501（ValueError）"
+      ]
+    },
+    {
+      "id": "official-2238d88f75702d3a9934",
+      "name": "陆希刚",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=95503",
+          "fetched_at": "2026-10-14T03:42:39+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=95503（ValueError）"
+      ]
+    },
+    {
+      "id": "official-9c7caa559ac613e60754",
+      "name": "庞磊",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=98024",
+          "fetched_at": "2026-10-14T03:42:41+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=98024（ValueError）"
+      ]
+    },
+    {
+      "id": "official-6dfec406eea98b1dd574",
+      "name": "沈尧",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=18093",
+          "fetched_at": "2026-10-14T03:42:46+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=18093（ValueError）"
+      ]
+    },
+    {
+      "id": "official-0d073897ab08176a26dd",
+      "name": "田宝江",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=98055",
+          "fetched_at": "2026-10-14T03:42:48+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=98055（ValueError）"
+      ]
+    },
+    {
+      "id": "official-a436a7948e7d5b282319",
+      "name": "唐伟成",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=21161",
+          "fetched_at": "2026-10-14T03:42:51+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=21161（ValueError）"
+      ]
+    },
+    {
+      "id": "official-3c80894f26d69787136d",
+      "name": "汤宇卿",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=97127",
+          "fetched_at": "2026-10-14T03:42:53+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=97127（ValueError）"
+      ]
+    },
+    {
+      "id": "official-27ded454300e05708a14",
+      "name": "王骏",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=98088",
+          "fetched_at": "2026-10-14T03:46:29+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=98088（ValueError）"
+      ]
+    },
+    {
+      "id": "official-1f502f3f5999939fd15d",
+      "name": "王雅娟",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 3,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=99100",
+          "fetched_at": "2026-10-14T03:43:04+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=99100（ValueError）"
+      ]
+    },
+    {
+      "id": "official-fed05937445b82acbc4d",
+      "name": "肖建莉",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=08010",
+          "fetched_at": "2026-10-14T03:43:07+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=08010（ValueError）"
+      ]
+    },
+    {
+      "id": "official-9e00686e304c7a0ed14f",
+      "name": "杨辰",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=13084",
+          "fetched_at": "2026-10-14T03:43:08+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=13084（ValueError）"
+      ]
+    },
+    {
+      "id": "official-806cd76cf5f9063440bd",
+      "name": "杨帆",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=06091",
+          "fetched_at": "2026-10-14T03:43:10+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=06091（ValueError）"
+      ]
+    },
+    {
+      "id": "official-1b5a907b6baca6b612ad",
+      "name": "尹杰",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=21071",
+          "fetched_at": "2026-10-14T03:43:12+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=21071（ValueError）"
+      ]
+    },
+    {
+      "id": "official-dfe0a9aa0e3f93c3b578",
+      "name": "晏龙旭",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=21024",
+          "fetched_at": "2026-10-14T03:43:14+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=21024（ValueError）"
+      ]
+    },
+    {
+      "id": "official-0ae41a594a097de9d09a",
+      "name": "杨婷",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 5,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 5,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=25124",
+          "fetched_at": "2026-10-14T03:43:16+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=25124（ValueError）"
+      ]
+    },
+    {
+      "id": "official-e916a33ce4c4b7777190",
+      "name": "张立",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=10080",
+          "fetched_at": "2026-10-14T03:43:18+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=10080（ValueError）"
+      ]
+    },
+    {
+      "id": "official-5b5cd59891bc4b802a2b",
+      "name": "朱玮",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=10112",
+          "fetched_at": "2026-10-14T03:43:20+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=10112（ValueError）"
+      ]
+    },
+    {
+      "id": "official-71b29f00688911f8420e",
+      "name": "周新刚",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=17125",
+          "fetched_at": "2026-10-14T03:43:22+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=17125（ValueError）"
+      ]
+    },
+    {
+      "id": "official-ac6f35bdb547d01a27b7",
+      "name": "赵蔚",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=05125",
+          "fetched_at": "2026-10-14T03:43:23+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=05125（ValueError）"
+      ]
+    },
+    {
+      "id": "official-e57e616cbaf2ff65474e",
+      "name": "戴晓晖",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 6,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=92183",
+          "fetched_at": "2026-10-14T03:43:25+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=92183（ValueError）"
+      ]
+    },
+    {
+      "id": "official-f66a96316d7c5de172bc",
+      "name": "高晓昱",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 5,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=93176",
+          "fetched_at": "2026-10-14T03:43:26+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=93176（ValueError）"
+      ]
+    },
+    {
+      "id": "official-78e0267f13b5900a75b9",
+      "name": "曹湛",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=22026",
+          "fetched_at": "2026-10-14T03:43:30+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=22026（ValueError）"
+      ]
+    },
+    {
+      "id": "official-57422b16f4cc7eafeb02",
+      "name": "曹哲静",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=21166",
+          "fetched_at": "2026-10-14T03:43:32+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=21166（ValueError）"
+      ]
+    },
+    {
+      "id": "official-4ac42d25d576c45f9118",
+      "name": "甘惟",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=23172",
+          "fetched_at": "2026-10-14T03:43:34+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=23172（ValueError）"
+      ]
+    },
+    {
+      "id": "official-2f05be10ee024780a1d7",
+      "name": "刘翔",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=24197",
+          "fetched_at": "2026-10-14T03:43:36+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=24197（ValueError）"
+      ]
+    },
+    {
+      "id": "official-72df12a9eab7ed4f306c",
+      "name": "单路",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 2,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=25036",
+          "fetched_at": "2026-10-14T03:43:37+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=25036（ValueError）"
+      ]
+    },
+    {
+      "id": "official-52827322a2fb61fe7b4e",
+      "name": "孙文尧",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 4,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=25235",
+          "fetched_at": "2026-10-14T03:43:39+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=25235（ValueError）"
+      ]
+    },
+    {
+      "id": "official-4dec19b286afd825ddd3",
+      "name": "叶启明",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 3,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=26025",
+          "fetched_at": "2026-10-14T03:43:41+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=26025（ValueError）"
+      ]
+    },
+    {
+      "id": "official-4e6a1c140f86565d5992",
+      "name": "张泽",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=23175",
+          "fetched_at": "2026-10-14T03:43:43+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=23175（ValueError）"
+      ]
+    },
+    {
+      "id": "official-ef47e163c278b7aa6035",
+      "name": "周俭",
+      "institution": "同济大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 6,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=87105",
+          "fetched_at": "2026-10-14T03:43:44+00:00",
+          "source_kind": "学院公开教师主页"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=87105（ValueError）"
+      ]
+    },
+    {
+      "id": "official-a1ac10fd29ed16367488",
+      "name": "王小广",
+      "institution": "中山大学",
+      "status": "ready",
+      "papers": 1,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 2,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://zssom.sysu.edu.cn/teacher/WangXiaoguang",
+          "fetched_at": "2026-10-14T03:44:40+00:00",
+          "source_kind": "学院教师主页（网页检索核对）"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://zssom.sysu.edu.cn/teacher/WangXiaoguang（FileNotFoundError）"
+      ]
+    },
+    {
+      "id": "official-1dabfa5b5e16d57f7e55",
+      "name": "欧雪玲",
+      "institution": "中山大学",
+      "status": "ready",
+      "papers": 1,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 2,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://zssom.sysu.edu.cn/teacher/OuXueling",
+          "fetched_at": "2026-10-14T03:44:40+00:00",
+          "source_kind": "学院教师主页（网页检索核对）"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://zssom.sysu.edu.cn/teacher/OuXueling（FileNotFoundError）"
+      ]
+    },
+    {
+      "id": "official-90dfad858d2f8daa5fc2",
+      "name": "赵虎",
+      "institution": "中山大学",
+      "status": "ready",
+      "papers": 1,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 2,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://zssom.sysu.edu.cn/teacher/ZhaoHu",
+          "fetched_at": "2026-10-14T03:44:40+00:00",
+          "source_kind": "学院教师主页（网页检索核对）"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://zssom.sysu.edu.cn/teacher/ZhaoHu（FileNotFoundError）"
+      ]
+    },
+    {
+      "id": "official-c07e76f6e06de05ae683",
+      "name": "时燕薇",
+      "institution": "中山大学",
+      "status": "ready",
+      "papers": 0,
+      "relations": 0,
+      "recruitment": 0,
+      "biography": 2,
+      "admission_notices": 0,
+      "pages": [
+        {
+          "url": "https://zssom.sysu.edu.cn/teacher/shiyanwei",
+          "fetched_at": "2026-10-14T03:44:40+00:00",
+          "source_kind": "学院教师主页（网页检索核对）"
+        }
+      ],
+      "errors": [
+        "未读到页面：https://zssom.sysu.edu.cn/teacher/shiyanwei（FileNotFoundError）"
+      ]
+    }
+  ],
+  "coverage": {
+    "total_records": 10070,
+    "official_records": 6894,
+    "public_records": 6897,
+    "secondary_records": 3,
+    "public_institutions": 27,
+    "official_disciplines": 116,
+    "legacy_records": 3179,
+    "overlapping_records": 6,
+    "research": {
+      "readable_profiles": 6897,
+      "papers": 1680,
+      "relations": 164,
+      "recruitment": 6158,
+      "admission_notices": 709
+    },
+    "official_institutions": 26,
+    "updated_at": "2026-10-14",
+    "disciplines": [
+      {
+        "name": "0101 哲学",
+        "count": 40,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0201 理论经济学",
+        "count": 32,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "0202 应用经济学",
+        "count": 59,
+        "institutions": 4,
+        "secondary_count": 0
+      },
+      {
+        "name": "0301 法学",
+        "count": 28,
+        "institutions": 3,
+        "secondary_count": 0
+      },
+      {
+        "name": "0302 政治学",
+        "count": 17,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "0303 社会学",
+        "count": 24,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0304 民族学",
+        "count": 8,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0305 马克思主义理论",
+        "count": 41,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "0306 公安学",
+        "count": 32,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0307 中共党史党建学",
+        "count": 2,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0308 纪检监察学",
+        "count": 4,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0401 教育学",
+        "count": 80,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0402 心理学",
+        "count": 122,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "0403 体育学",
+        "count": 13,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0501 中国语言文学",
+        "count": 164,
+        "institutions": 3,
+        "secondary_count": 0
+      },
+      {
+        "name": "0502 外国语言文学",
+        "count": 21,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "0503 新闻传播学",
+        "count": 14,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0601 考古学",
+        "count": 41,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "0602 中国史",
+        "count": 52,
+        "institutions": 3,
+        "secondary_count": 0
+      },
+      {
+        "name": "0603 世界史",
+        "count": 24,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0701 数学",
+        "count": 537,
+        "institutions": 5,
+        "secondary_count": 0
+      },
+      {
+        "name": "0702 物理学",
+        "count": 316,
+        "institutions": 4,
+        "secondary_count": 0
+      },
+      {
+        "name": "0703 化学",
+        "count": 322,
+        "institutions": 4,
+        "secondary_count": 0
+      },
+      {
+        "name": "0704 天文学",
+        "count": 70,
+        "institutions": 3,
+        "secondary_count": 0
+      },
+      {
+        "name": "0705 地理学",
+        "count": 219,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "0706 大气科学",
+        "count": 153,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0707 海洋科学",
+        "count": 202,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "0708 地球物理学",
+        "count": 58,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0709 地质学",
+        "count": 105,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0710 生物学",
+        "count": 451,
+        "institutions": 5,
+        "secondary_count": 0
+      },
+      {
+        "name": "0711 系统科学",
+        "count": 49,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "0712 科学技术史",
+        "count": 16,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "0713 生态学",
+        "count": 103,
+        "institutions": 4,
+        "secondary_count": 0
+      },
+      {
+        "name": "0714 统计学",
+        "count": 83,
+        "institutions": 4,
+        "secondary_count": 0
+      },
+      {
+        "name": "0801 力学",
+        "count": 34,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0802 机械工程",
+        "count": 183,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0803 光学工程",
+        "count": 22,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0804 仪器科学与技术",
+        "count": 55,
+        "institutions": 3,
+        "secondary_count": 0
+      },
+      {
+        "name": "0805 材料科学与工程",
+        "count": 244,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "0806 冶金工程",
+        "count": 15,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0807 动力工程及工程热物理",
+        "count": 107,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0808 电气工程",
+        "count": 71,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0809 电子科学与技术",
+        "count": 69,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "0810 信息与通信工程",
+        "count": 78,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "0811 控制科学与工程",
+        "count": 15,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0812 计算机科学与技术",
+        "count": 100,
+        "institutions": 4,
+        "secondary_count": 0
+      },
+      {
+        "name": "0813 建筑学",
+        "count": 24,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0814 土木工程",
+        "count": 70,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "0815 水利工程",
+        "count": 17,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0816 测绘科学与技术",
+        "count": 20,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0817 化学工程与技术",
+        "count": 205,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "0818 地质资源与地质工程",
+        "count": 23,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0819 矿业工程",
+        "count": 8,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0820 石油与天然气工程",
+        "count": 18,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0821 纺织科学与工程",
+        "count": 61,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0822 轻工技术与工程",
+        "count": 4,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0823 交通运输工程",
+        "count": 48,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0824 船舶与海洋工程",
+        "count": 55,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0825 航空宇航科学与技术",
+        "count": 62,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0826 兵器科学与技术",
+        "count": 104,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0827 核科学与技术",
+        "count": 38,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "0828 农业工程",
+        "count": 27,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0829 林业工程",
+        "count": 49,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0830 环境科学与工程",
+        "count": 160,
+        "institutions": 3,
+        "secondary_count": 0
+      },
+      {
+        "name": "0831 生物医学工程",
+        "count": 59,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0832 食品科学与工程",
+        "count": 83,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "0833 城乡规划学",
+        "count": 63,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "0835 软件工程",
+        "count": 43,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0836 生物工程",
+        "count": 35,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0837 安全科学与工程",
+        "count": 43,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0838 公安技术",
+        "count": 14,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0839 网络空间安全",
+        "count": 34,
+        "institutions": 3,
+        "secondary_count": 0
+      },
+      {
+        "name": "0901 作物学",
+        "count": 101,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "0902 园艺学",
+        "count": 90,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "0903 农业资源与环境",
+        "count": 74,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "0904 植物保护",
+        "count": 65,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0905 畜牧学",
+        "count": 57,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0906 兽医学",
+        "count": 112,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0907 林学",
+        "count": 55,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0908 水产",
+        "count": 25,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0909 草学",
+        "count": 12,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0910 水土保持与荒漠化防治学",
+        "count": 8,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1001 基础医学",
+        "count": 8,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1002 临床医学",
+        "count": 34,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1003 口腔医学",
+        "count": 3,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1004 公共卫生与预防医学",
+        "count": 5,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "1005 中医学",
+        "count": 8,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1006 中西医结合",
+        "count": 7,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1007 药学",
+        "count": 12,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1008 中药学",
+        "count": 9,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1009 特种医学",
+        "count": 34,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1011 护理学",
+        "count": 19,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1012 法医学",
+        "count": 6,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1101 军事思想与军事历史",
+        "count": 17,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1102 战略学",
+        "count": 19,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1103 联合作战学",
+        "count": 8,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1104 军兵种作战学",
+        "count": 3,
+        "institutions": 1,
+        "secondary_count": 3
+      },
+      {
+        "name": "1105 军队指挥学",
+        "count": 19,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1106 军队政治工作学",
+        "count": 6,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1107 军事后勤学",
+        "count": 34,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "1108 军事装备学",
+        "count": 19,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1109 军事管理学",
+        "count": 10,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1110 军事训练学",
+        "count": 2,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1111 军事智能",
+        "count": 30,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1201 管理科学与工程",
+        "count": 39,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1202 工商管理学",
+        "count": 29,
+        "institutions": 3,
+        "secondary_count": 0
+      },
+      {
+        "name": "1203 农林经济管理",
+        "count": 60,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1204 公共管理学",
+        "count": 53,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "1205 信息资源管理",
+        "count": 18,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "1301 艺术学",
+        "count": 17,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1401 集成电路科学与工程",
+        "count": 12,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "1402 国家安全学",
+        "count": 20,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1403 设计学",
+        "count": 23,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1404 遥感科学与技术",
+        "count": 23,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1405 智能科学与技术",
+        "count": 13,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1406 纳米科学与工程",
+        "count": 56,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1407 区域国别学",
+        "count": 20,
+        "institutions": 1,
+        "secondary_count": 0
+      }
+    ]
+  },
+  "validation": {
+    "python_tests": 65,
+    "node_tests": 11,
+    "http_discipline_lists": 118,
+    "formal_discipline_all_filter_branches": 117
+  },
+  "new_profiles": 205,
+  "new_profiles_with_records": {
+    "papers": 100,
+    "relations": 10,
+    "recruitment": 86,
+    "admission_notices": 51
+  }
+}

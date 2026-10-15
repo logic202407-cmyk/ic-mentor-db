@@ -1,0 +1,53 @@
+{
+  "description": "跨学科公开来源试点。仅保留网页可见的基本事实和链接；不判断导师优劣、招生现状或指导体验。网页信息可能变化，导入后仍需人工核查。页面抽样核对日期：2026-10-13。",
+  "profiles": [
+    {
+      "name": "张涛", "institution": "上海交通大学", "department": "自动化与感知学院", "discipline": "人工智能与自动化", "first_level_discipline": "0811 控制科学与工程", "direction_group": "计算机视觉",
+      "interests": "计算机视觉、图像处理、目标检测与场景分类",
+      "homepage": "https://sais.sjtu.edu.cn/faculty/zhangtao.html",
+      "sources": [{"url": "https://sais.sjtu.edu.cn/faculty/zhangtao.html", "title": "上海交通大学教师页面", "claim": "页面列出计算机视觉、图像处理、目标检测识别等研究方向。"}]
+    },
+    {
+      "name": "顾涛", "institution": "清华大学", "department": "历史系", "discipline": "历史学", "first_level_discipline": "0602 中国史", "direction_group": "中国制度史",
+      "interests": "中国制度史、经学史、边疆史、通典研究",
+      "homepage": "https://www.xyc.tsinghua.edu.cn/info/1386/2765.htm",
+      "sources": [{"url": "https://www.xyc.tsinghua.edu.cn/info/1386/2765.htm", "title": "清华大学新雅书院教师页面", "claim": "页面列出中国制度史、经学史、边疆史与通典研究。"}]
+    },
+    {
+      "name": "张平", "institution": "北京大学", "department": "法学院", "discipline": "法学", "first_level_discipline": "0301 法学", "direction_group": "知识产权法",
+      "interests": "知识产权法、互联网法、个人信息保护法、开源社区规则",
+      "homepage": "https://www.ai.pku.edu.cn/info/1141/1276.htm",
+      "sources": [{"url": "https://www.ai.pku.edu.cn/info/1141/1276.htm", "title": "北京大学人工智能研究院教师页面", "claim": "页面列出知识产权法、互联网法、个人信息保护法等重点研究领域。"}]
+    },
+    {
+      "name": "张一婧", "institution": "复旦大学", "department": "生命科学学院", "discipline": "生命科学", "first_level_discipline": "0710 生物学", "direction_group": "计算生物学",
+      "interests": "计算生物学、功能基因组学、合成生物学、深度学习",
+      "homepage": "https://life.fudan.edu.cn/b1/d1/c31281a438737/page.htm",
+      "sources": [{"url": "https://life.fudan.edu.cn/b1/d1/c31281a438737/page.htm", "title": "复旦大学生命科学学院教师页面", "claim": "页面列出计算生物学、功能基因组学与合成生物学等方向。"}]
+    },
+    {
+      "name": "张学民", "institution": "北京师范大学", "department": "心理学部", "discipline": "心理学", "first_level_discipline": "0402 心理学", "direction_group": "认知心理学",
+      "interests": "认知心理学、认知神经科学、工程心理学、人机交互",
+      "homepage": "https://psych.bnu.edu.cn/szdw/zrjs/js/zxm/index.htm",
+      "sources": [{"url": "https://psych.bnu.edu.cn/szdw/zrjs/js/zxm/index.htm", "title": "北京师范大学心理学部教师页面", "claim": "页面列出认知心理学、认知神经科学、工程心理学与人机交互方向。"}]
+    },
+    {
+      "name": "黄鹤", "institution": "清华大学", "department": "建筑学院", "discipline": "建筑学与城乡规划", "first_level_discipline": "0833 城乡规划学", "direction_group": "城市更新",
+      "interests": "城市设计、城市更新、文化遗产保护与利用",
+      "homepage": "https://www.arch.tsinghua.edu.cn/info/rw_csgh/1413",
+      "sources": [{"url": "https://www.arch.tsinghua.edu.cn/info/rw_csgh/1413", "title": "清华大学建筑学院教师页面", "claim": "页面列出城市设计与城市更新、文化遗产保护与利用。"}]
+    },
+    {
+      "name": "李威", "institution": "中国农业科学院", "department": "棉花研究所", "discipline": "农学", "first_level_discipline": "0901 作物学", "direction_group": "作物遗传育种",
+      "interests": "作物遗传育种理论与方法",
+      "homepage": "https://cri.caas.cn/yjsjy/dsjs/bssds/20a345475bab4cc289ee0ab0fe377b6d.htm",
+      "sources": [{"url": "https://cri.caas.cn/yjsjy/dsjs/bssds/20a345475bab4cc289ee0ab0fe377b6d.htm", "title": "中国农业科学院棉花研究所导师页面", "claim": "页面列出作物遗传育种理论与方法研究方向。"}]
+    },
+    {
+      "name": "粟硕", "institution": "复旦大学", "department": "公共卫生学院", "discipline": "公共卫生与医学", "first_level_discipline": "1004 公共卫生与预防医学", "direction_group": "病原与微生物组",
+      "interests": "微生物组、病原宿主互作、生物信息学、病毒学、疫苗",
+      "homepage": "https://sph.fudan.edu.cn/employee/157",
+      "sources": [{"url": "https://sph.fudan.edu.cn/employee/157", "title": "复旦大学公共卫生学院教师页面", "claim": "页面列出微生物组、病毒学、生物信息等研究方向。"}]
+    }
+  ]
+}

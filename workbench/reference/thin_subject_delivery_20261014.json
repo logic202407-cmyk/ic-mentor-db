@@ -1,0 +1,1193 @@
+{
+  "new_profiles": 45,
+  "existing_enriched": 3,
+  "changed_disciplines": {
+    "0307 中共党史党建学": {
+      "before": 2,
+      "after": 20
+    },
+    "0308 纪检监察学": {
+      "before": 4,
+      "after": 6
+    },
+    "0822 轻工技术与工程": {
+      "before": 4,
+      "after": 19
+    },
+    "1003 口腔医学": {
+      "before": 3,
+      "after": 10
+    },
+    "1104 军兵种作战学": {
+      "before": 3,
+      "after": 4
+    },
+    "1110 军事训练学": {
+      "before": 2,
+      "after": 4
+    }
+  },
+  "records": [
+    {
+      "id": "official-cc0b569f56a29815ddd2",
+      "name": "韩伟",
+      "institution": "南京大学",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 1,
+      "admission_notices": 5
+    },
+    {
+      "id": "official-76c1e93fe57422c8ab5c",
+      "name": "李煌",
+      "institution": "南京大学",
+      "papers": 12,
+      "relations": 3,
+      "recruitment": 1,
+      "admission_notices": 5
+    },
+    {
+      "id": "official-404980859ff4751d2f53",
+      "name": "李厚轩",
+      "institution": "南京大学",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "admission_notices": 5
+    },
+    {
+      "id": "official-f450e4d28d5720e149b5",
+      "name": "牟永斌",
+      "institution": "南京大学",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 1,
+      "admission_notices": 5
+    },
+    {
+      "id": "official-c87481dc8fafdef3f40e",
+      "name": "王翔",
+      "institution": "南京大学",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 1,
+      "admission_notices": 5
+    },
+    {
+      "id": "official-27b48ee21db7dfe56fe7",
+      "name": "王志勇",
+      "institution": "南京大学",
+      "papers": 10,
+      "relations": 0,
+      "recruitment": 1,
+      "admission_notices": 5
+    },
+    {
+      "id": "official-ed9519ce8a8d2a510eb4",
+      "name": "闫福华",
+      "institution": "南京大学",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 1,
+      "admission_notices": 5
+    },
+    {
+      "id": "official-b0fd415498d379a004e5",
+      "name": "董建波",
+      "institution": "华东师范大学",
+      "papers": 10,
+      "relations": 0,
+      "recruitment": 0,
+      "admission_notices": 3
+    },
+    {
+      "id": "official-93c1a7a5b834e0e043f2",
+      "name": "樊士博",
+      "institution": "华东师范大学",
+      "papers": 5,
+      "relations": 0,
+      "recruitment": 0,
+      "admission_notices": 3
+    },
+    {
+      "id": "official-9c01bc7a7522f34401b3",
+      "name": "樊建政",
+      "institution": "华东师范大学",
+      "papers": 8,
+      "relations": 0,
+      "recruitment": 0,
+      "admission_notices": 3
+    },
+    {
+      "id": "official-d94421a7049543a6b8b9",
+      "name": "侯艳兴",
+      "institution": "华东师范大学",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "admission_notices": 3
+    },
+    {
+      "id": "official-5667d79c52d4d30c42ac",
+      "name": "胡艳红",
+      "institution": "华东师范大学",
+      "papers": 5,
+      "relations": 0,
+      "recruitment": 0,
+      "admission_notices": 3
+    },
+    {
+      "id": "official-a218ad100a14d06d49aa",
+      "name": "黄亚玲",
+      "institution": "华东师范大学",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "admission_notices": 3
+    },
+    {
+      "id": "official-cef3d36254293c9865d5",
+      "name": "黄波粼",
+      "institution": "华东师范大学",
+      "papers": 1,
+      "relations": 0,
+      "recruitment": 0,
+      "admission_notices": 3
+    },
+    {
+      "id": "official-c3679b15d295f8148485",
+      "name": "贾秀堂",
+      "institution": "华东师范大学",
+      "papers": 1,
+      "relations": 0,
+      "recruitment": 0,
+      "admission_notices": 3
+    },
+    {
+      "id": "official-273bb974c7132f0fff33",
+      "name": "宋宏",
+      "institution": "华东师范大学",
+      "papers": 1,
+      "relations": 0,
+      "recruitment": 0,
+      "admission_notices": 3
+    },
+    {
+      "id": "official-bd2d5f8c91d76924a27e",
+      "name": "吴原元",
+      "institution": "华东师范大学",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "admission_notices": 3
+    },
+    {
+      "id": "official-42a406dbdbde506feb0a",
+      "name": "王可园",
+      "institution": "华东师范大学",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "admission_notices": 3
+    },
+    {
+      "id": "official-dbffc2b459d7f4c4b156",
+      "name": "王才友",
+      "institution": "华东师范大学",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "admission_notices": 3
+    },
+    {
+      "id": "official-7f954ecbbea1c5324a2f",
+      "name": "王磊",
+      "institution": "华东师范大学",
+      "papers": 2,
+      "relations": 0,
+      "recruitment": 0,
+      "admission_notices": 3
+    },
+    {
+      "id": "official-06fcb7de43ad5cfc5414",
+      "name": "谢敏",
+      "institution": "华东师范大学",
+      "papers": 2,
+      "relations": 0,
+      "recruitment": 0,
+      "admission_notices": 3
+    },
+    {
+      "id": "official-72e48e303d33d0be8e8c",
+      "name": "杨丽萍",
+      "institution": "华东师范大学",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "admission_notices": 3
+    },
+    {
+      "id": "official-e4235faf93dd7ecc2384",
+      "name": "周敬青",
+      "institution": "华东师范大学",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "admission_notices": 3
+    },
+    {
+      "id": "official-9b762e7aa4a06f44e3cb",
+      "name": "张仰亮",
+      "institution": "华东师范大学",
+      "papers": 8,
+      "relations": 0,
+      "recruitment": 0,
+      "admission_notices": 3
+    },
+    {
+      "id": "official-6667c34857be2df6f3f5",
+      "name": "赵正桥",
+      "institution": "华东师范大学",
+      "papers": 3,
+      "relations": 0,
+      "recruitment": 0,
+      "admission_notices": 3
+    },
+    {
+      "id": "official-5c05d99aa245bf3cc7d7",
+      "name": "沙力争",
+      "institution": "浙江科技大学",
+      "papers": 1,
+      "relations": 0,
+      "recruitment": 0,
+      "admission_notices": 5
+    },
+    {
+      "id": "official-579ed3666c582f04f6b3",
+      "name": "赵会芳",
+      "institution": "浙江科技大学",
+      "papers": 4,
+      "relations": 0,
+      "recruitment": 0,
+      "admission_notices": 5
+    },
+    {
+      "id": "official-56ef3b3ffb2cc5722422",
+      "name": "金光范",
+      "institution": "浙江科技大学",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "admission_notices": 5
+    },
+    {
+      "id": "official-df84e9ba2a78eaa75c06",
+      "name": "周浩",
+      "institution": "浙江科技大学",
+      "papers": 5,
+      "relations": 0,
+      "recruitment": 0,
+      "admission_notices": 5
+    },
+    {
+      "id": "official-00fc9eb3eca9efc599db",
+      "name": "黄璐瑶",
+      "institution": "浙江科技大学",
+      "papers": 5,
+      "relations": 0,
+      "recruitment": 0,
+      "admission_notices": 5
+    },
+    {
+      "id": "official-c94c4f28561824832ee7",
+      "name": "王海平",
+      "institution": "浙江科技大学",
+      "papers": 5,
+      "relations": 0,
+      "recruitment": 0,
+      "admission_notices": 5
+    },
+    {
+      "id": "official-e2d337c3c3c27deeb2a4",
+      "name": "丁晓良",
+      "institution": "浙江科技大学",
+      "papers": 5,
+      "relations": 0,
+      "recruitment": 0,
+      "admission_notices": 5
+    },
+    {
+      "id": "official-3a100a9e1517ab642270",
+      "name": "黄星雨",
+      "institution": "浙江科技大学",
+      "papers": 5,
+      "relations": 0,
+      "recruitment": 0,
+      "admission_notices": 5
+    },
+    {
+      "id": "official-249d69ed1233a4e27624",
+      "name": "游艳芝",
+      "institution": "浙江科技大学",
+      "papers": 5,
+      "relations": 0,
+      "recruitment": 0,
+      "admission_notices": 5
+    },
+    {
+      "id": "official-8baa0facf78c35833d16",
+      "name": "陈煌煌",
+      "institution": "浙江科技大学",
+      "papers": 5,
+      "relations": 0,
+      "recruitment": 0,
+      "admission_notices": 5
+    },
+    {
+      "id": "official-8682b6f1bd4781cbed8a",
+      "name": "翟睿",
+      "institution": "浙江科技大学",
+      "papers": 6,
+      "relations": 1,
+      "recruitment": 0,
+      "admission_notices": 5
+    },
+    {
+      "id": "official-71178949f1f8471ccafd",
+      "name": "童欣",
+      "institution": "浙江科技大学",
+      "papers": 5,
+      "relations": 0,
+      "recruitment": 0,
+      "admission_notices": 5
+    },
+    {
+      "id": "official-ec9c6227db23eee72ca4",
+      "name": "张欣",
+      "institution": "浙江科技大学",
+      "papers": 5,
+      "relations": 0,
+      "recruitment": 0,
+      "admission_notices": 5
+    },
+    {
+      "id": "official-dbd4f9cf9275e73dfa38",
+      "name": "苑田忠",
+      "institution": "浙江科技大学",
+      "papers": 7,
+      "relations": 0,
+      "recruitment": 0,
+      "admission_notices": 5
+    },
+    {
+      "id": "official-05b6785cd4b956c9010a",
+      "name": "孟亚会",
+      "institution": "浙江科技大学",
+      "papers": 5,
+      "relations": 0,
+      "recruitment": 0,
+      "admission_notices": 5
+    },
+    {
+      "id": "official-f95c04ebaddfd96a4c90",
+      "name": "杨立邦",
+      "institution": "湘潭大学",
+      "papers": 12,
+      "relations": 0,
+      "recruitment": 0,
+      "admission_notices": 1
+    },
+    {
+      "id": "official-c0dd7d12142ac3a8b365",
+      "name": "李尚翼",
+      "institution": "中央财经大学",
+      "papers": 3,
+      "relations": 1,
+      "recruitment": 0,
+      "admission_notices": 4
+    },
+    {
+      "id": "official-d3b738438495654593fa",
+      "name": "丁锋",
+      "institution": "国防科技大学",
+      "papers": 1,
+      "relations": 0,
+      "recruitment": 0,
+      "admission_notices": 1
+    },
+    {
+      "id": "official-3b36d62839895ac10049",
+      "name": "薛磊",
+      "institution": "国防科技大学",
+      "papers": 1,
+      "relations": 0,
+      "recruitment": 0,
+      "admission_notices": 1
+    },
+    {
+      "id": "official-0d23fe719d15332f9c17",
+      "name": "欧宗伟",
+      "institution": "国防科技大学",
+      "papers": 1,
+      "relations": 0,
+      "recruitment": 0,
+      "admission_notices": 1
+    },
+    {
+      "id": "official-bfa73bc4a77694f09f83",
+      "name": "韩道文",
+      "institution": "国防科技大学",
+      "papers": 1,
+      "relations": 0,
+      "recruitment": 0,
+      "admission_notices": 1
+    },
+    {
+      "id": "official-80259ac585ee5982a1ab",
+      "name": "马继政",
+      "institution": "陆军工程大学",
+      "papers": 1,
+      "relations": 0,
+      "recruitment": 1,
+      "admission_notices": 1
+    },
+    {
+      "id": "official-32c6feab7b49669d423a",
+      "name": "李功淼",
+      "institution": "陆军工程大学",
+      "papers": 1,
+      "relations": 0,
+      "recruitment": 1,
+      "admission_notices": 1
+    }
+  ],
+  "checked_filter_branches": 2638,
+  "coverage": {
+    "total_records": 10115,
+    "official_records": 6936,
+    "public_records": 6942,
+    "secondary_records": 6,
+    "public_institutions": 32,
+    "official_disciplines": 116,
+    "legacy_records": 3179,
+    "overlapping_records": 6,
+    "research": {
+      "readable_profiles": 6942,
+      "papers": 1728,
+      "relations": 167,
+      "recruitment": 6166,
+      "admission_notices": 757
+    },
+    "official_institutions": 30,
+    "updated_at": "2026-10-14",
+    "disciplines": [
+      {
+        "name": "0101 哲学",
+        "count": 40,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0201 理论经济学",
+        "count": 32,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "0202 应用经济学",
+        "count": 59,
+        "institutions": 4,
+        "secondary_count": 0
+      },
+      {
+        "name": "0301 法学",
+        "count": 28,
+        "institutions": 3,
+        "secondary_count": 0
+      },
+      {
+        "name": "0302 政治学",
+        "count": 17,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "0303 社会学",
+        "count": 24,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0304 民族学",
+        "count": 8,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0305 马克思主义理论",
+        "count": 41,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "0306 公安学",
+        "count": 32,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0307 中共党史党建学",
+        "count": 20,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "0308 纪检监察学",
+        "count": 6,
+        "institutions": 3,
+        "secondary_count": 0
+      },
+      {
+        "name": "0401 教育学",
+        "count": 80,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0402 心理学",
+        "count": 122,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "0403 体育学",
+        "count": 13,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0501 中国语言文学",
+        "count": 164,
+        "institutions": 3,
+        "secondary_count": 0
+      },
+      {
+        "name": "0502 外国语言文学",
+        "count": 21,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "0503 新闻传播学",
+        "count": 14,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0601 考古学",
+        "count": 41,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "0602 中国史",
+        "count": 52,
+        "institutions": 3,
+        "secondary_count": 0
+      },
+      {
+        "name": "0603 世界史",
+        "count": 24,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0701 数学",
+        "count": 537,
+        "institutions": 5,
+        "secondary_count": 0
+      },
+      {
+        "name": "0702 物理学",
+        "count": 316,
+        "institutions": 4,
+        "secondary_count": 0
+      },
+      {
+        "name": "0703 化学",
+        "count": 322,
+        "institutions": 4,
+        "secondary_count": 0
+      },
+      {
+        "name": "0704 天文学",
+        "count": 70,
+        "institutions": 3,
+        "secondary_count": 0
+      },
+      {
+        "name": "0705 地理学",
+        "count": 219,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "0706 大气科学",
+        "count": 153,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0707 海洋科学",
+        "count": 202,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "0708 地球物理学",
+        "count": 58,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0709 地质学",
+        "count": 105,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0710 生物学",
+        "count": 451,
+        "institutions": 5,
+        "secondary_count": 0
+      },
+      {
+        "name": "0711 系统科学",
+        "count": 49,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "0712 科学技术史",
+        "count": 16,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "0713 生态学",
+        "count": 103,
+        "institutions": 4,
+        "secondary_count": 0
+      },
+      {
+        "name": "0714 统计学",
+        "count": 83,
+        "institutions": 4,
+        "secondary_count": 0
+      },
+      {
+        "name": "0801 力学",
+        "count": 34,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0802 机械工程",
+        "count": 183,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0803 光学工程",
+        "count": 22,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0804 仪器科学与技术",
+        "count": 55,
+        "institutions": 3,
+        "secondary_count": 0
+      },
+      {
+        "name": "0805 材料科学与工程",
+        "count": 244,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "0806 冶金工程",
+        "count": 15,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0807 动力工程及工程热物理",
+        "count": 107,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0808 电气工程",
+        "count": 71,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0809 电子科学与技术",
+        "count": 69,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "0810 信息与通信工程",
+        "count": 78,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "0811 控制科学与工程",
+        "count": 15,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0812 计算机科学与技术",
+        "count": 100,
+        "institutions": 4,
+        "secondary_count": 0
+      },
+      {
+        "name": "0813 建筑学",
+        "count": 24,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0814 土木工程",
+        "count": 70,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "0815 水利工程",
+        "count": 17,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0816 测绘科学与技术",
+        "count": 20,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0817 化学工程与技术",
+        "count": 205,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "0818 地质资源与地质工程",
+        "count": 23,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0819 矿业工程",
+        "count": 8,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0820 石油与天然气工程",
+        "count": 18,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0821 纺织科学与工程",
+        "count": 61,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0822 轻工技术与工程",
+        "count": 19,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "0823 交通运输工程",
+        "count": 48,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0824 船舶与海洋工程",
+        "count": 55,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0825 航空宇航科学与技术",
+        "count": 62,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0826 兵器科学与技术",
+        "count": 104,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0827 核科学与技术",
+        "count": 38,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "0828 农业工程",
+        "count": 27,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0829 林业工程",
+        "count": 49,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0830 环境科学与工程",
+        "count": 160,
+        "institutions": 3,
+        "secondary_count": 0
+      },
+      {
+        "name": "0831 生物医学工程",
+        "count": 59,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0832 食品科学与工程",
+        "count": 83,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "0833 城乡规划学",
+        "count": 63,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "0835 软件工程",
+        "count": 43,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0836 生物工程",
+        "count": 35,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0837 安全科学与工程",
+        "count": 43,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0838 公安技术",
+        "count": 14,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0839 网络空间安全",
+        "count": 34,
+        "institutions": 3,
+        "secondary_count": 0
+      },
+      {
+        "name": "0901 作物学",
+        "count": 101,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "0902 园艺学",
+        "count": 90,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "0903 农业资源与环境",
+        "count": 74,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "0904 植物保护",
+        "count": 65,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0905 畜牧学",
+        "count": 57,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0906 兽医学",
+        "count": 112,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0907 林学",
+        "count": 55,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0908 水产",
+        "count": 25,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0909 草学",
+        "count": 12,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "0910 水土保持与荒漠化防治学",
+        "count": 8,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1001 基础医学",
+        "count": 8,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1002 临床医学",
+        "count": 34,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1003 口腔医学",
+        "count": 10,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "1004 公共卫生与预防医学",
+        "count": 5,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "1005 中医学",
+        "count": 8,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1006 中西医结合",
+        "count": 7,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1007 药学",
+        "count": 12,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1008 中药学",
+        "count": 9,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1009 特种医学",
+        "count": 34,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1011 护理学",
+        "count": 19,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1012 法医学",
+        "count": 6,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1101 军事思想与军事历史",
+        "count": 17,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1102 战略学",
+        "count": 19,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1103 联合作战学",
+        "count": 8,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1104 军兵种作战学",
+        "count": 4,
+        "institutions": 1,
+        "secondary_count": 4
+      },
+      {
+        "name": "1105 军队指挥学",
+        "count": 19,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1106 军队政治工作学",
+        "count": 6,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1107 军事后勤学",
+        "count": 34,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "1108 军事装备学",
+        "count": 19,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1109 军事管理学",
+        "count": 10,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1110 军事训练学",
+        "count": 4,
+        "institutions": 2,
+        "secondary_count": 2
+      },
+      {
+        "name": "1111 军事智能",
+        "count": 30,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1201 管理科学与工程",
+        "count": 39,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1202 工商管理学",
+        "count": 29,
+        "institutions": 3,
+        "secondary_count": 0
+      },
+      {
+        "name": "1203 农林经济管理",
+        "count": 60,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1204 公共管理学",
+        "count": 53,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "1205 信息资源管理",
+        "count": 18,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "1301 艺术学",
+        "count": 17,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1401 集成电路科学与工程",
+        "count": 12,
+        "institutions": 2,
+        "secondary_count": 0
+      },
+      {
+        "name": "1402 国家安全学",
+        "count": 20,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1403 设计学",
+        "count": 23,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1404 遥感科学与技术",
+        "count": 23,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1405 智能科学与技术",
+        "count": 13,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1406 纳米科学与工程",
+        "count": 56,
+        "institutions": 1,
+        "secondary_count": 0
+      },
+      {
+        "name": "1407 区域国别学",
+        "count": 20,
+        "institutions": 1,
+        "secondary_count": 0
+      }
+    ]
+  },
+  "checks": {
+    "python_tests": 68,
+    "frontend_tests": 11,
+    "http_discipline_lists": 118
+  }
+}

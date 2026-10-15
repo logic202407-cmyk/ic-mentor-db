@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>技术报告</title>
+<style>
+@page { size: A4; margin: 16mm 14mm 16mm 14mm; }
+* { box-sizing: border-box; }
+body {
+  font-family: "Microsoft YaHei", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", sans-serif;
+  font-size: 10.2pt; line-height: 1.62; color: #1a1a1a; margin: 0;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+h1 { font-size: 17pt; margin: 0 0 4mm; padding-bottom: 2mm; border-bottom: 2.2px solid #1f4e79; color: #14304a; }
+h1 + blockquote { margin-top: 0; }
+h2 { font-size: 13.2pt; margin: 7mm 0 2.5mm; padding: 1.6mm 0 1.6mm 3mm; border-left: 4px solid #1f4e79; background: #f2f6fa; color: #14304a; page-break-after: avoid; }
+h3 { font-size: 11.2pt; margin: 5mm 0 2mm; color: #1f4e79; page-break-after: avoid; }
+h4 { font-size: 10.4pt; margin: 4mm 0 1.5mm; color: #333; page-break-after: avoid; }
+p { margin: 0 0 2.2mm; text-align: justify; }
+ul, ol { margin: 0 0 2.4mm; padding-left: 6.5mm; }
+li { margin-bottom: 1.1mm; }
+table { border-collapse: collapse; width: 100%; margin: 2.5mm 0 4mm; font-size: 9.1pt; page-break-inside: auto; }
+th, td { border: 0.7px solid #b8c4d0; padding: 1.5mm 2mm; text-align: left; vertical-align: top; }
+th { background: #e8eef5; font-weight: 600; color: #14304a; }
+thead { display: table-header-group; }
+tr { page-break-inside: avoid; }
+blockquote { margin: 2.5mm 0; padding: 2.2mm 3.5mm; border-left: 3.5px solid #9fb3c8; background: #f7f9fb; color: #33475b; }
+blockquote p { margin: 0 0 1.4mm; }
+blockquote p:last-child { margin-bottom: 0; }
+code { font-family: Consolas, "Cascadia Mono", monospace; font-size: 8.9pt; background: #f0f2f5; padding: 0.3mm 1mm; border-radius: 2px; }
+pre { background: #f7f8fa; border: 0.7px solid #d5dbe2; border-radius: 3px; padding: 2.5mm 3mm; overflow-wrap: break-word; white-space: pre-wrap; page-break-inside: avoid; }
+pre code { background: none; padding: 0; font-size: 8.5pt; line-height: 1.42; }
+hr { border: none; border-top: 0.7px solid #ccd4dc; margin: 5mm 0; }
+strong { color: #10314d; }
+a { color: #1f4e79; text-decoration: none; word-break: break-all; }
+h2, h3 { break-after: avoid-page; }
+/* Print header/footer is suppressed (--no-pdf-header-footer); show the document
+   title on the first page only, keeping the rest clean for the page budget. */
+</style>
+</head>
+<body>
+<h1>技术报告</h1>
+<blockquote>
+<p>2026 年第八届全球校园人工智能算法精英大赛 · 算法主题赛 · AI+开源</p>
+<p>团队名称：＿＿＿＿＿＿　　团队编号：＿＿＿＿＿＿</p>
+<p>作品名称：导师调查工作台</p>
+<p>参赛方向：（一）开源赋能的 AI 应用创新（融合“开源项目改进与生态贡献”）</p>
+<p>日期：2026 年 10 月</p>
+</blockquote>
+<hr />
+<h2>一、作品概述</h2>
+<h3>1. 背景与问题</h3>
+<p>保研、考研和申请阶段，学生要在有限时间里判断“这位老师做什么、是不是我要的方向、信息是否可靠”。真实做法通常是：打开学院师资页、翻导师个人主页、在学术数据库里搜同名作者、再想办法找在读学生打听。这一过程有三个具体困难。</p>
+<p><strong>第一，同名无法核对。</strong> 中文拼音重名极严重，“刘明”“王磊”“Xiao Wang”这类姓名在学术数据库里会返回大量无关作者。学生一旦把同名者的论文当成目标导师的成果，对这个课题组的判断从第一步就错了。学院官网通常没有英文名和作者标识，学生缺乏核对手段。</p>
+<p><strong>第二，信息散落在几十个页面里。</strong> 一位导师的身份信息在学院名录页，成果在论文数据库，招生态度在个人主页或课题组页面，师生关系往往只在学位论文致谢或答辩公告里出现。这些页面分属不同站点、格式各异，学生要手工开十几个标签页，最后靠自己的记事本拼起来——拼的过程中极易把来源搞混。</p>
+<p><strong>第三，公开页面不等于事实。</strong> 学院名录没有招生年份，可能三年前的；个人主页写着“在招”可能早已招满；论文按姓名检索出来的结果可能属于同名的另一个人；共同署名不等于师生关系。网上现成的“导师评价”又多为主观打分与匿名吐槽，无法追溯，也不适合作为决策依据。</p>
+<p>本作品聚焦一个可在参赛周期内完整验证的具体问题：<strong>如何把散落在公开网页上的导师信息，整理成一条条带来源、可核对、可追溯的调查记录，同时明确区分“已核实”与“未知”，不替用户下结论。</strong></p>
+<h3>2. 目标、参赛方向与作品形态</h3>
+<p><strong>目标</strong>：为跨专业学生提供一个在本机运行的导师调查工作台。用户以“选择”而非“搜索”为主要操作路径——先按姓名核对同名者身份，或依次选择一级学科、高校、研究方向定位导师；选定后在同一份档案里查看公开来源、论文线索和学术关系线索，逐项登记人工核查状态，最后导出 Markdown 调查记录。</p>
+<p><strong>参赛方向</strong>：申报“（一）开源赋能的 AI 应用创新”，并融合“（三）开源项目改进与生态贡献”——本作品在既有开源导师数据库项目基础上做了实质性重构与增强。</p>
+<p><strong>作品形态</strong>：本地运行的网页应用（浏览器 + 本机 Python 服务），非小程序、非云端 SaaS。选择本地形态是刻意的：导师调查涉及学生的个人判断与意向记录，这些数据不应上传到第三方服务器。工作台只监听 <code>127.0.0.1</code>，没有账号系统，用户的项目与调查记录保存在本机 <code>.workbench-data/</code> 目录。</p>
+<h3>3. 核心亮点</h3>
+<p><strong>亮点一：以“证据边界”为设计核心，而不是以“自动下结论”为目标。</strong> 系统内所有内容都区分三种状态——有公开来源支持的事实、来自第三方转载的线索、以及“未知”。师承关系除非有明确公开表述（学位论文致谢、答辩公告、导师遴选文件），否则保留空白，绝不从共同署名推断。这一取舍牺牲了“看起来信息更全”的观感，换来的是每一条信息都能追溯到具体来源。</p>
+<p><strong>亮点二：用开源中文向量模型解决“兴趣描述与学科术语不匹配”的检索难点。</strong> 学生描述研究兴趣时用的往往不是学科术语。实测中，查询“我想做中文问答和知识组织”能正确召回研究方向为“自然语言处理”的导师，而按双字重合度的关键词基线做不到——这是开源嵌入模型在本场景中不可替代的作用。</p>
+<p><strong>亮点三：把“人工核查”做成产品机制而非免责声明。</strong> 每条来源默认状态为“待人工核查”，用户可逐项标记；系统根据八项核查状态生成后续待办清单，但<strong>新增来源不会自动把核查标记为已完成</strong>。调查记录可导出为 Markdown，包含来源类别与身份核对链接，便于学生交给老师或同学复核。</p>
+<p><strong>亮点四：完整开源且可复现。</strong> 代码以 MIT 许可开放；数据整理脚本不含硬编码路径，可克隆到任意目录运行；自带 75 项 Python 行为测试与 11 项前端异步测试，全部通过。</p>
+<hr />
+<h2>二、需求分析与总体方案</h2>
+<h3>1. 需求分析</h3>
+<p><strong>现有做法与痛点。</strong> 我们梳理了学生选导师时实际使用的四类信息渠道，并对照本作品的取舍：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">现有做法</th>
+<th style="text-align: left;">主要痛点</th>
+<th style="text-align: left;">本作品的处理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">学院官网师资页</td>
+<td style="text-align: left;">只有姓名职称方向，无成果、无招生信息</td>
+<td style="text-align: left;">作为身份与任职的<strong>一手来源</strong>保存并标注采集日期</td>
+</tr>
+<tr>
+<td style="text-align: left;">学术数据库按姓名检索</td>
+<td style="text-align: left;">同名污染，“刘明”返回大量无关作者</td>
+<td style="text-align: left;">提供 OpenAlex 作者候选，<strong>必须由用户手动选择</strong>，不自动绑定</td>
+</tr>
+<tr>
+<td style="text-align: left;">导师个人/课题组主页</td>
+<td style="text-align: left;">格式各异，招生表述时效不明</td>
+<td style="text-align: left;">提取公开表述原文并保留链接；未注明年份的表述明确提示</td>
+</tr>
+<tr>
+<td style="text-align: left;">网络上的导师评价</td>
+<td style="text-align: left;">主观、匿名、无法追溯</td>
+<td style="text-align: left;"><strong>不收录、不生成任何导师评价或质量打分</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>需求优先级。</strong> 按“做错了会不会导致判断错误”排序，我们确定了三条优先级：① 来源必须可追溯（最高，做错则全盘失效）；② 同名必须可核对（做错则论文归属错人）；③ 未知必须显示为未知（做错则学生误以为信息完整）。功能丰富度排在三条之后。</p>
+<p><strong>需求来源说明。</strong> 本作品的需求判断来自团队自身在保研/考研信息搜集中的实际经历，以及对公开渠道信息形态的分析。<strong>我们尚未开展独立的用户调研或访谈</strong>，因此本报告不对“提高效率”“改善决策”作任何量化声称——这一点在第五章“验证结果”中如实说明。</p>
+<h3>2. 总体方案</h3>
+<p>系统采用“本地服务 + 浏览器界面 + 本机数据”的三层结构，全部在本机运行。</p>
+<pre><code>┌─────────────────────────────────────────────────────────────┐
+│  浏览器界面（workbench/web/）                                 │
+│  index.html 主页       desk.html 调查工作台                    │
+│  assets/*.js  异步请求、竞态防护、手动添加导师/论文             │
+└───────────────────────────┬─────────────────────────────────┘
+                            │ 本机 HTTP（127.0.0.1:8765）
+┌───────────────────────────┴─────────────────────────────────┐
+│  本机服务（workbench/app.py, FastAPI + Uvicorn）              │
+│                                                              │
+│  目录与档案          检索              调查与证据              │
+│  catalog.py          search.py         investigation.py       │
+│  · 学科→高校→方向     · 语义检索        · 身份/论文/关系整理    │
+│  · 同名分别保留       · 关键词基线      · DOI 元数据核对        │
+│  · 八项核查状态       · 向量缓存        · 待办清单生成          │
+│                                                              │
+│  core.py 本机存储   openalex.py 作者候选   public_research.py  │
+│  · 项目/调查 JSON   · 只返回候选，不绑定   · 公开页面提取        │
+└───────────────────────────┬─────────────────────────────────┘
+                            │
+┌───────────────────────────┴─────────────────────────────────┐
+│  数据层                                                       │
+│  已入库成果：data/processed/、workbench/reference/            │
+│  用户数据：.workbench-data/（项目、调查、页面缓存、向量索引）    │
+│  外部接口（可选、需联网）：OpenAlex、Crossref                  │
+│  本地模型：.workbench-data/models/（bge-small-zh ONNX）        │
+└─────────────────────────────────────────────────────────────┘
+</code></pre>
+<p><strong>输入输出。</strong> 输入为：① 已入库的公开师资名录与成果记录；② 用户导入的 CSV/JSON 资料；③ 用户手工添加的导师与论文；④ 可选的 OpenAlex/Crossref 联网查询。输出为：① 浏览器中的导师档案；② 逐人 Markdown 调查记录；③ 项目 JSON 导出。</p>
+<p><strong>主要运行流程。</strong> 用户进入主页 → 选择路径（按姓名 / 按学科）→ 系统列出候选并<strong>分别保留同名者</strong> → 用户选定身份 → 系统展示该身份已保存的公开来源、论文与论著、师承表述、招生记录 → 用户逐项核查并登记状态 → 导出 Markdown。</p>
+<h3>3. 可行性与成本</h3>
+<p><strong>算力</strong>：不需要 GPU。语义检索用的 ONNX 模型约 95 MB，在普通笔记本 CPU 上完成 10 条资料的向量计算约 4 秒，之后命中本地向量缓存则低于 0.1 秒。</p>
+<p><strong>软件</strong>：全部为开源组件（详见第三章与附录）。Python 3.10–3.12、Node.js 18+（仅测试用）。</p>
+<p><strong>数据</strong>：来源于高校/科研机构官网公开师资页、学校研究生招生目录公开 PDF、以及 Crossref 公开元数据接口。<strong>不采集登录墙、付费墙或私人渠道内容。</strong></p>
+<p><strong>设备与时间</strong>：单台笔记本即可完成开发与演示。从既有开源导师数据库出发，经过史料整理、目录重构、检索实现、前端竞态修复、测试补齐等阶段迭代而成。</p>
+<p><strong>成本结论</strong>：无付费 API、无云服务器、无专用硬件。唯一外部依赖是可选联网查询（OpenAlex / Crossref 匿名配额），离线状态下除该功能外全部可用。</p>
+<hr />
+<h2>三、AI 技术与开源及第三方资源选择</h2>
+<h3>1. AI 技术作用</h3>
+<p>本作品中的 AI 作用是<strong>语义检索</strong>：把用户用自然语言描述的研究兴趣，与各学科导师的研究方向文本匹配起来。它解决的是一个关键词匹配解决不了的问题——学生讲的不是学科术语。</p>
+<p><strong>为什么需要 AI。</strong> 本作品覆盖 117 个一级学科的导航数据，导师的研究方向文本差异极大。如果只做关键词匹配，“我想做中文问答和知识组织”与“自然语言处理”之间没有共同的双字片段，关键词基线直接漏召回。语义嵌入把两者映射到同一向量空间，用余弦相似度完成匹配。</p>
+<p><strong>如何验证 AI 输出。</strong> 我们做了两件具体的事：</p>
+<ol>
+<li><strong>并列关键词基线。</strong> 系统同时提供“关键词基线”（按查询与文本的双字重合度排序）与“语义检索”，让用户自己核查 AI 是否真的有帮助，而不是只给一个黑盒结果。两个模式的分数与排序都在界面上可见。</li>
+<li><strong>预置查询集评估。</strong> 在 8 条公开来源试点资料上，事先写定 8 个查询与期望命中项，脚本化比较两种模式的 Top-1 / Top-3（结果见第五章）。</li>
+</ol>
+<p><strong>明确不做的 AI 用途。</strong> 我们不使用 AI 对导师作评价、打分、排序或推荐，也不让 AI 自动判定论文归属或师生关系。这些判断一旦由模型自动完成，错误的代价由学生承担，且无法追溯。系统对相似度分数的定位是“找资料的线索”，界面上明确写出它不是可信度、适配度或优劣分。</p>
+<h3>2. 开源及第三方资源选择</h3>
+<p>完整清单见附录一的《开源及第三方资源使用清单》。核心选型如下：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">资源</th>
+<th style="text-align: left;">版本</th>
+<th style="text-align: left;">许可证</th>
+<th style="text-align: left;">选型依据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>Qdrant/bge-small-zh-v1.5</code>（中文嵌入模型，ONNX 量化版）</td>
+<td style="text-align: left;">随 fastembed 0.9.0 内置</td>
+<td style="text-align: left;">MIT（模型卡标注，本地核对）</td>
+<td style="text-align: left;">中文语义检索；模型体积约 95 MB，CPU 可跑，无需 GPU；MIT 许可便于本项目以 MIT 开放</td>
+</tr>
+<tr>
+<td style="text-align: left;">FastEmbed</td>
+<td style="text-align: left;">0.9.0</td>
+<td style="text-align: left;">Apache-2.0</td>
+<td style="text-align: left;">直接加载 ONNX 模型，避免引入 PyTorch 等重型依赖</td>
+</tr>
+<tr>
+<td style="text-align: left;">ONNX Runtime</td>
+<td style="text-align: left;">1.31.0</td>
+<td style="text-align: left;">MIT</td>
+<td style="text-align: left;">CPU 推理，跨平台</td>
+</tr>
+<tr>
+<td style="text-align: left;">FastAPI</td>
+<td style="text-align: left;">0.118.0</td>
+<td style="text-align: left;">MIT</td>
+<td style="text-align: left;">本机 HTTP 服务，类型校验清晰</td>
+</tr>
+<tr>
+<td style="text-align: left;">Uvicorn</td>
+<td style="text-align: left;">0.37.0</td>
+<td style="text-align: left;">BSD-3-Clause</td>
+<td style="text-align: left;">ASGI 服务器</td>
+</tr>
+<tr>
+<td style="text-align: left;">BeautifulSoup4</td>
+<td style="text-align: left;">4.14.3</td>
+<td style="text-align: left;">MIT</td>
+<td style="text-align: left;">公开页面结构解析</td>
+</tr>
+<tr>
+<td style="text-align: left;">Requests</td>
+<td style="text-align: left;">2.34.2</td>
+<td style="text-align: left;">Apache-2.0</td>
+<td style="text-align: left;">外部接口调用</td>
+</tr>
+<tr>
+<td style="text-align: left;">NumPy</td>
+<td style="text-align: left;">2.5.4</td>
+<td style="text-align: left;">BSD-3-Clause（另含 0BSD/MIT/Zlib/CC0-1.0 组件）</td>
+<td style="text-align: left;">向量归一化与余弦计算</td>
+</tr>
+<tr>
+<td style="text-align: left;">Crossref REST API</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">公开元数据接口</td>
+<td style="text-align: left;">DOI 元数据核对，只发送 DOI，无需 API key</td>
+</tr>
+<tr>
+<td style="text-align: left;">OpenAlex API</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">公开元数据接口（CC0 数据）</td>
+<td style="text-align: left;">作者候选检索；匿名配额有限，可按官方说明申请免费 key</td>
+</tr>
+</tbody>
+</table>
+<p><strong>选型原则</strong>：优先选择①许可证宽松（MIT/Apache-2.0/BSD）以便本项目同样以宽松许可开放；②可在普通笔记本 CPU 上运行；③不引入需要付费或登录的依赖。<strong>我们刻意没有使用大语言模型生成内容</strong>，因为本作品的核心是“来源可追溯”，引入生成式内容会直接削弱这一目标。</p>
+<h3>3. 自主开发与权利边界</h3>
+<p><strong>团队自主完成的部分：</strong></p>
+<ul>
+<li>全部 <code>workbench/</code> 目录下的程序代码（29 个顶层 Python 模块、7 个 Python 测试文件、2 个前端测试脚本、前端页面与资源），共 100 余个文件；</li>
+<li>数据整理与核对流程：把公开师资页、招生目录、成果书目整理为结构化记录的脚本与人工核对记录；</li>
+<li>检索评估脚本与预置查询集（<code>workbench/evaluate_pilot.py</code>）；</li>
+<li>全部文档：使用说明、复现命令，以及 <code>workbench/reference/</code> 下按批次归档的来源与核对记录。</li>
+</ul>
+<p><strong>第三方开源部分：</strong> 上表所列软件与模型，均按原许可使用，未修改其源码。</p>
+<p><strong>数据权利边界（需特别说明）：</strong></p>
+<ul>
+<li>入库的<strong>事实性信息</strong>（姓名、任职单位、院系、研究方向关键词、公开来源链接、公开招生表述、论文元数据）由团队整理，按 CC BY-NC-SA 4.0 开放；</li>
+<li><strong>第三方教师网页原文归属原权利人</strong>，本作品只保存少量事实、来源链接和用户自有备注，<strong>不重新发布网页全文</strong>；原始页面缓存保留在本机且不进入公开仓库；</li>
+<li><strong>不收录任何邮箱地址</strong>。这既是隐私设计，也是硬性约束：清洗脚本（<code>strip_emails.mjs</code>）在产物生成后兜底清除字段名与文本内邮箱，并纳入 CI 校验，未通过则构建失败。</li>
+<li>既有开源导师数据库项目的成果作为历史资料接入，其在仓库中的许可声明保持原样。</li>
+</ul>
+<p><strong>授权边界确认：</strong> 本项目为独立的学生开源信息整理工作，未使用学校、实验室或实习单位的未公开资料，不涉及职务成果或商业秘密。所有数据来源均为公开可访问页面与公开接口。</p>
+<h3>4. 融合方式</h3>
+<p>本作品的“AI + 开源”不是“调用一个模型接口”就结束，而是形成了一条完整链路：</p>
+<p><strong>开源模型提供语义能力 → 本作品把它接入“证据可追溯”的数据结构 → 检索结果直接带着来源回到档案里。</strong></p>
+<p>具体而言：向量检索只在<strong>用户已选定的资料集</strong>内排序（<code>search.py</code> 中的 <code>search()</code> 先按学科/高校过滤再算相似度），因此检索结果天然带着结构化学科与单位标签；每条结果同时返回 <code>evidence_count</code>（该导师已有多少条来源），用户能立刻看出“这条命中是否已有来源支撑”。<strong>这是与通用 AI 应用最实质的区别</strong>：通用做法把模型输出当作答案，本作品把模型输出当作“去找哪份档案”的线索，答案仍要回到公开来源上核对。</p>
+<p>相较既有同类作品，本作品的实质改进有三点：① 从“按姓名检索并自动绑定作者”改为“列出同名候选、由用户核对身份”；② 从“展示导师评价与排名”改为“只展示可追溯的公开证据，不生成评价”；③ 从“单一学科数据库”扩展为覆盖 117 个一级学科的导航框架。</p>
+<hr />
+<h2>四、设计与实现过程</h2>
+<h3>1. 核心功能与流程</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">功能</th>
+<th style="text-align: left;">操作方式</th>
+<th style="text-align: left;">输入 → 输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">按姓名定位</td>
+<td style="text-align: left;">主页输入姓名片段</td>
+<td style="text-align: left;">姓名 → 同名候选列表（含学校、院系、一级学科/领域、方向、来源数量）</td>
+</tr>
+<tr>
+<td style="text-align: left;">按学科定位</td>
+<td style="text-align: left;">选择一级学科 → 高校 → 方向</td>
+<td style="text-align: left;">三级选择 → 导师名单（高校与方向默认“全部”）</td>
+</tr>
+<tr>
+<td style="text-align: left;">查看调查档案</td>
+<td style="text-align: left;">打开某位导师</td>
+<td style="text-align: left;">身份 → 公开来源、论文与论著、师承表述、招生记录、教育任职</td>
+</tr>
+<tr>
+<td style="text-align: left;">学术关系网</td>
+<td style="text-align: left;">档案内“学术关系网”页</td>
+<td style="text-align: left;">区分师承候选、经历重叠、共同署名三类，标注证据等级</td>
+</tr>
+<tr>
+<td style="text-align: left;">论文线索</td>
+<td style="text-align: left;">查询 OpenAlex 作者候选</td>
+<td style="text-align: left;">姓名 → 候选作者列表，<strong>由用户手动选择</strong>后才纳入档案</td>
+</tr>
+<tr>
+<td style="text-align: left;">DOI 核对</td>
+<td style="text-align: left;">从候选中每次选最多 3 篇</td>
+<td style="text-align: left;">DOI → Crossref 登记的标题/作者/年份/刊会</td>
+</tr>
+<tr>
+<td style="text-align: left;">核查记录</td>
+<td style="text-align: left;">按八项状态逐项登记</td>
+<td style="text-align: left;">类别 + 短标题 + 公开链接 + 可选摘要 → 核查状态（待核查/已人工核查/需补证据/不适用）</td>
+</tr>
+<tr>
+<td style="text-align: left;">待办生成</td>
+<td style="text-align: left;">“接下来核查什么”</td>
+<td style="text-align: left;">已保存的核查状态 → 后续清单（默认展开前三项）</td>
+</tr>
+<tr>
+<td style="text-align: left;">添加导师/论文</td>
+<td style="text-align: left;">左侧“没找到？添加导师”</td>
+<td style="text-align: left;">表单输入 → 新档案；手动论文保留“待核对”状态</td>
+</tr>
+<tr>
+<td style="text-align: left;">导入资料</td>
+<td style="text-align: left;">CSV/JSON 上传</td>
+<td style="text-align: left;">单次 ≤5000 条、≤10 MB → 导入结果（新增/跳过/重复计数）</td>
+</tr>
+<tr>
+<td style="text-align: left;">导出</td>
+<td style="text-align: left;">档案页导出</td>
+<td style="text-align: left;">档案 → Markdown 调查记录（含来源类别与后续核查清单）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>同名处理的关键流程</strong>：同名者作为独立条目保留，不合并。导入去重只在姓名、机构、院系、主页四项<strong>全部相同</strong>时才判为重复——宁可留两条让用户判断，也不冒把两位同名教师合并的风险。</p>
+<h3>2. 关键实现</h3>
+<p><strong>（1）向量缓存与指纹校验。</strong> 资料向量按项目缓存于 <code>.workbench-data/indexes/&lt;project_id&gt;.npz</code>。缓存文件内同时保存资料指纹（资料 ID 与文本的 SHA-256）和模型名；读取时两者都匹配才复用，否则重新计算。这样既避免了每次检索重复推理，又保证资料修改后不会用到过期向量。</p>
+<p><strong>（2）前端异步竞态防护。</strong> 用户在快速切换学科、高校、方向、导师时，先发出的请求可能后返回，从而覆盖当前选择——这是同类工具常见且难察觉的缺陷。实现上为每类请求保留版本序号，回包时只有序号仍为最新才允许渲染。该行为由 11 项前端测试专门覆盖（如“旧学科响应不能覆盖较新的选择”“切到新导师后旧资料请求不得刷新新档案”）。</p>
+<p><strong>（3）来源状态与“不自动完成核查”。</strong> 每条来源携带 <code>status</code> 字段，默认“待人工核查”。整理任务（身份来源、论文候选、关系证据、既有档案四项离线运行）完成后<strong>不会</strong>修改任何来源的状态。这一约束写在模块文档字符串里并有测试保护，防止后续迭代为了“体验流畅”而让系统自动认证来源。</p>
+<p><strong>（4）公开页面提取的约束。</strong> <code>public_research.py</code> 只读取已在代码中登记的院系名录与个人主页；手动录入的任意网址<strong>不进入自动抓取</strong>，避免把工具变成任意 URL 抓取器。页面读取失败时不清空既有成功结果与用户笔记。只保存提取出的简短事实与书目，不重新发布网页全文。</p>
+<p><strong>（5）测试策略。</strong> 75 项 Python 行为测试覆盖个人页解析、身份来源约束、年度招生记录匹配、失败更新保留资料、重复导入去重等；11 项前端测试用 Node 内置测试器在无浏览器环境下验证异步竞态。测试不替代浏览器交互验收，这一点在文档中明确写出。</p>
+<h3>3. 团队分工与过程记录</h3>
+<blockquote>
+<p><strong>本节需团队补充</strong>：请按实际情况填写成员角色（如：需求与资料整理、后端与数据管道、前端与测试）、时间计划与版本迭代节点。</p>
+</blockquote>
+<p><strong>开发过程中使用生成式 AI 辅助的情况（如实说明）：</strong> 本项目在开发过程中使用了大模型辅助工具，参与环节为：代码结构梳理、测试用例补充、文档与报告的文字组织。团队对所有 AI 辅助产出做了以下工作：① 逐行审阅并实际运行验证，以测试是否通过作为接受标准；② 对涉及事实的表述回到原始数据与来源核对（如导师数量、测试项数、审计结果均以脚本实际输出为准）；③ 确认所引入的代码仅依赖上表所列 MIT/Apache-2.0/BSD 许可的开源库，未引入来源不明或权利状态不清的代码；④ 遵守所用模型与平台的服务条款。<strong>报告中的所有统计数字均可由仓库内脚本复现验证。</strong></p>
+<p><strong>过程记录</strong>：仓库 <code>workbench/reference/</code> 下按批次归档了来源登记与核对记录（JSON），记录了各批新增导师的姓名、来源链接、新增条目数与遗留问题，可用于核查数据是怎么来的。仓库维护指南记录了完整的复现命令链路与排错表。</p>
+<hr />
+<h2>五、成果展示与效果验证</h2>
+<h3>1. 成果展示</h3>
+<p>运行方式（Windows，仓库根目录）：</p>
+<pre><code class="language-powershell">py -3.12 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r workbench\requirements.txt
+.\.venv\Scripts\python.exe -m uvicorn workbench.app:app --host 127.0.0.1 --port 8765
+</code></pre>
+<p>打开 <code>http://127.0.0.1:8765/</code>。主页不需要下载模型；首次点击“AI 语义检索”会下载约 95 MB 模型文件到被 Git 忽略的 <code>.workbench-data/models/</code>。</p>
+<p>主要页面与操作的截图见演示视频与佐证材料（<code>workbench/aic-submission/</code> 目录）。</p>
+<h3>2. 验证方法</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">验证类型</th>
+<th style="text-align: left;">方法</th>
+<th style="text-align: left;">覆盖对象</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">功能测试</td>
+<td style="text-align: left;"><code>unittest</code> 行为测试</td>
+<td style="text-align: left;">页面解析、来源约束、招生记录匹配、失败保留、导入去重</td>
+</tr>
+<tr>
+<td style="text-align: left;">前端异步测试</td>
+<td style="text-align: left;">Node 内置测试器（无浏览器）</td>
+<td style="text-align: left;">10 类竞态与状态覆盖场景</td>
+</tr>
+<tr>
+<td style="text-align: left;">检索评估</td>
+<td style="text-align: left;">预置 8 查询 × 8 条试点资料，脚本化比较</td>
+<td style="text-align: left;">语义检索 vs 关键词基线（Top-1 / Top-3）</td>
+</tr>
+<tr>
+<td style="text-align: left;">数据审计</td>
+<td style="text-align: left;"><code>audit_prepublish.mjs</code> 16 项自动检查</td>
+<td style="text-align: left;">邮箱残留、个人信息、硬编码路径、评价性用语、链接、凭证、统计自洽</td>
+</tr>
+<tr>
+<td style="text-align: left;">接口冒烟</td>
+<td style="text-align: left;">本机 HTTP 实际请求</td>
+<td style="text-align: left;">主页、学科列表、资料接口、检索接口、演示数据</td>
+</tr>
+<tr>
+<td style="text-align: left;">人工界面核对</td>
+<td style="text-align: left;">浏览器实机操作</td>
+<td style="text-align: left;">学科→高校→方向→导师逐级筛选、档案展示、导出</td>
+</tr>
+</tbody>
+</table>
+<h3>3. 验证结果</h3>
+<p><strong>（1）测试与审计通过情况。</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">项目</th>
+<th style="text-align: left;">命令</th>
+<th style="text-align: left;">结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Python 行为测试</td>
+<td style="text-align: left;"><code>python -m unittest discover -s workbench/tests</code></td>
+<td style="text-align: left;"><strong>75 项通过</strong>（约 5.4 秒）</td>
+</tr>
+<tr>
+<td style="text-align: left;">前端异步测试</td>
+<td style="text-align: left;"><code>node --test workbench/tests/*.cjs</code></td>
+<td style="text-align: left;"><strong>11 项通过</strong>（约 0.13 秒）</td>
+</tr>
+<tr>
+<td style="text-align: left;">公开前审计</td>
+<td style="text-align: left;"><code>node tools/audit_prepublish.mjs</code></td>
+<td style="text-align: left;"><strong>16 项通过 / 1 项警告 / 0 项阻塞</strong>（警告为单个产物文件超过 5 MB）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>（2）检索评估（8 条试点 × 8 个预置查询）。</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">模式</th>
+<th style="text-align: left;">Top-1</th>
+<th style="text-align: left;">Top-3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">语义检索（开源嵌入模型）</td>
+<td style="text-align: left;">7/8</td>
+<td style="text-align: left;">8/8</td>
+</tr>
+<tr>
+<td style="text-align: left;">关键词基线</td>
+<td style="text-align: left;">7/8</td>
+<td style="text-align: left;">8/8</td>
+</tr>
+</tbody>
+</table>
+<p><strong>（3）语义检索的分场景实测</strong>（在 10 条合成演示资料上，逐条实际调用接口）：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">查询</th>
+<th style="text-align: left;">语义检索 Top-1</th>
+<th style="text-align: left;">关键词基线 Top-1</th>
+<th style="text-align: left;">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">我想做中文问答和知识组织</td>
+<td style="text-align: left;">自然语言处理（0.556）</td>
+<td style="text-align: left;">自然语言处理（0.455），命中 2 条</td>
+<td style="text-align: left;">两种模式都能命中，语义分更高</td>
+</tr>
+<tr>
+<td style="text-align: left;">固态电池界面退化</td>
+<td style="text-align: left;">固态电池（0.604）</td>
+<td style="text-align: left;">固态电池（0.714）</td>
+<td style="text-align: left;">术语直接重合，基线反而更锐利</td>
+</tr>
+<tr>
+<td style="text-align: left;">数字平台的数据监管</td>
+<td style="text-align: left;">法学·数据保护（0.569）</td>
+<td style="text-align: left;">法学·数据保护（0.875）</td>
+<td style="text-align: left;">同上</td>
+</tr>
+<tr>
+<td style="text-align: left;">青少年学习动机</td>
+<td style="text-align: left;">心理学·认知心理学（0.545）</td>
+<td style="text-align: left;">心理学·认知心理学（0.833）</td>
+<td style="text-align: left;">同上</td>
+</tr>
+</tbody>
+</table>
+<p><strong>（4）关键发现：语义检索与关键词基线各有优势，不能只留一个。</strong> 在术语直接重合的查询上，关键词基线的分数更锐利（0.71–0.88，明显高于第二名）；语义检索在<strong>同一查询下会把不相关的导师也排进前三</strong>，相似度约 0.21–0.36。这意味着语义检索的弱尾部分需要用阈值或关键词二次过滤，否则会给用户带来噪声。这也正是我们把两种模式并列展示、而不是只保留“看起来更先进”的语义检索的原因。</p>
+<p><strong>（5）规模数据的可复现性。</strong> 工作台目录当前含 10,441 条“学科—导师”条目，覆盖 117 个正式一级学科（另有 1 个历史专题分类），可由接口 <code>GET /api/catalog/disciplines</code> 逐项核验。</p>
+<p><strong>（6）尚未达到的目标（如实说明）。</strong></p>
+<ul>
+<li><strong>没有独立用户研究。</strong> 未开展访谈、问卷或任务实验，因此本报告不声称“提高效率”或“改善决策”。检索评估是 8 条资料上的工程冒烟检查，样本量小，不能证明语义检索优于关键词。</li>
+<li><strong>全国覆盖率未评估。</strong> 117 个学科“均有名单”不等于全国完整。部分学科的收录人数仍很少（最少的学科 8 位），且部分线索来自第三方转载名录，已在页面与文档中分开标明来源强度。</li>
+<li><strong>数据完整度有限。</strong> 公开来源已覆盖相当规模的条目，但每个导师的论文、师承、招生信息远未补齐；没有公开依据的师承保持空白。</li>
+<li><strong>模型对英文与专业术语的表现未系统验证。</strong> 所用中文嵌入模型在英语查询和生僻专业术语上的效果尚未评估。</li>
+<li><strong>署名结构推断的已知误差。</strong> 历史专题中的团队规模、署名健康度等为文献计量推断值，存在同名与漏检误差，工作台中仅作为线索展示，不作为结论。</li>
+</ul>
+<hr />
+<h2>六、创新性与开放价值</h2>
+<h3>1. 创新性</h3>
+<p>与既有方案比较，本作品的实质改进集中在三点：</p>
+<p><strong>① 交互范式：从“检索”改为“核对”。</strong> 同类工具默认“输入姓名 → 返回结果”，把同名消歧问题留给了用户却又不提示。本作品把同名候选<strong>显式并列展示</strong>（含学校、院系、一级学科、方向、来源数量），要求用户先核对身份再调查，并在论文线索环节坚持“只给候选、由用户选择”，不自动绑定作者。</p>
+<p><strong>② 产品伦理：从“生成评价”改为“呈现证据边界”。</strong> 本作品明确不生成导师评价、不打分、不排名，也不让 AI 自动判定师生关系。取而代之的是八项人工核查状态与“不自动完成核查”的机制约束。这是一个操作性取舍：它让产品在演示时“看起来信息更少”，但让每一条信息都可追溯。</p>
+<p><strong>③ 检索设计：并列基线与多学科导航框架。</strong> 语义检索与关键词基线并列展示，便于用户与评审共同核查 AI 是否真有帮助；覆盖 117 个一级学科的导航框架使工具不局限于单一专业。</p>
+<p><strong>与上游开源项目的关系（开源项目改进与生态贡献）：</strong> 本作品在既有开源导师数据库项目基础上做了实质性重构——新增跨专业导航与选择式定位、同名核对机制、调查档案与本机存储、检索评估脚本、75 项 Python 与 11 项前端测试、以及逐批可追溯的核对记录。上游项目的原始数据与许可声明保持不变。</p>
+<h3>2. 开放成果</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">开放成果</th>
+<th style="text-align: left;">形式</th>
+<th style="text-align: left;">许可证</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">工作台程序代码（<code>workbench/</code>，29 个顶层 Python 模块 + 前端 + 测试）</td>
+<td style="text-align: left;">代码仓库</td>
+<td style="text-align: left;">MIT</td>
+</tr>
+<tr>
+<td style="text-align: left;">数据整理脚本（<code>tools/</code>）</td>
+<td style="text-align: left;">代码仓库</td>
+<td style="text-align: left;">MIT</td>
+</tr>
+<tr>
+<td style="text-align: left;">整理后的结构化公开资料（师资名录、成果记录、核对记录）</td>
+<td style="text-align: left;">数据文件</td>
+<td style="text-align: left;">CC BY-NC-SA 4.0</td>
+</tr>
+<tr>
+<td style="text-align: left;">检索评估脚本与预置查询集</td>
+<td style="text-align: left;">代码仓库</td>
+<td style="text-align: left;">MIT</td>
+</tr>
+<tr>
+<td style="text-align: left;">文档：工作台使用与复现说明、维护指南、使用指南、贡献指南</td>
+<td style="text-align: left;">文档</td>
+<td style="text-align: left;">CC BY-NC-SA 4.0</td>
+</tr>
+<tr>
+<td style="text-align: left;">本报告及其附录（含开源资源使用清单）</td>
+<td style="text-align: left;">文档</td>
+<td style="text-align: left;">CC BY-NC-SA 4.0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>许可设计说明</strong>：代码用 MIT（便于他人复用与二次开发），数据与文档用 CC BY-NC-SA 4.0（禁止商业使用，且衍生作品需相同方式共享）。这一区分是为了在“鼓励复用”和“防止把公开学术信息整理成果商业化”之间取得平衡。不开放原始网页缓存，因为其权利属原站点。</p>
+<h3>3. 社区贡献与复用</h3>
+<p><strong>当前状态（如实说明）</strong>：本作品<strong>尚未向上游开源项目提交 Issue 或 Pull Request</strong>。团队当前的贡献形式是把整套工具与数据以宽松许可开源，供其他学生直接使用与二次开发。</p>
+<p><strong>复用方式与价值</strong>：① 其他学校的学生可按仓库 <code>CONTRIBUTING.md</code> 的步骤增补本校师资数据，无需改动代码结构；② <code>tools/</code> 下的公开数据整理与校验方法（如来源校验、站点模板误判过滤、产出侧独立复核）可直接迁移到其他学术信息整理项目；③ 检索评估脚本与“并列基线”的做法可复用于任何需要验证“AI 是否真有帮助”的检索场景；④ 数据整理中的教训已写入维护指南（例如“不要只信任采集过程，要独立复核最终数据”这一条来自一次真实的字段名错误导致机构校验静默失效的排查）。</p>
+<h3>4. 维护计划</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">周期</th>
+<th style="text-align: left;">计划</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">每学期</td>
+<td style="text-align: left;">刷新师资名录与课题组公开页面；补充新收录导师的成果与招生信息</td>
+</tr>
+<tr>
+<td style="text-align: left;">持续</td>
+<td style="text-align: left;">处理信息更正请求（承诺 7 个工作日内响应，无需提供证件）</td>
+</tr>
+<tr>
+<td style="text-align: left;">版本迭代</td>
+<td style="text-align: left;">完善检索评估（扩大独立标注样本）、补充测试、改进公开页面解析的漏读问题</td>
+</tr>
+<tr>
+<td style="text-align: left;">文档维护</td>
+<td style="text-align: left;">同步更新复现命令与维护指南；每次推送前运行公开前审计与克隆自检</td>
+</tr>
+<tr>
+<td style="text-align: left;">反馈渠道</td>
+<td style="text-align: left;">通过仓库 Issue 模板接收更正与建议</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>七、合规、安全与风险说明</h2>
+<h3>1. 开源及第三方许可合规</h3>
+<p>所用资源均为 MIT / Apache-2.0 / BSD-3-Clause 等宽松许可，与本项目以 MIT 开放代码的目标兼容。完整清单、版本、来源、关键义务与合规状态见附录一。要点：</p>
+<ul>
+<li><strong>署名义务</strong>：MIT 与 BSD 许可要求保留版权声明与许可声明。本作品在仓库根目录保留 <code>LICENSE</code>（MIT），引用第三方组件时在《开源及第三方资源使用清单》中列明名称、版本与许可，未删除或修改第三方源码中的许可头。</li>
+<li><strong>再分发</strong>：本项目不打包再分发第三方组件的二进制文件。用户通过 <code>pip install -r workbench/requirements.txt</code> 自行安装，各组件由原始渠道分发。</li>
+<li><strong>模型文件</strong>：中文嵌入模型（约 95 MB）<strong>不进入仓库</strong>，由 FastEmbed 在首次使用时从模型托管站下载到本机被 Git 忽略的目录，因此不涉及模型权重的再分发。</li>
+<li><strong>对应源代码提供</strong>：本项目未修改任何第三方库源码，不触发 copyleft 类条款。</li>
+<li><strong>数据许可</strong>：Crossref 元数据为公开接口数据；OpenAlex 数据以 CC0 提供；第三方教师网页原文权利归原权利人，本项目只保存少量事实与链接，不重新发布全文。</li>
+<li><strong>“公开可访问”≠有再分发授权</strong>：本项目对此的处置是——只保存事实性信息与来源链接，原始页面缓存保留在本机且不进入公开仓库。</li>
+</ul>
+<h3>2. 数据、权利与隐私</h3>
+<p><strong>数据来源与获取方式</strong>：高校/科研机构官网公开师资名录页与个人主页、学校研究生招生目录公开 PDF、Crossref 公开接口、OpenAlex 公开接口、公开的学位论文与答辩公告。</p>
+<p><strong>权利状态与使用边界</strong>：入库内容为<strong>事实性信息</strong>（姓名、任职单位、院系、研究方向、公开来源链接、公开招生表述、论文元数据）。第三方网页原文不复制、不重新发布。</p>
+<p><strong>脱敏与个人信息保护</strong>：</p>
+<ul>
+<li><strong>不收录、不存储、不展示任何邮箱地址</strong>。名录层、产物层与兜底清洗三层防护，并有 CI 校验（未通过则构建失败）；</li>
+<li>不采集电话、房间号、出生日期、性别、籍贯等个人信息；</li>
+<li>从历史调查档案提取内容时，逐行过滤含邮箱、电话、房间、出生、性别、籍贯、<code>@</code> 的行；</li>
+<li>用户自己的项目与调查记录保存在<strong>本机</strong>，不上传任何服务器；服务只监听 <code>127.0.0.1</code>，无账号系统，文档明确提示不要直接暴露到公网；</li>
+<li>OpenAlex 的 API key（可选）只在本机进程环境变量中读取，不写入项目文件。</li>
+</ul>
+<p><strong>更正与删除机制</strong>：任何人对自己的信息可提出更正或整条移除请求，<strong>无需提供任何证件</strong>，承诺 7 个工作日内处理。</p>
+<h3>3. AI 输出、知识产权与内容安全</h3>
+<p><strong>模型幻觉风险与处置。</strong> 本作品的 AI 用途限于向量检索，<strong>不生成任何事实性文本</strong>，因此不存在“模型编造导师信息”的路径。检索结果的排序错误（如把不相关导师排进前三）已在第五章实测并如实披露。</p>
+<p><strong>相似度分数的误用风险与提示。</strong> 风险在于用户把相似度当成导师优劣。处置：① 界面与文档明确写出“相似度只用于找资料，不评价导师水平或指导质量”“语义分数没有跨查询可比性”；② 不提供任何基于相似度的导师排名。</p>
+<p><strong>提示注入风险。</strong> 作品不把抓取的网页文本交给任何大模型处理，也不据此执行动作，因此不构成提示注入的攻击面。公开页面提取仅做结构化字段解析。</p>
+<p><strong>数据错误风险。</strong> 主要风险是信息过时或同名误配。处置：① 每条内容带来源链接与来源类别，招生记录带年份；② 学院名录类“无年份”来源明确标注为身份与任职记录，不当作年度招生；③ 军兵种作战学等少数条目依据为第三方转载，页面与文档中单独标明“来源强度”；④ 未检索到资料时显示“未知”，不填充推断内容。</p>
+<p><strong>AI 生成内容的权利核查。</strong> 开发中使用了生成式 AI 辅助（见第四章第 3 节）。团队对纳入作品的内容做了人工审阅与实际运行验证、来源与权利核查，确认未引入权利状态不清的代码；报告全部统计数字可由仓库脚本复现。</p>
+<p><strong>内容安全。</strong> 作品不含违法违规、不良导向或恶意代码内容。已移除纯负面招生表述清单，避免对个人形成负面指向；检索与展示中不含对个人的评价性用语（由公开前审计脚本自动检查）。</p>
+<h3>4. 知识产权与公开边界</h3>
+<ul>
+<li><strong>团队自主创作部分</strong>（<code>workbench/</code> 与 <code>tools/</code> 代码、文档、整理后的数据）权利归团队成员；</li>
+<li><strong>第三方部分</strong>：开源软件与模型的著作权归各自作者；第三方教师网页内容归原权利人；本项目不改动第三方权利归属；</li>
+<li><strong>无共同权利人或单位授权边界问题</strong>：本项目未使用学校、实验室、实习单位或项目承担单位的资料，不涉及职务成果或商业秘密，亦未申请专利；</li>
+<li><strong>公开范围</strong>：仓库公开代码与整理后的结构化事实数据；不公开原始网页缓存、模型权重文件、本机用户数据（项目与调查记录）。</li>
+</ul>
+<h3>5. 其他风险与适用边界</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">风险</th>
+<th style="text-align: left;">说明</th>
+<th style="text-align: left;">当前处置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">招生信息时效性</td>
+<td style="text-align: left;">公开表述可能滞后</td>
+<td style="text-align: left;">标明年份与来源；提示以导师回复与院系最新通知为准</td>
+</tr>
+<tr>
+<td style="text-align: left;">T3/T4 类“公开证据较少”被误读</td>
+<td style="text-align: left;">可能源于同名、英文署名不一致、中文文献未覆盖等数据原因</td>
+<td style="text-align: left;">文档明确写出“不代表水平或指导质量”</td>
+</tr>
+<tr>
+<td style="text-align: left;">数据集非全国完整</td>
+<td style="text-align: left;">部分学科收录人数少，少数线索为转载</td>
+<td style="text-align: left;">页面按来源强度分开标明，不声称全国覆盖</td>
+</tr>
+<tr>
+<td style="text-align: left;">模型语言局限</td>
+<td style="text-align: left;">中文嵌入模型对英文与生僻术语表现未验证</td>
+<td style="text-align: left;">如实披露；提供关键词基线作为替代</td>
+</tr>
+<tr>
+<td style="text-align: left;">单人维护风险</td>
+<td style="text-align: left;">数据更新依赖维护者</td>
+<td style="text-align: left;">提供完整复现命令与维护指南，他人可接手</td>
+</tr>
+<tr>
+<td style="text-align: left;">不宜使用的场景</td>
+<td style="text-align: left;"><strong>不得用于自动化评价、排名或对个人作出负面判断</strong>；不得用于批量联系</td>
+<td style="text-align: left;">许可协议中列为负责任的倡议条款；不含联系方式，无法用于批量联络</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>八、总结与展望</h2>
+<h3>1. 项目总结</h3>
+<p><strong>完成情况。</strong> 本作品完成了一个可运行的本地导师调查工作台：覆盖 117 个一级学科的选择式导航与同名核对、带来源与状态的调查档案、八项人工核查与待办生成、OpenAlex 作者候选与 Crossref DOI 核对、CSV/JSON 导入、Markdown 导出；配套 75 项 Python 测试与 11 项前端测试全部通过，公开前审计 16 项通过、0 项阻塞。</p>
+<p><strong>主要价值。</strong> 把“导师信息搜集”从打开十几个标签页、靠自己拼记事本，变成一份份带来源、可核对、可导出的调查记录；并用产品机制保证系统不会替用户对导师下结论。</p>
+<p><strong>团队收获。</strong> 一是理解了“证据边界”比“功能丰富”更难也更重要——把“未知”如实显示出来，需要抵抗住把页面填满的冲动；二是经历了一次典型的静默失效排查：采集脚本字段名写错导致机构校验匹配一切、81.7% 匹配失真，最终靠独立于采集过程的产出侧复核抓出来，此后把“不要只信任采集过程，要独立复核最终数据”写进了维护指南；三是实践了在真实项目里判断“什么该交给 AI、什么绝不能交给 AI”。</p>
+<p><strong>未完成事项。</strong> ① 无独立用户研究与任务实验，效率与决策改善效果未知；② 全国覆盖率未评估，部分学科收录很少；③ 多数导师的论文、师承、招生信息尚未补齐；④ 尚未向上游提交 Issue/PR；⑤ 语义检索的弱尾噪声未做阈值过滤，目前靠并列关键词基线缓解。</p>
+<h3>2. 后续计划</h3>
+<ol>
+<li><strong>功能优化</strong>：为语义检索增加相似度阈值与关键词二次过滤，降低弱尾噪声；继续修复公开页面解析的漏读问题。</li>
+<li><strong>测试扩展</strong>：扩大独立标注的检索评估样本（跨学校、跨专业、多人独立标注），使“AI 是否真有帮助”有可复现的量化依据；补充同名消歧的专项评测集。</li>
+<li><strong>数据补充</strong>：优先补录人数最少的学科；对每批新增数据保留逐人来源核对记录。</li>
+<li><strong>开放维护</strong>：按许可证与维护计划持续更新；每次推送前运行公开前审计与全新克隆自检；通过 Issue 模板接收更正与建议。</li>
+<li><strong>社区协作</strong>：把可复用的方法（来源校验、站点模板误判过滤、并列基线的检索评估）整理为独立文档，并向上游开源项目提交改进建议。</li>
+</ol>
+<hr />
+<h2>九、附录</h2>
+<h3>附录一　开源及第三方资源使用清单</h3>
+<p>见同目录 <a href="开源及第三方资源使用清单.md"><code>开源及第三方资源使用清单.md</code></a>。</p>
+<h3>附录二　代码仓库与运行说明</h3>
+<ul>
+<li>代码仓库：<code>＿＿＿＿＿＿＿＿＿＿</code>（提交时填写）</li>
+<li>运行环境：Python 3.10–3.12；Windows 已实测；Node.js 18+ 仅测试用</li>
+<li>安装与启动：</li>
+</ul>
+<pre><code class="language-powershell">py -3.12 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r workbench\requirements.txt
+.\.venv\Scripts\python.exe -m uvicorn workbench.app:app --host 127.0.0.1 --port 8765
+</code></pre>
+<ul>
+<li>测试与评估：</li>
+</ul>
+<pre><code class="language-powershell">.\.venv\Scripts\python.exe -m unittest discover -s workbench\tests -v
+node --test workbench\tests\test_ui_races.cjs workbench\tests\test_research_ui.cjs
+.\.venv\Scripts\python.exe -m workbench.evaluate_pilot
+node tools\audit_prepublish.mjs
+</code></pre>
+<h3>附录三　测试记录与数据说明</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">记录</th>
+<th style="text-align: left;">位置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Python 测试套件</td>
+<td style="text-align: left;"><code>workbench/tests/</code>（7 个 Python 测试文件）</td>
+</tr>
+<tr>
+<td style="text-align: left;">前端异步测试</td>
+<td style="text-align: left;"><code>workbench/tests/test_ui_races.cjs</code>、<code>test_research_ui.cjs</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">检索评估脚本与预置查询</td>
+<td style="text-align: left;"><code>workbench/evaluate_pilot.py</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">逐批数据核对记录</td>
+<td style="text-align: left;"><code>workbench/reference/</code> 下的来源登记与逐批审计 JSON</td>
+</tr>
+<tr>
+<td style="text-align: left;">公开前审计脚本</td>
+<td style="text-align: left;"><code>tools/audit_prepublish.mjs</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">数据说明与边界</td>
+<td style="text-align: left;"><code>workbench/README.md</code>、<code>docs/维护指南.md</code>、<code>DISCLAIMER.md</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>数据口径说明</strong>：本报告中的“条目数”指工作台目录中的“学科—导师”条目（同一导师属多个学科会重复计入），不等于自然人数量；历史专题数据的一级学科尚未逐人核定，单列为“集成电路专题（一级学科待核定）”。</p>
+<h3>附录四　参考文献与其他材料</h3>
+<ol>
+<li>教育部《研究生教育学科专业目录（2022 年）》——一级学科导航分类依据。</li>
+<li>Crossref REST API 文档——DOI 元数据核对接口。</li>
+<li>OpenAlex 官方文档——作者候选检索与 API 使用说明。</li>
+<li>FastEmbed 项目文档——ONNX 模型加载方式。</li>
+<li>BAAI <code>bge-small-zh-v1.5</code> 模型卡——中文嵌入模型说明与许可。</li>
+<li>本项目仓库内的使用指南、维护指南、免责声明与贡献指南。</li>
+</ol>
+<h3>附录五　受限提交说明</h3>
+<p>本作品<strong>无需受限提交</strong>。参赛阶段提交的材料均可公开：代码以 MIT 开放，整理后的结构化数据以 CC BY-NC-SA 4.0 开放。<strong>不公开</strong>的内容仅有两类，且均不进入任何提交材料：① 第三方网页原始缓存（权利属原站点，保留在本机）；② 用户在本机产生的项目与调查记录（属用户个人数据）。模型权重不随仓库分发，由用户按所列开源渠道自行获取。</p>
+<hr />
+<p><strong>声明</strong>：本报告中的统计数字可通过附录二所列命令复现核验。报告如实区分了“已验证结果”与“尚未验证的目标”。本作品不对任何个人作出评价或负面判断。</p>
+</body>
+</html>

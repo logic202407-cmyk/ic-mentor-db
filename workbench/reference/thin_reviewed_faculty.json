@@ -1,0 +1,136 @@
+{
+  "profiles": [
+    {
+      "name": "丁锋",
+      "institution": "国防科技大学",
+      "department": "电子对抗学院",
+      "discipline": "军兵种作战学",
+      "first_level_discipline": "1104 军兵种作战学",
+      "direction_group": "电磁态势分析",
+      "interests": "电磁态势分析",
+      "homepage": "",
+      "classification_basis": "学科对应来自转载名录，尚未取得学校原始导师页；无当年招生名额依据",
+      "discipline_assignments": [
+        {
+          "first_level_discipline": "1104 军兵种作战学",
+          "subject": "110400 军兵种作战学",
+          "direction": "电磁态势分析",
+          "year": null,
+          "degree_level": "",
+          "url": "https://www.lingboyan.com/academicinfo-7-2174",
+          "record_kind": "faculty_directory",
+          "source_kind": "导师名录转载（考博猫）",
+          "classification_basis": "按公开院系名录和研究领域归入学科导航；不代替招生专业认定",
+          "note": "学科对应来自转载名录；2025年学会报道核对姓名与单位，不代替当前学科与招生资格核验。",
+          "evidence_level": "secondary",
+          "identity_url": "https://www.c2.org.cn/h-nd-1864.html"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.lingboyan.com/academicinfo-7-2174",
+          "title": "国防科技大学 · 导师名录转载（考博猫）",
+          "claim": "导师名录列出丁锋及学科方向；未注明招生年份。"
+        },
+        {
+          "url": "https://www.c2.org.cn/h-nd-1864.html",
+          "title": "公开任职线索核对",
+          "claim": "公布的教学成果完成人及单位，用于核对姓名与学校，不证明当前任职、学科归属或招生资格。"
+        }
+      ],
+      "collected_at": "2026-10-14"
+    },
+    {
+      "name": "马继政",
+      "institution": "陆军工程大学",
+      "department": "军事基础系",
+      "discipline": "军事训练学",
+      "first_level_discipline": "1110 军事训练学",
+      "direction_group": "军兵种训练（2024目录）",
+      "interests": "军兵种训练（2024目录）",
+      "homepage": "",
+      "classification_basis": "学科对应来自转载名录，尚未取得学校原始导师页；无当年招生名额依据",
+      "discipline_assignments": [
+        {
+          "first_level_discipline": "1110 军事训练学",
+          "subject": "111000 军事训练学",
+          "direction": "军兵种训练（2024目录）",
+          "year": null,
+          "degree_level": "",
+          "url": "https://kaoyan.xdf.cn/202311/13544384.html",
+          "record_kind": "faculty_directory",
+          "source_kind": "2024年招生目录转载（新东方）",
+          "classification_basis": "按公开院系名录和研究领域归入学科导航；不代替招生专业认定",
+          "note": "学科对应来自2024年招生目录转载，面向军队在职干部；不表示当前招生资格或名额。论文署名单位另与期刊原文核对。",
+          "evidence_level": "secondary",
+          "identity_url": "https://tykj.cbpt.cnki.net/portal/journal/portal/client/paper/9729a5d0151d584349d3360fea059a4f"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://kaoyan.xdf.cn/202311/13544384.html",
+          "title": "陆军工程大学 · 2024年招生目录转载（新东方）",
+          "claim": "导师名录列出马继政及学科方向；未注明招生年份。"
+        },
+        {
+          "url": "https://tykj.cbpt.cnki.net/portal/journal/portal/client/paper/9729a5d0151d584349d3360fea059a4f",
+          "title": "公开任职线索核对",
+          "claim": "公布的教学成果完成人及单位，用于核对姓名与学校，不证明当前任职、学科归属或招生资格。"
+        }
+      ],
+      "collected_at": "2026-10-14"
+    },
+    {
+      "name": "李功淼",
+      "institution": "陆军工程大学",
+      "department": "军事基础系",
+      "discipline": "军事训练学",
+      "first_level_discipline": "1110 军事训练学",
+      "direction_group": "外军作战与训练研究（2024目录）",
+      "interests": "外军作战与训练研究（2024目录）",
+      "homepage": "",
+      "classification_basis": "学科对应来自转载名录，尚未取得学校原始导师页；无当年招生名额依据",
+      "discipline_assignments": [
+        {
+          "first_level_discipline": "1110 军事训练学",
+          "subject": "111000 军事训练学",
+          "direction": "外军作战与训练研究（2024目录）",
+          "year": null,
+          "degree_level": "",
+          "url": "https://kaoyan.xdf.cn/202311/13544384.html",
+          "record_kind": "faculty_directory",
+          "source_kind": "2024年招生目录转载（新东方）",
+          "classification_basis": "按公开院系名录和研究领域归入学科导航；不代替招生专业认定",
+          "note": "学科对应来自2024年招生目录转载，面向军队在职干部；不表示当前招生资格或名额。论文署名单位另与期刊原文核对。",
+          "evidence_level": "secondary",
+          "identity_url": "https://www.zhkzyfz.cn/EN/article/downloadArticleFile.do?attachType=PDF&id=346"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://kaoyan.xdf.cn/202311/13544384.html",
+          "title": "陆军工程大学 · 2024年招生目录转载（新东方）",
+          "claim": "导师名录列出李功淼及学科方向；未注明招生年份。"
+        },
+        {
+          "url": "https://www.zhkzyfz.cn/EN/article/downloadArticleFile.do?attachType=PDF&id=346",
+          "title": "公开任职线索核对",
+          "claim": "公布的教学成果完成人及单位，用于核对姓名与学校，不证明当前任职、学科归属或招生资格。"
+        }
+      ],
+      "collected_at": "2026-10-14"
+    }
+  ],
+  "pages": [
+    {
+      "url": "https://www.lingboyan.com/academicinfo-7-2174",
+      "collected_at": "2026-10-14"
+    },
+    {
+      "url": "https://kaoyan.xdf.cn/202311/13544384.html",
+      "collected_at": "2026-10-14"
+    }
+  ],
+  "failures": [],
+  "collected_at": "2026-10-14"
+}

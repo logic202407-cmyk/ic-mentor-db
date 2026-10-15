@@ -1,0 +1,85 @@
+{
+  "about": "全部为合成演示资料，不对应真实导师，不用于证明实际推荐效果。",
+  "profiles": [
+    {
+      "name": "示例导师 A",
+      "institution": "示例大学甲",
+      "department": "计算机学院",
+      "discipline": "计算机科学",
+      "interests": "自然语言处理、文本理解、知识图谱",
+      "summary": "研究长文本信息抽取、问答系统与中文知识组织。"
+    },
+    {
+      "name": "示例导师 B",
+      "institution": "示例大学乙",
+      "department": "生命科学学院",
+      "discipline": "生物学",
+      "interests": "基因调控、单细胞测序、发育生物学",
+      "summary": "研究不同细胞类型中的基因表达变化与组织发育。"
+    },
+    {
+      "name": "示例导师 C",
+      "institution": "示例大学丙",
+      "department": "历史学院",
+      "discipline": "历史学",
+      "interests": "明清社会史、地方档案、城市史",
+      "summary": "利用地方文书研究近世中国城市和日常社会。"
+    },
+    {
+      "name": "示例导师 D",
+      "institution": "示例大学丁",
+      "department": "心理学院",
+      "discipline": "心理学",
+      "interests": "认知心理学、学习动机、青少年发展",
+      "summary": "关注学习策略与动机对青少年长期发展的影响。"
+    },
+    {
+      "name": "示例导师 E",
+      "institution": "示例大学戊",
+      "department": "农学院",
+      "discipline": "农学",
+      "interests": "作物抗逆、精准农业、土壤水分",
+      "summary": "研究干旱条件下的作物生长和节水栽培。"
+    },
+    {
+      "name": "示例导师 F",
+      "institution": "示例大学己",
+      "department": "法学院",
+      "discipline": "法学",
+      "interests": "数据保护、平台治理、人工智能法",
+      "summary": "研究数字平台的数据治理与技术监管规则。"
+    },
+    {
+      "name": "示例导师 G",
+      "institution": "示例大学庚",
+      "department": "电子工程学院",
+      "discipline": "电子信息",
+      "interests": "低功耗芯片、边缘计算、传感器接口",
+      "summary": "研究可穿戴设备中的低功耗信号处理硬件。"
+    },
+    {
+      "name": "示例导师 H",
+      "institution": "示例大学辛",
+      "department": "医学院",
+      "discipline": "基础医学",
+      "interests": "医学影像、病理图像、肿瘤诊断",
+      "summary": "研究病理切片的图像分析与辅助诊断方法。"
+    },
+    {
+      "name": "示例导师 I",
+      "institution": "示例大学壬",
+      "department": "建筑学院",
+      "discipline": "建筑学",
+      "interests": "城市更新、低碳建筑、公共空间",
+      "summary": "研究既有街区改造和社区公共空间设计。"
+    },
+    {
+      "name": "示例导师 J",
+      "institution": "示例大学癸",
+      "department": "材料学院",
+      "discipline": "材料科学",
+      "interests": "固态电池、界面稳定性、储能材料",
+      "summary": "研究锂电池电极界面的退化机理。"
+    }
+  ]
+}
