@@ -292,7 +292,16 @@ def main() -> int:
     (REFERENCE / "thin_discipline_faculty.json").write_text(
         json.dumps(supplement, ensure_ascii=False, indent=2) + "\n", encoding="utf8")
 
-    before = {x["name"]: x["count"] for x in catalog.disciplines()}
+    # Keep the first observed "before" so a later --enrich re-run (which merges
+    # nothing new) cannot overwrite the recorded before/after of this batch.
+    audit_path = REFERENCE / "thin_discipline_audit_20261015.json"
+    previous = {}
+    if audit_path.exists():
+        try:
+            previous = json.loads(audit_path.read_text(encoding="utf8"))
+        except (OSError, ValueError):
+            previous = {}
+    before = previous.get("before") or {x["name"]: x["count"] for x in catalog.disciplines()}
     outcome = merge(supplement, dry_run=False)
     catalog.static_catalog.cache_clear()
     after = {x["name"]: x["count"] for x in catalog.disciplines()}
@@ -328,11 +337,15 @@ def main() -> int:
         "failures": failures,
         "limits": [
             "学院在职教师名录用于学科导航归类，不代表当年招生专业或名额。",
-            "方向字段来自名录标注的职称与学系，未逐人读取个人主页者标为方向待补。",
+            "名录按职称或学系分组，不含个人研究方向，故方向字段一律为“方向待补”；职称只写入来源说明，不作为研究方向。",
             "不收录邮箱、电话等联系方式。",
         ],
     }
-    (REFERENCE / "thin_discipline_audit_20261015.json").write_text(
+    if previous.get("first_recorded_at"):
+        audit["first_recorded_at"] = previous["first_recorded_at"]
+    else:
+        audit["first_recorded_at"] = COLLECTED_AT
+    audit_path.write_text(
         json.dumps(audit, ensure_ascii=False, indent=2) + "\n", encoding="utf8")
 
     changed = {k: [before.get(k, 0), v] for k, v in after.items() if v != before.get(k, 0)}
