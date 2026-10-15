@@ -40631,5 +40631,831 @@
         "source_kind": "学院个人主页"
       }
     ]
+  },
+  "official-a0f6a9d6c1f725d40c64": {
+    "name": "窦林名",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1088/4263.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-9d841a61690ef755c797": {
+    "name": "刘长友",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1147/5575.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-b09568e313f7cd796ec5": {
+    "name": "屠世浩",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1147/5578.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-a646e46418472f6e6cce": {
+    "name": "张东升",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1088/4249.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-f94f93f73ef08a2a6761": {
+    "name": "柏建彪",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1088/6980.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-c5bb439187f48cb23e99": {
+    "name": "谢耀社",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1147/5579.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-a3e7af4c890d0be0faac": {
+    "name": "万志军",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1147/5589.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-d14750956f8d5d74a055": {
+    "name": "李学华",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1088/4251.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-e5c333cc6f9ba4f74454": {
+    "name": "方新秋",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1147/5573.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-e8d0eae1a9fd234bd1c8": {
+    "name": "张吉雄",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1091/4473.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-8eb7d8776a2661f9cc5d": {
+    "name": "高明仕",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1147/5577.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-3f4cfc0be0d6a34cd848": {
+    "name": "马立强",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1094/4501.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-9d81f3961f4086a147a0": {
+    "name": "陆菜平",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1091/4468.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-f8384f71d140b446fb05": {
+    "name": "牟宗龙",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1088/4248.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-2380dad17a898ac34f4c": {
+    "name": "王旭锋",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1147/5574.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-e2d24a45f3fcd723d285": {
+    "name": "李桂臣",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1088/4252.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-cca6e2840146449d225e": {
+    "name": "王襄禹",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1088/4245.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-f286ae29bd325fd0214d": {
+    "name": "郑西贵",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1088/4254.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-610f4e7a8378a16adbeb": {
+    "name": "曹安业",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1088/4260.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-615cab9233c2d770880a": {
+    "name": "姚强岭",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1088/4255.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-aba6ccb89b268b89cae3": {
+    "name": "范钢伟",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1088/4253.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-33ca0d3f94d1db260b92": {
+    "name": "黄艳利",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1088/4261.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-0d063549310f33dbf907": {
+    "name": "胡国忠",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1091/6022.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-eced7f2ad67bd8c172dd": {
+    "name": "袁永",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1147/5576.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-c31fc0b23fdbe0d0440c": {
+    "name": "王方田",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1088/4243.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-14ecc2c4b91e40917e6e": {
+    "name": "马丹",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1091/4476.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-a0984bb57119c14b8480": {
+    "name": "朱卫兵",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1094/4497.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-a0550c2c1aa72ee65d55": {
+    "name": "阚甲广",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1088/4264.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-401478e2262a99059167": {
+    "name": "常庆粮",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1094/4494.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-09c009184dfa0bef8af1": {
+    "name": "张磊",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1091/4471.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-35ca7a2cb8689025e05c": {
+    "name": "范立民",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1091/4465.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-62089b23ef26f73604f0": {
+    "name": "李冲",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1088/5777.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-a64b85e585a76304abf7": {
+    "name": "周楠",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1088/5778.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-6c949c80df371ca01b40": {
+    "name": "吴锋锋",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1088/6388.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-63bf5761311c04e74907": {
+    "name": "巩思园",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1147/6389.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-0061867a83608e35ff74": {
+    "name": "赵一鸣",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1111/6994.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-1d1b42b0480955a39e81": {
+    "name": "丁小华",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1106/6986.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-0607324ed328f420fb69": {
+    "name": "张强",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1106/6990.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-3f7840b2dd1ac3d4a747": {
+    "name": "翟翠霞",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1100/7607.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-5c60e891f7c899911486": {
+    "name": "季明",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1088/7472.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-50bd3c80de93c1e62756": {
+    "name": "张源",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1092/4464.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-d2192f2f0483201b64c5": {
+    "name": "韩昌良",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1148/5587.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-cfce02a7813d297ba1f2": {
+    "name": "轩大洋",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1089/5371.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-d7410cdedf6c66834bef": {
+    "name": "梁顺",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1089/4267.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-076123574ab07a88c37c": {
+    "name": "程敬义",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1148/5586.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-e577c12fafff99afd1af": {
+    "name": "李俊孟",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1092/5785.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-b82984e4d29486bf178c": {
+    "name": "陈树召",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1098/4512.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-394f2e0054708672f1c4": {
+    "name": "王振军",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1104/4532.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-1d7ac63e29cb3ddf0c95": {
+    "name": "苑红伟",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1104/4528.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-773c3a1787d94baf2e15": {
+    "name": "李乃梁",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1101/4523.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-03d8bbd7beaf4509778a": {
+    "name": "陆刚",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1101/4517.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-c2702b003c740f2363c0": {
+    "name": "鲁岩",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1095/4489.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-4ae9bf23a87e2a11a86a": {
+    "name": "任海兵",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1101/4524.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-797e1ca6e492987aec5e": {
+    "name": "徐营",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1089/4270.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-f484019ead4e619900d2": {
+    "name": "杨培举",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1095/4492.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-b493d4ed7327b47f03e6": {
+    "name": "王强",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1104/4535.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-866ac6c2195b42309a37": {
+    "name": "彭洪阁",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1098/4510.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-faff264465a1fe954027": {
+    "name": "李鑫",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1104/4530.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-2dc6fb07fc6ae074a050": {
+    "name": "严红",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1092/4467.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-b5f5824969d0e5d2a8d2": {
+    "name": "李小林",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1101/4522.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-a521924180c3a10e34b7": {
+    "name": "何江",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1089/4280.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-2a600b2d7e2cef5b916e": {
+    "name": "闫帅",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1148/5582.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-f1e97d11b7d9236f1841": {
+    "name": "李玉鹏",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1101/4520.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-49f0612ff314530af19d": {
+    "name": "杨敬轩",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1089/4275.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-bce976fb7352b7bdf8de": {
+    "name": "钱德雨",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1089/4269.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-329b04c2836997baa883": {
+    "name": "冯晓巍",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1092/4470.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-3cb0d8c6f0d79553e9f1": {
+    "name": "韩流",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1098/4507.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-2f4c1484a1856becfd3b": {
+    "name": "李许伟",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1092/4463.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-1ffdd26e053a71c9ec54": {
+    "name": "屠洪盛",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1148/5585.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-9690c535515c82fb0d3a": {
+    "name": "种照辉",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1089/4272.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-edc9736a6f01e14210fb": {
+    "name": "段天宏",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1101/4514.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-a987e9c74f21e1631c11": {
+    "name": "王晓振",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1148/5580.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-bf43fed269de2b78e43a": {
+    "name": "张宁波",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1148/5583.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-d45c10dc0752020916b8": {
+    "name": "黄鹏",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1092/4485.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-2a3f1110d33701893d19": {
+    "name": "孙强",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1092/5784.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-3657b26c3a1a4c0b8e93": {
+    "name": "孙元田",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1095/5788.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-cb08a3112afa68b961c1": {
+    "name": "李贤功",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1101/6396.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-c87ad3d8a0e3725740f7": {
+    "name": "梁敏富",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1148/6390.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-7ff0e7b640c792fc8c48": {
+    "name": "时旭阳",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1098/6395.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-b010562f28ac7ef76891": {
+    "name": "方坤",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1092/6392.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-1b3941769ddd51c08572": {
+    "name": "刘洋",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1092/6391.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-22bece32b60c25c75a05": {
+    "name": "闫浩",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1095/6393.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-db7358de240f445079dd": {
+    "name": "吴永辉",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1096/4493.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-efcf2fe76b0f0fbe24b0": {
+    "name": "谢正正",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1089/6701.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-6dac27c4b46ece0fa601": {
+    "name": "吴刚",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1089/6700.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-1c977877e3428dc79d79": {
+    "name": "张世忠",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1090/6699.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-718464b2a68fa8fa9031": {
+    "name": "霍彬彬",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1092/7161.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-c4c387b4ac20d4d8a590": {
+    "name": "陆翔",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1099/4506.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-cc8043c81b50d40a7bce": {
+    "name": "赵立明",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1093/5834.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-c619abee4d89ea646149": {
+    "name": "余坤",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1093/6163.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-3ffe95b11489b463d165": {
+    "name": "刘灿灿",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1125/5459.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-68f427abc1a5fd961796": {
+    "name": "莫祥伦",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1105/4531.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-284b97b45cef37c20b38": {
+    "name": "郭威",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1105/4536.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-6342589c990b54ad21b4": {
+    "name": "张权",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1093/5598.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-e84f29bb1716bfc1e434": {
+    "name": "李波",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1149/6375.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-5fb344cf92db15cb8408": {
+    "name": "孙志辉",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1093/6710.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-7dbc42dde648b6e3722b": {
+    "name": "何风贞",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1125/5780.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-d502c089ad5bfa940509": {
+    "name": "任伊苏",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1096/6712.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-d66e9fdf4cb52f1a2f3a": {
+    "name": "荆升国",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1090/4284.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-ce052a6f5958cc96fefa": {
+    "name": "张娜",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1102/4521.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-1275ad4ed3f095cbf25f": {
+    "name": "李樯",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1093/5458.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-098698098930436695ba": {
+    "name": "陈伍兴",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1105/5726.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-df55e2ac247d51582cd8": {
+    "name": "于坤鹏",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1120/4487.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-4c70167c19c527b8b615": {
+    "name": "杨朝格",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1099/7292.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-a2dcb15cbb76f309dfa7": {
+    "name": "荣浩宇",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1090/7747.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-16858563c266210d8881": {
+    "name": "曹悦",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1120/5596.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-754cbbc271a4af4d195d": {
+    "name": "范张磊",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1125/5779.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-b8d86cd7676d88482104": {
+    "name": "项哲",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1125/6200.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-cb696be2ee793e3991a4": {
+    "name": "王朋",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1125/6201.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-8733fc0ac80529862509": {
+    "name": "刘恒凤",
+    "institution": "中国矿业大学",
+    "homepage": "https://cese.cumt.edu.cn/info/1119/6203.htm",
+    "identity_url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-907a3eb5ca04cfce1568": {
+    "name": "杨须爱",
+    "institution": "中央民族大学",
+    "homepage": "https://msy.muc.edu.cn/info/1199/7252.htm",
+    "identity_url": "https://msy.muc.edu.cn/sz/zrjs/axx/mzxx1.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-bafc6f6fe1300531d49f": {
+    "name": "青觉",
+    "institution": "中央民族大学",
+    "homepage": "https://msy.muc.edu.cn/info/1199/5942.htm",
+    "identity_url": "https://msy.muc.edu.cn/sz/zrjs/axx/mzxx1.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-279a4c0d8cca139b99b6": {
+    "name": "良警宇",
+    "institution": "中央民族大学",
+    "homepage": "https://msy.muc.edu.cn/info/1199/24772.htm",
+    "identity_url": "https://msy.muc.edu.cn/sz/zrjs/axx/mzxx1.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-9710fd8405cc13ada506": {
+    "name": "施琳",
+    "institution": "中央民族大学",
+    "homepage": "https://msy.muc.edu.cn/info/1199/6512.htm",
+    "identity_url": "https://msy.muc.edu.cn/sz/zrjs/axx/mzxx1.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-5a3361d0613995cc7899": {
+    "name": "巫达",
+    "institution": "中央民族大学",
+    "homepage": "https://msy.muc.edu.cn/info/1199/24842.htm",
+    "identity_url": "https://msy.muc.edu.cn/sz/zrjs/axx/mzxx1.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-943c844544a4cd676b1a": {
+    "name": "杨筑慧",
+    "institution": "中央民族大学",
+    "homepage": "https://msy.muc.edu.cn/info/1199/6592.htm",
+    "identity_url": "https://msy.muc.edu.cn/sz/zrjs/axx/mzxx1.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-ae4316e5a767505b2406": {
+    "name": "朱靖江",
+    "institution": "中央民族大学",
+    "homepage": "https://msy.muc.edu.cn/info/1199/1494.htm",
+    "identity_url": "https://msy.muc.edu.cn/sz/zrjs/axx/mzxx1.htm",
+    "source_kind": "学院教师主页"
+  },
+  "official-9c654ee4a668ff7fbecf": {
+    "name": "王军",
+    "institution": "中央民族大学",
+    "homepage": "https://msy.muc.edu.cn/info/1199/4902.htm",
+    "identity_url": "https://msy.muc.edu.cn/sz/zrjs/axx/mzxx1.htm",
+    "source_kind": "学院教师主页"
   }
 }

@@ -124,7 +124,10 @@ def official_url(url):
     parsed = urlsplit(url)
     trusted = ('pku.edu.cn','ustc.edu.cn','bnu.edu.cn','ecust.edu.cn','ecnu.edu.cn',
                'tsinghua.edu.cn','sjtu.edu.cn','ruc.edu.cn','fudan.edu.cn','cau.edu.cn','tongji.edu.cn','caas.cn',
-               'ucas.ac.cn','ucas.edu.cn')
+               'ucas.ac.cn','ucas.edu.cn',
+               # Added with the 民族学 / 矿业工程 thin-discipline batch; each host is a
+               # university main domain reached only through a registered faculty directory.
+               'cumt.edu.cn','muc.edu.cn')
     host = parsed.hostname or ''
     return parsed.scheme in {'http','https'} and any(host == root or host.endswith('.'+root) for root in trusted) and not parsed.username and parsed.port in {None,80,443}
 
