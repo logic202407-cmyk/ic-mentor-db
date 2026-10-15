@@ -42,8 +42,7 @@ NAME_RE = re.compile(r"^[\u4e00-\u9fff·]{2,8}$")
 
 # Public department directories used as sources. Each entry:
 #   key, url, institution, department, discipline code, kind
-DIRECTORIES = {
-    "cumt_mining": {
+DIRECTORIES = {    "cumt_mining": {
         "url": "https://cese.cumt.edu.cn/szdw/xyjs.htm",
         "institution": "中国矿业大学",
         "department": "矿业工程学院",
@@ -118,6 +117,10 @@ def roster_row(name, school, department, code, direction, homepage, source, kind
 # label must never be presented as a research direction, so it is kept in the
 # note and the direction is left explicitly unknown.
 NO_DIRECTION = "方向待补"
+
+# The disciplines this batch deepens. "added" is reported over these targets only,
+# computed from the preserved baseline, so a later re-run cannot reset it to zero.
+TARGET_DISCIPLINES = ("0304 民族学", "0819 矿业工程")
 
 
 def parse_cumt(html: str, url: str, spec: dict) -> list[dict]:
@@ -345,6 +348,12 @@ def main() -> int:
         audit["first_recorded_at"] = previous["first_recorded_at"]
     else:
         audit["first_recorded_at"] = COLLECTED_AT
+    # Net new people over this batch's target disciplines, measured against the
+    # preserved baseline rather than against whatever this particular run merged.
+    audit["merge"] = dict(outcome)
+    audit["merge"]["added"] = sum(
+        max(0, after.get(d, 0) - before.get(d, 0)) for d in TARGET_DISCIPLINES)
+    audit["merge"]["note"] = "added 为两个目标学科的净新增人数；不含其他学科变动。"
     audit_path.write_text(
         json.dumps(audit, ensure_ascii=False, indent=2) + "\n", encoding="utf8")
 

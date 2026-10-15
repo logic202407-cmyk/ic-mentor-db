@@ -363,9 +363,9 @@
     "official-9c654ee4a668ff7fbecf"
   ],
   "merge": {
-    "added": 0,
+    "added": 118,
     "enriched": 0,
-    "total_before": 6451
+    "note": "added 为两个目标学科的净新增人数；加总不含其他学科变动。"
   },
   "pages": [
     "https://cese.cumt.edu.cn/szdw/xyjs.htm",
@@ -375,7 +375,16 @@
   "limits": [
     "学院在职教师名录用于学科导航归类，不代表当年招生专业或名额。",
     "名录按职称或学系分组，不含个人研究方向，故方向字段一律为“方向待补”；职称只写入来源说明，不作为研究方向。",
-    "不收录邮箱、电话等联系方式。"
+    "不收录邮箱、电话等联系方式。",
+    "before 基准由 gap_admission_faculty.json 独立重建（见 baseline_recovered_from）。"
   ],
-  "first_recorded_at": "2026-10-15"
+  "first_recorded_at": "2026-10-15",
+  "baseline_recovered_from": {
+    "file": "workbench/reference/gap_admission_faculty.json",
+    "reason": "collect_thin_discipline_depth 曾在校验重跑时把 before 重算为合并后的值，导致基准丢失；此处按该学科的原始来源文件独立重建基准。",
+    "per_discipline": {
+      "0304 民族学": 8,
+      "0819 矿业工程": 8
+    }
+  }
 }
