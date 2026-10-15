@@ -42,11 +42,30 @@ UA = {
 }
 TIMEOUT = (10, 30)
 
-# USTB publishes one listing per discipline code on its faculty platform.
-# ``id`` is the platform's discipline id; ``totalpage`` is only a hint and the
-# collector stops when a page yields no new people.
-USTB_DISCIPLINES = {
-    "0806": {"id": "5634", "name": "冶金工程", "institution": "北京科技大学"},
+# Public faculty directories used to widen the engineering corpus. Each entry names
+# the parser that understands that school's layout; structures differ enough that a
+# per-source parser is required rather than one shared template.
+SOURCES: dict[str, dict] = {
+    "ustb_metallurgy": {
+        "parser": "ustb",
+        "code": "0806",
+        "institution": "北京科技大学",
+        "department": "冶金工程（学科索引）",
+        "name": "冶金工程",
+        "listing": ("https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM={page}"
+                    "&id=5634&lang=zh_CN&st=0"
+                    "&urltype=tsites.DisciplineTeacherList&wbtreeid=1014"),
+        "max_pages": 14,
+    },
+    "whu_surveying": {
+        "parser": "whu",
+        "code": "0816",
+        "institution": "武汉大学",
+        "department": "测绘学院",
+        "name": "测绘科学与技术",
+        "listing": "https://www.sgg.whu.edu.cn/szdw/zyjs.htm",
+        "max_pages": 1,
+    },
 }
 
 # The discipline index also lists non-teaching entries. Only clear personnel or
@@ -61,12 +80,6 @@ def fetch(url: str) -> str:
     response.raise_for_status()
     response.encoding = response.apparent_encoding or "utf-8"
     return response.text
-
-
-def listing_url(spec: dict, page: int) -> str:
-    return ("https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM="
-            f"{page}&id={spec['id']}&lang=zh_CN&st=0"
-            "&urltype=tsites.DisciplineTeacherList&wbtreeid=1014")
 
 
 def parse_ustb(html: str, url: str, spec: dict) -> list[dict]:
@@ -109,28 +122,83 @@ def parse_ustb(html: str, url: str, spec: dict) -> list[dict]:
     return rows
 
 
-def collect(pages_per_discipline: int = 14) -> tuple[list[dict], list[dict], list[dict]]:
+def parse_whu(html: str, url: str, spec: dict) -> list[dict]:
+    """武汉大学测绘学院: ``p.title04`` gives the 研究所, ``h3`` gives the 职称.
+
+    The page wraps everything in ``div.techer_list``; headings and the
+    ``ul.teacher`` blocks appear as siblings in document order, so a single pass
+    carries the current institute and rank forward. Names contain full-width
+    spaces ("邓　非"), which are removed before validation. Some entries link to a
+    placeholder ``#``, so those keep the listing page as their source.
+    """
+    soup = BeautifulSoup(html, "html.parser")
+    for nav in soup.select("ul.am-nav, div.nei_left"):
+        nav.decompose()
+    root = soup.select_one("div.techer_list") or soup
+    rows: list[dict] = []
+    institute = ""
+    rank = ""
+    for node in root.find_all(["p", "h3", "ul"]):
+        classes = node.get("class") or []
+        if node.name == "p" and "title04" in classes:
+            institute = re.sub(r"\s+", "", node.get_text(" ", strip=True))
+            continue
+        if node.name == "h3":
+            rank = re.sub(r"\s+", "", node.get_text(" ", strip=True))
+            continue
+        if node.name != "ul" or "teacher" not in classes:
+            continue
+        for li in node.find_all("li"):
+            anchor = li.find("a")
+            if anchor is None:
+                continue
+            name = re.sub(r"[\s\u3000]+", "", anchor.get_text(" ", strip=True))
+            if not NAME_RE.fullmatch(name):
+                continue
+            href = (anchor.get("href") or "").strip()
+            homepage = href if href.startswith("http") else url
+            unit = "·".join(x for x in (institute, rank) if x) or spec["department"]
+            note = (f"学院专业教师名录按研究所与职称分组列出（{institute or '未标注所'}，"
+                    f"{rank or '职称未标注'}）；名录不含个人研究方向。"
+                    f"导师资格与招生专业以当年招生公告为准。")
+            rows.append(roster_row(
+                name, spec["institution"], unit, spec["code"],
+                NO_DIRECTION, homepage, url, "学院专业教师名录", note,
+            ))
+    return rows
+
+
+PARSERS = {"ustb": parse_ustb, "whu": parse_whu}
+
+
+def collect(pages_per_source: int | None = None) -> tuple[list[dict], list[dict], list[dict]]:
+    """Read every registered directory and return (rows, pages, failures)."""
     rows: list[dict] = []
     pages: list[dict] = []
     failures: list[dict] = []
-    for code, spec in USTB_DISCIPLINES.items():
-        spec = {**spec, "code": code}
-        seen_on_site: set[str] = set()
-        for page_no in range(1, pages_per_discipline + 1):
-            url = listing_url(spec, page_no)
+    for key, spec in SOURCES.items():
+        parser = PARSERS[spec["parser"]]
+        limit = pages_per_source or spec.get("max_pages", 1)
+        seen: set[str] = set()
+        for page_no in range(1, limit + 1):
+            template = spec["listing"]
+            url = template.format(page=page_no) if "{page}" in template else template
             try:
                 html = fetch(url)
             except Exception as exc:  # noqa: BLE001
-                failures.append({"url": url, "error": f"{type(exc).__name__}: {exc}"})
+                failures.append({"source": key, "url": url,
+                                 "error": f"{type(exc).__name__}: {exc}"})
                 break
             pages.append({"url": url, "collected_at": COLLECTED_AT})
-            parsed = parse_ustb(html, url, spec)
-            fresh = [r for r in parsed if r["name"] not in seen_on_site]
+            parsed = parser(html, url, spec)
+            fresh = [r for r in parsed if r["name"] not in seen]
             if not fresh:
                 break
             for r in fresh:
-                seen_on_site.add(r["name"])
+                seen.add(r["name"])
             rows.extend(fresh)
+            if "{page}" not in template:
+                break
             if len(parsed) < 5:  # last page
                 break
 

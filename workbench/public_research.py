@@ -144,7 +144,9 @@ def official_url(url):
                # university main domain reached only through a registered faculty directory.
                'cumt.edu.cn','muc.edu.cn',
                # Added with the engineering-scale batch (北京科技大学教师主页学科索引).
-               'ustb.edu.cn')
+               'ustb.edu.cn',
+               # Added with the engineering-scale batch (武汉大学测绘学院专业教师名录).
+               'whu.edu.cn')
     host = parsed.hostname or ''
     return parsed.scheme in {'http','https'} and any(host == root or host.endswith('.'+root) for root in trusted) and not parsed.username and parsed.port in {None,80,443}
 
