@@ -8,10 +8,13 @@ const html = fs.readFileSync(path.join(__dirname, '../web/desk.html'), 'utf8');
 function setup(...names) {
   const elements = new Map();
   const calls = [];
-  const state = {queryVersion:0,selectionVersion:0,projectId:'',candidates:[],mentor:null};
+  const state = {queryVersion:0,selectionVersion:0,projectId:'',candidates:[],mentor:null,
+                 includeNonEngineering:false};
   const context = {state, encodeURIComponent,
-    $: id => { if (!elements.has(id)) elements.set(id,{value:'',innerHTML:'',textContent:'',disabled:false}); return elements.get(id); },
+    $: id => { if (!elements.has(id)) elements.set(id,{value:'',innerHTML:'',textContent:'',disabled:false,checked:false}); return elements.get(id); },
     params: obj => new URLSearchParams(obj), esc: String,
+    // The page scopes catalogue queries to engineering by default.
+    scopeParams: () => state.includeNonEngineering ? {include_non_engineering:true} : {},
     clearDossier: () => {state.queryVersion++;state.selectionVersion++;state.mentor=null;},
     renderCandidates: () => {}, message: value => { context.lastMessage=value; },
     resetSelect: id => {context.$(id).innerHTML='';context.$(id).disabled=true;},
