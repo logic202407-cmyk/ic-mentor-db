@@ -62,10 +62,11 @@ def static_catalog() -> tuple[list[dict], dict, dict, dict]:
         profile["network_key"] = key
         profile["imported_from"] = "原集成电路导师库"
         # The legacy corpus predates the 2022 discipline catalogue and carried no
-        # first-level discipline. Assign it from research keywords so these rows sit
-        # inside the engineering scope instead of a permanent "待核定" bucket.
+        # first-level discipline. Assign it from the curated primary_direction plus
+        # research keywords so these rows sit inside the engineering scope instead
+        # of a permanent "待核定" bucket.
         assigned = scope.legacy_discipline(
-            row.get("research_keywords") or row.get("primary_direction"))
+            row.get("research_keywords"), row.get("primary_direction"))
         profile["first_level_discipline"] = assigned
         profile["discipline_assignments"] = [{
             "first_level_discipline": assigned,

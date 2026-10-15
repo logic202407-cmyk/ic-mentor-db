@@ -41457,5 +41457,908 @@
     "homepage": "https://msy.muc.edu.cn/info/1199/4902.htm",
     "identity_url": "https://msy.muc.edu.cn/sz/zrjs/axx/mzxx1.htm",
     "source_kind": "学院教师主页"
+  },
+  "official-a9086b05115e63020fd1": {
+    "name": "张增起",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/zhangzengqi/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=1&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-fbe229522bf0bec41604": {
+    "name": "温鹏宇",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/wenpengyu/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=1&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-3fe48f493ec390765c3f": {
+    "name": "范筱玥",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/fanxiaoyue/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=1&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-88c5dc95ff31419deb62": {
+    "name": "庄卫东",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/zhuangweidong/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=1&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-13981a06f6af49a2f447": {
+    "name": "左海滨",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/HaibinZuo/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=1&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-53747ccc86d7522471ff": {
+    "name": "罗海文",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/HaiwenLuo/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=1&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-0e0c3e91e95a21e0416d": {
+    "name": "郭占成",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/ZhanchengGuo/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=1&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-53d7d630bd801ec49c62": {
+    "name": "寇明银",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/MingyinKou/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=1&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-c03a8ed132df30565a77": {
+    "name": "魏光升",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/weiguangsheng/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=1&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-c1ec2691d9c8746e4eb0": {
+    "name": "李克江",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/KejiangLi/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=1&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-51bb70438fd7fe87a313": {
+    "name": "王振阳",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/ZhenyangWang/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=1&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-2b271e04d719125aa76f": {
+    "name": "王仲亮",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/wangzhongliang/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=1&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-af04d97f8920669a8d15": {
+    "name": "焦树强",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/ShuqiangJiao/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=2&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-fa97e16fbb9f2730d681": {
+    "name": "王哲",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/ZheWang/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=2&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-0b2310ea7b8ed13f42a8": {
+    "name": "张国华",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/GuohuaZhang11/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=2&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-cd17a35c31ef96c9d438": {
+    "name": "郭磊",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/LeiGuo/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=2&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-c0135e71bac3717886e2": {
+    "name": "张献光",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/zhangxianguang/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=2&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-aab36c244043d82fc24c": {
+    "name": "贺东风",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/DongfengHe/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=2&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-36949c516a3c45965b17": {
+    "name": "刘威",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/liuwei/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=2&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-9b18e4eb73892fe56fd4": {
+    "name": "刘征建",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/ZhengjianLiu/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=2&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-0bac2f0ef63dbfd40af7": {
+    "name": "刘福海",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/FuhaiLiu/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=2&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-bb864bb2ad089755c4d7": {
+    "name": "陈永强",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/YongqiangChen/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=2&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-2eb2cf69b603b126294f": {
+    "name": "马保中",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/BaozhongMa/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=2&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-f8cedda96e7634981d73": {
+    "name": "杨树峰",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/ShufengYang/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=2&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-609f97dedc0d49602be9": {
+    "name": "王广伟",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/GuangweiWang/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=3&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-2b727800ab0d627200d0": {
+    "name": "王立帆",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/wanglifan/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=3&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-73a4cff8f5dc6d56c873": {
+    "name": "史成斌",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/ChengbinShi/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=3&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-18258e59fc5b91f668c9": {
+    "name": "周恒",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/HengZhou/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=3&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-6105c3dccead3126815b": {
+    "name": "王敏",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/MinWang/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=3&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-3724759da920867e749c": {
+    "name": "张建良",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/JianliangZhang/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=3&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-904cb5653c72b79dea45": {
+    "name": "张梅",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/MeiZhang1111/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=3&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-00cc108f8eefc9c378ff": {
+    "name": "赵飞",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/FeiZhao/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=3&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-824190cfaa192b6b5bf2": {
+    "name": "顾超",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/guchao/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=3&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-0600b04b10c9e3abf060": {
+    "name": "张新房",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/XinfangZhang/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=3&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-3502b8bc662dd6f48b23": {
+    "name": "张江山",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/JiangshanZhang/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=3&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-fdc2d245f01502da1512": {
+    "name": "李素芹",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/SuqinLi/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=3&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-0e2a0d0baddef1bbd322": {
+    "name": "刘风琴",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/FengqinLiu/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=4&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-b341944fbb9b233989f7": {
+    "name": "胡斌",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/BinHu/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=4&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-5f74556492bbc1b4e1fa": {
+    "name": "李晶",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/JingLi11/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=4&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-d6170c7cad08af3e9684": {
+    "name": "兰茜",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/lanqian/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=4&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-e124533351358514957a": {
+    "name": "朱荣",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/RongZhu/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=4&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-f2351faaab9137049597": {
+    "name": "王玲",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/LingWang11/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=4&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-336e1829a03ac530bbb4": {
+    "name": "李宇",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/YuLi/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=4&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-1fb14add9a7a8b5a6b61": {
+    "name": "王翠",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/CuiWang/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=4&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-fa11cfbe8d01c7fa4d97": {
+    "name": "于会香",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/HuixiangYu/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=4&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-f03bc38cf1dd2d230f9a": {
+    "name": "曹战民",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/ZhanminCao/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=4&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-7a860455df21d22346c4": {
+    "name": "宋玉柱",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/songyuzhu/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=4&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-f67e8650bc10a807833b": {
+    "name": "佘雪峰",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/XuefengShe/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=4&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-f0b286e9bdc06dc4adff": {
+    "name": "王海娟",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/HaijuanWang/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=5&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-da93974ec678e591a24c": {
+    "name": "刘青",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/QingLiu111/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=5&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-2b5859023bd68ea61287": {
+    "name": "兰鹏",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/PengLan/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=5&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-eeb0b678db44fa9acf36": {
+    "name": "王静松",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/JingsongWang/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=5&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-3b6da8536ede9035a5e6": {
+    "name": "王广",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/GuangWang/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=5&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-ae674398773b7bf9498f": {
+    "name": "张延玲",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/YanlingZhang1/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=5&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-3ac3b5973e8364347c19": {
+    "name": "钟怡玮",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/YiweiZhong/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=5&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-867ce0b5cf9c17d8865c": {
+    "name": "唐海燕",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/HaiyanTang/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=5&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-cd0833dc9dda38f406e4": {
+    "name": "杨涛",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/TaoYang11/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=5&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-ac9fbac308397ee26bd7": {
+    "name": "包燕平",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/YanpingBao/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=5&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-110f75aa658adc54b6ea": {
+    "name": "罗乙娲",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/luoyiwa/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=5&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-6d4945894dbda76eb038": {
+    "name": "王恩会",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/wangenhui/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=5&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-bf4f85e987c16b8903e7": {
+    "name": "涂继国",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/tujiguo/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=6&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-dbd93a3e73d1b79bad86": {
+    "name": "何杨",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/heyang1/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=6&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-87afa2965da35b0bced8": {
+    "name": "黄焜",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/KunHuang/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=6&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-1953d3010afcfdcc64d9": {
+    "name": "姜东滨",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/jiangdongbin/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=6&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-f9c83333193c84004872": {
+    "name": "姜敏",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/MinJiang/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=6&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-e7e81cbad0b2d0101987": {
+    "name": "周东东",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/ZhouDongdong/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=6&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-66f95bf5277d8ff472ab": {
+    "name": "焦克新",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/KexinJiao/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=6&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-fe6a284bc9545af1afe6": {
+    "name": "杨文",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/WenYang/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=6&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-4320b557758a9cfd6baf": {
+    "name": "王明涌",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/MingyongWang/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=6&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-1ce16e313eb422fb16f2": {
+    "name": "王丽君",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/LijunWang11/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=6&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-2af536821f84084ba1c4": {
+    "name": "冯婷",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/TingFeng/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=6&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-676ce23fd34df54b6534": {
+    "name": "闫威",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/WeiYan/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=7&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-ef6c0574f7b83898c31d": {
+    "name": "张杰",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/zhangjie/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=7&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-09118ed6d8b050a213c9": {
+    "name": "成国光",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/GuoguangCheng/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=7&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-5dcab5b4113297af652d": {
+    "name": "高金涛",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/JintaoGao/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=7&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-817f8aa3eef718aa15cc": {
+    "name": "黄凯",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/KaiHuang/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=7&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-94976c30a512315c86ee": {
+    "name": "刘高阳",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/GaoyangLiu/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=7&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-8978aa7fb03d14602dce": {
+    "name": "宋波",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/BoSong1/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=7&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-ea876e1dea6641f91daa": {
+    "name": "李荣斌",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/lirongbin/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=7&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-fe8249f13f6477726ce0": {
+    "name": "闫柏军",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/BaijunYan/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=7&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-d9b62adc016e2182beb1": {
+    "name": "赵立华",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/LihuaZhao11/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=7&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-5e0717037460a812623c": {
+    "name": "张家泉",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/JiaquanZhang/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=7&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-99d2616d561d64193c9b": {
+    "name": "李建玲",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/JianlingLi/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=7&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-0ead8f9f57a477314c5e": {
+    "name": "徐润生",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/xurunsheng/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=8&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-7cf1fa021bfd12c2adcc": {
+    "name": "王福明",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/FumingWang/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=8&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-c2af90edc78721785c74": {
+    "name": "孙学义",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/sunxueyi/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=8&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-0c174ed0d9f7dc5fd00c": {
+    "name": "刘晓明",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/XiaomingLiu/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=8&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-49bf165578f5eddfbf54": {
+    "name": "马瑞新",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/RuixinMa/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=8&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-b2345d21beb4f2337ea9": {
+    "name": "徐安军",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/AnjunXu/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=8&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-03a051b0c4c5583e2a99": {
+    "name": "杨占兵",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/ZhanbingYang/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=8&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-ac0fcd3b2cd4af743713": {
+    "name": "赵洪亮",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/HongliangZhao/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=8&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-0cc2b185420e1dd0103d": {
+    "name": "王成彦",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/ChengyanWang/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=8&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-461de70e8d413e791cfd": {
+    "name": "袁飞",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/yuanfei/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=8&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-00cd27668452ac2c5edd": {
+    "name": "王新东",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/XindongWang/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=8&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-6b52ebf28564f16551a1": {
+    "name": "张娟",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/JuanZhang11/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=8&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-d88251a288dd5007e56c": {
+    "name": "施耐克",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/shinaike/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=9&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-92b617d98aa13a9b17ba": {
+    "name": "段豪剑",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/duanhaojian/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=9&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-706a55eb71faa6351e72": {
+    "name": "冯凯",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/KaiFeng/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=9&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-4abc091e56e5fb22d3bb": {
+    "name": "程树森",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/ShusenCheng/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=9&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-b6d84faadba90c8f59b4": {
+    "name": "郭敏",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/MinGuo/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=9&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-7804fec7036547387b78": {
+    "name": "董凯",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/KaiDong/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=9&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-94314aa82bec13273809": {
+    "name": "郭兴敏",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/XingminGuo/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=9&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-b6779a5b0ededa31e2a0": {
+    "name": "葛建邦",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/gejianbang/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=9&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-e0a77c8aa299ee41b399": {
+    "name": "唐惠庆",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/HuiqingTang/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=9&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-f04a16320b0c2834a6b8": {
+    "name": "于湘涛",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/XiangtaoYu/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=9&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-7f3752f7742827db19c8": {
+    "name": "刘建华",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/JianhuaLiu11/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=9&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-f994593200f340cb4a2e": {
+    "name": "邢立东",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/xinglidong/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=9&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-37d4fdab40b38b2b649a": {
+    "name": "安航航",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/HanghangAn/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=10&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-e3d860f9747a49a09727": {
+    "name": "侯新梅",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/XinmeiHou/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=10&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-89f8e3dcd8717cf1e3fb": {
+    "name": "胡晓军",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/XiaojunHu/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=10&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-845ff2938cdbcab53114": {
+    "name": "王娜",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/NaWang11/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=10&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-727c9bf45379eafccc98": {
+    "name": "尹延斌",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/yinyanbin/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=10&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-4c80e6e3a407ca138899": {
+    "name": "张炯明",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/JiongmingZhang/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=10&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-cea1f41d1cd02f827dd2": {
+    "name": "薛庆国",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/QingguoXue/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=10&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-7ab090a91a1249669d8d": {
+    "name": "田俊行",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/tianjunxing/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=10&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-d00cf22cc3eff706192b": {
+    "name": "余智静",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/yuzhijing/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=10&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-fec68d03f7d7dc2527eb": {
+    "name": "宗燕兵",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/YanbingZong/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=10&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-11701fc94718ec453974": {
+    "name": "李亚琼",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/YaqiongLi/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=10&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-ed88f0ac71ddb0015dae": {
+    "name": "刘轩",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/XuanLiu11/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=10&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-f57e453be1a25c4a5359": {
+    "name": "王超",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/wangchao/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=11&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-04f253bb58fa26713d45": {
+    "name": "詹纯",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/zhanchun/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=11&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-30e029eb388625af9c4f": {
+    "name": "隋娜",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/suina/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=11&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-8d6e722812403e1b0934": {
+    "name": "王祎",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/DaiWang/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=11&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-4233ce7aee9fe7021d12": {
+    "name": "韩丽辉",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/LihuiHan/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=11&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-7d5460cb47e9b029bd01": {
+    "name": "王海舟",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/wanghaizhou/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=11&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-13832aa9020ed9f8233e": {
+    "name": "霍向涛",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/huoxiangtao/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=11&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-bbf9f5df59064e75bd74": {
+    "name": "王灿国",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/CanguoWang/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=11&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-fcf67334fd01457d3d08": {
+    "name": "于新攀",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/yuxinpan/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=11&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
+  },
+  "official-ae23db0856082f985790": {
+    "name": "成泽伟",
+    "institution": "北京科技大学",
+    "homepage": "https://faculty.ustb.edu.cn/ZeweiCheng/zh_CN/index.htm",
+    "identity_url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=11&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+    "source_kind": "学校教师主页"
   }
 }

@@ -142,7 +142,9 @@ def official_url(url):
                'ucas.ac.cn','ucas.edu.cn',
                # Added with the 民族学 / 矿业工程 thin-discipline batch; each host is a
                # university main domain reached only through a registered faculty directory.
-               'cumt.edu.cn','muc.edu.cn')
+               'cumt.edu.cn','muc.edu.cn',
+               # Added with the engineering-scale batch (北京科技大学教师主页学科索引).
+               'ustb.edu.cn')
     host = parsed.hostname or ''
     return parsed.scheme in {'http','https'} and any(host == root or host.endswith('.'+root) for root in trusted) and not parsed.username and parsed.port in {None,80,443}
 
