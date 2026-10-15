@@ -12,15 +12,21 @@ const scannable = (f) => f !== SELF && fs.existsSync(f) && !/\.(docx|png|jpg|xls
 
 // ── 1. 邮箱 / 隐私 ──
 const EMAIL = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/g;
+// 保留域名（RFC 2606 / RFC 6761）：仅用于测试夹具，不可能是真实联系方式。
+// 仍需扫描，但不计入隐私红线——否则测试"邮箱必须被清洗"的用例会自我触发告警。
+const RESERVED_DOMAIN = /@(?:example\.(?:com|net|org|edu)|example|invalid|localhost|test)$/i;
 const tracked = execSync('git ls-files', { encoding: 'utf8', maxBuffer: 1 << 28 }).split('\n').filter(Boolean);
-let emailHits = 0, emailFiles = [];
+let emailHits = 0, emailFiles = [], reservedHits = 0;
 for (const f of tracked) {
   if (!scannable(f)) continue;
   const t = fs.readFileSync(f, 'utf8');
   const m = (t.match(EMAIL) || []).filter((x) => !x.endsWith('users.noreply.github.com'));
-  if (m.length) { emailHits += m.length; emailFiles.push(`${f}(${m.length})`); }
+  const real = m.filter((x) => !RESERVED_DOMAIN.test(x));
+  reservedHits += m.length - real.length;
+  if (real.length) { emailHits += real.length; emailFiles.push(`${f}(${real.length})`); }
 }
-emailHits ? add(issues, `邮箱残留 ${emailHits} 处: ${emailFiles.slice(0, 5).join(', ')}`) : add(oks, '产物与代码中无邮箱残留');
+emailHits ? add(issues, `邮箱残留 ${emailHits} 处: ${emailFiles.slice(0, 5).join(', ')}`)
+  : add(oks, `产物与代码中无真实邮箱残留${reservedHits ? `（另有 ${reservedHits} 处 RFC 2606 保留域名测试夹具，非真实联系方式）` : ''}`);
 
 // ── 2. 个人身份信息 / 本地路径泄漏 ──
 const PERSONAL = [
