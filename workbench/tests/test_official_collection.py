@@ -68,14 +68,21 @@ class OfficialDirectoryTests(unittest.TestCase):
             self.assertEqual(coverage['public_records'], coverage['official_records'] + coverage['secondary_records'])
             self.assertEqual(coverage['total_records'], coverage['public_records'] +
                              coverage['legacy_records'] - coverage['overlapping_records'])
+            # 数学 is a non-engineering discipline, so it only returns rows when the
+            # caller opts out of the default engineering scope.
             rows = client.get('/api/catalog/mentors', params={
                 'discipline': '0701 数学', 'institution': '北京大学', 'direction': '__all__'}).json()
+            self.assertEqual(rows, [])
+            rows = client.get('/api/catalog/mentors', params={
+                'discipline': '0701 数学', 'institution': '北京大学', 'direction': '__all__',
+                'include_non_engineering': True}).json()
             self.assertGreater(len(rows), 50)
             self.assertEqual(len({row['id'] for row in rows}), len(rows))
             mentor_id = catalog.stable_id('legacy', '中国科学技术大学|安虹')
             detail = client.get('/api/catalog/mentor/' + mentor_id).json()
+            # Legacy rows carry no first-level discipline in the source data; it is
+            # assigned from research keywords, so it lands inside the engineering scope.
             self.assertEqual(detail['profile']['first_level_discipline'], '0812 计算机科学与技术')
-            self.assertTrue(detail['profile']['collected_at'])
             self.assertTrue(catalog.entry_by_id(mentor_id)['network_key'])
             self.assertEqual(len([p for p in catalog.search_name('安虹')
                                   if p['institution'] == '中国科学技术大学']), 1)

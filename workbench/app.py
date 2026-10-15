@@ -17,7 +17,7 @@ from .core import (
     load_project, normalize_profile, now, parse_import, safe_url, save_project,
 )
 from .search import MODEL_NAME, search
-from . import catalog, investigation
+from . import catalog, investigation, relations, student_score
 from .openalex import OpenAlexUnavailable, author_candidates
 import requests
 
@@ -72,41 +72,55 @@ def health():
 
 
 @app.get("/api/catalog/name")
-def catalog_name(q: str = "", project_id: str = ""):
+def catalog_name(q: str = "", project_id: str = "", include_non_engineering: bool = False):
     try:
-        return catalog.search_name(q, project_id)
+        return catalog.search_name(q, project_id, include_non_engineering=include_non_engineering)
     except (ValueError, FileNotFoundError) as error:
         raise HTTPException(status_code=404, detail=str(error)) from error
 
 
+@app.get("/api/catalog/scope")
+def catalog_scope():
+    return catalog.scope_info()
+
+
+@app.get("/api/catalog/relations/summary")
+def catalog_relations_summary():
+    return relations.summary()
+
+
 @app.get("/api/catalog/disciplines")
-def catalog_disciplines(project_id: str = ""):
+def catalog_disciplines(project_id: str = "", include_non_engineering: bool = False):
     try:
-        return catalog.disciplines(project_id)
+        return catalog.disciplines(project_id, include_non_engineering)
     except (ValueError, FileNotFoundError) as error:
         raise HTTPException(status_code=404, detail=str(error)) from error
 
 
 @app.get("/api/catalog/institutions")
-def catalog_institutions(discipline: str, project_id: str = ""):
+def catalog_institutions(discipline: str, project_id: str = "",
+                         include_non_engineering: bool = False):
     try:
-        return catalog.institutions(discipline, project_id)
+        return catalog.institutions(discipline, project_id, include_non_engineering)
     except (ValueError, FileNotFoundError) as error:
         raise HTTPException(status_code=404, detail=str(error)) from error
 
 
 @app.get("/api/catalog/directions")
-def catalog_directions(discipline: str, institution: str, project_id: str = ""):
+def catalog_directions(discipline: str, institution: str, project_id: str = "",
+                       include_non_engineering: bool = False):
     try:
-        return catalog.directions(discipline, institution, project_id)
+        return catalog.directions(discipline, institution, project_id, include_non_engineering)
     except (ValueError, FileNotFoundError) as error:
         raise HTTPException(status_code=404, detail=str(error)) from error
 
 
 @app.get("/api/catalog/mentors")
-def catalog_mentors(discipline: str, institution: str, direction: str, project_id: str = ""):
+def catalog_mentors(discipline: str, institution: str, direction: str, project_id: str = "",
+                    include_non_engineering: bool = False):
     try:
-        return catalog.mentors(discipline, institution, direction, project_id)
+        return catalog.mentors(discipline, institution, direction, project_id,
+                               include_non_engineering)
     except (ValueError, FileNotFoundError) as error:
         raise HTTPException(status_code=404, detail=str(error)) from error
 
@@ -132,6 +146,11 @@ def catalog_dossier(mentor_id: str):
     result = catalog.dossier(mentor_id)
     if result is None:
         raise HTTPException(status_code=404, detail="找不到这位导师")
+    # The student-facing reference score and the layered relationship view are
+    # attached here so every caller sees the same basis text and caveats.
+    key = result.get("network_key") or (result.get("profile") or {}).get("network_key")
+    result["student_score"] = student_score.compute(key)
+    result["relations_analysis"] = relations.analyze(key)
     return result
 
 

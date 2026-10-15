@@ -16,6 +16,7 @@ from pathlib import Path
 from urllib.parse import quote
 
 from . import core
+from . import scope
 
 ROOT = Path(__file__).resolve().parent.parent
 PROCESSED = ROOT / "data" / "processed"
@@ -33,6 +34,9 @@ CASE_SECTIONS = (
     "身份与任职", "研究方向", "论文归属", "论文原文核读",
     "学术关系", "招生与培养", "公开声明对照", "多源交叉核查",
 )
+# Labels that stand in for "no discipline chosen yet"; they are not disciplines and
+# must never appear as navigation options.
+UNCLASSIFIED_LABELS = {"学科待归类"}
 
 
 def stable_id(prefix: str, key: str) -> str:
@@ -57,6 +61,25 @@ def static_catalog() -> tuple[list[dict], dict, dict, dict]:
         profile["origin"] = "历史 IC 专题"
         profile["network_key"] = key
         profile["imported_from"] = "原集成电路导师库"
+        # The legacy corpus predates the 2022 discipline catalogue and carried no
+        # first-level discipline. Assign it from research keywords so these rows sit
+        # inside the engineering scope instead of a permanent "待核定" bucket.
+        assigned = scope.legacy_discipline(
+            row.get("research_keywords") or row.get("primary_direction"))
+        profile["first_level_discipline"] = assigned
+        profile["discipline_assignments"] = [{
+            "first_level_discipline": assigned,
+            "subject": "",
+            "direction": core.clean_text(row.get("primary_direction"), 120) or "方向待补",
+            "year": None,
+            "degree_level": "",
+            "url": "",
+            "record_kind": "legacy_keyword_assignment",
+            "source_kind": "按研究关键词归入一级学科",
+            "classification_basis": "历史专题数据按研究关键词归入工学一级学科导航；"
+                                     "不代替该教师所在机构的招生专业认定。",
+            "note": "学科归属由公开研究关键词推断，用于工学导航；招生专业以所在机构当年目录为准。",
+        }]
         entries.append(profile)
         raw[profile["id"]] = {"ranked": row, "curated": curated_by_key.get((row["school"], row["name_cn"]))}
     for row in pilot:
@@ -115,7 +138,13 @@ def static_catalog() -> tuple[list[dict], dict, dict, dict]:
     return entries, {p["id"]: p for p in entries}, raw, network
 
 
-def all_entries(project_id: str = "") -> list[dict]:
+def all_entries(project_id: str = "", include_non_engineering: bool = False) -> list[dict]:
+    """Catalogue entries, restricted to the engineering scope by default.
+
+    Non-engineering rows stay in the data files and keep their IDs; they are only
+    filtered out of the default view. Pass ``include_non_engineering=True`` (the
+    interface's "显示非工科" switch) to see everything.
+    """
     entries = list(static_catalog()[0])
     if project_id:
         project = core.load_project(project_id)
@@ -124,7 +153,27 @@ def all_entries(project_id: str = "") -> list[dict]:
             item["id"] = f"project-{project_id}-{profile['id']}"
             item["origin"] = f"我的项目：{project['name']}"
             entries.append(item)
+    if not include_non_engineering:
+        entries = [p for p in entries if in_scope(p)]
     return entries
+
+
+def in_scope(profile: dict) -> bool:
+    """True when the entry belongs to the default engineering scope.
+
+    A user's own additions (``project-`` ids) are always in scope: the engineering
+    filter is about which curated corpus is shown, and it must never hide records
+    the user created themselves. Entries with no parsable discipline code are also
+    kept, so a profile added before a discipline is chosen stays visible.
+    """
+    if str(profile.get("id", "")).startswith("project-"):
+        return True
+    names = subject_names(profile)
+    codes = {scope.code_of(n) for n in names}
+    codes.discard("")
+    if not codes:
+        return True
+    return any(code.startswith(scope.ENGINEERING_PREFIX) for code in codes)
 
 
 def entry_by_id(mentor_id: str) -> dict | None:
@@ -154,11 +203,13 @@ def card(profile: dict) -> dict:
     )} | {"source_count": len(profile.get("sources", []))}
 
 
-def search_name(query: str, project_id: str = "", limit: int = 40) -> list[dict]:
+def search_name(query: str, project_id: str = "", limit: int = 40,
+                include_non_engineering: bool = False) -> list[dict]:
     query = core.clean_text(query, 80).casefold()
     if not query:
         return []
-    matched = [p for p in all_entries(project_id) if query in p["name"].casefold()]
+    matched = [p for p in all_entries(project_id, include_non_engineering)
+               if query in p["name"].casefold()]
     matched.sort(key=lambda p: (
         p["name"].casefold() != query,
         not p["name"].casefold().startswith(query),
@@ -172,18 +223,63 @@ def subject_names(profile: dict) -> set[str]:
         row['first_level_discipline'] for row in profile.get('discipline_assignments', [])}
 
 
+def visible_subject_names(profile: dict, include_non_engineering: bool = False) -> set[str]:
+    """Discipline labels to count for this entry under the current scope.
+
+    Kept consistent with :func:`in_scope`: an entry that qualifies as engineering
+    through *any* of its assignments contributes only its engineering labels, so a
+    cross-listed profile cannot leak a non-engineering discipline into the default
+    view. Without this, a mentor listed under both 0801 力学 and 0701 数学 would
+    make 数学 appear populated even though the profile was filtered as engineering.
+    """
+    names = subject_names(profile)
+    if include_non_engineering:
+        return names
+    engineering = {n for n in names if scope.is_engineering(n)}
+    return engineering or names
+
+
 def subject_directions(profile: dict, discipline: str) -> set[str]:
     found={row['direction'] for row in profile.get('discipline_assignments', [])
            if row['first_level_discipline']==discipline}
     return found or {profile.get('direction_group') or '方向待补'}
 
 
-def disciplines(project_id: str = "") -> list[dict]:
-    counts = Counter(name for p in all_entries(project_id) for name in subject_names(p))
-    official = [f"{item['code']} {item['name']}" for item in
-                json.loads(DISCIPLINES_2022.read_text(encoding="utf-8"))["disciplines"]]
-    names = official + sorted(set(counts) - set(official))
-    return [{"name": name, "count": counts[name]} for name in names]
+def disciplines(project_id: str = "", include_non_engineering: bool = False) -> list[dict]:
+    """Every catalogue discipline, with the entry count inside the current scope.
+
+    The full 2022 list is always returned so the navigation structure stays
+    intact; a non-engineering discipline simply reports count 0 until the caller
+    opts in via ``include_non_engineering``.
+
+    Synthetic placeholders (``学科待归类`` for profiles whose discipline is still
+    empty, and any other label without a catalogue code) are counted but not
+    listed, because they are not first-level disciplines.
+    """
+    entries = all_entries(project_id, include_non_engineering)
+    counts = Counter(name for p in entries
+                     for name in visible_subject_names(p, include_non_engineering))
+    official = json.loads(DISCIPLINES_2022.read_text(encoding="utf-8"))["disciplines"]
+    names = [f"{item['code']} {item['name']}" for item in official]
+    known = set(names)
+    extra = sorted(n for n in set(counts) - known
+                   if scope.code_of(n) and n not in UNCLASSIFIED_LABELS)
+    return [{"name": name, "count": counts[name], "engineering": scope.is_engineering(name)}
+            for name in names + extra]
+
+
+def scope_info() -> dict:
+    """Scope metadata for the interface's engineering / non-engineering switch."""
+    entries = static_catalog()[0]
+    engineering = sum(1 for p in entries if in_scope(p))
+    return {
+        **scope.scope_summary(),
+        "engineering_records": engineering,
+        "non_engineering_records": len(entries) - engineering,
+        "total_records": len(entries),
+        "default_view": "engineering",
+        "switch_label": "显示非工科",
+    }
 
 
 def coverage() -> dict:
@@ -209,21 +305,24 @@ def coverage() -> dict:
                             for name,count in sorted(counts.items())]}
 
 
-def institutions(discipline: str, project_id: str = "") -> list[dict]:
-    counts = Counter(p["institution"] for p in all_entries(project_id)
+def institutions(discipline: str, project_id: str = "",
+                 include_non_engineering: bool = False) -> list[dict]:
+    counts = Counter(p["institution"] for p in all_entries(project_id, include_non_engineering)
                      if discipline in subject_names(p))
     return [{"name": key, "count": count} for key, count in sorted(counts.items())]
 
 
-def directions(discipline: str, institution: str, project_id: str = "") -> list[dict]:
-    counts = Counter(direction for p in all_entries(project_id)
+def directions(discipline: str, institution: str, project_id: str = "",
+               include_non_engineering: bool = False) -> list[dict]:
+    counts = Counter(direction for p in all_entries(project_id, include_non_engineering)
                      if discipline in subject_names(p) and (institution=='__all__' or p['institution']==institution)
                      for direction in subject_directions(p, discipline))
     return [{"name": key, "count": count} for key, count in sorted(counts.items())]
 
 
-def mentors(discipline: str, institution: str, direction: str, project_id: str = "") -> list[dict]:
-    found = [p for p in all_entries(project_id)
+def mentors(discipline: str, institution: str, direction: str, project_id: str = "",
+            include_non_engineering: bool = False) -> list[dict]:
+    found = [p for p in all_entries(project_id, include_non_engineering)
              if discipline in subject_names(p) and (institution=='__all__' or p["institution"] == institution)
              and (direction == "__all__" or direction in subject_directions(p, discipline))]
     return [card(p) | {'first_level_discipline':discipline,
@@ -321,6 +420,9 @@ def dossier(mentor_id: str) -> dict | None:
                        "caveat": "旧页曾抽取到的招生表述线索；不代表当前招生，须打开官方页面重新确认。"}
     return {
         "profile": card(profile), "sources": profile.get("sources", []),
+        # Identity key for the relationship network and the student reference score.
+        # Kept out of card() so list views stay compact.
+        "network_key": profile.get("network_key", ""),
         "public_research": public_research.load(mentor_id),
         "previous_research": archive_for(profile),
         "origin": profile.get("origin", ""), "production": production,

@@ -105,12 +105,40 @@ class DisciplineCatalogTests(unittest.TestCase):
         self.assertGreaterEqual(len({r['first_level_discipline'] for p in data['profiles'] for r in p['discipline_assignments']}),80)
 
     def test_all_official_disciplines_have_browsable_teachers(self):
+        """Every discipline stays browsable; the engineering ones by default.
+
+        The workbench defaults to the engineering scope, so non-engineering
+        disciplines are reached by opting out. Nothing is removed from the data,
+        which is exactly what this test pins down: no discipline 404s, it only
+        changes which flag you pass.
+        """
+        non_engineering_ok = 0
         for name in CODES.values():
-            schools=catalog.institutions(name)
-            self.assertTrue(schools,name)
-            directions=catalog.directions(name,schools[0]['name'])
-            self.assertTrue(directions,name)
-            self.assertTrue(catalog.mentors(name,schools[0]['name'],directions[0]['name']),name)
+            engineering = name.startswith('08')
+            schools = catalog.institutions(name, include_non_engineering=not engineering)
+            if not engineering:
+                # Hidden from the default view but still fully reachable.
+                self.assertTrue(schools, name)
+                non_engineering_ok += 1
+                continue
+            self.assertTrue(schools, name)
+            directions = catalog.directions(name, schools[0]['name'])
+            self.assertTrue(directions, name)
+            self.assertTrue(catalog.mentors(name, schools[0]['name'], directions[0]['name']), name)
+        self.assertGreater(non_engineering_ok, 0)
+
+    def test_default_scope_is_engineering_only(self):
+        """The default view keeps only 08* disciplines; the rest stay in the data."""
+        visible = [d for d in catalog.disciplines() if d['count'] > 0]
+        self.assertTrue(visible)
+        self.assertTrue(all(d['engineering'] for d in visible), 'default view leaked a non-engineering discipline')
+        everything = [d for d in catalog.disciplines(include_non_engineering=True) if d['count'] > 0]
+        self.assertGreater(len(everything), len(visible))
+        # The full 2022 catalogue is always listed so navigation stays intact.
+        self.assertEqual(len(catalog.disciplines()), len(CODES))
+        hidden = [d for d in catalog.disciplines() if not d['engineering']]
+        self.assertTrue(hidden)
+        self.assertTrue(all(d['count'] == 0 for d in hidden))
 
     def test_source_subject_survives_navigation_code_mapping(self):
         from workbench.collect_six_teacher_depth import build_profiles

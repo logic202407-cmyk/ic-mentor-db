@@ -92,12 +92,17 @@ def load(mentor_id):
 def with_catalog_records(mentor_id, data):
     from . import catalog
     profile=catalog.entry_by_id(mentor_id)
-    assignments=(profile or {}).get('discipline_assignments', [])
+    if not profile:return data
+    assignments=profile.get('discipline_assignments', [])
     if not assignments:return data
     synthesized=data is None
     if data is None:
+        # Discipline assignments exist for legacy rows too, and those carry no
+        # collected_at; fall back to an explicit unknown date instead of raising.
+        stamp=(profile.get('collected_at') or '').strip()
         data={'version':VERSION,'mentor_id':mentor_id,'status':'catalog',
-              'checked_at':profile['collected_at']+'T00:00:00+08:00','papers':[],
+              'checked_at':(stamp+'T00:00:00+08:00') if stamp else '',
+              'collected_at_unknown':not stamp,'papers':[],
               'relations':[],'recruitment':[],'biography':[],'admission_notices':[],
               'admission_links':[],'pages':[],'errors':[]}
     registered=registered_source(profile)
@@ -107,15 +112,25 @@ def with_catalog_records(mentor_id, data):
     if data.get('status')=='unavailable':data['status']='catalog'
     data['catalog_kind']='faculty_directory' if all(r.get('record_kind')=='faculty_directory' for r in assignments) else 'admissions'
     existing={row['text'] for row in data['recruitment']+data['biography']}
+    listed_at=profile.get('collected_at') or ''
     for row in assignments:
         directory=row.get('record_kind')=='faculty_directory'
-        text=(f"{row.get('source_kind','学校导师名录')}列有{profile['name']}；学科：{row['first_level_discipline']}；方向：{row['direction']}。未取得当年招生依据。" if directory else
-              f"{row['year']} 年{row.get('degree_level','博士')}招生目录：{profile['department']}，{row.get('source_subject') or row['subject']}；方向：{row['direction']}；列有{profile['name']}。不代表目前仍有名额。")
+        # Keyword-assigned legacy rows carry no subject code, so describe them as
+        # navigation classification rather than as an admissions-catalogue entry.
+        keyword_only=row.get('record_kind')=='legacy_keyword_assignment'
+        if keyword_only:
+            text=(f"学科归属按公开研究关键词归入「{row['first_level_discipline']}」，"
+                  f"用于工学导航；方向：{row.get('direction') or '方向待补'}。"
+                  f"不代替所在机构当年的招生专业认定。")
+        else:
+            text=(f"{row.get('source_kind','学校导师名录')}列有{profile['name']}；学科：{row['first_level_discipline']}；方向：{row['direction']}。未取得当年招生依据。" if directory else
+                  f"{row['year']} 年{row.get('degree_level','博士')}招生目录：{profile['department']}，{row.get('source_subject') or row['subject']}；方向：{row['direction']}；列有{profile['name']}。不代表目前仍有名额。")
         if row.get('note'):text+=' '+row['note']
         if text not in existing:
-            data['biography' if directory else 'recruitment'].append({'text':text,'url':row['url'],'year':row.get('year'),
-                                       'source_kind':row.get('source_kind','学校导师名录' if directory else '学校招生目录'),
-                                       'identity_url':row.get('identity_url',''),'fetched_at':profile['collected_at']})
+            data['biography' if (directory or keyword_only) else 'recruitment'].append(
+                {'text':text,'url':row['url'],'year':row.get('year'),
+                 'source_kind':row.get('source_kind','学校导师名录' if directory else '学校招生目录'),
+                 'identity_url':row.get('identity_url',''),'fetched_at':listed_at})
             existing.add(text)
     return data
 
