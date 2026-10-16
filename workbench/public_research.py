@@ -22,7 +22,7 @@ import requests
 from . import core
 
 VERSION = 2
-PARSER_REVISION = 6
+PARSER_REVISION = 7
 LOCK = threading.Lock()
 HOST_TIMES = {}
 PAGE_LOCKS = {}
@@ -292,6 +292,13 @@ def parse_page(html, url, name, *, continuation=False):
     for tag in soup.select('form'):tag.unwrap()
     for tag in soup.select('script,style,nav,header,footer,input,button,select,textarea,.bibtex.hidden'):
         tag.decompose()
+    # Site chrome that survives the selectors above. Footer boilerplate is a real
+    # source of false records: Wuhan University pages carry an ICP 备案号 line that
+    # was previously captured as a publication.
+    for tag in soup.find_all(string=re.compile(r'ICP\s*备|公网安备|公安备案|版权所有|技术支持[:：]|工信部备案')):
+        parent = tag.find_parent(['p', 'div', 'li', 'td', 'footer', 'span'])
+        if parent is not None:
+            parent.decompose()
     root = soup.select_one('.wp_articlecontent') or soup.select_one('.v_news_content') or soup.select_one('.bs-page-body') or soup.select_one('article') or soup.body or soup
     # Some faculty templates render tab labels before all panel bodies. Restore
     # each label at its panel so awards/projects cannot inherit a paper heading.
