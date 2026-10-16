@@ -10,6 +10,11 @@ const issues = [], warns = [], oks = [];
 const add = (arr, msg) => arr.push(msg);
 const scannable = (f) => f !== SELF && fs.existsSync(f) && !/\.(docx|png|jpg|xlsx)$/i.test(f);
 
+// 文本扫描（邮箱/电话/本地路径等）不能读二进制：PDF 的压缩流里会随机出现
+// 「0\d{2,3}-\d{7,8}」这类字节序列，把 34 MB 的技术报告当文本读一次就报了 1620 处
+// 假阳性，足以让整条审计规则失去意义。PDF 改由专门的体积/页数检查覆盖。
+const TEXT_SCANNABLE = (f) => scannable(f) && !/\.pdf$/i.test(f);
+
 // ── 1. 邮箱 / 隐私 ──
 const EMAIL = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/g;
 // 保留域名（RFC 2606 / RFC 6761）：仅用于测试夹具，不可能是真实联系方式。
@@ -18,7 +23,7 @@ const RESERVED_DOMAIN = /@(?:example\.(?:com|net|org|edu)|example|invalid|localh
 const tracked = execSync('git ls-files', { encoding: 'utf8', maxBuffer: 1 << 28 }).split('\n').filter(Boolean);
 let emailHits = 0, emailFiles = [], reservedHits = 0;
 for (const f of tracked) {
-  if (!scannable(f)) continue;
+  if (!TEXT_SCANNABLE(f)) continue;
   const t = fs.readFileSync(f, 'utf8');
   const m = (t.match(EMAIL) || []).filter((x) => !x.endsWith('users.noreply.github.com'));
   const real = m.filter((x) => !RESERVED_DOMAIN.test(x));
@@ -27,6 +32,30 @@ for (const f of tracked) {
 }
 emailHits ? add(issues, `邮箱残留 ${emailHits} 处: ${emailFiles.slice(0, 5).join(', ')}`)
   : add(oks, `产物与代码中无真实邮箱残留${reservedHits ? `（另有 ${reservedHits} 处 RFC 2606 保留域名测试夹具，非真实联系方式）` : ''}`);
+
+// ── 1b. 电话号码 / 隐私 ──
+// 项目红线是"不收录邮箱与电话"，但此前审计只拦邮箱，电话会一路发布出去：来源快照
+// 是页面逐字副本，页脚与"联系电话"列里的座机、手机都原样留着。2026-10-15 在已跟踪
+// 的 22 份快照里查出 43 个真实号码（含 11 位手机），因此补上这道检查。
+//
+// 精度是这道规则的关键。两种误报必须排除，否则审计会被噪声淹没、失去可用性：
+//   1. 图片指纹与时间戳，如 ...b49177f04fa08316766a6d135...
+//      → 用 ASCII 边界的 lookaround 排除（真实号码总是出现在文本环境里）。
+//   2. DOI 后缀与页面 id，如 10.1055/s-0039-1698837、/0120200221/、
+//      https://gr.xjtu.edu.cn/0020220087/、以及带分机的 029-82665670-8010。
+//      → 排除紧跟在 `.` `/` `-` 之后、或后面还接着 `-数字` 的形态。
+// 结果是：不加这些排除会报 1700+ 处（几乎全是 DOI 与 id），加上之后只报真正的
+// 「区号-号码 / 11 位手机」，当前仓库为 0。
+const PHONE = /(?<![0-9A-Za-z.\/-])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8}|\(\d{3,4}\)\s?\d{7,8})(?![0-9A-Za-z-])/g;
+let phoneHits = 0, phoneFiles = [];
+for (const f of tracked) {
+  if (!TEXT_SCANNABLE(f)) continue;
+  const t = fs.readFileSync(f, 'utf8');
+  const m = t.match(PHONE);
+  if (m && m.length) { phoneHits += m.length; phoneFiles.push(`${f}(${m.length})`); }
+}
+phoneHits ? add(issues, `电话号码残留 ${phoneHits} 处: ${phoneFiles.slice(0, 5).join(', ')}`)
+  : add(oks, '产物与代码中无真实电话号码残留（座机与 11 位手机均按同一规则检查；DOI 后缀、页面 id、图片指纹等号码形态已排除）');
 
 // ── 2. 个人身份信息 / 本地路径泄漏 ──
 const PERSONAL = [
@@ -39,7 +68,7 @@ const PERSONAL = [
 ];
 let pHits = 0;
 for (const f of tracked) {
-  if (!scannable(f)) continue;
+  if (!TEXT_SCANNABLE(f)) continue;
   const t = fs.readFileSync(f, 'utf8');
   for (const [re, label] of PERSONAL) if (re.test(t)) { add(issues, `${f} 含${label}`); pHits++; }
 }
@@ -163,7 +192,9 @@ giMiss.length ? add(warns, `.gitignore 可能遗漏: ${giMiss.join(', ')}`) : ad
 const SECRET = /(ghp_[A-Za-z0-9]{20,}|github_pat_|sk-[A-Za-z0-9]{20,}|AKIA[0-9A-Z]{16}|-----BEGIN [A-Z ]*PRIVATE KEY|password\s*[:=]\s*['"][^'"]{6,})/;
 let sHits = [];
 for (const f of tracked) {
-  if (!scannable(f)) continue;
+  // 同样只读文本：`AKIA[0-9A-Z]{16}` 这类形态在 PDF 压缩流里可能偶然命中。
+  // 凭证若真被写进仓库，必然出现在文本文件里（源码、配置、文档），不会只在 PDF 中。
+  if (!TEXT_SCANNABLE(f)) continue;
   if (SECRET.test(fs.readFileSync(f, 'utf8'))) sHits.push(f);
 }
 sHits.length ? add(issues, `疑似凭证: ${sHits.join(', ')}`) : add(oks, '未发现任何凭证 / 密钥');

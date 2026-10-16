@@ -1,1083 +1,2165 @@
-<!DOCTYPE html>
-<!--[if IE 6]>
-<html id="ie6" lang="zh-CN">
-<![endif]-->
-<!--[if IE 7]>
-<html id="ie7" lang="zh-CN">
-<![endif]-->
-<!--[if IE 8]>
-<html id="ie8" lang="zh-CN">
-<![endif]-->
-<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
-<html lang="zh-CN">
-<!--<![endif]-->
-
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-	<meta name="renderer" content="webkit|ie-comp|ie-stand" />
-
-	
-<link type="text/css" href="/_css/_system/system.css" rel="stylesheet"/>
-<link type="text/css" href="/_upload/site/1/style/1/1.css" rel="stylesheet"/>
-<link type="text/css" href="/_upload/site/00/18/24/style/9/9.css" rel="stylesheet"/>
-<link type="text/css" href="/_js/_portletPlugs/sudyNavi/css/sudyNav.css" rel="stylesheet" />
-<link type="text/css" href="/_js/_portletPlugs/datepicker/css/datepicker.css" rel="stylesheet" />
-<link type="text/css" href="/_js/_portletPlugs/simpleNews/css/simplenews.css" rel="stylesheet" />
-
-<script language="javascript" src="/_js/jquery.min.js" sudy-wp-context="" sudy-wp-siteId="24"></script>
-<script language="javascript" src="/_js/jquery.sudy.wp.visitcount.js"></script>
-<script type="text/javascript" src="/_js/_portletPlugs/sudyNavi/jquery.sudyNav.js"></script>
-<script type="text/javascript" src="/_js/_portletPlugs/datepicker/js/jquery.datepicker.js"></script>
-<script type="text/javascript" src="/_js/_portletPlugs/datepicker/js/datepicker_lang_HK.js"></script>
-<link id="css1" href="/_upload/tpl/00/0a/10/template10/htmlRes/da_comment.css" media="screen" rel="stylesheet" type="text/css" />
-	<link rel="stylesheet" href="/_upload/tpl/00/0a/10/template10/htmlRes/style_01.css" type="text/css" />
-	<title>教授</title>
-	<meta name="author" content="http://www.xxxxxx.cn">
-	<meta name="keywords" content="东北大学信息学院">
-	<meta name="description" content="东北大学信息学院">
-	
-	<script type="text/javascript" src="/_upload/tpl/00/0a/10/template10/htmlRes/da_nav.js"></script>
-	<script type="text/javascript" src="/_upload/tpl/00/0a/10/template10/htmlRes/da_scroll.js"></script>
-	<script type="text/javascript">
-		$(function () {
-			$("div.list_lh").myScroll({
-				speed: 50, //数值越大，速度越慢
-				rowHeight: 28 //li的高度
-			});
-		});
-		$(function () {
-			var width = window.screen.width;
-			document.cookie = "screen=" + width;
-			if (width <= 1366) {
-				$("#css2").attr("href", "");
-			}
-
-		})
-		function addFavorite() {
-			return this.click(function () {
-				var obj = $(this);
-				if ($.browser.msie) {
-					window.external.addFavorite(h, l);
-				} else if (jQuery.browser.mozilla || jQuery.browser.opera) {
-					obj.attr("rel", "sidebar");
-					obj.attr("title", '东大');
-					obj.attr("href", window.location.href);
-				} else {
-					alert("请使用Ctrl+D将本页加入收藏夹！");
-				}
-			});
-		};
-	</script>
-</head>
-
-<body class="list"> 
-	<div id="header">
-		<div class="header_main">
-			<div class="header_logo">
-				<img src="/_upload/tpl/00/0a/10/template10/htmlRes/header_logo.png">
-			</div>
-			<div class="header_quick_link">
-                <a href="http://www.ise.neu.edu.cn/YW/main.htm" target="_blank">English</a>
-                <span>|</span>
-					<a href="http://www.ise.neu.edu.cn/306/list.htm">联系我们</a>
-					<span>|</span>
-					<a href="javascript:void(0)" id="" onClick="addFavorite();return false;" title="东大" rel="sidebar">加入收藏</a>
-				</div>
-			<div class="db_quick_box" id="navigation">
-				<a href="javascript:;" class="quick_nav_btn">快速导航</a>
-				<ul class="sub_menu" style="display:none" id="showNav" frag="窗口12"></ul>
-			</div>
-		</div>
-		<div class="nav_main">
-			<ul class="menu" frag="窗口1">
-				
-				
-				<li class="menu">
-					<a href="http://www.ise.neu.edu.cn/main.htm" class="menu_link">首页</a>
-					
-				</li>
-				<li class="nav_btn_divide_line i1"></li>
-				
-				<li class="menu">
-					<a href="/148/list.htm" class="menu_link">学院概况</a>
-					
-					<div class="nav_second_box" style="display:none">
-						
-						<a href="/191/list.htm">学院简介</a>
-						
-						<a href="/192/list.htm">学院领导</a>
-						
-						<a href="/193/list.htm">学科简介</a>
-						
-						<a href="/194/list.htm">组织机构</a>
-						
-						<a href="http://www.ise.neu.edu.cn/xxysz/">历史沿革</a>
-						
-					</div>
-					
-				</li>
-				<li class="nav_btn_divide_line i2"></li>
-				
-				<li class="menu">
-					<a href="/149/list.htm" class="menu_link">科学研究</a>
-					
-					<div class="nav_second_box" style="display:none">
-						
-						<a href="/198/list.htm">特色科研团队</a>
-						
-						<a href="/199/list.htm">学科方向</a>
-						
-						<a href="/200/list.htm">科研成果</a>
-						
-						<a href="/201/list.htm">学科平台</a>
-						
-					</div>
-					
-				</li>
-				<li class="nav_btn_divide_line i3"></li>
-				
-				<li class="menu">
-					<a href="/150/list.htm" class="menu_link">师资队伍</a>
-					
-					<div class="nav_second_box" style="display:none">
-						
-						<a href="/209/list.htm">杰出人才</a>
-						
-						<a href="http://www.ise.neu.edu.cn/gyyxtgcyjs/list.htm">教师名录</a>
-						
-						<a href="/211/list.htm">招聘英才</a>
-						
-					</div>
-					
-				</li>
-				<li class="nav_btn_divide_line i4"></li>
-				
-				<li class="menu">
-					<a href="/151/list.htm" class="menu_link">人才培养</a>
-					
-					<div class="nav_second_box" style="display:none">
-						
-						<a href="/220/list.htm">本科生培养</a>
-						
-						<a href="/221/list.htm">研究生培养</a>
-						
-					</div>
-					
-				</li>
-				<li class="nav_btn_divide_line i5"></li>
-				
-				<li class="menu">
-					<a href="/152/list.htm" class="menu_link">党群之窗</a>
-					
-					<div class="nav_second_box" style="display:none">
-						
-						<a href="/259/list.htm">组织机构</a>
-						
-						<a href="/262/list.htm">文化建设</a>
-						
-						<a href="/263/list.htm">工会组织</a>
-						
-					</div>
-					
-				</li>
-				<li class="nav_btn_divide_line i6"></li>
-				
-				<li class="menu">
-					<a href="/153/list.htm" class="menu_link">学生活动</a>
-					
-				</li>
-				<li class="nav_btn_divide_line i7"></li>
-				
-				<li class="menu">
-					<a href="/154/list.htm" class="menu_link">国际交流</a>
-					
-					<div class="nav_second_box" style="display:none">
-						
-						<a href="/284/list.htm">留学生政策</a>
-						
-						<a href="/285/list.htm">学生出国(境)</a>
-						
-					</div>
-					
-				</li>
-				<li class="nav_btn_divide_line i8"></li>
-				
-				<li class="menu">
-					<a href="http://kzyjc.alljournals.cn/kzyjc/home" class="menu_link">两刊一会</a>
-					
-				</li>
-				<li class="nav_btn_divide_line i9"></li>
-				
-				<li class="menu">
-					<a href="/155/list.htm" class="menu_link">服务指南</a>
-					
-					<div class="nav_second_box" style="display:none">
-						
-						<a href="/304/list.htm">规章制度</a>
-						
-						<a href="/305/list.htm">办事流程</a>
-						
-						<a href="/306/list.htm">联系我们</a>
-						
-					</div>
-					
-				</li>
-				<li class="nav_btn_divide_line i10"></li>
-				
-				
-			</ul>
-			<div class="top_search_box" id="searchBox" frag="窗口2">				 <form method="post" action="/_web/_search/api/search/new.rst?locale=zh_CN&request_locale=zh_CN&_p=YXM9MjQmdD0xMCZkPTc1OCZwPTImZj0xMzg3Jm09U04mfGJubkNvbHVtblZpcnR1YWxOYW1lPWFibSY_" name="form" id="searchform">
-					 <input class="top_search_input" type="text" name="keyword" id="s" value="" placeholder="">
-					 <input class="top_search_btn" name="submit" type="submit" id="bs" value="" />
-				 </form> </div>
-			<div id="nav">
-				<div class="nav_main_second" id="move">
-					<div id="secondList" class="nav_second_box">
-
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-
-	<div id="container">
-		<div class="leaf_right_up"></div>
-		<div class="left_menu">
-			<div class="left_menu_top"></div>
-			<div class="left_menu_inside">
-				<div class="container_left_title" id="getTitle" frag="窗口20" portletmode="simpleColumnAttri">
-					<span class="container_left_title_icon"></span>
-					<a class="container_left_title_word_01" name="oldHtml">教师名录</a>
-				</div>
-				<ul class="lm_first_list" id="check" frag="窗口21" portletmode="simpleColumnList">
-					
-					
-					<li class="lm_first_item parent" id="list">
-						<div class="lm_first_item_inside">
-							<span class="left_menu_minus" name="open_menu"></span>
-							<span class="left_menu_name">
-								<a title="按部门" class="" href="http://www.ise.neu.edu.cn/gyyxtgcyjs/list.htm">按部门</a>
-							</span>
-							<span class="left_menu_arrow"></span>
-						</div>
-					  
-						<ul class="lm_second_list" id="second" style="display: block;">
-						   
-							<li class="lm_second_item">
-								<div class="lm_second_item_inside">
-									<span class="left_menu_second_name">
-										<a title="智能技术与应用研究所" class="" href="/znjsyyyyjs/list.htm">智能技术与应用研究所</a>
-									</span>
-									<span class="left_menu_second_arrow"></span>
-								</div>
-							</li>
-						   
-							<li class="lm_second_item">
-								<div class="lm_second_item_inside">
-									<span class="left_menu_second_name">
-										<a title="智能系统研究所" class="" href="/znxtyjs/list.htm">智能系统研究所</a>
-									</span>
-									<span class="left_menu_second_arrow"></span>
-								</div>
-							</li>
-						   
-							<li class="lm_second_item">
-								<div class="lm_second_item_inside">
-									<span class="left_menu_second_name">
-										<a title="智能控制与安全研究所" class="" href="/znkzyaqyjs/list.htm">智能控制与安全研究所</a>
-									</span>
-									<span class="left_menu_second_arrow"></span>
-								</div>
-							</li>
-						   
-							<li class="lm_second_item">
-								<div class="lm_second_item_inside">
-									<span class="left_menu_second_name">
-										<a title="工业智能与优化研究所" class="" href="/gyrgznyyhyjs/list.htm">工业智能与优化研究所</a>
-									</span>
-									<span class="left_menu_second_arrow"></span>
-								</div>
-							</li>
-						   
-							<li class="lm_second_item">
-								<div class="lm_second_item_inside">
-									<span class="left_menu_second_name">
-										<a title="无人系统自主控制研究所" class="" href="/wrxtzzkzyjs/list.htm">无人系统自主控制研究所</a>
-									</span>
-									<span class="left_menu_second_arrow"></span>
-								</div>
-							</li>
-						   
-							<li class="lm_second_item">
-								<div class="lm_second_item_inside">
-									<span class="left_menu_second_name">
-										<a title="信息物理系统控制与安全..." class="" href="/xxwlxtkzyaqxyjs/list.htm">信息物理系统控制与安全...</a>
-									</span>
-									<span class="left_menu_second_arrow"></span>
-								</div>
-							</li>
-						   
-							<li class="lm_second_item">
-								<div class="lm_second_item_inside">
-									<span class="left_menu_second_name">
-										<a title="图像识别与机器智能研究..." class="" href="/txsbyjqznyjs/list.htm">图像识别与机器智能研究...</a>
-									</span>
-									<span class="left_menu_second_arrow"></span>
-								</div>
-							</li>
-						   
-							<li class="lm_second_item">
-								<div class="lm_second_item_inside">
-									<span class="left_menu_second_name">
-										<a title="机器学习与智能决策研究..." class="" href="/jqxxyznjcyjs/list.htm">机器学习与智能决策研究...</a>
-									</span>
-									<span class="left_menu_second_arrow"></span>
-								</div>
-							</li>
-						   
-							<li class="lm_second_item">
-								<div class="lm_second_item_inside">
-									<span class="left_menu_second_name">
-										<a title="数据智能与系统工程研究..." class="" href="/sjznyxtgcyjs/list.htm">数据智能与系统工程研究...</a>
-									</span>
-									<span class="left_menu_second_arrow"></span>
-								</div>
-							</li>
-						   
-							<li class="lm_second_item">
-								<div class="lm_second_item_inside">
-									<span class="left_menu_second_name">
-										<a title="深度学习与先进智能决策..." class="" href="/sdxxyxjznjcyjs/list.htm">深度学习与先进智能决策...</a>
-									</span>
-									<span class="left_menu_second_arrow"></span>
-								</div>
-							</li>
-						   
-							<li class="lm_second_item">
-								<div class="lm_second_item_inside">
-									<span class="left_menu_second_name">
-										<a title="智能感知与机器人研究所" class="" href="/zngzyjqryjs/list.htm">智能感知与机器人研究所</a>
-									</span>
-									<span class="left_menu_second_arrow"></span>
-								</div>
-							</li>
-						   
-							<li class="lm_second_item">
-								<div class="lm_second_item_inside">
-									<span class="left_menu_second_name">
-										<a title="智能仪表研究所" class="" href="/6026/list.htm">智能仪表研究所</a>
-									</span>
-									<span class="left_menu_second_arrow"></span>
-								</div>
-							</li>
-						   
-							<li class="lm_second_item">
-								<div class="lm_second_item_inside">
-									<span class="left_menu_second_name">
-										<a title="微纳传感与智能检测研究..." class="" href="/6027/list.htm">微纳传感与智能检测研究...</a>
-									</span>
-									<span class="left_menu_second_arrow"></span>
-								</div>
-							</li>
-						   
-							<li class="lm_second_item">
-								<div class="lm_second_item_inside">
-									<span class="left_menu_second_name">
-										<a title="智能光电检测与深度学习..." class="" href="/6028/list.htm">智能光电检测与深度学习...</a>
-									</span>
-									<span class="left_menu_second_arrow"></span>
-								</div>
-							</li>
-						   
-							<li class="lm_second_item">
-								<div class="lm_second_item_inside">
-									<span class="left_menu_second_name">
-										<a title="智能量子感知与光纤传感..." class="" href="/6029/list.htm">智能量子感知与光纤传感...</a>
-									</span>
-									<span class="left_menu_second_arrow"></span>
-								</div>
-							</li>
-						   
-							<li class="lm_second_item">
-								<div class="lm_second_item_inside">
-									<span class="left_menu_second_name">
-										<a title="电气自动化研究所" class="" href="/dqzdhyjs/list.htm">电气自动化研究所</a>
-									</span>
-									<span class="left_menu_second_arrow"></span>
-								</div>
-							</li>
-						   
-							<li class="lm_second_item">
-								<div class="lm_second_item_inside">
-									<span class="left_menu_second_name">
-										<a title="电工电子与智能技术研究..." class="" href="/6043/list.htm">电工电子与智能技术研究...</a>
-									</span>
-									<span class="left_menu_second_arrow"></span>
-								</div>
-							</li>
-						   
-							<li class="lm_second_item">
-								<div class="lm_second_item_inside">
-									<span class="left_menu_second_name">
-										<a title="智能科学与电气工程技术..." class="" href="/6044/list.htm">智能科学与电气工程技术...</a>
-									</span>
-									<span class="left_menu_second_arrow"></span>
-								</div>
-							</li>
-						   
-							<li class="lm_second_item">
-								<div class="lm_second_item_inside">
-									<span class="left_menu_second_name">
-										<a title="极限环境电子系统研究所" class="" href="/6058/list.htm">极限环境电子系统研究所</a>
-									</span>
-									<span class="left_menu_second_arrow"></span>
-								</div>
-							</li>
-						   
-							<li class="lm_second_item">
-								<div class="lm_second_item_inside">
-									<span class="left_menu_second_name">
-										<a title="智能光电子研究所" class="" href="/6059/list.htm">智能光电子研究所</a>
-									</span>
-									<span class="left_menu_second_arrow"></span>
-								</div>
-							</li>
-						   
-							<li class="lm_second_item">
-								<div class="lm_second_item_inside">
-									<span class="left_menu_second_name">
-										<a title="无线全连接智能建筑研究..." class="" href="/wxqljznjzyjs/list.htm">无线全连接智能建筑研究...</a>
-									</span>
-									<span class="left_menu_second_arrow"></span>
-								</div>
-							</li>
-						   
-							<li class="lm_second_item">
-								<div class="lm_second_item_inside">
-									<span class="left_menu_second_name">
-										<a title="工业智能与系统优化国家..." class="" href="/gyyxtgcyjs/list.htm">工业智能与系统优化国家...</a>
-									</span>
-									<span class="left_menu_second_arrow"></span>
-								</div>
-							</li>
-						   
-							<li class="lm_second_item">
-								<div class="lm_second_item_inside">
-									<span class="left_menu_second_name">
-										<a title="流程工业综合自动化国家..." class="" href="/lcgyzhzdhgjzdsys/list.htm">流程工业综合自动化国家...</a>
-									</span>
-									<span class="left_menu_second_arrow"></span>
-								</div>
-							</li>
-						   
-						</ul>
-					  
-					</li>
-					
-					<li class="lm_first_item " id="list">
-						<div class="lm_first_item_inside">
-							<span class="left_menu_minus" name="open_menu"></span>
-							<span class="left_menu_name">
-								<a title="按职称" class="" href="http://www.ise.neu.edu.cn/js/list.htm">按职称</a>
-							</span>
-							<span class="left_menu_arrow"></span>
-						</div>
-					 
-					</li>
-					
-					
-				</ul>
-				<div class="container_left_title">
-					<span class="container_left_title_icon"></span>
-					<span class="container_left_title_word_01">联系我们</span>
-					<span class="container_left_title_word_02">CONNECT US</span>
-				</div>
-				<ul class="connect_mes">
-					<li class="connect_mes_list">
-						<span class="graybold">电话：</span>
-						<span>024-83687760</span>
-					</li>
-					
-					<li class="connect_mes_list">
-						<span class="graybold">通讯地址：</span>
-						<span>辽宁省沈阳市和平区文化路3号巷11号东北大学135信箱</span>
-					</li>
-				</ul>
-			</div>
-		</div>
-
-		<script type="text/javascript">
-			$(function () {
-
-				$("ul#check").find("div.lm_first_item_inside").each(function () {
-					$(this).mouseover(function () {
-						$(this).addClass("lm_first_item_inside lm_first_select");
-					}).mouseout(function () {
-						$(this).removeClass("lm_first_select");
-					});
-
-				});
-				if ($("ul#second").length > 0) {
-					$("ul#second").attr("style", "display:block");
-					$("ul#second").siblings("div").find("span.left_menu_zero").attr("name", "open_menu").attr("class", "left_menu_minus");
-					$("span[name='open_menu']").each(function () {
-						$(this).parents().siblings("ul .lm_second_list").hide().siblings("div").find("span.left_menu_minus").attr("class", "left_menu_plus");
-						$(this).toggle(function () {
-							$(this).parents().siblings("ul .lm_second_list").show(500).siblings("div").find("span.left_menu_plus").attr("class", "left_menu_minus");
-							;
-
-						}, function () {
-							$(this).parents().siblings("ul .lm_second_list").hide(500).siblings("div").find("span.left_menu_minus").attr("class", "left_menu_plus");
-							;
-						});
-					});
-					$("span[id='left_current']").each(function () {
-						$(this).parents().siblings("ul .lm_second_list").show().siblings("div").find("span.left_menu_plus").attr("class", "left_menu_minus");
-						$(this).toggle(function () {
-							$(this).parents().siblings("ul .lm_second_list").hide(500).siblings("div").find("span.left_menu_minus").attr("class", "left_menu_plus");
-							;
-						}, function () {
-							$(this).parents().siblings("ul .lm_second_list").show(500).siblings("div").find("span.left_menu_plus").attr("class", "left_menu_minus");
-							;
-
-						});
-					});
-				}else{
-
-				};
-				$("ul#second>li").find("div").each(function () {
-
-					$(this).mouseover(function () {
-						$(this).attr("class", "lm_second_item_inside lm_second_select");
-					}).mouseout(function () {
-						$(this).attr("class", "lm_second_item_inside");
-					});
-
-				});
-				$("ul#check").find(".lm_first_item").each(function(){
-		                 var ts = $(this);
-		                 if(ts.find(".lm_second_list").length < 0){
-			            
-		               }else{
-						ts.find(".left_menu_minus").addClass("none");
-					   }
-	             });
-			});
-
-		</script>
-		<!-- 右边内容-->
-		<div class="container_right">
-			<div class="container_right_header" frag="窗口22" portletmode="simpleColumnAttri">
-				<span>您现在所在的位置：</span><a href="/main.htm" target="_self">首页</a><span class='possplit'>&nbsp;&nbsp;</span><a href="http://www.ise.neu.edu.cn/gyyxtgcyjs/list.htm" target="_self">教师名录</a><span class='possplit'>&nbsp;&nbsp;</span><a href="http://www.ise.neu.edu.cn/gyyxtgcyjs/list.htm" target="_self">按部门</a><span class='possplit'>&nbsp;&nbsp;</span><a href="/sjznyxtgcyjs/list.htm" target="_self">数据智能与系统工程研究所</a><span class='possplit'>&nbsp;&nbsp;</span><a href="/5989/list.htm" target="_self">教授</a>
-			</div>
-			<div class="news_billboard_box">
-				<div class="news_billboard_content padding_bottom_40">
-					
-
-					<ul class="news_billboard_list_box">
-						
-                        
-                        
-                        
-                        
-                        
-                        
-                        <div class="register_tab_bar">
-					<div class="tab_b_1">
-						<div id="blog_tab_css" class="tab_inside_box">
-							<span class="arrow_left arrow_left_blue" style="" href="javascript:void(0);"></span>
-							<a href="http://www.ise.neu.edu.cn/gyyxtgcyjs/list.htm" class="checked" id="b">按部门</a>
-							<a href="http://www.ise.neu.edu.cn/js/list.htm" class="" id="z">按职称</a>
-						</div>
-					
-					</div>
-				</div>
-                
-                
-                
-                
-                        
-                        
-                        
-                        
-                        
-                        
-                        <div name="showFX" id="abm" style="display: block;">
-					<div class="register_box_05" id="checkCategory" frag="窗口24" portletmode="simpleColumnList">
-					  
-					   
-						 
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="智能技术与应用研究所" href="/znjsyyyyjs/list.htm" class=" register_link_03 ">智能技术与应用研究所</a>
-						</span>
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="智能系统研究所" href="/znxtyjs/list.htm" class=" register_link_03 ">智能系统研究所</a>
-						</span>
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="智能控制与安全研究所" href="/znkzyaqyjs/list.htm" class=" register_link_03 ">智能控制与安全研究所</a>
-						</span>
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="工业智能与优化研究所" href="/gyrgznyyhyjs/list.htm" class=" register_link_03 ">工业智能与优化研究所</a>
-						</span>
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="无人系统自主控制研究所" href="/wrxtzzkzyjs/list.htm" class=" register_link_03 ">无人系统自主控制研究所</a>
-						</span>
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="信息物理系统控制与安全性研究所" href="/xxwlxtkzyaqxyjs/list.htm" class=" register_link_03 ">信息物理系统控制与安全性研究所</a>
-						</span>
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="图像识别与机器智能研究所" href="/txsbyjqznyjs/list.htm" class=" register_link_03 ">图像识别与机器智能研究所</a>
-						</span>
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="机器学习与智能决策研究所" href="/jqxxyznjcyjs/list.htm" class=" register_link_03 ">机器学习与智能决策研究所</a>
-						</span>
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="数据智能与系统工程研究所" href="/sjznyxtgcyjs/list.htm" class=" register_link_03 selected">数据智能与系统工程研究所</a>
-						</span>
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="深度学习与先进智能决策研究所" href="/sdxxyxjznjcyjs/list.htm" class=" register_link_03 ">深度学习与先进智能决策研究所</a>
-						</span>
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="智能感知与机器人研究所" href="/zngzyjqryjs/list.htm" class=" register_link_03 ">智能感知与机器人研究所</a>
-						</span>
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="智能仪表研究所" href="/6026/list.htm" class=" register_link_03 ">智能仪表研究所</a>
-						</span>
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="微纳传感与智能检测研究所" href="/6027/list.htm" class=" register_link_03 ">微纳传感与智能检测研究所</a>
-						</span>
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="智能光电检测与深度学习研究所" href="/6028/list.htm" class=" register_link_03 ">智能光电检测与深度学习研究所</a>
-						</span>
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="智能量子感知与光纤传感技术研究..." href="/6029/list.htm" class=" register_link_03 ">智能量子感知与光纤传感技术研究...</a>
-						</span>
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="电气自动化研究所" href="/dqzdhyjs/list.htm" class=" register_link_03 ">电气自动化研究所</a>
-						</span>
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="电工电子与智能技术研究所" href="/6043/list.htm" class=" register_link_03 ">电工电子与智能技术研究所</a>
-						</span>
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="智能科学与电气工程技术研究所" href="/6044/list.htm" class=" register_link_03 ">智能科学与电气工程技术研究所</a>
-						</span>
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="极限环境电子系统研究所" href="/6058/list.htm" class=" register_link_03 ">极限环境电子系统研究所</a>
-						</span>
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="智能光电子研究所" href="/6059/list.htm" class=" register_link_03 ">智能光电子研究所</a>
-						</span>
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="无线全连接智能建筑研究所" href="/wxqljznjzyjs/list.htm" class=" register_link_03 ">无线全连接智能建筑研究所</a>
-						</span>
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="工业智能与系统优化国家级前沿科..." href="/gyyxtgcyjs/list.htm" class=" register_link_03 ">工业智能与系统优化国家级前沿科...</a>
-						</span>
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="流程工业综合自动化国家重点实验..." href="/lcgyzhzdhgjzdsys/list.htm" class=" register_link_03 ">流程工业综合自动化国家重点实验...</a>
-						</span>
-						 
-						
-					   
-						
-					   
-					  
-					</div>
-					
-                    
-                   
-                    
-                    
-                    
-                    
-                    
-                    				</div>
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        <div name="showZC" id="azc" style="display: none;">
-					<div class="register_box_05" id="checkCategory" frag="窗口32" portletmode="simpleColumnList">
-					  
-					   
-						 
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="智能技术与应用研究所" href="/znjsyyyyjs/list.htm" class=" register_link_03 ">智能技术与应用研究所</a>
-						</span>
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="智能系统研究所" href="/znxtyjs/list.htm" class=" register_link_03 ">智能系统研究所</a>
-						</span>
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="智能控制与安全研究所" href="/znkzyaqyjs/list.htm" class=" register_link_03 ">智能控制与安全研究所</a>
-						</span>
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="工业智能与优化研究所" href="/gyrgznyyhyjs/list.htm" class=" register_link_03 ">工业智能与优化研究所</a>
-						</span>
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="无人系统自主控制研究所" href="/wrxtzzkzyjs/list.htm" class=" register_link_03 ">无人系统自主控制研究所</a>
-						</span>
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="信息物理系统控制与安全性研究所" href="/xxwlxtkzyaqxyjs/list.htm" class=" register_link_03 ">信息物理系统控制与安全性研究所</a>
-						</span>
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="图像识别与机器智能研究所" href="/txsbyjqznyjs/list.htm" class=" register_link_03 ">图像识别与机器智能研究所</a>
-						</span>
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="机器学习与智能决策研究所" href="/jqxxyznjcyjs/list.htm" class=" register_link_03 ">机器学习与智能决策研究所</a>
-						</span>
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="数据智能与系统工程研究所" href="/sjznyxtgcyjs/list.htm" class=" register_link_03 selected">数据智能与系统工程研究所</a>
-						</span>
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="深度学习与先进智能决策研究所" href="/sdxxyxjznjcyjs/list.htm" class=" register_link_03 ">深度学习与先进智能决策研究所</a>
-						</span>
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="智能感知与机器人研究所" href="/zngzyjqryjs/list.htm" class=" register_link_03 ">智能感知与机器人研究所</a>
-						</span>
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="智能仪表研究所" href="/6026/list.htm" class=" register_link_03 ">智能仪表研究所</a>
-						</span>
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="微纳传感与智能检测研究所" href="/6027/list.htm" class=" register_link_03 ">微纳传感与智能检测研究所</a>
-						</span>
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="智能光电检测与深度学习研究所" href="/6028/list.htm" class=" register_link_03 ">智能光电检测与深度学习研究所</a>
-						</span>
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="智能量子感知与光纤传感技术研究所" href="/6029/list.htm" class=" register_link_03 ">智能量子感知与光纤传感技术研究所</a>
-						</span>
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="电气自动化研究所" href="/dqzdhyjs/list.htm" class=" register_link_03 ">电气自动化研究所</a>
-						</span>
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="电工电子与智能技术研究所" href="/6043/list.htm" class=" register_link_03 ">电工电子与智能技术研究所</a>
-						</span>
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="智能科学与电气工程技术研究所" href="/6044/list.htm" class=" register_link_03 ">智能科学与电气工程技术研究所</a>
-						</span>
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="极限环境电子系统研究所" href="/6058/list.htm" class=" register_link_03 ">极限环境电子系统研究所</a>
-						</span>
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="智能光电子研究所" href="/6059/list.htm" class=" register_link_03 ">智能光电子研究所</a>
-						</span>
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="无线全连接智能建筑研究所" href="/wxqljznjzyjs/list.htm" class=" register_link_03 ">无线全连接智能建筑研究所</a>
-						</span>
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="工业智能与系统优化国家级前沿科学中心" href="/gyyxtgcyjs/list.htm" class=" register_link_03 ">工业智能与系统优化国家级前沿科学中心</a>
-						</span>
-						 
-						<span class="register_box_06" showcategoryid="382">
-							<a title="流程工业综合自动化国家重点实验室" href="/lcgyzhzdhgjzdsys/list.htm" class=" register_link_03 ">流程工业综合自动化国家重点实验室</a>
-						</span>
-						 
-						
-					   
-						
-					   
-					  
-					</div>
-									</div>
-                        
-                        
-                        <div class="column-news-con" frag="面板9">
-                    <div class="column-news-list clearfix" frag="窗口9" portletmode="simpleList">
-                        <div id="wp_news_w9"> 
- 
-<ul class="wp_subcolumn_list"> 
-     <li class="wp_sublist sublist-1"> 
-         <h3 class="sublist_title"> 
-             <a href="/5989/list.htm" title="教授" childColumnId="5989"><span class="subcolumn-name">教授</span></a> 
-             <a class="morelink" href="/5989/list.htm" target="_blank" title="浏览更多"><span class="moretext"><img src="/_js/_portletPlugs/simpleNews/css/icon_more_3.gif" /></span></a> 
-         </h3> 
-          
-<ul class="wp_article_list"> 
-      
-     <li class="list_item i1"> 
-         <div class="fields pr_fields"> 
-             <span class='Article_Index'>1</span> 
-             <span class='Article_Title'><a href='/2019/0109/c5989a8236/page.htm' target='_blank' title='黄敏'>黄敏</a></span> 
-         </div> 
-         <div class="fields ex_fields"> 
-              
-         </div> 
-     </li> 
-      
-     <li class="list_item i2"> 
-         <div class="fields pr_fields"> 
-             <span class='Article_Index'>2</span> 
-             <span class='Article_Title'><a href='/2023/0807/c5989a234032/page.htm' target='_blank' title='王俊伟'>王俊伟</a></span> 
-         </div> 
-         <div class="fields ex_fields"> 
-              
-         </div> 
-     </li> 
-      
-     <li class="list_item i3"> 
-         <div class="fields pr_fields"> 
-             <span class='Article_Index'>3</span> 
-             <span class='Article_Title'><a href='/2019/0109/c5989a8185/page.htm' target='_blank' title='佟国峰'>佟国峰</a></span> 
-         </div> 
-         <div class="fields ex_fields"> 
-              
-         </div> 
-     </li> 
-      
-     <li class="list_item i4"> 
-         <div class="fields pr_fields"> 
-             <span class='Article_Index'>4</span> 
-             <span class='Article_Title'><a href='/2019/0109/c5989a8231/page.htm' target='_blank' title='王洪峰'>王洪峰</a></span> 
-         </div> 
-         <div class="fields ex_fields"> 
-              
-         </div> 
-     </li> 
-      
-</ul> 
-     </li> 
-</ul> 
-</div> 
-<div id="wp_news_w9"> 
- 
-<ul class="wp_subcolumn_list"> 
-     <li class="wp_sublist sublist-2"> 
-         <h3 class="sublist_title"> 
-             <a href="/5990/list.htm" title="副教授" childColumnId="5990"><span class="subcolumn-name">副教授</span></a> 
-             <a class="morelink" href="/5990/list.htm" target="_blank" title="浏览更多"><span class="moretext"><img src="/_js/_portletPlugs/simpleNews/css/icon_more_3.gif" /></span></a> 
-         </h3> 
-          
-<ul class="wp_article_list"> 
-      
-     <li class="list_item i1"> 
-         <div class="fields pr_fields"> 
-             <span class='Article_Index'>1</span> 
-             <span class='Article_Title'><a href='/2025/1201/c5990a296415/page.htm' target='_blank' title='于昊'>于昊</a></span> 
-         </div> 
-         <div class="fields ex_fields"> 
-              
-         </div> 
-     </li> 
-      
-     <li class="list_item i2"> 
-         <div class="fields pr_fields"> 
-             <span class='Article_Index'>2</span> 
-             <span class='Article_Title'><a href='/2019/0109/c5990a8240/page.htm' target='_blank' title='王庆'>王庆</a></span> 
-         </div> 
-         <div class="fields ex_fields"> 
-              
-         </div> 
-     </li> 
-      
-     <li class="list_item i3"> 
-         <div class="fields pr_fields"> 
-             <span class='Article_Index'>3</span> 
-             <span class='Article_Title'><a href='/2019/0109/c5990a8242/page.htm' target='_blank' title='胡清河'>胡清河</a></span> 
-         </div> 
-         <div class="fields ex_fields"> 
-              
-         </div> 
-     </li> 
-      
-</ul> 
-     </li> 
-</ul> 
-</div> 
-<div id="wp_news_w9"> 
- 
-<ul class="wp_subcolumn_list"> 
-     <li class="wp_sublist sublist-3"> 
-         <h3 class="sublist_title"> 
-             <a href="/5991/list.htm" title="讲师" childColumnId="5991"><span class="subcolumn-name">讲师</span></a> 
-             <a class="morelink" href="/5991/list.htm" target="_blank" title="浏览更多"><span class="moretext"><img src="/_js/_portletPlugs/simpleNews/css/icon_more_3.gif" /></span></a> 
-         </h3> 
-          
-<ul class="wp_article_list"> 
-      
-     <li class="list_item i1"> 
-         <div class="fields pr_fields"> 
-             <span class='Article_Index'>1</span> 
-             <span class='Article_Title'><a href='/2023/0224/c5991a225815/page.htm' target='_blank' title='宋扬'>宋扬</a></span> 
-         </div> 
-         <div class="fields ex_fields"> 
-              
-         </div> 
-     </li> 
-      
-     <li class="list_item i2"> 
-         <div class="fields pr_fields"> 
-             <span class='Article_Index'>2</span> 
-             <span class='Article_Title'><a href='http://www.ise.neu.edu.cn/2019/0419/c1426a120461/page.htm' target='_blank' title='王大志'>王大志</a></span> 
-         </div> 
-         <div class="fields ex_fields"> 
-              
-         </div> 
-     </li> 
-      
-</ul> 
-     </li> 
-</ul> 
-</div> 
-
-                    </div>
-                </div>
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-					</ul>
-
-				</div>
-
-
-			</div>
-
-
-
-		</div>
-	</div>
-	<div id="footer">
-		<div class="dd">
-			<div style="float:left; width:700px; text-align:center; padding-top:15px; line-height:24px;">东北大学信息科学与工程学院 版权所有
-				<br> 2015-2016 College of Information Science and Engineering</div>
-			<div style="float:right">
-				<img src="/_upload/tpl/00/0a/10/template10/htmlRes/new_erweima.png" width="60" height="60">
-				<br>官方微信</div>
-		</div>
-	</div>
-</body>
-<script>
-	$(function(){
-		$(".possplit").html("  --  ");
-	 });
-	 $(function () {
-	 $(".parent").each(function(){
-	   $(this).find(".lm_second_list").attr("style","display:block");
-	   $(this).find(".left_menu_plus").addClass("left_menu_minus").removeClass("left_menu_plus");
-	 });
-  });
-   </script>
-   
-   <!--  选项卡切换-->
-   <!--script>
-   var aaa = document.getElementById("blog_tab_css");
-    var abm = document.getElementById("abm");
-	 var azc = document.getElementById("azc");
-   var bbb =aaa.getElementsByTagName("a");
-   console.log(bbb[0]);
-  // bbb[0].style.display="none";
-   
-   for (var i=0;i<bbb.length;i++){
-	   bbb[i].setAttribute("name",i);
-	   
-	   
-	   bbb[i].onclick=function(){
-		   console.log(this.name)
-		  // console.log(this.getAttribute("id"))
-		  
-		 
-		  
-		   var k=this.name;
-		 for (var j=0;j<bbb.length;j++){
-			 
-			 if(k==j){
-				  bbb[j].setAttribute("class", "checked")
-				 }else{
-					 
-					 bbb[j].setAttribute("class", "")
-					 
-					 }
-					 
-					 
-					  if(k==0){
-			  abm.style.display="block";
-			  azc.style.display="none";
-			  
-			  }
-		   if(k==1){
-			  abm.style.display="none";
-			  azc.style.display="block";
-			  
-			  }
-			 
-			 }
-		   
-		   
-		   }
-	   
-	   }
-	   
-	   
-	   
-	   
-   
-   
-    </script-->
-   
-</html>
+<!DOCTYPE html>
+
+<!--[if IE 6]>
+
+<html id="ie6" lang="zh-CN">
+
+<![endif]-->
+
+<!--[if IE 7]>
+
+<html id="ie7" lang="zh-CN">
+
+<![endif]-->
+
+<!--[if IE 8]>
+
+<html id="ie8" lang="zh-CN">
+
+<![endif]-->
+
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+
+<html lang="zh-CN">
+
+<!--<![endif]-->
+
+
+
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+
+	<meta name="renderer" content="webkit|ie-comp|ie-stand" />
+
+
+
+	
+
+<link type="text/css" href="/_css/_system/system.css" rel="stylesheet"/>
+
+<link type="text/css" href="/_upload/site/1/style/1/1.css" rel="stylesheet"/>
+
+<link type="text/css" href="/_upload/site/00/18/24/style/9/9.css" rel="stylesheet"/>
+
+<link type="text/css" href="/_js/_portletPlugs/sudyNavi/css/sudyNav.css" rel="stylesheet" />
+
+<link type="text/css" href="/_js/_portletPlugs/datepicker/css/datepicker.css" rel="stylesheet" />
+
+<link type="text/css" href="/_js/_portletPlugs/simpleNews/css/simplenews.css" rel="stylesheet" />
+
+
+
+<script language="javascript" src="/_js/jquery.min.js" sudy-wp-context="" sudy-wp-siteId="24"></script>
+
+<script language="javascript" src="/_js/jquery.sudy.wp.visitcount.js"></script>
+
+<script type="text/javascript" src="/_js/_portletPlugs/sudyNavi/jquery.sudyNav.js"></script>
+
+<script type="text/javascript" src="/_js/_portletPlugs/datepicker/js/jquery.datepicker.js"></script>
+
+<script type="text/javascript" src="/_js/_portletPlugs/datepicker/js/datepicker_lang_HK.js"></script>
+
+<link id="css1" href="/_upload/tpl/00/0a/10/template10/htmlRes/da_comment.css" media="screen" rel="stylesheet" type="text/css" />
+
+	<link rel="stylesheet" href="/_upload/tpl/00/0a/10/template10/htmlRes/style_01.css" type="text/css" />
+
+	<title>教授</title>
+
+	<meta name="author" content="http://www.xxxxxx.cn">
+
+	<meta name="keywords" content="东北大学信息学院">
+
+	<meta name="description" content="东北大学信息学院">
+
+	
+
+	<script type="text/javascript" src="/_upload/tpl/00/0a/10/template10/htmlRes/da_nav.js"></script>
+
+	<script type="text/javascript" src="/_upload/tpl/00/0a/10/template10/htmlRes/da_scroll.js"></script>
+
+	<script type="text/javascript">
+
+		$(function () {
+
+			$("div.list_lh").myScroll({
+
+				speed: 50, //数值越大，速度越慢
+
+				rowHeight: 28 //li的高度
+
+			});
+
+		});
+
+		$(function () {
+
+			var width = window.screen.width;
+
+			document.cookie = "screen=" + width;
+
+			if (width <= 1366) {
+
+				$("#css2").attr("href", "");
+
+			}
+
+
+
+		})
+
+		function addFavorite() {
+
+			return this.click(function () {
+
+				var obj = $(this);
+
+				if ($.browser.msie) {
+
+					window.external.addFavorite(h, l);
+
+				} else if (jQuery.browser.mozilla || jQuery.browser.opera) {
+
+					obj.attr("rel", "sidebar");
+
+					obj.attr("title", '东大');
+
+					obj.attr("href", window.location.href);
+
+				} else {
+
+					alert("请使用Ctrl+D将本页加入收藏夹！");
+
+				}
+
+			});
+
+		};
+
+	</script>
+
+</head>
+
+
+
+<body class="list"> 
+
+	<div id="header">
+
+		<div class="header_main">
+
+			<div class="header_logo">
+
+				<img src="/_upload/tpl/00/0a/10/template10/htmlRes/header_logo.png">
+
+			</div>
+
+			<div class="header_quick_link">
+
+                <a href="http://www.ise.neu.edu.cn/YW/main.htm" target="_blank">English</a>
+
+                <span>|</span>
+
+					<a href="http://www.ise.neu.edu.cn/306/list.htm">联系我们</a>
+
+					<span>|</span>
+
+					<a href="javascript:void(0)" id="" onClick="addFavorite();return false;" title="东大" rel="sidebar">加入收藏</a>
+
+				</div>
+
+			<div class="db_quick_box" id="navigation">
+
+				<a href="javascript:;" class="quick_nav_btn">快速导航</a>
+
+				<ul class="sub_menu" style="display:none" id="showNav" frag="窗口12"></ul>
+
+			</div>
+
+		</div>
+
+		<div class="nav_main">
+
+			<ul class="menu" frag="窗口1">
+
+				
+
+				
+
+				<li class="menu">
+
+					<a href="http://www.ise.neu.edu.cn/main.htm" class="menu_link">首页</a>
+
+					
+
+				</li>
+
+				<li class="nav_btn_divide_line i1"></li>
+
+				
+
+				<li class="menu">
+
+					<a href="/148/list.htm" class="menu_link">学院概况</a>
+
+					
+
+					<div class="nav_second_box" style="display:none">
+
+						
+
+						<a href="/191/list.htm">学院简介</a>
+
+						
+
+						<a href="/192/list.htm">学院领导</a>
+
+						
+
+						<a href="/193/list.htm">学科简介</a>
+
+						
+
+						<a href="/194/list.htm">组织机构</a>
+
+						
+
+						<a href="http://www.ise.neu.edu.cn/xxysz/">历史沿革</a>
+
+						
+
+					</div>
+
+					
+
+				</li>
+
+				<li class="nav_btn_divide_line i2"></li>
+
+				
+
+				<li class="menu">
+
+					<a href="/149/list.htm" class="menu_link">科学研究</a>
+
+					
+
+					<div class="nav_second_box" style="display:none">
+
+						
+
+						<a href="/198/list.htm">特色科研团队</a>
+
+						
+
+						<a href="/199/list.htm">学科方向</a>
+
+						
+
+						<a href="/200/list.htm">科研成果</a>
+
+						
+
+						<a href="/201/list.htm">学科平台</a>
+
+						
+
+					</div>
+
+					
+
+				</li>
+
+				<li class="nav_btn_divide_line i3"></li>
+
+				
+
+				<li class="menu">
+
+					<a href="/150/list.htm" class="menu_link">师资队伍</a>
+
+					
+
+					<div class="nav_second_box" style="display:none">
+
+						
+
+						<a href="/209/list.htm">杰出人才</a>
+
+						
+
+						<a href="http://www.ise.neu.edu.cn/gyyxtgcyjs/list.htm">教师名录</a>
+
+						
+
+						<a href="/211/list.htm">招聘英才</a>
+
+						
+
+					</div>
+
+					
+
+				</li>
+
+				<li class="nav_btn_divide_line i4"></li>
+
+				
+
+				<li class="menu">
+
+					<a href="/151/list.htm" class="menu_link">人才培养</a>
+
+					
+
+					<div class="nav_second_box" style="display:none">
+
+						
+
+						<a href="/220/list.htm">本科生培养</a>
+
+						
+
+						<a href="/221/list.htm">研究生培养</a>
+
+						
+
+					</div>
+
+					
+
+				</li>
+
+				<li class="nav_btn_divide_line i5"></li>
+
+				
+
+				<li class="menu">
+
+					<a href="/152/list.htm" class="menu_link">党群之窗</a>
+
+					
+
+					<div class="nav_second_box" style="display:none">
+
+						
+
+						<a href="/259/list.htm">组织机构</a>
+
+						
+
+						<a href="/262/list.htm">文化建设</a>
+
+						
+
+						<a href="/263/list.htm">工会组织</a>
+
+						
+
+					</div>
+
+					
+
+				</li>
+
+				<li class="nav_btn_divide_line i6"></li>
+
+				
+
+				<li class="menu">
+
+					<a href="/153/list.htm" class="menu_link">学生活动</a>
+
+					
+
+				</li>
+
+				<li class="nav_btn_divide_line i7"></li>
+
+				
+
+				<li class="menu">
+
+					<a href="/154/list.htm" class="menu_link">国际交流</a>
+
+					
+
+					<div class="nav_second_box" style="display:none">
+
+						
+
+						<a href="/284/list.htm">留学生政策</a>
+
+						
+
+						<a href="/285/list.htm">学生出国(境)</a>
+
+						
+
+					</div>
+
+					
+
+				</li>
+
+				<li class="nav_btn_divide_line i8"></li>
+
+				
+
+				<li class="menu">
+
+					<a href="http://kzyjc.alljournals.cn/kzyjc/home" class="menu_link">两刊一会</a>
+
+					
+
+				</li>
+
+				<li class="nav_btn_divide_line i9"></li>
+
+				
+
+				<li class="menu">
+
+					<a href="/155/list.htm" class="menu_link">服务指南</a>
+
+					
+
+					<div class="nav_second_box" style="display:none">
+
+						
+
+						<a href="/304/list.htm">规章制度</a>
+
+						
+
+						<a href="/305/list.htm">办事流程</a>
+
+						
+
+						<a href="/306/list.htm">联系我们</a>
+
+						
+
+					</div>
+
+					
+
+				</li>
+
+				<li class="nav_btn_divide_line i10"></li>
+
+				
+
+				
+
+			</ul>
+
+			<div class="top_search_box" id="searchBox" frag="窗口2">				 <form method="post" action="/_web/_search/api/search/new.rst?locale=zh_CN&request_locale=zh_CN&_p=YXM9MjQmdD0xMCZkPTc1OCZwPTImZj0xMzg3Jm09U04mfGJubkNvbHVtblZpcnR1YWxOYW1lPWFibSY_" name="form" id="searchform">
+
+					 <input class="top_search_input" type="text" name="keyword" id="s" value="" placeholder="">
+
+					 <input class="top_search_btn" name="submit" type="submit" id="bs" value="" />
+
+				 </form> </div>
+
+			<div id="nav">
+
+				<div class="nav_main_second" id="move">
+
+					<div id="secondList" class="nav_second_box">
+
+
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+	<div id="container">
+
+		<div class="leaf_right_up"></div>
+
+		<div class="left_menu">
+
+			<div class="left_menu_top"></div>
+
+			<div class="left_menu_inside">
+
+				<div class="container_left_title" id="getTitle" frag="窗口20" portletmode="simpleColumnAttri">
+
+					<span class="container_left_title_icon"></span>
+
+					<a class="container_left_title_word_01" name="oldHtml">教师名录</a>
+
+				</div>
+
+				<ul class="lm_first_list" id="check" frag="窗口21" portletmode="simpleColumnList">
+
+					
+
+					
+
+					<li class="lm_first_item parent" id="list">
+
+						<div class="lm_first_item_inside">
+
+							<span class="left_menu_minus" name="open_menu"></span>
+
+							<span class="left_menu_name">
+
+								<a title="按部门" class="" href="http://www.ise.neu.edu.cn/gyyxtgcyjs/list.htm">按部门</a>
+
+							</span>
+
+							<span class="left_menu_arrow"></span>
+
+						</div>
+
+					  
+
+						<ul class="lm_second_list" id="second" style="display: block;">
+
+						   
+
+							<li class="lm_second_item">
+
+								<div class="lm_second_item_inside">
+
+									<span class="left_menu_second_name">
+
+										<a title="智能技术与应用研究所" class="" href="/znjsyyyyjs/list.htm">智能技术与应用研究所</a>
+
+									</span>
+
+									<span class="left_menu_second_arrow"></span>
+
+								</div>
+
+							</li>
+
+						   
+
+							<li class="lm_second_item">
+
+								<div class="lm_second_item_inside">
+
+									<span class="left_menu_second_name">
+
+										<a title="智能系统研究所" class="" href="/znxtyjs/list.htm">智能系统研究所</a>
+
+									</span>
+
+									<span class="left_menu_second_arrow"></span>
+
+								</div>
+
+							</li>
+
+						   
+
+							<li class="lm_second_item">
+
+								<div class="lm_second_item_inside">
+
+									<span class="left_menu_second_name">
+
+										<a title="智能控制与安全研究所" class="" href="/znkzyaqyjs/list.htm">智能控制与安全研究所</a>
+
+									</span>
+
+									<span class="left_menu_second_arrow"></span>
+
+								</div>
+
+							</li>
+
+						   
+
+							<li class="lm_second_item">
+
+								<div class="lm_second_item_inside">
+
+									<span class="left_menu_second_name">
+
+										<a title="工业智能与优化研究所" class="" href="/gyrgznyyhyjs/list.htm">工业智能与优化研究所</a>
+
+									</span>
+
+									<span class="left_menu_second_arrow"></span>
+
+								</div>
+
+							</li>
+
+						   
+
+							<li class="lm_second_item">
+
+								<div class="lm_second_item_inside">
+
+									<span class="left_menu_second_name">
+
+										<a title="无人系统自主控制研究所" class="" href="/wrxtzzkzyjs/list.htm">无人系统自主控制研究所</a>
+
+									</span>
+
+									<span class="left_menu_second_arrow"></span>
+
+								</div>
+
+							</li>
+
+						   
+
+							<li class="lm_second_item">
+
+								<div class="lm_second_item_inside">
+
+									<span class="left_menu_second_name">
+
+										<a title="信息物理系统控制与安全..." class="" href="/xxwlxtkzyaqxyjs/list.htm">信息物理系统控制与安全...</a>
+
+									</span>
+
+									<span class="left_menu_second_arrow"></span>
+
+								</div>
+
+							</li>
+
+						   
+
+							<li class="lm_second_item">
+
+								<div class="lm_second_item_inside">
+
+									<span class="left_menu_second_name">
+
+										<a title="图像识别与机器智能研究..." class="" href="/txsbyjqznyjs/list.htm">图像识别与机器智能研究...</a>
+
+									</span>
+
+									<span class="left_menu_second_arrow"></span>
+
+								</div>
+
+							</li>
+
+						   
+
+							<li class="lm_second_item">
+
+								<div class="lm_second_item_inside">
+
+									<span class="left_menu_second_name">
+
+										<a title="机器学习与智能决策研究..." class="" href="/jqxxyznjcyjs/list.htm">机器学习与智能决策研究...</a>
+
+									</span>
+
+									<span class="left_menu_second_arrow"></span>
+
+								</div>
+
+							</li>
+
+						   
+
+							<li class="lm_second_item">
+
+								<div class="lm_second_item_inside">
+
+									<span class="left_menu_second_name">
+
+										<a title="数据智能与系统工程研究..." class="" href="/sjznyxtgcyjs/list.htm">数据智能与系统工程研究...</a>
+
+									</span>
+
+									<span class="left_menu_second_arrow"></span>
+
+								</div>
+
+							</li>
+
+						   
+
+							<li class="lm_second_item">
+
+								<div class="lm_second_item_inside">
+
+									<span class="left_menu_second_name">
+
+										<a title="深度学习与先进智能决策..." class="" href="/sdxxyxjznjcyjs/list.htm">深度学习与先进智能决策...</a>
+
+									</span>
+
+									<span class="left_menu_second_arrow"></span>
+
+								</div>
+
+							</li>
+
+						   
+
+							<li class="lm_second_item">
+
+								<div class="lm_second_item_inside">
+
+									<span class="left_menu_second_name">
+
+										<a title="智能感知与机器人研究所" class="" href="/zngzyjqryjs/list.htm">智能感知与机器人研究所</a>
+
+									</span>
+
+									<span class="left_menu_second_arrow"></span>
+
+								</div>
+
+							</li>
+
+						   
+
+							<li class="lm_second_item">
+
+								<div class="lm_second_item_inside">
+
+									<span class="left_menu_second_name">
+
+										<a title="智能仪表研究所" class="" href="/6026/list.htm">智能仪表研究所</a>
+
+									</span>
+
+									<span class="left_menu_second_arrow"></span>
+
+								</div>
+
+							</li>
+
+						   
+
+							<li class="lm_second_item">
+
+								<div class="lm_second_item_inside">
+
+									<span class="left_menu_second_name">
+
+										<a title="微纳传感与智能检测研究..." class="" href="/6027/list.htm">微纳传感与智能检测研究...</a>
+
+									</span>
+
+									<span class="left_menu_second_arrow"></span>
+
+								</div>
+
+							</li>
+
+						   
+
+							<li class="lm_second_item">
+
+								<div class="lm_second_item_inside">
+
+									<span class="left_menu_second_name">
+
+										<a title="智能光电检测与深度学习..." class="" href="/6028/list.htm">智能光电检测与深度学习...</a>
+
+									</span>
+
+									<span class="left_menu_second_arrow"></span>
+
+								</div>
+
+							</li>
+
+						   
+
+							<li class="lm_second_item">
+
+								<div class="lm_second_item_inside">
+
+									<span class="left_menu_second_name">
+
+										<a title="智能量子感知与光纤传感..." class="" href="/6029/list.htm">智能量子感知与光纤传感...</a>
+
+									</span>
+
+									<span class="left_menu_second_arrow"></span>
+
+								</div>
+
+							</li>
+
+						   
+
+							<li class="lm_second_item">
+
+								<div class="lm_second_item_inside">
+
+									<span class="left_menu_second_name">
+
+										<a title="电气自动化研究所" class="" href="/dqzdhyjs/list.htm">电气自动化研究所</a>
+
+									</span>
+
+									<span class="left_menu_second_arrow"></span>
+
+								</div>
+
+							</li>
+
+						   
+
+							<li class="lm_second_item">
+
+								<div class="lm_second_item_inside">
+
+									<span class="left_menu_second_name">
+
+										<a title="电工电子与智能技术研究..." class="" href="/6043/list.htm">电工电子与智能技术研究...</a>
+
+									</span>
+
+									<span class="left_menu_second_arrow"></span>
+
+								</div>
+
+							</li>
+
+						   
+
+							<li class="lm_second_item">
+
+								<div class="lm_second_item_inside">
+
+									<span class="left_menu_second_name">
+
+										<a title="智能科学与电气工程技术..." class="" href="/6044/list.htm">智能科学与电气工程技术...</a>
+
+									</span>
+
+									<span class="left_menu_second_arrow"></span>
+
+								</div>
+
+							</li>
+
+						   
+
+							<li class="lm_second_item">
+
+								<div class="lm_second_item_inside">
+
+									<span class="left_menu_second_name">
+
+										<a title="极限环境电子系统研究所" class="" href="/6058/list.htm">极限环境电子系统研究所</a>
+
+									</span>
+
+									<span class="left_menu_second_arrow"></span>
+
+								</div>
+
+							</li>
+
+						   
+
+							<li class="lm_second_item">
+
+								<div class="lm_second_item_inside">
+
+									<span class="left_menu_second_name">
+
+										<a title="智能光电子研究所" class="" href="/6059/list.htm">智能光电子研究所</a>
+
+									</span>
+
+									<span class="left_menu_second_arrow"></span>
+
+								</div>
+
+							</li>
+
+						   
+
+							<li class="lm_second_item">
+
+								<div class="lm_second_item_inside">
+
+									<span class="left_menu_second_name">
+
+										<a title="无线全连接智能建筑研究..." class="" href="/wxqljznjzyjs/list.htm">无线全连接智能建筑研究...</a>
+
+									</span>
+
+									<span class="left_menu_second_arrow"></span>
+
+								</div>
+
+							</li>
+
+						   
+
+							<li class="lm_second_item">
+
+								<div class="lm_second_item_inside">
+
+									<span class="left_menu_second_name">
+
+										<a title="工业智能与系统优化国家..." class="" href="/gyyxtgcyjs/list.htm">工业智能与系统优化国家...</a>
+
+									</span>
+
+									<span class="left_menu_second_arrow"></span>
+
+								</div>
+
+							</li>
+
+						   
+
+							<li class="lm_second_item">
+
+								<div class="lm_second_item_inside">
+
+									<span class="left_menu_second_name">
+
+										<a title="流程工业综合自动化国家..." class="" href="/lcgyzhzdhgjzdsys/list.htm">流程工业综合自动化国家...</a>
+
+									</span>
+
+									<span class="left_menu_second_arrow"></span>
+
+								</div>
+
+							</li>
+
+						   
+
+						</ul>
+
+					  
+
+					</li>
+
+					
+
+					<li class="lm_first_item " id="list">
+
+						<div class="lm_first_item_inside">
+
+							<span class="left_menu_minus" name="open_menu"></span>
+
+							<span class="left_menu_name">
+
+								<a title="按职称" class="" href="http://www.ise.neu.edu.cn/js/list.htm">按职称</a>
+
+							</span>
+
+							<span class="left_menu_arrow"></span>
+
+						</div>
+
+					 
+
+					</li>
+
+					
+
+					
+
+				</ul>
+
+				<div class="container_left_title">
+
+					<span class="container_left_title_icon"></span>
+
+					<span class="container_left_title_word_01">联系我们</span>
+
+					<span class="container_left_title_word_02">CONNECT US</span>
+
+				</div>
+
+				<ul class="connect_mes">
+
+					<li class="connect_mes_list">
+
+						<span class="graybold">电话：</span>
+
+						<span>联系方式已隐去</span>
+
+					</li>
+
+					
+
+					<li class="connect_mes_list">
+
+						<span class="graybold">通讯地址：</span>
+
+						<span>辽宁省沈阳市和平区文化路3号巷11号东北大学135信箱</span>
+
+					</li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+
+
+		<script type="text/javascript">
+
+			$(function () {
+
+
+
+				$("ul#check").find("div.lm_first_item_inside").each(function () {
+
+					$(this).mouseover(function () {
+
+						$(this).addClass("lm_first_item_inside lm_first_select");
+
+					}).mouseout(function () {
+
+						$(this).removeClass("lm_first_select");
+
+					});
+
+
+
+				});
+
+				if ($("ul#second").length > 0) {
+
+					$("ul#second").attr("style", "display:block");
+
+					$("ul#second").siblings("div").find("span.left_menu_zero").attr("name", "open_menu").attr("class", "left_menu_minus");
+
+					$("span[name='open_menu']").each(function () {
+
+						$(this).parents().siblings("ul .lm_second_list").hide().siblings("div").find("span.left_menu_minus").attr("class", "left_menu_plus");
+
+						$(this).toggle(function () {
+
+							$(this).parents().siblings("ul .lm_second_list").show(500).siblings("div").find("span.left_menu_plus").attr("class", "left_menu_minus");
+
+							;
+
+
+
+						}, function () {
+
+							$(this).parents().siblings("ul .lm_second_list").hide(500).siblings("div").find("span.left_menu_minus").attr("class", "left_menu_plus");
+
+							;
+
+						});
+
+					});
+
+					$("span[id='left_current']").each(function () {
+
+						$(this).parents().siblings("ul .lm_second_list").show().siblings("div").find("span.left_menu_plus").attr("class", "left_menu_minus");
+
+						$(this).toggle(function () {
+
+							$(this).parents().siblings("ul .lm_second_list").hide(500).siblings("div").find("span.left_menu_minus").attr("class", "left_menu_plus");
+
+							;
+
+						}, function () {
+
+							$(this).parents().siblings("ul .lm_second_list").show(500).siblings("div").find("span.left_menu_plus").attr("class", "left_menu_minus");
+
+							;
+
+
+
+						});
+
+					});
+
+				}else{
+
+
+
+				};
+
+				$("ul#second>li").find("div").each(function () {
+
+
+
+					$(this).mouseover(function () {
+
+						$(this).attr("class", "lm_second_item_inside lm_second_select");
+
+					}).mouseout(function () {
+
+						$(this).attr("class", "lm_second_item_inside");
+
+					});
+
+
+
+				});
+
+				$("ul#check").find(".lm_first_item").each(function(){
+
+		                 var ts = $(this);
+
+		                 if(ts.find(".lm_second_list").length < 0){
+
+			            
+
+		               }else{
+
+						ts.find(".left_menu_minus").addClass("none");
+
+					   }
+
+	             });
+
+			});
+
+
+
+		</script>
+
+		<!-- 右边内容-->
+
+		<div class="container_right">
+
+			<div class="container_right_header" frag="窗口22" portletmode="simpleColumnAttri">
+
+				<span>您现在所在的位置：</span><a href="/main.htm" target="_self">首页</a><span class='possplit'>&nbsp;&nbsp;</span><a href="http://www.ise.neu.edu.cn/gyyxtgcyjs/list.htm" target="_self">教师名录</a><span class='possplit'>&nbsp;&nbsp;</span><a href="http://www.ise.neu.edu.cn/gyyxtgcyjs/list.htm" target="_self">按部门</a><span class='possplit'>&nbsp;&nbsp;</span><a href="/sjznyxtgcyjs/list.htm" target="_self">数据智能与系统工程研究所</a><span class='possplit'>&nbsp;&nbsp;</span><a href="/5989/list.htm" target="_self">教授</a>
+
+			</div>
+
+			<div class="news_billboard_box">
+
+				<div class="news_billboard_content padding_bottom_40">
+
+					
+
+
+
+					<ul class="news_billboard_list_box">
+
+						
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        <div class="register_tab_bar">
+
+					<div class="tab_b_1">
+
+						<div id="blog_tab_css" class="tab_inside_box">
+
+							<span class="arrow_left arrow_left_blue" style="" href="javascript:void(0);"></span>
+
+							<a href="http://www.ise.neu.edu.cn/gyyxtgcyjs/list.htm" class="checked" id="b">按部门</a>
+
+							<a href="http://www.ise.neu.edu.cn/js/list.htm" class="" id="z">按职称</a>
+
+						</div>
+
+					
+
+					</div>
+
+				</div>
+
+                
+
+                
+
+                
+
+                
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        <div name="showFX" id="abm" style="display: block;">
+
+					<div class="register_box_05" id="checkCategory" frag="窗口24" portletmode="simpleColumnList">
+
+					  
+
+					   
+
+						 
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="智能技术与应用研究所" href="/znjsyyyyjs/list.htm" class=" register_link_03 ">智能技术与应用研究所</a>
+
+						</span>
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="智能系统研究所" href="/znxtyjs/list.htm" class=" register_link_03 ">智能系统研究所</a>
+
+						</span>
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="智能控制与安全研究所" href="/znkzyaqyjs/list.htm" class=" register_link_03 ">智能控制与安全研究所</a>
+
+						</span>
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="工业智能与优化研究所" href="/gyrgznyyhyjs/list.htm" class=" register_link_03 ">工业智能与优化研究所</a>
+
+						</span>
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="无人系统自主控制研究所" href="/wrxtzzkzyjs/list.htm" class=" register_link_03 ">无人系统自主控制研究所</a>
+
+						</span>
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="信息物理系统控制与安全性研究所" href="/xxwlxtkzyaqxyjs/list.htm" class=" register_link_03 ">信息物理系统控制与安全性研究所</a>
+
+						</span>
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="图像识别与机器智能研究所" href="/txsbyjqznyjs/list.htm" class=" register_link_03 ">图像识别与机器智能研究所</a>
+
+						</span>
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="机器学习与智能决策研究所" href="/jqxxyznjcyjs/list.htm" class=" register_link_03 ">机器学习与智能决策研究所</a>
+
+						</span>
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="数据智能与系统工程研究所" href="/sjznyxtgcyjs/list.htm" class=" register_link_03 selected">数据智能与系统工程研究所</a>
+
+						</span>
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="深度学习与先进智能决策研究所" href="/sdxxyxjznjcyjs/list.htm" class=" register_link_03 ">深度学习与先进智能决策研究所</a>
+
+						</span>
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="智能感知与机器人研究所" href="/zngzyjqryjs/list.htm" class=" register_link_03 ">智能感知与机器人研究所</a>
+
+						</span>
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="智能仪表研究所" href="/6026/list.htm" class=" register_link_03 ">智能仪表研究所</a>
+
+						</span>
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="微纳传感与智能检测研究所" href="/6027/list.htm" class=" register_link_03 ">微纳传感与智能检测研究所</a>
+
+						</span>
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="智能光电检测与深度学习研究所" href="/6028/list.htm" class=" register_link_03 ">智能光电检测与深度学习研究所</a>
+
+						</span>
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="智能量子感知与光纤传感技术研究..." href="/6029/list.htm" class=" register_link_03 ">智能量子感知与光纤传感技术研究...</a>
+
+						</span>
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="电气自动化研究所" href="/dqzdhyjs/list.htm" class=" register_link_03 ">电气自动化研究所</a>
+
+						</span>
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="电工电子与智能技术研究所" href="/6043/list.htm" class=" register_link_03 ">电工电子与智能技术研究所</a>
+
+						</span>
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="智能科学与电气工程技术研究所" href="/6044/list.htm" class=" register_link_03 ">智能科学与电气工程技术研究所</a>
+
+						</span>
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="极限环境电子系统研究所" href="/6058/list.htm" class=" register_link_03 ">极限环境电子系统研究所</a>
+
+						</span>
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="智能光电子研究所" href="/6059/list.htm" class=" register_link_03 ">智能光电子研究所</a>
+
+						</span>
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="无线全连接智能建筑研究所" href="/wxqljznjzyjs/list.htm" class=" register_link_03 ">无线全连接智能建筑研究所</a>
+
+						</span>
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="工业智能与系统优化国家级前沿科..." href="/gyyxtgcyjs/list.htm" class=" register_link_03 ">工业智能与系统优化国家级前沿科...</a>
+
+						</span>
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="流程工业综合自动化国家重点实验..." href="/lcgyzhzdhgjzdsys/list.htm" class=" register_link_03 ">流程工业综合自动化国家重点实验...</a>
+
+						</span>
+
+						 
+
+						
+
+					   
+
+						
+
+					   
+
+					  
+
+					</div>
+
+					
+
+                    
+
+                   
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    				</div>
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        <div name="showZC" id="azc" style="display: none;">
+
+					<div class="register_box_05" id="checkCategory" frag="窗口32" portletmode="simpleColumnList">
+
+					  
+
+					   
+
+						 
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="智能技术与应用研究所" href="/znjsyyyyjs/list.htm" class=" register_link_03 ">智能技术与应用研究所</a>
+
+						</span>
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="智能系统研究所" href="/znxtyjs/list.htm" class=" register_link_03 ">智能系统研究所</a>
+
+						</span>
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="智能控制与安全研究所" href="/znkzyaqyjs/list.htm" class=" register_link_03 ">智能控制与安全研究所</a>
+
+						</span>
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="工业智能与优化研究所" href="/gyrgznyyhyjs/list.htm" class=" register_link_03 ">工业智能与优化研究所</a>
+
+						</span>
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="无人系统自主控制研究所" href="/wrxtzzkzyjs/list.htm" class=" register_link_03 ">无人系统自主控制研究所</a>
+
+						</span>
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="信息物理系统控制与安全性研究所" href="/xxwlxtkzyaqxyjs/list.htm" class=" register_link_03 ">信息物理系统控制与安全性研究所</a>
+
+						</span>
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="图像识别与机器智能研究所" href="/txsbyjqznyjs/list.htm" class=" register_link_03 ">图像识别与机器智能研究所</a>
+
+						</span>
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="机器学习与智能决策研究所" href="/jqxxyznjcyjs/list.htm" class=" register_link_03 ">机器学习与智能决策研究所</a>
+
+						</span>
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="数据智能与系统工程研究所" href="/sjznyxtgcyjs/list.htm" class=" register_link_03 selected">数据智能与系统工程研究所</a>
+
+						</span>
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="深度学习与先进智能决策研究所" href="/sdxxyxjznjcyjs/list.htm" class=" register_link_03 ">深度学习与先进智能决策研究所</a>
+
+						</span>
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="智能感知与机器人研究所" href="/zngzyjqryjs/list.htm" class=" register_link_03 ">智能感知与机器人研究所</a>
+
+						</span>
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="智能仪表研究所" href="/6026/list.htm" class=" register_link_03 ">智能仪表研究所</a>
+
+						</span>
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="微纳传感与智能检测研究所" href="/6027/list.htm" class=" register_link_03 ">微纳传感与智能检测研究所</a>
+
+						</span>
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="智能光电检测与深度学习研究所" href="/6028/list.htm" class=" register_link_03 ">智能光电检测与深度学习研究所</a>
+
+						</span>
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="智能量子感知与光纤传感技术研究所" href="/6029/list.htm" class=" register_link_03 ">智能量子感知与光纤传感技术研究所</a>
+
+						</span>
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="电气自动化研究所" href="/dqzdhyjs/list.htm" class=" register_link_03 ">电气自动化研究所</a>
+
+						</span>
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="电工电子与智能技术研究所" href="/6043/list.htm" class=" register_link_03 ">电工电子与智能技术研究所</a>
+
+						</span>
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="智能科学与电气工程技术研究所" href="/6044/list.htm" class=" register_link_03 ">智能科学与电气工程技术研究所</a>
+
+						</span>
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="极限环境电子系统研究所" href="/6058/list.htm" class=" register_link_03 ">极限环境电子系统研究所</a>
+
+						</span>
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="智能光电子研究所" href="/6059/list.htm" class=" register_link_03 ">智能光电子研究所</a>
+
+						</span>
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="无线全连接智能建筑研究所" href="/wxqljznjzyjs/list.htm" class=" register_link_03 ">无线全连接智能建筑研究所</a>
+
+						</span>
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="工业智能与系统优化国家级前沿科学中心" href="/gyyxtgcyjs/list.htm" class=" register_link_03 ">工业智能与系统优化国家级前沿科学中心</a>
+
+						</span>
+
+						 
+
+						<span class="register_box_06" showcategoryid="382">
+
+							<a title="流程工业综合自动化国家重点实验室" href="/lcgyzhzdhgjzdsys/list.htm" class=" register_link_03 ">流程工业综合自动化国家重点实验室</a>
+
+						</span>
+
+						 
+
+						
+
+					   
+
+						
+
+					   
+
+					  
+
+					</div>
+
+									</div>
+
+                        
+
+                        
+
+                        <div class="column-news-con" frag="面板9">
+
+                    <div class="column-news-list clearfix" frag="窗口9" portletmode="simpleList">
+
+                        <div id="wp_news_w9"> 
+
+ 
+
+<ul class="wp_subcolumn_list"> 
+
+     <li class="wp_sublist sublist-1"> 
+
+         <h3 class="sublist_title"> 
+
+             <a href="/5989/list.htm" title="教授" childColumnId="5989"><span class="subcolumn-name">教授</span></a> 
+
+             <a class="morelink" href="/5989/list.htm" target="_blank" title="浏览更多"><span class="moretext"><img src="/_js/_portletPlugs/simpleNews/css/icon_more_3.gif" /></span></a> 
+
+         </h3> 
+
+          
+
+<ul class="wp_article_list"> 
+
+      
+
+     <li class="list_item i1"> 
+
+         <div class="fields pr_fields"> 
+
+             <span class='Article_Index'>1</span> 
+
+             <span class='Article_Title'><a href='/2019/0109/c5989a8236/page.htm' target='_blank' title='黄敏'>黄敏</a></span> 
+
+         </div> 
+
+         <div class="fields ex_fields"> 
+
+              
+
+         </div> 
+
+     </li> 
+
+      
+
+     <li class="list_item i2"> 
+
+         <div class="fields pr_fields"> 
+
+             <span class='Article_Index'>2</span> 
+
+             <span class='Article_Title'><a href='/2023/0807/c5989a234032/page.htm' target='_blank' title='王俊伟'>王俊伟</a></span> 
+
+         </div> 
+
+         <div class="fields ex_fields"> 
+
+              
+
+         </div> 
+
+     </li> 
+
+      
+
+     <li class="list_item i3"> 
+
+         <div class="fields pr_fields"> 
+
+             <span class='Article_Index'>3</span> 
+
+             <span class='Article_Title'><a href='/2019/0109/c5989a8185/page.htm' target='_blank' title='佟国峰'>佟国峰</a></span> 
+
+         </div> 
+
+         <div class="fields ex_fields"> 
+
+              
+
+         </div> 
+
+     </li> 
+
+      
+
+     <li class="list_item i4"> 
+
+         <div class="fields pr_fields"> 
+
+             <span class='Article_Index'>4</span> 
+
+             <span class='Article_Title'><a href='/2019/0109/c5989a8231/page.htm' target='_blank' title='王洪峰'>王洪峰</a></span> 
+
+         </div> 
+
+         <div class="fields ex_fields"> 
+
+              
+
+         </div> 
+
+     </li> 
+
+      
+
+</ul> 
+
+     </li> 
+
+</ul> 
+
+</div> 
+
+<div id="wp_news_w9"> 
+
+ 
+
+<ul class="wp_subcolumn_list"> 
+
+     <li class="wp_sublist sublist-2"> 
+
+         <h3 class="sublist_title"> 
+
+             <a href="/5990/list.htm" title="副教授" childColumnId="5990"><span class="subcolumn-name">副教授</span></a> 
+
+             <a class="morelink" href="/5990/list.htm" target="_blank" title="浏览更多"><span class="moretext"><img src="/_js/_portletPlugs/simpleNews/css/icon_more_3.gif" /></span></a> 
+
+         </h3> 
+
+          
+
+<ul class="wp_article_list"> 
+
+      
+
+     <li class="list_item i1"> 
+
+         <div class="fields pr_fields"> 
+
+             <span class='Article_Index'>1</span> 
+
+             <span class='Article_Title'><a href='/2025/1201/c5990a296415/page.htm' target='_blank' title='于昊'>于昊</a></span> 
+
+         </div> 
+
+         <div class="fields ex_fields"> 
+
+              
+
+         </div> 
+
+     </li> 
+
+      
+
+     <li class="list_item i2"> 
+
+         <div class="fields pr_fields"> 
+
+             <span class='Article_Index'>2</span> 
+
+             <span class='Article_Title'><a href='/2019/0109/c5990a8240/page.htm' target='_blank' title='王庆'>王庆</a></span> 
+
+         </div> 
+
+         <div class="fields ex_fields"> 
+
+              
+
+         </div> 
+
+     </li> 
+
+      
+
+     <li class="list_item i3"> 
+
+         <div class="fields pr_fields"> 
+
+             <span class='Article_Index'>3</span> 
+
+             <span class='Article_Title'><a href='/2019/0109/c5990a8242/page.htm' target='_blank' title='胡清河'>胡清河</a></span> 
+
+         </div> 
+
+         <div class="fields ex_fields"> 
+
+              
+
+         </div> 
+
+     </li> 
+
+      
+
+</ul> 
+
+     </li> 
+
+</ul> 
+
+</div> 
+
+<div id="wp_news_w9"> 
+
+ 
+
+<ul class="wp_subcolumn_list"> 
+
+     <li class="wp_sublist sublist-3"> 
+
+         <h3 class="sublist_title"> 
+
+             <a href="/5991/list.htm" title="讲师" childColumnId="5991"><span class="subcolumn-name">讲师</span></a> 
+
+             <a class="morelink" href="/5991/list.htm" target="_blank" title="浏览更多"><span class="moretext"><img src="/_js/_portletPlugs/simpleNews/css/icon_more_3.gif" /></span></a> 
+
+         </h3> 
+
+          
+
+<ul class="wp_article_list"> 
+
+      
+
+     <li class="list_item i1"> 
+
+         <div class="fields pr_fields"> 
+
+             <span class='Article_Index'>1</span> 
+
+             <span class='Article_Title'><a href='/2023/0224/c5991a225815/page.htm' target='_blank' title='宋扬'>宋扬</a></span> 
+
+         </div> 
+
+         <div class="fields ex_fields"> 
+
+              
+
+         </div> 
+
+     </li> 
+
+      
+
+     <li class="list_item i2"> 
+
+         <div class="fields pr_fields"> 
+
+             <span class='Article_Index'>2</span> 
+
+             <span class='Article_Title'><a href='http://www.ise.neu.edu.cn/2019/0419/c1426a120461/page.htm' target='_blank' title='王大志'>王大志</a></span> 
+
+         </div> 
+
+         <div class="fields ex_fields"> 
+
+              
+
+         </div> 
+
+     </li> 
+
+      
+
+</ul> 
+
+     </li> 
+
+</ul> 
+
+</div> 
+
+
+
+                    </div>
+
+                </div>
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        
+
+					</ul>
+
+
+
+				</div>
+
+
+
+
+
+			</div>
+
+
+
+
+
+
+
+		</div>
+
+	</div>
+
+	<div id="footer">
+
+		<div class="dd">
+
+			<div style="float:left; width:700px; text-align:center; padding-top:15px; line-height:24px;">东北大学信息科学与工程学院 版权所有
+
+				<br> 2015-2016 College of Information Science and Engineering</div>
+
+			<div style="float:right">
+
+				<img src="/_upload/tpl/00/0a/10/template10/htmlRes/new_erweima.png" width="60" height="60">
+
+				<br>官方微信</div>
+
+		</div>
+
+	</div>
+
+</body>
+
+<script>
+
+	$(function(){
+
+		$(".possplit").html("  --  ");
+
+	 });
+
+	 $(function () {
+
+	 $(".parent").each(function(){
+
+	   $(this).find(".lm_second_list").attr("style","display:block");
+
+	   $(this).find(".left_menu_plus").addClass("left_menu_minus").removeClass("left_menu_plus");
+
+	 });
+
+  });
+
+   </script>
+
+   
+
+   <!--  选项卡切换-->
+
+   <!--script>
+
+   var aaa = document.getElementById("blog_tab_css");
+
+    var abm = document.getElementById("abm");
+
+	 var azc = document.getElementById("azc");
+
+   var bbb =aaa.getElementsByTagName("a");
+
+   console.log(bbb[0]);
+
+  // bbb[0].style.display="none";
+
+   
+
+   for (var i=0;i<bbb.length;i++){
+
+	   bbb[i].setAttribute("name",i);
+
+	   
+
+	   
+
+	   bbb[i].onclick=function(){
+
+		   console.log(this.name)
+
+		  // console.log(this.getAttribute("id"))
+
+		  
+
+		 
+
+		  
+
+		   var k=this.name;
+
+		 for (var j=0;j<bbb.length;j++){
+
+			 
+
+			 if(k==j){
+
+				  bbb[j].setAttribute("class", "checked")
+
+				 }else{
+
+					 
+
+					 bbb[j].setAttribute("class", "")
+
+					 
+
+					 }
+
+					 
+
+					 
+
+					  if(k==0){
+
+			  abm.style.display="block";
+
+			  azc.style.display="none";
+
+			  
+
+			  }
+
+		   if(k==1){
+
+			  abm.style.display="none";
+
+			  azc.style.display="block";
+
+			  
+
+			  }
+
+			 
+
+			 }
+
+		   
+
+		   
+
+		   }
+
+	   
+
+	   }
+
+	   
+
+	   
+
+	   
+
+	   
+
+   
+
+   
+
+    </script-->
+
+   
+
+</html>
+
  <img src="/_visitcount?siteId=24&type=2&columnId=5980" style="display:none" width="0" height="0"></image>

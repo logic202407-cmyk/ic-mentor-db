@@ -86,7 +86,10 @@ class HustControlSourceTests(unittest.TestCase):
         blob = json.dumps(self.rows, ensure_ascii=False)
         self.assertNotIn("@", blob)
         self.assertNotIn("电话", blob)
-        self.assertNotIn("027-87543130", blob)
+        # 不在此处写出具体号码：测试文件本身也不应成为联系方式的发布渠道。
+        # 改为断言"任何电话形状都不在结果里"，覆盖面比点名一个号码更宽。
+        self.assertNotRegex(blob,
+                            r"(?<![0-9A-Za-z])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z])")
 
 
 class CupPetroleumSourceTests(unittest.TestCase):
@@ -179,9 +182,11 @@ class CupPetroleumSourceTests(unittest.TestCase):
         blob = json.dumps(self.rows, ensure_ascii=False)
         self.assertNotIn("@", blob)
         self.assertNotIn("电话", blob)
-        # 名录页面上真实存在的联系电话，一条都不应出现在结果里。
-        for phone in ("89733281", "89733935", "13436364418", "89732268"):
-            self.assertNotIn(phone, blob)
+        # 名录页面上真实存在的联系电话，一条都不应出现在结果里。不写出具体号码
+        # （测试文件本身也不该成为发布渠道），改为断言任何电话形状都不出现——
+        # 覆盖 8 位分机、带区号座机与 11 位手机三种写法。
+        self.assertNotRegex(blob,
+                            r"(?<![0-9A-Za-z])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z])")
 
 
 class SourceModuleContractTests(unittest.TestCase):
@@ -377,12 +382,16 @@ class SeuArchitectureSourceTests(unittest.TestCase):
         blob = json.dumps(self.rows, ensure_ascii=False)
         self.assertNotIn("@", blob)
         self.assertNotIn("电话", blob)
-        # 快照页脚确实带着学院联系方式（按仓库惯例已隐去字面值），卡片里也每张都有
-        # news-email 字段；这些触点一条都不许进结果。
+        # 快照页脚确实带着学院联系方式，卡片里也每张都有 news-email 字段；这些触点
+        # 一条都不许进结果。快照本身在落盘时已整体脱敏：邮箱与电话都替换为
+        # 「联系方式已隐去」，因此这里断言的是"快照里已无字面联系方式"，而不是
+        # 去断言某个具体号码仍然存在——写出具体号码等于把它再发布一次。
         self.assertIn("联系方式已隐去", self.html)
-        self.assertIn("025-83792223", self.html)  # 页脚电话，用于验证下面的断言非空转
+        self.assertNotRegex(self.html,
+                            r"(?<![0-9A-Za-z])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z])")
+        self.assertNotRegex(self.html,
+                            r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
         self.assertNotIn("联系方式已隐去", blob)
-        self.assertNotIn("025-83792223", blob)
 
 
 class EcustBioengineeringSourceTests(unittest.TestCase):
@@ -1088,6 +1097,221 @@ class UpcPetroleumSourceTests(unittest.TestCase):
         self.assertEqual(_feed_source(BeautifulSoup(shell, "html.parser"),
                                       self.spec["listing"]), DATA_FILE)
         self.assertIn("json.js", DATA_FILE)
+
+
+class SwpuNepuPetroleumSourceTests(unittest.TestCase):
+    """0820 石油与天然气工程 — 西南石油大学石油与天然气工程学院 与
+    东北石油大学石油工程学院 的教师名录（两个学校、共十个单位页，一个模块）。
+
+    0820 原有 164 条全部来自中国石油大学（北京），跨校比较无从谈起。本来源一次接入
+    两所石油主干高校的**院级**名录：西南石油大学石工院「师资队伍 → 教师名录」下的
+    五个教学/实验单位（271 人），东北石油大学石工院「师资队伍 → 学院教师名录」下的
+    五个系/中心/研究所（102 人）。两页都不列研究方向，故全部为「方向待补」。
+    """
+
+    # 每个单位页在快照里的人数（页面姓名数；东北石油大学油气田开发工程系页面上
+    # 有 33 个姓名，其中 LuJing 是拼音写法，不符合 NAME_RE，故收录 32）。
+    EXPECTED = {
+        "swpu_petroleum_engineering": 184,
+        "swpu_oil_gas_storage": 31,
+        "swpu_offshore_petroleum": 18,
+        "swpu_fluid_thermal": 11,
+        "swpu_petroleum_lab": 27,
+        "nepu_reservoir_engineering": 32,
+        "nepu_well_engineering": 22,
+        "nepu_oil_gas_storage": 22,
+        "nepu_petroleum_lab": 14,
+        "nepu_eor_institute": 12,
+    }
+
+    @classmethod
+    def setUpClass(cls):
+        # 就地导入，避免与其他来源并发修改共享 import 块。
+        from workbench.sources.swpu_nepu_petroleum import SPECS as PETROLEUM_SPECS
+        from workbench.sources.swpu_nepu_petroleum import parse as parse_petroleum
+        cls.specs = {spec["key"]: spec for spec in PETROLEUM_SPECS}
+        cls.html = {}
+        cls.parsed = {}
+        for key, spec in cls.specs.items():
+            text = (FIXTURES / f"{key}.html").read_text(encoding="utf-8")
+            cls.html[key] = text
+            cls.parsed[key] = parse_petroleum(text, spec["listing"], spec)
+        cls.all_rows = [row for rows in cls.parsed.values() for row in rows]
+
+    def test_every_spec_targets_the_petroleum_discipline(self):
+        self.assertEqual(set(self.specs), set(self.EXPECTED))
+        for key, spec in self.specs.items():
+            with self.subTest(source=key):
+                self.assertEqual(spec["code"], "0820")
+                self.assertEqual(spec["discipline"], "石油与天然气工程")
+                self.assertIn(spec["institution"], ("西南石油大学", "东北石油大学"))
+                # 两份名录都不分页：没有 {page} 占位符，max_pages 为 1。
+                self.assertNotIn("{page}", spec["listing"])
+                self.assertEqual(spec["max_pages"], 1)
+                self.assertTrue(spec["listing"].startswith("http"))
+
+    def test_this_adds_two_more_universities_for_0820(self):
+        schools = {spec["institution"] for spec in self.specs.values()}
+        self.assertEqual(schools, {"西南石油大学", "东北石油大学"})
+        self.assertNotIn("中国石油大学（北京）", schools)
+        for key, spec in self.specs.items():
+            with self.subTest(source=key):
+                if spec["institution"] == "西南石油大学":
+                    self.assertIn("swpu.edu.cn", spec["listing"])
+                else:
+                    self.assertIn("sygcxy.nepu.edu.cn", spec["listing"])
+
+    def test_parser_finds_each_units_whole_roster(self):
+        counts = {key: len(rows) for key, rows in self.parsed.items()}
+        self.assertEqual(counts, self.EXPECTED)
+        self.assertEqual(len(self.all_rows), 373)
+        for key, rows in self.parsed.items():
+            with self.subTest(source=key):
+                self.assertEqual(len({row["name"] for row in rows}), len(rows),
+                                 "同一单位页内的姓名不应重复")
+                self.assertTrue(all(
+                    row["assignment"]["first_level_discipline"] == "0820 石油与天然气工程"
+                    for row in rows))
+
+    def test_names_are_people_and_not_navigation(self):
+        for row in self.all_rows:
+            self.assertRegex(row["name"], r"^[\u4e00-\u9fff·]{2,8}$")
+        names = {row["name"] for row in self.all_rows}
+        for expected in ("白杨", "郭建春", "赵金洲", "李长俊", "曹晓春",
+                         "柏明星", "成庆林", "曹广胜", "皮彦夫"):
+            self.assertIn(expected, names)
+        for noise in ("师资队伍", "教师名录", "杰出师资", "荣休教师", "资料下载",
+                      "石油工程教研室", "油气井工程系", "教授", "副教授", "讲师",
+                      "实验中心", "提高采收率研究所", "学生工作组", "管理团队",
+                      "学工团队", "首页", "联系方式"):
+            self.assertNotIn(noise, names)
+
+    def test_full_width_spaces_are_stripped_before_the_name_check(self):
+        # 东北石油大学把「李　玮」「索　彧」排成三格宽（全角空格 U+3000）。
+        by_name = {row["name"]: row for row in self.parsed["nepu_well_engineering"]}
+        for name in ("李玮", "索彧", "范森", "张军", "赵欢"):
+            self.assertIn(name, by_name)
+        self.assertIn("索\u3000彧", self.html["nepu_well_engineering"])
+        self.assertNotIn("\u3000", "".join(by_name))
+
+    def test_non_chinese_names_are_skipped_not_guessed(self):
+        # 油气田开发工程系列表里有一位写成拼音「Lu Jing」：NAME_RE 不接受，
+        # 宁缺勿猜，故该页收录 32 人而不是 33 人。
+        page = self.html["nepu_reservoir_engineering"]
+        self.assertIn("Lu Jing", page)
+        self.assertEqual(len(self.parsed["nepu_reservoir_engineering"]), 32)
+        self.assertNotIn("Lu Jing",
+                         {row["name"] for row in self.parsed["nepu_reservoir_engineering"]})
+
+    def test_the_two_zhang_tao_are_kept_apart(self):
+        # 同名不同人：西南石油大学石油工程教研室的张涛（副教授）与流体与热工教研室的
+        # 张涛（教授）职称与个人页都不同，两条都保留，各自引用自己的名录页。
+        rows = self.parsed["swpu_petroleum_engineering"] + self.parsed["swpu_fluid_thermal"]
+        tao = [row for row in rows if row["name"] == "张涛"]
+        self.assertEqual(len(tao), 2)
+        self.assertEqual({row["department"] for row in tao},
+                         {"石油工程教研室", "流体与热工教研室"})
+        self.assertEqual({row["homepage"] for row in tao}, {
+            "http://www.swpu.edu.cn/sgy/szdw/jsml/sugc/fjs/zt.htm",
+            "http://www.swpu.edu.cn/sgy/szdw/jsml/ltrg/js/zhangtao.htm",
+        })
+
+    def test_departments_are_teaching_units_not_administration(self):
+        units = {row["department"] for row in self.all_rows}
+        self.assertEqual(units, {
+            "石油工程教研室", "油气储运工程教研室", "海洋油气工程教研室",
+            "流体与热工教研室", "石油工程实验中心",
+            "油气田开发工程系", "油气井工程系", "油气储运工程系",
+            "实验中心", "提高采收率研究所"})
+        for unit in units:
+            self.assertNotRegex(unit, r"党委|工会|离退休|办公室|学工|管理团队|招聘")
+
+    def test_direction_is_never_invented_and_rank_stays_out_of_it(self):
+        for row in self.all_rows:
+            self.assertEqual(row["assignment"]["direction"], "方向待补")
+            self.assertNotRegex(row["assignment"]["direction"],
+                                r"教授|副教授|讲师|研究员|实验师|导师|正高|副高|中级")
+        # 职称写进备注：两校的组标题都照录。
+        note = {}
+        for rows in self.parsed.values():
+            for row in rows:
+                note.setdefault(row["name"], []).append(row["assignment"]["note"])
+        self.assertIn("职称分组：教授", note["柏明星"][0])
+        self.assertIn("职称分组：特任副教授", note["房雨佳"][0])
+        self.assertIn("职称分组：正高级实验师", note["王其军"][0])
+        self.assertIn("职称分组：高级实验师", note["陈迟"][0])
+        self.assertIn("职称分组：实验师", note["敬佩瑜"][0])
+        # 张涛有两个：石油工程教研室的按“副教授/副研究员”分组，流体与热工教研室的按
+        # “教授/研究员”分组，两组组名都要在备注里出现。
+        self.assertEqual({n.split("（")[1].split("）")[0] for n in note["张涛"]},
+                         {"职称分组：副教授/副研究员", "职称分组：教授/研究员"})
+
+    def test_every_row_cites_its_own_listing_page(self):
+        for key, rows in self.parsed.items():
+            spec = self.specs[key]
+            for row in rows:
+                with self.subTest(source=key, name=row["name"]):
+                    self.assertEqual(row["assignment"]["url"], spec["listing"])
+                    self.assertEqual(row["assignment"]["record_kind"], "faculty_directory")
+                    self.assertEqual(row["institution"], spec["institution"])
+                    self.assertEqual(row["department"], spec["department"])
+                    self.assertTrue(row["homepage"].startswith("http"))
+
+    def test_homepages_are_per_person_pages_or_the_listing(self):
+        # 西南石油大学每个姓名都带个人页；东北石油大学有 7 条给的是空链接（``#``），
+        # 按约定回落到名录页本身，所以 373 条里 366 条有个人页。
+        hosts = {"西南石油大学": "http://www.swpu.edu.cn/sgy/",
+                 "东北石油大学": "https://sygcxy.nepu.edu.cn/"}
+        linked = {}
+        for key, rows in self.parsed.items():
+            spec = self.specs[key]
+            per_person = [row for row in rows if row["homepage"] != spec["listing"]]
+            linked[key] = len(per_person)
+            self.assertGreater(len(per_person), 0, key)
+            for row in per_person:
+                with self.subTest(source=key, name=row["name"]):
+                    self.assertTrue(
+                        row["homepage"].startswith(hosts[spec["institution"]]),
+                        row["homepage"])
+        self.assertEqual(linked, {
+            "swpu_petroleum_engineering": 184, "swpu_oil_gas_storage": 31,
+            "swpu_offshore_petroleum": 18, "swpu_fluid_thermal": 11,
+            "swpu_petroleum_lab": 27,
+            "nepu_reservoir_engineering": 30, "nepu_well_engineering": 19,
+            "nepu_oil_gas_storage": 22, "nepu_petroleum_lab": 12,
+            "nepu_eor_institute": 12,
+        })
+        self.assertEqual(sum(linked.values()), 366)
+
+    def test_no_contact_information_is_stored(self):
+        blob = json.dumps(self.all_rows, ensure_ascii=False)
+        self.assertNotIn("@", blob)
+        self.assertNotIn("邮箱", blob)
+        self.assertNotIn("电话", blob)
+        self.assertNotIn("手机", blob)
+        self.assertNotIn("联系方式已隐去", blob)
+        self.assertNotIn("mailto", blob)
+
+    def test_fixtures_are_redacted(self):
+        # 两份真实页面在页脚都印着学院电话与邮箱（西南石油大学：院办电话 + 官方邮箱 +
+        # 书记邮箱；东北石油大学：座机 + 学院邮箱），快照落盘前已按约定替换/删除。
+        # 这里逐份重新读盘复核，并且连**宽泛**的电话正则也一并要求为 0：站点的
+        # ``<!-- CustomerNO:… -->`` 授权指纹是一长串十六进制，宽泛正则会把它当成号码，
+        # 因此该指纹也在落盘前一并隐去，保证任何扫描器看这份快照都是干净的。
+        loose_phone = r"(?:\+?86[-\s]?)?(?:0\d{2,3}[-\s]?\d{7,8}|1[3-9]\d{9})"
+        email = r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}"
+        for key, spec in self.specs.items():
+            with self.subTest(source=key):
+                text = self.html[key]
+                self.assertGreater(len(text), 20000)
+                self.assertNotRegex(text, email)
+                self.assertNotRegex(text, loose_phone)
+                self.assertIn("联系方式已隐去", text)
+        # 原文里确实存在联系方式，快照里只剩下隐去后的标记。
+        self.assertIn("联系方式已隐去", self.html["swpu_petroleum_engineering"])
+        self.assertIn("官方邮箱", self.html["swpu_petroleum_engineering"])
+        self.assertIn("联系方式已隐去", self.html["nepu_well_engineering"])
+        self.assertIn("联系方式", self.html["nepu_well_engineering"])
 
 
 if __name__ == "__main__":
