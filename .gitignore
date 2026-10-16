@@ -48,6 +48,9 @@ _scratch_*
 /_*.py
 /_*.json
 /_*.txt
+# 测试目录下只应放 _.py 测试与 fixtures/ 快照；dry-run 之类的一次性输出不应入库。
+workbench/tests/*.txt
+workbench/tests/*.json
 /probe_*
 workbench/probe_*
 
