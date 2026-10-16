@@ -43,6 +43,11 @@ workbench/tmp_*
 _scratch_*
 .scratch_*/
 /scratch_*/
+# 顶层下划线开头的临时脚本与输出（如 _dryrun.json、_rerun_dryrun.py）。正式脚本
+# 一律放在 tools/ 或 workbench/tools/ 下，因此这条只影响临时产物。
+/_*.py
+/_*.json
+/_*.txt
 /probe_*
 workbench/probe_*
 
