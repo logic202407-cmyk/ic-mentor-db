@@ -29,7 +29,7 @@ class HustControlSourceTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.spec = HUST_SPECS[0]
-        cls.html = (FIXTURES / "hust.html").read_text(encoding="utf-8")
+        cls.html = (FIXTURES / f"{cls.spec['key']}.html").read_text(encoding="utf-8")
         cls.rows = parse_hust(cls.html, cls.spec["listing"], cls.spec)
 
     def test_spec_targets_the_control_discipline(self):
@@ -175,6 +175,43 @@ class CupPetroleumSourceTests(unittest.TestCase):
         # 名录页面上真实存在的联系电话，一条都不应出现在结果里。
         for phone in ("89733281", "89733935", "13436364418", "89732268"):
             self.assertNotIn(phone, blob)
+
+
+class SourceModuleContractTests(unittest.TestCase):
+    """Every source module must satisfy the shared contract and ship a fixture."""
+
+    def test_every_source_has_a_fixture_named_after_its_key(self):
+        from workbench.collect_engineering_scale import discover_sources
+        for key, spec in discover_sources().items():
+            with self.subTest(source=key):
+                fixture = FIXTURES / f"{key}.html"
+                self.assertTrue(fixture.is_file(), f"缺少快照 {key}.html")
+
+    def test_every_parser_satisfies_the_red_lines(self):
+        import re
+        from workbench.collect_engineering_scale import discover_sources
+        from workbench.collect_thin_discipline_depth import NO_DIRECTION
+
+        email = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
+        rank = re.compile(r"教授|副教授|讲师|研究员|博士后|正高|副高|中级")
+        admin = re.compile(r"党委|工会|离退休|办公室")
+
+        for key, spec in discover_sources().items():
+            with self.subTest(source=key):
+                html = (FIXTURES / f"{key}.html").read_text(encoding="utf-8", errors="replace")
+                rows = spec["parser"](html, spec["listing"], spec)
+                self.assertTrue(rows, "解析器没有解析出任何人")
+                for row in rows:
+                    self.assertNotRegex(repr(row), email)
+                    # A 职称 is a rank, never a direction.
+                    direction = row["assignment"]["direction"]
+                    if direction != NO_DIRECTION:
+                        self.assertIsNone(rank.search(direction),
+                                          f"{row['name']} 的方向字段含职称")
+                    self.assertTrue(row["assignment"]["url"], "条目缺少来源链接")
+                    self.assertIsNone(admin.search(row["department"]),
+                                      f"{row['name']} 的院系是行政单位")
+                    self.assertRegex(row["name"], r"^[\u4e00-\u9fff·]{2,8}$")
 
 
 if __name__ == "__main__":
