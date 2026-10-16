@@ -224,9 +224,28 @@ h2, h3 { break-after: avoid-page; }
 <td style="text-align: left;">公开元数据接口（CC0 数据）</td>
 <td style="text-align: left;">作者候选检索；匿名配额有限，可按官方说明申请免费 key</td>
 </tr>
+<tr>
+<td style="text-align: left;"><strong>Academic Detective · 学术侦探</strong>（导师调查方法论来源；按原样调用，不分发其代码）</td>
+<td style="text-align: left;"><a href="https://github.com/yadnuses/Academic-Detective">https://github.com/yadnuses/Academic-Detective</a></td>
+<td style="text-align: left;">MIT（以仓库 <code>LICENSE</code> 正文为准）</td>
+<td style="text-align: left;">其 <code>SKILL.md</code> 的<strong>七步调查框架</strong>是本项目导师调查流程的方法参照；<code>tools/skill_heuristics.py</code> 通过环境变量 <code>ACADEMIC_SKILL_SCRIPTS</code> 调用其 <code>analysis.common_heuristics</code>，未设置时安全跳过。<strong>本仓库未纳入其任何代码</strong>。详见附录一第 31 项</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>data-science-agent-skills</strong>（方法论参照，非代码依赖）</td>
+<td style="text-align: left;">查阅于 2026-10-12</td>
+<td style="text-align: left;"><strong>该仓库未声明许可证</strong></td>
+<td style="text-align: left;">参照其三个 skill 的方法思路（标注一致性 Cohen κ、缺失机制诊断、数据契约校验）。<strong>未使用其任何代码</strong>，全部实现为本项目自行编写；因该仓库无许可证，本项目不复制、不改编、不再分发其代码或文档。详见附录一第 32 项</td>
+</tr>
 </tbody>
 </table>
-<p><strong>选型原则</strong>：优先选择①许可证宽松（MIT/Apache-2.0/BSD）以便本项目同样以宽松许可开放；②可在普通笔记本 CPU 上运行；③不引入需要付费或登录的依赖。<strong>我们刻意没有使用大语言模型生成内容</strong>，因为本作品的核心是“来源可追溯”，引入生成式内容会直接削弱这一目标。</p>
+<p><strong>选型原则</strong>：优先选择①许可证宽松（MIT/Apache-2.0/BSD）以便本项目同样以宽松许可开放；②可在普通笔记本 CPU 上运行；③不引入需要付费或登录的依赖。<strong>我们刻意没有使用大语言模型生成内容</strong>，因为本作品的核心是“来源可追溯”。</p>
+<blockquote>
+<p><strong>关于「Academic Detective」的边界（如实说明）</strong>：本项目的<strong>调查方法论</strong>参考了该项目，并且<strong>按原样调用</strong>其异常规则模块，但<strong>未把它的任何代码复制进本仓库</strong>。工作台的七步框架落地、同名核对、调查档案、学生向参考分与关系分析均为本项目自行实现；工作台读入的 <code>academic-investigations/</code> 目录是该项目产出的逐人调查档案，仅摘录教育、任职、研究领域等事实性内容，<strong>不继承其评分、排名与评价</strong>。该项目 <code>README.md</code> 自称「GPL v3」，与其 <code>LICENSE</code> 正文（MIT）矛盾，本项目以 <code>LICENSE</code> 正文为准并在此披露该矛盾。</p>
+</blockquote>
+<h4>借鉴了它的哪些方法</h4>
+<p>采用了其七步框架中的 <strong>Step 1 基本档案</strong>、<strong>Step 2 产出核实（含 DOI 反查消歧）</strong>、<strong>Step 4 关系网络</strong>、<strong>Step 5a 异常检测规则 C01–C07</strong>、<strong>Step 6 多源验证</strong>、<strong>Step 7 报告生成</strong>，以及其按数据可得性分层的<strong>三个执行层次（L1 文献计量／L2 深度分析／L3 关系口碑）</strong>与"明示未完成部分"的做法。其中 <strong>C01–C07 异常规则是按原样调用其模块</strong>（<code>tools/skill_heuristics.py</code> → <code>analysis.common_heuristics.CommonHeuristicsClassifier</code>，经环境变量指向其安装位置；未设置时安全跳过），其余均为本项目自行实现。</p>
+<p><strong>未采用</strong>其 Step 3 六维质量评分（<code>paper_quality_rubric</code>／<code>hybrid_scorer</code>）、数据造假取证（<code>data_integrity_checker</code>／<code>stats_reverse_engineer</code>／<code>image_metadata_extractor</code>）、风格计量（<code>stylometry_profiler</code>）、引用星座图（<code>citation_constellation</code>）、学生口碑抓取与合并（<code>review_matcher</code>／<code>review_aggregator</code>）以及零宽水印（<code>watermark</code>）。理由有两条：前者需论文全文且输出的是<strong>学术质量评分</strong>，与本作品"不评价学术水平"的定位冲突；口碑类来源<strong>无法追溯且指向具体个人</strong>，与"证据可追溯"的定位冲突。Step 0 案件注册只采用其"逐人独立档案"的思路，本项目改用本机 JSON 存储，未引入其 SQLite 结构。</p>
+<p><strong>逐条对照与依据</strong>见附录一第五之二节（含每一条方法落在本项目哪个文件的映射）。</p>
 <h3>3. 自主开发与权利边界</h3>
 <p><strong>团队自主完成的部分：</strong></p>
 <ul>

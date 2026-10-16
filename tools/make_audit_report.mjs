@@ -54,7 +54,7 @@ const P = (s) => L.push(s);
 P('# 导师库分类归纳审计报告');
 P('');
 P(`> 生成日期：${new Date().toISOString().slice(0, 10)}　｜　审计对象：导师关系网络 v5 的分类归纳结果`);
-P('> 方法参照 GitHub 高星 skill 仓库 [data-science-agent-skills](https://github.com/emily2040/data-science-agent-skills) 中的三个 skill');
+P('> 方法参照开源仓库 [data-science-agent-skills](https://github.com/emily2040/data-science-agent-skills) 中的三个 skill（仅参照方法说明，未使用其代码；该仓库未声明许可证）');
 P('');
 P('---');
 P('');
