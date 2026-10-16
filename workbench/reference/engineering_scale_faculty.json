@@ -3,6 +3,72 @@
   "collected_at": "2026-10-15",
   "profiles": [
     {
+      "name": "周恒",
+      "institution": "北京科技大学",
+      "department": "冶金与生态工程学院",
+      "discipline": "冶金工程",
+      "first_level_discipline": "0806 冶金工程",
+      "direction_group": "方向待补",
+      "interests": "方向待补",
+      "homepage": "https://faculty.ustb.edu.cn/HengZhou/zh_CN/index.htm",
+      "classification_basis": "按学校教师主页的学科索引归入一级学科导航；不代替该教师所在机构的招生专业认定。",
+      "discipline_assignments": [
+        {
+          "first_level_discipline": "0806 冶金工程",
+          "subject": "080600 冶金工程",
+          "direction": "方向待补",
+          "year": null,
+          "degree_level": "",
+          "url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=1&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+          "record_kind": "faculty_directory",
+          "source_kind": "学校教师主页学科索引",
+          "classification_basis": "按公开院系名录与研究领域归入学科导航；不代替招生专业认定",
+          "note": "学校教师主页按学科索引列出（所在单位：冶金与生态工程学院，职称：副教授）；索引不含个人研究方向。导师资格与招生专业以当年招生公告为准。"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=1&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+          "title": "北京科技大学 · 学校教师主页学科索引",
+          "claim": "导师名录列出周恒及学科方向；未注明招生年份。"
+        }
+      ],
+      "collected_at": "2026-10-15"
+    },
+    {
+      "name": "姜敏",
+      "institution": "北京科技大学",
+      "department": "冶金与生态工程学院",
+      "discipline": "冶金工程",
+      "first_level_discipline": "0806 冶金工程",
+      "direction_group": "方向待补",
+      "interests": "方向待补",
+      "homepage": "https://faculty.ustb.edu.cn/MinJiang/zh_CN/index.htm",
+      "classification_basis": "按学校教师主页的学科索引归入一级学科导航；不代替该教师所在机构的招生专业认定。",
+      "discipline_assignments": [
+        {
+          "first_level_discipline": "0806 冶金工程",
+          "subject": "080600 冶金工程",
+          "direction": "方向待补",
+          "year": null,
+          "degree_level": "",
+          "url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=1&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+          "record_kind": "faculty_directory",
+          "source_kind": "学校教师主页学科索引",
+          "classification_basis": "按公开院系名录与研究领域归入学科导航；不代替招生专业认定",
+          "note": "学校教师主页按学科索引列出（所在单位：冶金与生态工程学院，职称：教授）；索引不含个人研究方向。导师资格与招生专业以当年招生公告为准。"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=1&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+          "title": "北京科技大学 · 学校教师主页学科索引",
+          "claim": "导师名录列出姜敏及学科方向；未注明招生年份。"
+        }
+      ],
+      "collected_at": "2026-10-15"
+    },
+    {
       "name": "张增起",
       "institution": "北京科技大学",
       "department": "冶金与生态工程学院",
@@ -349,7 +415,7 @@
           "direction": "方向待补",
           "year": null,
           "degree_level": "",
-          "url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=1&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+          "url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=2&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
           "record_kind": "faculty_directory",
           "source_kind": "学校教师主页学科索引",
           "classification_basis": "按公开院系名录与研究领域归入学科导航；不代替招生专业认定",
@@ -358,7 +424,7 @@
       ],
       "sources": [
         {
-          "url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=1&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+          "url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=2&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
           "title": "北京科技大学 · 学校教师主页学科索引",
           "claim": "导师名录列出王振阳及学科方向；未注明招生年份。"
         }
@@ -382,7 +448,7 @@
           "direction": "方向待补",
           "year": null,
           "degree_level": "",
-          "url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=1&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+          "url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=2&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
           "record_kind": "faculty_directory",
           "source_kind": "学校教师主页学科索引",
           "classification_basis": "按公开院系名录与研究领域归入学科导航；不代替招生专业认定",
@@ -391,7 +457,7 @@
       ],
       "sources": [
         {
-          "url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=1&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+          "url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=2&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
           "title": "北京科技大学 · 学校教师主页学科索引",
           "claim": "导师名录列出王仲亮及学科方向；未注明招生年份。"
         }
@@ -745,7 +811,7 @@
           "direction": "方向待补",
           "year": null,
           "degree_level": "",
-          "url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=2&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+          "url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=3&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
           "record_kind": "faculty_directory",
           "source_kind": "学校教师主页学科索引",
           "classification_basis": "按公开院系名录与研究领域归入学科导航；不代替招生专业认定",
@@ -754,7 +820,7 @@
       ],
       "sources": [
         {
-          "url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=2&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+          "url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=3&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
           "title": "北京科技大学 · 学校教师主页学科索引",
           "claim": "导师名录列出马保中及学科方向；未注明招生年份。"
         }
@@ -778,7 +844,7 @@
           "direction": "方向待补",
           "year": null,
           "degree_level": "",
-          "url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=2&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+          "url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=3&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
           "record_kind": "faculty_directory",
           "source_kind": "学校教师主页学科索引",
           "classification_basis": "按公开院系名录与研究领域归入学科导航；不代替招生专业认定",
@@ -787,7 +853,7 @@
       ],
       "sources": [
         {
-          "url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=2&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+          "url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=3&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
           "title": "北京科技大学 · 学校教师主页学科索引",
           "claim": "导师名录列出杨树峰及学科方向；未注明招生年份。"
         }
@@ -889,39 +955,6 @@
           "url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=3&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
           "title": "北京科技大学 · 学校教师主页学科索引",
           "claim": "导师名录列出史成斌及学科方向；未注明招生年份。"
-        }
-      ],
-      "collected_at": "2026-10-15"
-    },
-    {
-      "name": "周恒",
-      "institution": "北京科技大学",
-      "department": "冶金与生态工程学院",
-      "discipline": "冶金工程",
-      "first_level_discipline": "0806 冶金工程",
-      "direction_group": "方向待补",
-      "interests": "方向待补",
-      "homepage": "https://faculty.ustb.edu.cn/HengZhou/zh_CN/index.htm",
-      "classification_basis": "按学校教师主页的学科索引归入一级学科导航；不代替该教师所在机构的招生专业认定。",
-      "discipline_assignments": [
-        {
-          "first_level_discipline": "0806 冶金工程",
-          "subject": "080600 冶金工程",
-          "direction": "方向待补",
-          "year": null,
-          "degree_level": "",
-          "url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=3&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
-          "record_kind": "faculty_directory",
-          "source_kind": "学校教师主页学科索引",
-          "classification_basis": "按公开院系名录与研究领域归入学科导航；不代替招生专业认定",
-          "note": "学校教师主页按学科索引列出（所在单位：冶金与生态工程学院，职称：副教授）；索引不含个人研究方向。导师资格与招生专业以当年招生公告为准。"
-        }
-      ],
-      "sources": [
-        {
-          "url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=3&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
-          "title": "北京科技大学 · 学校教师主页学科索引",
-          "claim": "导师名录列出周恒及学科方向；未注明招生年份。"
         }
       ],
       "collected_at": "2026-10-15"
@@ -1174,7 +1207,7 @@
           "direction": "方向待补",
           "year": null,
           "degree_level": "",
-          "url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=3&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+          "url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=4&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
           "record_kind": "faculty_directory",
           "source_kind": "学校教师主页学科索引",
           "classification_basis": "按公开院系名录与研究领域归入学科导航；不代替招生专业认定",
@@ -1183,7 +1216,7 @@
       ],
       "sources": [
         {
-          "url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=3&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+          "url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=4&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
           "title": "北京科技大学 · 学校教师主页学科索引",
           "claim": "导师名录列出李素芹及学科方向；未注明招生年份。"
         }
@@ -1570,7 +1603,7 @@
           "direction": "方向待补",
           "year": null,
           "degree_level": "",
-          "url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=4&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+          "url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=5&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
           "record_kind": "faculty_directory",
           "source_kind": "学校教师主页学科索引",
           "classification_basis": "按公开院系名录与研究领域归入学科导航；不代替招生专业认定",
@@ -1579,7 +1612,7 @@
       ],
       "sources": [
         {
-          "url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=4&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+          "url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=5&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
           "title": "北京科技大学 · 学校教师主页学科索引",
           "claim": "导师名录列出佘雪峰及学科方向；未注明招生年份。"
         }
@@ -1966,7 +1999,7 @@
           "direction": "方向待补",
           "year": null,
           "degree_level": "",
-          "url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=5&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+          "url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=6&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
           "record_kind": "faculty_directory",
           "source_kind": "学校教师主页学科索引",
           "classification_basis": "按公开院系名录与研究领域归入学科导航；不代替招生专业认定",
@@ -1975,7 +2008,7 @@
       ],
       "sources": [
         {
-          "url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=5&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
+          "url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=6&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
           "title": "北京科技大学 · 学校教师主页学科索引",
           "claim": "导师名录列出王恩会及学科方向；未注明招生年份。"
         }
@@ -2110,39 +2143,6 @@
           "url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=6&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
           "title": "北京科技大学 · 学校教师主页学科索引",
           "claim": "导师名录列出姜东滨及学科方向；未注明招生年份。"
-        }
-      ],
-      "collected_at": "2026-10-15"
-    },
-    {
-      "name": "姜敏",
-      "institution": "北京科技大学",
-      "department": "冶金与生态工程学院",
-      "discipline": "冶金工程",
-      "first_level_discipline": "0806 冶金工程",
-      "direction_group": "方向待补",
-      "interests": "方向待补",
-      "homepage": "https://faculty.ustb.edu.cn/MinJiang/zh_CN/index.htm",
-      "classification_basis": "按学校教师主页的学科索引归入一级学科导航；不代替该教师所在机构的招生专业认定。",
-      "discipline_assignments": [
-        {
-          "first_level_discipline": "0806 冶金工程",
-          "subject": "080600 冶金工程",
-          "direction": "方向待补",
-          "year": null,
-          "degree_level": "",
-          "url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=6&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
-          "record_kind": "faculty_directory",
-          "source_kind": "学校教师主页学科索引",
-          "classification_basis": "按公开院系名录与研究领域归入学科导航；不代替招生专业认定",
-          "note": "学校教师主页按学科索引列出（所在单位：冶金与生态工程学院，职称：教授）；索引不含个人研究方向。导师资格与招生专业以当年招生公告为准。"
-        }
-      ],
-      "sources": [
-        {
-          "url": "https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM=6&id=5634&lang=zh_CN&st=0&urltype=tsites.DisciplineTeacherList&wbtreeid=1014",
-          "title": "北京科技大学 · 学校教师主页学科索引",
-          "claim": "导师名录列出姜敏及学科方向；未注明招生年份。"
         }
       ],
       "collected_at": "2026-10-15"

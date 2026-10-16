@@ -21,6 +21,7 @@ import argparse
 import json
 import re
 import sys
+import time
 from concurrent.futures import ThreadPoolExecutor
 from urllib.parse import urljoin
 
@@ -42,133 +43,59 @@ UA = {
 }
 TIMEOUT = (10, 30)
 
-# Public faculty directories used to widen the engineering corpus. Each entry names
-# the parser that understands that school's layout; structures differ enough that a
-# per-source parser is required rather than one shared template.
-SOURCES: dict[str, dict] = {
-    "ustb_metallurgy": {
-        "parser": "ustb",
-        "code": "0806",
-        "institution": "北京科技大学",
-        "department": "冶金工程（学科索引）",
-        "name": "冶金工程",
-        "listing": ("https://faculty.ustb.edu.cn/xkjslb.jsp?totalpage=13&PAGENUM={page}"
-                    "&id=5634&lang=zh_CN&st=0"
-                    "&urltype=tsites.DisciplineTeacherList&wbtreeid=1014"),
-        "max_pages": 14,
-    },
-    "whu_surveying": {
-        "parser": "whu",
-        "code": "0816",
-        "institution": "武汉大学",
-        "department": "测绘学院",
-        "name": "测绘科学与技术",
-        "listing": "https://www.sgg.whu.edu.cn/szdw/zyjs.htm",
-        "max_pages": 1,
-    },
-}
-
-# The discipline index also lists non-teaching entries. Only clear personnel or
-# party/union offices are dropped; research institutes and collaborative centres
-# are legitimate research units and are kept.
-ADMINISTRATIVE_UNIT = re.compile(r"党委|党支部|办公室|工会|离退休|人事处|财务处|"
-                                 r"研究生院|教务处|机关")
+# Per-university source modules live in ``workbench/sources/`` and are discovered
+# at runtime by :func:`discover_sources`. See that package's docstring for the
+# contract a source module must satisfy.
 
 
-def fetch(url: str) -> str:
-    response = requests.get(url, headers=UA, timeout=TIMEOUT, verify=False)
-    response.raise_for_status()
-    response.encoding = response.apparent_encoding or "utf-8"
-    return response.text
+def fetch(url: str, attempts: int = 3, backoff: float = 1.5) -> str:
+    """Fetch one page, retrying transient timeouts.
 
-
-def parse_ustb(html: str, url: str, spec: dict) -> list[dict]:
-    """Extract teacher cards from one listing page.
-
-    Each card is ``li > a > div.namebox`` holding ``span``（职称）, ``h1``（姓名）
-    and the first ``p``（院系）; the two ``i`` counters at the bottom are platform
-    view/praise counts and are deliberately not read.
+    The USTB platform intermittently stalls. Without a retry a single read timeout
+    aborts that directory's pagination and silently truncates the roster (observed
+    live: 242 rows dropping to 150), which would make the batch irreproducible.
     """
-    soup = BeautifulSoup(html, "html.parser")
-    rows: list[dict] = []
-    for anchor in soup.select("a[href]"):
-        href = anchor["href"]
-        if not re.search(r"faculty\.ustb\.edu\.cn/[A-Za-z0-9_]+/zh_CN/index\.htm$", href):
-            continue
-        box = anchor.select_one("div.namebox")
-        if box is None:
-            continue
-        title_el = box.select_one("span")
-        name_el = box.select_one("h1")
-        dept_el = box.select_one("p")
-        if name_el is None:
-            continue
-        name = re.sub(r"\s+", "", name_el.get_text(" ", strip=True))
-        if not NAME_RE.fullmatch(name):
-            continue
-        title = re.sub(r"\s+", "", title_el.get_text(" ", strip=True)) if title_el else ""
-        dept = re.sub(r"\s+", "", dept_el.get_text(" ", strip=True)) if dept_el else ""
-        # Administrative and party-affairs offices appear in the same index but are
-        # not teaching units, so they are not recorded as a mentor's department.
-        if ADMINISTRATIVE_UNIT.search(dept):
-            continue
-        note = (f"学校教师主页按学科索引列出（所在单位：{dept or '未标注'}"
-                f"{'，职称：' + title if title else ''}）；索引不含个人研究方向。"
-                f"导师资格与招生专业以当年招生公告为准。")
-        rows.append(roster_row(
-            name, spec["institution"], dept or spec["name"], spec["code"],
-            NO_DIRECTION, href, url, "学校教师主页学科索引", note,
-        ))
-    return rows
+    last: Exception | None = None
+    for attempt in range(attempts):
+        try:
+            response = requests.get(url, headers=UA, timeout=TIMEOUT, verify=False)
+            response.raise_for_status()
+            response.encoding = response.apparent_encoding or "utf-8"
+            return response.text
+        except Exception as exc:  # noqa: BLE001 - retry any transport error
+            last = exc
+            if attempt < attempts - 1:
+                time.sleep(backoff * (attempt + 1))
+    raise last  # type: ignore[misc]
 
 
-def parse_whu(html: str, url: str, spec: dict) -> list[dict]:
-    """武汉大学测绘学院: ``p.title04`` gives the 研究所, ``h3`` gives the 职称.
+def discover_sources() -> dict[str, dict]:
+    """Load every source module in :mod:`workbench.sources`.
 
-    The page wraps everything in ``div.techer_list``; headings and the
-    ``ul.teacher`` blocks appear as siblings in document order, so a single pass
-    carries the current institute and rank forward. Names contain full-width
-    spaces ("邓　非"), which are removed before validation. Some entries link to a
-    placeholder ``#``, so those keep the listing page as their source.
+    Each module declares ``SPECS`` (where the directory lives and which discipline
+    it belongs to) plus ``parse(html, url, spec)``. Adding a university means adding
+    a module, not editing this collector.
     """
-    soup = BeautifulSoup(html, "html.parser")
-    for nav in soup.select("ul.am-nav, div.nei_left"):
-        nav.decompose()
-    root = soup.select_one("div.techer_list") or soup
-    rows: list[dict] = []
-    institute = ""
-    rank = ""
-    for node in root.find_all(["p", "h3", "ul"]):
-        classes = node.get("class") or []
-        if node.name == "p" and "title04" in classes:
-            institute = re.sub(r"\s+", "", node.get_text(" ", strip=True))
-            continue
-        if node.name == "h3":
-            rank = re.sub(r"\s+", "", node.get_text(" ", strip=True))
-            continue
-        if node.name != "ul" or "teacher" not in classes:
-            continue
-        for li in node.find_all("li"):
-            anchor = li.find("a")
-            if anchor is None:
-                continue
-            name = re.sub(r"[\s\u3000]+", "", anchor.get_text(" ", strip=True))
-            if not NAME_RE.fullmatch(name):
-                continue
-            href = (anchor.get("href") or "").strip()
-            homepage = href if href.startswith("http") else url
-            unit = "·".join(x for x in (institute, rank) if x) or spec["department"]
-            note = (f"学院专业教师名录按研究所与职称分组列出（{institute or '未标注所'}，"
-                    f"{rank or '职称未标注'}）；名录不含个人研究方向。"
-                    f"导师资格与招生专业以当年招生公告为准。")
-            rows.append(roster_row(
-                name, spec["institution"], unit, spec["code"],
-                NO_DIRECTION, homepage, url, "学院专业教师名录", note,
-            ))
-    return rows
+    import importlib
+    import pkgutil
 
+    from . import sources as sources_pkg
 
-PARSERS = {"ustb": parse_ustb, "whu": parse_whu}
+    found: dict[str, dict] = {}
+    for info in pkgutil.iter_modules(sources_pkg.__path__):
+        module = importlib.import_module(f"{sources_pkg.__name__}.{info.name}")
+        parse = getattr(module, "parse", None)
+        specs = getattr(module, "SPECS", None)
+        if parse is None or not specs:
+            continue
+        for spec in specs:
+            key = spec.get("key") or f"{info.name}:{spec.get('code')}"
+            if key in found:
+                raise ValueError(f"重复的来源 key：{key}")
+            found[key] = {**spec, "parser": parse, "module": info.name}
+    if not found:
+        raise ValueError("workbench/sources 下没有可用的来源模块")
+    return found
 
 
 def collect(pages_per_source: int | None = None) -> tuple[list[dict], list[dict], list[dict]]:
@@ -176,8 +103,8 @@ def collect(pages_per_source: int | None = None) -> tuple[list[dict], list[dict]
     rows: list[dict] = []
     pages: list[dict] = []
     failures: list[dict] = []
-    for key, spec in SOURCES.items():
-        parser = PARSERS[spec["parser"]]
+    for key, spec in discover_sources().items():
+        parser = spec["parser"]
         limit = pages_per_source or spec.get("max_pages", 1)
         seen: set[str] = set()
         for page_no in range(1, limit + 1):
