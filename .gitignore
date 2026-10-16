@@ -34,6 +34,15 @@ Thumbs.db
 desktop.ini
 .DS_Store
 
+# ── 一次性侦察/调试产物（新增采集来源时常常留下，不应入库）──
+# 采集脚本的临时页面、探查脚本与输出。放进 workbench/tests/fixtures/ 的正式快照
+# 不受影响，因为那条路径以 workbench/ 开头。
+tmp_*
+/tmp/
+workbench/tmp_*
+_scratch_*
+/probe_*
+
 # 本地备份目录（不入库）
 data/processed_bak_*/
 
