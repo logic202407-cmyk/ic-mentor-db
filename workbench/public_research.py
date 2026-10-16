@@ -135,20 +135,52 @@ def with_catalog_records(mentor_id, data):
     return data
 
 
+# Universities whose public faculty pages may be read. The explicit list is the
+# baseline; domains are also derived at runtime from the source registry, so adding
+# a school to ``workbench/sources/`` is enough and no longer needs an edit here.
+# (This was a repeated failure mode: cumt, muc, ustb and whu each needed a code
+# change before that school's personal pages could be read at all.)
+TRUSTED_UNIVERSITY_DOMAINS = (
+    'pku.edu.cn','ustc.edu.cn','bnu.edu.cn','ecust.edu.cn','ecnu.edu.cn',
+    'tsinghua.edu.cn','sjtu.edu.cn','ruc.edu.cn','fudan.edu.cn','cau.edu.cn',
+    'tongji.edu.cn','caas.cn','ucas.ac.cn','ucas.edu.cn',
+    'cumt.edu.cn','muc.edu.cn','ustb.edu.cn','whu.edu.cn',
+)
+
+
+@lru_cache(maxsize=1)
+def _registrable_domains() -> tuple[str, ...]:
+    """Institution domains seen in the source registry (e.g. ``whu.edu.cn``).
+
+    Only entries already curated into ``research_sources.json`` contribute, so this
+    does not widen access to arbitrary hosts — it just keeps the allowlist in step
+    with the sources the project has actually registered.
+    """
+    found: set[str] = set()
+    for entry in source_registry().values():
+        urls = [entry.get('homepage', ''), entry.get('identity_url', '')]
+        urls += [s.get('url', '') for s in entry.get('sources', []) if isinstance(s, dict)]
+        for url in urls:
+            host = urlsplit(url or '').hostname or ''
+            if not host or not host.endswith(('.edu.cn', '.ac.cn', '.cn')):
+                continue
+            parts = host.split('.')
+            # Keep the registrable part: <name>.edu.cn / <name>.ac.cn
+            for i in range(len(parts) - 2):
+                if parts[i + 1] in {'edu', 'ac'} and parts[i + 2] == 'cn':
+                    found.add('.'.join(parts[i:i + 3]))
+                    break
+    return tuple(sorted(found))
+
+
 def official_url(url):
     parsed = urlsplit(url)
-    trusted = ('pku.edu.cn','ustc.edu.cn','bnu.edu.cn','ecust.edu.cn','ecnu.edu.cn',
-               'tsinghua.edu.cn','sjtu.edu.cn','ruc.edu.cn','fudan.edu.cn','cau.edu.cn','tongji.edu.cn','caas.cn',
-               'ucas.ac.cn','ucas.edu.cn',
-               # Added with the 民族学 / 矿业工程 thin-discipline batch; each host is a
-               # university main domain reached only through a registered faculty directory.
-               'cumt.edu.cn','muc.edu.cn',
-               # Added with the engineering-scale batch (北京科技大学教师主页学科索引).
-               'ustb.edu.cn',
-               # Added with the engineering-scale batch (武汉大学测绘学院专业教师名录).
-               'whu.edu.cn')
     host = parsed.hostname or ''
-    return parsed.scheme in {'http','https'} and any(host == root or host.endswith('.'+root) for root in trusted) and not parsed.username and parsed.port in {None,80,443}
+    trusted = TRUSTED_UNIVERSITY_DOMAINS + _registrable_domains()
+    return (parsed.scheme in {'http','https'}
+            and any(host == root or host.endswith('.'+root) for root in trusted)
+            and not parsed.username
+            and parsed.port in {None,80,443})
 
 
 def fetch(url, refresh=False, _depth=0, _visited=()):
