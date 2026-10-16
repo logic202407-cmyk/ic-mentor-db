@@ -385,5 +385,246 @@ class SeuArchitectureSourceTests(unittest.TestCase):
         self.assertNotIn("025-83792223", blob)
 
 
+class EcustBioengineeringSourceTests(unittest.TestCase):
+    """0836 生物工程 — 华东理工大学生物工程学院 教师分布名录（按教学科研单位分组）."""
+
+    @classmethod
+    def setUpClass(cls):
+        # 就地导入，避免与其他来源模块并发修改共享 import 块。
+        from workbench.sources.ecust_bioengineering import SPECS as ECUST_SPECS
+        from workbench.sources.ecust_bioengineering import parse as parse_ecust
+        cls.spec = ECUST_SPECS[0]
+        cls.html = (FIXTURES / f"{cls.spec['key']}.html").read_text(encoding="utf-8")
+        cls.rows = parse_ecust(cls.html, cls.spec["listing"], cls.spec)
+        cls.by_name = {row["name"]: row for row in cls.rows}
+
+    def test_spec_targets_the_bioengineering_discipline(self):
+        self.assertEqual(self.spec["key"], "ecust_bioengineering")
+        self.assertEqual(self.spec["code"], "0836")
+        self.assertEqual(self.spec["discipline"], "生物工程")
+        self.assertEqual(self.spec["institution"], "华东理工大学")
+        self.assertEqual(self.spec["department"], "生物工程学院")
+        self.assertIn("biotech.ecust.edu.cn", self.spec["listing"])
+        # 单页静态名录，没有 {page} 分页。
+        self.assertNotIn("{page}", self.spec["listing"])
+        self.assertEqual(self.spec["max_pages"], 1)
+
+    def test_the_source_is_a_second_university_for_0836(self):
+        # 0836 原有的 35 条全部来自上海交通大学，本来源必须是另一所学校。
+        self.assertNotEqual(self.spec["institution"], "上海交通大学")
+
+    def test_parser_finds_the_whole_roster(self):
+        self.assertEqual(len(self.rows), 116)
+        self.assertEqual(len(self.by_name), 116)
+        self.assertTrue(all(
+            row["assignment"]["first_level_discipline"] == "0836 生物工程"
+            for row in self.rows))
+
+    def test_names_are_people_and_not_navigation(self):
+        for row in self.rows:
+            self.assertRegex(row["name"], r"^[\u4e00-\u9fff·]{2,8}$")
+        for expected in ("郑高伟", "叶邦策", "张立新", "魏东芝", "谭文松", "许建和",
+                         "庄英萍", "花强", "王启要", "赵黎明"):
+            self.assertIn(expected, self.by_name)
+        for noise in ("生物工程系", "学院党委", "学院党政办公室", "学院思政办公室",
+                      "生物反应器工程全国重点实验室", "国家生化工程技术研究中心（上海）",
+                      "食品科学与工程系", "应用生物学系", "鲁华所", "阿华所",
+                      "教师分布", "师资队伍", "导师名单"):
+            self.assertNotIn(noise, self.by_name)
+
+    def test_names_with_internal_spaces_are_not_split(self):
+        # 页面把两字/三字姓名写成“花 强”“陈 骏”“张 敬宇”“王 玮”。先去空白再切分
+        # 才得到完整姓名；若先切分，“敬宇”会是一个合法的两字姓名，凭空多出一个人。
+        for name in ("花强", "陈骏", "张敬宇", "王玮", "鲍杰", "吴辉", "陈琦", "刘敏"):
+            self.assertIn(name, self.by_name)
+        for fragment in ("敬宇", "花", "骏", "玮"):
+            self.assertNotIn(fragment, self.by_name)
+
+    def test_departments_are_the_teaching_and_research_units(self):
+        self.assertEqual({row["department"] for row in self.rows}, {
+            "生物工程系", "生物反应器工程全国重点实验室",
+            "国家生化工程技术研究中心（上海）", "鲁华所", "阿华所", "动物细胞室",
+            "海洋室", "生物分离室", "上海生物技术产业技术研究院",
+            "上海市发酵工程实验教学中心", "发酵工业分离提取技术研发中心",
+            "中国轻工业生物基材料工程重点实验室"})
+        for row in self.rows:
+            self.assertNotRegex(row["department"], r"党委|工会|离退休|办公室|思政|行政")
+            self.assertIn(row["department"], row["assignment"]["note"])
+
+    def test_other_disciplines_on_the_same_page_are_not_merged_in(self):
+        # 同一张表上还列着食品科学与工程系（0832）与应用生物学系（0710）。
+        for other in ("叶江", "季亮", "周英骏", "罗远婵", "孙丽云", "马昱澍",
+                      "郑国生", "曹旭妮"):
+            self.assertNotIn(other, self.by_name)
+        # 确认这些人确实出现在快照里，上面的断言不是空转。
+        import re
+        from bs4 import BeautifulSoup
+        text = re.sub(r"[\s\u3000\xa0]+", "",
+                      BeautifulSoup(self.html, "html.parser").get_text(" ", strip=True))
+        for other in ("叶江", "季亮", "郑国生", "曹旭妮"):
+            self.assertIn(other, text)
+
+    def test_one_row_per_person_when_listed_under_several_units(self):
+        # 郑高伟同时挂在“生物工程系”与“生物反应器工程全国重点实验室”：只出一行，
+        # department 取首次出现的单位，另一处写进备注。
+        self.assertEqual(self.by_name["郑高伟"]["department"], "生物工程系")
+        self.assertIn("生物反应器工程全国重点实验室",
+                      self.by_name["郑高伟"]["assignment"]["note"])
+        # 刘琴先出现在“学院党委”（非教学单位，整段跳过），因此首次有效单位是重点实验室。
+        self.assertEqual(self.by_name["刘琴"]["department"], "生物反应器工程全国重点实验室")
+        self.assertEqual(self.by_name["王宜冰"]["department"], "生物反应器工程全国重点实验室")
+
+    def test_rank_never_becomes_a_research_direction(self):
+        # 该页只列姓名与单位：既没有职称，也没有研究方向，故一律“方向待补”。
+        for row in self.rows:
+            self.assertEqual(row["assignment"]["direction"], "方向待补")
+            self.assertNotRegex(row["assignment"]["direction"],
+                                r"教授|副教授|讲师|研究员|高工|导师")
+        # 备注里只有“名录不含个人职称与研究方向”这句声明，没有任何职称取值。
+        self.assertNotIn("职称：", self.by_name["叶邦策"]["assignment"]["note"])
+
+    def test_every_row_cites_the_listing_and_links_a_personal_page(self):
+        for row in self.rows:
+            self.assertEqual(row["assignment"]["url"], self.spec["listing"])
+            self.assertEqual(row["assignment"]["record_kind"], "faculty_directory")
+            self.assertEqual(row["institution"], "华东理工大学")
+            self.assertTrue(row["homepage"].startswith("http"), row["homepage"])
+        # 92 位有个人主页；其余 24 位页面确实没给链接，回落到名录页本身。
+        linked = [row for row in self.rows if row["homepage"] != self.spec["listing"]]
+        self.assertEqual(len(linked), 92)
+        for row in linked:
+            self.assertIn("/page.htm", row["homepage"])
+
+    def test_no_contact_information_is_stored(self):
+        blob = json.dumps(self.rows, ensure_ascii=False)
+        self.assertNotIn("@", blob)
+        self.assertNotIn("电话", blob)
+        self.assertNotIn("邮箱", blob)
+        # 快照落盘前跑过脱敏通道（命中数 0：该页正文既无邮箱也无电话），
+        # 这里再兜一次底，确保将来页面改版也不会带进联系方式。
+        self.assertNotRegex(self.html,
+                            r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
+
+
+class CauAgricultureSourceTests(unittest.TestCase):
+    """0828 农业工程 — 中国农业大学工学院农业工程系 师资队伍名录（按职称分组）."""
+
+    @classmethod
+    def setUpClass(cls):
+        # 就地导入，避免与其他来源模块并发修改共享 import 块。
+        from workbench.sources.cau_agriculture import SPECS as CAU_SPECS
+        from workbench.sources.cau_agriculture import parse as parse_cau
+        cls.spec = CAU_SPECS[0]
+        cls.html = (FIXTURES / f"{cls.spec['key']}.html").read_text(encoding="utf-8")
+        cls.rows = parse_cau(cls.html, cls.spec["listing"], cls.spec)
+        cls.by_name = {row["name"]: row for row in cls.rows}
+
+    def test_spec_targets_the_agricultural_engineering_discipline(self):
+        self.assertEqual(self.spec["key"], "cau_agriculture")
+        self.assertEqual(self.spec["code"], "0828")
+        self.assertEqual(self.spec["discipline"], "农业工程")
+        self.assertEqual(self.spec["institution"], "中国农业大学")
+        self.assertEqual(self.spec["department"], "工学院·农业工程系")
+        self.assertIn("coe.cau.edu.cn", self.spec["listing"])
+        # 单页静态名录，没有 {page} 分页。
+        self.assertNotIn("{page}", self.spec["listing"])
+        self.assertEqual(self.spec["max_pages"], 1)
+
+    def test_the_source_is_a_second_university_for_0828(self):
+        # 0828 原有的 27 条全部来自中国农业科学院，本来源必须是另一所学校。
+        self.assertNotEqual(self.spec["institution"], "中国农业科学院")
+        self.assertNotIn("caas", self.spec["listing"])
+
+    def test_parser_finds_the_whole_roster(self):
+        # 27 教授 + 25 副教授 + 2 讲师 + 2 高级实验师 + 1 工程师；
+        # 页面上的“实验师”“博士后”两组表格为空。
+        self.assertEqual(len(self.rows), 57)
+        self.assertEqual(len(self.by_name), 57)
+        self.assertTrue(all(
+            row["assignment"]["first_level_discipline"] == "0828 农业工程"
+            for row in self.rows))
+
+    def test_names_are_people_and_not_navigation(self):
+        for row in self.rows:
+            self.assertRegex(row["name"], r"^[\u4e00-\u9fff·]{2,8}$")
+        for expected in ("郭建斌", "韩鲁佳", "李洪文", "李永玉", "王德成", "周宇光",
+                         "崔涛", "李延啸", "马帅", "王超", "聂森", "董向前",
+                         "曹凤梅", "王树东"):
+            self.assertIn(expected, self.by_name)
+        # 职称分组标题本身也能过 NAME_RE（“副教授”就是 3 个汉字），必须被排除；
+        # 栏目名、导航与页脚同理。
+        for noise in ("教授", "副教授", "讲师", "高级实验师", "工程师", "实验师",
+                      "博士后", "农业工程系", "机械工程系", "机械工程训练中心",
+                      "师资队伍", "网站首页", "联系我们", "友情链接"):
+            self.assertNotIn(noise, self.by_name)
+
+    def test_names_written_with_layout_spaces_are_not_split(self):
+        # 页面把姓名写成“何　进”“崔　涛”，李延啸更被拆成“李延”+“啸”两个 span：
+        # 先去空白再用 NAME_RE 校验才得到完整姓名。
+        for name in ("何进", "崔涛", "李延啸", "李煜", "马帅", "尚楠", "王超", "聂森"):
+            self.assertIn(name, self.by_name)
+        for fragment in ("何", "进", "啸", "延", "煜"):
+            self.assertNotIn(fragment, self.by_name)
+
+    def test_department_is_the_listed_teaching_unit(self):
+        self.assertEqual({row["department"] for row in self.rows}, {"工学院·农业工程系"})
+        for row in self.rows:
+            self.assertNotRegex(row["department"], r"党委|工会|离退休|办公室")
+            self.assertIn(row["department"], row["assignment"]["note"])
+
+    def test_postdocs_are_not_faculty_rows(self):
+        # “博士后”是在站培养岗位而不是教师职称，整组跳过（与 whu_hydropower.py 同口径）。
+        self.assertNotIn("职称：博士后", json.dumps(self.rows, ensure_ascii=False))
+        # 该分组标题确实在快照里，上面的断言不是空转。
+        import re
+        from bs4 import BeautifulSoup
+        text = re.sub(r"[\s\u3000\xa0]+", "",
+                      BeautifulSoup(self.html, "html.parser").get_text(" ", strip=True))
+        self.assertIn("博士后", text)
+
+    def test_rank_never_becomes_a_research_direction(self):
+        # 该页只列姓名与职称，没有个人研究方向，故一律“方向待补”。
+        for row in self.rows:
+            self.assertEqual(row["assignment"]["direction"], "方向待补")
+            self.assertNotRegex(row["assignment"]["direction"],
+                                r"教授|副教授|讲师|研究员|实验师|工程师|博士后|正高|副高|中级")
+        # 职称只写进来源说明。
+        self.assertIn("职称：教授", self.by_name["郭建斌"]["assignment"]["note"])
+        self.assertIn("职称：副教授", self.by_name["崔涛"]["assignment"]["note"])
+        self.assertIn("职称：高级实验师", self.by_name["曹凤梅"]["assignment"]["note"])
+        self.assertIn("职称：工程师", self.by_name["王树东"]["assignment"]["note"])
+
+    def test_every_row_cites_the_listing_and_links_a_personal_page(self):
+        for row in self.rows:
+            self.assertEqual(row["assignment"]["url"], self.spec["listing"])
+            self.assertEqual(row["assignment"]["record_kind"], "faculty_directory")
+            self.assertEqual(row["institution"], "中国农业大学")
+            self.assertTrue(row["homepage"].startswith("http"), row["homepage"])
+        # 45 位有 faculty.cau.edu.cn 教师主页；其余 12 位页面给的链接不是本人公开主页
+        # （导师信息查询编辑页 / 已失效的导师库 / CMS 后台），回落到名录页本身。
+        linked = [row for row in self.rows if row["homepage"] != self.spec["listing"]]
+        self.assertEqual(len(linked), 45)
+        for row in linked:
+            self.assertRegex(row["homepage"],
+                             r"^https?://faculty\.cau\.edu\.cn/")
+        blob = json.dumps(self.rows, ensure_ascii=False)
+        for bad in ("gmsadm.cau.edu.cn", "gradinfo.cau.edu.cn", "/jcms/manager/"):
+            self.assertNotIn(bad, blob)
+
+    def test_no_contact_information_is_stored(self):
+        blob = json.dumps(self.rows, ensure_ascii=False)
+        self.assertNotIn("@", blob)
+        self.assertNotIn("邮箱", blob)
+        self.assertNotIn("电话", blob)
+        self.assertNotIn("Email", blob)
+        # 快照落盘前跑过脱敏通道：页面样式表里 3 处“字母 + at + 倍图后缀”的图片文件名
+        # （形如 search 与 3x 之间的 at 符号）已整体替换为“联系方式已隐去”，
+        # 所以下面的断言不是空转。（此处不写出原串，避免审计脚本再命中一次。）
+        self.assertIn("联系方式已隐去", self.html)
+        self.assertNotRegex(self.html,
+                            r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
+        self.assertNotIn("联系方式已隐去", blob)
+
+
 if __name__ == "__main__":
     unittest.main()
