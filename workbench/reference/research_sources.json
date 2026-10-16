@@ -48849,5 +48849,754 @@
     "homepage": "http://www.ise.neu.edu.cn/2019/0109/c1425a8345/page.htm",
     "identity_url": "http://www.ise.neu.edu.cn/dqzdhyjs/list.htm",
     "source_kind": "学校教师主页"
+  },
+  "official-bdae812b023e0b550e59": {
+    "name": "柴利",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2022/0706/c72508a2660272/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-95351b415dd8f6fceeba": {
+    "name": "程鹏",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2013/0123/c72508a2660269/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-060dd97f9267860137d9": {
+    "name": "陈积明",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0225/c72508a2660271/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-3de01c27de482a32936d": {
+    "name": "陈金水",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0225/c72508a2660270/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-43e64d66bea767b78c26": {
+    "name": "邓瑞龙",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2019/1024/c72508a2660268/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-21176858eed01a557df1": {
+    "name": "郭秀珍",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2023/0907/c72508a2798474/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-f56d5dd821936d9939f5": {
+    "name": "顾超杰",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2021/1111/c72508a2660267/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-10098267e0ed9c09aad1": {
+    "name": "贺诗波",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2015/0511/c72508a2660266/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-80a90bdce3e4e347d196": {
+    "name": "卢建刚",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0225/c72508a2660263/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-8998eb77f30c6800ed5f": {
+    "name": "李亮",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2022/0310/c72508a2660264/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-688a23b5b7d88ef6c5b3": {
+    "name": "李硕",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2022/0310/c72508a2660265/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-680749e2ddcacb33a79c": {
+    "name": "李高峰",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2023/0106/c72508a2707073/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-63b179d2bf150b5d5938": {
+    "name": "孟文超",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2019/1225/c72508a2660262/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-b6588daceb2f5c4a0aff": {
+    "name": "苗菲",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2026/0721/c72508a3190287/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-0251fd58c0fba1d44224": {
+    "name": "孙优贤",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0225/c72508a2660259/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-3855cdc278c2226d0513": {
+    "name": "舒元超",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2023/0106/c72508a2707081/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-6dcf3e9247a155fe8c69": {
+    "name": "王聪",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2023/0426/c72508a2750346/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-0be9000c950eea6b57fa": {
+    "name": "徐正国",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2012/0215/c72508a2660257/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-7066bddbfd0287412e7b": {
+    "name": "徐金明",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2019/1024/c72508a2660258/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-682ffc1df24727f53210": {
+    "name": "叶琦",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2020/1104/c72508a2660254/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-6846b6350f749aef7d00": {
+    "name": "杨春节",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0225/c72508a2660256/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-073573ceda6203b21207": {
+    "name": "杨秦敏",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2012/0215/c72508a2660255/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-2a8cf8b194ceac3f2a0f": {
+    "name": "张智予",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2026/0226/c72508a3135438/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-130d2d72dbeed1c57d75": {
+    "name": "赵成成",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2021/0623/c72508a2660252/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-38e0831156afd2dceb28": {
+    "name": "蔡声泽",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2022/1025/c72509a2660353/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-0d6305ff418d30797d21": {
+    "name": "冯冬芹",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2022/0212/c72509a2660352/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-795d518627a14e12e9da": {
+    "name": "古勇",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0124/c72509a2660350/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-13c263982c93cf150273": {
+    "name": "高飞",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2020/0831/c72509a2660349/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-cc93b80769b90b27c1e9": {
+    "name": "胡瑞芬",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2012/0409/c72509a2660348/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-28a43ff2494f2df396c6": {
+    "name": "黄文君",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0225/c72509a2660347/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-c4fa8e29251e4d4524f5": {
+    "name": "金伟",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0124/c72509a2660344/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-55d8a6d0509e3246e82b": {
+    "name": "金建祥",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0225/c72509a2660345/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-30a6e9a6473fb8862f75": {
+    "name": "金晓明",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0225/c72509a2660343/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-9a3c1900a9d2ccfaadae": {
+    "name": "刘之涛",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2012/0220/c72509a2660339/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-2b3d959138f0eea789fb": {
+    "name": "刘勇",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0303/c72509a2660340/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-d4c57c040a48a989e444": {
+    "name": "李光",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0225/c72509a2660342/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-c2a5a90d7ffb99d95ee2": {
+    "name": "李鸿亮",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2012/0410/c72509a2660341/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-d48d45352e151e762f82": {
+    "name": "陆耿虹",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2025/0928/c72509a3087029/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-12197e243bae1333167e": {
+    "name": "陆豪健",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2021/0622/c72509a2660351/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-4ac2c24963b644efa0fe": {
+    "name": "毛维杰",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0225/c72509a2660338/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-ad3740cc3baa97b833f7": {
+    "name": "牟颖",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0225/c72509a2660337/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-26f82031db2a5df6eaf4": {
+    "name": "潘再生",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2018/0524/c72509a2660335/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-bf43489b69e0855c571d": {
+    "name": "潘宇",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2016/1102/c72509a2660336/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-310df6415cdb938a8a2a": {
+    "name": "施一明",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0124/c72509a2660334/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-1f426f41569a5a44c9fd": {
+    "name": "苏宏业",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0225/c72509a2660333/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-1fbacc0b4991f8b74c10": {
+    "name": "吴争光",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2012/0220/c72509a2660322/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-c03ec78a0d6d4ba74e85": {
+    "name": "吴俊",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0225/c72509a2660324/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-c8a5fd2dd40bfa42c2dc": {
+    "name": "吴维敏",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2023/0106/c72509a2707100/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-5bc20dc8a17ca582ed0f": {
+    "name": "王为民",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2018/0524/c72509a2660330/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-34a9305ed1fef97567ea": {
+    "name": "王宁",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0225/c72509a2660332/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-db4ccf0c3b9ac29b582a": {
+    "name": "王越",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2020/0218/c72509a2660326/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-295c636ed08cbca7a21e": {
+    "name": "王酉",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2012/0405/c72509a2660328/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-d28698e3f44608d45488": {
+    "name": "王雷",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2022/0107/c72509a2660331/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-e14904f6898c7f956e4c": {
+    "name": "徐巍华",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0124/c72509a2660310/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-10582ac48dae1b83e4fa": {
+    "name": "熊蓉",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0124/c72509a2660316/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-67743d7df9f051ba9200": {
+    "name": "许超",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2012/0409/c72509a2660313/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-297e1e51ca3f27e58332": {
+    "name": "谢磊",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0124/c72509a2660320/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-f3a420a619e0eb666b96": {
+    "name": "俞海斌",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0124/c72509a2660307/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-ce5851017b8d7830a60f": {
+    "name": "周建光",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0225/c72509a2660286/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-cc4dfba06d6bc20ddaa8": {
+    "name": "周春琳",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2012/0411/c72509a2660290/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-dc461788277fcef876a9": {
+    "name": "张建明",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0124/c72509a2660299/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-ee90c319dc851649285c": {
+    "name": "张江宁",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2026/0624/c72509a3181805/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-821f9ab86624e4cc4ca6": {
+    "name": "张涛",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2023/0106/c72509a2707101/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-639e36d2d8409f766bc6": {
+    "name": "朱强远",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2021/0622/c72509a2660278/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-beb2e0c66c2180a34eb4": {
+    "name": "朱秋国",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2017/0720/c72509a2660282/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-ef8f53b92a1f40a3bde7": {
+    "name": "朱阳",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2021/0622/c72509a2660277/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-d07149fb30c29321c95f": {
+    "name": "郑兴文",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2024/0314/c72509a2890666/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-ca85defb878751bc9a40": {
+    "name": "曹云琦",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2021/0622/c72510a2660315/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-7d9deda47e07aee09d75": {
+    "name": "曹雨齐",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2022/0511/c72510a2660317/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-44ad1c0afba52b378558": {
+    "name": "侯迪波",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0124/c72510a2660311/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-90d9538c0f3cdea7ce64": {
+    "name": "黄平捷",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0225/c72510a2660306/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-e594bceaaf492701cb37": {
+    "name": "黄志尧",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0225/c72510a2660303/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-cad8d98b4b2ae69c44cf": {
+    "name": "冀海峰",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0124/c72510a2660300/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-1545b0e2e76191d141ed": {
+    "name": "李艳文",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2026/0527/c72510a3167001/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-f82121ea57e8e115dce5": {
+    "name": "王保良",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0124/c72510a2660293/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-d036d85c1d2fc8ae614c": {
+    "name": "喻洁",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2016/1104/c72510a2660285/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-51429e14bf8f321b46de": {
+    "name": "杨江",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0124/c72510a2660289/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-d8ba9be1aaef344356c0": {
+    "name": "周洪亮",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0124/c72510a2660274/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-36f1e2411b23fb62bccb": {
+    "name": "张光新",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0225/c72510a2660281/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-dd87f12b1c7fe84735b7": {
+    "name": "张宏建",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0225/c72510a2660279/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-d028e8f2a5967199e02f": {
+    "name": "陈曦",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0225/c72511a2660329/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-00b927610eca2917716a": {
+    "name": "刘山",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0124/c72511a2660321/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-dca65d53c7b1034f7aec": {
+    "name": "李翔",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2023/1026/c72511a2817867/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-e0fb7eb57aeefb883a94": {
+    "name": "梁军",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0225/c72511a2660323/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-33e367bf32fd624db7f6": {
+    "name": "潘刚",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2025/0928/c72511a3087019/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-4fcfd5407741843542e5": {
+    "name": "任沁源",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2018/0524/c72511a2660319/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-6c25dd9411a232ca309c": {
+    "name": "宋执环",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0225/c72511a2660312/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-2f12f79485e0a502340e": {
+    "name": "宋春跃",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0124/c72511a2660314/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-68c95ee81f5644150b32": {
+    "name": "邵之江",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0225/c72511a2660318/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-ba604b9c0501921df237": {
+    "name": "王慧",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0225/c72511a2660308/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-a2c58f5e0d3fe5dcb770": {
+    "name": "徐祖华",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2012/0215/c72511a2660305/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-39e22a49c71e726b661c": {
+    "name": "张宇",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2015/1010/c72511a2660298/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-48a77312c6765d7b05e7": {
+    "name": "张新民",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2020/0901/c72511a2660296/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-41b51a564630f2dd103c": {
+    "name": "朱豫才",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0916/c72511a2660276/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-80547e617b57a9c7ffdb": {
+    "name": "赵均",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0225/c72511a2660292/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-5c311303c0e5c5e347fd": {
+    "name": "赵斐",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2021/1111/c72511a2660284/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-2b21e6b773f77fba2787": {
+    "name": "赵豫红",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0124/c72511a2660288/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-147106d1d5962040d9c9": {
+    "name": "刘兴高",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0225/c72521a2660309/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-95a5d82cf09767701d7b": {
+    "name": "阮伟",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2023/0106/c72521a2707096/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-8091f69205e8a09e2d10": {
+    "name": "唐晓宇",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2020/0901/c72521a2660304/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-c34a188b26054ac676d1": {
+    "name": "王东霞",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2020/1103/c72521a2660291/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-c731072546e773f9a82f": {
+    "name": "王文海",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0225/c72521a2660295/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-e9d92404db9326e1f48d": {
+    "name": "王智",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0124/c72521a2660301/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-f320ff20b5d14a7f4e9f": {
+    "name": "王竟亦",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2020/1104/c72521a2660287/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-d9d91ee845966a0b450d": {
+    "name": "叶炜",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2011/0124/c72521a2660283/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-c64c5a74e1b624f6137c": {
+    "name": "周海峰",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2021/0928/c72521a2660275/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-13fa99ec92a56dbe6e45": {
+    "name": "赵春晖",
+    "institution": "浙江大学",
+    "homepage": "http://www.cse.zju.edu.cn/2012/0331/c72521a2660280/page.htm",
+    "identity_url": "http://www.cse.zju.edu.cn/39568/list.htm",
+    "source_kind": "学校教师主页"
   }
 }
