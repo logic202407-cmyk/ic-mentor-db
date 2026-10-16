@@ -233,6 +233,12 @@ def main() -> int:
         registry[match["id"]] = reg
     research.SOURCE_REGISTRY.write_text(
         json.dumps(registry, ensure_ascii=False, indent=2) + "\n", encoding="utf8")
+    # The readable-domain allowlist and the registry reader are both cached. Without
+    # clearing them, a school added in this run would still be treated as unreadable
+    # and its personal pages would silently stay unenriched. Note that
+    # source_registry() itself is uncached — only the two cached helpers below.
+    research._registrable_domains.cache_clear()
+    research._read_registry.cache_clear()
 
     audit = {
         "date": COLLECTED_AT,
