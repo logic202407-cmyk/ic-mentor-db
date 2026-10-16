@@ -238,7 +238,7 @@ AI 芯片/加速器/体系结构 · 存算一体/新型存储 · 模拟/混合�
 
 需要 Node.js ≥ 18 与 Python ≥ 3.10（`pip install pypinyin python-docx`）。
 
-> **关于体积**：整仓工作副本约 67 MB，其中 `data/processed/mentor_ranked.json`（约 33 MB）保存了每位导师的逐篇论文证据，是核验与二次分析的基础；工作台自带的结构化资料（`workbench/reference/`，约 14 MB）让克隆后无需重新联网采集即可直接运行。
+> **关于体积**：整仓工作副本约 71 MB（用 `python tools/repo_size.py` 实测，不要依赖本行数字——它会随数据增长而过期）。其中 `data/processed/mentor_ranked.json`（约 33 MB）保存了每位导师的逐篇论文证据，是核验与二次分析的基础；工作台自带的结构化资料与来源模块快照（`workbench/reference/`、`workbench/tests/fixtures/`，合计约 16 MB）让克隆后无需重新联网采集即可直接运行、并离线跑来源解析测试。
 > 只想看结论的话，下载 `reports/` 下的单个 HTML 即可（自包含单文件，200–1500 KB）。
 > **关于可移植性**：所有脚本以自身所在目录的上一级作为仓库根目录，不含任何绝对路径，可克隆到任意位置运行。
 
