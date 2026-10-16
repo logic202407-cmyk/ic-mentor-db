@@ -957,5 +957,138 @@ class SeuAutomationSourceTests(unittest.TestCase):
                             r"(?:\+?86[-\s]?)?(?:0\d{2,3}[-\s]?\d{7,8}|1[3-9]\d{9})")
 
 
+class UpcPetroleumSourceTests(unittest.TestCase):
+    """0820 石油与天然气工程 — 中国石油大学（华东）石油工程学院 教师名录.
+
+    该学院的「教师名录」页（``/jsml_20276/list.htm``）服务端返回的 HTML 里没有任何
+    教师姓名（能匹配姓名的全是导航），真实名单由页面加载的一个数据文件
+    ``/_upload/tpl/07/a3/1955/template1955/js/json.js`` 提供——后缀是 .js，内容却是
+    ``var jsonBox = [ … ]`` 数据。快照 ``upc_petroleum.html`` 是**整页快照**，采集时把
+    那份数据文件就地内联在页面加载它的位置，因此本类完全离线，并且同时锁住两件事：
+    解析结果正确，以及「页内没有数据时模块会去读页面自己引用的那份数据文件」。
+    """
+
+    @classmethod
+    def setUpClass(cls):
+        # 就地导入，避免与其他来源并发修改共享 import 块。
+        from workbench.sources.upc_petroleum import SPECS as UPC_SPECS
+        from workbench.sources.upc_petroleum import parse as parse_upc
+        cls.spec = UPC_SPECS[0]
+        cls.html = (FIXTURES / f"{cls.spec['key']}.html").read_text(encoding="utf-8")
+        cls.rows = parse_upc(cls.html, cls.spec["listing"], cls.spec)
+        cls.by_name = {row["name"]: row for row in cls.rows}
+
+    def test_spec_targets_the_petroleum_discipline(self):
+        self.assertEqual(self.spec["key"], "upc_petroleum")
+        self.assertEqual(self.spec["code"], "0820")
+        self.assertEqual(self.spec["discipline"], "石油与天然气工程")
+        self.assertEqual(self.spec["institution"], "中国石油大学（华东）")
+        self.assertEqual(self.spec["department"], "石油工程学院")
+        # 条目引用的是人看的那个栏目页；页面本身没有分页（没有 wp_paging 标记，
+        # 也没有「每页/总共/页码」文案），名单一次由数据文件的 jsonBox 给出。
+        self.assertEqual(self.spec["listing"],
+                         "https://pe.upc.edu.cn/jsml_20276/list.htm")
+        self.assertNotIn("{page}", self.spec["listing"])
+        self.assertEqual(self.spec["max_pages"], 1)
+
+    def test_this_is_a_second_university_for_0820(self):
+        # 0811 之外，0820 原有 164 条全部来自中国石油大学（北京）。
+        self.assertNotEqual(self.spec["institution"], "中国石油大学（北京）")
+
+    def test_parser_finds_the_whole_roster(self):
+        self.assertEqual(len(self.rows), 221)
+        self.assertEqual(len(self.by_name), 221, "姓名应互不重复")
+        self.assertTrue(all(
+            row["assignment"]["first_level_discipline"] == "0820 石油与天然气工程"
+            for row in self.rows))
+
+    def test_parenthetical_labels_are_stripped_not_dropped(self):
+        # 40 条写成「姓名（兼职）」「姓名（院士）」「姓名（外院）」。若先做 2-8 汉字
+        # 校验再剥括注，这 40 条会被整体丢弃——这里锁住「剥掉且不丢人」。
+        for row in self.rows:
+            self.assertRegex(row["name"], r"^[\u4e00-\u9fff·]{2,8}$")
+            self.assertNotIn("（", row["name"])
+            self.assertNotIn("(", row["name"])
+        labelled = [r for r in self.rows if "名录标注" in r["assignment"]["note"]]
+        self.assertGreaterEqual(len(labelled), 30,
+                                "带括注的条目应保留下来，并把标注写进备注")
+
+    def test_departments_are_research_units_not_administration(self):
+        units = {row["department"] for row in self.rows}
+        self.assertGreaterEqual(len(units), 6)
+        for unit in units:
+            self.assertNotRegex(unit, r"党委|工会|离退休|办公室|机关|行政")
+
+    def test_direction_is_never_invented(self):
+        for row in self.rows:
+            self.assertEqual(row["assignment"]["direction"], "方向待补")
+
+    def test_every_row_cites_the_source_file(self):
+        for row in self.rows:
+            self.assertEqual(row["assignment"]["url"], self.spec["listing"])
+            self.assertTrue(row["assignment"]["note"])
+
+    def test_homepages_are_per_person_or_the_listing(self):
+        real = [r for r in self.rows if r["homepage"] != self.spec["listing"]]
+        self.assertGreaterEqual(len(real), 170)
+        for row in real:
+            # 列表里有一条给的是 http:// 而非 https://（同一站点同一路径），
+            # 因此只校验主机名，不强制协议。
+            self.assertTrue(
+                row["homepage"].startswith(("https://pe.upc.edu.cn/", "http://pe.upc.edu.cn/")),
+                f"{row['name']} 的主页不在学院域名下：{row['homepage']}")
+
+    def test_no_contact_information_is_stored(self):
+        blob = json.dumps(self.rows, ensure_ascii=False)
+        self.assertNotIn("@", blob)
+        self.assertNotIn("邮箱", blob)
+        self.assertNotIn("电话", blob)
+        self.assertNotIn("Email", blob)
+        self.assertNotIn("Tel", blob)
+
+    def test_fixture_is_redacted(self):
+        self.assertNotRegex(self.html,
+                            r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
+        self.assertNotRegex(self.html,
+                            r"(?:\+?86[-\s]?)?(?:0\d{2,3}[-\s]?\d{7,8}|1[3-9]\d{9})")
+
+    def test_the_json_payload_is_javascript_not_strict_json(self):
+        # 这条锁住模块文档里写明的坑：该文件键名可不带引号、字符串单双引号混用、
+        # 还有尾随逗号，json.loads 会失败，必须先规范化。
+        self.assertIn("jsonBox", self.html)
+        with self.assertRaises(json.JSONDecodeError):
+            json.loads(self.html[self.html.index("["):self.html.rindex("]") + 1])
+
+    def test_the_whole_college_is_covered_not_one_institute(self):
+        # 这份名录自带 dep 字段，221 人分布在学院全部 6 个研究所与 2 个中心；
+        # 逐单位锁住人数，避免「只解析出某一个系」被当成全院覆盖。
+        counts = {}
+        for row in self.rows:
+            counts[row["department"]] = counts.get(row["department"], 0) + 1
+        self.assertEqual(counts, {
+            "油气藏工程研究所": 54, "油气田化学研究所": 53, "油气井工程研究所": 34,
+            "油气开采工程研究所": 23, "海洋油气与水合物研究所": 22,
+            "智能油气田研究所": 19, "实验教学中心": 12, "公共测试中心": 4,
+        })
+        # 院系名一律取自数据文件的 dep，没有一条回落到笼统的学院名。
+        self.assertNotIn("石油工程学院", counts)
+
+    def test_shell_page_falls_back_to_the_data_file_the_page_loads(self):
+        # 真实抓取时页面是空壳：页内没有 jsonBox 数据，模块必须去读页面自己引用的
+        # 那个数据文件（而不是随便哪个 .js，也不是解析出一份空名单）。
+        import re as _re
+
+        from workbench.sources.upc_petroleum import DATA_FILE, _feed_source
+        from bs4 import BeautifulSoup
+
+        shell = _re.sub(r"<script>\s*var jsonBox.*?</script>", "", self.html, flags=_re.S)
+        self.assertNotIn("var jsonBox", shell)
+        # 渲染脚本仍然提到 jsonBox（12 处），所以「页内出现 jsonBox」绝不能当作拿到数据。
+        self.assertIn("jsonBox", shell)
+        self.assertEqual(_feed_source(BeautifulSoup(shell, "html.parser"),
+                                      self.spec["listing"]), DATA_FILE)
+        self.assertIn("json.js", DATA_FILE)
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -50263,5 +50263,1552 @@
     "homepage": "http://automation.seu.edu.cn/zyc1/list.htm",
     "identity_url": "https://automation.seu.edu.cn/_wp3services/generalQuery?queryObj=teacherHome&siteId=338&pageIndex=1&rows=999&conditions=%5B%7B%22field%22%3A+%22published%22%2C+%22value%22%3A+%221%22%2C+%22judge%22%3A+%22%3D%22%7D%5D&orders=%5B%7B%22field%22%3A+%22letter%22%2C+%22type%22%3A+%22asc%22%7D%5D&returnInfos=%5B%7B%22field%22%3A+%22title%22%2C+%22name%22%3A+%22title%22%7D%2C+%7B%22field%22%3A+%22post%22%2C+%22name%22%3A+%22post%22%7D%2C+%7B%22field%22%3A+%22degree%22%2C+%22name%22%3A+%22degree%22%7D%2C+%7B%22field%22%3A+%22exField1%22%2C+%22name%22%3A+%22exField1%22%7D%2C+%7B%22field%22%3A+%22cnUrl%22%2C+%22name%22%3A+%22cnUrl%22%7D%2C+%7B%22field%22%3A+%22department%22%2C+%22name%22%3A+%22department%22%7D%5D&articleType=1&level=1",
     "source_kind": "学校教师主页"
+  },
+  "official-e82aeac8992c5d8d343e": {
+    "name": "步玉环",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2019/0113/c20539a397026/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-9d344f5748afe240372a": {
+    "name": "倪红坚",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0429/c20539a397034/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-9006f06e60eeb17976e6": {
+    "name": "张卫东",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0429/c20539a397033/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-671afa33cb4d73d3817b": {
+    "name": "廖华林",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0428/c20539a397010/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-0b7b76d0d5b33ecf6426": {
+    "name": "王成文",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2018/0509/c20539a397012/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-eecd01752b4edee0b804": {
+    "name": "庞学玉",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2018/1219/c20539a397008/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-7faaae2a412dccb86933": {
+    "name": "张锐",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0428/c20539a397020/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-34ec760c7800b44bf813": {
+    "name": "史玉才",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0428/c20539a397014/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-6934ac4c1ce2dab6e40b": {
+    "name": "刘永旺",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2018/0413/c20539a397022/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-d561367da5cf986884bd": {
+    "name": "闫传梁",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2019/0305/c20539a397018/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-5b02509206c22d30f4cf": {
+    "name": "王子振",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2018/1220/c20539a397009/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-20a0089dada4318b55b5": {
+    "name": "时贤",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2018/1211/c20539a397013/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-5ee5d95faebf4f1842ab": {
+    "name": "金业权",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0322/c20539a397042/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-ea8249e190ac75fb0f38": {
+    "name": "黄根炉",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0428/c20539a397036/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-112e3b75a670ba35eaed": {
+    "name": "王明波",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0428/c20539a397037/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-032d0484a5962adcca83": {
+    "name": "王京印",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2013/0821/c20539a397044/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-37d82b475ef5e7502eda": {
+    "name": "朱丽红",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2017/1129/c20539a397028/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-782126b14a0991b4fd9f": {
+    "name": "韩忠英",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2019/0109/c20539a397023/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-18d1fb384c845725d477": {
+    "name": "陈泽华",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2021/1203/c20539a397016/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-3b900d3cdd5c0cdbaa5f": {
+    "name": "周卫东",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2021/0106/c20539a397021/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-3cbf36de83b4ac486583": {
+    "name": "王鹏",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2018/1211/c20539a397017/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-8ce0d6e3bb5fc8a36b4b": {
+    "name": "杜玉昆",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2018/1227/c20539a397027/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-c24b6be5ae41b4f66a9d": {
+    "name": "黄勇",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0516/c20539a397030/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-32b1834a0be286f54d0a": {
+    "name": "李兆敏",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2018/1105/c20540a397065/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-a725e32feaec1838237d": {
+    "name": "陈德春",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0711/c20540a397058/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-8a98037c0cb0ee2ae40c": {
+    "name": "曲占庆",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0429/c20540a397067/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-abe35f408d45090ead96": {
+    "name": "董长银",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0428/c20540a397057/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-efb27181983de9389aa3": {
+    "name": "罗明良",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2019/0114/c20540a397049/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-85fb9a338c8502b5e626": {
+    "name": "李宾飞",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0428/c20540a397059/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-fcfc600934b924eae81b": {
+    "name": "齐宁",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2017/1129/c20540a397053/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-21180315587161141e9c": {
+    "name": "李松岩",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0428/c20540a397055/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-7790787852768149dc57": {
+    "name": "郭天魁",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2019/0222/c20540a397047/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-5cd57bb8731f5c3873b1": {
+    "name": "吴飞鹏",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2018/1108/c20540a397052/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-74dcdd76ac7a070eec23": {
+    "name": "刘拥赞",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2025/0226/c20540a451271/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-c7d7f2f915d8aeffa93c": {
+    "name": "薛建泉",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2015/0416/c20540a397072/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-e6b98dfba1dc48d1a43f": {
+    "name": "王卫阳",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2013/0820/c20540a397073/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-a3d356925d1fe4881c28": {
+    "name": "冯国强",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0428/c20540a397068/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-b023e8632d9f4be4a734": {
+    "name": "隋义勇",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2018/0308/c20540a397051/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-25e811b4face44d0963e": {
+    "name": "刘陈伟",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2018/0308/c20540a397045/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-e53c33d4066bd5de1e75": {
+    "name": "刘静",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2017/1129/c20540a397050/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-a6170648effc4c8475c3": {
+    "name": "姚军",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0429/c20541a397117/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-4435730790aedf20f467": {
+    "name": "冯其红",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2017/0515/c20541a397112/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-287ddf8f6aac3d5c6ea0": {
+    "name": "苏玉亮",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2017/1121/c20541a397095/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-e3d92cba18104b503392": {
+    "name": "侯健",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2017/0516/c20541a397079/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-c930804c5416911d78a8": {
+    "name": "李淑霞",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0428/c20541a397194/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-9598f381ef7252f39339": {
+    "name": "孙仁远",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0429/c20541a397119/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-4aec252f15a486a33950": {
+    "name": "杜殿发",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0428/c20541a397126/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-44748d4903b29c39dad8": {
+    "name": "谷建伟",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0428/c20541a397083/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-574a2b3eda41b9518b86": {
+    "name": "崔传智",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2019/0109/c20541a397085/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-77060c14fc3ebb55ee97": {
+    "name": "袁彬",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2020/1223/c20541a397093/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-6b7f449d900654339789": {
+    "name": "姚传进",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2019/0104/c20541a397096/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-de2f0e4436333388f865": {
+    "name": "钟俊杰",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2021/0112/c20541a397078/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-21a9ce72332bbce2a2e9": {
+    "name": "杨永飞",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2018/0510/c20541a397098/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-9070b5154b18544a0c1d": {
+    "name": "孙海",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2017/0414/c20541a397091/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-3bab339fe09d4d9c643e": {
+    "name": "王森",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2018/0922/c20541a397086/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-ad457e4f6e9d0928faa7": {
+    "name": "王文东",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2018/1220/c20541a397076/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-eff5bca67b77c4147577": {
+    "name": "孙致学",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2017/1113/c20541a397087/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-e5d41b21c4a8ed63f1d9": {
+    "name": "孙晓飞",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2018/0404/c20541a397106/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-d10ee8e6010fcf2116ff": {
+    "name": "陈卓",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2026/0408/c20541a487182/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-eb3b2a9929c3b7e9738e": {
+    "name": "吕爱民",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0428/c20541a397121/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-be3508f2d3deeb851210": {
+    "name": "范海军",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2019/0109/c20541a397107/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-5d87c52d96bc91258c61": {
+    "name": "王建忠",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2019/0301/c20541a397088/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-0c8c9bf5c1b94c4585f3": {
+    "name": "姚同玉",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2013/0812/c20541a397127/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-623442d43c86509e2f18": {
+    "name": "吴明录",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2018/0625/c20541a397108/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-4691c51babbaf53b6c91": {
+    "name": "张亮",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2018/1209/c20541a397105/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-e2a1b82099be147a84c9": {
+    "name": "李明川",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2019/0108/c20541a397101/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-aaf8c6e79b4e617031ee": {
+    "name": "黄朝琴",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2018/0409/c20541a397109/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-1c6bef0f37eb396862c2": {
+    "name": "张先敏",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0516/c20541a397092/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-80093b7083147f62bdc9": {
+    "name": "刘永革",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2017/1129/c20541a397094/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-9d7e6466f99e11e15c68": {
+    "name": "李蕾",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2020/0304/c20541a397090/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-f54751d5c926e96f3bdf": {
+    "name": "李亚军",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2018/0116/c20541a397075/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-517e3825dbbd9983bb48": {
+    "name": "张纪远",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2019/1108/c20541a397100/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-cfe5a7125795ec03d7dc": {
+    "name": "韦贝",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2019/1108/c20541a397081/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-8f75653b8b83491f9a9a": {
+    "name": "杜庆军",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2017/1204/c20541a397082/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-3d882cf1c83c174a4d8c": {
+    "name": "张磊",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2017/0925/c20541a397111/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-ece1807a6bd17aef333d": {
+    "name": "桑茜",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2020/0904/c20541a397102/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-73fa86a23a1fdb259dde": {
+    "name": "田伟兵",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2024/1025/c20541a443805/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-7132766ed082602b2184": {
+    "name": "王月英",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0516/c20541a397114/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-5e9e54f197df62e2e55a": {
+    "name": "张建光",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0428/c20541a397080/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-07e143ae23a318c9f624": {
+    "name": "陈付真",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0428/c20541a397125/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-91a0fd7103d7936dc506": {
+    "name": "韩霄",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-17ee4976613364ecbdf4": {
+    "name": "李阳",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-5b4716dedd036fa59977": {
+    "name": "张东晓",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-0f74872caf5abdbf587d": {
+    "name": "陈掌星",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-33ebf54b12da29d32237": {
+    "name": "孙金声",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2017/1130/c20542a397159/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-5b722e4580a229695d84": {
+    "name": "戴彩丽",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2019/0118/c20542a397134/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-5e10dd981ffa4f13d61b": {
+    "name": "张贵才",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0428/c20542a397168/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-9dfe24793e58b56b8a9f": {
+    "name": "王业飞",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2019/0301/c20542a397142/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-acf6cf41d99505b6d901": {
+    "name": "葛际江",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0428/c20542a397172/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-1243b892d9e489fc1228": {
+    "name": "吕开河",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0428/c20542a397151/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-8ac031f3baeed86503c6": {
+    "name": "王彦玲",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0428/c20542a397169/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-e190db57c67f14b279d7": {
+    "name": "刘德新",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2018/0716/c20542a397130/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-06253f759509c2603a6d": {
+    "name": "黄维安",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0516/c20542a397150/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-e29b05d30d541cdfd10f": {
+    "name": "赵明伟",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0516/c20542a397146/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-e9f1682109157e576ac9": {
+    "name": "张丽媛",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2021/1123/c20542a397131/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-3e86fa695df3597d8650": {
+    "name": "赵光",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2018/1212/c20542a397141/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-f86db19b8ace18505ae4": {
+    "name": "范海明",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2018/0911/c20542a397138/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-f4b8023dba2ecb557e2a": {
+    "name": "贾寒",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2018/0914/c20542a397137/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-59be1bea5b675ef6b36d": {
+    "name": "李美春",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2022/0901/c20542a397133/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-862e6aa4824402b62f01": {
+    "name": "白英睿",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2018/1213/c20542a397132/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-789ab9a95d9926222863": {
+    "name": "刘敬平",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/1213/c20542a397152/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-54c7904ac573c2887781": {
+    "name": "李琳",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2017/1204/c20542a397147/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-56f027326bddb2306dcc": {
+    "name": "吴一宁",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2017/1204/c20542a397145/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-58bd62975e24d90d0241": {
+    "name": "郑俊杰",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2025/0108/c20542a450133/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-031aca3e6a0057eac883": {
+    "name": "钟汉毅",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2017/1129/c20542a397144/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-fab1aec46644533203a7": {
+    "name": "赵欣",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2018/1227/c20542a397128/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-d42594634d28d60a83ad": {
+    "name": "王金堂",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2018/1211/c20542a397148/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-c0d7c3bfbf9834e26296": {
+    "name": "黄贤斌",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2019/1029/c20542a397140/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-9cf10d1a94725a874073": {
+    "name": "杨红斌",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2018/1214/c20542a397136/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-82f3070ab8cd9201d0c5": {
+    "name": "孙明波",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0516/c20542a397164/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-02bbb9380ee1e5c48a7e": {
+    "name": "王富华",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0519/c20542a397162/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-38250aaf95fe58386bcf": {
+    "name": "蒋平",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0428/c20542a397171/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-00ef697da09f4f11de35": {
+    "name": "宫厚健",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2018/0426/c20542a397149/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-36eb3d9f8920e80b7717": {
+    "name": "裴海华",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2018/0927/c20542a397139/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-e1d028ded4f1a213650e": {
+    "name": "曹杰",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2018/1228/c20542a397154/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-b158933b23cb4b4b4fa9": {
+    "name": "丁名臣",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0428/c20542a397153/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-890eed4d3486ab9a4662": {
+    "name": "金家锋",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2021/0908/c20542a397143/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-236812040641d0425624": {
+    "name": "孙永鹏",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2017/1205/c20542a397135/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-6694543932400bf4e76c": {
+    "name": "刘逸飞",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2020/0907/c20542a397129/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-0dc3bd30af9d82d7228f": {
+    "name": "黎剑",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2024/0313/c20542a425310/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-7e40353ce926b56247ff": {
+    "name": "徐龙",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2018/1128/c20542a397157/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-0352b91bc20084f52a3d": {
+    "name": "廖波",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2025/0317/c20542a452523/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-b63218ba64c20e4ce3e8": {
+    "name": "江琳",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0516/c20542a397163/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-46043cb9ca183b3c22a0": {
+    "name": "陈五花",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0428/c20542a397161/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-e00925dd59175a4f34da": {
+    "name": "刘合",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-8333824bef95397fbfca": {
+    "name": "李勇",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-0ffbcaa98f476c4281b2": {
+    "name": "曹立虎",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-0055d6fb4d5e764ebae6": {
+    "name": "戴城",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-7dba0cd57546c5fbf435": {
+    "name": "陆程",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-4c22f6441f128eed97fb": {
+    "name": "白莉",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2023/0307/c20543a397260/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-84a00971ccbfdb381f24": {
+    "name": "孙宝江",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2018/0921/c20544a397186/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-70b4d0b31046572f26ab": {
+    "name": "王腾",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0427/c20543a397174/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-b1a44a09a0ffed00c173": {
+    "name": "徐加放",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2018/0719/c20544a397188/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-df1865cfbd3ed4ba30e5": {
+    "name": "王志远",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/1209/c20544a397192/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-9c277fc22e160272475f": {
+    "name": "高永海",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0519/c20544a397193/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-d730e16ce4dab672b049": {
+    "name": "刘均荣",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2018/0426/c20547a397224/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-58d7b83e1810e4a672d5": {
+    "name": "钟杰",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2022/0318/c20544a397190/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-bd7cf4e72ebe8cd9eac2": {
+    "name": "尹邦堂",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2017/1129/c20544a397189/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-8d5523c3830d046084c8": {
+    "name": "刘成文",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0519/c20544a397195/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-79d938714b9bb13177ff": {
+    "name": "李志刚",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2017/0714/c20547a397229/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-1d77171b0972e6aed358": {
+    "name": "高慧",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0519/c20544a397199/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-377b65ecf4d1c9536928": {
+    "name": "李爱华",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0519/c20544a397204/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-1476cf2fdbc7976fd63f": {
+    "name": "付静",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0519/c20544a397202/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-ddbec79e3704a20de9f2": {
+    "name": "陈立涛",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2017/1129/c20544a397184/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-e6501705d77b7d465a37": {
+    "name": "付光明",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2018/0318/c20544a397185/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-7f4db233cb27e493d22a": {
+    "name": "李昊",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0519/c20544a397191/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-b46b15706657d98346f3": {
+    "name": "王锴",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0929/c20544a397187/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-05d6aee67ccab1c3161a": {
+    "name": "郝永卯",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0428/c20544a397084/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-00705f362086c8c3b31f": {
+    "name": "赵欣欣",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0519/c20544a397198/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-09cea96e44f3d3ac5f40": {
+    "name": "张剑波",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2023/0309/c20544a397537/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-ecb82b05fc926c5a11aa": {
+    "name": "刘玉泉",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0519/c20544a397200/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-4e8e3f63ee12ba9fb789": {
+    "name": "汪海阁",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-8363f31d39af0583708e": {
+    "name": "张凯",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2018/1109/c20541a397089/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-e548901d0cb7b2d8b8dc": {
+    "name": "张黎明",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2017/1129/c20540a397054/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-b08e2e04c6bb73ebec7d": {
+    "name": "孙文跃",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2023/0216/c20547a397222/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-96b36b689ad008dea88b": {
+    "name": "张伟",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2023/0425/c20547a401884/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-1324250b7387bc609c09": {
+    "name": "许玉强",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2018/1211/c20539a397015/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-18c2488aaafeed5830da": {
+    "name": "徐建春",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2017/1204/c20547a397226/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-f338ca5c8d7b94e36f09": {
+    "name": "郭胜来",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2018/1130/c20539a397011/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-93d93b71a77c1408797a": {
+    "name": "薛小明",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2026/0119/c20547a482946/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-c6320a12620be96ca018": {
+    "name": "樊灵",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2015/0416/c20547a397230/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-22fe9dda32c6bb9c83e0": {
+    "name": "宋洵成",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0428/c20539a397039/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-4ea7bd44ff9061b0a57e": {
+    "name": "武加锋",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2019/0225/c20539a397025/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-ee7bb96f081c2b1a060d": {
+    "name": "王晓璞",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2019/0109/c20547a397223/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-330eb53ed53fae8671a3": {
+    "name": "樊冬艳",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2017/1129/c20541a397104/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-4cc489b981ce87ec2a46": {
+    "name": "柳华杰",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2019/0109/c20539a397024/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-6ea5de5c74dde930bd5f": {
+    "name": "严侠",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2019/1107/c20541a397099/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-4b338059217b052d0a25": {
+    "name": "张超",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2018/1219/c20540a397048/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-e3d63bc086a129f9e598": {
+    "name": "刘树阳",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2019/1112/c20547a397225/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-b4466894c3705cb7594a": {
+    "name": "刘峻嵘",
+    "institution": "中国石油大学（华东）",
+    "homepage": "http://pe.upc.edu.cn/2023/0301/c20547a395946/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-8d2c117fe22ab3460ad2": {
+    "name": "杨宁宁",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-aa658ce997790f7ce68d": {
+    "name": "郭辛阳",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0426/c20545a397208/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-0dd32766f763d2d1bede": {
+    "name": "鲍丙生",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0320/c20545a397218/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-b81d89dde215834f6dfa": {
+    "name": "战永平",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0428/c20545a397209/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-0c3f2a8b21c2c4a64851": {
+    "name": "张俨彬",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0315/c20545a397216/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-019231fef8d6b73862b6": {
+    "name": "成向阳",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2018/1219/c20546a397212/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-520f04abeb3e97630262": {
+    "name": "付帅师",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0428/c20545a397207/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-4dac23b8eb5beb30ea03": {
+    "name": "孙铭勤",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0519/c20545a397214/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-9f658a480f782b1769e8": {
+    "name": "王增宝",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0428/c20545a397210/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-7edab9d12de6d055535a": {
+    "name": "周龙昌",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2018/1211/c20546a397221/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-a624eab203664dc5d0bb": {
+    "name": "耿杰",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0428/c20545a397206/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-285666bcad088ba03e04": {
+    "name": "刘志慧",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0427/c20545a397215/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-aac3a57271c8101977e1": {
+    "name": "李成华",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0519/c20545a397217/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-b6ddaece6be93f29836d": {
+    "name": "张洋洋",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2017/1205/c20545a397213/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-f52faac8d6f40e472ba1": {
+    "name": "赵海龙",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2018/1211/c20546a397220/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-61496fc6f5f832b1b806": {
+    "name": "李树群",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2018/1211/c20546a397219/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-35575a2ff078dc64df05": {
+    "name": "牛继磊",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-42309927dc15619315da": {
+    "name": "吴能友",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-798209e364e729fb28ca": {
+    "name": "杨勇",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-b0b41772a8492ca381f6": {
+    "name": "慕立俊",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-9d920ee072dcea80caa4": {
+    "name": "徐耀东",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-07a09ce82bfbffd98b3d": {
+    "name": "田同辉",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-65e3193c34e16a33cd94": {
+    "name": "黄迎松",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-739278d36bcfbcf49c61": {
+    "name": "郑家朋",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-26f4e4b950b47648054e": {
+    "name": "祝仰文",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-2329d99d7ed7edecf528": {
+    "name": "明玉坤",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-8273394ab4ee900e2c10": {
+    "name": "安森友",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-65dc645d037021a44e94": {
+    "name": "张敬辉",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-93562518dd1cd2ffb570": {
+    "name": "张庆生",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-d66d57bf21494fd31145": {
+    "name": "王金铸",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-fba5ba5ddf49fc120a4c": {
+    "name": "李公让",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-5ba7ca922ffcf9cf0ddb": {
+    "name": "陈铭",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2020/0904/c20540a397046/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-c5cba53e2a1dafe58a68": {
+    "name": "周童",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2016/0320/c20540a397070/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-185dbc4aa51ea99b69d2": {
+    "name": "马建民",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-5959dbc03600d7356ec8": {
+    "name": "蒋廷学",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-c50d2eb1e651ce92aaa2": {
+    "name": "唐述凯",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-14550aef4cff5a1d3a96": {
+    "name": "范鹏",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-03a6cb08a826d86dfd20": {
+    "name": "李罗鹏",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-bd59cf76e1197506bfb8": {
+    "name": "苏义脑",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-7b356fdc1af0b9a3f190": {
+    "name": "赵健",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/2023/0308/c20550a397380/page.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-daee0e93c11e6ef5afae": {
+    "name": "陈二丁",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-484ce66d690147331b9e": {
+    "name": "周延军",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-5da4fba13e6bb336ea7f": {
+    "name": "孙峰",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-8d7d093d443fe64e4a14": {
+    "name": "臧艳彬",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-eeb65252e4aaa9604737": {
+    "name": "蓝强",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-495d034b20b289dc5f18": {
+    "name": "刘振东",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-2c9f4c9f266edbe38098": {
+    "name": "李华周",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-dba4de93929f88f3be0b": {
+    "name": "刘均一",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-263c065ae99caae69fc2": {
+    "name": "段文广",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-e5baf74e06b4fddc2089": {
+    "name": "程荣超",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
+  },
+  "official-3b424b60cec872045e70": {
+    "name": "方吉超",
+    "institution": "中国石油大学（华东）",
+    "homepage": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "identity_url": "https://pe.upc.edu.cn/jsml_20276/list.htm",
+    "source_kind": "学校教师主页"
   }
 }
