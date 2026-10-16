@@ -1,0 +1,808 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>教师分布</title>
+
+<link type="text/css" href="/_css/_system/system.css" rel="stylesheet"/>
+<link type="text/css" href="/_upload/site/1/style/1/1.css" rel="stylesheet"/>
+<link type="text/css" href="/_upload/site/00/7e/126/style/104/104.css" rel="stylesheet"/>
+<link type="text/css" href="/_js/_portletPlugs/sudyNavi/css/sudyNav.css" rel="stylesheet" />
+<link type="text/css" href="/_js/_portletPlugs/datepicker/css/datepicker.css" rel="stylesheet" />
+<link type="text/css" href="/_js/_portletPlugs/simpleNews/css/simplenews.css" rel="stylesheet" />
+
+<script language="javascript" src="/_js/jquery.min.js" sudy-wp-context="" sudy-wp-siteId="126"></script>
+<script language="javascript" src="/_js/jquery.sudy.wp.visitcount.js"></script>
+<script type="text/javascript" src="/_js/_portletPlugs/sudyNavi/jquery.sudyNav.js"></script>
+<script type="text/javascript" src="/_js/_portletPlugs/datepicker/js/jquery.datepicker.js"></script>
+<script type="text/javascript" src="/_js/_portletPlugs/datepicker/js/datepicker_lang_HK.js"></script>
+<style type="text/css" title="defaultStyle">
+</style>
+<style type="text/css">
+.wp_articlecontent{
+width:950px;
+}
+
+
+
+</style>
+<link href="/_upload/tpl/02/3f/575/template575/style.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+
+/* ---左侧放子栏目div--- */
+#listleft {
+	float: left;
+	height:800px;
+	width: 265px;
+
+	margin-top: 5px;
+	background-repeat: repeat-y;
+	background-color:#FBFAFA;
+
+}	
+/* ---右侧放主要信息div--- */
+#listright {
+	background-color: #FFFFFF;
+	float: left;
+	width: 950px;
+	height:100%;
+	margin-left: 10px;
+	margin-top: 10px;
+	background-repeat: repeat-y;
+}
+/* ---当前位置--- */
+#position {
+	padding:10px;
+	}
+	
+.listtitfont
+{	font-size: 12pt;
+	font-weight: bold;
+}
+/* ---列表标题--- */
+#listtit {	font-size: 12pt;
+	font-weight: bold;
+	padding-top: 2px;
+	padding-right: 20px;
+	padding-bottom: 1px;
+	padding-left: 20px;
+}
+/* ---列表正文--- */
+#newslist {	padding-top: 0px;
+			padding-bottom: 10px;
+			padding-left: 20px;
+}
+.style1 {
+			text-align: right;
+}
+
+.style2 {
+	border-width: 0px;
+}
+.style3 {
+	color: #FFFFFF;
+	font-size: 12px;
+}
+.style4 {
+	text-align: center;
+}
+</style>
+
+</head>
+<body>
+<table width="100%" height="120" border="0" cellpadding="0" cellspacing="0" background="/_upload/tpl/02/3f/575/template575/images/top.jpg">
+	<tr>
+	    <td>
+	   	 	<div align="center">
+			<table width="1300" height="120" border="0" cellpadding="0" cellspacing="0" background="/_upload/tpl/02/3f/575/template575/images/banner.jpg">
+				<tr>
+            		<td width="900"></td>
+            		<td width="340"> 
+            		<div frag="面板33"><div class="mod_ss" frag="窗口33" id="w33"> <form method="POST" action="/_web/_search/api/search/new.rst?locale=zh_CN&request_locale=zh_CN&_p=YXM9MTI2JnQ9NTc1JmQ9MTc0MSZwPTImZj03Nzk2Jm09U04mfGJubkNvbHVtblZpcnR1YWxOYW1lPTc3OTYm" target="_blank" onsubmit="if ($('#keyword').val() === '请输入关键字') { $('#keyword').val(''); }">
+    <div class="wp_search">
+        <table>
+            <tr>
+                <td height="25px">
+                    <input id="keyword" name="keyword" style="width: 150px" class="keyword" type="text" value="请输入关键字" onfocus="if (this.value === '请输入关键字') { this.value = ''; }"
+                           onblur="if (this.value === '') { this.value = '请输入关键字'; }" />
+                </td>
+                <td>
+                    <input name="btnsearch" class="search" type="submit" value=""/>
+                </td>
+            </tr>
+        </table>
+    </div>
+</form> </div></div>                 
+            		</td>
+            		<td width="20"></td>
+              
+				</tr>
+			</table>
+			</div>	            
+	    </td>               
+	</tr>
+</table>
+	
+<table width="100%" height="3" border="0" cellpadding="0" cellspacing="0" background="/_upload/tpl/02/3f/575/template575/images/line.jpg">
+        <tr>
+            <td></td>
+        </tr>
+</table>
+
+<table width="100%" height="45" border="0" cellpadding="0" cellspacing="0" background="/_upload/tpl/02/3f/575/template575/images/daohang.jpg">
+	<tr>
+	    <td>
+			<div align="center">
+			<div id="nav" style="width: 1300px; height: 45px">
+   			    <table border="0" cellpadding="0" cellspacing="0">
+			      <tr>
+					<td width="5" height="45">&nbsp;</td>
+			        <td><div frag="面板1">
+			            <div frag="窗口1" id="w1">
+			              
+<style type="text/css"> 
+#wp_nav_w1 .wp_nav { margin: 0px; padding: 0px; display: block; }#wp_nav_w1 .wp_nav * { margin: 0px; padding: 0px; }#wp_nav_w1 .wp_nav::after { clear: both; content: "."; display: block; height: 0px; visibility: hidden; }#wp_nav_w1 .wp_nav .nav-item { display: inline-block; float: left; position: relative; vertical-align: bottom; }#wp_nav_w1 .wp_nav .on { z-index: 10; }#wp_nav_w1 .wp_nav .nav-item .mark { display: block; width: 100%; height: 100%; position: absolute; left: 0px; top: 0px; z-index: 99; opacity: 1; }#wp_nav_w1 .wp_nav .nav-item a { display: block; text-align: center; position: relative; z-index: 100; font-size: 18px; color: rgb(255, 255, 255); }#wp_nav_w1 .wp_nav .nav-item a.parent:hover { color: rgb(255, 255, 255); }#wp_nav_w1 .wp_nav .nav-item a.parent { color: rgb(0, 0, 0); }#wp_nav_w1 .wp_nav .nav-item a span.item-name { display: inline-block; padding: 5px 39px 5px 10px; line-height: 22px; cursor: pointer; }#wp_nav_w1 .wp_nav .sub-nav { display: block; width: 100%; position: absolute; z-index: 200; visibility: hidden; }#wp_nav_w1 .wp_nav .sub-nav .nav-item { white-space: nowrap; }#wp_nav_w1 .wp_nav .sub-nav .nav-item .mark { background: rgb(255, 255, 255); opacity: 1; }#wp_nav_w1 .wp_nav .sub-nav .nav-item a { font-size: 13px; font-weight: normal; color: rgb(0, 0, 0); text-align: left; border-top: 1px solid rgb(216, 225, 204); min-width: 80px; }#wp_nav_w1 .wp_nav .sub-nav .nav-item a.parent:hover { background: rgb(238, 238, 238); color: rgb(0, 0, 0); }#wp_nav_w1 .wp_nav .sub-nav .nav-item a.parent { background: rgb(238, 238, 238); color: rgb(0, 0, 0); }#wp_nav_w1 .wp_nav .sub-nav .nav-item a span.item-name { padding: 5px 10px; line-height: 22px; }#wp_nav_w1 .wp_nav .nav-item a.parent:hover span.item-name { }#wp_nav_w1 .wp_nav .nav-item a.parent span.item-name { }#wp_nav_w1 .wp_nav .sub-nav .nav-item a.parent:hover span.item-name { }#wp_nav_w1 .wp_nav .sub-nav .nav-item a.parent span.item-name { text-decoration: none; }
+</style> 
+<div id="wp_nav_w1"> 
+
+ 
+<ul class="wp_nav" data-nav-config="{drop_v: 'down', drop_w: 'right', dir: 'y', opacity_main: '-1', opacity_sub: '-1', dWidth: '0'}">
+      
+     <li class="nav-item i1 "> 
+         <a href="/main.htm" title="首页" target="_self"><span class="item-name">首页</span></a><i class="mark"></i> 
+          
+     </li> 
+      
+     <li class="nav-item i2 "> 
+         <a href="/7801/list.htm" title="学院概况" target="_self"><span class="item-name">学院概况</span></a><i class="mark"></i> 
+          
+         <ul class="sub-nav"> 
+              
+             <li class="nav-item i2-1 "> 
+                 <a href="/xyjj/list.htm" title="学院简介" target="_self"><span class="item-name">学院简介</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i2-2 "> 
+                 <a href="/lrld/list.htm" title="学院领导" target="_self"><span class="item-name">学院领导</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i2-3 "> 
+                 <a href="/dzld/list.htm" title="领导分工" target="_self"><span class="item-name">领导分工</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i2-4 "> 
+                 <a href="/jgsz/list.htm" title="机构设置" target="_self"><span class="item-name">机构设置</span></a><i class="mark"></i> 
+                  
+         <ul class="sub-nav"> 
+              
+             <li class="nav-item i2-4-1 "> 
+                 <a href="/8456/list.htm" title="学术机构" target="_self"><span class="item-name">学术机构</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i2-4-2 "> 
+                 <a href="/8457/list.htm" title="学院机关" target="_self"><span class="item-name">学院机关</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i2-4-3 "> 
+                 <a href="/8458/list.htm" title="系所组成" target="_self"><span class="item-name">系所组成</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+         </ul> 
+          
+             </li> 
+              
+             <li class="nav-item i2-5 "> 
+                 <a href="/lsyg/list.htm" title="历史沿革" target="_self"><span class="item-name">历史沿革</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i2-6 "> 
+                 <a href="/lxwm/list.htm" title="联系我们" target="_self"><span class="item-name">联系我们</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+         </ul> 
+          
+     </li> 
+      
+     <li class="nav-item i3 "> 
+         <a href="/7802/list.htm" title="师资队伍" target="_self"><span class="item-name">师资队伍</span></a><i class="mark"></i> 
+          
+         <ul class="sub-nav"> 
+              
+             <li class="nav-item i3-1 "> 
+                 <a href="/szgk/list.htm" title="师资概况" target="_self"><span class="item-name">师资概况</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i3-2 "> 
+                 <a href="/dsfc/list.htm" title="导师风采" target="_self"><span class="item-name">导师风采</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i3-3 "> 
+                 <a href="/rcjs/list.htm" title="杰出人才" target="_self"><span class="item-name">杰出人才</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i3-4 "> 
+                 <a href="/jsfb1/list.htm" title="教师分布" target="_self"><span class="item-name">教师分布</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+         </ul> 
+          
+     </li> 
+      
+     <li class="nav-item i4 "> 
+         <a href="/7804/list.htm" title="科学研究" target="_self"><span class="item-name">科学研究</span></a><i class="mark"></i> 
+          
+         <ul class="sub-nav"> 
+              
+             <li class="nav-item i4-1 "> 
+                 <a href="/7849/list.htm" title="科研概况" target="_self"><span class="item-name">科研概况</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i4-2 "> 
+                 <a href="/7850/list.htm" title="研究领域" target="_self"><span class="item-name">研究领域</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i4-3 "> 
+                 <a href="/7851/list.htm" title="科研基地" target="_self"><span class="item-name">科研基地</span></a><i class="mark"></i> 
+                  
+         <ul class="sub-nav"> 
+              
+             <li class="nav-item i4-3-1 "> 
+                 <a href="http://sklbe.ecust.edu.cn/" title="生物反应器工程全国重点实验室" target="_blank"><span class="item-name">生物反应器工程全国重点实验室</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i4-3-2 "> 
+                 <a href="http://www.nc-bio.com/" title="国家生化工程技术研究中心（上海）" target="_blank"><span class="item-name">国家生化工程技术研究中心（上海...</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i4-3-3 "> 
+                 <a href="/hywdxgw/list.htm" title="上海海洋动物疫苗工程技术研究中心" target="_self"><span class="item-name">上海海洋动物疫苗工程技术研究中...</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i4-3-4 "> 
+                 <a href="/zgqgyswjclgczdsys/list.htm" title="中国轻工业生物基材料工程重点实验室" target="_self"><span class="item-name">中国轻工业生物基材料工程重点实...</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i4-3-5 "> 
+                 <a href="/wswywdgxwzwzxkcxyzjd/list.htm" title="微生物药物的高效“智”造学科创新引智基地" target="_self"><span class="item-name">微生物药物的高效“智”造学科创...</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i4-3-6 "> 
+                 <a href="/swzzcyxtcxzx/list.htm" title="生物制造产业协同创新中心" target="_self"><span class="item-name">生物制造产业协同创新中心</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i4-3-7 "> 
+                 <a href="/nyncbssdwybzysys/list.htm" title="农业农村部水生动物疫病专业实验室" target="_self"><span class="item-name">农业农村部水生动物疫病专业实验...</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+         </ul> 
+          
+             </li> 
+              
+         </ul> 
+          
+     </li> 
+      
+     <li class="nav-item i5 "> 
+         <a href="/7803/list.htm" title="人才培养" target="_self"><span class="item-name">人才培养</span></a><i class="mark"></i> 
+          
+         <ul class="sub-nav"> 
+              
+             <li class="nav-item i5-1 "> 
+                 <a href="/7845/list.htm" title="本科生" target="_self"><span class="item-name">本科生</span></a><i class="mark"></i> 
+                  
+         <ul class="sub-nav"> 
+              
+             <li class="nav-item i5-1-1 "> 
+                 <a href="/7856/list.htm" title="生物工程" target="_self"><span class="item-name">生物工程</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i5-1-2 "> 
+                 <a href="/7857/list.htm" title="生物科学" target="_self"><span class="item-name">生物科学</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i5-1-3 "> 
+                 <a href="/7858/list.htm" title="生物技术" target="_self"><span class="item-name">生物技术</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i5-1-4 "> 
+                 <a href="/7859/list.htm" title="食品科学与工程" target="_self"><span class="item-name">食品科学与工程</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i5-1-5 "> 
+                 <a href="/7860/list.htm" title="食品质量与安全" target="_self"><span class="item-name">食品质量与安全</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+         </ul> 
+          
+             </li> 
+              
+             <li class="nav-item i5-2 "> 
+                 <a href="/7846/list.htm" title="研究生" target="_self"><span class="item-name">研究生</span></a><i class="mark"></i> 
+                  
+         <ul class="sub-nav"> 
+              
+             <li class="nav-item i5-2-1 "> 
+                 <a href="/xwlwdb/list.htm" title="学位论文答辩" target="_self"><span class="item-name">学位论文答辩</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+         </ul> 
+          
+             </li> 
+              
+             <li class="nav-item i5-3 "> 
+                 <a href="/7847/list.htm" title="博士后" target="_self"><span class="item-name">博士后</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+         </ul> 
+          
+     </li> 
+      
+     <li class="nav-item i6 "> 
+         <a href="/djgz/list.htm" title="党建工作" target="_self"><span class="item-name">党建工作</span></a><i class="mark"></i> 
+          
+         <ul class="sub-nav"> 
+              
+             <li class="nav-item i6-1 "> 
+                 <a href="/xsdj/list.htm" title="党建动态" target="_self"><span class="item-name">党建动态</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i6-2 "> 
+                 <a href="/jsdj/list.htm" title="教师思政" target="_self"><span class="item-name">教师思政</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+         </ul> 
+          
+     </li> 
+      
+     <li class="nav-item i7 "> 
+         <a href="/xstd/list.htm" title="学生天地" target="_self"><span class="item-name">学生天地</span></a><i class="mark"></i> 
+          
+         <ul class="sub-nav"> 
+              
+             <li class="nav-item i7-1 "> 
+                 <a href="/xgdt/list.htm" title="学工动态" target="_self"><span class="item-name">学工动态</span></a><i class="mark"></i> 
+                  
+         <ul class="sub-nav"> 
+              
+             <li class="nav-item i7-1-1 "> 
+                 <a href="/xgzzfg/list.htm" title="学工组织分工" target="_self"><span class="item-name">学工组织分工</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i7-1-2 "> 
+                 <a href="/gzdt/list.htm" title="工作动态" target="_self"><span class="item-name">工作动态</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i7-1-3 "> 
+                 <a href="/tzgg/list.htm" title="通知公告" target="_self"><span class="item-name">通知公告</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+         </ul> 
+          
+             </li> 
+              
+             <li class="nav-item i7-2 "> 
+                 <a href="/txjs/list.htm" title="团学建设" target="_self"><span class="item-name">团学建设</span></a><i class="mark"></i> 
+                  
+         <ul class="sub-nav"> 
+              
+             <li class="nav-item i7-2-1 "> 
+                 <a href="/zzjg/list.htm" title="组织架构" target="_self"><span class="item-name">组织架构</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i7-2-2 "> 
+                 <a href="/qyfk/list.htm" title="权益反馈" target="_self"><span class="item-name">权益反馈</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+         </ul> 
+          
+             </li> 
+              
+             <li class="nav-item i7-3 "> 
+                 <a href="/xsfc/list.htm" title="学生风采" target="_self"><span class="item-name">学生风采</span></a><i class="mark"></i> 
+                  
+         <ul class="sub-nav"> 
+              
+             <li class="nav-item i7-3-1 "> 
+                 <a href="/xshd/list.htm" title="学生活动" target="_self"><span class="item-name">学生活动</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i7-3-2 "> 
+                 <a href="/xfby/list.htm" title="先锋榜样" target="_self"><span class="item-name">先锋榜样</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+         </ul> 
+          
+             </li> 
+              
+             <li class="nav-item i7-4 "> 
+                 <a href="/jygz/list.htm" title="就业工作" target="_self"><span class="item-name">就业工作</span></a><i class="mark"></i> 
+                  
+         <ul class="sub-nav"> 
+              
+             <li class="nav-item i7-4-1 "> 
+                 <a href="/byjyxx/list.htm" title="本研就业信息" target="_self"><span class="item-name">本研就业信息</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i7-4-2 "> 
+                 <a href="/zpqs/list.htm" title="招聘启事" target="_self"><span class="item-name">招聘启事</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i7-4-3 "> 
+                 <a href="/zphxx/list.htm" title="招聘会信息" target="_self"><span class="item-name">招聘会信息</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+         </ul> 
+          
+             </li> 
+              
+             <li class="nav-item i7-5 "> 
+                 <a href="/xzzq/list.htm" title="下载专区" target="_self"><span class="item-name">下载专区</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+         </ul> 
+          
+     </li> 
+      
+     <li class="nav-item i8 "> 
+         <a href="/7807/list.htm" title="校友之家" target="_self"><span class="item-name">校友之家</span></a><i class="mark"></i> 
+          
+         <ul class="sub-nav"> 
+              
+             <li class="nav-item i8-1 "> 
+                 <a href="/7853/list.htm" title="校友动态" target="_self"><span class="item-name">校友动态</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-2 "> 
+                 <a href="/7854/list.htm" title="捐赠项目" target="_self"><span class="item-name">捐赠项目</span></a><i class="mark"></i> 
+                  
+         <ul class="sub-nav"> 
+              
+             <li class="nav-item i8-2-1 "> 
+                 <a href="/slwyjtjxjw/list.htm" title="俞俊棠教育基金" target="_self"><span class="item-name">俞俊棠教育基金</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-2-2 "> 
+                 <a href="/sgxyxylsmryxm/list.htm" title="生工学院校友林树木认养项目" target="_self"><span class="item-name">生工学院校友林树木认养项目</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-2-3 "> 
+                 <a href="/sgxywhq/list.htm" title="生物工程学院文化墙" target="_self"><span class="item-name">生物工程学院文化墙</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+         </ul> 
+          
+             </li> 
+              
+             <li class="nav-item i8-3 "> 
+                 <a href="/jzmx/list.htm" title="捐赠鸣谢" target="_self"><span class="item-name">捐赠鸣谢</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-4 "> 
+                 <a href="/xyh/list.htm" title="校友会" target="_self"><span class="item-name">校友会</span></a><i class="mark"></i> 
+                  
+         <ul class="sub-nav"> 
+              
+             <li class="nav-item i8-4-1 "> 
+                 <a href="/swgcxyxyhzc/list.htm" title="生物工程学院校友会章程" target="_self"><span class="item-name">生物工程学院校友会章程</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-4-2 "> 
+                 <a href="/hdlgdxswgcxyxylsmd/list.htm" title="生物工程学院校友理事名单" target="_self"><span class="item-name">生物工程学院校友理事名单</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-4-3 "> 
+                 <a href="/hdlgdxswgcxyshxylyhzc/list.htm" title="生物工程学院上海校友联谊会章程" target="_self"><span class="item-name">生物工程学院上海校友联谊会章程</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-4-4 "> 
+                 <a href="/hdlgdxswgcxyshxylyhlsmd/list.htm" title="生物工程学院上海校友联谊会理事名单" target="_self"><span class="item-name">生物工程学院上海校友联谊会理事...</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+         </ul> 
+          
+             </li> 
+              
+         </ul> 
+          
+     </li> 
+      
+     <li class="nav-item i9 "> 
+         <a href="/xxgk/list.htm" title="信息公开" target="_self"><span class="item-name">信息公开</span></a><i class="mark"></i> 
+          
+         <ul class="sub-nav"> 
+              
+             <li class="nav-item i9-1 "> 
+                 <a href="/7811/list.htm" title="院务公开" target="_self"><span class="item-name">院务公开</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i9-2 "> 
+                 <a href="/7812/list.htm" title="党务公开" target="_self"><span class="item-name">党务公开</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i9-3 "> 
+                 <a href="/dflz/list.htm" title="党风廉政" target="_self"><span class="item-name">党风廉政</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i9-4 "> 
+                 <a href="/zlxz/list.htm" title="资料下载" target="_self"><span class="item-name">资料下载</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+         </ul> 
+          
+     </li> 
+      
+     <li class="nav-item i10 "> 
+         <a href="/ghgz/list.htm" title="工会工作" target="_self"><span class="item-name">工会工作</span></a><i class="mark"></i> 
+          
+     </li> 
+      
+     <li class="nav-item i11 "> 
+         <a href="/cpyc/list.htm" title="诚聘英才" target="_self"><span class="item-name">诚聘英才</span></a><i class="mark"></i> 
+          
+     </li> 
+      
+</ul> 
+ 
+ 
+ </div>
+			            </div>
+			          </div></td>
+			      </tr>
+			    </table>
+			</div>
+			</div>
+	    </td>               
+	</tr>
+</table>
+<table width="100%" height="280" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+	    <td>
+	   	 	<div align="center">
+			<table width="1500" height="280" border="0" cellpadding="0" cellspacing="0" background="/_upload/tpl/02/3f/575/template575/images/listbanner.jpg">
+				<tr>
+            		<td></td>
+              
+				</tr>
+			</table>
+			</div>	            
+	    </td>               
+	</tr>
+</table>
+
+
+<div id="container-page1">
+
+									     
+  <div id="container-content2">
+  
+  
+    <div id="listleft">
+    
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        	<tr>
+        		<td height="19"></td>
+        	</tr>
+        </table>
+       <table width="100%" border="0" cellpadding="0" cellspacing="0">   
+       	<tr>
+       		<td width="40"></td>
+       		<td width="220">
+       		
+          <table width="220" border="0" cellpadding="0" cellspacing="0" class="llink">
+          <tr>
+				<td height="40" width="220" bgcolor="#006DAE"  align="center" ifrag="栏目名称" class="word3">
+					<div frag="面板2">
+                 		<div frag="窗口2" portletmode="simpleColumnAnchor">
+                     	<p style="font-family:微软雅黑;font-size:18px;font-weight: border;color:#ffffff">师资队伍</p>
+                     </div>
+					</div>
+				</td>
+          </tr>
+          <tr>
+            <td height="3" width="185" bgcolor="#ffffff" align="center"></td>
+          </tr>
+          <tr >
+            <td ><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="llllink">
+                <tr>
+					<td height="28">
+                  	<div frag="面板3">
+                  		<div frag="窗口3" portletmode="simpleColumnList">
+                    			<div id="wp_listcolumn_w3"> 
+
+ 
+<ul class="wp_listcolumn"> 
+      
+     <li class="wp_column column-1 "> 
+         <a href="/szgk/list.htm" title="师资概况" class="" target="_self"><span class="column-name">师资概况</span></a> 
+          
+     </li> 
+      
+     <li class="wp_column column-2 "> 
+         <a href="/dsfc/list.htm" title="导师风采" class="" target="_self"><span class="column-name">导师风采</span></a> 
+          
+     </li> 
+      
+     <li class="wp_column column-3 "> 
+         <a href="/rcjs/list.htm" title="杰出人才" class="" target="_self"><span class="column-name">杰出人才</span></a> 
+          
+     </li> 
+      
+     <li class="wp_column column-4 selected"> 
+         <a href="/jsfb1/list.htm" title="教师分布" class="selected" target="_self"><span class="column-name">教师分布</span></a> 
+          
+     </li> 
+      
+</ul> 
+ 
+ 
+ </div>
+                  		</div>
+                		</div>
+                	</td>
+                </tr>
+            </table></td>
+          </tr>
+        </table>
+
+       		
+       		</td>
+       		<td width="40"></td>       		
+       	</tr>
+       </table> 		
+      
+    </div>
+    
+    
+    <div id="listright">
+      <div id="listtit">
+      
+        <table width="950" border="0" cellspacing="0" cellpadding="0">
+        	<tr>
+        		<td height="10"></td>
+        	</tr>
+        </table>
+             
+        <table width="950" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="lanzi">
+				<div frag="面板5">
+					<div frag="窗口5" portletmode="simpleColumnAttri">
+						<p style="font-family:微软雅黑;font-size:18px;font-weight: border;color:#013F71">教师分布</p></div>
+             </div>
+            </td>
+            
+				    <td class="style1">
+				    	<div frag="面板99">
+				       	<div frag="窗口99" portletmode="simpleColumnAttri" class="style1"> <a href="/main.htm" target="_self">首页</a><span class='possplit'>&nbsp;&nbsp;</span><a href="/7802/list.htm" target="_self">师资队伍</a><span class='possplit'>&nbsp;&nbsp;</span><a href="/jsfb1/list.htm" target="_self">教师分布</a> </div>
+				       </div>
+				    </td>
+            
+          </tr>
+        </table>
+        <table width="950" height="20" border="0" cellspacing="0" cellpadding="0">
+		  <tr>
+            <td></td>
+          </tr>
+        </table>          
+        <table width="950" border="0" cellspacing="0" cellpadding="0">
+		  <tr>
+            <td height="2" colspan="2" bgcolor="#006DAE"></td>
+          </tr>
+        </table>    
+        
+        <table width="950" border="0" cellspacing="0" cellpadding="0">
+        	<tr>
+        		<td height="20"></td>
+        	</tr>
+        </table>
+    
+      </div>
+      
+ 
+     
+      <div class="content2" id="newslist">
+			<div frag="面板88">
+				<div frag="窗口88"  portletmode="simpleList">
+					 
+<div class="wp_single wp_column_article" id="wp_column_article"> 
+     <div class="wp_entry"> 
+         <div class="wp_articlecontent"> 
+             <div id="wp_content_w88_0" class="paging_content" style="display:"> 
+<p style="font-size:16px;line-height:1.75em;"><strong><span style="color:#e36c09;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">学院党委</span></strong></p><p style="font-size:16px;line-height:1.75em;"><a href="http://biotech.ecust.edu.cn/2024/0722/c7935a169838/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="font-family:微软雅黑, &quot;microsoft yahei&quot;;color:#000000;">程家高</span></a><span style="font-family:微软雅黑, &quot;microsoft yahei&quot;;color:#000000;">、<a href="http://biotech.ecust.edu.cn/2016/1019/c7935a56618/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}" style="text-wrap-mode:wrap;font-family:宋体, simsun;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, microsoft yahei;font-size:16px;">刘琴</span></a>、</span><a href="http://biotech.ecust.edu.cn/2024/0702/c7935a169112/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="font-family:宋体, simsun;line-height:1.75em;"><span style="line-height:1.75em;font-size:16px;font-family:微软雅黑, &quot;microsoft yahei&quot;;color:#000000;">李旭</span></span></a><span style="font-family:宋体, simsun;line-height:1.75em;"><span style="line-height:1.75em;font-size:16px;font-family:微软雅黑, &quot;microsoft yahei&quot;;color:#000000;">、孟庆鹏、</span></span><a href="http://biotech.ecust.edu.cn/2020/0103/c7935a103725/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="line-height:1.75em;font-size:16px;font-family:微软雅黑, &quot;microsoft yahei&quot;;color:#000000;">王启要</span></a><span style="color:#000000;line-height:1.75em;font-size:16px;font-family:微软雅黑, &quot;microsoft yahei&quot;;"><span style="line-height:1.75em;font-size:16px;font-family:微软雅黑, &quot;microsoft yahei&quot;;color:#000000;">、</span><a href="http://biotech.ecust.edu.cn/2023/0223/c7935a152673/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}" style="color:#000000;text-decoration:underline;"><span style="line-height:1.75em;font-size:16px;font-family:微软雅黑, &quot;microsoft yahei&quot;;color:#000000;">高蓓</span></a></span><span style="font-family:宋体, simsun;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-size:16px;font-family:微软雅黑, &quot;microsoft yahei&quot;;"><span style="line-height:1.75em;font-size:16px;font-family:微软雅黑, &quot;microsoft yahei&quot;;color:#000000;">、</span><a href="http://biotech.ecust.edu.cn/2023/0223/c7935a152669/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}" style="color:#000000;text-decoration:underline;"><span style="line-height:1.75em;font-size:16px;font-family:微软雅黑, &quot;microsoft yahei&quot;;color:#000000;">田锡炜</span></a></span></span></p><p><br /></p><p style="line-height:1.75em;"><strong><span style="color:#e36c09;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">学院党政办公室</span></strong></p><p style="line-height:1.75em;"><a style="text-decoration:underline;" href="http://biotech.ecust.edu.cn/2019/0226/c7935a85721/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">肖婧凡</span></a><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">李阳、</span><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">邱娟、<span style="font-family:微软雅黑, microsoft yahei;font-size:16px;text-wrap:wrap;">宋艳、</span>种艳平、余娟、<span style="font-family:微软雅黑, microsoft yahei;font-size:16px;text-wrap-mode:wrap;">周静、</span><span style="font-family:微软雅黑, microsoft yahei;font-size:16px;text-wrap-mode:wrap;">邓亚珊</span>、<span style="font-family:微软雅黑, microsoft yahei;font-size:16px;text-wrap:wrap;">陈婧、张悦、韩微微、于庆英</span></span></p><p style="line-height:1.75em;"><span style="font-size:14px;line-height:1.75em;"><br /></span></p><p style="line-height:1.75em;"><strong><span style="color:#e36c09;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">学院思政办公室</span></strong></p><p style="line-height:1.75em;"><span style="line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">周雨婷、苑畅、梁心怡、张佼、李虹锐、吴宵、闫丛宁、张千河</span></p><p style="line-height:1.75em;"><strong><span style="font-family:宋体;font-size:12px;line-height:1.75em;"><br /></span></strong></p><p style="line-height:1.75em;"><strong><span style="color:#e36c09;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">生物工程系</span></strong></p><p style="line-height:1.75em;"><a href="http://biotech.ecust.edu.cn/2016/1019/c7935a56659/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="font-size:16px;font-family:微软雅黑, &quot;microsoft yahei&quot;;color:#000000;">郑高伟</span></a><span style="font-size:16px;font-family:微软雅黑, &quot;microsoft yahei&quot;;color:#000000;">、<a href="http://biotech.ecust.edu.cn/2016/1019/c7935a56650/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}" style="text-wrap-mode:wrap;"><span style="color:#000000;line-height:1.75em;font-size:16px;font-family:微软雅黑, microsoft yahei;">蔡孟浩</span></a>、</span><a style="text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56647/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-size:16px;font-family:微软雅黑, &quot;microsoft yahei&quot;;">白云鹏</span></a><span style="font-family:宋体;font-size:12px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-size:16px;font-family:微软雅黑, &quot;microsoft yahei&quot;;">、</span></span><a style="font-family:宋体, simsun;font-size:14px;text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56697/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-size:16px;font-family:微软雅黑, &quot;microsoft yahei&quot;;">高淑红</span></a><span style="color:#000000;line-height:1.75em;font-size:16px;font-family:微软雅黑, &quot;microsoft yahei&quot;;">、</span><a href="http://biotech.ecust.edu.cn/2019/0219/c7935a85614/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-size:16px;font-family:微软雅黑, &quot;microsoft yahei&quot;;">万俊芬</span></a><span style="font-size:12px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-size:16px;font-family:微软雅黑, &quot;microsoft yahei&quot;;">、</span></span><a style="font-family:宋体, simsun;font-size:14px;text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56658/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-size:16px;font-family:微软雅黑, &quot;microsoft yahei&quot;;">宫衡</span></a><span style="font-size:12px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-size:16px;font-family:微软雅黑, &quot;microsoft yahei&quot;;">、</span><span style="font-size:14px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-size:16px;font-family:微软雅黑, &quot;microsoft yahei&quot;;">李友元、郑一涛、</span><a style="font-family:宋体, simsun;text-decoration:underline;" href="http://biotech.ecust.edu.cn/2017/0320/c7935a61691/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-size:16px;font-family:微软雅黑, &quot;microsoft yahei&quot;;">胡凤仙</span></a><span style="color:#000000;line-height:1.75em;font-size:16px;font-family:微软雅黑, &quot;microsoft yahei&quot;;">、</span><a style="font-family:宋体, simsun;text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56654/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-size:16px;font-family:微软雅黑, &quot;microsoft yahei&quot;;">张道敬</span></a><span style="line-height:1.75em;font-size:16px;font-family:微软雅黑, &quot;microsoft yahei&quot;;">、</span><span style="line-height:1.75em;font-size:16px;font-family:微软雅黑, &quot;microsoft yahei&quot;;">张建、<span style="line-height:1.75em;font-size:16px;font-family:微软雅黑, &quot;microsoft yahei&quot;;color:#000000;">张晓彦</span></span></span></span></p><p style="line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">&nbsp;&nbsp;</p><p style="line-height:1.75em;"><strong><span style="color:#e36c09;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">食品科学与工程系</span></strong></p><p style="line-height:1.75em;"><a style="font-family:宋体, simsun;font-size:14px;text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56680/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">谢静莉</span></a><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span><a style="font-family:宋体, simsun;font-size:14px;text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56663/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">曹旭妮</span></a><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span><a style="font-family:宋体, simsun;font-size:14px;text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56683/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">赵黎明</span></a><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、夏泉鸣、郑国生、</span><a style="font-family:宋体, simsun;font-size:14px;text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56651/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">周英</span></a><span style="font-size:12px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span><a href="http://biotech.ecust.edu.cn/2019/0304/c7935a85956/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">刘卫兵</span></a><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span><a style="font-family:宋体, simsun;font-size:14px;text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56681/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">胡国华</span></a><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span></span><a style="font-family:宋体, simsun;font-size:14px;text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56685/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">张杰</span></a><span style="font-size:14px;line-height:1.75em;"><span style="font-family:宋体, simsun;font-size:16px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span><a href="http://biotech.ecust.edu.cn/2020/0223/c7935a104753/page.htm" target="_self" sudyfile-attr="{'title':'赵梦瑶'}" textvalue="赵梦瑶"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">赵梦瑶</span></a></span><span style="font-family:宋体, simsun;font-size:16px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span><a href="http://biotech.ecust.edu.cn/2021/0301/c7935a123041/page.htm" target="_self" sudyfile-attr="{'title':'杜磊'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">杜磊</span></a>、<a href="http://biotech.ecust.edu.cn/2022/0224/c7935a141098/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}" style="font-family:微软雅黑, microsoft yahei;font-size:16px;text-wrap-mode:wrap;color:#000000;"><span style="line-height:1.75em;">金佳杨</span></a>、<a href="http://biotech.ecust.edu.cn/2025/0909/c7935a181954/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}" style="font-family:微软雅黑, microsoft yahei;font-size:16px;text-wrap-mode:wrap;color:#000000;"><span style="line-height:1.75em;">纪小国</span></a>、<a href="http://biotech.ecust.edu.cn/2019/0226/c7935a85730/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}" style="font-family:微软雅黑, microsoft yahei;font-size:16px;text-wrap-mode:wrap;color:#000000;"><span style="line-height:1.75em;">王宜冰</span></a>、<span style="line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;color:#000000;">罗婷</span></span></span></p><p style="line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">&nbsp;&nbsp;</p><p style="line-height:1.75em;"><strong><span style="color:#e36c09;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">应用生物学系</span></strong></p><p style="line-height:1.75em;"><span style="font-family:宋体;font-size:14px;text-decoration:underline;line-height:1.75em;"><a style="font-family:宋体, simsun;font-size:14px;text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56623/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="text-decoration:underline;color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">吴海珍</span></a><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span></span><a style="font-family:宋体, simsun;font-size:14px;text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56657/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">范立强</span></a><span style="font-size:12px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span><a style="font-family:宋体, simsun;font-size:14px;text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56661/page.htm" target="_self" sudyfile-attr="{'title':'欧阳立明'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">欧阳立明</span></a></span><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span><span style="font-size:12px;line-height:1.75em;"><a style="font-family:宋体, simsun;font-size:14px;text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56672/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">辛秀娟</span></a><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span><a style="font-family:宋体, simsun;font-size:14px;text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56669/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">马昱澍</span></a></span><span style="font-size:12px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、孙丽云、</span><a style="font-family:宋体, simsun;font-size:14px;text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56675/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">李春秀</span></a><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、叶</span></span><span style="font-size:12px;line-height:1.75em;"><span style="font-size:14px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">江、</span></span></span><a href="http://biotech.ecust.edu.cn/2016/1020/c7935a56786/page.htm" target="_self" sudyfile-attr="{'title':'周勉'}" textvalue="周勉"><span style="font-size:12px;line-height:1.75em;"><span style="font-size:14px;line-height:1.75em;"><span style="font-family:宋体, simsun;font-size:16px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">周勉</span></span></span></span></a><span style="font-size:12px;line-height:1.75em;"><span style="font-size:14px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span><a style="font-family:宋体, simsun;text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56665/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">范建华</span></a></span></span><span style="font-size:16px;font-family:微软雅黑, &quot;microsoft yahei&quot;;color:#000000;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span><a href="http://biotech.ecust.edu.cn/2022/0222/c7935a140957/page.htm" target="_self" sudyfile-attr="{'title':'罗远婵'}" textvalue="罗远婵"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">罗远婵</span></a><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span><a href="http://biotech.ecust.edu.cn/2020/0223/c7935a104756/page.htm" target="_self" sudyfile-attr="{'title':'刘玥伶'}" textvalue="刘玥伶"><span style="line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;color:#000000;">刘玥伶</span></a>、<a href="http://biotech.ecust.edu.cn/2016/1019/c7935a56666/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}" style="text-wrap-mode:wrap;font-family:宋体, simsun;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, microsoft yahei;font-size:16px;">常雅宁</span></a>、</span><span style="font-size:16px;font-family:微软雅黑, &quot;microsoft yahei&quot;;line-height:1.75em;"><a href="http://biotech.ecust.edu.cn/2025/0918/c7935a182468/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}" style="color:#000000;text-decoration:underline;"><span style="font-size:16px;font-family:微软雅黑, &quot;microsoft yahei&quot;;line-height:1.75em;color:#000000;">周英骏</span></a></span><span style="font-size:16px;font-family:微软雅黑, &quot;microsoft yahei&quot;;color:#000000;line-height:1.75em;">、季亮</span></p><p style="line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">&nbsp;&nbsp;</p><p style="line-height:1.75em;"><strong><span style="font-family:宋体;font-size:12px;line-height:1.75em;"><span style="color:#e36c09;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">生物反应器工程全国重点实验室</span></span></strong></p><p style="line-height:1.75em;text-align:justify;"><span style="font-size:12px;line-height:1.75em;"><a style="font-size:16px;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56621/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">张立新</span></a></span><span style="font-size:12px;line-height:1.75em;"><span style="font-size:14px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span><a style="font-family:宋体, simsun;text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56618/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">刘琴</span></a><span style="font-size:12px;line-height:1.75em;"><span style="font-size:14px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span></span></span></span></span><a style="text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1020/c7935a56733/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="text-decoration:underline;color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">花</span><span style="text-decoration:underline;color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">强</span></a><span style="font-family:宋体, simsun;font-size:16px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span><a href="http://biotech.ecust.edu.cn/2020/0223/c7935a104755/page.htm" target="_self" sudyfile-attr="{'title':'韦柳静'}" textvalue="韦柳静"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">韦柳静</span></a><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、陈</span></span><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">骏、</span><a style="text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56701/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">鲍</span><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">杰</span></a><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span><a style="text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56682/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">张</span><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">建</span></a><span style="font-family:宋体;font-size:12px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span></span><span style="font-family:宋体;font-size:12px;line-height:1.75em;"><a style="font-size:16px;text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56690/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">叶邦策</span></a></span><span style="font-family:宋体;font-size:12px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span></span><a style="text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56644/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">左</span><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">鹏</span></a><span style="font-family:宋体;font-size:12px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span></span><span style="font-family:宋体;font-size:12px;line-height:1.75em;"><a style="font-size:16px;text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56617/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">尹斌成</span></a></span><span style="font-family:宋体;font-size:12px;line-height:1.75em;"><span style="font-family:宋体;font-size:14px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span><a href="http://biotech.ecust.edu.cn/2020/0224/c7935a104802/page.htm" target="_self" sudyfile-attr="{'title':'徐慧颖'}" textvalue="徐慧颖"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">徐慧颖</span></a><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span></span></span><span style="font-family:宋体;font-size:12px;line-height:1.75em;"><a style="font-size:16px;text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56696/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">李志敏</span></a></span><span style="font-family:宋体;font-size:12px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span></span><a style="text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56642/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">吴</span><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">辉</span></a><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span><a style="text-decoration:underline;" href="http://biotech.ecust.edu.cn/dd/83/c7935a56707/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;"></span></a><a href="http://biotech.ecust.edu.cn/2016/1019/c7935a56684/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}" style="font-size:12px;text-wrap:wrap;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, microsoft yahei;font-size:16px;">王伟</span></a><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;"></span><span style="font-family:宋体;font-size:12px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span></span><a href="http://biotech.ecust.edu.cn/2019/0226/c7935a85729/page.htm" target="_self" sudyfile-attr="{'title':'马兴元'}"><span style="font-family:宋体;font-size:12px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">马兴元</span></span></a><span style="font-family:宋体;font-size:12px;line-height:1.75em;"><span style="font-family:宋体;font-size:14px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span><a style="font-family:宋体, simsun;text-decoration:underline;" href="http://biotech.ecust.edu.cn/2019/0226/c7935a85730/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">王宜冰</span></a><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span></span></span></p><p style="line-height:1.75em;text-align:justify;"><span style="font-family:宋体;font-size:12px;line-height:1.75em;"><a style="font-size:16px;text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56713/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">周胜敏</span></a></span><span style="font-family:宋体;font-size:12px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span></span><span style="font-family:宋体;font-size:12px;line-height:1.75em;"><a style="font-size:16px;text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56611/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">许建和</span></a></span><span style="font-family:宋体;font-size:12px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、邱勇隽、</span></span><a href="http://biotech.ecust.edu.cn/2016/1019/c7935a56646/page.htm" target="_self" sudyfile-attr="{'title':'郁惠蕾'}"><span style="font-family:宋体;font-size:12px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">郁惠蕾</span></span></a><span style="font-family:宋体;font-size:12px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、<a href="http://biotech.ecust.edu.cn/2022/0222/c7935a140961/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}" style="color:#000000;text-decoration:underline;"><span style="line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;color:#000000;">潘江</span></a><span style="line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;color:#000000;">、</span></span></span><span style="font-family:宋体;font-size:12px;line-height:1.75em;"><a style="font-size:16px;text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56659/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">郑高伟</span></a></span><span style="font-family:宋体;font-size:12px;line-height:1.75em;"><span style="font-family:宋体, simsun;font-size:16px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span><a href="http://biotech.ecust.edu.cn/2020/0219/c7935a104712/page.htm" target="_self" sudyfile-attr="{'title':'张志钧'}" textvalue="张志钧"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">张志钧</span></a><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span></span></span><a href="http://biotech.ecust.edu.cn/2020/0220/c7935a104718/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="font-family:宋体;font-size:12px;line-height:1.75em;"><span style="font-family:宋体, simsun;font-size:16px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">陈</span></span></span><span style="font-family:宋体;font-size:12px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">琦</span></span></a><span style="font-family:宋体;font-size:12px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span></span><span style="font-family:宋体;font-size:12px;line-height:1.75em;"><a style="font-size:16px;text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56645/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">史萍</span></a></span><span style="font-family:宋体;font-size:12px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、王宇晓</span></span><span style="font-family:宋体;font-size:12px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span></span><span style="font-family:宋体;font-size:12px;line-height:1.75em;"><a style="font-size:16px;text-decoration:underline;" href="http://biotech.ecust.edu.cn/2018/0329/c7935a74416/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">刘雪婷</span></a></span><span style="font-family:宋体;font-size:12px;line-height:1.75em;"><span style="font-family:宋体, simsun;font-size:16px;line-height:1.75em;"><span style="font-size:16px;font-family:微软雅黑, &quot;microsoft yahei&quot;;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、<a href="http://biotech.ecust.edu.cn/2020/0224/c7935a104801/page.htm" target="_self" sudyfile-attr="{'title':'安法梁'}" textvalue="安法梁"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, microsoft yahei;font-size:16px;">安法梁</span></a>、</span><a href="http://biotech.ecust.edu.cn/2021/0628/c7935a130349/page.htm" target="_self" sudyfile-attr="{'title':'王申林'}" textvalue="王申林"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">王申林</span></a></span></span></span><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span><a href="http://biotech.ecust.edu.cn/2020/0223/c7935a104754/page.htm" target="_self" sudyfile-attr="{'title':'张敬宇'}" textvalue="张敬宇"><span style="font-size:12px;line-height:1.75em;"><span style="font-family:宋体, simsun;font-size:16px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">张</span><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">敬宇</span></span></span></a><span style="font-size:12px;line-height:1.75em;"><span style="font-family:宋体, simsun;font-size:16px;line-height:1.75em;"><span style="font-size:16px;color:#000000;font-family:微软雅黑, &quot;microsoft yahei&quot;;line-height:1.75em;"></span><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span></span></span><span style="font-size:12px;line-height:1.75em;"><a style="font-size:16px;" href="http://biotech.ecust.edu.cn/2017/0309/c7935a61479/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">谭高翼</span></a></span><span style="font-size:12px;line-height:1.75em;"><span style="font-family:宋体, simsun;font-size:16px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span></span></span></p><p style="line-height:1.75em;text-align:justify;"><span style="font-size:12px;line-height:1.75em;"><span style="font-family:宋体, simsun;font-size:16px;line-height:1.75em;"><a href="http://biotech.ecust.edu.cn/2020/0306/c7935a105114/page.htm" target="_self" sudyfile-attr="{'title':'尤迪'}" textvalue="尤迪"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">尤迪</span></a><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span></span></span><a href="http://biotech.ecust.edu.cn/2024/0313/c7935a165478/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}" style="font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;color:#000000;"><span style="line-height:1.75em;">朱国良</span></a><span style="font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、<a href="http://biotech.ecust.edu.cn/2023/0313/c7935a153242/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}" style="color:#000000;text-decoration:underline;"><span style="font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;color:#000000;">解永涛</span></a><span style="font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;color:#000000;">、</span><a href="http://biotech.ecust.edu.cn/2025/0303/c7935a175760/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}" style="color:#000000;text-decoration:underline;"><span style="font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;color:#000000;">张斌</span></a>、<a href="http://biotech.ecust.edu.cn/2023/0404/c7935a154341/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}" style="color:#000000;text-decoration:underline;"><span style="font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;color:#000000;">邹振平</span></a><span style="color:#000000;font-size:16px;font-family:微软雅黑, &quot;microsoft yahei&quot;;">、</span><a href="http://biotech.ecust.edu.cn/2023/0404/c7935a154341/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}" style="color:#000000;text-decoration:underline;"><span style="color:#000000;font-size:16px;font-family:微软雅黑, &quot;microsoft yahei&quot;;">马培强</span></a></span></p><p style="line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">&nbsp;&nbsp;</p><p style="line-height:1.75em;"><strong><span style="color:#e36c09;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">国家生化工程技术研究中心（上海）</span></strong></p><p style="line-height:1.75em;"><a style="text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1014/c7935a56510/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">庄英萍</span></a><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span><a style="text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56673/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">储</span><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">炬</span></a><span style="font-family:宋体;font-size:12px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span></span><span style="font-size:12px;line-height:1.75em;"><a style="font-family:宋体, simsun;font-size:14px;text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56639/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">杭海峰</span></a></span><span style="font-size:12px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span></span><a href="http://biotech.ecust.edu.cn/2019/0227/c7935a86019/page.htm" target="_self" sudyfile-attr="{'title':'王永红'}" textvalue="王永红"><span style="font-size:12px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">王永红</span></span></a><span style="font-size:12px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span></span><span style="font-size:12px;line-height:1.75em;"><a style="font-family:宋体, simsun;font-size:14px;text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56674/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">钱江潮</span></a></span><span style="font-size:12px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span></span><span style="font-size:12px;line-height:1.75em;"><a style="font-family:宋体, simsun;font-size:14px;text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56717/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">郭美锦</span></a></span><span style="font-size:12px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span></span><span style="font-size:12px;line-height:1.75em;"><a style="font-family:宋体, simsun;font-size:14px;text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56679/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">黄明志</span></a></span><span style="font-size:12px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、郭元昕、</span></span><span style="font-size:12px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">肖慈英</span></span><span style="font-size:12px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span></span><a href="http://biotech.ecust.edu.cn/2016/1019/c7935a56715/page.htm" target="_self" sudyfile-attr="{'title':'易小萍'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">易小萍</span></a><span style="font-size:12px;line-height:1.75em;"><span style="font-size:14px;line-height:1.75em;"><span style="font-family:宋体, simsun;font-size:16px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span><a href="http://biotech.ecust.edu.cn/2021/0301/c7935a123030/page.htm" target="_self" sudyfile-attr="{'title':'王泽建'}" textvalue="王泽建"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">王泽建</span></a><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span><a href="http://biotech.ecust.edu.cn/2020/0224/c7935a104803/page.htm" target="_self" sudyfile-attr="{'title':'田锡炜'}" textvalue="田锡炜"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">田锡炜</span></a><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span><a href="http://biotech.ecust.edu.cn/2021/0129/c7935a122663/page.htm" target="_self" sudyfile-attr="{'title':'王冠'}" textvalue="王冠"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">王冠</span></a><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span></span><a style="font-family:宋体, simsun;text-decoration:underline;" href="http://biotech.ecust.edu.cn/2020/0117/c7935a104263/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">黄娇芳</span></a><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、<a href="http://biotech.ecust.edu.cn/2024/0304/c7935a165249/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}" style="color:#000000;text-decoration:underline;"><span style="line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;color:#000000;">Ali&nbsp;Mohsin</span></a>、柯翔</span></span></span></p><p style="line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">&nbsp;&nbsp;</p><p style="line-height:1.75em;"><strong><span style="color:#e36c09;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">鲁华所</span></strong></p><p style="line-height:1.75em;"><a style="text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56718/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">魏东芝</span></a><span style="font-family:宋体;font-size:12px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span></span><a style="font-family:宋体, simsun;font-size:14px;text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56712/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">魏巍</span></a><span style="font-size:12px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span></span><span style="font-size:12px;line-height:1.75em;"><a style="font-size:16px;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56709/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">任宇红</span></a></span><span style="font-size:12px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span></span><span style="font-size:12px;line-height:1.75em;"><a href="http://biotech.ecust.edu.cn/2016/1019/c7935a56686/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">王学东</span></a></span><span style="font-size:12px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span></span><span style="font-size:12px;line-height:1.75em;"><a style="font-size:16px;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56700/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">林金萍</span></a></span><span style="font-size:12px;line-height:1.75em;"><span style="font-size:16px;font-family:微软雅黑, &quot;microsoft yahei&quot;;color:#000000;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、刘清海、孙爱友、</span><a href="http://biotech.ecust.edu.cn/2022/0222/c7935a140964/page.htm" target="_self" sudyfile-attr="{'title':'陶欣艺'}" textvalue="陶欣艺"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">陶欣艺</span></a><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span></span></span><span style="font-size:12px;line-height:1.75em;"><a style="font-size:16px;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56628/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">王风清</span></a></span><span style="font-size:12px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span></span><a href="http://biotech.ecust.edu.cn/2024/0227/c7935a165128/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="font-size:12px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">赵</span></span><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">莉</span></a><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span><a style="font-family:宋体, simsun;font-size:14px;text-decoration:underline;" href="http://biotech.ecust.edu.cn/2018/0117/c7935a73118/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">王玮</span></a><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span><a style="font-family:宋体, simsun;font-size:14px;text-decoration:underline;" href="http://biotech.ecust.edu.cn/2018/0117/c7935a73116/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">高蓓</span></a><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span><span style="font-size:12px;line-height:1.75em;"><a style="font-size:16px;" href="http://biotech.ecust.edu.cn/2018/0117/c7935a73117/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">王华磊</span></a></span><span style="font-size:12px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span></span><a href="http://biotech.ecust.edu.cn/2021/0301/c7935a123029/page.htm" target="_self" sudyfile-attr="{'title':'刘敏'}" textvalue="刘敏"><span style="font-size:12px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">刘</span></span><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">敏</span></a><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span><a style="font-family:宋体, simsun;text-decoration:underline;" href="http://biotech.ecust.edu.cn/2019/0228/c7935a85817/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">张舰</span></a><span style="font-size:16px;font-family:微软雅黑, &quot;microsoft yahei&quot;;color:#000000;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span><a href="http://biotech.ecust.edu.cn/2022/0221/c7935a140854/page.htm" target="_self" sudyfile-attr="{'title':'陈雨蒙'}" textvalue="陈雨蒙"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">陈雨蒙</span></a></span></p><p style="line-height:1.75em;"><span style="font-family:宋体;font-size:12px;line-height:1.75em;"><br /></span></p><p style="line-height:1.75em;"><strong><span style="color:#e36c09;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">阿华所</span></strong></p><p style="line-height:1.75em;"><span style="font-family:宋体;font-size:14px;text-decoration:underline;line-height:1.75em;"><a style="font-family:宋体, simsun;font-size:14px;text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56618/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="text-decoration:underline;color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">刘琴</span></a></span><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span><span style="font-family:宋体;font-size:12px;line-height:1.75em;"><a style="font-size:14px;text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56670/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">王启要</span></a></span><span style="font-family:宋体;font-size:12px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span></span><a href="http://biotech.ecust.edu.cn/2022/0609/c7935a145684/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="font-family:宋体;font-size:12px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">马</span></span><span style="font-family:宋体;font-size:12px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">悦</span></span></a><span style="font-family:宋体;font-size:12px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span></span><a href="http://biotech.ecust.edu.cn/2020/0225/c7935a104825/page.htm" target="_self" sudyfile-attr="{'title':'刘晓红'}" textvalue="刘晓红"><span style="font-family:宋体;font-size:14px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">刘晓红</span></span></a><span style="font-family:宋体;font-size:14px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span><a href="http://biotech.ecust.edu.cn/2022/0214/c7935a140749/page.htm" target="_self" sudyfile-attr="{'title':'阳大海'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">阳大海</span></a><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、<a href="http://biotech.ecust.edu.cn/2024/0115/c7935a164558/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;text-wrap:wrap;color:#000000;">刘亚京</span></a><span style="font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;text-wrap:wrap;color:#000000;">、</span><a href="http://biotech.ecust.edu.cn/2024/0229/c7935a165182/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}" style="color:#000000;text-decoration:underline;"><span style="line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;color:#000000;">陈守文</span></a><span style="line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;color:#000000;">、</span><a href="http://biotech.ecust.edu.cn/2023/0306/c7935a153017/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}" style="color:#000000;text-decoration:underline;"><span style="line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;color:#000000;">邵帅</span></a><span style="line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;color:#000000;">、</span><a href="http://biotech.ecust.edu.cn/2024/0227/c7935a165131/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}" style="color:#000000;text-decoration:underline;"><span style="line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;color:#000000;">张艺蓓</span></a><span style="line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;color:#000000;">、</span><a href="http://biotech.ecust.edu.cn/2025/0227/c7935a175687/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}" style="color:#000000;text-decoration:underline;"><span style="line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;color:#000000;">王壮</span></a></span></span></p><p style="line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">&nbsp;&nbsp;</p><p style="line-height:1.75em;"><strong><span style="color:#e36c09;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">动物细胞室</span></strong></p><p style="line-height:1.75em;"><a style="text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56638/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">谭文松</span></a><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span><a style="text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56615/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">周</span><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">燕</span></a><span style="font-family:宋体;font-size:12px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span></span><span style="font-family:宋体;font-size:12px;line-height:1.75em;"><a style="font-size:18px;text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56636/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">蔡海波</span></a></span><span style="font-family:宋体;font-size:12px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span></span><a href="http://biotech.ecust.edu.cn/2019/0802/c7935a95979/page.htm" target="_self" sudyfile-attr="{'title':'张旭'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">张</span><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">旭</span></a><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、朱明龙</span></p><p style="line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">&nbsp;&nbsp;</p><p style="line-height:1.75em;"><strong><span style="color:#e36c09;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">海洋室</span></strong></p><p style="line-height:1.75em;"><a style="text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56653/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-size:16px;font-family:微软雅黑, &quot;microsoft yahei&quot;;">李元广</span></a><span style="font-family:宋体;font-size:12px;line-height:1.75em;"><span style="font-family:宋体;font-size:14px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-size:16px;font-family:微软雅黑, &quot;microsoft yahei&quot;;">、</span></span></span><span style="font-family:宋体;font-size:12px;line-height:1.75em;"><span style="font-family:宋体, simsun;font-size:16px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;"><span style="color:#000000;line-height:1.75em;font-size:16px;font-family:微软雅黑, &quot;microsoft yahei&quot;;">王伟良、</span><a href="http://biotech.ecust.edu.cn/2017/0223/c7935a61241/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}" style="text-align:center;text-wrap:wrap;background-color:#ffffff;"><span style="color:#000000;font-size:16px;font-family:微软雅黑, &quot;microsoft yahei&quot;;">万民熙</span></a></span></span></span></p><p><br /></p><p style="line-height:1.75em;"><strong><span style="color:#e36c09;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">生物分离室</span></strong></p><p style="line-height:1.75em;"><span style="line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">徐环昕、宁方红</span></p><p style="line-height:1.75em;"><span style="font-family:宋体;font-size:14px;line-height:1.75em;"><br /></span></p><p style="font-family:宋体, simsun;font-size:16px;line-height:1.75em;"><strong><span style="color:#e36c09;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">上海生物技术产业技术研究院</span></strong></p><p style="line-height:1.75em;"><a href="http://biotech.ecust.edu.cn/2019/0227/c7935a85796/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">寇正福</span></a></p><p style="line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">&nbsp;&nbsp;</p><p style="line-height:1.75em;"><strong><span style="font-family:宋体;font-size:12px;line-height:1.75em;"><span style="color:#e36c09;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">上海市发酵工程实验教学中心</span></span></strong></p><p style="line-height:1.75em;"><span style="font-family:宋体;font-size:14px;line-height:1.75em;"><a href="http://biotech.ecust.edu.cn/2016/1019/c7935a56666/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"></a><a style="font-family:宋体, simsun;text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1014/c7935a56510/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="font-size:16px;font-family:微软雅黑, &quot;microsoft yahei&quot;;line-height:1.75em;"><span style="text-decoration:underline;color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">庄</span><span style="text-decoration:underline;color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">英萍</span></span></a><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、<a href="http://biotech.ecust.edu.cn/2016/1019/c7935a56623/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}" style="text-wrap-mode:wrap;font-family:宋体, simsun;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, microsoft yahei;font-size:16px;">吴海珍</span></a>，</span><a style="font-family:宋体, simsun;text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56666/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">常雅宁</span></a></span><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、张蕾蕾、李鹏飞、徐昭远、胡晓鸣、彭钰珂、陈梓天</span></p><p style="line-height:1.75em;"><span style="font-family:宋体;font-size:14px;line-height:1.75em;"><br /></span></p><p style="line-height:1.75em;"><strong><span style="color:#e36c09;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">发酵工业分离提取技术研发中心</span></strong></p><p style="line-height:1.75em;"><a href="http://biotech.ecust.edu.cn/2016/1019/c7935a56683/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">赵黎明</span></a><span style="font-family:宋体;font-size:14px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、<span style="text-align:center;text-wrap-mode:wrap;background-color:#ffffff;font-family:微软雅黑, &quot;microsoft yahei&quot;;color:#000000;font-size:16px;">乔亮智、</span></span><a style="font-family:宋体, simsun;text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56657/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">范立强</span></a><span style="font-family:宋体, simsun;font-size:16px;line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span><a href="http://biotech.ecust.edu.cn/2020/0223/c7935a104753/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}" style="text-align:center;text-wrap:wrap;font-family:微软雅黑, microsoft yahei;"><span style="color:#000000;font-size:16px;">赵梦瑶</span></a></span><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span></span><a style="font-family:宋体, simsun;text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56626/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">蒋丽华</span></a><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">夏泉鸣</span><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、邱勇隽、<a href="http://biotech.ecust.edu.cn/2022/0224/c7935a141098/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}" style="color:#000000;text-decoration:underline;"><span style="line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;color:#000000;">金佳杨</span></a>、<a href="http://biotech.ecust.edu.cn/2019/0226/c7935a85730/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}" style="color:#000000;text-decoration:underline;"><span style="line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;color:#000000;">王宜冰</span></a><span style="line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;color:#000000;">、<a href="http://biotech.ecust.edu.cn/2025/0909/c7935a181954/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}" style="color:#000000;text-decoration:underline;"><span style="line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;color:#000000;">纪小国</span></a>、</span><a href="http://biotech.ecust.edu.cn/2025/0226/c7935a175667/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}" style="color:#000000;text-decoration:underline;"><span style="line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;color:#000000;">邓琛</span></a></span></span></p><p style="line-height:1.75em;"><span style="font-family:宋体;font-size:14px;line-height:1.75em;"><br /></span></p><p style="line-height:1.75em;"><strong><span style="color:#e36c09;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">中国轻工业生物基材料工程重点实验室</span></strong></p><p style="line-height:1.75em;"><a href="http://biotech.ecust.edu.cn/2016/1019/c7935a56683/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="font-family:宋体;font-size:14px;line-height:1.75em;"><span class="emtidy-1" style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">赵黎明</span></span></a><span style="font-family:宋体;font-size:14px;line-height:1.75em;"><span class="emtidy-1" style="line-height:1.75em;"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、</span><a style="font-family:宋体, simsun;text-decoration:underline;" href="http://biotech.ecust.edu.cn/2016/1019/c7935a56642/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">吴辉</span></a><span style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、陈涛、</span></span><span class="emtidy-1" style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">邱勇隽、</span><a href="http://biotech.ecust.edu.cn/2016/1019/c7935a56657/page.htm" target="_self" sudyfile-attr="{'title':'只支持选中一个链接时生效'}"><span class="emtidy-1" style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">范立强</span></a><span class="emtidy-1" style="color:#000000;line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">、夏泉鸣</span></span></p><p style="font-size:12px;"><br /></p><p style="line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">&nbsp;&nbsp;</p><p style="line-height:1.75em;font-family:微软雅黑, &quot;microsoft yahei&quot;;font-size:16px;">&nbsp;&nbsp;</p>
+</div> 
+ 
+         </div> 
+     </div> 
+</div> 
+
+				</div>
+			</div>
+		</div>
+		
+
+    </div>
+
+</div>
+
+
+</div>
+<div id="foot">
+
+<div align="center">
+<table>
+	<tr>
+		<td height="50"></td>
+	</tr>
+	<tr>	
+		<td width="500" align="center">        
+		<font color="#FFFFFF" size="2">
+		地址：上海市徐汇区梅陇路130号&nbsp; 邮编：200237&nbsp;&nbsp;
+		<a href="https://webmanage.ecust.edu.cn"><span class="style3">网站管理</span></a> <br />版权所有 &copy; 2021 华东理工大学生物工程学院&nbsp; 
+		</font></td>
+	</tr>
+</table>
+</div>
+
+</div>
+
+</body>
+</html>
+
+
+
+ <img src="/_visitcount?siteId=126&type=2&columnId=10526" style="display:none" width="0" height="0"/>
