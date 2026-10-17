@@ -2539,5 +2539,72 @@ class CsuEnvironmentSourceTests(unittest.TestCase):
                 r"(?<![0-9A-Za-z.\/-])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z-])")
 
 
+class SingleInstitutionDisciplinesTests(unittest.TestCase):
+    """四个单一机构学科的第二机构：中南安全 + 大连理工船舶/交通/生物医学工程."""
+
+    @classmethod
+    def setUpClass(cls):
+        from workbench.sources.single_institution_disciplines import SPECS as SI_SPECS
+        from workbench.sources.single_institution_disciplines import parse as parse_si
+        cls.specs = {s["key"]: s for s in SI_SPECS}
+        cls.by_key = {}
+        for key, spec in cls.specs.items():
+            rows = []
+            for page in range(1, spec["max_pages"] + 1):
+                stem = key if page == 1 else f"{key}_p{page}"
+                html = (FIXTURES / f"{stem}.html").read_text(encoding="utf-8")
+                url = spec["listing"].replace("{page}", str(page))
+                rows.extend(parse_si(html, url, spec))
+            cls.by_key[key] = rows
+
+    def test_all_four_disciplines_are_covered(self):
+        self.assertEqual(set(self.specs), {"csu_safety", "dlut_ship",
+                                           "dlut_transport", "dlut_bme"})
+        codes = {s["code"] for s in self.specs.values()}
+        self.assertEqual(codes, {"0837", "0824", "0823", "0831"})
+
+    def test_row_counts_match_the_page_markers(self):
+        # 三项与自报数完全一致；船舶 73/75 差 2 行，如实保留。
+        self.assertEqual(len(self.by_key["csu_safety"]), 35)
+        self.assertEqual(len(self.by_key["dlut_ship"]), 73)
+        self.assertEqual(len(self.by_key["dlut_transport"]), 12)
+        self.assertEqual(len(self.by_key["dlut_bme"]), 31)
+
+    def test_two_page_shapes_are_handled(self):
+        # 中南是学科级（锚文本即姓名），大连理工是单位级（卡片拼接串，姓名取「单位」前）。
+        for key in ("csu_safety", "dlut_ship", "dlut_transport", "dlut_bme"):
+            for row in self.by_key[key]:
+                self.assertRegex(row["name"], r"^[\u4e00-\u9fff·]{2,8}$")
+                for noise in ("单位", "职称", "个人主页", "教授", "副教授", "研究员"):
+                    self.assertNotIn(noise, row["name"])
+
+    def test_every_row_links_a_personal_homepage(self):
+        for rows in self.by_key.values():
+            for row in rows:
+                self.assertIn("/zh_CN/index.htm", row["homepage"])
+
+    def test_direction_is_never_invented(self):
+        for rows in self.by_key.values():
+            for row in rows:
+                self.assertEqual(row["assignment"]["direction"], "方向待补")
+
+    def test_no_contact_information_is_stored(self):
+        blob = json.dumps([r for rows in self.by_key.values() for r in rows],
+                          ensure_ascii=False)
+        self.assertNotIn("@", blob)
+        self.assertNotRegex(blob,
+                            r"(?<![0-9A-Za-z])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z])")
+
+    def test_fixtures_are_redacted(self):
+        for key, spec in self.specs.items():
+            for page in range(1, spec["max_pages"] + 1):
+                stem = key if page == 1 else f"{key}_p{page}"
+                html = (FIXTURES / f"{stem}.html").read_text(encoding="utf-8")
+                self.assertNotRegex(html, r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
+                self.assertNotRegex(
+                    html,
+                    r"(?<![0-9A-Za-z.\/-])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z-])")
+
+
 if __name__ == "__main__":
     unittest.main()
