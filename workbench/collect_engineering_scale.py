@@ -98,12 +98,26 @@ def discover_sources() -> dict[str, dict]:
     return found
 
 
-def collect(pages_per_source: int | None = None) -> tuple[list[dict], list[dict], list[dict]]:
-    """Read every registered directory and return (rows, pages, failures)."""
+def collect(pages_per_source: int | None = None,
+            only: set[str] | None = None) -> tuple[list[dict], list[dict], list[dict]]:
+    """Read registered directories and return (rows, pages, failures).
+
+    ``only`` restricts the run to the given source keys. That matters because one
+    flaky host currently aborts the whole batch: the "never shrink the published
+    supplement" guard then keeps the old file, so a perfectly good new source cannot
+    be merged while an unrelated university is timing out. Being able to collect a
+    single source keeps that coupling out of the way.
+    """
     rows: list[dict] = []
     pages: list[dict] = []
     failures: list[dict] = []
-    for key, spec in discover_sources().items():
+    sources = discover_sources()
+    if only:
+        unknown = sorted(set(only) - set(sources))
+        if unknown:
+            raise SystemExit(f"unknown source key(s): {', '.join(unknown)}")
+        sources = {k: v for k, v in sources.items() if k in only}
+    for key, spec in sources.items():
         parser = spec["parser"]
         limit = pages_per_source or spec.get("max_pages", 1)
         seen: set[str] = set()
@@ -140,9 +154,13 @@ def main() -> int:
     parser.add_argument("--dry-run", action="store_true", help="parse and report only")
     parser.add_argument("--enrich", action="store_true", help="read each new personal page")
     parser.add_argument("--limit", type=int, default=0)
+    parser.add_argument("--only", default="", metavar="KEY[,KEY…]",
+                        help="collect only these source keys (one flaky host can no "
+                             "longer block a batch)")
     args = parser.parse_args()
+    only = {k.strip() for k in args.only.split(",") if k.strip()} or None
 
-    rows, pages, failures = collect()
+    rows, pages, failures = collect(only=only)
     supplement = {
         "description": "工学规模扩充：北京科技大学教师主页学科索引（冶金工程）",
         "collected_at": COLLECTED_AT,
@@ -150,6 +168,27 @@ def main() -> int:
         "pages": pages,
         "failures": failures,
     }
+    if only:
+        # A subset run must be merged into the published supplement, not replace it.
+        # Otherwise "only this one source" would look like a catastrophic shrink and
+        # the guard would (correctly) refuse to write, leaving the new source out.
+        prior_path = REFERENCE / "engineering_scale_faculty.json"
+        if prior_path.exists():
+            try:
+                prior = json.loads(prior_path.read_text(encoding="utf8"))
+            except (OSError, ValueError):
+                prior = {}
+            merged = list(prior.get("profiles") or [])
+            have = {(p["institution"], p["department"], p["name"]) for p in merged}
+            for p in supplement["profiles"]:
+                key = (p["institution"], p["department"], p["name"])
+                if key not in have:
+                    merged.append(p)
+                    have.add(key)
+            supplement["profiles"] = merged
+            prior_pages = list(prior.get("pages") or [])
+            known = {p["url"] for p in prior_pages}
+            supplement["pages"] = prior_pages + [p for p in pages if p["url"] not in known]
     for p in supplement["profiles"]:
         p["classification_basis"] = ("按学校教师主页的学科索引归入一级学科导航；"
                                      "不代替该教师所在机构的招生专业认定。")

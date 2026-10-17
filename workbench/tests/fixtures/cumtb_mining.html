@@ -1,0 +1,525 @@
+<!DOCTYPE html><HTML lang="en"><HEAD><TITLE>教师列表-能源与矿业学院</TITLE><meta name="pageType" content="2">
+<meta name="pageTitle" content="教师列表">
+<META Name="keywords" Content="能源与矿业学院,教师列表" />
+
+
+
+
+
+<META charset="UTF-8">
+<META content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible"><LINK rel="stylesheet" href="../../css/style.css"><script src="../../js/bdtxk.js"></script><script src="../../js/slide.js"></script>
+
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307e78475253525742000500004256 -->
+<link rel="stylesheet" type="text/css" href="../../zw3.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1273,'/zw3.jsp',-1,1529612416)</script>
+</HEAD>
+<BODY><!-- head  logo & nav  -->
+<DIV class="w10 head">
+<DIV class="w12">
+<DIV class="top">
+<DIV class="logo">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="../../index.htm" title="能源学院"><IMG alt="" src="../../images/logo.png"></a>
+</DIV>
+<DIV class="home">
+<DIV class="link fl"><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><a href="http://oa.cumtb.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1529612416, 41702)">OA</a>
+<a href="http://www.cumtb.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1529612416, 41657)">学校主页</a>
+<a href="http://zyxy.cumtb.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1529612416, 41658)">回顾旧版</a>
+<a href="../../Englishi/Home.htm" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1529612416, 41667)">English</a>
+</DIV>
+<DIV class="search fr"><!-- 3.1.3版本 -->
+
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><script language="javascript" src="/system/resource/openapp/search/js/containsHtmlTags.js"></script><script language="javascript" src="/system/resource/openapp/search/layui/layui.js"></script><div id="divu2"></div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+        <input class="ss qwss" placeholder="" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+ <input type="image" src='../../images/search-icon.png' class="btn tj" valign="bottom" align="absmiddle" style="cursor: hand" v-on:click="onSubmit()">
+
+
+       
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu2").html($("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1529612416";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+<script>
+   var appElementu2 = document.querySelector("#appu2");
+   if (appElementu2 && appElementu2.__vue__) {
+
+   } else {
+      $("#divu2").html($("#htmlu2").text());
+      var appOwner = "1529612416";   
+      var urlPrefix = "/aop_component/";
+      var ifLogin="";
+      var token = ifLogin=='true'?gettoken(10, true).trim():'tourist';
+      if (containsHtmlTags(token) || !token) { 
+         token = 'tourist';
+      }
+      jQuery.support.cors = true;
+      $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+      });
+      var queryInfou2 = {
+        query: {
+            keyWord: "",//搜索关键词
+            owner: appOwner,
+            token: token,
+            urlPrefix: urlPrefix,
+            lang:"i18n_zh_CN"
+        },
+        isError: false
+      };
+      function keyUpFunu2(e){
+        var theEvent = e || window.event;
+        var keyCode = theEvent.keyCode || theEvent.which || theEvent.charCode;
+        if(keyCode == 13){
+          onSubmitu2();
+        }
+      };
+
+      function onSubmitu2(e) {
+        queryInfou2.query.keyWord= $("#appu2  .qwss").val();
+        
+        var url = "/aop_views/search/modules/resultpc/soso.html";      
+        if ("10" == "1" || "10" == "2") {
+           url = "" + url;
+        }
+        var query = queryInfou2.query;
+        if (url.indexOf("?") > -1) {
+            url = url.split("?")[0];
+        }
+        if (query.keyWord) {
+            var query = new Base64().encode(JSON.stringify(query));
+            window.open(url + "?query=" + query);
+        } else {
+            alert("请填写搜索内容")
+        }
+      };
+   }
+</script></DIV>
+<DIV class="clearfix"></DIV></DIV>
+<DIV class="clearfix"></DIV>
+<DIV class="navbar"><ul id="nav" class="nav clearfix">
+                                <li class="nLi ">
+                                <h3><a href="../../index.htm" title="首页" target="_blank">首页</a></h3>
+                        </li>
+                        <li class="nLi ">
+                                <h3><a href="../../xyjj.htm" title="学院简介" target="_blank">学院简介</a></h3>
+                                <ul class="sub">
+
+                                    <li><a href="../../xyjj/xygk.htm" title="学院概况">学院概况</a></li>
+                                    
+
+                                    <li><a href="../../xyjj/lsyg.htm" title="历史沿革">历史沿革</a></li>
+                                    
+
+                                    <li><a href="../../xyjj/xyld.htm" title="学院领导">学院领导</a></li>
+                                    
+
+                                    <li><a href="../../xyjj/lrld.htm" title="历任领导">历任领导</a></li>
+                                    
+
+                                    <li><a href="../../xyjj/zzjg.htm" title="组织机构">组织机构</a></li>
+                                    
+                                </ul>
+                        </li>
+                        <li class="nLi on">
+                                <h3><a href="../../szdw.htm" title="师资队伍" target="_blank">师资队伍</a></h3>
+                                <ul class="sub">
+
+                                    <li><a href="../ysfc.htm" title="院士风采">院士风采</a></li>
+                                    
+
+                                    <li><a href="jslb.htm" title="师资概况">师资概况</a></li>
+                                    
+
+                                    <li><a href="../yxtd1.htm" title="优秀团队">优秀团队</a></li>
+                                    
+
+                                    <li><a href="../yxrc.htm" title="优秀人才">优秀人才</a></li>
+                                    
+                                </ul>
+                        </li>
+                        <li class="nLi ">
+                                <h3><a href="../../bksjx.htm" title="本科生教学" target="_blank">本科生教学</a></h3>
+                                <ul class="sub">
+
+                                    <li><a href="../../bksjx/zysz.htm" title="专业设置">专业设置</a></li>
+                                    
+
+                                    <li><a href="../../bksjx/jxtz.htm" title="教学通知">教学通知</a></li>
+                                    
+
+                                    <li><a href="../../bksjx/jxcg.htm" title="教学成果">教学成果</a></li>
+                                    
+
+                                    <li><a href="../../bksjx/bksdsz.htm" title="本科生导师制">本科生导师制</a></li>
+                                    
+
+                                    <li><a href="../../bksjx/dxscxxl.htm" title="大学生创新训练">大学生创新训练</a></li>
+                                    
+
+                                    <li><a href="../../bksjx/sysgl.htm" title="实验室管理">实验室管理</a></li>
+                                    
+
+                                    <li><a href="http://owvlab.cumtb.edu.cn/" title="国家级实验教学示范中心">国家级实验教学示范中心</a></li>
+                                    
+
+                                    <li><a href="../../bksjx/xzzx.htm" title="下载中心">下载中心</a></li>
+                                    
+                                </ul>
+                        </li>
+                        <li class="nLi ">
+                                <h3><a href="../../yjsjx.htm" title="研究生教学" target="_blank">研究生教学</a></h3>
+                                <ul class="sub">
+
+                                    <li><a href="../../yjsjx/zysz.htm" title="专业设置">专业设置</a></li>
+                                    
+
+                                    <li><a href="../../yjsjx/dsmd.htm" title="导师名单">导师名单</a></li>
+                                    
+
+                                    <li><a href="../../yjsjx/jxtz.htm" title="教学通知">教学通知</a></li>
+                                    
+
+                                    <li><a href="../../yjsjx/zsgz.htm" title="招生工作">招生工作</a></li>
+                                    
+
+                                    <li><a href="../../yjsjx/pygz.htm" title="培养工作">培养工作</a></li>
+                                    
+
+                                    <li><a href="../../yjsjx/xwgz.htm" title="学位工作">学位工作</a></li>
+                                    
+
+                                    <li><a href="../../yjsjx/xzzx.htm" title="下载中心">下载中心</a></li>
+                                    
+                                </ul>
+                        </li>
+                        <li class="nLi ">
+                                <h3><a href="../../syljs.htm" title="双一流建设" target="_blank">双一流建设</a></h3>
+                                <ul class="sub">
+
+                                    <li><a href="../../syljs/xkjs.htm" title="学科介绍">学科介绍</a></li>
+                                    
+
+                                    <li><a href="../../syljs/tdjs.htm" title="团队介绍">团队介绍</a></li>
+                                    
+
+                                    <li><a href="../../syljs/sysgl.htm" title="实验室管理">实验室管理</a></li>
+                                    
+
+                                    <li><a href="../../syljs/yjzx.htm" title="研究中心">研究中心</a></li>
+                                    
+
+                                    <li><a href="../../syljs/jgsz.htm" title="机构设置">机构设置</a></li>
+                                    
+                                </ul>
+                        </li>
+                        <li class="nLi ">
+                                <h3><a href="../../kxyj.htm" title="科学研究" target="_blank">科学研究</a></h3>
+                                <ul class="sub">
+
+                                    <li><a href="../../kxyj/kyxm.htm" title="科研项目">科研项目</a></li>
+                                    
+
+                                    <li><a href="../../kxyj/kycg.htm" title="科研成果">科研成果</a></li>
+                                    
+
+                                    <li><a href="../../kxyj/xzzx.htm" title="下载中心">下载中心</a></li>
+                                    
+                                </ul>
+                        </li>
+                        <li class="nLi ">
+                                <h3><a href="../../xsgz.htm" title="学生工作" target="_blank">学生工作</a></h3>
+                                <ul class="sub">
+
+                                    <li><a href="../../xsgz/xsgl.htm" title="学生管理">学生管理</a></li>
+                                    
+
+                                    <li><a href="../../xsgz/bjjs.htm" title="班级建设">班级建设</a></li>
+                                    
+
+                                    <li><a href="../../xsgz/jqzd.htm" title="奖勤助贷">奖勤助贷</a></li>
+                                    
+
+                                    <li><a href="../../xsgz/wjjy.htm" title="往届就业">往届就业</a></li>
+                                    
+
+                                    <li><a href="../../xsgz/xzzx.htm" title="下载中心">下载中心</a></li>
+                                    
+                                </ul>
+                        </li>
+                        <li class="nLi ">
+                                <h3><a href="../../dtgz.htm" title="党团工作" target="_blank">党团工作</a></h3>
+                                <ul class="sub">
+
+                                    <li><a href="../../dtgz/djgz.htm" title="党建工作">党建工作</a></li>
+                                    
+
+                                    <li><a href="../../dtgz/tjgz.htm" title="团建工作">团建工作</a></li>
+                                    
+
+                                    <li><a href="../../dtgz/xsh.htm" title="学生会">学生会</a></li>
+                                    
+
+                                    <li><a href="../../dtgz/yjsh.htm" title="研究生会">研究生会</a></li>
+                                    
+
+                                    <li><a href="../../dtgz/xzzx.htm" title="下载中心">下载中心</a></li>
+                                    
+                                </ul>
+                        </li>
+                        <li class="nLi ">
+                                <h3><a href="../../gjjl.htm" title="国际交流" target="_blank">国际交流</a></h3>
+                                <ul class="sub">
+
+                                    <li><a href="../../gjjl/jlgk.htm" title="交流概况">交流概况</a></li>
+                                    
+
+                                    <li><a href="../../gjjl/hzjg.htm" title="合作机构">合作机构</a></li>
+                                    
+
+                                    <li><a href="../../gjjl/hwlf.htm" title="海外来访">海外来访</a></li>
+                                    
+
+                                    <li><a href="../../gjjl/jscf.htm" title="教师出访">教师出访</a></li>
+                                    
+
+                                    <li><a href="../../gjjl/hwsh_xs_.htm" title="海外生活（学生）">海外生活（学生）</a></li>
+                                    
+
+                                    <li><a href="../../gjjl/lxsfc.htm" title="留学生风采">留学生风采</a></li>
+                                    
+                                </ul>
+                        </li>
+                        <li class="nLi ">
+                                <h3><a href="../../xyh.htm" title="校友工作" target="_blank">校友工作</a></h3>
+                        </li>
+                        <li class="nLi ">
+                                <h3><a href="../../lxwm.htm" title="联系我们" target="_blank">联系我们</a></h3>
+                                <ul class="sub">
+
+                                    <li><a href="../../lxwm/yzxx.htm" title="院长信箱">院长信箱</a></li>
+                                    
+
+                                    <li><a href="../../lxwm/jwjd.htm" title="纪委监督">纪委监督</a></li>
+                                    
+                                </ul>
+                        </li>
+                        
+                    
+                        
+                    
+                        <div class="clearfix"></div>
+                    </ul></DIV></DIV></DIV></DIV><script id="jsID" type="text/javascript">
+		jQuery("#nav").slide({ 
+			type:"menu",
+			titCell:".nLi",
+			targetCell:".sub",
+			effect:"slideDown", 
+			delayTime:3 ,
+			triggerTime:0, 
+			returnDefault:true 
+		});
+	</script><!-- banner  -->
+<DIV class="list-banner"><IMG alt="" src="../../images/news-list-banner.png"> </DIV><!-- nr  -->
+<DIV class="bg">
+<DIV class="w12 nl">
+<DIV class="subnav fl">
+<DIV class="titles">
+师资队伍</DIV>
+<DIV class="navs"><ul>
+            <li><a href="jslb.htm" title="教师列表">教师列表</a></li>
+        <li><a href="kykxygcx.htm" title="矿业科学与工程系">矿业科学与工程系</a></li>
+        <li><a href="znckgcx.htm" title="智能采矿工程系">智能采矿工程系</a></li>
+        <li><a href="zykxygcx.htm" title="资源科学与工程系">资源科学与工程系</a></li>
+        <li><a href="nykxygcx.htm" title="能源科学与工程系">能源科学与工程系</a></li>
+        <li><a href="lpds.htm" title="联聘导师">联聘导师</a></li>
+        <li><a href="bsh.htm" title="博士后">博士后</a></li>
+        <li><a href="txjs.htm" title="退休教师">退休教师</a></li>
+</ul>    
+<IMG src="../../images/a29b1142800656f08d46c5bdefa3fe5.jpg" style="width:240px;height:160px;">
+</DIV></DIV>
+<DIV class="news-list fl">
+<DIV class="now">
+<DIV class="now-l">
+教师列表</DIV>
+<DIV class="now-r">
+    当前位置: 
+                        <a href="../../index.htm">首页</a>
+                >>
+                <a href="../../szdw.htm">师资队伍</a>
+                >>
+                <a href="jslb.htm">师资概况</a>
+                >>
+                <a href="jslb.htm">教师列表</a>
+
+
+
+</DIV></DIV>
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1529612416,'wbnews','u9')</script>
+<link rel="stylesheet" Content-type="text/css" href="../../images/format_1sh6au8rp2.css?v=FD654614DE7F43A88D872900E5DFCF61"><script>function seeContenta9(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta9('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1529612416,3803)</script>
+<div class="nr">
+				
+				<div class="nry-bd">
+					 <div id="vsb_content_1021_3803_u91"><div id="vsb_content_1021"><p style="line-height: 1.75em; margin-bottom: 15px;">教 授</p><p style="line-height: 1.75em; margin-bottom: 15px;"><a href="../../info/1131/4135.htm" target="_self">袁　亮</a>&nbsp;<a href="../../info/1130/4132.htm" target="_self">何满潮</a>&nbsp;<a href="../../info/1131/4140.htm" target="_self">王国法</a>&nbsp;<a href="../../info/1130/4134.htm" target="_self">葛世荣</a>&nbsp;<a href="../../info/1130/7454.htm" target="_self">Derek Elsworth</a>&nbsp;<a href="../../info/1331/6401.htm" target="_self" textvalue="王家臣">王家臣</a>&nbsp;<a href="../../info/1120/2144.htm" target="_self">鞠　杨</a>&nbsp;<a href="../../info/1211/7271.htm" target="_self" textvalue="周宏伟">周宏伟</a>&nbsp;</p><p style="line-height: 1.75em; margin-bottom: 15px;"><a href="../../info/1120/1635.htm">侯运炳</a>&nbsp;<a href="../../info/1415/9534.htm" target="_self">刘　波</a>&nbsp;<a href="../../info/1120/1636.htm" style="text-indent: 2em;">何富连</a>&nbsp;<a href="../../info/1331/6351.htm" target="_self" style="text-indent: 2em;">闫少宏</a>&nbsp;<a href="../../info/1120/1637.htm" style="text-indent: 2em;">赵毅鑫</a>&nbsp;<a href="../../info/1121/1618.htm" style="text-indent: 2em;">黄玉诚</a>&nbsp;<a href="http://10.100.100.80:8080/system/go.jsp?treeid=1120&apptype=content&urltype=news.NewsContentUrl&param=wbnewsid%3D1493" style="text-indent: 2em; font-family: 宋体, SimSun;"><span style="font-family: 宋体, SimSun;">许延春</span></a>&nbsp;<a href="../../info/1121/1526.htm" style="text-indent: 2em;">杨宝贵</a>&nbsp;<a href="../../info/1120/9764.htm" target="_self">孙晓明</a>&nbsp;</p><p style="line-height: 1.75em; margin-bottom: 15px;"><a href="../../info/1331/6353.htm" target="_self" style="text-indent: 2em;">孙书伟</a>&nbsp;<a href="../../info/1211/3175.htm" style="text-indent: 2em;">赵洪宝</a>&nbsp;<a href="../../info/1331/6347.htm" target="_self" style="text-indent: 2em;">张俊文</a>&nbsp;<a href="../../info/1415/9594.htm" target="_self" style="text-indent: 2em;">王　琦</a>&nbsp;<a href="../../info/1121/1646.htm" style="text-indent: 2em;">王春来</a>&nbsp;<a href="../../info/1120/1639.htm" style="text-indent: 2em;">刘洪涛</a>&nbsp;<a href="../../info/1121/1506.htm" style="text-indent: 2em;">王炳文</a>&nbsp;<a href="../../info/1211/3171.htm" style="text-indent: 2em;">樊静丽</a><span style="text-indent: 36px;">&nbsp;</span><a href="../../info/1120/1642.htm" target="_self" style="text-indent: 2em;"><span style="font-family: 宋体, SimSun;">杨胜利</span></a>&nbsp;</p><p style="line-height: 1.75em; margin-bottom: 15px;"><a href="../../info/1120/1644.htm" style="text-indent: 2em;">王志强</a>&nbsp;<a href="../../info/1120/1640.htm" style="text-indent: 2em;">谢生荣</a><span style="text-indent: 36px;">&nbsp;</span><a href="../../info/1121/1650.htm" style="text-indent: 2em;">李　杨</a>&nbsp;<a href="../../info/1211/3173.htm" style="text-indent: 2em;">郝宪杰</a>&nbsp;<a href="../../info/1331/6346.htm" target="_self" style="text-indent: 2em; color: rgb(54, 96, 146);">潘卫东</a>&nbsp;<a href="../../info/1121/1521.htm" target="_self" style="text-indent: 2em;">邓雪杰</a>&nbsp;<a href="../../info/1120/1470.htm" target="_self" style="text-indent: 2em;">陈见行</a>&nbsp;<a href="../../info/1120/1472.htm" target="_self" style="text-indent: 2em;">张　村</a>&nbsp;<a href="../../info/1120/11984.htm" target="_self">江　贝</a>&nbsp;</p><p style="line-height: 1.75em; margin-bottom: 15px;"><a href="../../info/1331/6350.htm" target="_self" style="color: rgb(54, 96, 146); text-decoration: underline;"><span style="color: rgb(54, 96, 146);">张锦旺</span></a><span style="color: rgb(54, 96, 146);">&nbsp;</span><a href="../../info/1331/6348.htm" target="_self" style="color: rgb(54, 96, 146); text-decoration: underline;"><span style="color: rgb(54, 96, 146);">赵红泽</span></a><span style="color: rgb(54, 96, 146);">&nbsp;</span><a href="../../info/1120/2522.htm" style="text-indent: 2em; color: rgb(54, 96, 146); text-decoration: underline;"><span style="color: rgb(54, 96, 146);">王兆会</span></a></p><p style="line-height: 1.75em; margin-bottom: 15px;">副教授</p><p style="line-height: 1.75em; margin-bottom: 15px;"><a href="../../info/1121/1505.htm">薛黎明</a>&nbsp;<a href="../../info/1121/1648.htm">仲淑姮</a>&nbsp;<a href="../../info/1120/1638.htm">张守宝</a>&nbsp;<a href="../../info/1121/1537.htm">徐文彬</a>&nbsp;<a href="../../info/1120/1641.htm">吴仁伦</a>&nbsp;<a href="../../info/1331/6349.htm" target="_self">赵志强</a>&nbsp;<a href="../../info/1211/3172.htm" style="text-align: justify; text-indent: 2em; text-wrap: wrap; font-size: 18px; text-decoration: underline;"><span style="font-size: 18px;">王　兵</span></a>&nbsp;<a href="../../info/1120/1473.htm" style="font-family: 宋体; font-size: 18px; text-align: justify; text-indent: 2em; text-wrap-mode: wrap;">滕　腾</a>&nbsp;<a href="../../info/1121/2075.htm" style="text-indent: 2em;">李永亮</a></p><p style="line-height: 1.75em; margin-bottom: 15px;"><a href="../../info/1120/1609.htm" style="text-indent: 2em;">陈冬冬</a><span style="text-indent: 36px;">&nbsp;</span><a href="../../info/1121/2524.htm" style="text-indent: 2em;">郭晓菲</a>&nbsp;<a href="../../info/1331/6352.htm" target="_self" textvalue="刘世奇" style="text-indent: 2em;">刘世奇</a>&nbsp;<span style="text-indent: 36px;"><a href="../../info/1211/3176.htm" target="_self" textvalue="刘　鹏">刘　鹏</a>&nbsp;<a href="../../info/1211/3174.htm" target="_self"><span style="color: rgb(54, 96, 146);">张洪伟</span></a>&nbsp;<a href="../../info/1211/2525.htm" target="_self"><span style="color: rgb(54, 96, 146);">宋红华</span></a><span style="color:#366092">&nbsp;</span></span><a href="../../info/1120/3696.htm" target="_self" style="text-indent: 2em;">魏炜杰</a>&nbsp;<a href="../../info/1415/9584.htm" target="_self" style="text-indent: 2em;">王雁冰</a>&nbsp;<a href="../../info/1415/9604.htm" target="_self" style="text-indent: 2em;">高玉兵</a></p><p style="line-height: 1.75em; margin-bottom: 15px;"><a href="../../info/1415/9564.htm" target="_self" style="text-indent: 2em;">高红<span style="text-indent: 2em; color: rgb(54, 96, 146);">科</span></a><span style="color: rgb(54, 96, 146);">&nbsp;</span><a href="../../info/1331/7053.htm" target="_self" style="color: rgb(54, 96, 146); text-decoration: underline;"><span style="color: rgb(54, 96, 146);">李良晖</span></a><span style="color: rgb(54, 96, 146);">&nbsp;</span><a href="../../info/1331/8988.htm" target="_self" style="color: rgb(54, 96, 146); text-decoration: underline;"><span style="color: rgb(54, 96, 146);">李春元</span></a></p><p style="line-height: 1.75em; margin-bottom: 15px;">讲 师</p><p style="line-height: 1.75em; margin-bottom: 15px;"><a href="../../info/1331/6354.htm" target="_self">孙振明</a>&nbsp;<a href="../../info/1211/3177.htm">王　熠</a>&nbsp;<a href="../../info/1331/8224.htm" target="_self">宋治祥</a>&nbsp;<a href="../../info/1211/8225.htm" target="_self">朱广沛</a>&nbsp;<a href="../../info/1121/9381.htm" target="_self">李乾龙</a>&nbsp;</p><p style="margin-bottom: 15px; line-height: 1.75em;">研究员</p><p style="margin-bottom: 15px; line-height: 1.75em;"><a href="../../info/1211/11774.htm" target="_self">张新敬</a></p><p style="margin-bottom: 15px; line-height: 1.75em;">副研究员</p><p style="line-height: 1.75em; margin-bottom: 15px;"><a title="常海滨" href="../../info/1211/4731.htm" target="_blank" style="text-indent: 2em;">常海滨</a>&nbsp;</p><p style="line-height: 1.75em; margin-bottom: 15px;">高级工程师</p><p style="line-height: 1.75em; margin-bottom: 15px;"><a href="../../info/1121/1502.htm">陈　磊</a></p><p style="line-height: 1.75em; margin-bottom: 15px;">工程师</p><p style="line-height: 1.75em; margin-bottom: 15px;"><a href="../../info/1120/1619.htm">杜莉莉</a></p><p style="line-height: 1.75em; margin-bottom: 15px;">博士后</p><p style="line-height: 1.75em; margin-bottom: 15px;"><a href="../../info/1425/9794.htm" target="_self">董智文</a>&nbsp;<a href="../../info/1425/9834.htm" target="_self">邢冬益</a>&nbsp;<a href="../../info/1425/9614.htm" target="_self">张 萌</a><span style="text-indent: 36px; text-wrap-mode: wrap;">&nbsp;<a href="../../info/1425/9804.htm" target="_self">郭 丰</a>&nbsp;</span><a href="../../info/1425/9624.htm" target="_self">张轩宁</a>&nbsp;<a href="../../info/1120/11844.htm" target="_self">许 硕</a>&nbsp;<a href="../../info/1425/14144.htm" target="_self" textvalue="盖秋凯"><span style="color: rgb(54, 96, 146);">盖秋凯</span></a></p></div></div>
+    <span id="vsb_content_1021_3803_u9" name="vsb_content_1021_3803_u9"></span><br /><br />
+    
+				</div>
+				
+			</div>
+</DIV>
+<DIV class="clearfix"></DIV></DIV><!-- laborate --><!-- footer -->
+<DIV class="w10 footer-bg">
+<DIV class="w12 footer">    <UL>
+<LI><A href="../../dtgz/djgz.htm" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1529612416, 44144)" target="_blank"><IMG src="../../images/link01.png"></A> </LI>
+<LI><A href="../../tzgg.htm" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1529612416, 44145)" target="_blank"><IMG src="../../images/link02.png"></A> </LI>
+<LI><A href="../../info/1137/1655.htm" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1529612416, 44146)" target="_blank"><IMG src="../../images/link03.png"></A> </LI>
+<LI><A href="../../info/1161/1733.htm" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1529612416, 44147)" target="_blank"><IMG src="../../images/link04.png"></A> </LI>
+ 
+<DIV class="clearfix"></DIV>
+</UL>
+<DIV class="text"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>校址：北京市海淀区学院路丁11号 邮编：100083</p><p>版权所有:中国矿业大学（北京）</p></DIV></DIV></DIV><!-- backtop -->
+<DIV class="r-flote">
+<a href="http://10.4.32.237:8000/login/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1529612416, 41666)">会议室预约</a>
+
+<P class="backtop"></P></DIV><script>
+		$(function(){
+			var speed = 1000,
+				aSide = [],
+				sc=$(document),
+				win=$(window);
+				$('.backtop').click(function(){
+					$( "html,body").stop().animate({ "scrollTop" : 0 }, 1000);
+				})
+		});
+	</script></DIV>
+
+</BODY></HTML>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

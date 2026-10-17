@@ -1859,5 +1859,66 @@ class XjtuMechanicalSourceTests(unittest.TestCase):
             self.assertNotEqual(spec["listing"], "https://mec.xjtu.edu.cn/szdw/jsml.htm")
 
 
+class CumtbMiningSourceTests(unittest.TestCase):
+    """0819 矿业工程 — 中国矿业大学（北京）能源与矿业学院 教师列表."""
+
+    @classmethod
+    def setUpClass(cls):
+        from workbench.sources.cumtb_mining import SPECS as CUMTB_SPECS
+        from workbench.sources.cumtb_mining import parse as parse_cumtb
+        cls.spec = CUMTB_SPECS[0]
+        cls.html = (FIXTURES / f"{cls.spec['key']}.html").read_text(encoding="utf-8")
+        cls.rows = parse_cumtb(cls.html, cls.spec["listing"], cls.spec)
+
+    def test_spec_targets_the_mining_discipline(self):
+        self.assertEqual(self.spec["key"], "cumtb_mining")
+        self.assertEqual(self.spec["code"], "0819")
+        self.assertEqual(self.spec["discipline"], "矿业工程")
+        self.assertEqual(self.spec["institution"], "中国矿业大学（北京）")
+        self.assertEqual(self.spec["department"], "能源与矿业学院")
+        self.assertEqual(self.spec["max_pages"], 1)
+        self.assertNotIn("{page}", self.spec["listing"])
+
+    def test_this_is_a_different_university_from_the_dominant_one(self):
+        # 现有 0819 的 110 条来自中国矿业大学（徐州，cumt.edu.cn）。
+        # 本校域名为 cumtb.edu.cn，是另一所大学，因此算新的机构。
+        self.assertNotEqual(self.spec["institution"], "中国矿业大学")
+        self.assertIn("cumtb.edu.cn", self.spec["listing"])
+
+    def test_parser_finds_the_whole_roster(self):
+        self.assertEqual(len(self.rows), 73)
+        self.assertEqual(len({r["name"] for r in self.rows}), 73)
+        self.assertTrue(all(r["department"] == "能源与矿业学院" for r in self.rows))
+
+    def test_every_row_links_a_detail_page(self):
+        # 收录规则可核实：链接必须指向院内 /info/ 详情页。
+        for row in self.rows:
+            self.assertIn("/info/", row["homepage"])
+            self.assertNotEqual(row["homepage"], self.spec["listing"])
+
+    def test_latin_names_are_skipped_not_guessed(self):
+        # 名录里有一位外籍教师写成拉丁字母（无空格），NAME_RE 不接受。
+        for row in self.rows:
+            self.assertRegex(row["name"], r"^[\u4e00-\u9fff·]{2,8}$")
+
+    def test_direction_is_never_invented(self):
+        for row in self.rows:
+            self.assertEqual(row["assignment"]["direction"], "方向待补")
+
+    def test_no_contact_information_is_stored(self):
+        blob = json.dumps(self.rows, ensure_ascii=False)
+        self.assertNotIn("@", blob)
+        self.assertNotIn("邮箱", blob)
+        self.assertNotIn("电话", blob)
+        self.assertNotRegex(blob,
+                            r"(?<![0-9A-Za-z])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z])")
+
+    def test_fixture_is_redacted(self):
+        self.assertNotRegex(self.html,
+                            r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
+        self.assertNotRegex(self.html,
+                            r"(?<![0-9A-Za-z.\/-])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z-])")
+
+
 if __name__ == "__main__":
     unittest.main()
