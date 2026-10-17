@@ -2349,5 +2349,72 @@ class CsuMiningSourceTests(unittest.TestCase):
                 r"(?<![0-9A-Za-z.\/-])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z-])")
 
 
+class DlutBioengineeringSourceTests(unittest.TestCase):
+    """0836 生物工程 — 大连理工大学 生物工程学院 教师列表（8 页）."""
+
+    @classmethod
+    def setUpClass(cls):
+        from workbench.sources.dlut_bioengineering import SPECS as BIO_SPECS
+        from workbench.sources.dlut_bioengineering import parse as parse_bio
+        cls.spec = BIO_SPECS[0]
+        cls.pages = {}
+        stems = {1: "dlut_bioengineering"}
+        stems.update({p: f"dlut_bioengineering_p{p}" for p in range(2, 9)})
+        for page, stem in stems.items():
+            html = (FIXTURES / f"{stem}.html").read_text(encoding="utf-8")
+            url = cls.spec["listing"].replace("{page}", str(page))
+            cls.pages[page] = parse_bio(html, url, cls.spec)
+        cls.rows = [r for rows in cls.pages.values() for r in rows]
+
+    def test_spec_targets_the_bioengineering_discipline(self):
+        self.assertEqual(self.spec["key"], "dlut_bioengineering")
+        self.assertEqual(self.spec["code"], "0836")
+        self.assertEqual(self.spec["discipline"], "生物工程")
+        self.assertEqual(self.spec["institution"], "大连理工大学")
+        self.assertEqual(self.spec["department"], "生物工程学院")
+        self.assertEqual(self.spec["max_pages"], 8)
+        self.assertIn("totalpage=8", self.spec["listing"])
+
+    def test_this_is_not_the_dominant_institution(self):
+        # 0836 现有华东理工大学 116/151，本来源必须是另一所学校。
+        self.assertNotEqual(self.spec["institution"], "华东理工大学")
+
+    def test_row_total_is_consistent_with_the_page_marker(self):
+        # 页面自报「共87条」，八页解析出 85 行、85 个互不相同姓名。差 2 行如实保留。
+        self.assertEqual(len(self.rows), 85)
+        self.assertEqual(len({r["name"] for r in self.rows}), 85)
+
+    def test_titles_never_leak_into_the_name(self):
+        # 卡片锚文本是「姓名单位：…职称：…个人主页」的拼接，姓名必须只取「单位」之前。
+        for row in self.rows:
+            self.assertRegex(row["name"], r"^[\u4e00-\u9fff·]{2,8}$")
+            for noise in ("单位", "职称", "个人主页", "教授", "副教授", "研究员"):
+                self.assertNotIn(noise, row["name"])
+
+    def test_every_row_links_a_personal_homepage(self):
+        for row in self.rows:
+            self.assertIn("faculty.dlut.edu.cn", row["homepage"])
+            self.assertIn("/zh_CN/index.htm", row["homepage"])
+
+    def test_direction_is_never_invented(self):
+        for row in self.rows:
+            self.assertEqual(row["assignment"]["direction"], "方向待补")
+
+    def test_no_contact_information_is_stored(self):
+        blob = json.dumps(self.rows, ensure_ascii=False)
+        self.assertNotIn("@", blob)
+        self.assertNotRegex(blob,
+                            r"(?<![0-9A-Za-z])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z])")
+
+    def test_fixtures_are_redacted(self):
+        stems = ["dlut_bioengineering"] + [f"dlut_bioengineering_p{p}" for p in range(2, 9)]
+        for stem in stems:
+            html = (FIXTURES / f"{stem}.html").read_text(encoding="utf-8")
+            self.assertNotRegex(html, r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
+            self.assertNotRegex(
+                html,
+                r"(?<![0-9A-Za-z.\/-])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z-])")
+
+
 if __name__ == "__main__":
     unittest.main()
