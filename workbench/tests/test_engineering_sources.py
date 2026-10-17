@@ -1459,5 +1459,405 @@ class TsinghuaMeSourceTests(unittest.TestCase):
                             r"(?<![0-9A-Za-z.\/-])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z-])")
 
 
+class HustMechanicalSourceTests(unittest.TestCase):
+    """0802 机械工程 — 华中科技大学机械科学与工程学院 教师名录（全体，按拼音首字母分组）."""
+
+    # 学院「单位列表」的 10 个教研单位，取自名录页个人链接里的栏目编号。
+    # 映射本身在模块 docstring 里写明了核对方式：与 10 张单位名录页做过集合相等核对。
+    UNITS = {
+        "智能制造装备与技术全国重点实验室": 65,
+        "制造装备数字化国家工程研究中心": 24,
+        "国家企业信息化支撑软件工程技术研究中心": 22,
+        "国家数控系统工程技术研究中心": 23,
+        "工艺装备及自动化系": 10,
+        "机械设计与汽车工程系": 15,
+        "机械电子信息工程系": 26,
+        "仪器科学与技术系": 19,
+        "流体动力控制工程系": 17,
+        "工业及制造系统工程系": 10,
+    }
+    # 页面上姓名后带「（双聘）」的状态标记，去掉标记后仍是真实姓名。
+    JOINT_APPOINTED = frozenset({
+        "陈文斌", "陈书文", "郭家杰", "孙容磊", "孙柏杨", "汪一苇", "熊蔡华", "赵精晶",
+    })
+
+    @classmethod
+    def setUpClass(cls):
+        # 就地导入，避免与其他来源模块并发修改共享 import 块。
+        from workbench.sources.hust_mechanical import SPECS as HUST_ME_SPECS
+        from workbench.sources.hust_mechanical import parse as parse_hust_me
+        cls.spec = HUST_ME_SPECS[0]
+        cls.html = (FIXTURES / f"{cls.spec['key']}.html").read_text(encoding="utf-8")
+        cls.rows = parse_hust_me(cls.html, cls.spec["listing"], cls.spec)
+        cls.by_name = {row["name"]: row for row in cls.rows}
+
+    def test_spec_targets_the_mechanical_discipline(self):
+        self.assertEqual(self.spec["key"], "hust_mechanical")
+        self.assertEqual(self.spec["code"], "0802")
+        self.assertEqual(self.spec["discipline"], "机械工程")
+        self.assertEqual(self.spec["institution"], "华中科技大学")
+        self.assertEqual(self.spec["department"], "机械科学与工程学院")
+        self.assertIn("mse.hust.edu.cn", self.spec["listing"])
+        # 单页静态名录：页面自身没有「每页 / 总共 / 页码」记录标记，故没有 {page}。
+        self.assertNotIn("{page}", self.spec["listing"])
+        self.assertEqual(self.spec["max_pages"], 1)
+
+    def test_the_source_is_not_the_dominant_institution(self):
+        # 0802 原有 190 条里 183 条来自上海交通大学（96.3%），本来源必须是另一所学校。
+        self.assertNotEqual(self.spec["institution"], "上海交通大学")
+        self.assertNotIn("sjtu", self.spec["listing"])
+
+    def test_the_listing_page_really_has_no_pagination(self):
+        # max_pages=1 的依据要能在快照里复核：同站的文章列表页会写出「每页 N 记录 /
+        # 总共 M 记录 / 页码 i/j」并带 wp_paging 分页块，这一页一处都没有。
+        import re
+        from bs4 import BeautifulSoup
+        text = re.sub(r"[\s\u3000\xa0]+", "",
+                      BeautifulSoup(self.html, "html.parser").get_text(" ", strip=True))
+        for marker in ("每页", "总共", "页码"):
+            self.assertNotIn(marker, text)
+        self.assertNotIn("wp_paging", self.html)
+        # 24 个拼音字母组都在同一次响应里（A/E/I/K/N/O 为空组）。
+        groups = BeautifulSoup(self.html, "html.parser").select("div.munu_js")
+        self.assertEqual(len(groups), 24)
+
+    def test_parser_finds_the_whole_roster(self):
+        # 全体教师名录 232 条链接，去掉「（双聘）」尾缀后仍是 232 个人，页内无重名。
+        self.assertEqual(len(self.rows), 232)
+        self.assertEqual(len(self.by_name), 232)
+        self.assertTrue(all(
+            row["assignment"]["first_level_discipline"] == "0802 机械工程"
+            for row in self.rows))
+
+    def test_names_are_people_and_not_navigation(self):
+        for row in self.rows:
+            self.assertRegex(row["name"], r"^[\u4e00-\u9fff·]{2,8}$")
+        for expected in ("熊有伦", "丁汉", "李培根", "周济", "陈学东", "尹周平",
+                         "尤政", "史铁林", "陈吉红", "刘银水", "黄其柏", "陈立平",
+                         "陈明祥", "白坤", "李小平", "沈卫明"):
+            self.assertIn(expected, self.by_name)
+        for noise in ("师资队伍", "教师名录", "单位列表", "全体", "院士风采",
+                      "研究生导师", "兼职教师", "实验工程人员", "博士后",
+                      "离退休人员", "人才招聘", "机械科学与工程学院"):
+            self.assertNotIn(noise, self.by_name)
+
+    def test_pinyin_letter_groups_are_not_used_as_the_department(self):
+        # 字母组只是检索索引。若把它们当院系，department 就会变成 "C"/"Z" 这样的单字母。
+        departments = {row["department"] for row in self.rows}
+        for letter in ("A", "B", "C", "L", "W", "X", "Y", "Z"):
+            self.assertNotIn(letter, departments)
+        self.assertTrue(all(len(d) > 2 for d in departments))
+
+    def test_department_comes_from_the_listed_unit(self):
+        counts = {}
+        for row in self.rows:
+            counts[row["department"]] = counts.get(row["department"], 0) + 1
+        # 10 个教研单位 + 1 位页面上没有栏目编号的人（沈卫明）回落到学院名。
+        self.assertEqual(counts, {**self.UNITS, "机械科学与工程学院": 1})
+        self.assertEqual(self.by_name["沈卫明"]["department"], "机械科学与工程学院")
+        self.assertEqual(self.by_name["白坤"]["department"],
+                         "智能制造装备与技术全国重点实验室")
+        self.assertEqual(self.by_name["陈吉红"]["department"], "国家数控系统工程技术研究中心")
+        self.assertEqual(self.by_name["陈明祥"]["department"], "工艺装备及自动化系")
+        self.assertEqual(self.by_name["史铁林"]["department"], "机械电子信息工程系")
+        self.assertEqual(self.by_name["尤政"]["department"], "仪器科学与技术系")
+        self.assertEqual(self.by_name["刘银水"]["department"], "流体动力控制工程系")
+        self.assertEqual(self.by_name["黄其柏"]["department"], "机械设计与汽车工程系")
+        for row in self.rows:
+            self.assertNotRegex(row["department"], r"党委|工会|离退休|办公室|招聘")
+            self.assertIn(row["department"], row["assignment"]["note"])
+
+    def test_joint_appointment_marker_is_a_status_not_a_name(self):
+        # 页面把 8 位的姓名写成「陈文斌（双聘）」；尾缀去掉后姓名才成立，状态写进备注。
+        for name in self.JOINT_APPOINTED:
+            self.assertIn(name, self.by_name)
+            self.assertIn("双聘", self.by_name[name]["assignment"]["note"])
+        for row in self.rows:
+            self.assertNotIn("（双聘）", row["name"])
+            self.assertNotIn("(双聘)", row["name"])
+        # 没有任何一条因为尾缀过长而被丢掉：尾缀 8 人全部在册。
+        self.assertIn("陈文斌（双聘）", self.html)
+        marker_rows = [row for row in self.rows if "双聘" in row["assignment"]["note"]]
+        self.assertEqual(len(marker_rows), 8)
+
+    def test_rank_never_becomes_a_research_direction(self):
+        # 名录页只列姓名与个人页链接：没有职称，也没有研究方向，故一律“方向待补”。
+        for row in self.rows:
+            self.assertEqual(row["assignment"]["direction"], "方向待补")
+            self.assertNotRegex(row["assignment"]["direction"],
+                                r"教授|副教授|讲师|研究员|博士后|正高|副高|中级")
+
+    def test_every_row_cites_the_listing_and_links_a_personal_page(self):
+        for row in self.rows:
+            self.assertEqual(row["assignment"]["url"], self.spec["listing"])
+            self.assertEqual(row["assignment"]["record_kind"], "faculty_directory")
+            self.assertEqual(row["institution"], "华中科技大学")
+            self.assertIn("mse.hust.edu.cn", row["homepage"])
+        # 231 位指向自己的 /info/ 文章页；沈卫明的链接回指名录页本身，故回落到 listing。
+        personal = [row for row in self.rows if "/info/" in row["homepage"]]
+        self.assertEqual(len(personal), 231)
+        self.assertEqual(self.by_name["沈卫明"]["homepage"], self.spec["listing"])
+        self.assertEqual(len({row["homepage"] for row in personal}), 231)
+
+    def test_no_contact_information_is_stored(self):
+        blob = json.dumps(self.rows, ensure_ascii=False)
+        self.assertNotIn("@", blob)
+        self.assertNotIn("邮箱", blob)
+        self.assertNotIn("电话", blob)
+        self.assertNotIn("联系方式已隐去", blob)
+        self.assertNotRegex(blob,
+                            r"(?<![0-9A-Za-z])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z])")
+
+    def test_fixture_is_redacted(self):
+        # 快照是页面逐字副本：页脚原有一处学院总机与一处学院邮箱，落盘前都已替换为
+        # 「联系方式已隐去」。这里断言快照里已无字面联系方式；不写出具体号码，否则
+        # 测试文件本身就成了发布渠道。
+        self.assertEqual(self.html.count("联系方式已隐去"), 2)
+        self.assertNotRegex(self.html,
+                            r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
+        self.assertNotRegex(self.html,
+                            r"(?<![0-9A-Za-z.\/-])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z-])")
+
+
+class XjtuMechanicalSourceTests(unittest.TestCase):
+    """0802 机械工程 — 西安交通大学机械工程学院 教师名录（按研究所）.
+
+    学院「师资队伍 → 教师名录」把整份名录拆成 11 个研究所的子页，其中两个研究所各分
+    2 页，故本来源共 13 个条目、13 份快照。
+    """
+
+    # 各研究所（含分页之和）的人数，用于锁住「不是一个系，而是全院的所级名录」。
+    DEPARTMENTS = {
+        "国际机械中心": 11,
+        "航空发动机研究所": 35,
+        "航天制造与信息工程研究所": 23,
+        "机器人与智能系统研究所": 46,
+        "设计科学与基础部件研究所": 29,
+        "医工交叉研究所": 11,
+        "先进制造技术研究所": 77,
+        "精密工程研究所": 39,
+        "装备智能诊断与控制研究所": 27,
+        "新能源装备与质量工程研究所": 15,
+        "工业产品工程研究所": 17,
+    }
+    # 两个分页研究所的两页人数：页面自己的分页条写着「1 2」，即两页。
+    PAGES = {"xjtu_mec_robotics_p1": 40, "xjtu_mec_robotics_p2": 6,
+             "xjtu_mec_advanced_manufacturing_p1": 40,
+             "xjtu_mec_advanced_manufacturing_p2": 37}
+    # 同时出现在两个研究所名册里的姓名（各所各一行，见模块文档的取舍说明）。
+    CROSS_LISTED = frozenset({"李兵", "王晶", "李敏", "毛红威", "马壮"})
+
+    @classmethod
+    def setUpClass(cls):
+        from workbench.sources.xjtu_mec import SPECS as XJTU_MEC_SPECS
+        from workbench.sources.xjtu_mec import parse as parse_xjtu_mec
+
+        cls.specs = {spec["key"]: spec for spec in XJTU_MEC_SPECS}
+        cls.rows = []
+        cls.per_key = {}
+        for key, spec in cls.specs.items():
+            html = (FIXTURES / f"{key}.html").read_text(encoding="utf-8")
+            rows = parse_xjtu_mec(html, spec["listing"], spec)
+            cls.per_key[key] = rows
+            cls.rows.extend(rows)
+        cls.by_name = {row["name"]: row for row in cls.rows}
+        cls.homepages = {}
+        for row in cls.rows:
+            cls.homepages.setdefault(row["name"], set()).add(row["homepage"])
+
+    def test_specs_target_the_mechanical_discipline(self):
+        self.assertEqual(len(self.specs), 13)
+        for key, spec in self.specs.items():
+            with self.subTest(source=key):
+                self.assertEqual(spec["code"], "0802")
+                self.assertEqual(spec["discipline"], "机械工程")
+                self.assertEqual(spec["institution"], "西安交通大学")
+                self.assertEqual(spec["max_pages"], 1)
+                self.assertIn("mec.xjtu.edu.cn/szdw/jsml/", spec["listing"])
+                # 分页由静态文件「基准页 / 基准页/1.htm」实现，下标比页码小 1，
+                # {page} 从 1 起算无法同时表示两页，故两页各是一个条目。
+                self.assertNotIn("{page}", spec["listing"])
+
+    def test_this_is_a_second_university_for_0802(self):
+        # 本轮之前 0802 机械工程只有清华大学（tsinghua_me）一个来源。
+        self.assertEqual({spec["institution"] for spec in self.specs.values()},
+                         {"西安交通大学"})
+        self.assertNotIn("清华大学", {spec["institution"] for spec in self.specs.values()})
+
+    def test_the_whole_college_is_covered_not_one_institute(self):
+        # 学院把名录拆到 11 个研究所；只解析出其中一个所就是把一个系当成了全院。
+        counts = {}
+        for row in self.rows:
+            counts[row["department"]] = counts.get(row["department"], 0) + 1
+        self.assertEqual(counts, self.DEPARTMENTS)
+        self.assertEqual(sum(counts.values()), 330)
+        self.assertEqual(len(self.rows), 330)
+        # 11 个姓名在 5 个同名者上各出现两次，因此不同姓名是 325 个。
+        self.assertEqual(len({row["name"] for row in self.rows}), 325)
+        # 院系一律取自研究所，没有回落到笼统的学院名。
+        self.assertNotIn("机械工程学院", counts)
+
+    def test_paginated_institutes_contribute_both_pages(self):
+        for key, expected in self.PAGES.items():
+            with self.subTest(source=key):
+                self.assertEqual(len(self.per_key[key]), expected)
+        robot_p1 = {r["name"] for r in self.per_key["xjtu_mec_robotics_p1"]}
+        robot_p2 = {r["name"] for r in self.per_key["xjtu_mec_robotics_p2"]}
+        self.assertFalse(robot_p1 & robot_p2, "两页名单不应重合")
+        self.assertEqual(len(robot_p1 | robot_p2), 46)
+        adv_p1 = {r["name"] for r in self.per_key["xjtu_mec_advanced_manufacturing_p1"]}
+        adv_p2 = {r["name"] for r in self.per_key["xjtu_mec_advanced_manufacturing_p2"]}
+        self.assertFalse(adv_p1 & adv_p2, "两页名单不应重合")
+        self.assertEqual(len(adv_p1 | adv_p2), 77)
+        # 第 2 页的真实地址是基准页下的 1.htm（路径下标比页码小 1）。
+        self.assertTrue(self.specs["xjtu_mec_robotics_p2"]["listing"]
+                        .endswith("/jqryznxtyjs/1.htm"))
+        self.assertTrue(self.specs["xjtu_mec_advanced_manufacturing_p2"]["listing"]
+                        .endswith("/xjzzjsyjs/1.htm"))
+
+    def test_names_are_people_and_not_navigation(self):
+        import re
+        for row in self.rows:
+            self.assertRegex(row["name"], r"^[\u4e00-\u9fff·]{2,8}$")
+        for expected in ("曹宏瑞", "陈雪峰", "陈贵敏", "查俊", "白冰", "徐光华",
+                         "江平宇", "严如强", "高建民"):
+            self.assertIn(expected, self.by_name)
+        for noise in ("教授", "副教授", "讲师", "研究员", "副研究员", "博士后",
+                      "首页", "上页", "下页", "尾页", "中心", "研究所", "学院",
+                      "教师名录", "师资队伍", "全体教师"):
+            self.assertNotIn(noise, self.by_name)
+
+    def test_two_character_rank_labels_would_pass_name_re_so_they_are_filtered(self):
+        # 「教授」「讲师」这类只有两个汉字的职称块**能**通过 NAME_RE（2–8 个汉字），
+        # 所以必须在姓名阶段就挡掉；先证明它们确实出现在快照里，断言才不是空转。
+        import re
+        from bs4 import BeautifulSoup
+
+        text = re.sub(r"[\s\u3000\xa0]+", "",
+                      BeautifulSoup(
+                          (FIXTURES / "xjtu_mec_aero_engine.html").read_text(encoding="utf-8"),
+                          "html.parser").get_text(" ", strip=True))
+        for token in ("教授", "副教授", "研究员"):
+            self.assertIn(token, text)
+        for token in ("教授", "副教授", "讲师", "研究员", "副研究员"):
+            self.assertNotIn(token, self.by_name)
+
+    def test_dual_appointment_suffix_is_stripped_not_dropped(self):
+        # 页面把 5 位双聘教师写成「何卫锋（双聘）」：姓名要取括号前的汉字串，
+        # 身份后缀进备注，而不是让整条因为「（双聘）」不符合 NAME_RE 被丢掉。
+        for name in ("何卫锋", "聂祥樊", "吴云", "吴子祥", "周留成"):
+            self.assertIn(name, self.by_name)
+            self.assertIn("双聘", self.by_name[name]["assignment"]["note"])
+        self.assertNotIn("何卫锋（双聘）", self.by_name)
+        self.assertEqual(self.by_name["何卫锋"]["department"], "航空发动机研究所")
+
+    def test_layout_spaces_are_stripped_before_the_name_check(self):
+        # 陈雪峰的锚点是 title=" 陈雪峰"、锚文本带全角/半角前导空格；先去掉所有空白
+        # 再校验才得到完整姓名（否则会因首字符是空格而整条落空）。
+        self.assertIn("陈雪峰", self.by_name)
+        self.assertEqual(self.by_name["陈雪峰"]["department"], "航空发动机研究所")
+
+    def test_direction_is_never_invented(self):
+        # 名录页不列个人研究方向，也不列职称：方向一律「方向待补」，职称绝不进方向。
+        for row in self.rows:
+            self.assertEqual(row["assignment"]["direction"], "方向待补")
+        directions = "".join(row["assignment"]["direction"] for row in self.rows)
+        for marker in ("教授", "副教授", "讲师", "研究员", "博士后", "正高", "副高",
+                       "中级", "导师"):
+            self.assertNotIn(marker, directions)
+
+    def test_every_row_cites_its_own_listing_and_department(self):
+        for row in self.rows:
+            self.assertTrue(row["assignment"]["url"].startswith(
+                "https://mec.xjtu.edu.cn/szdw/jsml/"))
+            self.assertEqual(row["assignment"]["record_kind"], "faculty_directory")
+            self.assertEqual(row["institution"], "西安交通大学")
+            # 每条备注都写明它来自哪个研究所，避免被读成全院同名单位。
+            self.assertIn(row["department"], row["assignment"]["note"])
+            self.assertIn("方向", row["assignment"]["note"])
+
+    def test_each_listing_cites_its_own_page_not_one_shared_url(self):
+        # 13 个条目应该有 13 个不同的出处，任何一条都不许借用别人的 URL。
+        urls = set()
+        for key, spec in self.specs.items():
+            for row in self.per_key[key]:
+                self.assertEqual(row["assignment"]["url"], spec["listing"])
+            urls.add(spec["listing"])
+        self.assertEqual(len(urls), 13)
+
+    def test_homepages_are_person_pages_or_the_listing(self):
+        linked = [row for row in self.rows if row["homepage"] != row["assignment"]["url"]]
+        # 163 位有个人主页（gr.xjtu.edu.cn 个人页 / faculty.xjtu.edu.cn / 学院 /info/ 个人页），
+        # 其余 167 位的锚点指向不区分个人的 gr.xjtu.edu.cn/en/home 或 #，回落到名录页。
+        self.assertEqual(len(linked), 163)
+        for row in linked:
+            self.assertTrue(row["homepage"].startswith("http"), row["homepage"])
+            self.assertNotIn("gr.xjtu.edu.cn/en/home", row["homepage"])
+            self.assertNotIn(";jsessionid", row["homepage"])
+        for row in self.rows:
+            self.assertTrue(row["homepage"].startswith("http"), row["homepage"])
+
+    def test_cross_listed_names_keep_one_row_per_institute(self):
+        # 5 个姓名出现在两个研究所的名册里。李兵两处的个人主页地址不同
+        # （/en/web/bli 与 /en/web/lb），说明学院内确实存在重名，不能按姓名合并。
+        duplicates = {name: count for name, count in
+                      ((n, sum(1 for r in self.rows if r["name"] == n))
+                       for n in {r["name"] for r in self.rows}) if count > 1}
+        self.assertEqual(set(duplicates), self.CROSS_LISTED)
+        self.assertEqual(len(self.homepages["李兵"]), 2)
+        departments = {r["department"] for r in self.rows if r["name"] == "李兵"}
+        self.assertEqual(departments, {"航空发动机研究所", "精密工程研究所"})
+        # 两行各自引自己的研究所名录页，而不是共用一条。
+        self.assertEqual(
+            len({r["assignment"]["url"] for r in self.rows if r["name"] == "李兵"}), 2)
+
+    def test_no_contact_information_is_stored(self):
+        # 名录页本身只有页脚的一处学院邮箱与一处座机，模块从不读取联系方式字段。
+        blob = json.dumps(self.rows, ensure_ascii=False)
+        self.assertNotIn("@", blob)
+        self.assertNotIn("邮箱", blob)
+        self.assertNotIn("电话", blob)
+        self.assertNotIn("联系方式已隐去", blob)
+        # 电话判据与公开前审计同一条规则：真实号码总是在文本环境里，所以排除紧跟在
+        # `.` `/` `-` 之后、或后面还接着 `-数字` 的号码形态。理由是首页地址里的
+        # gr.xjtu.edu.cn 个人页 id（如 .../web/0020200422）是一串 10 位数字，
+        # 用不带 `/` 排除的写法会把它当座机——审计文件里已把这类 id 列为误报。
+        self.assertNotRegex(
+            blob,
+            r"(?<![0-9A-Za-z.\/-])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z-])")
+        # 反向确认上面不是空转：确实存在这样一个 id 形态的首页地址。
+        self.assertIn("gr.xjtu.edu.cn/en/web/0020200422", blob)
+
+    def test_fixtures_are_redacted(self):
+        # 13 份快照都是页面逐字副本，页脚原有一处学院总机与一处学院邮箱，落盘前都已
+        # 替换为「联系方式已隐去」（连 @ 一起去掉）。这里对 13 份逐份复核。
+        for key in self.specs:
+            with self.subTest(fixture=key):
+                html = (FIXTURES / f"{key}.html").read_text(encoding="utf-8")
+                self.assertEqual(html.count("联系方式已隐去"), 2)
+                self.assertNotRegex(html,
+                                    r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
+                self.assertNotRegex(
+                    html,
+                    r"(?<![0-9A-Za-z.\/-])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z-])")
+
+    def test_empty_or_subset_subpages_are_not_separate_specs(self):
+        # 每个研究所名下的「专职科研人员/实验技术人员/博士后」子页实测为空壳或只是
+        # 基准名录的子集（航空发动机所的研究员 1 人、副研究员 4 人全部已在基准页里），
+        # 因此不为它们建条目——恒为 0 行或纯子集的来源只会制造"已覆盖"的假象。
+        for key, spec in self.specs.items():
+            with self.subTest(source=key):
+                for subpage in ("/yjy.htm", "/fyjy.htm", "/bsh.htm", "/zgj.htm",
+                                "/fgj.htm", "/zj.htm", "/cj.htm"):
+                    self.assertNotIn(subpage, spec["listing"])
+
+    def test_the_index_page_is_not_used_as_a_listing(self):
+        # 教师名录的栏目页 /szdw/jsml.htm 上一个姓名都没有，只有 11 个研究所的入口；
+        # 把栏目页当 listing 会得到 0 行。
+        from workbench.sources.xjtu_mec import SPECS as XJTU_MEC_SPECS
+        for spec in XJTU_MEC_SPECS:
+            self.assertNotEqual(spec["listing"], "https://mec.xjtu.edu.cn/szdw/jsml.htm")
+
+
 if __name__ == "__main__":
     unittest.main()
