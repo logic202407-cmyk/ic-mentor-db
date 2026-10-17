@@ -2482,5 +2482,62 @@ class UjsAgricultureSourceTests(unittest.TestCase):
                 r"(?<![0-9A-Za-z.\/-])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z-])")
 
 
+class CsuEnvironmentSourceTests(unittest.TestCase):
+    """0830 环境科学与工程 — 中南大学教师个人主页系统「学科列表」（3 页）."""
+
+    @classmethod
+    def setUpClass(cls):
+        from workbench.sources.csu_environment import SPECS as ENV_SPECS
+        from workbench.sources.csu_environment import parse as parse_env
+        cls.spec = ENV_SPECS[0]
+        cls.pages = {}
+        stems = {1: "csu_environment", 2: "csu_environment_p2", 3: "csu_environment_p3"}
+        for page, stem in stems.items():
+            html = (FIXTURES / f"{stem}.html").read_text(encoding="utf-8")
+            url = cls.spec["listing"].replace("{page}", str(page))
+            cls.pages[page] = parse_env(html, url, cls.spec)
+        cls.rows = [r for rows in cls.pages.values() for r in rows]
+
+    def test_spec_targets_the_environment_discipline(self):
+        self.assertEqual(self.spec["key"], "csu_environment")
+        self.assertEqual(self.spec["code"], "0830")
+        self.assertEqual(self.spec["discipline"], "环境科学与工程")
+        self.assertEqual(self.spec["institution"], "中南大学")
+        self.assertEqual(self.spec["max_pages"], 3)
+        self.assertIn("totalpage=3", self.spec["listing"])
+
+    def test_this_is_not_the_dominant_institution(self):
+        # 0830 现有北京师范大学 104/160，本来源必须是另一所学校。
+        self.assertNotEqual(self.spec["institution"], "北京师范大学")
+
+    def test_row_total_is_consistent_with_the_page_marker(self):
+        # 页面自报「共45条」，三页解析出 44 行 / 44 个互不相同姓名。差 1 行如实保留。
+        self.assertEqual(len(self.rows), 44)
+        self.assertEqual(len({r["name"] for r in self.rows}), 44)
+
+    def test_every_row_links_a_personal_homepage(self):
+        for row in self.rows:
+            self.assertIn("faculty.csu.edu.cn", row["homepage"])
+            self.assertIn("/zh_CN/index.htm", row["homepage"])
+
+    def test_direction_is_never_invented(self):
+        for row in self.rows:
+            self.assertEqual(row["assignment"]["direction"], "方向待补")
+
+    def test_no_contact_information_is_stored(self):
+        blob = json.dumps(self.rows, ensure_ascii=False)
+        self.assertNotIn("@", blob)
+        self.assertNotRegex(blob,
+                            r"(?<![0-9A-Za-z])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z])")
+
+    def test_fixtures_are_redacted(self):
+        for stem in ("csu_environment", "csu_environment_p2", "csu_environment_p3"):
+            html = (FIXTURES / f"{stem}.html").read_text(encoding="utf-8")
+            self.assertNotRegex(html, r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
+            self.assertNotRegex(
+                html,
+                r"(?<![0-9A-Za-z.\/-])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z-])")
+
+
 if __name__ == "__main__":
     unittest.main()

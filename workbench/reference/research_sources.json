@@ -67826,5 +67826,313 @@
     "homepage": "http://faculty.ujs.edu.cn/zhuyaohui/zh_CN/index.htm",
     "identity_url": "https://faculty.ujs.edu.cn/jg_xylb.jsp?totalpage=6&PAGENUM=6&urltype=tsites.CollegeTeacherList&wbtreeid=1003&st=0&id=1164&lang=zh_CN",
     "source_kind": "学校教师主页"
+  },
+  "official-364dd32473289a37710b": {
+    "name": "程义",
+    "institution": "中南大学",
+    "homepage": "http://faculty.csu.edu.cn/chengyi/zh_CN/index.htm",
+    "identity_url": "https://faculty.csu.edu.cn/xk.jsp?totalpage=3&PAGENUM=1&id=1130&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
+    "source_kind": "学校教师主页"
+  },
+  "official-0f74411e18182d9f1d80": {
+    "name": "陈伟",
+    "institution": "中南大学",
+    "homepage": "http://faculty.csu.edu.cn/dvchen/zh_CN/index.htm",
+    "identity_url": "https://faculty.csu.edu.cn/xk.jsp?totalpage=3&PAGENUM=1&id=1130&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
+    "source_kind": "学校教师主页"
+  },
+  "official-9e5c5261ca9860fd4041": {
+    "name": "陈永明",
+    "institution": "中南大学",
+    "homepage": "http://faculty.csu.edu.cn/chenyongming/zh_CN/index.htm",
+    "identity_url": "https://faculty.csu.edu.cn/xk.jsp?totalpage=3&PAGENUM=1&id=1130&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
+    "source_kind": "学校教师主页"
+  },
+  "official-b8617f987e25e89d089f": {
+    "name": "郭朝晖",
+    "institution": "中南大学",
+    "homepage": "http://faculty.csu.edu.cn/guozhaohui/zh_CN/index.htm",
+    "identity_url": "https://faculty.csu.edu.cn/xk.jsp?totalpage=3&PAGENUM=1&id=1130&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
+    "source_kind": "学校教师主页"
+  },
+  "official-d6f26d1088b75cb05e56": {
+    "name": "何德文",
+    "institution": "中南大学",
+    "homepage": "http://faculty.csu.edu.cn/hedewen/zh_CN/index.htm",
+    "identity_url": "https://faculty.csu.edu.cn/xk.jsp?totalpage=3&PAGENUM=1&id=1130&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
+    "source_kind": "学校教师主页"
+  },
+  "official-28d772496a880fe3572f": {
+    "name": "胡亮",
+    "institution": "中南大学",
+    "homepage": "http://faculty.csu.edu.cn/huliang/zh_CN/index.htm",
+    "identity_url": "https://faculty.csu.edu.cn/xk.jsp?totalpage=3&PAGENUM=1&id=1130&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
+    "source_kind": "学校教师主页"
+  },
+  "official-ff75242e46f04601e906": {
+    "name": "胡文吉豪",
+    "institution": "中南大学",
+    "homepage": "http://faculty.csu.edu.cn/huwenjihao1/zh_CN/index.htm",
+    "identity_url": "https://faculty.csu.edu.cn/xk.jsp?totalpage=3&PAGENUM=1&id=1130&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
+    "source_kind": "学校教师主页"
+  },
+  "official-95fcd97e11bd7840acef": {
+    "name": "江钧",
+    "institution": "中南大学",
+    "homepage": "http://faculty.csu.edu.cn/jiangjun/zh_CN/index.htm",
+    "identity_url": "https://faculty.csu.edu.cn/xk.jsp?totalpage=3&PAGENUM=1&id=1130&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
+    "source_kind": "学校教师主页"
+  },
+  "official-90f08bae44e3566fadb6": {
+    "name": "柯勇",
+    "institution": "中南大学",
+    "homepage": "http://faculty.csu.edu.cn/keyong1/zh_CN/index.htm",
+    "identity_url": "https://faculty.csu.edu.cn/xk.jsp?totalpage=3&PAGENUM=1&id=1130&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
+    "source_kind": "学校教师主页"
+  },
+  "official-b742157a5a3f2413e139": {
+    "name": "梁彦杰",
+    "institution": "中南大学",
+    "homepage": "http://faculty.csu.edu.cn/liangyanjie/zh_CN/index.htm",
+    "identity_url": "https://faculty.csu.edu.cn/xk.jsp?totalpage=3&PAGENUM=1&id=1130&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
+    "source_kind": "学校教师主页"
+  },
+  "official-ac6d2ad924cfdec5d72a": {
+    "name": "廖骐",
+    "institution": "中南大学",
+    "homepage": "http://faculty.csu.edu.cn/liaoqi/zh_CN/index.htm",
+    "identity_url": "https://faculty.csu.edu.cn/xk.jsp?totalpage=3&PAGENUM=1&id=1130&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
+    "source_kind": "学校教师主页"
+  },
+  "official-271db9614f13a5a08944": {
+    "name": "林璋",
+    "institution": "中南大学",
+    "homepage": "http://faculty.csu.edu.cn/linzhang/zh_CN/index.htm",
+    "identity_url": "https://faculty.csu.edu.cn/xk.jsp?totalpage=3&PAGENUM=1&id=1130&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
+    "source_kind": "学校教师主页"
+  },
+  "official-9c02efe8211866f05be4": {
+    "name": "李青竹",
+    "institution": "中南大学",
+    "homepage": "http://faculty.csu.edu.cn/liqingzhu/zh_CN/index.htm",
+    "identity_url": "https://faculty.csu.edu.cn/xk.jsp?totalpage=3&PAGENUM=1&id=1130&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
+    "source_kind": "学校教师主页"
+  },
+  "official-a30031fd1c6116840c17": {
+    "name": "刘恢",
+    "institution": "中南大学",
+    "homepage": "http://faculty.csu.edu.cn/liuhui/zh_CN/index.htm",
+    "identity_url": "https://faculty.csu.edu.cn/xk.jsp?totalpage=3&PAGENUM=1&id=1130&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
+    "source_kind": "学校教师主页"
+  },
+  "official-bfd8ff6546d4b508af2e": {
+    "name": "刘学明",
+    "institution": "中南大学",
+    "homepage": "http://faculty.csu.edu.cn/liuxueming/zh_CN/index.htm",
+    "identity_url": "https://faculty.csu.edu.cn/xk.jsp?totalpage=3&PAGENUM=1&id=1130&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
+    "source_kind": "学校教师主页"
+  },
+  "official-2c7c628185a031a74f2b": {
+    "name": "刘洋",
+    "institution": "中南大学",
+    "homepage": "http://faculty.csu.edu.cn/liuyang12345678/zh_CN/index.htm",
+    "identity_url": "https://faculty.csu.edu.cn/xk.jsp?totalpage=3&PAGENUM=1&id=1130&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
+    "source_kind": "学校教师主页"
+  },
+  "official-d33bbd328ec1a4b913f5": {
+    "name": "李云",
+    "institution": "中南大学",
+    "homepage": "http://faculty.csu.edu.cn/liyun88/zh_CN/index.htm",
+    "identity_url": "https://faculty.csu.edu.cn/xk.jsp?totalpage=3&PAGENUM=1&id=1130&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
+    "source_kind": "学校教师主页"
+  },
+  "official-ee0b9a9a60534c4a36ad": {
+    "name": "闵小波",
+    "institution": "中南大学",
+    "homepage": "http://faculty.csu.edu.cn/minxiaobo/zh_CN/index.htm",
+    "identity_url": "https://faculty.csu.edu.cn/xk.jsp?totalpage=3&PAGENUM=1&id=1130&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
+    "source_kind": "学校教师主页"
+  },
+  "official-2242ff3f0f6372f0ac92": {
+    "name": "彭驰",
+    "institution": "中南大学",
+    "homepage": "http://faculty.csu.edu.cn/pengchi/zh_CN/index.htm",
+    "identity_url": "https://faculty.csu.edu.cn/xk.jsp?totalpage=3&PAGENUM=1&id=1130&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
+    "source_kind": "学校教师主页"
+  },
+  "official-e5b10c2e8a5debe71b02": {
+    "name": "石岩",
+    "institution": "中南大学",
+    "homepage": "http://faculty.csu.edu.cn/shiyan/zh_CN/index.htm",
+    "identity_url": "https://faculty.csu.edu.cn/xk.jsp?totalpage=3&PAGENUM=2&id=1130&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
+    "source_kind": "学校教师主页"
+  },
+  "official-d568c6809a191eb2a892": {
+    "name": "唐崇俭",
+    "institution": "中南大学",
+    "homepage": "http://faculty.csu.edu.cn/tangchongjian/zh_CN/index.htm",
+    "identity_url": "https://faculty.csu.edu.cn/xk.jsp?totalpage=3&PAGENUM=2&id=1130&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
+    "source_kind": "学校教师主页"
+  },
+  "official-cfc9fb036cb75e231973": {
+    "name": "唐溪",
+    "institution": "中南大学",
+    "homepage": "http://faculty.csu.edu.cn/tangxi/zh_CN/index.htm",
+    "identity_url": "https://faculty.csu.edu.cn/xk.jsp?totalpage=3&PAGENUM=2&id=1130&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
+    "source_kind": "学校教师主页"
+  },
+  "official-486a2f518a806884d1f9": {
+    "name": "田晨",
+    "institution": "中南大学",
+    "homepage": "http://faculty.csu.edu.cn/tianchen/zh_CN/index.htm",
+    "identity_url": "https://faculty.csu.edu.cn/xk.jsp?totalpage=3&PAGENUM=2&id=1130&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
+    "source_kind": "学校教师主页"
+  },
+  "official-3b605da4075a8cb4daf5": {
+    "name": "王海鹰",
+    "institution": "中南大学",
+    "homepage": "http://faculty.csu.edu.cn/wanghaiying/zh_CN/index.htm",
+    "identity_url": "https://faculty.csu.edu.cn/xk.jsp?totalpage=3&PAGENUM=2&id=1130&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
+    "source_kind": "学校教师主页"
+  },
+  "official-8f40924c1c66dc8930a7": {
+    "name": "王晗",
+    "institution": "中南大学",
+    "homepage": "http://faculty.csu.edu.cn/wanghan1/zh_CN/index.htm",
+    "identity_url": "https://faculty.csu.edu.cn/xk.jsp?totalpage=3&PAGENUM=2&id=1130&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
+    "source_kind": "学校教师主页"
+  },
+  "official-78c71bff1abb26dd797e": {
+    "name": "王强",
+    "institution": "中南大学",
+    "homepage": "http://faculty.csu.edu.cn/wangqiang/zh_CN/index.htm",
+    "identity_url": "https://faculty.csu.edu.cn/xk.jsp?totalpage=3&PAGENUM=2&id=1130&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
+    "source_kind": "学校教师主页"
+  },
+  "official-0ea4369656b9d0aee8ba": {
+    "name": "王玉光",
+    "institution": "中南大学",
+    "homepage": "http://faculty.csu.edu.cn/wangyuguang/zh_CN/index.htm",
+    "identity_url": "https://faculty.csu.edu.cn/xk.jsp?totalpage=3&PAGENUM=2&id=1130&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
+    "source_kind": "学校教师主页"
+  },
+  "official-67c8190d477d4753bac9": {
+    "name": "吴川",
+    "institution": "中南大学",
+    "homepage": "http://faculty.csu.edu.cn/wuchuan/zh_CN/index.htm",
+    "identity_url": "https://faculty.csu.edu.cn/xk.jsp?totalpage=3&PAGENUM=2&id=1130&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
+    "source_kind": "学校教师主页"
+  },
+  "official-b631d027814ca3690341": {
+    "name": "向开松",
+    "institution": "中南大学",
+    "homepage": "http://faculty.csu.edu.cn/xiangkaisong1/zh_CN/index.htm",
+    "identity_url": "https://faculty.csu.edu.cn/xk.jsp?totalpage=3&PAGENUM=2&id=1130&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
+    "source_kind": "学校教师主页"
+  },
+  "official-dc423d0879a7987d1981": {
+    "name": "肖睿洋",
+    "institution": "中南大学",
+    "homepage": "http://faculty.csu.edu.cn/Ray/zh_CN/index.htm",
+    "identity_url": "https://faculty.csu.edu.cn/xk.jsp?totalpage=3&PAGENUM=2&id=1130&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
+    "source_kind": "学校教师主页"
+  },
+  "official-c34464b18fc36d7fbd00": {
+    "name": "肖细元",
+    "institution": "中南大学",
+    "homepage": "http://faculty.csu.edu.cn/xiaoxiyuan/zh_CN/index.htm",
+    "identity_url": "https://faculty.csu.edu.cn/xk.jsp?totalpage=3&PAGENUM=2&id=1130&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
+    "source_kind": "学校教师主页"
+  },
+  "official-330df219253c75129590": {
+    "name": "谢建平",
+    "institution": "中南大学",
+    "homepage": "http://faculty.csu.edu.cn/xjp/zh_CN/index.htm",
+    "identity_url": "https://faculty.csu.edu.cn/xk.jsp?totalpage=3&PAGENUM=2&id=1130&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
+    "source_kind": "学校教师主页"
+  },
+  "official-f88bcbcd3e68f78d5d8e": {
+    "name": "谢磊",
+    "institution": "中南大学",
+    "homepage": "http://faculty.csu.edu.cn/xielei/zh_CN/index.htm",
+    "identity_url": "https://faculty.csu.edu.cn/xk.jsp?totalpage=3&PAGENUM=2&id=1130&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
+    "source_kind": "学校教师主页"
+  },
+  "official-b81b23139b75f6818d8e": {
+    "name": "薛生国",
+    "institution": "中南大学",
+    "homepage": "http://faculty.csu.edu.cn/xueshengguo/zh_CN/index.htm",
+    "identity_url": "https://faculty.csu.edu.cn/xk.jsp?totalpage=3&PAGENUM=2&id=1130&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
+    "source_kind": "学校教师主页"
+  },
+  "official-5b6210617655dc7fedb8": {
+    "name": "徐锐",
+    "institution": "中南大学",
+    "homepage": "http://faculty.csu.edu.cn/xurui/zh_CN/index.htm",
+    "identity_url": "https://faculty.csu.edu.cn/xk.jsp?totalpage=3&PAGENUM=2&id=1130&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
+    "source_kind": "学校教师主页"
+  },
+  "official-f708455dee706d499576": {
+    "name": "杨卫春",
+    "institution": "中南大学",
+    "homepage": "http://faculty.csu.edu.cn/yangweichun/zh_CN/index.htm",
+    "identity_url": "https://faculty.csu.edu.cn/xk.jsp?totalpage=3&PAGENUM=2&id=1130&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
+    "source_kind": "学校教师主页"
+  },
+  "official-d8a571e854080a909fdc": {
+    "name": "颜旭",
+    "institution": "中南大学",
+    "homepage": "http://faculty.csu.edu.cn/yanxu1/zh_CN/index.htm",
+    "identity_url": "https://faculty.csu.edu.cn/xk.jsp?totalpage=3&PAGENUM=2&id=1130&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
+    "source_kind": "学校教师主页"
+  },
+  "official-8805808c139918c692b7": {
+    "name": "张贵清",
+    "institution": "中南大学",
+    "homepage": "http://faculty.csu.edu.cn/zhangguiqing/zh_CN/index.htm",
+    "identity_url": "https://faculty.csu.edu.cn/xk.jsp?totalpage=3&PAGENUM=2&id=1130&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
+    "source_kind": "学校教师主页"
+  },
+  "official-d7f022279ec977b9c245": {
+    "name": "张理源",
+    "institution": "中南大学",
+    "homepage": "http://faculty.csu.edu.cn/zhangliyuan/zh_CN/index.htm",
+    "identity_url": "https://faculty.csu.edu.cn/xk.jsp?totalpage=3&PAGENUM=2&id=1130&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
+    "source_kind": "学校教师主页"
+  },
+  "official-4042ebadf0806005ea8b": {
+    "name": "张文超",
+    "institution": "中南大学",
+    "homepage": "http://faculty.csu.edu.cn/zhangwenchao/zh_CN/index.htm",
+    "identity_url": "https://faculty.csu.edu.cn/xk.jsp?totalpage=3&PAGENUM=3&id=1130&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
+    "source_kind": "学校教师主页"
+  },
+  "official-30bf10a62d6e2304610d": {
+    "name": "詹昊",
+    "institution": "中南大学",
+    "homepage": "http://faculty.csu.edu.cn/zhanhao/zh_CN/index.htm",
+    "identity_url": "https://faculty.csu.edu.cn/xk.jsp?totalpage=3&PAGENUM=3&id=1130&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
+    "source_kind": "学校教师主页"
+  },
+  "official-aac9410526bfa44c37f7": {
+    "name": "赵飞平",
+    "institution": "中南大学",
+    "homepage": "http://faculty.csu.edu.cn/zhaofeiping/zh_CN/index.htm",
+    "identity_url": "https://faculty.csu.edu.cn/xk.jsp?totalpage=3&PAGENUM=3&id=1130&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
+    "source_kind": "学校教师主页"
+  },
+  "official-f20aea68973887529155": {
+    "name": "赵子谦",
+    "institution": "中南大学",
+    "homepage": "http://faculty.csu.edu.cn/zhaoziqian_MSSE/zh_CN/index.htm",
+    "identity_url": "https://faculty.csu.edu.cn/xk.jsp?totalpage=3&PAGENUM=3&id=1130&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
+    "source_kind": "学校教师主页"
+  },
+  "official-073204f6e70f4f42dbef": {
+    "name": "朱锋",
+    "institution": "中南大学",
+    "homepage": "http://faculty.csu.edu.cn/zhufeng/zh_CN/index.htm",
+    "identity_url": "https://faculty.csu.edu.cn/xk.jsp?totalpage=3&PAGENUM=3&id=1130&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
+    "source_kind": "学校教师主页"
   }
 }
