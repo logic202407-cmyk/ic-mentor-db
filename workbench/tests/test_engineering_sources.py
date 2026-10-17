@@ -2557,11 +2557,11 @@ class SingleInstitutionDisciplinesTests(unittest.TestCase):
                 rows.extend(parse_si(html, url, spec))
             cls.by_key[key] = rows
 
-    def test_all_four_disciplines_are_covered(self):
-        self.assertEqual(set(self.specs), {"csu_safety", "dlut_ship",
-                                           "dlut_transport", "dlut_bme"})
+    def test_all_five_disciplines_are_covered(self):
+        self.assertEqual(set(self.specs), {"csu_safety", "dlut_ship", "dlut_transport",
+                                           "dlut_bme", "csu_aero"})
         codes = {s["code"] for s in self.specs.values()}
-        self.assertEqual(codes, {"0837", "0824", "0823", "0831"})
+        self.assertEqual(codes, {"0837", "0824", "0823", "0831", "0825"})
 
     def test_row_counts_match_the_page_markers(self):
         # 三项与自报数完全一致；船舶 73/75 差 2 行，如实保留。
@@ -2569,10 +2569,11 @@ class SingleInstitutionDisciplinesTests(unittest.TestCase):
         self.assertEqual(len(self.by_key["dlut_ship"]), 73)
         self.assertEqual(len(self.by_key["dlut_transport"]), 12)
         self.assertEqual(len(self.by_key["dlut_bme"]), 31)
+        self.assertEqual(len(self.by_key["csu_aero"]), 13)
 
     def test_two_page_shapes_are_handled(self):
         # 中南是学科级（锚文本即姓名），大连理工是单位级（卡片拼接串，姓名取「单位」前）。
-        for key in ("csu_safety", "dlut_ship", "dlut_transport", "dlut_bme"):
+        for key in ("csu_safety", "dlut_ship", "dlut_transport", "dlut_bme", "csu_aero"):
             for row in self.by_key[key]:
                 self.assertRegex(row["name"], r"^[\u4e00-\u9fff·]{2,8}$")
                 for noise in ("单位", "职称", "个人主页", "教授", "副教授", "研究员"):

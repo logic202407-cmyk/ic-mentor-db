@@ -77,6 +77,22 @@ SPECS = (
         "listing": _DLUT.format(total=3, page="{page}", id=1315),
         "max_pages": 3,
     },
+    {
+        # 航空宇航（0825）此前只有一所机构（62 条）。中南大学这个学科列表页是
+        # **学科级**的（标题即「航空宇航科学与技术教师列表」、自报共 13 条），归属干净。
+        #
+        # 大连理工另有「力学与航空航天学院」（单位列表 id=1209，自报 184 条），
+        # **刻意不用**：该学院是力学（0801）与航空宇航（0825）合设，整体归入 0825
+        # 会把力学教师算进来，属弱归属——与 0838 拒绝"把全校博导名单归入公安技术"
+        # 是同一标准。这个取舍写在这里，避免下一轮有人以为漏掉了。
+        "key": "csu_aero",
+        "code": "0825",
+        "institution": "中南大学",
+        "department": "航空宇航科学与技术（学科列表）",
+        "discipline": "航空宇航科学与技术",
+        "listing": _CSU.format(total=1, page="{page}", id=1129),
+        "max_pages": 1,
+    },
 )
 
 CSU_PERSON = re.compile(r"faculty\.csu\.edu\.cn/[A-Za-z0-9_]+/zh_CN/index\.htm")

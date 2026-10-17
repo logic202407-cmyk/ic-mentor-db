@@ -180,7 +180,7 @@
     "0822 轻工技术与工程": 19,
     "0823 交通运输工程": 60,
     "0824 船舶与海洋工程": 128,
-    "0825 航空宇航科学与技术": 62,
+    "0825 航空宇航科学与技术": 75,
     "0826 兵器科学与技术": 104,
     "0827 核科学与技术": 38,
     "0828 农业工程": 116,
@@ -240,8 +240,8 @@
     "1406 纳米科学与工程": 0,
     "1407 区域国别学": 0
   },
-  "profiles": 3960,
-  "added": 151,
+  "profiles": 3973,
+  "added": 13,
   "profile_ids": [
     "official-d8faf140b6aad196435e",
     "official-2236cc69934a0c680339",
@@ -4202,22 +4202,23 @@
     "official-87f0b5d6a356567bb01d",
     "official-931d29ffd837a6739c01",
     "official-f22fabddc67d62ebc8bf",
-    "official-95ab0678ecf4b7f2e209"
+    "official-95ab0678ecf4b7f2e209",
+    "official-a01c1c54bcafce9c71be",
+    "official-a665be66f480a0ddffa5",
+    "official-7518b97f10b70bf55046",
+    "official-8bbc700f0ea5e2d28945",
+    "official-a4e559328ddbd97b294b",
+    "official-104204d2678417c21333",
+    "official-b131d04e855d08ecfd97",
+    "official-549065be0c6331565f9a",
+    "official-6984c364ff346d12b67b",
+    "official-c647a78e6391368a23cd",
+    "official-9c09851cd5613b0fc439",
+    "official-fd5d307121bdae4c902e",
+    "official-490528d19ad1f999cb4e"
   ],
   "pages": [
-    "https://faculty.csu.edu.cn/xk.jsp?totalpage=2&PAGENUM=1&id=1131&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
-    "https://faculty.csu.edu.cn/xk.jsp?totalpage=2&PAGENUM=2&id=1131&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN",
-    "https://faculty.dlut.edu.cn/xyjslb.jsp?totalpage=7&PAGENUM=1&urltype=tsites.CollegeTeacherList&wbtreeid=1003&st=0&id=1211&lang=zh_CN",
-    "https://faculty.dlut.edu.cn/xyjslb.jsp?totalpage=7&PAGENUM=2&urltype=tsites.CollegeTeacherList&wbtreeid=1003&st=0&id=1211&lang=zh_CN",
-    "https://faculty.dlut.edu.cn/xyjslb.jsp?totalpage=7&PAGENUM=3&urltype=tsites.CollegeTeacherList&wbtreeid=1003&st=0&id=1211&lang=zh_CN",
-    "https://faculty.dlut.edu.cn/xyjslb.jsp?totalpage=7&PAGENUM=4&urltype=tsites.CollegeTeacherList&wbtreeid=1003&st=0&id=1211&lang=zh_CN",
-    "https://faculty.dlut.edu.cn/xyjslb.jsp?totalpage=7&PAGENUM=5&urltype=tsites.CollegeTeacherList&wbtreeid=1003&st=0&id=1211&lang=zh_CN",
-    "https://faculty.dlut.edu.cn/xyjslb.jsp?totalpage=7&PAGENUM=6&urltype=tsites.CollegeTeacherList&wbtreeid=1003&st=0&id=1211&lang=zh_CN",
-    "https://faculty.dlut.edu.cn/xyjslb.jsp?totalpage=7&PAGENUM=7&urltype=tsites.CollegeTeacherList&wbtreeid=1003&st=0&id=1211&lang=zh_CN",
-    "https://faculty.dlut.edu.cn/xyjslb.jsp?totalpage=1&PAGENUM=1&urltype=tsites.CollegeTeacherList&wbtreeid=1003&st=0&id=1216&lang=zh_CN",
-    "https://faculty.dlut.edu.cn/xyjslb.jsp?totalpage=3&PAGENUM=1&urltype=tsites.CollegeTeacherList&wbtreeid=1003&st=0&id=1315&lang=zh_CN",
-    "https://faculty.dlut.edu.cn/xyjslb.jsp?totalpage=3&PAGENUM=2&urltype=tsites.CollegeTeacherList&wbtreeid=1003&st=0&id=1315&lang=zh_CN",
-    "https://faculty.dlut.edu.cn/xyjslb.jsp?totalpage=3&PAGENUM=3&urltype=tsites.CollegeTeacherList&wbtreeid=1003&st=0&id=1315&lang=zh_CN"
+    "https://faculty.csu.edu.cn/xk.jsp?totalpage=1&PAGENUM=1&id=1129&urltype=tsites.DisciplineTeacherList&wbtreeid=1003&st=0&lang=zh_CN"
   ],
   "failures": [],
   "limits": [
