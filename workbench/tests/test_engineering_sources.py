@@ -1991,5 +1991,110 @@ class ScutChemSourceTests(unittest.TestCase):
                 r"(?<![0-9A-Za-z.\/-])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z-])")
 
 
+class NeuMetallurgySourceTests(unittest.TestCase):
+    """0806 冶金工程 — 东北大学 冶金学院 教师名录."""
+
+    @classmethod
+    def setUpClass(cls):
+        from workbench.sources.neu_metallurgy import SPECS as NEU_SPECS
+        from workbench.sources.neu_metallurgy import parse as parse_neu
+        cls.spec = NEU_SPECS[0]
+        cls.html = (FIXTURES / f"{cls.spec['key']}.html").read_text(encoding="utf-8")
+        cls.rows = parse_neu(cls.html, cls.spec["listing"], cls.spec)
+
+    def test_spec_targets_the_metallurgy_discipline(self):
+        self.assertEqual(self.spec["key"], "neu_metallurgy")
+        self.assertEqual(self.spec["code"], "0806")
+        self.assertEqual(self.spec["discipline"], "冶金工程")
+        self.assertEqual(self.spec["institution"], "东北大学")
+        self.assertEqual(self.spec["department"], "冶金学院")
+        self.assertEqual(self.spec["max_pages"], 1)
+        self.assertNotIn("{page}", self.spec["listing"])
+
+    def test_this_is_not_the_dominant_institution(self):
+        # 0806 现有 128/143 来自北京科技大学，本来源必须是另一所学校。
+        self.assertNotEqual(self.spec["institution"], "北京科技大学")
+
+    def test_parser_finds_the_whole_roster(self):
+        self.assertEqual(len(self.rows), 230)
+        self.assertEqual(len({r["name"] for r in self.rows}), 230)
+        self.assertTrue(all(r["department"] == "冶金学院" for r in self.rows))
+
+    def test_both_detail_link_shapes_are_accepted(self):
+        # 本校详情页是 page.psp（不是 page.htm），另有大量教师直链校教师主页系统。
+        # 第一版规则漏了这两种形态，在这页上返回 0 行。
+        psp = [r for r in self.rows if "page.psp" in r["homepage"]]
+        fac = [r for r in self.rows if "faculty.neu.edu.cn" in r["homepage"]]
+        self.assertGreater(len(psp), 40)
+        self.assertGreater(len(fac), 150)
+        self.assertEqual(len(psp) + len(fac), len(self.rows))
+
+    def test_navigation_links_are_not_people(self):
+        for row in self.rows:
+            for noise in ("首页", "学院概况", "师资队伍", "教师名录", "诚聘英才",
+                          "人才培养", "下载", "研究所"):
+                self.assertNotIn(noise, row["name"])
+
+    def test_direction_is_never_invented(self):
+        for row in self.rows:
+            self.assertEqual(row["assignment"]["direction"], "方向待补")
+
+    def test_no_contact_information_is_stored(self):
+        blob = json.dumps(self.rows, ensure_ascii=False)
+        self.assertNotIn("@", blob)
+        self.assertNotIn("邮箱", blob)
+        self.assertNotIn("电话", blob)
+        self.assertNotRegex(blob,
+                            r"(?<![0-9A-Za-z])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z])")
+
+    def test_fixture_is_redacted(self):
+        self.assertNotRegex(self.html,
+                            r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
+        self.assertNotRegex(
+            self.html,
+            r"(?<![0-9A-Za-z.\/-])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z-])")
+
+
+class FetchDecodingTests(unittest.TestCase):
+    """``fetch()`` 不得用 chardet 的猜测覆盖服务端声明的正确编码。
+
+    历史写法是 ``response.encoding = response.apparent_encoding or "utf-8"``。
+    东北大学冶金学院名录声明 UTF-8，而 chardet 猜成 ``ptcp154``（西里尔文），于是整页
+    变乱码、中文姓名全部匹配失败，解析器在明明有 230 人的页面上返回 **0 行**。
+    这个用例在离线状态下重建这个场景，防止回归。
+    """
+
+    def _response(self, body: bytes, declared):
+        import requests
+        r = requests.Response()
+        r._content = body
+        r.encoding = declared
+        r.status_code = 200
+        return r
+
+    def test_declared_utf8_is_trusted_over_chardet_guess(self):
+        from workbench.collect_engineering_scale import _decode
+        body = '<a href="x/page.psp">姜周华</a>'.encode("utf-8")
+        # requests 会从头部读出声明的 UTF-8；chardet 对这串字节可能猜错。
+        self.assertIn("姜周华", _decode(self._response(body, "UTF-8")))
+
+    def test_wrong_declaration_falls_back_to_utf8(self):
+        from workbench.collect_engineering_scale import _decode
+        body = '<a href="x/page.psp">李花兵</a>'.encode("utf-8")
+        # 声明成 ISO-8859-1（requests 的兜底值）时必须自己找回 UTF-8。
+        self.assertIn("李花兵", _decode(self._response(body, "ISO-8859-1")))
+
+    def test_gbk_page_is_decoded(self):
+        from workbench.collect_engineering_scale import _decode
+        body = '<a href="x/page.psp">董艳伍</a>'.encode("gb18030")
+        self.assertIn("董艳伍", _decode(self._response(body, "ISO-8859-1")))
+
+    def test_plain_ascii_page_is_unaffected(self):
+        from workbench.collect_engineering_scale import _decode
+        body = b"<html><title>roster</title></html>"
+        out = _decode(self._response(body, "ISO-8859-1"))
+        self.assertIn("roster", out)
+
+
 if __name__ == "__main__":
     unittest.main()

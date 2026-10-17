@@ -54,19 +54,62 @@ def fetch(url: str, attempts: int = 3, backoff: float = 1.5) -> str:
     The USTB platform intermittently stalls. Without a retry a single read timeout
     aborts that directory's pagination and silently truncates the roster (observed
     live: 242 rows dropping to 150), which would make the batch irreproducible.
+
+    Decoding is deliberately conservative. An earlier version always overwrote the
+    server-declared charset with ``apparent_encoding`` (chardet's guess), which
+    destroyed any page whose declaration was right but whose guess was wrong:
+    `www.som.neu.edu.cn/10570/list.htm` declares UTF-8 and chardet guesses `ptcp154`,
+    so every Chinese name became mojibake and the parser returned **0 rows** while the
+    page clearly listed 230 people. Rule now:
+
+    1. Trust a real declaration (anything but requests' ISO-8859-1/ascii fallback).
+    2. Otherwise try strict UTF-8, then chardet, then GB18030.
+    3. If the chosen decode yields no CJK but the bytes do contain CJK, fall back to
+       UTF-8/GB18030 — this catches pages whose declared charset is simply wrong.
     """
     last: Exception | None = None
     for attempt in range(attempts):
         try:
             response = requests.get(url, headers=UA, timeout=TIMEOUT, verify=False)
             response.raise_for_status()
-            response.encoding = response.apparent_encoding or "utf-8"
-            return response.text
+            return _decode(response)
         except Exception as exc:  # noqa: BLE001 - retry any transport error
             last = exc
             if attempt < attempts - 1:
                 time.sleep(backoff * (attempt + 1))
     raise last  # type: ignore[misc]
+
+
+_CJK = re.compile(r"[\u4e00-\u9fff]")
+_FALLBACK_ENCODINGS = ("iso-8859-1", "ascii")
+
+
+def _decode(response: "requests.Response") -> str:
+    """Decode a response, preferring a trustworthy charset declaration."""
+    declared = (response.encoding or "").lower()
+    if declared and declared not in _FALLBACK_ENCODINGS:
+        text = response.text
+        if _CJK.search(text) or not _has_cjk_bytes(response.content):
+            return text
+        # Declared charset produced no CJK although the bytes hold CJK: re-decode.
+    for encoding in ("utf-8", "gb18030"):
+        try:
+            return response.content.decode(encoding)
+        except UnicodeDecodeError:
+            continue
+    response.encoding = response.apparent_encoding or "gb18030"
+    return response.text
+
+
+def _has_cjk_bytes(raw: bytes) -> bool:
+    """True when the payload plausibly encodes CJK (UTF-8 or GB18030)."""
+    for encoding in ("utf-8", "gb18030"):
+        try:
+            if _CJK.search(raw.decode(encoding)):
+                return True
+        except UnicodeDecodeError:
+            continue
+    return False
 
 
 def discover_sources() -> dict[str, dict]:
