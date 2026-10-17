@@ -1920,5 +1920,76 @@ class CumtbMiningSourceTests(unittest.TestCase):
                             r"(?<![0-9A-Za-z.\/-])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z-])")
 
 
+class ScutChemSourceTests(unittest.TestCase):
+    """0817 化学工程与技术 — 华南理工大学 化学与化工学院 师资队伍（按职称三类）."""
+
+    @classmethod
+    def setUpClass(cls):
+        from workbench.sources.scut_chem import SPECS as SCUT_SPECS
+        from workbench.sources.scut_chem import parse as parse_scut
+        cls.specs = SCUT_SPECS
+        cls.by_key = {}
+        for spec in SCUT_SPECS:
+            html = (FIXTURES / f"{spec['key']}.html").read_text(encoding="utf-8")
+            cls.by_key[spec["key"]] = parse_scut(html, spec["listing"], spec)
+        cls.rows = [r for rows in cls.by_key.values() for r in rows]
+
+    def test_specs_target_the_chemical_discipline(self):
+        self.assertEqual(len(self.specs), 3)
+        for spec in self.specs:
+            self.assertEqual(spec["code"], "0817")
+            self.assertEqual(spec["discipline"], "化学工程与技术")
+            self.assertEqual(spec["institution"], "华南理工大学")
+            self.assertEqual(spec["max_pages"], 1)
+            self.assertNotIn("{page}", spec["listing"])
+
+    def test_this_is_not_the_dominant_institution(self):
+        # 0817 现有 172/205 来自华东理工大学，本来源必须是另一所学校。
+        for spec in self.specs:
+            self.assertNotEqual(spec["institution"], "华东理工大学")
+
+    def test_parser_finds_three_rank_groups(self):
+        self.assertEqual(len(self.by_key["scut_chem_professor"]), 54)
+        self.assertEqual(len(self.by_key["scut_chem_associate"]), 32)
+        self.assertEqual(len(self.by_key["scut_chem_lecturer"]), 5)
+        self.assertEqual(len(self.rows), 91)
+        self.assertEqual(len({r["name"] for r in self.rows}), 91)
+
+    def test_only_article_page_links_count_as_people(self):
+        # 收录规则可核实：链接必须是 c<栏目>a<文章>/page.htm，这条规则同时排除了
+        # 「下载区」这类指向 list.htm 的栏目标签。
+        for row in self.rows:
+            self.assertIn("page.htm", row["homepage"])
+
+    def test_lab_technology_series_is_excluded(self):
+        # 实验技术系列（实验团队教师页）是不同岗位序列，本来源不收；
+        # 三个 spec 的院系名里都写明了自己是哪一类。
+        for spec in self.specs:
+            self.assertIn("化学与化工学院", spec["department"])
+        for row in self.rows:
+            self.assertIn("不含", row["assignment"]["note"])
+            self.assertIn("实验技术系列", row["assignment"]["note"])
+
+    def test_direction_is_never_invented(self):
+        for row in self.rows:
+            self.assertEqual(row["assignment"]["direction"], "方向待补")
+
+    def test_no_contact_information_is_stored(self):
+        blob = json.dumps(self.rows, ensure_ascii=False)
+        self.assertNotIn("@", blob)
+        self.assertNotIn("邮箱", blob)
+        self.assertNotIn("电话", blob)
+        self.assertNotRegex(blob,
+                            r"(?<![0-9A-Za-z])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z])")
+
+    def test_fixtures_are_redacted(self):
+        for spec in self.specs:
+            html = (FIXTURES / f"{spec['key']}.html").read_text(encoding="utf-8")
+            self.assertNotRegex(html, r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
+            self.assertNotRegex(
+                html,
+                r"(?<![0-9A-Za-z.\/-])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z-])")
+
+
 if __name__ == "__main__":
     unittest.main()
