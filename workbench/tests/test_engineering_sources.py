@@ -2416,5 +2416,71 @@ class DlutBioengineeringSourceTests(unittest.TestCase):
                 r"(?<![0-9A-Za-z.\/-])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z-])")
 
 
+class UjsAgricultureSourceTests(unittest.TestCase):
+    """0828 农业工程 — 江苏大学 农业工程学院 教师列表（6 页）."""
+
+    @classmethod
+    def setUpClass(cls):
+        from workbench.sources.ujs_agriculture import SPECS as UJS_SPECS
+        from workbench.sources.ujs_agriculture import parse as parse_ujs
+        cls.spec = UJS_SPECS[0]
+        cls.pages = {}
+        stems = {1: "ujs_agriculture"}
+        stems.update({p: f"ujs_agriculture_p{p}" for p in range(2, 7)})
+        for page, stem in stems.items():
+            html = (FIXTURES / f"{stem}.html").read_text(encoding="utf-8")
+            url = cls.spec["listing"].replace("{page}", str(page))
+            cls.pages[page] = parse_ujs(html, url, cls.spec)
+        cls.rows = [r for rows in cls.pages.values() for r in rows]
+
+    def test_spec_targets_the_agricultural_discipline(self):
+        self.assertEqual(self.spec["key"], "ujs_agriculture")
+        self.assertEqual(self.spec["code"], "0828")
+        self.assertEqual(self.spec["discipline"], "农业工程")
+        self.assertEqual(self.spec["institution"], "江苏大学")
+        self.assertEqual(self.spec["department"], "农业工程学院")
+        self.assertEqual(self.spec["max_pages"], 6)
+        self.assertIn("totalpage=6", self.spec["listing"])
+
+    def test_this_is_not_the_dominant_institution(self):
+        # 0828 现有中国农业大学 57/84，本来源必须是另一所学校。
+        self.assertNotEqual(self.spec["institution"], "中国农业大学")
+
+    def test_row_total_is_consistent_with_the_page_marker(self):
+        # 学院列表页标注 33 人、页面自报「共33条」，六页解析出 32 行 / 32 个不同姓名。
+        # 差 1 行如实保留，不凑成 33。
+        self.assertEqual(len(self.rows), 32)
+        self.assertEqual(len({r["name"] for r in self.rows}), 32)
+
+    def test_pages_are_not_all_the_same(self):
+        # 页数取得不够会静默截断（初版按 3 页只拿到 17 人）。
+        self.assertEqual(len(self.pages[6]), 3)
+        self.assertGreater(len(self.pages), 5)
+
+    def test_every_row_links_a_personal_homepage(self):
+        for row in self.rows:
+            self.assertIn("faculty.ujs.edu.cn", row["homepage"])
+            self.assertIn("/zh_CN/index.htm", row["homepage"])
+
+    def test_direction_is_never_invented(self):
+        for row in self.rows:
+            self.assertEqual(row["assignment"]["direction"], "方向待补")
+
+    def test_no_contact_information_is_stored(self):
+        blob = json.dumps(self.rows, ensure_ascii=False)
+        self.assertNotIn("@", blob)
+        self.assertNotRegex(blob,
+                            r"(?<![0-9A-Za-z])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z])")
+
+    def test_fixtures_are_redacted(self):
+        stems = ["ujs_agriculture"] + [f"ujs_agriculture_p{p}" for p in range(2, 7)]
+        for stem in stems:
+            html = (FIXTURES / f"{stem}.html").read_text(encoding="utf-8")
+            self.assertNotRegex(html, r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
+            self.assertNotRegex(
+                html,
+                r"(?<![0-9A-Za-z.\/-])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z-])")
+
+
 if __name__ == "__main__":
     unittest.main()
