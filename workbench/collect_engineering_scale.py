@@ -170,6 +170,13 @@ def main() -> int:
     # The upstream listing is occasionally flaky, so a re-run can parse far fewer
     # rows than a previous run. Never let such a run shrink the published
     # supplement, which is the reproduction artefact for this batch.
+    #
+    # `degraded` also gates the audit metadata: when the guard fires, the supplement
+    # is the PREVIOUS file, so this run adds nothing and `added` would be written as 0.
+    # That silently replaced a good run's "added: 746, failures: []" record with a
+    # degraded one (observed 2026-10-15), so a degraded run must not overwrite the
+    # audit's historical numbers.
+    degraded = False
     previous_supplement = None
     if supplement_path.exists():
         try:
@@ -186,6 +193,7 @@ def main() -> int:
                 "failures": failures[:2],
             }, ensure_ascii=False), flush=True)
             supplement = previous_supplement
+            degraded = True
     supplement_path.write_text(
         json.dumps(supplement, ensure_ascii=False, indent=2) + "\n", encoding="utf8")
 
@@ -257,6 +265,17 @@ def main() -> int:
             "不收录邮箱、电话等联系方式。",
         ],
     }
+    # A degraded run (guard fired) must not overwrite the audit's historical record:
+    # it would replace "added: 746, failures: []" with "added: 0, failures: [SSLError…]"
+    # even though nothing in the published data changed. Keep the previous numbers.
+    if degraded and isinstance(previous.get("added"), int) and previous.get("added", 0) > added:
+        audit = dict(previous)
+        audit["last_degraded_run"] = {
+            "date": COLLECTED_AT,
+            "added": added,
+            "failures": failures[:5],
+            "note": "本次运行解析结果少于已发布补充文件，已保留原文件与原审计数字。",
+        }
     audit_path.write_text(json.dumps(audit, ensure_ascii=False, indent=2) + "\n", encoding="utf8")
 
     changed = {k: [before.get(k, 0), v] for k, v in after.items() if v != before.get(k, 0)}
