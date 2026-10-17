@@ -1386,5 +1386,78 @@ class CipucPoliceTechSourceTests(unittest.TestCase):
                             r"(?<![0-9A-Za-z.\/-])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z-])")
 
 
+class TsinghuaMeSourceTests(unittest.TestCase):
+    """0802 机械工程 — 清华大学机械工程系 在职教师名录（平铺网格）."""
+
+    @classmethod
+    def setUpClass(cls):
+        from workbench.sources.tsinghua_me import SPECS as THU_SPECS
+        from workbench.sources.tsinghua_me import parse as parse_thu
+        cls.spec = THU_SPECS[0]
+        cls.html = (FIXTURES / f"{cls.spec['key']}.html").read_text(encoding="utf-8")
+        cls.rows = parse_thu(cls.html, cls.spec["listing"], cls.spec)
+
+    def test_spec_targets_the_mechanical_discipline(self):
+        self.assertEqual(self.spec["key"], "tsinghua_me")
+        self.assertEqual(self.spec["code"], "0802")
+        self.assertEqual(self.spec["discipline"], "机械工程")
+        self.assertEqual(self.spec["institution"], "清华大学")
+        self.assertEqual(self.spec["department"], "机械工程系")
+        self.assertEqual(self.spec["max_pages"], 1)
+        self.assertNotIn("{page}", self.spec["listing"])
+
+    def test_this_is_not_the_dominant_institution(self):
+        # 0802 原有 190 条中 183 条来自上海交通大学，本来源必须是另一所学校。
+        self.assertNotEqual(self.spec["institution"], "上海交通大学")
+
+    def test_parser_finds_the_whole_roster(self):
+        self.assertEqual(len(self.rows), 160)
+        self.assertEqual(len({r["name"] for r in self.rows}), 160)
+        self.assertTrue(all(r["department"] == "机械工程系" for r in self.rows))
+
+    def test_tab_labels_and_nav_are_not_people(self):
+        # 页面上有研究所标签、字母索引与栏目名（全体/机械制造研究所/…）。
+        for row in self.rows:
+            self.assertRegex(row["name"], r"^[\u4e00-\u9fff·]{2,8}$")
+            for noise in ("全体", "研究所", "机械工程系", "院士", "兼职教授",
+                          "双聘教授", "名誉教授", "访问教授", "教辅人员"):
+                self.assertNotIn(noise, row["name"])
+
+    def test_only_in_service_teachers_are_included(self):
+        # 「在职教师」这一栏之外的兼职/双聘/名誉/访问教授与教辅人员不在本来源内。
+        # 快照里那些栏目链接仍然存在，因此这里断言：① 页面确实还挂着这些栏目，
+        # ② 每条记录的备注明确写出了排除范围（可追溯口径），而不是靠"恰好没抓到"。
+        self.assertIn("兼职教授", self.html)
+        for row in self.rows:
+            note = row["assignment"]["note"]
+            self.assertIn("只收在职教师", note)
+            self.assertIn("不含兼职", note)
+
+    def test_every_row_links_a_personal_page(self):
+        for row in self.rows:
+            self.assertNotEqual(row["homepage"], self.spec["listing"])
+            self.assertIn("/info/", row["homepage"])
+
+    def test_direction_is_never_invented(self):
+        for row in self.rows:
+            self.assertEqual(row["assignment"]["direction"], "方向待补")
+
+    def test_no_contact_information_is_stored(self):
+        blob = json.dumps(self.rows, ensure_ascii=False)
+        self.assertNotIn("@", blob)
+        self.assertNotIn("邮箱", blob)
+        self.assertNotIn("电话", blob)
+        self.assertNotRegex(blob,
+                            r"(?<![0-9A-Za-z])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z])")
+
+    def test_fixture_is_redacted(self):
+        # 该页页脚原本带一处座机与一处邮箱，落盘前已替换为「联系方式已隐去」。
+        self.assertIn("联系方式已隐去", self.html)
+        self.assertNotRegex(self.html,
+                            r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
+        self.assertNotRegex(self.html,
+                            r"(?<![0-9A-Za-z.\/-])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z-])")
+
+
 if __name__ == "__main__":
     unittest.main()
