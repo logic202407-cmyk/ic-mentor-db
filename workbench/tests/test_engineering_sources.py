@@ -2227,5 +2227,66 @@ class CsuGeologySourceTests(unittest.TestCase):
                 r"(?<![0-9A-Za-z.\/-])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z-])")
 
 
+class CsuMaterialsSourceTests(unittest.TestCase):
+    """0805 材料科学与工程 — 中南大学教师个人主页系统「学科列表」（9 页）."""
+
+    @classmethod
+    def setUpClass(cls):
+        from workbench.sources.csu_materials import SPECS as MAT_SPECS
+        from workbench.sources.csu_materials import parse as parse_mat
+        cls.spec = MAT_SPECS[0]
+        cls.pages = {}
+        stems = {1: "csu_materials"}
+        stems.update({p: f"csu_materials_p{p}" for p in range(2, 10)})
+        for page, stem in stems.items():
+            html = (FIXTURES / f"{stem}.html").read_text(encoding="utf-8")
+            url = cls.spec["listing"].replace("{page}", str(page))
+            cls.pages[page] = parse_mat(html, url, cls.spec)
+        cls.rows = [r for rows in cls.pages.values() for r in rows]
+
+    def test_spec_targets_the_materials_discipline(self):
+        self.assertEqual(self.spec["key"], "csu_materials")
+        self.assertEqual(self.spec["code"], "0805")
+        self.assertEqual(self.spec["discipline"], "材料科学与工程")
+        self.assertEqual(self.spec["institution"], "中南大学")
+        self.assertEqual(self.spec["max_pages"], 9)
+        self.assertIn("totalpage=9", self.spec["listing"])
+
+    def test_row_total_is_consistent_with_the_page_marker(self):
+        # 页面自报「共173条」，九页实际解析出 172 行、172 个互不相同姓名。
+        # 差 1 行如实保留，不凑成 173。
+        self.assertEqual(len(self.rows), 172)
+        self.assertEqual(len({r["name"] for r in self.rows}), 172)
+        self.assertGreaterEqual(len(self.rows), 170)
+
+    def test_pagination_is_effective(self):
+        # totalpage 是请求参数：传 1 只能拿回 20 行。九页内容互不重复。
+        self.assertEqual(len(self.pages[1]), 20)
+        self.assertEqual(len(self.pages[9]), 12)
+
+    def test_every_row_links_a_personal_homepage(self):
+        for row in self.rows:
+            self.assertIn("faculty.csu.edu.cn", row["homepage"])
+
+    def test_direction_is_never_invented(self):
+        for row in self.rows:
+            self.assertEqual(row["assignment"]["direction"], "方向待补")
+
+    def test_no_contact_information_is_stored(self):
+        blob = json.dumps(self.rows, ensure_ascii=False)
+        self.assertNotIn("@", blob)
+        self.assertNotRegex(blob,
+                            r"(?<![0-9A-Za-z])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z])")
+
+    def test_fixtures_are_redacted(self):
+        stems = ["csu_materials"] + [f"csu_materials_p{p}" for p in range(2, 10)]
+        for stem in stems:
+            html = (FIXTURES / f"{stem}.html").read_text(encoding="utf-8")
+            self.assertNotRegex(html, r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
+            self.assertNotRegex(
+                html,
+                r"(?<![0-9A-Za-z.\/-])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z-])")
+
+
 if __name__ == "__main__":
     unittest.main()
