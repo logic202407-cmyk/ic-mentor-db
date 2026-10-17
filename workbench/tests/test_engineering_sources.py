@@ -1314,5 +1314,77 @@ class SwpuNepuPetroleumSourceTests(unittest.TestCase):
         self.assertIn("联系方式", self.html["nepu_well_engineering"])
 
 
+class CipucPoliceTechSourceTests(unittest.TestCase):
+    """0838 公安技术 — 中国刑事警察学院 研究生导师名录（按教学单位分组）."""
+
+    @classmethod
+    def setUpClass(cls):
+        from workbench.sources.cipuc_police_tech import SPECS as CIPUC_SPECS
+        from workbench.sources.cipuc_police_tech import parse as parse_cipuc
+        cls.spec = CIPUC_SPECS[0]
+        cls.html = (FIXTURES / f"{cls.spec['key']}.html").read_text(encoding="utf-8")
+        cls.rows = parse_cipuc(cls.html, cls.spec["listing"], cls.spec)
+
+    def test_spec_targets_the_police_technology_discipline(self):
+        self.assertEqual(self.spec["key"], "cipuc_grad_supervisors")
+        self.assertEqual(self.spec["code"], "0838")
+        self.assertEqual(self.spec["discipline"], "公安技术")
+        self.assertEqual(self.spec["institution"], "中国刑事警察学院")
+        self.assertEqual(self.spec["max_pages"], 1)
+        self.assertNotIn("{page}", self.spec["listing"])
+
+    def test_this_is_a_second_institution_for_0838(self):
+        # 0838 原有 14 条全部来自中国人民公安大学。
+        self.assertNotEqual(self.spec["institution"], "中国人民公安大学")
+
+    def test_parser_finds_the_technical_units(self):
+        self.assertEqual(len(self.rows), 87)
+        self.assertEqual(len({r["name"] for r in self.rows}), 87)
+        units = {r["department"] for r in self.rows}
+        self.assertEqual(len(units), 4)
+        for token in ("刑事科学技术学院", "公安信息技术与情报学院",
+                      "警犬技术学院", "公安基础教研部"):
+            self.assertTrue(any(token in u for u in units), f"缺少教学单位: {token}")
+
+    def test_other_disciplines_and_general_units_are_excluded(self):
+        # 侦查/治安类院系属公安学（0306），通识与法学单位不属本学科。这些必须不出现，
+        # 而不是"恰好没抓到"——单位匹配用白名单，默认拒绝。
+        for excluded in ("侦查与反恐怖学院", "经济犯罪侦查学院", "禁毒与治安学院",
+                         "马克思主义学院", "法律教研部", "公共基础教研部"):
+            self.assertFalse(
+                any(excluded in r["department"] for r in self.rows),
+                f"不应收录 {excluded}")
+
+    def test_names_are_people_not_headings(self):
+        for row in self.rows:
+            self.assertRegex(row["name"], r"^[\u4e00-\u9fff·]{2,8}$")
+            self.assertNotIn("学院", row["name"])
+            self.assertNotIn("教研部", row["name"])
+
+    def test_direction_is_never_invented(self):
+        # 名录不列职称也不列研究方向，两者都不许进方向字段。
+        for row in self.rows:
+            self.assertEqual(row["assignment"]["direction"], "方向待补")
+
+    def test_every_row_cites_the_roster_page(self):
+        for row in self.rows:
+            self.assertEqual(row["assignment"]["url"], self.spec["listing"])
+            self.assertTrue(row["assignment"]["note"])
+
+    def test_no_contact_information_is_stored(self):
+        blob = json.dumps(self.rows, ensure_ascii=False)
+        self.assertNotIn("@", blob)
+        self.assertNotIn("邮箱", blob)
+        self.assertNotIn("电话", blob)
+        self.assertNotRegex(blob,
+                            r"(?<![0-9A-Za-z])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z])")
+
+    def test_fixture_carries_no_contact_data(self):
+        self.assertNotRegex(self.html,
+                            r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
+        self.assertNotRegex(self.html,
+                            r"(?<![0-9A-Za-z.\/-])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z-])")
+
+
 if __name__ == "__main__":
     unittest.main()
