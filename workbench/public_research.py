@@ -295,9 +295,21 @@ def parse_page(html, url, name, *, continuation=False):
     # Site chrome that survives the selectors above. Footer boilerplate is a real
     # source of false records: Wuhan University pages carry an ICP 备案号 line that
     # was previously captured as a publication.
-    for tag in soup.find_all(string=re.compile(r'ICP\s*备|公网安备|公安备案|版权所有|技术支持[:：]|工信部备案')):
-        parent = tag.find_parent(['p', 'div', 'li', 'td', 'footer', 'span'])
+    #
+    # Collect the parents FIRST and decompose afterwards. Iterating the strings while
+    # decomposing their ancestors invalidates the remaining nodes, and a page with two
+    # or more footer matches then raised
+    #   AttributeError: 'NavigableString' object has no attribute 'parent'.
+    # Pages with a single match never hit it, which is why it survived until a bulk
+    # --enrich run reached a two-match page.
+    chrome_parents = []
+    for text_node in soup.find_all(
+            string=re.compile(r'ICP\s*备|公网安备|公安备案|版权所有|技术支持[:：]|工信部备案')):
+        parent = text_node.find_parent(['p', 'div', 'li', 'td', 'footer', 'span'])
         if parent is not None:
+            chrome_parents.append(parent)
+    for parent in chrome_parents:
+        if parent.parent is not None:      # not already removed as a descendant
             parent.decompose()
     root = soup.select_one('.wp_articlecontent') or soup.select_one('.v_news_content') or soup.select_one('.bs-page-body') or soup.select_one('article') or soup.body or soup
     # Some faculty templates render tab labels before all panel bodies. Restore

@@ -355,4 +355,36 @@ class ResearchTests(unittest.TestCase):
         self.assertIn('未注明个人剩余名额',rows['a']['records'][0]['text'])
 
 
+class FooterBoilerplateTests(unittest.TestCase):
+    """页脚样板必须在到达记录之前被剔除，且不能在遍历中被"改成半截"。
+
+    历史的错误写法是先 ``soup.find_all(string=...)`` 再对命中的父节点 ``decompose()``：
+    一旦页面有**两处以上**页脚样板，第一个 decompose 会让其余 string 节点失去 parent，
+    随后抛 ``AttributeError: 'NavigableString' object has no attribute 'parent'``。
+    单处命中的页面不会触发，所以这个缺陷潜伏到批量 ``--enrich`` 跑到多命中页面才暴露。
+    """
+
+    BODY = "研究方向：机械设计与制造、机器人机构学。" * 6
+    HTML = ("<html><body>"
+            '<div class="wp_articlecontent">'
+            "<p>张三</p>"
+            f"<p>{BODY}</p>"
+            "<p>[1] 张三, 李四. 机械设计方法研究[J]. 机械工程学报, 2020, 56(3): 1-10.</p>"
+            "<p>[2] 张三, 王五. 机器人机构学分析[J]. 机械工程学报, 2021, 57(5): 20-30.</p>"
+            "</div>"
+            "<footer><p>版权所有 某某大学</p><p>ICP备12345678</p>"
+            "<p>技术支持：某某网络</p></footer>"
+            "</body></html>")
+
+    def test_page_with_several_footer_matches_still_parses(self):
+        data = research.parse_page(self.HTML, 'https://example.edu.cn/zhangsan.htm', '张三')
+        self.assertEqual(len(data['papers']), 2)
+
+    def test_footer_boilerplate_never_reaches_the_records(self):
+        data = research.parse_page(self.HTML, 'https://example.edu.cn/zhangsan.htm', '张三')
+        blob = repr(data)
+        for marker in ('ICP', '版权所有', '技术支持'):
+            self.assertNotIn(marker, blob)
+
+
 if __name__=='__main__':unittest.main()
