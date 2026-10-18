@@ -1,5 +1,13 @@
 # 导师调查工作台（工学）
 
+[![License: MIT](https://img.shields.io/badge/代码许可-MIT-yellow.svg)](LICENSE)
+[![Data License](https://img.shields.io/badge/数据许可-见%20LICENSE--DATA-blue.svg)](LICENSE-DATA)
+[![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB.svg)](workbench/requirements.txt)
+[![Tests](https://img.shields.io/badge/tests-321%20passed-brightgreen.svg)](workbench/tests)
+[![Records](https://img.shields.io/badge/记录-14%2C271%20条-informational.svg)](CHANGELOG.md)
+[![Local Only](https://img.shields.io/badge/数据-仅存本机-success.svg)](SECURITY.md)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+
 这是一个面向工科学生的**本地导师调查工作台**。输入姓名后可在同名候选中核对学校与院系；也可依次选择一级学科、高校、方向和导师。选定身份后，集中查看公开来源、论文线索和学术关系网，补充证据、记录人工核查状态并导出调查记录。
 
 与单纯的数据收纳项目相比，工作台多做两件事：**分析导师之间的关系**（四级证据分层，见下），以及给出一套**学生向的「读研体验参考分」**——只用公开可核验信号，每个维度可点开看依据，并明确写出它不衡量什么。原有的开源中文向量检索保留在资料整理视图。
@@ -537,3 +545,66 @@ node tools/verify_html.mjs reports/导师推荐.html reports/导师库.html
 | 2026-09-24 | **数据完善**：低召回导师定向补检（+130 篇论文）、垃圾关键词清洗、主页抓取 231 → 1030 位、明确在招 53 → **152 位**、推荐集扩为两层 458 人 |
 
 *本项目为公益性质的学生互助信息整理，欢迎指正。*
+
+## AI 用在哪、不用在哪
+
+这一节是为了避免一个常见的误读：**本项目的 AI 成分有限，且只用在它真正胜任的地方。**
+
+### 用了 AI
+
+| 位置 | 做法 | 可核验 |
+|:--|:--|:--|
+| 按研究兴趣找导师 | 开放嵌入模型 [`BAAI/bge-small-zh-v1.5`](https://huggingface.co/BAAI/bge-small-zh-v1.5)（经 `fastembed` 本地推理）把导师档案与查询编码为向量，取余弦相似度排序 | `workbench/search.py`；向量带语料指纹缓存，语料变了自动重建 |
+| 基线对比 | 同一条查询同时提供**关键词模式**，界面上可切换 | `workbench/search.py: keyword_score` |
+| 效果评测 | 用固定查询集对比 semantic 与 keyword 的 Top-1 / Top-3 | `workbench/evaluate_pilot.py` |
+| 资料抽取辅助 | `--enrich` 定向读取个人主页，抽取履历与论文目录 | 结果落在 `.workbench-data/public-research/`，可逐条复查 |
+
+模型全部**本地运行**，不调用任何在线大模型 API，因此：不需要 API Key、不产生调用费用、
+你的查询不会离开本机。代价是语义能力受这个小模型限制。
+
+### 没有用 AI（刻意用规则）
+
+| 能力 | 为什么不用 AI |
+|:--|:--|
+| 抓取与名录抽取 | 需要**可复现、可审计**。正则解析的结果能逐条对照快照原文；生成式抽取不能。 |
+| 四级关系证据（L1–L4） | 需要**确定性判定**。师承关系一旦误判，后果比"漏掉"严重得多。 |
+| 学生向参考分 | 必须**可解释到每个维度、每个数字**。四维加权是公开公式，不做黑箱打分。 |
+| 同名导师核对 | 现有实现用"学校 + 院系"硬约束，宁可判为"同名待核"也不猜。 |
+
+### 三条硬边界
+
+1. **AI 不用于评价任何导师**。参考分不衡量学术水平与指导质量，语义相似度也不代表
+   "这位导师适合你"。界面上的排序是**文档相关性**，不是推荐。
+2. **AI 不生成事实**。`AI 结果需人工复核` 是界面上常驻的提示；所有入库事实都必须
+   能追溯到某个公开页面。
+3. **AI 不触碰隐私**。不抓取需登录内容，邮箱电话在落盘前就被移除。
+
+### 已知局限
+
+- 小模型对**长尾研究方向**（细分到具体工艺或器件）的区分度有限，可能把相近方向排在
+  一起；这种情况下关键词模式往往更准，两个模式都保留就是为了这个。
+- 语料以中文为主，英文查询效果会下降。
+- 语义检索要求项目内至少有若干条档案；**空项目搜不出结果**不是 bug。
+
+## 开源与协作
+
+**许可**：代码 [MIT](LICENSE)；本项目原创的数据整理与文字材料另适用
+[LICENSE-DATA](LICENSE-DATA)（不覆盖第三方网页原文）。
+
+| 你可能想找 | 去处 |
+|:--|:--|
+| 怎么启动 | 本文件「一键启动」一节，或双击 `启动.cmd` |
+| 怎么贡献（最常见的是**信息更正**） | [CONTRIBUTING.md](CONTRIBUTING.md) |
+| 提交 Issue | `.github/ISSUE_TEMPLATE/`：纠错 / 建议 两个模板 |
+| 报告隐私或安全问题 | [SECURITY.md](SECURITY.md)（**请走私密渠道**） |
+| 行为准则 | [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) |
+| 版本变化 | [CHANGELOG.md](CHANGELOG.md) |
+| 怎么引用 | [CITATION.cff](CITATION.cff) |
+| 口径与不衡量什么 | [DISCLAIMER.md](DISCLAIMER.md) |
+| 第三方方法与资源 | [开源及第三方资源使用清单](workbench/aic-submission/开源及第三方资源使用清单.md) |
+
+持续集成：`.github/workflows/validate.yml` 在每次推送时跑测试与公开前审计。
+
+**关于删除**：如果你是被收录的教师本人，希望下线自己的记录，见
+[CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) 的「删除申请」——**不需要提供身份证件，
+我们 7 天内处理，不要求你解释理由。**

@@ -1,29 +1,35 @@
 cff-version: 1.2.0
 message: "如果本项目对你的升学或研究有帮助，欢迎按以下格式引用。"
-title: "集成电路 / AI 芯片方向导师库（IC Mentor DB）"
+title: "导师调查工作台（工学）：38 个工学一级学科导师公开信息库"
 abstract: >-
-  覆盖 11 所高校（清华、清华深研院、北大、复旦、上交、浙大、南大、中科大、东南、西电、成电）
-  共 2114 位集成电路与 AI 芯片方向导师的公开信息整理：官方师资名录 + Crossref 文献计量证据，
-  含 8 维综合评分、方向多标签归类与课题组招生信息汇总。
-type: dataset
+  面向工科学生的本地导师调查工作台。全库 14,271 条记录、公开来源 11,098 条，
+  覆盖 55 所高校或机构、117 个一级学科（其中工学 38 个，为人文社科与理科保留的
+  数据默认隐藏）。每条记录引用其名录页 URL；快照在落盘前脱敏邮箱与电话。
+  工作台在数据之外做两件事：按四级证据分层分析导师关系（L1 明确师承 / L2 共同指导 /
+  L3 同门 / L4 共同署名，只有 L1 可视为师承），以及给出学生向的四维「读研体验参考分」
+  （论文数量、期刊档次、引用影响力与头衔一律不进入分数）。
+  语义检索使用 BAAI/bge-small-zh-v1.5 开放嵌入模型，并保留关键词基线用于对比。
+type: software
 authors:
   - name: "ic-mentor-db contributors"
     url: "https://github.com/logic202407-cmyk/ic-mentor-db"
-version: "2026.09"
-date-released: "2026-09-24"
-license: "CC-BY-NC-SA-4.0"
+version: "1.0.0"
+date-released: "2026-10-18"
+license: "MIT"
 keywords:
-  - 集成电路
-  - 微电子
-  - AI 芯片
   - 导师信息
+  - 工学
   - 保研
   - 推免
   - 考研
-  - 文献计量
+  - 关系分析
+  - 语义检索
+  - 开放数据
 repository-code: "https://github.com/logic202407-cmyk/ic-mentor-db"
 url: "https://github.com/logic202407-cmyk/ic-mentor-db"
 notes: >-
-  数据来源：各高校院系官网公开师资页面、Crossref REST API（2008–2026）。
-  本项目不构成学术评价、人事评价或报考建议；梯队分组仅反映公开文献计量证据的多少。
-  数据与文档采用 CC BY-NC-SA 4.0（非商业性使用），代码采用 MIT。
+  许可：代码采用 MIT（见 LICENSE）；本项目原创的数据整理与文字材料另行适用
+  LICENSE-DATA，不覆盖第三方网页原文。数据来源为各高校院系官网、院系师资页与
+  学校教师主页系统等公开页面；不抓取需要登录的内容，不收录联系方式。
+  本项目不构成学术评价、人事评价或报考建议；参考分不衡量学术水平与指导质量。
+  第三方方法参考与致谢详见 workbench/aic-submission/开源及第三方资源使用清单.md。
