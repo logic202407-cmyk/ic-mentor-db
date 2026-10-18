@@ -752,3 +752,27 @@ node --test workbench\tests\test_ui_races.cjs workbench\tests\test_research_ui.c
 ## 许可与边界
 
 `workbench/` 内的程序代码按仓库 [MIT 软件许可](../LICENSE) 提供；模型标注 MIT，FastEmbed 标注 Apache-2.0，均需遵守各自原始许可。仓库历史数据与文档的许可边界见 [LICENSE-DATA](../LICENSE-DATA)。第三方教师网页仍归原权利人；工作台只保存少量事实、来源链接和用户自有备注，不重新发布网页全文。对外发布数据集或参赛材料前，应再次核对页面、授权和脱敏情况。
+
+## 方向推断：混合策略与消融（2026-10-18）
+
+全库 4,030 条「方向待补」，但其中 4,007 条**已经读到个人主页履历**（中位 424 字）。
+缺的不是数据，是把文本映射到方向标签这一步。`workbench/infer_directions.py` 做这件事，
+并**照实报告了一个对嵌入模型不利的结果**：
+
+| 方法（400 条留出验证） | Top-1 | Top-3 |
+|:--|--:|--:|
+| 关键词基线 | 64.0% | 70.2% |
+| 嵌入 `bge-small-zh-v1.5` | **9.0%** | 53.2% |
+| **混合** | **66.2%** | **74.5%** |
+
+消融（按真值是否被字面写进文本分层）：字面命中占 63%，关键词 95.6% / 嵌入 4.4%；
+未字面命中占 37%，关键词 10.7% / **嵌入 16.8%**。也就是说 **AI 的价值区间是那 37%**，
+所以用混合而不是宣称"用了 AI 所以更强"。
+
+**保守性**：相似度 <0.55 的 455 条留空；建议只落在
+`.workbench-data/direction-inference/suggestions.json`，**不覆盖原始 `direction`**。
+词表剔除「不分研究方向」等退化标签——否则全猜这一类就能刷高准确率。
+
+复现：`python -m workbench.infer_directions --validate 400 --apply`
+完整评测：`workbench/aic-submission/evidence/方向推断评测.md`
+
