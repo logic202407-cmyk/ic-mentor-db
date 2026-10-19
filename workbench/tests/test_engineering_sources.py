@@ -2725,5 +2725,71 @@ class TjStructureSourceTests(unittest.TestCase):
                 html,
                 r"(?<![0-9A-Za-z.\/-])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z-])")
 
+class TjuArchitectureSourceTests(unittest.TestCase):
+    """0813 建筑学 — 天津大学 建筑学院 建筑学系（教授/英才/讲席三类）."""
+
+    @classmethod
+    def setUpClass(cls):
+        from workbench.sources.tju_architecture import SPECS as TJUA_SPECS
+        from workbench.sources.tju_architecture import parse as parse_tjua
+        cls.specs = TJUA_SPECS
+        cls.by_key = {}
+        for spec in TJUA_SPECS:
+            p = FIXTURES / f"{spec['key']}.html"
+            if p.is_file():
+                cls.by_key[spec["key"]] = parse_tjua(
+                    p.read_text(encoding="utf-8"), spec["listing"], spec)
+        cls.rows = [r for rows in cls.by_key.values() for r in rows]
+
+    def test_specs_target_the_architecture_discipline(self):
+        self.assertEqual(len(self.specs), 4)
+        for spec in self.specs:
+            self.assertEqual(spec["code"], "0813")
+            self.assertEqual(spec["discipline"], "建筑学")
+            self.assertEqual(spec["institution"], "天津大学")
+
+    def test_row_total(self):
+        self.assertEqual(len(self.rows), 22)
+        self.assertEqual(len({r["name"] for r in self.rows}), 22)
+
+    def test_scope_is_stated_in_the_department_field(self):
+        # 只收三类，必须写在院系字段里，避免被读成"全系只有这些人"。
+        for spec in self.specs:
+            self.assertIn("建筑学系", spec["department"])
+        for row in self.rows:
+            self.assertIn("只收教授", row["assignment"]["note"])
+
+    def test_titles_never_leak_into_names(self):
+        import re
+        rank = re.compile(r"教授|副教授|讲师|研究员|高工|院士")
+        for row in self.rows:
+            self.assertRegex(row["name"], r"^[\u4e00-\u9fff·]{2,8}$")
+            self.assertIsNone(rank.search(row["name"]), row["name"])
+
+    def test_every_row_links_a_detail_page(self):
+        for row in self.rows:
+            self.assertIn("/info/", row["homepage"])
+
+    def test_direction_is_never_invented(self):
+        for row in self.rows:
+            self.assertEqual(row["assignment"]["direction"], "方向待补")
+
+    def test_no_contact_information_is_stored(self):
+        blob = json.dumps(self.rows, ensure_ascii=False)
+        self.assertNotIn("@", blob)
+        self.assertNotRegex(blob,
+                            r"(?<![0-9A-Za-z])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z])")
+
+    def test_fixtures_are_redacted(self):
+        for spec in self.specs:
+            p = FIXTURES / f"{spec['key']}.html"
+            if not p.is_file():
+                continue
+            html = p.read_text(encoding="utf-8")
+            self.assertNotRegex(html, r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
+            self.assertNotRegex(
+                html,
+                r"(?<![0-9A-Za-z.\/-])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z-])")
+
 if __name__ == "__main__":
     unittest.main()
