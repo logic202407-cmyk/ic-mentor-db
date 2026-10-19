@@ -2607,5 +2607,65 @@ class SingleInstitutionDisciplinesTests(unittest.TestCase):
                     r"(?<![0-9A-Za-z.\/-])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z-])")
 
 
+class TjWaterSourceTests(unittest.TestCase):
+    """0815 水利工程 — 同济大学 水利工程系 师资名录（按职称三页）."""
+
+    @classmethod
+    def setUpClass(cls):
+        from workbench.sources.tj_water import SPECS as TJ_SPECS
+        from workbench.sources.tj_water import parse as parse_tj
+        cls.specs = TJ_SPECS
+        cls.by_key = {}
+        for spec in TJ_SPECS:
+            html = (FIXTURES / f"{spec['key']}.html").read_text(encoding="utf-8")
+            cls.by_key[spec["key"]] = parse_tj(html, spec["listing"], spec)
+        cls.rows = [r for rows in cls.by_key.values() for r in rows]
+
+    def test_specs_target_the_water_discipline(self):
+        self.assertEqual(len(self.specs), 3)
+        for spec in self.specs:
+            self.assertEqual(spec["code"], "0815")
+            self.assertEqual(spec["discipline"], "水利工程")
+            self.assertEqual(spec["institution"], "同济大学")
+            self.assertIn("水利工程系", spec["department"])
+
+    def test_row_counts(self):
+        self.assertEqual(len(self.by_key["tj_water_professor"]), 37)
+        self.assertEqual(len(self.by_key["tj_water_associate"]), 15)
+        self.assertEqual(len(self.by_key["tj_water_lecturer"]), 2)
+        self.assertEqual(len(self.rows), 54)
+        self.assertEqual(len({r["name"] for r in self.rows}), 54)
+
+    def test_titles_never_leak_into_names(self):
+        # 卡片文字是「姓名+职称」拼接，必须剥掉后缀；否则「曹德平研究员」会被当成姓名。
+        import re
+        rank = re.compile(r"教授|副教授|讲师|研究员|高工|院士")
+        for row in self.rows:
+            self.assertRegex(row["name"], r"^[\u4e00-\u9fff·]{2,8}$")
+            self.assertIsNone(rank.search(row["name"]), row["name"])
+
+    def test_every_row_links_a_detail_page(self):
+        for row in self.rows:
+            self.assertIn("/info/", row["homepage"])
+
+    def test_direction_is_never_invented(self):
+        for row in self.rows:
+            self.assertEqual(row["assignment"]["direction"], "方向待补")
+
+    def test_no_contact_information_is_stored(self):
+        blob = json.dumps(self.rows, ensure_ascii=False)
+        self.assertNotIn("@", blob)
+        self.assertNotRegex(blob,
+                            r"(?<![0-9A-Za-z])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z])")
+
+    def test_fixtures_are_redacted(self):
+        for spec in self.specs:
+            html = (FIXTURES / f"{spec['key']}.html").read_text(encoding="utf-8")
+            self.assertNotRegex(html, r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
+            self.assertNotRegex(
+                html,
+                r"(?<![0-9A-Za-z.\/-])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z-])")
+
+
 if __name__ == "__main__":
     unittest.main()
