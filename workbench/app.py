@@ -17,7 +17,7 @@ from .core import (
     load_project, normalize_profile, now, parse_import, safe_url, save_project,
 )
 from .search import MODEL_NAME, search
-from . import catalog, investigation, relations, student_score
+from . import ai_hints, catalog, investigation, relations, student_score
 from .openalex import OpenAlexUnavailable, author_candidates
 import requests
 
@@ -139,6 +139,21 @@ def catalog_report(mentor_id: str):
     return Response(body, media_type="text/markdown; charset=utf-8", headers={
         "Content-Disposition": f'attachment; filename="mentor-investigation-{mentor_id[:20]}.md"',
     })
+
+
+@app.get("/api/catalog/ai-hints")
+def catalog_ai_hints():
+    """AI 两处「待复核」结果的概览；产物未生成时各计数为 0，不报错。"""
+    return ai_hints.summary()
+
+
+@app.get("/api/catalog/mentor/{mentor_id}/ai-hints")
+def catalog_mentor_ai_hints(mentor_id: str):
+    """某位导师的方向建议与同名待核提示。
+
+    这些只是**建议**：不写回任何原始字段，也不参与参考分与关系分析。
+    """
+    return ai_hints.hints_for(mentor_id)
 
 
 @app.get("/api/catalog/mentor/{mentor_id}")

@@ -605,7 +605,20 @@ node tools/verify_html.mjs reports/导师推荐.html reports/导师库.html
 复现：python -m workbench.disambiguate_names --evaluate --review。
 详见 [同名消歧评测](workbench/aic-submission/evidence/同名消歧评测.md)。
 
+### 界面上能看到 AI 结果
+
+两处 AI 产出现在接进了导师详情页，作为一个独立区块「**AI 建议（待复核）**」：
+
+- **方向建议**：给出推断方向、相似度、用了哪种方法（关键词命中 / 嵌入推断），以及次选方向；
+- **同名待核**：列出与当前记录同名、同校、但主页不同的另一方，带相似度、院系与主页链接。
+
+接口：GET /api/catalog/mentor/{id}/ai-hints、GET /api/catalog/ai-hints（概览）。
+
+区块里常驻一句说明：**AI 推断结果，仅供人工复核时参考，不构成事实、不改变参考分、
+也不会被自动写入数据。** 产物缺失（未跑过推断）时区块静默隐藏，不影响其它功能。
+
 ### 用了 AI
+
 
 
 | 位置 | 做法 | 可核验 |

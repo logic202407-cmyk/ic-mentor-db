@@ -42,7 +42,16 @@
     .rel-level{display:inline-block;font-weight:600;color:#1f4e79;margin-right:8px}
     .rel-count{font-size:11px;color:var(--muted)}
     .rel-list p{margin:3px 0 0;font-size:11.5px;color:#44586e;line-height:1.5}
-  </style>
+  
+#aiHints{margin:0 0 18px;padding:14px 16px;border:1px solid #d8e3ea;border-radius:10px;background:#f7fbfd}
+#aiHints h4{margin:0 0 10px;font-size:14px;letter-spacing:.04em}
+#aiHints .ai-row{margin:0 0 10px;font-size:13px;line-height:1.7}
+#aiHints .ai-row b{display:inline-block;min-width:72px;color:#2f5d76}
+#aiHints .ai-row small{color:#6b7c86}
+#aiHints .ai-top3{margin-top:2px}
+#aiHints .ai-review{margin:4px 0 0 72px}
+#aiHints .ai-note{margin:8px 0 0;font-size:12px;color:#8a99a3;border-top:1px dashed #d8e3ea;padding-top:8px}
+</style>
 </head>
 <body>
 <header class="site-head"><div class="head-inner"><div class="identity"><div class="seal" aria-hidden="true">研</div><div><h1>导师工作台</h1><p>高校 · 导师 · 研究方向</p></div></div><div class="head-meta"><span></span><a class="inline-link" href="/classic">按研究兴趣查找</a><strong>我的资料</strong></div></div></header>
@@ -68,6 +77,7 @@
   <main class="content" id="mainContent">
     <section class="landing" id="landing"><p class="eyebrow">导师资料</p><h2>找导师，也把资料留好</h2><p class="lead">查看导师的研究方向、论文和学术关系。需要确认的事情记下来，查过的网页也一起保存。</p><div class="landing-grid"><div><b>查找</b><h3>分清同名导师</h3><p>姓名相同时，看学校、院系和个人主页。</p></div><div><b>了解</b><h3>了解研究与合作</h3><p>把论文、履历和合作关系放在一起看。</p></div><div><b>记录</b><h3>留下自己的记录</h3><p>保存网页、记下问题，需要时导出。</p></div></div><section class="coverage" id="catalogCoverage" aria-label="资料收录情况"><p class="quiet">正在读取收录情况…</p></section></section>
     <article id="dossier" hidden>
+<div id="aiHints" hidden></div>
       <div class="breadcrumb" id="breadcrumb"></div><header class="dossier-head"><p class="eyebrow">导师资料</p><h2 id="mentorTitle"></h2><p class="subtitle" id="mentorSubtitle"></p><div class="badges" id="mentorBadges"></div><div class="dossier-actions"><a class="button slim" id="reportLink" href="#">导出资料</a><a class="button light slim" id="homepageLink" href="#" target="_blank" rel="noopener noreferrer" hidden>导师主页</a></div></header>
       <nav class="dossier-tabs" aria-label="调查内容"><button class="dossier-tab active" data-pane="investigation" type="button">资料汇总</button><button class="dossier-tab" data-pane="overview" type="button">基本信息</button><button class="dossier-tab" data-pane="papers" type="button">论文</button><button class="dossier-tab" data-pane="network" type="button">学术关系</button><button class="dossier-tab" data-pane="check" type="button">笔记与核对</button></nav>
       <section class="pane" id="pane-investigation"></section><section class="pane" id="pane-overview" hidden></section><section class="pane" id="pane-papers" hidden></section><section class="pane" id="pane-network" hidden></section><section class="pane" id="pane-check" hidden></section>
@@ -99,7 +109,7 @@ function resetSelect(id,label){const element=$(id);element.innerHTML=`<option va
 async function chooseDiscipline(){clearDossier();const version=state.queryVersion;const discipline=$('disciplineSelect').value;resetSelect('institutionSelect','请选择高校');resetSelect('directionSelect','先选高校');state.candidates=[];renderCandidates();if(!discipline){message('先选择一级学科。');return}message('正在列出高校…');try{const items=await api('/api/catalog/institutions?'+params({discipline,project_id:state.projectId,...scopeParams()}));if(version!==state.queryVersion)return;$('institutionSelect').innerHTML='<option value="__all__">全部高校 / 机构</option>'+items.map(item=>`<option value="${esc(item.name)}">${esc(item.name)} · ${item.count} 人</option>`).join('');$('institutionSelect').disabled=!items.length;if(items.length){$('institutionSelect').value='__all__';await chooseInstitution()}else{message('这个学科还没有导师资料，可以自己添加。')}}catch(error){if(version===state.queryVersion)message(error.message,true)}}
 async function chooseInstitution(){clearDossier();const version=state.queryVersion;const discipline=$('disciplineSelect').value,institution=$('institutionSelect').value;resetSelect('directionSelect','请选择方向');state.candidates=[];renderCandidates();if(!institution){message('先选择高校。');return}message('正在列出研究方向…');try{const items=await api('/api/catalog/directions?'+params({discipline,institution,project_id:state.projectId,...scopeParams()}));if(version!==state.queryVersion)return;$('directionSelect').innerHTML='<option value="__all__">全部方向</option>'+items.map(item=>`<option value="${esc(item.name)}">${esc(item.name)} · ${item.count} 人</option>`).join('');$('directionSelect').disabled=!items.length;if(items.length){$('directionSelect').value='__all__';await chooseDirection()}else{message('当前选择下暂无已收录方向。')}}catch(error){if(version===state.queryVersion)message(error.message,true)}}
 async function chooseDirection(){clearDossier();const version=state.queryVersion;const discipline=$('disciplineSelect').value,institution=$('institutionSelect').value,direction=$('directionSelect').value;state.candidates=[];renderCandidates();if(!direction){message('请选方向。');return}message('正在列出导师…');try{const items=await api('/api/catalog/mentors?'+params({discipline,institution,direction,project_id:state.projectId,...scopeParams()}));if(version!==state.queryVersion)return;state.candidates=items;renderCandidates();message(`找到 ${state.candidates.length} 条记录，请选择导师。`)}catch(error){if(version===state.queryVersion)message(error.message,true)}}
-async function openMentor(id){const version=++state.selectionVersion;message('正在加载…');try{const mentor=await api('/api/catalog/mentor/'+encodeURIComponent(id));if(version!==state.selectionVersion)return;state.mentor=mentor;renderDossier();readPublicResearch();history.replaceState(null,'',location.pathname+'?mentor='+encodeURIComponent(id));renderCandidates();message('已打开导师资料。');if(window.innerWidth<700)$('mainContent').scrollIntoView({block:'start'})}catch(error){if(version===state.selectionVersion)message(error.message,true)}}
+async function openMentor(id){const version=++state.selectionVersion;message('正在加载…');try{const mentor=await api('/api/catalog/mentor/'+encodeURIComponent(id));if(version!==state.selectionVersion)return;state.mentor=mentor;renderDossier();renderAiHints(id);readPublicResearch();history.replaceState(null,'',location.pathname+'?mentor='+encodeURIComponent(id));renderCandidates();message('已打开导师资料。');if(window.innerWidth<700)$('mainContent').scrollIntoView({block:'start'})}catch(error){if(version===state.selectionVersion)message(error.message,true)}}
 function setPane(pane){document.querySelectorAll('[data-pane]').forEach(button=>button.classList.toggle('active',button.dataset.pane===pane));for(const name of ['investigation','overview','papers','network','check'])$('pane-'+name).hidden=name!==pane;if(pane==='investigation')renderInvestigation()}
 function renderStudentScore(){const d=state.mentor||{};const s=d.student_score||{},r=d.relations_analysis||{};const host=$('scoreBlock');if(!host)return;
  const dims=Object.entries(s.dimensions||{}).map(([key,dim])=>{const label=(s.labels||{})[key]||key,w=(s.weights||{})[key]||0;const value=(dim.score===null||dim.score===undefined)?'<span class="score-unknown">无公开证据</span>':`<b>${dim.score}</b>`;return `<li data-dim="${esc(key)}"><div class="score-dim-head"><span>${esc(label)}</span><span class="score-weight">权重 ${w}%</span><span class="score-value">${value}</span></div><p class="score-detail">${esc(dim.detail)}</p><p class="score-basis">${esc((s.basis||{})[key]||'')}</p></li>`}).join('');
@@ -136,6 +146,34 @@ $('showNonEngineering').onchange=async event=>{state.includeNonEngineering=event
 $('createProject').onclick=async()=>{const name=$('projectName').value.trim();if(!name){message('请填写项目名称。',true);return}try{const project=await api('/api/projects',{method:'POST',body:JSON.stringify({name})});state.projectId=project.id;$('projectName').value='';await refreshProjects();await loadDisciplines();message('项目已创建，可以导入资料。')}catch(error){message(error.message,true)}};
 $('importButton').onclick=async()=>{const file=$('importFile').files[0];if(!state.projectId||!file){message('先创建或选择项目，再选 CSV / JSON 文件。',true);return}const button=$('importButton');button.disabled=true;message('正在导入本机资料…');try{const result=await api('/api/projects/'+state.projectId+'/import',{method:'POST',body:JSON.stringify({filename:file.name,content:await file.text()})});await refreshProjects();await loadDisciplines();message(`已新增 ${result.added} 条；重复 ${result.duplicates} 条；缺姓名或机构 ${result.skipped} 条。`)}catch(error){message(error.message,true)}finally{button.disabled=false}};
 (async()=>{try{await refreshProjects();await loadDisciplines();setupAddMentor();loadCoverage();loadScope();const id=new URLSearchParams(location.search).get('mentor');if(id)await openMentor(id)}catch(error){message(error.message,true)}})();
+
+function esc2(value){return String(value==null?'':value).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]))}
+async function renderAiHints(id){
+  const box=$('aiHints'); if(!box) return;
+  box.hidden=true; box.innerHTML='';
+  let data;
+  try{ data=await api('/api/catalog/mentor/'+encodeURIComponent(id)+'/ai-hints'); }
+  catch(e){ return; }
+  if(!data) return;
+  const rows=[]; const sug=data.direction_suggestion; const rev=data.name_review||[];
+  if(sug){
+    const top=(sug.top3||[]).map(t=>`${esc2(t.label)} <small>${Number(t.score).toFixed(3)}</small>`).join('、');
+    rows.push(`<div class="ai-row"><b>方向建议</b>
+      <span>${esc2(sug.suggested)}</span>
+      <small>相似度 ${Number(sug.score).toFixed(3)} · ${sug.method==='keyword'?'关键词命中':'嵌入推断'}
+      ${sug.passes_threshold?'':' · 低于阈值，仅供参考'}</small>
+      ${top?`<div class="ai-top3"><small>次选：${top}</small></div>`:''}</div>`);
+  }
+  if(rev.length){
+    rows.push('<div class="ai-row"><b>同名待核</b>'+rev.map(r=>`
+      <div class="ai-review"><span>${esc2(r.verdict)} · 相似度 ${Number(r.similarity).toFixed(3)}</span>
+      <small>另一方：${esc2(r.other.dept||'院系未标注')}${r.other.home?` · <a href="${esc2(r.other.home)}" target="_blank" rel="noopener noreferrer">主页</a>`:''}</small></div>`).join('')+'</div>');
+  }
+  if(!rows.length) return;
+  box.innerHTML=`<h4>AI 建议（待复核）</h4>${rows.join('')}
+    <p class="ai-note">${esc2(data.disclaimer||'')}</p>`;
+  box.hidden=false;
+}
 </script>
 </body>
 </html>
