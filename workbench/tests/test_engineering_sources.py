@@ -2791,5 +2791,64 @@ class TjuArchitectureSourceTests(unittest.TestCase):
                 html,
                 r"(?<![0-9A-Za-z.\/-])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z-])")
 
+class PkuMechanicsSourceTests(unittest.TestCase):
+    """0801 力学 — 北京大学 力学与工程科学学院（拼音首字母 20 个索引页）."""
+
+    @classmethod
+    def setUpClass(cls):
+        from workbench.sources.pku_mechanics import SPECS as PKU_SPECS
+        from workbench.sources.pku_mechanics import parse as parse_pku
+        cls.specs = PKU_SPECS
+        cls.by_key = {}
+        for spec in PKU_SPECS:
+            p = FIXTURES / f"{spec['key']}.html"
+            if p.is_file():
+                cls.by_key[spec["key"]] = parse_pku(
+                    p.read_text(encoding="utf-8"), spec["listing"], spec)
+        cls.rows = [r for rows in cls.by_key.values() for r in rows]
+
+    def test_twenty_letter_pages(self):
+        self.assertEqual(len(self.specs), 20)
+        for spec in self.specs:
+            self.assertEqual(spec["code"], "0801")
+            self.assertEqual(spec["discipline"], "力学")
+            self.assertEqual(spec["institution"], "北京大学")
+
+    def test_row_total(self):
+        self.assertEqual(len(self.rows), 96)
+        self.assertEqual(len({r["name"] for r in self.rows}), 96)
+
+    def test_letter_index_labels_are_not_people(self):
+        # 页面顶部是 A-Z 索引与栏目名，不能当成姓名。
+        for row in self.rows:
+            self.assertRegex(row["name"], r"^[\u4e00-\u9fff·]{2,8}$")
+
+    def test_every_row_links_a_hex_detail_page(self):
+        import re
+        pat = re.compile(r"[0-9a-f]{20,}\.htm")
+        for row in self.rows:
+            self.assertRegex(row["homepage"], pat)
+
+    def test_direction_is_never_invented(self):
+        for row in self.rows:
+            self.assertEqual(row["assignment"]["direction"], "方向待补")
+
+    def test_no_contact_information_is_stored(self):
+        blob = json.dumps(self.rows, ensure_ascii=False)
+        self.assertNotIn("@", blob)
+        self.assertNotRegex(blob,
+                            r"(?<![0-9A-Za-z])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z])")
+
+    def test_fixtures_are_redacted(self):
+        for spec in self.specs:
+            p = FIXTURES / f"{spec['key']}.html"
+            if not p.is_file():
+                continue
+            html = p.read_text(encoding="utf-8")
+            self.assertNotRegex(html, r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
+            self.assertNotRegex(
+                html,
+                r"(?<![0-9A-Za-z.\/-])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z-])")
+
 if __name__ == "__main__":
     unittest.main()
