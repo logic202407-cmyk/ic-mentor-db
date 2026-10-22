@@ -12,6 +12,10 @@
 实现要点：**测试数用 AST 静态统计，不真跑测试**——数 `test_` 开头的方法即可，
 既快又不需要执行副作用。
 
+工作流：**新增测试文件或改动数据后，先跑一次 --fix**——测试数统计的是 	est_ 方法数，
+加一个方法徽章就过期一次。这条检查存在的意义就是让"忘了更新"变成必须处理的失败项，
+而不是悄悄在首页显示一个错数字。
+
 用法::
 
     python -m workbench.tools.check_readme_badges
@@ -33,6 +37,8 @@ README = ROOT / "README.md"
 TESTS_DIR = ROOT / "workbench/tests"
 
 TESTS_BADGE = re.compile(r"tests-(\d+)%20passed")
+# 「纳入 git 的文件（N 个） | 约 X MB」
+SIZE_ROW = re.compile(r"纳入 git 的文件（(\d+) 个）\s*\|\s*\*\*约 (\d+) MB\*\*")
 RECORDS_BADGE = re.compile(r"记录-(\d+)%2C(\d+)%20条|记录-(\d+)%20条")
 
 
@@ -48,6 +54,23 @@ def count_tests() -> int:
             if isinstance(node, ast.FunctionDef) and node.name.startswith("test_"):
                 total += 1
     return total
+
+
+def tracked_size() -> tuple[int, float]:
+    """返回 (跟踪文件数, 跟踪内容总 MB)——与 tools/repo_size.py 的算法一致。"""
+    import subprocess
+
+    proc = subprocess.run(["git", "ls-files"], cwd=str(ROOT), capture_output=True,
+                          text=True, encoding="utf-8", errors="replace")
+    paths = proc.stdout.split()
+    total = 0
+    count = 0
+    for rel in paths:
+        p = ROOT / rel
+        if p.is_file():
+            total += p.stat().st_size
+            count += 1
+    return count, total / 1024 / 1024
 
 
 def actual_numbers() -> dict[str, int]:
@@ -91,8 +114,24 @@ def main() -> int:
         elif have != want:
             problems.append(f"徽章「{label}」写的是 {have:,}，实际 {want:,}")
 
+    # 体积表
+    size_files = size_mb = None
+    m_size = SIZE_ROW.search(text)
+    act_files, act_mb = tracked_size()
+    if m_size:
+        size_files, size_mb = int(m_size.group(1)), int(m_size.group(2))
+        if size_files != act_files:
+            problems.append(f"体积表「文件 {size_files} 个」实际 {act_files} 个")
+        if abs(size_mb - act_mb) > max(3.0, act_mb * 0.15):
+            problems.append(f"体积表「约 {size_mb} MB」实际 {act_mb:.1f} MB")
+    else:
+        problems.append("体积表未找到「纳入 git 的文件（N 个）| 约 X MB」这一行")
+
     if problems and args.fix:
         fixed = text
+        if m_size and size_files is not None:
+            fixed = SIZE_ROW.sub(
+                f"纳入 git 的文件（{act_files} 个） | **约 {round(act_mb)} MB**", fixed, count=1)
         if claimed["tests"] is not None and claimed["tests"] != actual["tests"]:
             fixed = TESTS_BADGE.sub(f"tests-{actual['tests']}%20passed", fixed, count=1)
         if claimed["records"] is not None and claimed["records"] != actual["records"]:
@@ -109,6 +148,8 @@ def main() -> int:
     lines = ["README 徽章校验", ""]
     lines.append(f"  测试数：徽章 {claimed['tests']} / 实际 {actual['tests']}")
     lines.append(f"  全库记录：徽章 {claimed['records']} / 实际 {actual['records']}")
+    lines.append(f"  体积表：徽章 {size_files} 个 / {size_mb} MB"
+                 f"　实际 {act_files} 个 / {act_mb:.1f} MB")
     if problems:
         lines.append("")
         for p in problems:

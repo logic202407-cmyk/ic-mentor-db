@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/代码许可-MIT-yellow.svg)](LICENSE)
 [![Data License](https://img.shields.io/badge/数据许可-见%20LICENSE--DATA-blue.svg)](LICENSE-DATA)
 [![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB.svg)](workbench/requirements.txt)
-[![Tests](https://img.shields.io/badge/tests-714%20passed-brightgreen.svg)](workbench/tests)
+[![Tests](https://img.shields.io/badge/tests-715%20passed-brightgreen.svg)](workbench/tests)
 [![Records](https://img.shields.io/badge/记录-15%2C719%20条-informational.svg)](CHANGELOG.md)
 [![Local Only](https://img.shields.io/badge/数据-仅存本机-success.svg)](SECURITY.md)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
@@ -45,11 +45,25 @@ py -3 -m venv .venv
 
 | 项目 | 体积 | 说明 |
 |:--|--:|:--|
-| 纳入 git 的文件（414 个） | **约 90 MB** | 大头是数据库本体：`mentor_ranked.json` 34 MB、`admission_faculty.json` 15 MB、`engineering_scale_faculty.json` 7 MB、`research_sources.json` 3 MB |
-| `.git` | 约 56 MB | 历史提交 |
+| 纳入 git 的文件（586 个） | **约 108 MB** | 大头是数据本体，见下方明细 |
+| `.git` | 约 67 MB | 历史提交 |
 | `.venv` | 约 211 MB | 虚拟环境，可由 `requirements.txt` 重建 |
 | `data/raw` | 约 890 MB | **抓取到的网页原文**，只在采集脚本里用；运行期不读它，已 gitignore |
-| `.workbench-data/` | 约 40 MB（已清理） | 运行期档案与模型缓存，已 gitignore |
+| `.workbench-data/` | 约 400 MB | 运行期档案、页面缓存与嵌入模型，已 gitignore |
+
+**108 MB 里最大的几个文件**（可用 `python tools/repo_size.py` 随时重测）：
+
+| 文件 | 体积 | 是什么 |
+|:--|--:|:--|
+| `data/processed/mentor_ranked.json` | 34.1 MB | 历史集成电路专题的语料与文献计量 |
+| `workbench/reference/admission_faculty.json` | 18.0 MB | 招生目录与院系对应 |
+| `workbench/reference/engineering_scale_faculty.json` | 9.9 MB | 工学各学科名录快照 |
+| `workbench/reference/research/dossiers.json.gz` | 5.2 MB | **逐人档案打包**（clone 后界面靠它才有论文与招生记录） |
+| `workbench/reference/research_sources.json` | 3.6 MB | 来源登记表 |
+| `workbench/reference/ai/direction_suggestions.json` | 3.4 MB | **AI 方向建议产物**（clone 后「AI 建议」区块靠它） |
+
+> 上表前两列由 `workbench.tools.check_readme_badges` 自动校验（`--fix` 可就地改正）——
+> 这几个数字曾经分别写着 414 个 / 90 MB / 56 MB，与实际差了一大截，而没有人会去更新它们。
 
 **已做的瘦身**：删掉了可重生成的页面缓存与一次性侦察目录，释放 **372 MB**（`research-pages` 353 MB、`discipline-pages`、`enrichment-runs`、各 `.scratch_*`）。这些删掉后应用功能不变——档案数据在 `.workbench-data/public-research/`，与页面缓存是两回事，实测接口全部正常。
 

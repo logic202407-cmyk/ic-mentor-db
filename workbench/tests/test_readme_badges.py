@@ -66,6 +66,19 @@ class ReadmeConsistencyTests(unittest.TestCase):
         self.assertEqual(claimed["records"], actual["records"],
                          f"徽章记录数过期：写 {claimed['records']}，实际 {actual['records']}")
 
+    def test_size_row_matches_actual(self):
+        """README 体积表里的文件数必须等于实测——它自己都写着"会过期"却仍是写死的。"""
+        from workbench.tools.check_readme_badges import SIZE_ROW, tracked_size
+        text = README.read_text(encoding='utf-8')
+        m = SIZE_ROW.search(text)
+        self.assertIsNotNone(m, 'README 体积表行未找到')
+        files, mb = int(m.group(1)), int(m.group(2))
+        act_files, act_mb = tracked_size()
+        self.assertEqual(files, act_files, f'体积表文件数 {files} != 实际 {act_files}')
+        # 体积允许 ±15%（构建产物大小会有正常波动），但不能差一倍
+        self.assertLess(abs(mb - act_mb), max(3.0, act_mb * 0.15),
+                        f'体积表 {mb} MB 与实际 {act_mb:.1f} MB 偏差过大')
+
     def test_readme_has_badges(self):
         text = README.read_text(encoding="utf-8")
         self.assertIn("img.shields.io", text)
