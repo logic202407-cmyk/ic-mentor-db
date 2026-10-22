@@ -80,6 +80,8 @@ def main() -> int:
 
     if not args.skip_ui:
         check("界面运行时冒烟", [PY, "-m", "workbench.tools.ui_smoke"], timeout=300)
+        check("录制前就绪（演示资料/语义检索缓存/深链）",
+              [PY, "-m", "workbench.tools.recording_readiness"], timeout=600)
 
     passed = sum(1 for c in checks if c["通过"])
     lines = ["=" * 60, f"上传前验收：{passed}/{len(checks)} 项通过", "=" * 60]
