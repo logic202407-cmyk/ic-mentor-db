@@ -10,6 +10,7 @@ Usage:
 
 from __future__ import annotations
 
+import hashlib
 import html
 import pathlib
 import sys
@@ -76,11 +77,17 @@ def main() -> int:
         text,
         extensions=["tables", "fenced_code", "sane_lists", "attr_list"],
     )
+    digest = hashlib.sha256(text.encode("utf-8")).hexdigest()
     rendered = TEMPLATE.format(
         title=html.escape(src.stem),
         css=CSS,
         body=body,
     )
+    # 把源 Markdown 的哈希嵌进 HTML 头部：主交付物是 PDF，而 PDF 由 HTML 渲染而来，
+    # 一旦改了 md 却忘了重新生成，PDF 就会静默落后（本项目真实发生过一次：md 已写
+    # 38/38，PDF 还停留在 35/3）。有了这个标记，`check_report_sync.py` 能直接判出来。
+    marker = f"<!-- source-sha256: {digest} -->\n"
+    rendered = rendered.replace("<head>", "<head>\n" + marker, 1)
     dst.write_text(rendered, encoding="utf-8")
     print(f"wrote {dst}  ({len(rendered):,} bytes)")
     return 0
