@@ -71,6 +71,9 @@ def main() -> int:
                       "workbench/tests/test_research_ui.cjs"])
     check("公开前审计", ["node", "tools/audit_prepublish.mjs"])
     check("文档数字一致性", ["node", "tools/check_doc_numbers.mjs"])
+    # README 徽章是评审第一眼看到的东西，却只是写死的字符串，没人会去更新。
+    # 实测曾写着「321 项测试 / 14,271 条记录」，而实际是 707 / 15,719。
+    check("README 徽章数字", [PY, "-m", "workbench.tools.check_readme_badges"])
     # 编码体检：批处理/依赖清单被 cmd.exe、pip 用区域编码读取，
     # 这些文件若含中文或 BOM，别人装环境时会直接失败。
     check("编码体检（被工具读取的文件）", [PY, "-m", "workbench.tools.encoding_audit"])
