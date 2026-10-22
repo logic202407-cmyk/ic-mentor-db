@@ -53,6 +53,12 @@ def build_facts() -> dict:
                        "institutions": len(counts), "share": round(top / total, 4)})
     shares.sort(key=lambda r: -r["share"])
 
+    # 方向待补：新增来源普遍不写研究方向，每加一条记录都会让这个数变大，
+    # 所以报告里引用它必须带日期，不能当成固定上限。
+    from workbench.infer_directions import PENDING, label_of
+
+    dir_pending = sum(1 for p in pairs if label_of(p) in ("", PENDING))
+
     sources = discover_sources()
     fixtures = [p for p in FIXTURES.glob("*.html")]
 
@@ -74,7 +80,52 @@ def build_facts() -> dict:
             "worst": shares[:5],
             "best": shares[-3:],
         },
+        "dir_pending": dir_pending,
+        "dir_labelled": len(pairs) - dir_pending,
+        "ai": _ai_numbers(),
     }
+
+
+def _ai_numbers() -> dict:
+    """读两次 AI 实验的产物；未跑过就返回空，不猜。"""
+    out: dict = {}
+    val = Path(".workbench-data/direction-inference/validation.json")
+    sug = Path(".workbench-data/direction-inference/suggestions.json")
+    ev = Path(".workbench-data/name-disambiguation/evaluation.json")
+    try:
+        v = json.loads(val.read_text(encoding="utf-8"))
+        out["direction_validation"] = {
+            "sampled": v.get("sampled"),
+            "embedding_top1": v.get("embedding", {}).get("top1"),
+            "keyword_top1": v.get("keyword", {}).get("top1"),
+            "hybrid_top1": v.get("hybrid", {}).get("top1"),
+            "strata": v.get("strata"),
+        }
+    except (OSError, ValueError):
+        pass
+    try:
+        s = json.loads(sug.read_text(encoding="utf-8"))
+        out["direction_apply"] = {
+            "pending": s.get("pending"),
+            "with_text": s.get("with_text"),
+            "would_apply": s.get("would_apply"),
+            "min_score": s.get("min_score"),
+        }
+    except (OSError, ValueError):
+        pass
+    try:
+        e = json.loads(ev.read_text(encoding="utf-8"))
+        out["name_disambiguation"] = {
+            "pairs": e.get("pairs"),
+            "positives": e.get("positives"),
+            "negatives": e.get("negatives"),
+            "auc_institution": e.get("auc", {}).get("institution_only"),
+            "auc_embedding": e.get("auc", {}).get("embedding_only"),
+            "baseline_f1": e.get("baseline_institution", {}).get("f1"),
+        }
+    except (OSError, ValueError):
+        pass
+    return out
 
 
 def as_markdown(facts: dict) -> str:
@@ -84,7 +135,7 @@ def as_markdown(facts: dict) -> str:
         "|:--|--:|:--|",
         f"| 全库记录 | **{facts['records_total']:,}** | `catalog.static_catalog()` |",
         f"| 公开来源记录 | **{facts['records_public']:,}** | `catalog.coverage()` |",
-        f"| 公开来源机构 | **{facts['institutions_public']}** | `coverage()["public_institutions"]` |",
+        f"| 公开来源机构 | **{facts['institutions_public']}** | `coverage()['public_institutions']` |",
         f"| 一级学科 | **{facts['disciplines_total']}** | `catalog.disciplines()` |",
         f"| 其中工学 | **{facts['disciplines_engineering']}** | 同上，`engineering` |",
         f"| 工学学科—导师条目 | **{facts['engineering_records']:,}** | 工学学科的 `count` 之和 |",
@@ -92,6 +143,8 @@ def as_markdown(facts: dict) -> str:
         f"| 来源 key | **{facts['source_keys']}** | `discover_sources()` 条目数 |",
         f"| 离线快照 | **{facts['fixtures']}** | `tests/fixtures/*.html` |",
         f"| 分布达标学科 | **{d['passing']}** / 未达标 **{d['failing']}** | 最大单一机构占比 < {d['threshold']:.0%} |",
+        f"| 方向待补 | **{facts['dir_pending']:,}** | 新增来源不写方向，故随收录量增长 |",
+        f"| 有研究方向 | **{facts['dir_labelled']:,}** | `len(static_catalog()) - 方向待补` |",
         "",
         "**分布最偏的 5 个学科**（对外引用时建议连同机构数一起说）：",
         "",
