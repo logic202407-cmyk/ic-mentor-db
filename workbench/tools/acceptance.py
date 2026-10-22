@@ -77,6 +77,9 @@ def main() -> int:
     # 赛题要求技术报告 PDF 正文 ≤15 页、≤10 MB。页数会随着往报告里加内容而悄悄超限
     # （本项目真实发生过：加了两章 AI 实证后从 15 页涨到 18 页），必须有一道显式检查。
     check("报告页数与大小", [PY, "-m", "workbench.tools.check_pdf_limits"])
+    # 版式体检：逐页竖向填充度，抓"整块内容被推到下页"造成的半页空白。
+    # 报告卡在 15 页上限，白吃页数的排版浪费必须有工具兜住。
+    check("报告版式体检", [PY, "-m", "workbench.tools.pdf_layout_check"])
 
     if not args.skip_ui:
         check("界面运行时冒烟", [PY, "-m", "workbench.tools.ui_smoke"], timeout=300)
