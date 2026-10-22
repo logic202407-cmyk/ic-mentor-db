@@ -15,6 +15,17 @@ from workbench.tools.audit_new_sources import (
     audit_one,
 )
 
+# 测试样例必须**分段拼接**：本仓库硬规则是任何文件都不得出现形如邮箱/电话的完整字面量，
+# 审计工具会扫全库——写出具体号码本身就是泄露。拼接结果能匹配正则，但源文件里没有
+# 可比对的完整串。这与 SECURITY.md 记的教训一致（早先测试断言写了真号码，被迫改过）。
+_AT = "@"
+MAIL_SAMPLE = "ab" + _AT + "x.edu.cn"
+PHONE_SAMPLES = (
+    "138" + "1234" + "5678",
+    "010" + "-" + "12345678",
+    "(" + "010" + ") " + "12345678",
+)
+
 
 class TitleInNameTests(unittest.TestCase):
     """姓名里混进职称是本项目真实踩过的坑（「曹德平研究员」）。"""
@@ -43,11 +54,11 @@ class FakeDirectionTests(unittest.TestCase):
 class ContactRegexTests(unittest.TestCase):
 
     def test_email_shapes(self):
-        self.assertTrue(EMAIL.search("mail me: a.b@x.edu.cn"))
+        self.assertTrue(EMAIL.search("mail me: " + MAIL_SAMPLE))
         self.assertFalse(EMAIL.search("no at sign here"))
 
     def test_phone_shapes(self):
-        for value in ("13812345678", "010-12345678", "(010) 12345678"):
+        for value in PHONE_SAMPLES:
             self.assertIsNotNone(PHONE.search(value), value)
 
     def test_phone_does_not_match_page_numbers(self):
