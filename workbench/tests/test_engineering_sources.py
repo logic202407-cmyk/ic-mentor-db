@@ -2850,5 +2850,65 @@ class PkuMechanicsSourceTests(unittest.TestCase):
                 html,
                 r"(?<![0-9A-Za-z.\/-])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z-])")
 
+class TjAeroMechanicsSourceTests(unittest.TestCase):
+    """0801 力学 — 同济大学 航空航天与力学学院 教师名录（按拼音）."""
+
+    @classmethod
+    def setUpClass(cls):
+        from workbench.sources.tj_aero_mechanics import SPECS as TJAM_SPECS
+        from workbench.sources.tj_aero_mechanics import parse as parse_tjam
+        cls.specs = TJAM_SPECS
+        cls.rows = []
+        for spec in TJAM_SPECS:
+            p = FIXTURES / f"{spec['key']}.html"
+            if p.is_file():
+                cls.rows += parse_tjam(p.read_text(encoding="utf-8"), spec["listing"], spec)
+
+    def test_single_spec_targets_the_mechanics_discipline(self):
+        self.assertEqual(len(self.specs), 1)
+        spec = self.specs[0]
+        self.assertEqual(spec["code"], "0801")
+        self.assertEqual(spec["discipline"], "力学")
+        self.assertEqual(spec["institution"], "同济大学")
+        self.assertIn("航空航天与力学学院", spec["department"])
+
+    def test_exactly_the_person_container(self):
+        # div.box 里还有 9 条导航（学院概况/院长致辞/…），限定 div.nycon 才是 73 人。
+        self.assertEqual(len(self.rows), 73)
+        self.assertEqual(len({r["name"] for r in self.rows}), 73)
+
+    def test_navigation_titles_are_not_people(self):
+        for row in self.rows:
+            self.assertRegex(row["name"], r"^[\u4e00-\u9fff·]{2,8}$")
+            for word in ("学院", "致辞", "领导", "机构", "系所", "专业", "科研", "成果", "师资"):
+                self.assertNotIn(word, row["name"])
+
+    def test_every_row_links_a_detail_page(self):
+        import re
+        pat = re.compile(r"c\d+a\d+/page\.htm")
+        for row in self.rows:
+            self.assertRegex(row["homepage"], pat)
+
+    def test_direction_is_never_invented(self):
+        for row in self.rows:
+            self.assertEqual(row["assignment"]["direction"], "方向待补")
+
+    def test_no_contact_information_is_stored(self):
+        blob = json.dumps(self.rows, ensure_ascii=False)
+        self.assertNotIn("@", blob)
+        self.assertNotRegex(blob,
+                            r"(?<![0-9A-Za-z])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z])")
+
+    def test_fixture_is_redacted(self):
+        for spec in self.specs:
+            p = FIXTURES / f"{spec['key']}.html"
+            if not p.is_file():
+                continue
+            html = p.read_text(encoding="utf-8")
+            self.assertNotRegex(html, r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
+            self.assertNotRegex(
+                html,
+                r"(?<![0-9A-Za-z.\/-])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8})(?![0-9A-Za-z-])")
+
 if __name__ == "__main__":
     unittest.main()
