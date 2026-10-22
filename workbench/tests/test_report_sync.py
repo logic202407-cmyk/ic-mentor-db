@@ -70,5 +70,30 @@ class RealRepoTests(unittest.TestCase):
         self.assertEqual(pdf.read_bytes()[:5], b"%PDF-")
 
 
+class PdfLimitTests(unittest.TestCase):
+    """赛题要求技术报告 PDF 正文 ≤15 页、≤10 MB——硬限制，超了可能直接不合格。
+
+    本项目真实踩过：补齐两章 AI 实证后页数从 15 涨到 18，而当时所有文档还写着"14 页"。
+    加内容时没人会去数页数，所以把限制写成测试。
+    """
+
+    PDF = ROOT / "workbench/aic-submission/技术报告.pdf"
+
+    def test_pdf_within_page_limit(self):
+        from workbench.tools.check_pdf_limits import count_pages
+
+        pages = count_pages(self.PDF)
+        self.assertLessEqual(pages, 15, f"页数 {pages} 超过 15 页上限，需精简内容或收紧排版")
+
+    def test_pdf_within_size_limit(self):
+        size_mb = self.PDF.stat().st_size / 1024 / 1024
+        self.assertLessEqual(size_mb, 10.0, f"大小 {size_mb:.2f} MB 超过 10 MB 上限")
+
+    def test_pdf_has_content(self):
+        from workbench.tools.check_pdf_limits import count_pages
+
+        self.assertGreaterEqual(count_pages(self.PDF), 8, "页数过少，疑似生成失败")
+
+
 if __name__ == "__main__":
     unittest.main()

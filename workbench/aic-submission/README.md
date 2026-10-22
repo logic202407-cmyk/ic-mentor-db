@@ -2,7 +2,7 @@
 
 本目录存放参赛提交材料。**技术报告、演示视频、答辩 PPT 及所有评审材料中不得出现学校名称、学校 LOGO、指导教师信息、队名与成员姓名。**
 
-核对日期：2026-10-15　｜　提交截止：2026-10-30 20:00（以平台即时说明为准）
+核对日期：2026-10-23　｜　提交截止：2026-10-30 20:00（以平台即时说明为准）
 
 ---
 
@@ -12,12 +12,43 @@
 |:--|:--|:--|:--|:--|
 | 1 | 作品名称 | 见下方「作品名称与简介」 | ≤20 字 | ✅ 已定稿 |
 | 2 | 作品简介 | 见下方「作品名称与简介」 | ≤300 字 | ✅ 已定稿（283 字） |
-| 3 | 技术报告 | `技术报告.pdf`（源文件 `技术报告.md`） | PDF，正文 ≤15 页，≤10 MB | ✅ 14 页 / 0.9 MB |
-| 4 | 演示视频 | 待录制，脚本见 `演示视频脚本.md` | MP4，3–5 分钟，≤300 MB | ⬜ **待用户录制** |
+| 3 | 技术报告 | `技术报告.pdf`（源文件 `技术报告.md`） | PDF，正文 ≤15 页，≤10 MB | ✅ **15 页 / 1.09 MB** |
+| 4 | 演示视频 | 待录制，脚本见 `演示视频脚本.md`，录制地址见 `录制URL清单.md` | MP4，3–5 分钟，≤300 MB | ⬜ **待用户录制** |
 | 5 | 开源及第三方资源使用清单 | `开源及第三方资源使用清单.md`（作为技术报告附录一，已含在 PDF 中） | 资源名称/版本/许可/使用方式/义务/自研边界/合规状态 | ✅ 已定稿（30 项） |
 | 6 | 答辩 PPT | 待制作 | 晋级总决赛后提交，PDF | ⬜ 未开始（初赛不需要） |
 | 7 | 佐证材料（可选） | 见第四节建议 | 测试记录、截图、仓库提交记录 | ⬜ 待补 |
 | 8 | 成果链接 | 见下方「成果链接」 | 评审期内持续有效 | ✅ 已公开并匿名核验可访问 |
+
+---
+
+## 一之二、上传前自检（一条命令）
+
+```powershell
+.venv\Scripts\python.exe -m workbench.tools.acceptance
+```
+
+它会依次跑完八道关卡并给出通过/失败清单：Python 测试、前端测试、公开前审计、
+文档数字一致性、报告三件产物同步、来源红线、机构分布审计、**报告页数与大小**、
+界面运行时冒烟（需先启动服务）。
+
+**为什么要有这条命令**：这些检查原先分散在七个地方，靠临时脚本逐个跑，
+本项目真实漏跑过两次——报告数字过期（写着"10,441 条"而实际已过万）、
+主交付物 PDF 落后于 Markdown（md 已写 38/38，PDF 还是 35/3）。
+**合成一条命令的价值不在省事，而在不会有遗漏。**
+
+单独跑某一道：
+
+```powershell
+.venv\Scripts\python.exe -m unittest discover -s workbench/tests   # Python 测试
+node --test workbench/tests/test_ui_races.cjs workbench/tests/test_research_ui.cjs  # 前端测试
+node tools/audit_prepublish.mjs                                      # 公开前审计
+node tools/check_doc_numbers.mjs                                     # 文档数字一致
+.venv\Scripts\python.exe -m workbench.tools.check_report_sync       # 报告三件产物同步
+.venv\Scripts\python.exe -m workbench.tools.check_pdf_limits        # 页数与大小限制
+.venv\Scripts\python.exe -m workbench.tools.audit_new_sources       # 来源红线
+.venv\Scripts\python.exe -m workbench.tools.distribution_audit      # 机构分布
+.venv\Scripts\python.exe -m workbench.tools.ui_smoke                # 界面运行时冒烟
+```
 
 ---
 
@@ -91,7 +122,7 @@
 
 **材料规范**
 
-- [ ] 技术报告为 PDF、正文 ≤15 页、大小 ≤10 MB（当前 14 页 / 0.9 MB）
+- [ ] 技术报告为 PDF、正文 ≤15 页、大小 ≤10 MB（当前 **15 页 / 1.09 MB**）
 - [ ] 演示视频为 MP4、3–5 分钟、≤300 MB
 - [ ] 作品名称 ≤20 字；作品简介 ≤300 字
 - [ ] 《开源及第三方资源使用清单》作为附录随技术报告提交
