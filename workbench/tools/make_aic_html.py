@@ -42,8 +42,8 @@ blockquote { margin: 2.5mm 0; padding: 2.2mm 3.5mm; border-left: 3.5px solid #9f
 blockquote p { margin: 0 0 1.4mm; }
 blockquote p:last-child { margin-bottom: 0; }
 code { font-family: Consolas, "Cascadia Mono", monospace; font-size: 8.9pt; background: #f0f2f5; padding: 0.3mm 1mm; border-radius: 2px; }
-pre { background: #f7f8fa; border: 0.7px solid #d5dbe2; border-radius: 3px; padding: 2.5mm 3mm; overflow-wrap: break-word; white-space: pre-wrap; page-break-inside: avoid; }
-pre code { background: none; padding: 0; font-size: 8.5pt; line-height: 1.42; }
+pre { background: #f7f8fa; border: 0.7px solid #d5dbe2; border-radius: 3px; padding: 1.8mm 2.4mm; overflow-wrap: break-word; white-space: pre-wrap; page-break-inside: avoid; }
+pre code { background: none; padding: 0; font-size: 7.6pt; line-height: 1.30; }
 hr { border: none; border-top: 0.7px solid #ccd4dc; margin: 5mm 0; }
 strong { color: #10314d; }
 a { color: #1f4e79; text-decoration: none; word-break: break-all; }

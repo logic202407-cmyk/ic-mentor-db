@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<!-- source-sha256: b1170ae9eb285b9b38672986f8ee4eae3e875108a35c47a06473c4e42d228c9a -->
+<!-- source-sha256: aaeeced26299beb38ac32fa749e755295c7e16a4b05b21194afe341fa148c6ff -->
 
 <meta charset="utf-8">
 <title>技术报告</title>
@@ -30,8 +30,8 @@ blockquote { margin: 2.5mm 0; padding: 2.2mm 3.5mm; border-left: 3.5px solid #9f
 blockquote p { margin: 0 0 1.4mm; }
 blockquote p:last-child { margin-bottom: 0; }
 code { font-family: Consolas, "Cascadia Mono", monospace; font-size: 8.9pt; background: #f0f2f5; padding: 0.3mm 1mm; border-radius: 2px; }
-pre { background: #f7f8fa; border: 0.7px solid #d5dbe2; border-radius: 3px; padding: 2.5mm 3mm; overflow-wrap: break-word; white-space: pre-wrap; page-break-inside: avoid; }
-pre code { background: none; padding: 0; font-size: 8.5pt; line-height: 1.42; }
+pre { background: #f7f8fa; border: 0.7px solid #d5dbe2; border-radius: 3px; padding: 1.8mm 2.4mm; overflow-wrap: break-word; white-space: pre-wrap; page-break-inside: avoid; }
+pre code { background: none; padding: 0; font-size: 7.6pt; line-height: 1.30; }
 hr { border: none; border-top: 0.7px solid #ccd4dc; margin: 5mm 0; }
 strong { color: #10314d; }
 a { color: #1f4e79; text-decoration: none; word-break: break-all; }
@@ -68,7 +68,7 @@ h2, h3 { break-after: avoid-page; }
 <p><strong>亮点三：以“证据边界”为设计核心，而不是以“自动下结论”为目标。</strong> 系统内所有内容都区分三种状态——有公开来源支持的事实、来自第三方转载的线索、以及“未知”。师承关系除非有明确公开表述，否则保留空白，绝不从共同署名推断。这一取舍牺牲了“看起来信息更全”的观感，换来的是每一条信息都能追溯到具体来源。</p>
 <p><strong>亮点四：用开源中文向量模型解决“兴趣描述与学科术语不匹配”的检索难点。</strong> 学生描述研究兴趣时用的往往不是学科术语。实测中，查询“我想做中文问答和知识组织”能正确召回研究方向为“自然语言处理”的导师，而按双字重合度的关键词基线做不到——这是开源嵌入模型在本场景中不可替代的作用。</p>
 <p><strong>亮点五：把“人工核查”做成产品机制而非免责声明。</strong> 每条来源默认状态为“待人工核查”，用户可逐项标记；系统根据八项核查状态生成后续待办清单，但<strong>新增来源不会自动把核查标记为已完成</strong>。参考分也不改变任何人工核查状态。调查记录可导出为 Markdown，包含来源类别与身份核对链接，便于学生交给老师或同学复核。</p>
-<p><strong>亮点六：完整开源且可复现。</strong> 代码以 MIT 许可开放；数据整理脚本不含硬编码路径，可克隆到任意目录运行；自带 651 项 Python 测试与 11 项前端异步测试，全部通过。</p>
+<p><strong>亮点六：完整开源且可复现。</strong> 代码以 MIT 许可开放；数据整理脚本不含硬编码路径，可克隆到任意目录运行；自带 673 项 Python 测试与 11 项前端异步测试，全部通过。</p>
 <hr />
 <h2>二、需求分析与总体方案</h2>
 <h3>1. 需求分析</h3>
@@ -108,6 +108,8 @@ h2, h3 { break-after: avoid-page; }
 <p><strong>需求来源说明。</strong> 本作品的需求判断来自团队自身在保研/考研信息搜集中的实际经历，以及对公开渠道信息形态的分析。<strong>我们尚未开展独立的用户调研或访谈</strong>，因此本报告不对“提高效率”“改善决策”作任何量化声称——这一点在第五章“验证结果”中如实说明。</p>
 <h3>2. 总体方案</h3>
 <p>系统采用“本地服务 + 浏览器界面 + 本机数据”的三层结构，全部在本机运行。</p>
+<p><strong>输入输出。</strong> 输入为：① 已入库的公开师资名录与成果记录；② 用户导入的 CSV/JSON 资料；③ 用户手工添加的导师与论文；④ 可选的 OpenAlex/Crossref 联网查询。输出为：① 浏览器中的导师档案；② 逐人 Markdown 调查记录；③ 项目 JSON 导出。</p>
+<p><strong>主要运行流程。</strong> 用户进入主页 → 选择路径（按姓名 / 按学科）→ 系统列出候选并<strong>分别保留同名者</strong> → 用户选定身份 → 系统展示该身份已保存的公开来源、论文与论著、师承表述、招生记录 → 用户逐项核查并登记状态 → 导出 Markdown。</p>
 <pre><code>┌─────────────────────────────────────────────────────────────┐
 │  浏览器界面（workbench/web/）                                 │
 │  index.html 主页       desk.html 调查工作台                    │
@@ -135,8 +137,6 @@ h2, h3 { break-after: avoid-page; }
 │  本地模型：.workbench-data/models/（bge-small-zh ONNX）        │
 └─────────────────────────────────────────────────────────────┘
 </code></pre>
-<p><strong>输入输出。</strong> 输入为：① 已入库的公开师资名录与成果记录；② 用户导入的 CSV/JSON 资料；③ 用户手工添加的导师与论文；④ 可选的 OpenAlex/Crossref 联网查询。输出为：① 浏览器中的导师档案；② 逐人 Markdown 调查记录；③ 项目 JSON 导出。</p>
-<p><strong>主要运行流程。</strong> 用户进入主页 → 选择路径（按姓名 / 按学科）→ 系统列出候选并<strong>分别保留同名者</strong> → 用户选定身份 → 系统展示该身份已保存的公开来源、论文与论著、师承表述、招生记录 → 用户逐项核查并登记状态 → 导出 Markdown。</p>
 <h3>3. 可行性与成本</h3>
 <p><strong>算力</strong>：不需要 GPU。语义检索用的 ONNX 模型约 95 MB，在普通笔记本 CPU 上完成 10 条资料的向量计算约 4 秒，之后命中本地向量缓存则低于 0.1 秒。</p>
 <p><strong>软件</strong>：全部为开源组件（详见第三章与附录）。Python 3.10–3.12、Node.js 18+（仅测试用）。</p>
@@ -483,7 +483,7 @@ URL 必然是不同人。<code>homepage</code> <strong>只用作标签，绝不�
 <p><strong>（2）前端异步竞态防护。</strong> 用户在快速切换学科、高校、方向、导师时，先发出的请求可能后返回，从而覆盖当前选择——这是同类工具常见且难察觉的缺陷。实现上为每类请求保留版本序号，回包时只有序号仍为最新才允许渲染。该行为由 11 项前端测试专门覆盖（如“旧学科响应不能覆盖较新的选择”“切到新导师后旧资料请求不得刷新新档案”）。</p>
 <p><strong>（3）来源状态与“不自动完成核查”。</strong> 每条来源携带 <code>status</code> 字段，默认“待人工核查”。整理任务（身份来源、论文候选、关系证据、既有档案四项离线运行）完成后<strong>不会</strong>修改任何来源的状态。这一约束写在模块文档字符串里并有测试保护，防止后续迭代为了“体验流畅”而让系统自动认证来源。</p>
 <p><strong>（4）公开页面提取的约束。</strong> <code>public_research.py</code> 只读取已在代码中登记的院系名录与个人主页；手动录入的任意网址<strong>不进入自动抓取</strong>，避免把工具变成任意 URL 抓取器。页面读取失败时不清空既有成功结果与用户笔记。只保存提取出的简短事实与书目，不重新发布网页全文。</p>
-<p><strong>（5）测试策略。</strong> 651 项 Python 测试覆盖个人页解析、身份来源约束、年度招生记录匹配、失败更新保留资料、重复导入去重等；11 项前端测试用 Node 内置测试器在无浏览器环境下验证异步竞态。测试不替代浏览器交互验收，这一点在文档中明确写出。</p>
+<p><strong>（5）测试策略。</strong> 673 项 Python 测试覆盖个人页解析、身份来源约束、年度招生记录匹配、失败更新保留资料、重复导入去重等；11 项前端测试用 Node 内置测试器在无浏览器环境下验证异步竞态。测试不替代浏览器交互验收，这一点在文档中明确写出。</p>
 <h3>3. 团队分工与过程记录</h3>
 <blockquote>
 <p><strong>本节需团队补充</strong>：请按实际情况填写成员角色（如：需求与资料整理、后端与数据管道、前端与测试）、时间计划与版本迭代节点。</p>
@@ -556,7 +556,7 @@ URL 必然是不同人。<code>homepage</code> <strong>只用作标签，绝不�
 <tr>
 <td style="text-align: left;">Python 行为测试</td>
 <td style="text-align: left;"><code>python -m unittest discover -s workbench/tests</code></td>
-<td style="text-align: left;"><strong>651 项通过</strong>（约 21 秒）</td>
+<td style="text-align: left;"><strong>673 项通过</strong>（约 30 秒）</td>
 </tr>
 <tr>
 <td style="text-align: left;">前端异步测试</td>
