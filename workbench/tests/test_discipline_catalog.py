@@ -195,7 +195,10 @@ class DisciplineCatalogTests(unittest.TestCase):
         profiles=catalog.static_catalog()[0]
         for institution in ('中国石油大学（北京）','中国人民公安大学','国防科技大学'):
             p=next(p for p in profiles if p['institution']==institution)
-            with tempfile.TemporaryDirectory() as temp,patch.object(core,'DATA_DIR',Path(temp)):
+            # 这里验证的是"没有逐人档案时从目录合成"的路径，故关闭打包兜底；
+            # 打包兜底（clone 场景）另由 test_research_bundle 覆盖。
+            with tempfile.TemporaryDirectory() as temp,patch.object(core,'DATA_DIR',Path(temp)), \
+                    patch.object(public_research,'USE_BUNDLE',False):
                 data=public_research.load(p['id'])
             self.assertEqual(data['catalog_kind'],'faculty_directory')
             self.assertFalse(data['recruitment'])

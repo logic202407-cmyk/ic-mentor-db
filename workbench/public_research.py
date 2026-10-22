@@ -6,6 +6,7 @@ External pages require a maintained identity bridge; user-entered URLs are exclu
 from __future__ import annotations
 import argparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
+import gzip
 import hashlib
 import ipaddress
 import json
@@ -79,6 +80,42 @@ def path_for(mentor_id):
     return core.DATA_DIR / 'public-research' / (hashlib.sha256(mentor_id.encode()).hexdigest()+'.json')
 
 
+BUNDLE_PATH = Path(__file__).parent / 'reference' / 'research' / 'dossiers.json.gz'
+# 打包兜底开关：默认开启，保证 clone 后仍能看到论文与招生记录。
+# 测试要验证「没有逐人档案时如何从目录合成」这条路径时把它置 False。
+USE_BUNDLE = True
+_bundle_cache = None
+_bundle_loaded = False
+
+
+def _bundle():
+    """仓库内的档案打包（gzip JSONL）。只在需要时读一次。"""
+    global _bundle_cache, _bundle_loaded
+    if _bundle_loaded:
+        return _bundle_cache
+    _bundle_loaded = True
+    table = {}
+    try:
+        with gzip.open(BUNDLE_PATH, 'rt', encoding='utf-8') as fh:
+            for line in fh:
+                line = line.strip()
+                if not line:
+                    continue
+                item = json.loads(line)
+                mid = item.get('id')
+                if mid:
+                    table[mid] = item
+    except (OSError, ValueError):
+        table = {}
+    _bundle_cache = table
+    return table
+
+
+def bundle_size():
+    """仓库打包里有多少份档案（诊断用）。"""
+    return len(_bundle())
+
+
 def load(mentor_id):
     data=None
     try:
@@ -86,6 +123,16 @@ def load(mentor_id):
         if data.get('version') != VERSION:data=None
     except (OSError, ValueError):
         pass
+    if data is None and USE_BUNDLE:
+        # 本机没有逐人档案（例如刚 clone 的仓库）时，从仓库打包里取。
+        # USE_BUNDLE 可关闭：有测试要验证"没有档案时如何从目录合成"，若打包一直兜底，
+        # 那条路径就永远走不到，保证会被悄悄绕过。
+        # 打包里存的是精简后的关键字段，与逐人文件同构，足以支撑界面展示。
+        bundled = _bundle().get(mentor_id)
+        if bundled:
+            data = dict(bundled)
+            data.setdefault('version', VERSION)
+            data['bundled'] = True
     return with_catalog_records(mentor_id, data)
 
 
