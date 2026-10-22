@@ -1,6 +1,22 @@
+# Runtime dependencies for `python -m uvicorn workbench.app:app`.
+#
+# IMPORTANT: keep this file ASCII-only. pip reads it using the locale encoding
+# (cp936/GBK on a Chinese Windows), so non-ASCII comments make
+# `pip install -r requirements.txt` fail with UnicodeDecodeError.
 fastapi==0.118.0
 fastembed==0.9.0
 uvicorn==0.37.0
 requests==2.34.2
 beautifulsoup4==4.14.3
+# numpy / urllib3 are imported directly (search.py, infer_directions.py,
+# disambiguate_names.py, collect_engineering_scale.py). They arrive transitively
+# today, but relying on that is fragile: if an upstream package stops pulling
+# them in, the server fails to start.
+numpy==2.5.4
+urllib3==2.8.0
 
+# Optional / development only (the workbench runs without them):
+#   markdown                    -> workbench/tools/make_aic_html.py (system Python)
+#   pypdf, pypdfium2, pillow     -> report page-count / layout tools
+#   pdfplumber                  -> lazy import inside collect_caas_catalog.main()
+# Install with: py -3.12 -m pip install markdown pypdf pypdfium2 pillow pdfplumber
