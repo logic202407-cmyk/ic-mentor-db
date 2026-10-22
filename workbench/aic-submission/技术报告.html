@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<!-- source-sha256: 935c1d260536c06fab297153cb1055d50d7b9724944d6991d0c36adffbac8571 -->
+<!-- source-sha256: b1170ae9eb285b9b38672986f8ee4eae3e875108a35c47a06473c4e42d228c9a -->
 
 <meta charset="utf-8">
 <title>技术报告</title>
@@ -389,7 +389,7 @@ URL 必然是不同人。<code>homepage</code> <strong>只用作标签，绝不�
 <h3>3. 自主开发与权利边界</h3>
 <p><strong>团队自主完成的部分：</strong></p>
 <ul>
-<li>全部 <code>workbench/</code> 目录下的程序代码（29 个顶层 Python 模块、7 个 Python 测试文件、2 个前端测试脚本、前端页面与资源），共 100 余个文件；</li>
+<li>全部 <code>workbench/</code> 目录下的程序代码：<strong>137 个 Python 文件</strong>（38 个顶层模块、54 个来源模块、13 个工具、32 个测试文件）+ 2 个前端测试脚本 + 前端页面与资源，共 <strong>141 个代码文件</strong>；另有 <strong>201 份离线快照</strong>（<code>workbench/tests/fixtures/</code>，入库前已脱敏）；</li>
 <li>数据整理与核对流程：把公开师资页、招生目录、成果书目整理为结构化记录的脚本与人工核对记录；</li>
 <li>检索评估脚本与预置查询集（<code>workbench/evaluate_pilot.py</code>）；</li>
 <li>全部文档：使用说明、复现命令，以及 <code>workbench/reference/</code> 下按批次归档的来源与核对记录。</li>
@@ -798,7 +798,7 @@ URL 必然是不同人。<code>homepage</code> <strong>只用作标签，绝不�
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">工作台程序代码（<code>workbench/</code>，29 个顶层 Python 模块 + 前端 + 测试）</td>
+<td style="text-align: left;">工作台程序代码（<code>workbench/</code>，137 个 Python 文件 + 前端 + 测试）</td>
 <td style="text-align: left;">代码仓库</td>
 <td style="text-align: left;">MIT</td>
 </tr>
@@ -992,7 +992,7 @@ node tools\audit_prepublish.mjs
 <tbody>
 <tr>
 <td style="text-align: left;">Python 测试套件</td>
-<td style="text-align: left;"><code>workbench/tests/</code>（7 个 Python 测试文件）</td>
+<td style="text-align: left;"><code>workbench/tests/</code>（32 个 Python 测试文件）</td>
 </tr>
 <tr>
 <td style="text-align: left;">前端异步测试</td>
