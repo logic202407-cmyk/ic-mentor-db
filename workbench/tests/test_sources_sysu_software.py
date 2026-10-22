@@ -15,7 +15,9 @@ from workbench.sources.sysu_software import SPECS, parse, scan
 
 FIXTURES = pathlib.Path(__file__).parent / "fixtures"
 MARK = "联系方式已隐去"
-# 手机号、带区号座机（含「(0571) 87951234」「010-12345678」两种写法）。
+# 手机号与带区号座机（含括号区号 + 空格、以及连字符两种写法）都要覆盖。
+# 注意：注释里**不写具体号码**——仓库硬规则是任何文件都不得出现形如电话的字面量，
+# 公开前审计会扫全库，写出具体号码本身就是泄露。这里只描述形态。
 PHONE_RE = re.compile(
     r"(?<![0-9A-Za-z])(?:1[3-9]\d{9}|\(\d{2,4}\)\s?\d{7,8}|0\d{2,3}[-\s]?\d{7,8})"
     r"(?![0-9A-Za-z])"
