@@ -70,7 +70,7 @@ class AuditOneTests(unittest.TestCase):
     """audit_one 要能对缺失快照与解析异常给出可读问题，而不是崩溃。"""
 
     def test_missing_fixture_is_reported(self):
-        problems, rows = audit_one("definitely_not_a_real_key_xyz", {"listing": "x"}, lambda *a: [])
+        problems, rows, fallback = audit_one("definitely_not_a_real_key_xyz", {"listing": "x"}, lambda *a: [])
         self.assertEqual(rows, 0)
         self.assertTrue(any("缺少离线快照" in p for p in problems))
 
@@ -78,7 +78,7 @@ class AuditOneTests(unittest.TestCase):
         def boom(*_args, **_kwargs):
             raise RuntimeError("synthetic failure")
         # 用一个确实存在的快照名，确保走到 parse 分支
-        problems, rows = audit_one("tj_water_lecturer", {"listing": "x"}, boom)
+        problems, rows, fallback = audit_one("tj_water_lecturer", {"listing": "x"}, boom)
         self.assertEqual(rows, 0)
         self.assertTrue(any("parse 抛异常" in p for p in problems))
 
@@ -88,7 +88,7 @@ class AuditOneTests(unittest.TestCase):
         key = "tj_water_lecturer"
         self.assertIn(key, sources)
         spec = sources[key]
-        problems, rows = audit_one(key, spec, spec["parser"])
+        problems, rows, fallback = audit_one(key, spec, spec["parser"])
         self.assertEqual(problems, [], problems)
         self.assertGreater(rows, 0)
 

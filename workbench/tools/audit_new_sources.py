@@ -49,7 +49,7 @@ def audit_one(key: str, spec: dict, parse) -> tuple[list[str], int]:
     problems: list[str] = []
     fixture = FIXTURES / f"{key}.html"
     if not fixture.is_file():
-        return [f"缺少离线快照 {fixture.name}"], 0
+        return [f"缺少离线快照 {fixture.name}"], 0, 0
     raw = fixture.read_text(encoding="utf-8")
 
     hits = EMAIL.findall(raw) + PHONE.findall(raw)
@@ -59,7 +59,7 @@ def audit_one(key: str, spec: dict, parse) -> tuple[list[str], int]:
     try:
         rows = parse(raw, spec.get("listing", ""), spec)
     except Exception as exc:  # noqa: BLE001 - 解析失败要报出来，不能吞
-        return [f"parse 抛异常：{type(exc).__name__}: {exc}"], 0
+        return [f"parse 抛异常：{type(exc).__name__}: {exc}"], 0, 0
 
     for row in rows:
         name = row.get("name") or ""
@@ -74,7 +74,12 @@ def audit_one(key: str, spec: dict, parse) -> tuple[list[str], int]:
         # 来源 URL 记录在 assignment.url（roster_row 的约定），不是顶层 source。
         if not assignment.get("url"):
             problems.append(f"缺少来源 URL：{name!r}")
-    return problems, len(rows)
+
+    roster_fallback = sum(
+        1 for row in rows
+        if (row.get("homepage") or "").rstrip("/") == (spec.get("listing") or "").rstrip("/")
+    )
+    return problems, len(rows), roster_fallback
 
 
 def main() -> int:
@@ -84,15 +89,19 @@ def main() -> int:
     args = ap.parse_args()
 
     sources = discover_sources()
-    total_keys = total_rows = 0
+    total_keys = total_rows = total_fallback = 0
     bad: list[tuple[str, list[str]]] = []
+    fallback_keys: list[tuple[str, int, int]] = []
 
     for key, spec in sources.items():
         if args.key and key != args.key:
             continue
         total_keys += 1
-        problems, rows = audit_one(key, spec, spec["parser"])
+        problems, rows, fallback = audit_one(key, spec, spec["parser"])
         total_rows += rows
+        total_fallback += fallback
+        if fallback:
+            fallback_keys.append((key, fallback, rows))
         if problems:
             bad.append((key, problems))
 
@@ -100,6 +109,18 @@ def main() -> int:
         f"来源红线审计：{total_keys} 个 key / {total_rows} 条记录",
         f"有问题的 key：{len(bad)}",
     ]
+    # 「homepage 回落名录页」不算红线违规（名录页本身可核验），但它是数据质量的弱项，
+    # 必须计数并列出——否则读者会以为每条记录都能点开某个人的专属页面。
+    if total_fallback:
+        pct = 100 * total_fallback / total_rows if total_rows else 0
+        lines.append(
+            f"homepage 回落名录页（该校未公布个人页）：{total_fallback} 条 / "
+            f"{total_rows} 条 = {pct:.1f}%，涉及 {len(fallback_keys)} 个 key"
+        )
+        for key, n, rows in sorted(fallback_keys, key=lambda x: -x[1])[:6]:
+            lines.append(f"    [{key}] {n}/{rows} 条回落到名录页")
+    else:
+        lines.append("homepage 回落名录页：0 条（所有记录都有个人详情页）")
     shown = bad[: args.limit] if args.limit else bad
     for key, problems in shown:
         lines.append(f"  [{key}] {len(problems)} 处")
