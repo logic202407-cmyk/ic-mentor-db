@@ -17,7 +17,7 @@ from .core import (
     load_project, normalize_profile, now, parse_import, safe_url, save_project,
 )
 from .search import MODEL_NAME, search
-from . import ai_hints, catalog, investigation, relations, student_score
+from . import ai_hints, catalog, homepage_kind, investigation, relations, student_score
 from .openalex import OpenAlexUnavailable, author_candidates
 import requests
 
@@ -164,6 +164,10 @@ def catalog_dossier(mentor_id: str):
     # The student-facing reference score and the layered relationship view are
     # attached here so every caller sees the same basis text and caveats.
     key = result.get("network_key") or (result.get("profile") or {}).get("network_key")
+    # 名录页 vs 本人专属页：部分院校只公布名录，homepage 会回落到名录页，
+    # 界面需要据此改标签，否则「导师主页」会误导用户。
+    result["homepage_kind"] = homepage_kind.kind_of(
+        (result.get("profile") or {}).get("homepage") or "")
     result["student_score"] = student_score.compute(key)
     result["relations_analysis"] = relations.analyze(key)
     return result
