@@ -1,8 +1,8 @@
-﻿# Windows 批处理必须是 CRLF，否则 cmd.exe 解析失败。
+# Windows batch files must be CRLF; cmd.exe splits lines wrongly otherwise.
 *.cmd text eol=crlf
 *.bat text eol=crlf
 
-# 快照与数据文件保持原样，不做行尾转换（避免 diff 噪音与哈希漂移）。
+# Keep snapshots and data files byte-identical (no eol conversion, no diff noise).
 workbench/tests/fixtures/*.html -text
-*.json    text eol=lf
-*.py      text eol=lf
+*.json text eol=lf
+*.py text eol=lf
