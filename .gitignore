@@ -61,3 +61,8 @@ data/processed/network.json
 data/processed/cv_extracted.json
 data/processed/cv_lineage.json
 data/processed/cv_network.json
+# 采集期临时探针（子代理/手工调试产物，不应入库）
+/probe*.py
+/.probe*/
+/probe*.json
+/probe*.txt
