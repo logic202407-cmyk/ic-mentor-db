@@ -48,9 +48,12 @@ class RealRepoTests(unittest.TestCase):
     """真实仓库里的三件产物应当同步；不同步时这个测试会红，提示需要重新生成。"""
 
     def test_report_artifacts_are_in_sync(self):
+        # encoding/errors 必须显式指定：被测脚本会输出中文，Windows 默认按 GBK 解码，
+        # 在非中文控制台或含 BOM 的输出上会抛 UnicodeDecodeError（曾真的报过一次）。
         result = subprocess.run(
             [sys.executable, "-m", "workbench.tools.check_report_sync"],
             cwd=str(ROOT), capture_output=True, text=True,
+            encoding="utf-8", errors="replace",
         )
         self.assertEqual(
             result.returncode, 0,
