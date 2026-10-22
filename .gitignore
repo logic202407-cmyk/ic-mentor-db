@@ -66,3 +66,5 @@ data/processed/cv_network.json
 /.probe*/
 /probe*.json
 /probe*.txt
+/_*.html
+/_*.json
