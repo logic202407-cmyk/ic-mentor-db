@@ -71,6 +71,9 @@ def main() -> int:
                       "workbench/tests/test_research_ui.cjs"])
     check("公开前审计", ["node", "tools/audit_prepublish.mjs"])
     check("文档数字一致性", ["node", "tools/check_doc_numbers.mjs"])
+    # 编码体检：批处理/依赖清单被 cmd.exe、pip 用区域编码读取，
+    # 这些文件若含中文或 BOM，别人装环境时会直接失败。
+    check("编码体检（被工具读取的文件）", [PY, "-m", "workbench.tools.encoding_audit"])
     check("报告三件产物同步", [PY, "-m", "workbench.tools.check_report_sync"])
     check("来源红线", [PY, "-m", "workbench.tools.audit_new_sources"])
     check("机构分布审计", [PY, "-m", "workbench.tools.distribution_audit"])
