@@ -80,6 +80,8 @@ def main() -> int:
     # 版式体检：逐页竖向填充度，抓"整块内容被推到下页"造成的半页空白。
     # 报告卡在 15 页上限，白吃页数的排版浪费必须有工具兜住。
     check("报告版式体检", [PY, "-m", "workbench.tools.pdf_layout_check"])
+    # AI 产物必须同步进仓库副本，否则 clone 后「AI 建议」区块会消失。
+    check("AI 产物已同步进仓库", [PY, "-m", "workbench.tools.publish_ai_artifacts", "--check"])
 
     if not args.skip_ui:
         check("界面运行时冒烟", [PY, "-m", "workbench.tools.ui_smoke"], timeout=300)

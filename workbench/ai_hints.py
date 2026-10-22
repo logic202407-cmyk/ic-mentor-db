@@ -17,8 +17,25 @@ import json
 from functools import lru_cache
 from pathlib import Path
 
-SUGGESTIONS_PATH = Path(".workbench-data/direction-inference/suggestions.json")
-REVIEW_PATH = Path(".workbench-data/name-disambiguation/review.json")
+# 读取顺序：**先仓库内副本，再本地产物**。
+#
+# 仓库内副本（reference/ai/）是随仓库提交的，保证任何人 clone 下来都能看到 AI 建议区块；
+# 本地重跑推断后，`.workbench-data/` 里会有更新的产物。为了让"刚跑完就能看到新结果"，
+# 本地文件存在时优先用它——但只在本地开发时才会存在（它被 .gitignore 排除）。
+_ROOT = Path(__file__).resolve().parent.parent
+_REPO_SUGGESTIONS = _ROOT / "workbench/reference/ai/direction_suggestions.json"
+_REPO_REVIEW = _ROOT / "workbench/reference/ai/name_review.json"
+_LOCAL_SUGGESTIONS = _ROOT / ".workbench-data/direction-inference/suggestions.json"
+_LOCAL_REVIEW = _ROOT / ".workbench-data/name-disambiguation/review.json"
+
+
+def _pick(local: Path, repo: Path) -> Path:
+    """本地产物优先（更新），否则用仓库副本（保证 clone 后可见）。"""
+    return local if local.is_file() else repo
+
+
+SUGGESTIONS_PATH = _pick(_LOCAL_SUGGESTIONS, _REPO_SUGGESTIONS)
+REVIEW_PATH = _pick(_LOCAL_REVIEW, _REPO_REVIEW)
 
 DISCLAIMER = ("AI 推断结果，仅供人工复核时参考，不构成事实、不改变参考分、"
               "也不会被自动写入数据。")

@@ -1,0 +1,1668 @@
+[
+  {
+    "name": "王晶",
+    "institution": "西安交通大学",
+    "a": {
+      "id": "official-3b34bbf9879d19994308",
+      "dept": "机器人与智能系统研究所",
+      "home": "https://gr.xjtu.edu.cn/en/web/wangpele666"
+    },
+    "b": {
+      "id": "official-fe5e726e820bcbbde6a9",
+      "dept": "先进制造技术研究所",
+      "home": "https://mec.xjtu.edu.cn/info/1261/11798.htm"
+    },
+    "same_dept": false,
+    "emb": 0.9899,
+    "verdict": "疑似同人"
+  },
+  {
+    "name": "毛红威",
+    "institution": "西安交通大学",
+    "a": {
+      "id": "official-03e0355f5d74d900bd51",
+      "dept": "航空发动机研究所",
+      "home": "https://mec.xjtu.edu.cn/szdw/jsml/hkfdjyjs.htm"
+    },
+    "b": {
+      "id": "official-59d47499cf897a23be11",
+      "dept": "航天制造与信息工程研究所",
+      "home": "https://mec.xjtu.edu.cn/szdw/jsml/htzzyxxgcyjs.htm"
+    },
+    "same_dept": false,
+    "emb": 0.9815,
+    "verdict": "疑似同人"
+  },
+  {
+    "name": "马壮",
+    "institution": "西安交通大学",
+    "a": {
+      "id": "official-74f4c1bda873ae39bb80",
+      "dept": "航空发动机研究所",
+      "home": "https://mec.xjtu.edu.cn/szdw/jsml/hkfdjyjs.htm"
+    },
+    "b": {
+      "id": "official-54b0ad45b0ba4a4b096d",
+      "dept": "航天制造与信息工程研究所",
+      "home": "https://mec.xjtu.edu.cn/szdw/jsml/htzzyxxgcyjs.htm"
+    },
+    "same_dept": false,
+    "emb": 0.9805,
+    "verdict": "疑似同人"
+  },
+  {
+    "name": "李敏",
+    "institution": "西安交通大学",
+    "a": {
+      "id": "official-c83bcd0b74db1ebb565a",
+      "dept": "医工交叉研究所",
+      "home": "https://mec.xjtu.edu.cn/szdw/jsml/ygjcyjs.htm"
+    },
+    "b": {
+      "id": "official-c8e02359df785288b833",
+      "dept": "装备智能诊断与控制研究所",
+      "home": "https://mec.xjtu.edu.cn/szdw/jsml/zbznzdykzyjs.htm"
+    },
+    "same_dept": false,
+    "emb": 0.9799,
+    "verdict": "疑似同人"
+  },
+  {
+    "name": "李兵",
+    "institution": "西安交通大学",
+    "a": {
+      "id": "official-2540b83e76aaf1007ca9",
+      "dept": "航空发动机研究所",
+      "home": "https://gr.xjtu.edu.cn/en/web/bli"
+    },
+    "b": {
+      "id": "official-942ad3dc480a03cfc511",
+      "dept": "精密工程研究所",
+      "home": "https://gr.xjtu.edu.cn/en/web/lb"
+    },
+    "same_dept": false,
+    "emb": 0.9742,
+    "verdict": "疑似同人"
+  },
+  {
+    "name": "叶智慧",
+    "institution": "中国石油大学（北京）",
+    "a": {
+      "id": "official-930167f6fa392ea2ddb0",
+      "dept": "安全与海洋工程学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-ae8f82159dab7c7758b6",
+      "dept": "石油工程学院",
+      "home": "https://faculty.cup.edu.cn/yezhihui/"
+    },
+    "same_dept": false,
+    "emb": 0.9522,
+    "verdict": "疑似同人"
+  },
+  {
+    "name": "董立河",
+    "institution": "北京师范大学",
+    "a": {
+      "id": "official-4f7e2d4618cb2aa8bc1b",
+      "dept": "历史学院",
+      "home": "https://history.bnu.edu.cn/szdw/f7242bd4b6ff45078aec56fca7cc9070.htm"
+    },
+    "b": {
+      "id": "official-396e56195e89f434289a",
+      "dept": "文理学院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.9165,
+    "verdict": "疑似同人"
+  },
+  {
+    "name": "王博",
+    "institution": "华中科技大学",
+    "a": {
+      "id": "official-bf81b58241df1b4b49a7",
+      "dept": "智能系统与系统工程系",
+      "home": "http://faculty.hust.edu.cn/WANGBo/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-023e161e84e29b9b8e68",
+      "dept": "图像识别与智能科学系",
+      "home": "http://faculty.hust.edu.cn/bowang/zh_CN/more/2538470/jsjjgd/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.8883,
+    "verdict": "疑似同人"
+  },
+  {
+    "name": "朱舟元",
+    "institution": "中国石油大学（北京）",
+    "a": {
+      "id": "official-07a42ce5f5b428cd46fb",
+      "dept": "安全与海洋工程学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-7eb42f752bcb3c7d6fb1",
+      "dept": "海洋油气工程系",
+      "home": "https://www.cup.edu.cn/oil/jsdw/szhyyqgcx/a158765b88954b77a066fcb9bec6e825.htm"
+    },
+    "same_dept": false,
+    "emb": 0.8852,
+    "verdict": "疑似同人"
+  },
+  {
+    "name": "张逸群",
+    "institution": "中国石油大学（北京）",
+    "a": {
+      "id": "official-e3c793602b4fe301d6da",
+      "dept": "安全与海洋工程学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-4e7833d267fa97521f2d",
+      "dept": "海洋油气工程系",
+      "home": "https://www.cup.edu.cn/oil/jsdw/szhyyqgcx/e3afd327b1044a4fae15c02857a4f277.htm"
+    },
+    "same_dept": false,
+    "emb": 0.8813,
+    "verdict": "疑似同人"
+  },
+  {
+    "name": "安峰辰",
+    "institution": "中国石油大学（北京）",
+    "a": {
+      "id": "official-3f76df8d684031870117",
+      "dept": "安全与海洋工程学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-728a13c015c6706b0faf",
+      "dept": "海洋油气工程系",
+      "home": "https://www.cup.edu.cn/oil/jsdw/szhyyqgcx/5206256e1ac4463ba257c49a6a2878a8.htm"
+    },
+    "same_dept": false,
+    "emb": 0.8716,
+    "verdict": "疑似同人"
+  },
+  {
+    "name": "赵海宁",
+    "institution": "中国石油大学（北京）",
+    "a": {
+      "id": "official-210a5b7111119dc22c8a",
+      "dept": "安全与海洋工程学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-ef96a2417bb8b5ad344b",
+      "dept": "海洋油气工程系",
+      "home": "https://www.cup.edu.cn/oil/jsdw/szhyyqgcx/b8ed15ca7833442daae0ea6443feb3d5.htm"
+    },
+    "same_dept": false,
+    "emb": 0.8675,
+    "verdict": "疑似同人"
+  },
+  {
+    "name": "张宇",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-dba391c8b6b51b3fd86d",
+      "dept": "船舶海洋与建筑工程学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-5e2bd43b26dbe4806ed2",
+      "dept": "海洋学院",
+      "home": "https://soo.sjtu.edu.cn/teacher-list.html"
+    },
+    "same_dept": false,
+    "emb": 0.8523,
+    "verdict": "疑似同人"
+  },
+  {
+    "name": "陈浩",
+    "institution": "中国石油大学（北京）",
+    "a": {
+      "id": "official-b034007dcdbe6b2cbcd4",
+      "dept": "安全与海洋工程学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-6d3933d62030629f786e",
+      "dept": "海洋油气工程系",
+      "home": "https://www.cup.edu.cn/oil/jsdw/szhyyqgcx/efa8fcfbc7294408827b5787d41989a6.htm"
+    },
+    "same_dept": false,
+    "emb": 0.8513,
+    "verdict": "疑似同人"
+  },
+  {
+    "name": "张涛",
+    "institution": "西南石油大学",
+    "a": {
+      "id": "official-2f8a66fad229378f9177",
+      "dept": "石油工程教研室",
+      "home": "http://www.swpu.edu.cn/sgy/szdw/jsml/sugc/fjs/zt.htm"
+    },
+    "b": {
+      "id": "official-55bee9d13b8b64bd301f",
+      "dept": "流体与热工教研室",
+      "home": "http://www.swpu.edu.cn/sgy/szdw/jsml/ltrg/js/zhangtao.htm"
+    },
+    "same_dept": false,
+    "emb": 0.8509,
+    "verdict": "疑似同人"
+  },
+  {
+    "name": "王宴滨",
+    "institution": "中国石油大学（北京）",
+    "a": {
+      "id": "official-0bb1d28ed0462651edaf",
+      "dept": "安全与海洋工程学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-fa4f6b6a279cd2c24de2",
+      "dept": "油气井工程系",
+      "home": "http://www.cup.edu.cn/oil/jsdw/yqjgcx/9337463.htm"
+    },
+    "same_dept": false,
+    "emb": 0.8492,
+    "verdict": "待核"
+  },
+  {
+    "name": "罗欣",
+    "institution": "华中科技大学",
+    "a": {
+      "id": "official-94f43f4e17639a1ba139",
+      "dept": "自主智能与智能控制系",
+      "home": "http://faculty.hust.edu.cn/luoxin6/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-fba3bbdd9278fc5ff6e1",
+      "dept": "智能制造装备与技术全国重点实验室",
+      "home": "https://mse.hust.edu.cn/info/1142/1349.htm"
+    },
+    "same_dept": false,
+    "emb": 0.8427,
+    "verdict": "待核"
+  },
+  {
+    "name": "安永生",
+    "institution": "中国石油大学（北京）",
+    "a": {
+      "id": "official-8997a408e0fd1a073a22",
+      "dept": "安全与海洋工程学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-0de9c9c1219d62604473",
+      "dept": "海洋油气工程系",
+      "home": "https://www.cup.edu.cn/oil/jsdw/szhyyqgcx/1d15a77735664d6e8810b3e243c4627a.htm"
+    },
+    "same_dept": false,
+    "emb": 0.8308,
+    "verdict": "待核"
+  },
+  {
+    "name": "陈池来",
+    "institution": "中国科学技术大学",
+    "a": {
+      "id": "legacy-0d6cd722db98e132a279",
+      "dept": "信息科学技术学院 自动化系（中国科学院合肥物质科学研究院）",
+      "home": "https://auto.ustc.edu.cn/2021/0510/c25976a484842/page.htm"
+    },
+    "b": {
+      "id": "official-5f61fd536a3f40bead7a",
+      "dept": "合肥物质研究院",
+      "home": "http://dslx.ustc.edu.cn/?menu=expert_paper&expertid=100301"
+    },
+    "same_dept": false,
+    "emb": 0.8302,
+    "verdict": "待核"
+  },
+  {
+    "name": "刘洋",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-2c345264429435cd420c",
+      "dept": "冶金工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/yangliu_csu/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-2c7c628185a031a74f2b",
+      "dept": "环境科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/liuyang12345678/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.8295,
+    "verdict": "待核"
+  },
+  {
+    "name": "王琳琳",
+    "institution": "中国石油大学（北京）",
+    "a": {
+      "id": "official-87abd5750f2c355b1231",
+      "dept": "安全与海洋工程学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-441e7399717bbe05ee33",
+      "dept": "海洋油气工程系",
+      "home": "https://www.cup.edu.cn/oil/jsdw/szhyyqgcx/fc98aa58afc14bb08e39ab3782ddca21.htm"
+    },
+    "same_dept": false,
+    "emb": 0.8231,
+    "verdict": "待核"
+  },
+  {
+    "name": "邓金根",
+    "institution": "中国石油大学（北京）",
+    "a": {
+      "id": "official-d14a98882e1e8f37bccd",
+      "dept": "安全与海洋工程学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-31e98343e6dda5535553",
+      "dept": "油气井工程系",
+      "home": "http://www.cup.edu.cn/oil/jsdw/yqjgcx/135204.htm"
+    },
+    "same_dept": false,
+    "emb": 0.8137,
+    "verdict": "待核"
+  },
+  {
+    "name": "李帆",
+    "institution": "北京师范大学",
+    "a": {
+      "id": "official-f92191810981fcee15f4",
+      "dept": "历史学院",
+      "home": "https://history.bnu.edu.cn/szdw/4c7fd110d04f45d6a4f96af2da79464c.htm"
+    },
+    "b": {
+      "id": "official-e5db85116dce961c9924",
+      "dept": "中华文化研究院丨京师书院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.8084,
+    "verdict": "待核"
+  },
+  {
+    "name": "卢运虎",
+    "institution": "中国石油大学（北京）",
+    "a": {
+      "id": "official-ee5fa5febc0059bfd849",
+      "dept": "安全与海洋工程学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-2846dbfec79d59e48170",
+      "dept": "油气井工程系",
+      "home": "http://www.cup.edu.cn/oil/jsdw/yqjgcx/135248.htm"
+    },
+    "same_dept": false,
+    "emb": 0.8071,
+    "verdict": "待核"
+  },
+  {
+    "name": "张振",
+    "institution": "同济大学",
+    "a": {
+      "id": "official-e68f1711dc48750c32a6",
+      "dept": "水利工程系（副教授/副研究员/高工）",
+      "home": "https://geohyd.tongji.edu.cn/info/1296/2215.htm"
+    },
+    "b": {
+      "id": "official-6613db10d01fe4a258cb",
+      "dept": "航空航天与力学学院",
+      "home": "https://aero-mech.tongji.edu.cn/3a/53/c22274a211539/page.htm"
+    },
+    "same_dept": false,
+    "emb": 0.8059,
+    "verdict": "待核"
+  },
+  {
+    "name": "杨进",
+    "institution": "中国石油大学（北京）",
+    "a": {
+      "id": "official-5b0ae57d2552c3bb5dc2",
+      "dept": "安全与海洋工程学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-62283d55f6531fd8d1d2",
+      "dept": "海洋油气工程系",
+      "home": "https://www.cup.edu.cn/oil/jsdw/szhyyqgcx/237f60901d9b4dd385adf943fb560646.htm"
+    },
+    "same_dept": false,
+    "emb": 0.7981,
+    "verdict": "待核"
+  },
+  {
+    "name": "王海柱",
+    "institution": "中国石油大学（北京）",
+    "a": {
+      "id": "official-f513f26806b697db704f",
+      "dept": "安全与海洋工程学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-a769d89cab863ecf0ec9",
+      "dept": "油气井工程系",
+      "home": "http://www.cup.edu.cn/oil/jsdw/yqjgcx/135252.htm"
+    },
+    "same_dept": false,
+    "emb": 0.7969,
+    "verdict": "待核"
+  },
+  {
+    "name": "李红霞",
+    "institution": "大连理工大学",
+    "a": {
+      "id": "official-0514f2b765b51e2ae42c",
+      "dept": "机械工程学院",
+      "home": "http://faculty.dlut.edu.cn/2017011132/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-4e3f68291a9e86c80948",
+      "dept": "船舶工程学院",
+      "home": "http://faculty.dlut.edu.cn/2008011115/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.7963,
+    "verdict": "待核"
+  },
+  {
+    "name": "刘啸奔",
+    "institution": "中国石油大学（北京）",
+    "a": {
+      "id": "official-fe050f0ef6a7161153d9",
+      "dept": "安全与海洋工程学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-b0f974dfa1d272413744",
+      "dept": "石油工程学院",
+      "home": "https://faculty.cup.edu.cn/liuxiaoben/"
+    },
+    "same_dept": false,
+    "emb": 0.7916,
+    "verdict": "待核"
+  },
+  {
+    "name": "刘林海",
+    "institution": "北京师范大学",
+    "a": {
+      "id": "official-d7ac90ed7f62664af6fc",
+      "dept": "历史学院",
+      "home": "https://history.bnu.edu.cn/szdw/e82220be512c48d5b436619df4b52907.htm"
+    },
+    "b": {
+      "id": "official-7bc77e796b210950b2de",
+      "dept": "中华文化研究院丨京师书院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.7827,
+    "verdict": "待核"
+  },
+  {
+    "name": "陈绪跃",
+    "institution": "中国石油大学（北京）",
+    "a": {
+      "id": "official-a56e14933951615e4c83",
+      "dept": "安全与海洋工程学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-87af954e5ea274d770b1",
+      "dept": "海洋油气工程系",
+      "home": "https://www.cup.edu.cn/oil/jsdw/szhyyqgcx/6d2c49de35dd49a79e23db67caf51ae8.htm"
+    },
+    "same_dept": false,
+    "emb": 0.7795,
+    "verdict": "待核"
+  },
+  {
+    "name": "李伟",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-f3c254568bba623f9912",
+      "dept": "机械与动力工程学院",
+      "home": "https://me.sjtu.edu.cn/teacher_directory1/liwei"
+    },
+    "b": {
+      "id": "official-2602384acac963327df3",
+      "dept": "材料科学与工程学院",
+      "home": "http://faculty.sjtu.edu.cn/liwei123456"
+    },
+    "same_dept": false,
+    "emb": 0.7738,
+    "verdict": "待核"
+  },
+  {
+    "name": "张鹏",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-17f5fee2101fc63e6310",
+      "dept": "机械与动力工程学院",
+      "home": "https://me.sjtu.edu.cn/teacher_directory1/zhangpeng"
+    },
+    "b": {
+      "id": "official-73737f66c07f1a1821e3",
+      "dept": "材料科学与工程学院",
+      "home": "http://faculty.sjtu.edu.cn/zhangpeng12"
+    },
+    "same_dept": false,
+    "emb": 0.7738,
+    "verdict": "待核"
+  },
+  {
+    "name": "刘磊",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-bc0a615a53710017ab38",
+      "dept": "船舶海洋与建筑工程学院",
+      "home": "https://naoce.sjtu.edu.cn/teachers/9523.html"
+    },
+    "b": {
+      "id": "official-29b43ad140273b3e1f93",
+      "dept": "材料科学与工程学院",
+      "home": "https://smse.sjtu.edu.cn/people/detail/138"
+    },
+    "same_dept": false,
+    "emb": 0.7706,
+    "verdict": "待核"
+  },
+  {
+    "name": "陈志明",
+    "institution": "中国石油大学（北京）",
+    "a": {
+      "id": "official-4130b4fb67cb9b42420a",
+      "dept": "安全与海洋工程学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-0a1001c649013ed45c7c",
+      "dept": "油气田开发工程系",
+      "home": "http://www.cup.edu.cn/oil/jsdw/yqtkfgcx/169500.htm"
+    },
+    "same_dept": false,
+    "emb": 0.7637,
+    "verdict": "待核"
+  },
+  {
+    "name": "孙挺",
+    "institution": "中国石油大学（北京）",
+    "a": {
+      "id": "official-2301cf7fd0d96882dff7",
+      "dept": "安全与海洋工程学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-4ca7ee4bc63440ad1bad",
+      "dept": "海洋油气工程系",
+      "home": "https://www.cup.edu.cn/oil/jsdw/szhyyqgcx/d9b73abcbefa4d6b8cdc553ffdcd0afc.htm"
+    },
+    "same_dept": false,
+    "emb": 0.7621,
+    "verdict": "待核"
+  },
+  {
+    "name": "刘海龙",
+    "institution": "大连理工大学",
+    "a": {
+      "id": "official-46bda43eb4512fd5308c",
+      "dept": "机械工程学院",
+      "home": "http://faculty.dlut.edu.cn/2007012004/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-4d3a17b7491612cf05ce",
+      "dept": "生物医学工程学院",
+      "home": "http://faculty.dlut.edu.cn/2009011125/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.7609,
+    "verdict": "待核"
+  },
+  {
+    "name": "张荻",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-68245a6cb85d6864fb49",
+      "dept": "材料科学与工程学院",
+      "home": "http://faculty.sjtu.edu.cn/zhangdi"
+    },
+    "b": {
+      "id": "official-1b93461dee42f83fd8ca",
+      "dept": "设计学院",
+      "home": "http://faculty.sjtu.edu.cn/zhangdi12"
+    },
+    "same_dept": false,
+    "emb": 0.74,
+    "verdict": "待核"
+  },
+  {
+    "name": "王晓东",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-9a1e38ecf01a8b65836b",
+      "dept": "材料科学与工程学院",
+      "home": "http://faculty.sjtu.edu.cn/wangxiaodong"
+    },
+    "b": {
+      "id": "official-9a14d1a09333a2600085",
+      "dept": "数学科学学院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.7312,
+    "verdict": "待核"
+  },
+  {
+    "name": "李锐",
+    "institution": "北京师范大学",
+    "a": {
+      "id": "official-4a8e4b68d319bf865f23",
+      "dept": "历史学院",
+      "home": "https://history.bnu.edu.cn/szdw/d22a90bd3b6e477eb97bfb2b33878438.htm"
+    },
+    "b": {
+      "id": "official-bb3804f8206d2323aff7",
+      "dept": "中华文化研究院丨京师书院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.7281,
+    "verdict": "待核"
+  },
+  {
+    "name": "王丽",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-54198a9ee875ef5e986b",
+      "dept": "材料科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/wangli12/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-5d7acb3fcfbb8d69d649",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/wangli2/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.7172,
+    "verdict": "待核"
+  },
+  {
+    "name": "刘亚东",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-7dda99eddec1eda29f76",
+      "dept": "船舶海洋与建筑工程学院",
+      "home": "http://naoce.sjtu.edu.cn/teachers/5540.html"
+    },
+    "b": {
+      "id": "official-bae101198d37d5e4f820",
+      "dept": "电气工程学院",
+      "home": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html"
+    },
+    "same_dept": false,
+    "emb": 0.7118,
+    "verdict": "待核"
+  },
+  {
+    "name": "孙晓建",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-0c04475fc1775e874ed1",
+      "dept": "生命科学技术学院（含系统生物医学研究院）",
+      "home": "https://daoshi.shsmu.edu.cn/Pages/IntroductionHome.aspx"
+    },
+    "b": {
+      "id": "official-c160f74b10fe2ae3435f",
+      "dept": "瑞金医院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.7104,
+    "verdict": "待核"
+  },
+  {
+    "name": "张鹏",
+    "institution": "武汉大学",
+    "a": {
+      "id": "official-6277a87e824397a76180",
+      "dept": "测量工程研究所·讲师",
+      "home": "https://www.sgg.whu.edu.cn/szdw/zyjs.htm"
+    },
+    "b": {
+      "id": "official-bdcdbe1c7a2c541106b8",
+      "dept": "水文水资源系",
+      "home": "https://swrh.whu.edu.cn/info/1101/9806.htm"
+    },
+    "same_dept": false,
+    "emb": 0.7069,
+    "verdict": "待核"
+  },
+  {
+    "name": "李锐",
+    "institution": "北京师范大学",
+    "a": {
+      "id": "official-4a8e4b68d319bf865f23",
+      "dept": "历史学院",
+      "home": "https://history.bnu.edu.cn/szdw/d22a90bd3b6e477eb97bfb2b33878438.htm"
+    },
+    "b": {
+      "id": "official-60074d6afb499ad3ddc5",
+      "dept": "经济与工商管理学院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.7004,
+    "verdict": "待核"
+  },
+  {
+    "name": "冯永存",
+    "institution": "中国石油大学（北京）",
+    "a": {
+      "id": "official-0126edfbf575a8521011",
+      "dept": "安全与海洋工程学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-f5ea150c576fa7b6d4f4",
+      "dept": "油气井工程系",
+      "home": "http://www.cup.edu.cn/oil/jsdw/yqjgcx/180315.htm"
+    },
+    "same_dept": false,
+    "emb": 0.6909,
+    "verdict": "待核"
+  },
+  {
+    "name": "杨帆",
+    "institution": "同济大学",
+    "a": {
+      "id": "official-806cd76cf5f9063440bd",
+      "dept": "建筑与城市规划学院·城市规划系",
+      "home": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=06091"
+    },
+    "b": {
+      "id": "official-c1b5fcb84541d18ce5ce",
+      "dept": "航空航天与力学学院",
+      "home": "https://aero-mech.tongji.edu.cn/3a/85/c22274a211589/page.htm"
+    },
+    "same_dept": false,
+    "emb": 0.6779,
+    "verdict": "待核"
+  },
+  {
+    "name": "陈长鑫",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "legacy-d98989c8aa49b007f51f",
+      "dept": "集成电路学院（信息与电子工程学院）· 纳电子材料与器件研究所",
+      "home": "https://icisee.sjtu.edu.cn/jiaoshiml/chenzhangxin.html"
+    },
+    "b": {
+      "id": "official-58bb910af6d9fa840686",
+      "dept": "集成电路学院",
+      "home": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html"
+    },
+    "same_dept": false,
+    "emb": 0.6763,
+    "verdict": "待核"
+  },
+  {
+    "name": "李永福",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "legacy-94726d47f55088d431f6",
+      "dept": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+      "home": "https://icisee.sjtu.edu.cn/jiaoshiml/liyongfu.html"
+    },
+    "b": {
+      "id": "official-fb23fb559b9e26896de1",
+      "dept": "集成电路学院",
+      "home": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html"
+    },
+    "same_dept": false,
+    "emb": 0.6755,
+    "verdict": "待核"
+  },
+  {
+    "name": "陈华",
+    "institution": "武汉大学",
+    "a": {
+      "id": "official-d2e92763dc5daaefdb4c",
+      "dept": "空间定位与导航工程研究所·教授、特聘研究员",
+      "home": "https://www.sgg.whu.edu.cn/szdw/zyjs.htm"
+    },
+    "b": {
+      "id": "official-21b5477dbc7e5096a3bb",
+      "dept": "智慧水利系",
+      "home": "https://swrh.whu.edu.cn/info/1623/10158.htm"
+    },
+    "same_dept": false,
+    "emb": 0.6744,
+    "verdict": "待核"
+  },
+  {
+    "name": "程秀兰",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "legacy-699461be99eece63b538",
+      "dept": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
+      "home": "https://icisee.sjtu.edu.cn/jiaoshiml/chengxiulan.html"
+    },
+    "b": {
+      "id": "official-2459bea11d4a5a714f78",
+      "dept": "集成电路学院",
+      "home": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html"
+    },
+    "same_dept": false,
+    "emb": 0.6706,
+    "verdict": "待核"
+  },
+  {
+    "name": "吴开宇",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "legacy-0043c73af30688fe7e3d",
+      "dept": "集成电路学院（信息与电子工程学院）· 纳电子材料与器件研究所",
+      "home": "https://faculty.sjtu.edu.cn/wukaiyu/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-4dbcb5b8f6558f16a0fb",
+      "dept": "集成电路学院",
+      "home": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html"
+    },
+    "same_dept": false,
+    "emb": 0.6674,
+    "verdict": "待核"
+  },
+  {
+    "name": "刘庆文",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "legacy-65bdac2fb97930e23397",
+      "dept": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+      "home": "https://faculty.sjtu.edu.cn/liuqingwen/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-dfaf7baf0da1ea4b653c",
+      "dept": "集成电路学院",
+      "home": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html"
+    },
+    "same_dept": false,
+    "emb": 0.666,
+    "verdict": "待核"
+  },
+  {
+    "name": "马麟",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "legacy-f3babb9d38ae885906cc",
+      "dept": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+      "home": "https://icisee.sjtu.edu.cn/jiaoshiml/malin.html"
+    },
+    "b": {
+      "id": "official-52afb34b00493f98dd77",
+      "dept": "集成电路学院",
+      "home": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html"
+    },
+    "same_dept": false,
+    "emb": 0.666,
+    "verdict": "待核"
+  },
+  {
+    "name": "邹卫文",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "legacy-1f0c60486f4db30bc011",
+      "dept": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+      "home": "https://imlic.sjtu.edu.cn/?p=205"
+    },
+    "b": {
+      "id": "official-22abd51a239b2c287bc6",
+      "dept": "集成电路学院",
+      "home": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html"
+    },
+    "same_dept": false,
+    "emb": 0.666,
+    "verdict": "待核"
+  },
+  {
+    "name": "林辉锋",
+    "institution": "北京师范大学",
+    "a": {
+      "id": "official-718c96e35a19f8e1e7d8",
+      "dept": "历史学院",
+      "home": "https://history.bnu.edu.cn/szdw/cecadd394fab428ba834ca6680e6852a.htm"
+    },
+    "b": {
+      "id": "official-37bed929872425310b7e",
+      "dept": "中华文化研究院丨京师书院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.6636,
+    "verdict": "待核"
+  },
+  {
+    "name": "肖鸣飞",
+    "institution": "华中科技大学",
+    "a": {
+      "id": "legacy-74b8cfd95bb8dbc6b174",
+      "dept": "集成电路学院",
+      "home": "https://ic.hust.edu.cn/info/1146/3406.htm"
+    },
+    "b": {
+      "id": "official-4d035643c375a6b5a2ab",
+      "dept": "仪器科学与技术系",
+      "home": "https://mse.hust.edu.cn/info/1149/14551.htm"
+    },
+    "same_dept": false,
+    "emb": 0.6625,
+    "verdict": "待核"
+  },
+  {
+    "name": "刘世元",
+    "institution": "华中科技大学",
+    "a": {
+      "id": "legacy-65e56f1ece426ce7a656",
+      "dept": "集成电路学院",
+      "home": "https://ic.hust.edu.cn/info/1146/5670.htm"
+    },
+    "b": {
+      "id": "official-4f4d8ca1d5b3b827c28e",
+      "dept": "机械电子信息工程系",
+      "home": "https://mse.hust.edu.cn/info/1148/1484.htm"
+    },
+    "same_dept": false,
+    "emb": 0.6619,
+    "verdict": "待核"
+  },
+  {
+    "name": "张先得",
+    "institution": "中国科学技术大学",
+    "a": {
+      "id": "official-cf5e472caa220fd25fd9",
+      "dept": "数学科学学院",
+      "home": "http://staff.ustc.edu.cn/~drzhangx"
+    },
+    "b": {
+      "id": "official-f80a533f275d87c3a6f5",
+      "dept": "网络空间安全学院",
+      "home": "http://dslx.ustc.edu.cn/?menu=expert_paper&expertid=4757"
+    },
+    "same_dept": false,
+    "emb": 0.6594,
+    "verdict": "待核"
+  },
+  {
+    "name": "王磊",
+    "institution": "西安交通大学",
+    "a": {
+      "id": "legacy-b43f79914463af3a692d",
+      "dept": "电子与信息学部 信息与通信工程学院",
+      "home": "https://gr.xjtu.edu.cn/lei.wang/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-3ab09b534aec46551b4d",
+      "dept": "先进制造技术研究所",
+      "home": "http://gr.xjtu.edu.cn/web/wlei292"
+    },
+    "same_dept": false,
+    "emb": 0.6552,
+    "verdict": "待核"
+  },
+  {
+    "name": "吴豪",
+    "institution": "华中科技大学",
+    "a": {
+      "id": "legacy-79f361e7f9f02872ed02",
+      "dept": "集成电路学院",
+      "home": "https://ic.hust.edu.cn/info/1146/2447.htm"
+    },
+    "b": {
+      "id": "official-bcf37e320eb757cb61f3",
+      "dept": "智能制造装备与技术全国重点实验室",
+      "home": "https://mse.hust.edu.cn/info/1142/1347.htm"
+    },
+    "same_dept": false,
+    "emb": 0.6468,
+    "verdict": "待核"
+  },
+  {
+    "name": "李鹏",
+    "institution": "华中科技大学",
+    "a": {
+      "id": "legacy-ef969828b14e0381a326",
+      "dept": "集成电路学院",
+      "home": "https://ic.hust.edu.cn/info/1146/3033.htm"
+    },
+    "b": {
+      "id": "official-4985e2a1ffebc9eb2daa",
+      "dept": "仪器科学与技术系",
+      "home": "https://mse.hust.edu.cn/info/1149/14274.htm"
+    },
+    "same_dept": false,
+    "emb": 0.6454,
+    "verdict": "待核"
+  },
+  {
+    "name": "马波",
+    "institution": "华中科技大学",
+    "a": {
+      "id": "legacy-21af0aa497637defb770",
+      "dept": "集成电路学院",
+      "home": "https://ic.hust.edu.cn/info/1146/2420.htm"
+    },
+    "b": {
+      "id": "official-3cea4db6a72bf4f72dce",
+      "dept": "仪器科学与技术系",
+      "home": "https://mse.hust.edu.cn/info/1149/12501.htm"
+    },
+    "same_dept": false,
+    "emb": 0.6415,
+    "verdict": "待核"
+  },
+  {
+    "name": "吴艳",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-93b2ad0a52d66a6f15fc",
+      "dept": "机械与动力工程学院",
+      "home": "https://me.sjtu.edu.cn/teacher_directory1/wuyan"
+    },
+    "b": {
+      "id": "official-3941403de74a9d98575e",
+      "dept": "农业与生物学院",
+      "home": "https://www.agri.sjtu.edu.cn/Data/View/2358"
+    },
+    "same_dept": false,
+    "emb": 0.641,
+    "verdict": "待核"
+  },
+  {
+    "name": "李敏",
+    "institution": "西安交通大学",
+    "a": {
+      "id": "legacy-340332ba34a432a4d385",
+      "dept": "仪器科学与技术学院",
+      "home": "https://gr.xjtu.edu.cn/0020220087/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-c83bcd0b74db1ebb565a",
+      "dept": "医工交叉研究所",
+      "home": "https://mec.xjtu.edu.cn/szdw/jsml/ygjcyjs.htm"
+    },
+    "same_dept": false,
+    "emb": 0.6334,
+    "verdict": "待核"
+  },
+  {
+    "name": "李敏",
+    "institution": "西安交通大学",
+    "a": {
+      "id": "legacy-340332ba34a432a4d385",
+      "dept": "仪器科学与技术学院",
+      "home": "https://gr.xjtu.edu.cn/0020220087/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-c8e02359df785288b833",
+      "dept": "装备智能诊断与控制研究所",
+      "home": "https://mec.xjtu.edu.cn/szdw/jsml/zbznzdykzyjs.htm"
+    },
+    "same_dept": false,
+    "emb": 0.63,
+    "verdict": "待核"
+  },
+  {
+    "name": "李雨",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "legacy-3657cb1de18be343c09d",
+      "dept": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+      "home": "https://icisee.sjtu.edu.cn/jiaoshiml/liyu.html"
+    },
+    "b": {
+      "id": "official-1655d1461fbd88d6f5a9",
+      "dept": "集成电路学院",
+      "home": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html"
+    },
+    "same_dept": false,
+    "emb": 0.6212,
+    "verdict": "待核"
+  },
+  {
+    "name": "王旭",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-998ad62e29fab9240586",
+      "dept": "电气工程学院",
+      "home": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html"
+    },
+    "b": {
+      "id": "official-0a06bf7310e473fb6c0d",
+      "dept": "农业与生物学院",
+      "home": "https://www.agri.sjtu.edu.cn/Data/View/4372"
+    },
+    "same_dept": false,
+    "emb": 0.5999,
+    "verdict": "疑似异人"
+  },
+  {
+    "name": "徐畅",
+    "institution": "北京师范大学",
+    "a": {
+      "id": "official-5400e631fe5a4c39fe0a",
+      "dept": "历史学院",
+      "home": "https://history.bnu.edu.cn/szdw/854eb7f5393a494e9d281858309fdeb3.htm"
+    },
+    "b": {
+      "id": "official-03a1b2ea46045429eedd",
+      "dept": "中华文化研究院丨京师书院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.5933,
+    "verdict": "疑似异人"
+  },
+  {
+    "name": "王涛",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "legacy-428668480901a6729341",
+      "dept": "自动化与感知学院 / 光子传输与通信全国重点实验室",
+      "home": "https://qsip.sjtu.edu.cn/"
+    },
+    "b": {
+      "id": "official-a97d440c8442c43c13c1",
+      "dept": "自动化与感知学院",
+      "home": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html"
+    },
+    "same_dept": false,
+    "emb": 0.5928,
+    "verdict": "疑似异人"
+  },
+  {
+    "name": "杨超",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "legacy-a12659c423e618578f44",
+      "dept": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+      "home": "https://icisee.sjtu.edu.cn/jiaoshiml/yangchao.html"
+    },
+    "b": {
+      "id": "official-ccaba0cf7012fb973213",
+      "dept": "材料科学与工程学院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.5839,
+    "verdict": "疑似异人"
+  },
+  {
+    "name": "赵敏",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-c894d0e8855a5e76276e",
+      "dept": "船舶海洋与建筑工程学院",
+      "home": "http://naoce.sjtu.edu.cn/teachers/5583.html"
+    },
+    "b": {
+      "id": "official-2280c79d6b5e67319380",
+      "dept": "心理学院（含精神卫生中心）",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.5834,
+    "verdict": "疑似异人"
+  },
+  {
+    "name": "万文杰",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "legacy-fc4b2526490000dad1ed",
+      "dept": "物理与天文学院 / 光子传输与通信全国重点实验室",
+      "home": "https://www.physics.sjtu.edu.cn/jsml/wanwenjie.html"
+    },
+    "b": {
+      "id": "official-297f822fca45cae5a4a3",
+      "dept": "浦江国际学院",
+      "home": "https://www.ji.sjtu.edu.cn/cn/about/faculty-staff/faculty-directory/faculty-deta"
+    },
+    "same_dept": false,
+    "emb": 0.5793,
+    "verdict": "疑似异人"
+  },
+  {
+    "name": "程林",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-9d0e34ee08f1b4a9d383",
+      "dept": "生命科学技术学院（含系统生物医学研究院）",
+      "home": "https://daoshi.shsmu.edu.cn/Pages/IntroductionHome.aspx"
+    },
+    "b": {
+      "id": "official-c8f7cb37e02ba2d7d22c",
+      "dept": "中欧国际工商学院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.5692,
+    "verdict": "疑似异人"
+  },
+  {
+    "name": "殷月伟",
+    "institution": "中国科学技术大学",
+    "a": {
+      "id": "legacy-bc02072626b197a77a44",
+      "dept": "类脑智能技术及应用国家工程实验室 / 信息科学技术学院",
+      "home": "https://leinao.ustc.edu.cn/2026/0610/c25925a744101/page.htm"
+    },
+    "b": {
+      "id": "official-74c1ec9671ea68f9eb07",
+      "dept": "物理学院",
+      "home": "https://emdp.ustc.edu.cn/17870/list.htm"
+    },
+    "same_dept": false,
+    "emb": 0.5574,
+    "verdict": "疑似异人"
+  },
+  {
+    "name": "沈胜春",
+    "institution": "中国科学技术大学",
+    "a": {
+      "id": "legacy-2ceed6785631a324eae5",
+      "dept": "类脑智能技术及应用国家工程实验室 / 信息科学技术学院",
+      "home": "https://leinao.ustc.edu.cn/2026/0610/c25925a744108/page.htm"
+    },
+    "b": {
+      "id": "official-6eae8920100583cbbc39",
+      "dept": "物理学院",
+      "home": "http://emdp.ustc.edu.cn/ssctryjy/list.htm"
+    },
+    "same_dept": false,
+    "emb": 0.5499,
+    "verdict": "疑似异人"
+  },
+  {
+    "name": "张彤",
+    "institution": "东南大学",
+    "a": {
+      "id": "legacy-6fbe065a84833adaecb7",
+      "dept": "电子科学与工程学院 物理电子学系",
+      "home": "https://electronic.seu.edu.cn/zt/list.htm"
+    },
+    "b": {
+      "id": "official-617efd7cc7a384ab3ae4",
+      "dept": "建筑系",
+      "home": "https://arch.seu.edu.cn/zt/main.htm"
+    },
+    "same_dept": false,
+    "emb": 0.5481,
+    "verdict": "疑似异人"
+  },
+  {
+    "name": "张朝阳",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-ea5994879b12ee1d4536",
+      "dept": "机械与动力工程学院",
+      "home": "https://speit.sjtu.edu.cn/faculty/10022"
+    },
+    "b": {
+      "id": "official-9950043bc89b0dff10a0",
+      "dept": "人文学院",
+      "home": "https://shss.sjtu.edu.cn/Web/FacultyDetail/108"
+    },
+    "same_dept": false,
+    "emb": 0.547,
+    "verdict": "疑似异人"
+  },
+  {
+    "name": "万文杰",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "legacy-fc4b2526490000dad1ed",
+      "dept": "物理与天文学院 / 光子传输与通信全国重点实验室",
+      "home": "https://www.physics.sjtu.edu.cn/jsml/wanwenjie.html"
+    },
+    "b": {
+      "id": "official-767dbe5377b4b47b0b0f",
+      "dept": "物理与天文学院（含李政道研究所）",
+      "home": "https://www.ji.sjtu.edu.cn/cn/about/faculty-staff/faculty-directory/faculty-deta"
+    },
+    "same_dept": false,
+    "emb": 0.5408,
+    "verdict": "疑似异人"
+  },
+  {
+    "name": "王涛",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-a97d440c8442c43c13c1",
+      "dept": "自动化与感知学院",
+      "home": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html"
+    },
+    "b": {
+      "id": "official-c4b8b308e369201de84a",
+      "dept": "数学科学学院",
+      "home": "https://life.sjtu.edu.cn/teacher/wangtao"
+    },
+    "same_dept": false,
+    "emb": 0.5335,
+    "verdict": "疑似异人"
+  },
+  {
+    "name": "王涛",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-a97d440c8442c43c13c1",
+      "dept": "自动化与感知学院",
+      "home": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html"
+    },
+    "b": {
+      "id": "official-8867f8a1fb750338c9a4",
+      "dept": "生命科学技术学院（含系统生物医学研究院）",
+      "home": "https://life.sjtu.edu.cn/teacher/wangtao"
+    },
+    "same_dept": false,
+    "emb": 0.5298,
+    "verdict": "疑似异人"
+  },
+  {
+    "name": "王迪",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-f0c29634b0af9e83397b",
+      "dept": "机械与动力工程学院",
+      "home": "https://me.sjtu.edu.cn/teacher_directory1/wangdi"
+    },
+    "b": {
+      "id": "official-e699024269d2958f2166",
+      "dept": "数学科学学院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.5253,
+    "verdict": "疑似异人"
+  },
+  {
+    "name": "王成",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-3788d5ab6d666f65e43c",
+      "dept": "机械与动力工程学院",
+      "home": "https://me.sjtu.edu.cn/teacher_directory1/wangcheng"
+    },
+    "b": {
+      "id": "official-61ce53f15131c05b0ae7",
+      "dept": "数学科学学院",
+      "home": "http://math.sjtu.edu.cn/faculty/chengwang/"
+    },
+    "same_dept": false,
+    "emb": 0.5037,
+    "verdict": "疑似异人"
+  },
+  {
+    "name": "王伟",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-4640fecd8e7c13cb8bf3",
+      "dept": "物理与天文学院（含李政道研究所）",
+      "home": "https://www.physics.sjtu.edu.cn/jsml/wangwei.html"
+    },
+    "b": {
+      "id": "official-d029d99e2cf0762edf45",
+      "dept": "航空航天学院",
+      "home": "https://www.aero.sjtu.edu.cn/Data/View/4172"
+    },
+    "same_dept": false,
+    "emb": 0.4986,
+    "verdict": "疑似异人"
+  },
+  {
+    "name": "王涛",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "legacy-428668480901a6729341",
+      "dept": "自动化与感知学院 / 光子传输与通信全国重点实验室",
+      "home": "https://qsip.sjtu.edu.cn/"
+    },
+    "b": {
+      "id": "official-c4b8b308e369201de84a",
+      "dept": "数学科学学院",
+      "home": "https://life.sjtu.edu.cn/teacher/wangtao"
+    },
+    "same_dept": false,
+    "emb": 0.4966,
+    "verdict": "疑似异人"
+  },
+  {
+    "name": "王涛",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "legacy-428668480901a6729341",
+      "dept": "自动化与感知学院 / 光子传输与通信全国重点实验室",
+      "home": "https://qsip.sjtu.edu.cn/"
+    },
+    "b": {
+      "id": "official-8867f8a1fb750338c9a4",
+      "dept": "生命科学技术学院（含系统生物医学研究院）",
+      "home": "https://life.sjtu.edu.cn/teacher/wangtao"
+    },
+    "same_dept": false,
+    "emb": 0.4954,
+    "verdict": "疑似异人"
+  },
+  {
+    "name": "陈诚",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "legacy-958b4326a99a31166151",
+      "dept": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
+      "home": "https://icisee.sjtu.edu.cn/jiaoshiml/chencheng.html"
+    },
+    "b": {
+      "id": "official-d7f57c69f212aec22dc1",
+      "dept": "农业与生物学院",
+      "home": "https://www.agri.sjtu.edu.cn/Data/View/5090"
+    },
+    "same_dept": false,
+    "emb": 0.4866,
+    "verdict": "疑似异人"
+  },
+  {
+    "name": "王锋",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-22e56f3066665eac592c",
+      "dept": "航空航天学院",
+      "home": "https://www.aero.sjtu.edu.cn/szdw/szml/228"
+    },
+    "b": {
+      "id": "official-147259db5aea1942326f",
+      "dept": "基础医学院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.4811,
+    "verdict": "疑似异人"
+  },
+  {
+    "name": "李新",
+    "institution": "中国科学技术大学",
+    "a": {
+      "id": "official-b6483aec4ed3fd038e65",
+      "dept": "数学科学学院",
+      "home": "http://staff.ustc.edu.cn/~lixustc/"
+    },
+    "b": {
+      "id": "official-38006979e69903cf2bb5",
+      "dept": "合肥物质研究院",
+      "home": "http://dslx.ustc.edu.cn/?menu=expert_paper&expertid=5256"
+    },
+    "same_dept": false,
+    "emb": 0.48,
+    "verdict": "疑似异人"
+  },
+  {
+    "name": "李向阳",
+    "institution": "中国科学技术大学",
+    "a": {
+      "id": "official-0d5a5f2b66a5b95df426",
+      "dept": "计算机科学与技术学院",
+      "home": "https://cs.ustc.edu.cn/2020/0806/c23235a460096/page.htm"
+    },
+    "b": {
+      "id": "official-2f020517e8c1c247092a",
+      "dept": "网络空间安全学院",
+      "home": "http://dslx.ustc.edu.cn/?menu=expert_paper&expertid=4752"
+    },
+    "same_dept": false,
+    "emb": 0.4636,
+    "verdict": "疑似异人"
+  },
+  {
+    "name": "吴晓东",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-eff6e499d8eba985b383",
+      "dept": "机械与动力工程学院",
+      "home": "https://me.sjtu.edu.cn/teacher_directory1/wuxiaodong.html"
+    },
+    "b": {
+      "id": "official-c771e4a4596f3be07a65",
+      "dept": "海洋学院",
+      "home": "https://soo.sjtu.edu.cn/teacher-list.html"
+    },
+    "same_dept": false,
+    "emb": 0.4559,
+    "verdict": "疑似异人"
+  },
+  {
+    "name": "吴昊",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-9e4f4362684c153a4e4d",
+      "dept": "机械与动力工程学院",
+      "home": "https://me.sjtu.edu.cn/teacher_directory1/wuhao"
+    },
+    "b": {
+      "id": "official-8e85857514c09fd40acf",
+      "dept": "数学科学学院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.4413,
+    "verdict": "疑似异人"
+  },
+  {
+    "name": "马啸",
+    "institution": "中国科学技术大学",
+    "a": {
+      "id": "official-986429a6165ee5122a1c",
+      "dept": "数学科学学院",
+      "home": "https://faculty.ustc.edu.cn/maxiao/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-d32c45b849f9f7ec7cd1",
+      "dept": "人文与社会科学学院",
+      "home": "https://hsta.ustc.edu.cn/2024/0920/c2770a654132/pagem.htm"
+    },
+    "same_dept": false,
+    "emb": 0.439,
+    "verdict": "疑似异人"
+  },
+  {
+    "name": "李涛",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-aee77a6d0185b53afbd3",
+      "dept": "生命科学技术学院（含系统生物医学研究院）",
+      "home": ""
+    },
+    "b": {
+      "id": "official-c0f37131ae143abdb78f",
+      "dept": "化学化工学院",
+      "home": "http://scce.sjtu.edu.cn/jiaoshi.php?aid=1479&c=3"
+    },
+    "same_dept": false,
+    "emb": 0.4278,
+    "verdict": "疑似异人"
+  },
+  {
+    "name": "王斌",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-0fe3b4e7dd51358fae86",
+      "dept": "船舶海洋与建筑工程学院",
+      "home": "http://naoce.sjtu.edu.cn/teachers/5548.html"
+    },
+    "b": {
+      "id": "official-f75ea806e409ee4d5c05",
+      "dept": "航空航天学院",
+      "home": "http://faculty.sjtu.edu.cn/wangbin1234"
+    },
+    "same_dept": false,
+    "emb": 0.4257,
+    "verdict": "疑似异人"
+  },
+  {
+    "name": "陈斌",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-0414cc279b39acd78afc",
+      "dept": "化学化工学院",
+      "home": "http://scce.sjtu.edu.cn/jiaoshi.php?aid=2380&c=3"
+    },
+    "b": {
+      "id": "official-8afc771bdf249a5aa644",
+      "dept": "设计学院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.4215,
+    "verdict": "疑似异人"
+  },
+  {
+    "name": "李磊",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-739e800d8c45e8bf81cf",
+      "dept": "数学科学学院",
+      "home": "https://ins.sjtu.edu.cn/people/leili/"
+    },
+    "b": {
+      "id": "official-af503fb988ec04f51c62",
+      "dept": "化学化工学院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.4167,
+    "verdict": "疑似异人"
+  },
+  {
+    "name": "陈昕",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-9bd289d9b445d395234f",
+      "dept": "机械与动力工程学院",
+      "home": "https://me.sjtu.edu.cn/teacher_directory1/chenxin"
+    },
+    "b": {
+      "id": "official-1377837ce186ade5aff3",
+      "dept": "数学科学学院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.4146,
+    "verdict": "疑似异人"
+  }
+]
