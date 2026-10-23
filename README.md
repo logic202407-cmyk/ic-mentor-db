@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/代码许可-MIT-yellow.svg)](LICENSE)
 [![Data License](https://img.shields.io/badge/数据许可-见%20LICENSE--DATA-blue.svg)](LICENSE-DATA)
 [![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB.svg)](workbench/requirements.txt)
-[![Tests](https://img.shields.io/badge/tests-728%20passed-brightgreen.svg)](workbench/tests)
+[![Tests](https://img.shields.io/badge/tests-735%20passed-brightgreen.svg)](workbench/tests)
 [![Records](https://img.shields.io/badge/记录-15%2C719%20条-informational.svg)](CHANGELOG.md)
 [![Local Only](https://img.shields.io/badge/数据-仅存本机-success.svg)](SECURITY.md)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
@@ -45,7 +45,7 @@ py -3 -m venv .venv
 
 | 项目 | 体积 | 说明 |
 |:--|--:|:--|
-| 纳入 git 的文件（586 个） | **约 108 MB** | 大头是数据本体，见下方明细 |
+| 纳入 git 的文件（589 个） | **约 108 MB** | 大头是数据本体，见下方明细 |
 | `.git` | 约 67 MB | 历史提交 |
 | `.venv` | 约 211 MB | 虚拟环境，可由 `requirements.txt` 重建 |
 | `data/raw` | 约 890 MB | **抓取到的网页原文**，只在采集脚本里用；运行期不读它，已 gitignore |
@@ -293,7 +293,7 @@ py -3 -m venv .venv
 | `data/processed/curated.csv` | 推荐集表（898 人，含招生信号、课题组、主页链接） |
 | `data/raw/<校名>/roster_*.json` | 各校官方师资原始名录（每条带抓取来源 URL，可溯源；**不含邮箱**） |
 | `tools/` | 全部脚本，**无硬编码路径**，克隆到任意目录均可直接运行 |
-| `index.html` | 落地页（GitHub Pages 入口，汇总所有产出的导航） |
+| `index.html` | **早期专题页**（集成电路阶段的落地页，保留作历史记录；顶部有横幅指向当前作品）。当前作品不在 GitHub Pages，而是本机运行的工作台 |
 | `docs/使用指南.md` | 面向学生的完整使用教程 |
 | `docs/维护指南.md` | 面向后续维护者：数据更新节奏、全量重建流程、排错表、红线 |
 | `DISCLAIMER.md` | 免责声明、隐私处理说明、更正与删除机制 |
