@@ -18,10 +18,15 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 SKIP = (".git", ".venv", ".workbench-data", "node_modules", "__pycache__")
 
 
-def size_of(paths) -> tuple[int, int]:
+def size_of(paths, sizes=None) -> tuple[int, int]:
+    """按 git blob 大小统计（与平台无关）；没给 sizes 时回退到工作区大小。"""
     total = 0
     count = 0
     for rel in paths:
+        if sizes is not None:
+            total += sizes.get(rel, 0)
+            count += 1
+            continue
         p = ROOT / rel
         if p.is_file():
             total += p.stat().st_size
@@ -30,13 +35,25 @@ def size_of(paths) -> tuple[int, int]:
 
 
 def main() -> int:
-    # 见 workbench/tools/check_readme_badges.py 的同名说明：git 默认转义非 ASCII 路径。
-    tracked = subprocess.run(
-        ["git", "-c", "core.quotepath=false", "ls-files", "-z"],
+    # 见 workbench/tools/check_readme_badges.py：用 HEAD 树 + blob 大小，
+    # 保证 Windows / Linux / CI 三处算出同一个数字。
+    listing = subprocess.run(
+        ["git", "-c", "core.quotepath=false", "ls-tree", "-r", "-l", "-z", "HEAD"],
         cwd=str(ROOT), capture_output=True, text=True,
-        encoding="utf-8", errors="replace").stdout.split("\0")
-    tracked = [p for p in tracked if p]
-    total, count = size_of(tracked)
+        encoding="utf-8", errors="replace").stdout
+    tracked = []
+    blob_sizes = {}
+    for record in listing.split("\0"):
+        head, _, path = record.strip().partition("\t")
+        if not path:
+            continue
+        fields = head.split()
+        tracked.append(path)
+        try:
+            blob_sizes[path] = int(fields[3])
+        except (IndexError, ValueError):
+            blob_sizes[path] = 0
+    total, count = size_of(tracked, blob_sizes)
     print(f"tracked files: {count}")
     print(f"working copy (tracked): {total / 1024 / 1024:.1f} MB")
 

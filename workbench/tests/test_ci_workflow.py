@@ -49,6 +49,18 @@ class WorkflowTests(unittest.TestCase):
         ):
             self.assertIn(needle, text, f"workbench job 缺少检查：{needle}")
 
+    def test_workbench_job_installs_what_checks_import(self):
+        """依赖必须覆盖检查真正 import 的东西。
+
+        CI 曾只装 pypdf，而 README 徽章检查会经 catalog.coverage() -> public_research
+        -> rom bs4 import BeautifulSoup，于是 CI 报
+        ModuleNotFoundError: No module named 'bs4'（本地 venv 装了所以看不出来）。
+        """
+        text = yaml.safe_dump(self.jobs["workbench"], allow_unicode=True)
+        self.assertIn("pypdf", text)
+        self.assertIn("beautifulsoup4", text)
+        self.assertIn("requests", text)
+
     def test_workbench_job_stays_lightweight(self):
         # 不得在 CI 里安装 fastembed / onnxruntime（几百 MB，容易变红 X）
         text = yaml.safe_dump(self.jobs["workbench"], allow_unicode=True)

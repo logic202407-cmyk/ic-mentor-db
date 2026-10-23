@@ -97,8 +97,15 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: 安装轻量依赖（仅用于报告页数校验）
-        run: python -m pip install --quiet pypdf
+      # 说明依赖来源，避免下次又漏：
+      #   pypdf        -> check_pdf_limits 数页数
+      #   beautifulsoup4 / requests -> catalog.coverage() 会 import public_research，
+      #                 而 public_research 在模块层 `from bs4 import BeautifulSoup`。
+      #                 只装 pypdf 时 CI 会在「README 徽章与体积表」这一步
+      #                 ModuleNotFoundError: No module named 'bs4'（真实踩过）。
+      #   刻意不装 fastembed/onnxruntime：那是几百 MB，而这里的检查用不到。
+      - name: 安装轻量依赖
+        run: python -m pip install --quiet pypdf beautifulsoup4 requests
 
       - name: Python 语法检查（全包编译）
         run: python -m compileall -q workbench
