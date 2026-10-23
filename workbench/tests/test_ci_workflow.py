@@ -58,8 +58,10 @@ class WorkflowTests(unittest.TestCase):
         """
         text = yaml.safe_dump(self.jobs["workbench"], allow_unicode=True)
         self.assertIn("pypdf", text)
-        self.assertIn("beautifulsoup4", text)
         self.assertIn("requests", text)
+        # 修法不是"多装一个包"，而是把 bs4 改成惰性导入（读已存档案不需要 HTML 解析器）。
+        # 这里断言 CI 不该再装 bs4；若变红，说明 public_research 又出现了模块级导入。
+        self.assertNotIn("beautifulsoup4", text, "bs4 已惰性化，CI 不应再安装它")
 
     def test_workbench_job_stays_lightweight(self):
         # 不得在 CI 里安装 fastembed / onnxruntime（几百 MB，容易变红 X）

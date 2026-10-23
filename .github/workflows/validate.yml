@@ -97,15 +97,17 @@ jobs:
         with:
           python-version: '3.12'
 
-      # 说明依赖来源，避免下次又漏：
-      #   pypdf        -> check_pdf_limits 数页数
-      #   beautifulsoup4 / requests -> catalog.coverage() 会 import public_research，
-      #                 而 public_research 在模块层 `from bs4 import BeautifulSoup`。
-      #                 只装 pypdf 时 CI 会在「README 徽章与体积表」这一步
-      #                 ModuleNotFoundError: No module named 'bs4'（真实踩过）。
-      #   刻意不装 fastembed/onnxruntime：那是几百 MB，而这里的检查用不到。
+      # 依赖只需覆盖检查真正用到的部分：
+      #   pypdf    -> check_pdf_limits 数 PDF 页数
+      #   requests -> catalog.coverage() -> public_research（模块层 import requests）
+      #
+      # 注意 **不需要 beautifulsoup4**：bs4 已改为惰性导入（只在真正解析 HTML 时用），
+      # 而这里只读已存档案。此前 CI 缺 bs4 曾报 ModuleNotFoundError（真实踩过），
+      # 修法与"多装一个包"不同——把解析器的导入挪到使用处，读档案就不依赖它。
+      #
+      # 刻意不装 fastembed/onnxruntime：那是几百 MB，而这里的检查用不到。
       - name: 安装轻量依赖
-        run: python -m pip install --quiet pypdf beautifulsoup4 requests
+        run: python -m pip install --quiet pypdf requests
 
       - name: Python 语法检查（全包编译）
         run: python -m compileall -q workbench

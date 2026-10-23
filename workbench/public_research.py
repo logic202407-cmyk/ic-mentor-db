@@ -18,7 +18,6 @@ from pathlib import Path
 from functools import lru_cache
 from urllib.parse import urljoin, urlsplit
 
-from bs4 import BeautifulSoup
 import requests
 from . import core
 
@@ -318,6 +317,8 @@ def cached_fetch(url, refresh=False, _visited=()):
 
 
 def parse_page(html, url, name, *, continuation=False):
+    # 惰性导入：只有真正解析 HTML 时才需要 bs4，读已存档案不需要。
+    from bs4 import BeautifulSoup
     soup = BeautifulSoup(html, 'html.parser')
     result = {key:[] for key in ('papers','relations','recruitment','biography','admission_links','follow_links')}
     compact = re.sub(r'\s+', '', soup.get_text())
@@ -488,6 +489,7 @@ def parse_page(html, url, name, *, continuation=False):
 
 
 def admission_notices(url, refresh=False, *, offline=False):
+    from bs4 import BeautifulSoup
     page=(cached_fetch if offline else fetch)(url,refresh);soup=BeautifulSoup(page['html'],'html.parser');rows=[]
     for a in soup.select('a[href]'):
         text=re.sub(r'\s+',' ',a.get_text(' ',strip=True));link=urljoin(page['url'],a['href'])
