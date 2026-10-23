@@ -57,44 +57,54 @@ def count_tests() -> int:
 
 
 def tracked_size() -> tuple[int, float]:
-    """返回 (跟踪文件数, 跟踪内容总 MB)，数据取自 git 自身的 blob 大小。
+    """返回 (跟踪文件数, 跟踪内容总 MB)。
 
-    两点都是为了"在任何平台上得到同一个数字"：
+    口径要同时满足两个要求：
 
-    1. **文件列表用 HEAD 树**（`git ls-tree`），而不是索引。README 说的是
-       "clone 能拿到什么"，索引还包含已 add 未提交的文件（本轮真实踩过：
-       新文件提交后 README 少算一个，CI 变红）。
-    2. **大小用 blob 字节数**（`ls-tree -l`），而不是工作区文件大小。工作区体积受
-       行尾影响（Windows CRLF / Linux LF，差 2 MB 以上），blob 大小则处处一致。
-
-    另外必须 `-c core.quotepath=false`：git 默认把非 ASCII 路径转义成八进制
+    **① 与平台无关。** 大小取 git **blob 字节数**（`ls-tree -l`），不读工作区文件——
+    工作区体积受行尾影响（Windows CRLF / Linux LF 差 2 MB 以上），blob 则处处一致。
+    并且必须 `-c core.quotepath=false`：git 默认把非 ASCII 路径转义成八进制
     （`启动.cmd` → `"\\345\\220\\257..."`），在别人的环境里匹配不到文件。
+
+    **② 与"即将提交的内容"一致。** 取 **HEAD 树 ∪ 索引**。只取单一口径都会错位，
+    本项目两种都踩过：
+
+    - 只用索引：新文件还没 `git add` 时不计入，`--fix` 写小一号；
+    - 只用 HEAD：新文件已 add 未提交时不计入，`--fix` 仍写小一号，提交后就差一个
+      （两次让 CI 变红）。
+
+    取并集后，工作流很简单：**先 `git add` 新文件，再跑 `--fix`**，
+    写进 README 的就是提交后的数字；CI 里索引与 HEAD 相同，自然也对得上。
     """
     import subprocess
 
-    proc = subprocess.run(
-        ["git", "-c", "core.quotepath=false", "ls-tree", "-r", "-l", "-z", "HEAD"],
-        cwd=str(ROOT), capture_output=True, text=True,
-        encoding="utf-8", errors="replace")
+    def _ls(*args: str) -> list[str]:
+        proc = subprocess.run(
+            ["git", "-c", "core.quotepath=false", *args],
+            cwd=str(ROOT), capture_output=True, text=True,
+            encoding="utf-8", errors="replace")
+        return [r for r in proc.stdout.split("\0") if r.strip()]
 
-    count = 0
-    total = 0
-    for record in proc.stdout.split("\0"):
-        record = record.strip()
-        if not record:
-            continue
-        # 格式：<mode> SP <type> SP <object> SP <size> TAB <path>
-        head, _, _path = record.partition("\t")
+    entries: dict[str, int] = {}
+    # HEAD 树：已提交的文件与它们的 blob 大小
+    for record in _ls("ls-tree", "-r", "-l", "-z", "HEAD"):
+        head, _, path = record.strip().partition("\t")
         fields = head.split()
-        if len(fields) < 4:
+        if not path or len(fields) < 4:
             continue
         try:
-            size = int(fields[3])
+            entries[path] = int(fields[3])
         except ValueError:
             continue  # 符号链接等 size 为 "-"
-        count += 1
-        total += size
-    return count, total / 1024 / 1024
+    # 索引：把已 add 未提交的文件补进来
+    for path in _ls("ls-files", "-z"):
+        if path in entries:
+            continue
+        p = ROOT / path
+        entries[path] = p.stat().st_size if p.is_file() else 0
+
+    total = sum(entries.values())
+    return len(entries), total / 1024 / 1024
 
 
 def actual_numbers() -> dict[str, int]:
