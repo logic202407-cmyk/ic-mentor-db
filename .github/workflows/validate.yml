@@ -84,3 +84,33 @@ jobs:
           console.log(bad?('发现 '+bad+' 处'):'✅ Word 文档检查通过');
           process.exit(bad?1:0);
           "
+
+  # ── 当前作品（workbench 工作台 + AIC 提交材料）────────────────────
+  # 上面那个 job 校验的是早期 IC 专题的数据产出；本 job 校验现在要交付的东西。
+  # 只跑标准库可完成的检查，避免在 CI 里装 fastembed/onnxruntime。
+  workbench:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: 安装轻量依赖（仅用于报告页数校验）
+        run: python -m pip install --quiet pypdf
+
+      - name: Python 语法检查（全包编译）
+        run: python -m compileall -q workbench
+
+      - name: 编码体检（被 cmd.exe / pip / git 读取的文件）
+        run: python -m workbench.tools.encoding_audit
+
+      - name: README 徽章与体积表
+        run: python -m workbench.tools.check_readme_badges
+
+      - name: 技术报告三件产物同步
+        run: python -m workbench.tools.check_report_sync
+
+      - name: 技术报告页数与大小限制
+        run: python -m workbench.tools.check_pdf_limits
