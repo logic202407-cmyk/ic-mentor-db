@@ -1,0 +1,93 @@
+{
+  "schema": "mentor-workbench/direction-validation/v1",
+  "generated_at": "2026-10-24T01:30:42+08:00",
+  "how_to_reproduce": "python -m workbench.infer_directions --validate 400 --ablate-text",
+  "note": "指标由本机实跑产生；逐人建议在 .workbench-data，未随仓库提交。",
+  "sampled": 400,
+  "vocab_size": 256,
+  "seconds": 39.6,
+  "embedding": {
+    "top1": 0.0875,
+    "top3": 0.215
+  },
+  "keyword": {
+    "top1": 0.1125,
+    "top3": 0.23
+  },
+  "hybrid": {
+    "top1": 0.105,
+    "top3": 0.2225
+  },
+  "fusion": {
+    "top1": 0.1425,
+    "top3": 0.27,
+    "keyword_weight": 0.3
+  },
+  "fusion_tuning": {
+    "dev": 160,
+    "test": {
+      "keyword": {
+        "n": 240,
+        "top1": 0.09583333333333334,
+        "top3": 0.20833333333333334
+      },
+      "embedding": {
+        "n": 240,
+        "top1": 0.1,
+        "top3": 0.23333333333333334
+      },
+      "fusion": {
+        "n": 240,
+        "top1": 0.125,
+        "top3": 0.25416666666666665
+      }
+    },
+    "chosen_weight": 0.3
+  },
+  "strata": {
+    "verbatim": {
+      "n": 18,
+      "embedding_top1": 0.5,
+      "keyword_top1": 0.9444444444444444,
+      "fusion_top1": 0.9444444444444444
+    },
+    "non_verbatim": {
+      "n": 382,
+      "embedding_top1": 0.06806282722513089,
+      "keyword_top1": 0.07329842931937172,
+      "fusion_top1": 0.10471204188481675
+    }
+  },
+  "text_ablation": {
+    "sampled": 400,
+    "vocab_size": 256,
+    "strata": {
+      "verbatim": {
+        "n": 18,
+        "full": {
+          "n": 18,
+          "top1": 0.5,
+          "top3": 0.6666666666666666
+        },
+        "clean": {
+          "n": 18,
+          "top1": 0.7222222222222222,
+          "top3": 0.8888888888888888
+        }
+      },
+      "non_verbatim": {
+        "n": 382,
+        "full": {
+          "n": 382,
+          "top1": 0.06806282722513089,
+          "top3": 0.193717277486911
+        },
+        "clean": {
+          "n": 382,
+          "top1": 0.06806282722513089,
+          "top3": 0.28272251308900526
+        }
+      }
+    }
+  }
+}

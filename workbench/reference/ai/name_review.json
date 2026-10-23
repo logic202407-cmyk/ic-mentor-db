@@ -1,5 +1,109 @@
 [
   {
+    "name": "王涛",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-c4b8b308e369201de84a",
+      "dept": "数学科学学院",
+      "home": "https://life.sjtu.edu.cn/teacher/wangtao"
+    },
+    "b": {
+      "id": "official-8867f8a1fb750338c9a4",
+      "dept": "生命科学技术学院（含系统生物医学研究院）",
+      "home": "https://life.sjtu.edu.cn/teacher/wangtao"
+    },
+    "same_dept": false,
+    "emb": 0.998,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "same_person",
+    "strength": "none",
+    "reason": "shared_dedicated_page",
+    "note": "共享主页的站点归属与其中一条记录的院系不符（该站点 98.6% 的记录来自「生命科学技术学院」，样本 71 条），无法排除「按姓名匹配接错主页」",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "胡洁",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-7ad7b52892a11770bb00",
+      "dept": "机械与动力工程学院",
+      "home": "https://me.sjtu.edu.cn/teacher_directory1/hujie"
+    },
+    "b": {
+      "id": "official-7d33da6dc1abc02a1ddf",
+      "dept": "设计学院",
+      "home": "https://me.sjtu.edu.cn/teacher_directory1/hujie"
+    },
+    "same_dept": false,
+    "emb": 0.9936,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "same_person",
+    "strength": "none",
+    "reason": "shared_dedicated_page",
+    "note": "共享主页的站点归属与其中一条记录的院系不符（该站点 99.3% 的记录来自「机械与动力工程学院」，样本 283 条），无法排除「按姓名匹配接错主页」",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "周尧",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-164e621cb8ffabdd6385",
+      "dept": "电气工程学院",
+      "home": "https://www.physics.sjtu.edu.cn/jsml/zhouyao.html"
+    },
+    "b": {
+      "id": "official-be507dbc017c68259c0c",
+      "dept": "物理与天文学院（含李政道研究所）",
+      "home": "https://www.physics.sjtu.edu.cn/jsml/zhouyao.html"
+    },
+    "same_dept": false,
+    "emb": 0.9918,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "same_person",
+    "strength": "none",
+    "reason": "shared_dedicated_page",
+    "note": "共享主页的站点归属与其中一条记录的院系不符（该站点 94.6% 的记录来自「物理与天文学院」，样本 92 条），无法排除「按姓名匹配接错主页」",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "黄晓贤",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-8fc8bc3862387d0e6b5a",
+      "dept": "冶金工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/huangxiaoxian/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-eb2930efc70e7dbdc654",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/huangxiaoxian/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.99,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
     "name": "王晶",
     "institution": "西安交通大学",
     "a": {
@@ -14,7 +118,42 @@
     },
     "same_dept": false,
     "emb": 0.9899,
-    "verdict": "疑似同人"
+    "verdict": "疑似异人",
+    "label": "different_person",
+    "auto_label": "different_person",
+    "strength": "medium",
+    "reason": "distinct_pages_unit_conflict",
+    "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=True）",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "金隼",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-d0dcd16912aa1a87587c",
+      "dept": "机械与动力工程学院",
+      "home": "https://me.sjtu.edu.cn/teacher_directory1/jinsun"
+    },
+    "b": {
+      "id": "official-28ce720eddff87c9bb96",
+      "dept": "数学科学学院",
+      "home": "https://me.sjtu.edu.cn/teacher_directory1/jinsun"
+    },
+    "same_dept": false,
+    "emb": 0.9857,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "same_person",
+    "strength": "none",
+    "reason": "shared_dedicated_page",
+    "note": "共享主页的站点归属与其中一条记录的院系不符（该站点 99.3% 的记录来自「机械与动力工程学院」，样本 283 条），无法排除「按姓名匹配接错主页」",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "毛红威",
@@ -31,7 +170,42 @@
     },
     "same_dept": false,
     "emb": 0.9815,
-    "verdict": "疑似同人"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "listing_page",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "roster",
+    "page_b": "roster",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "饶明军",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-a7383433b1416c3f2b54",
+      "dept": "冶金工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/raomingjun/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-9e49acacaebcc2d17d64",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/raomingjun/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.9807,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
   },
   {
     "name": "马壮",
@@ -48,7 +222,16 @@
     },
     "same_dept": false,
     "emb": 0.9805,
-    "verdict": "疑似同人"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "listing_page",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "roster",
+    "page_b": "roster",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "李敏",
@@ -65,7 +248,42 @@
     },
     "same_dept": false,
     "emb": 0.9799,
-    "verdict": "疑似同人"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "listing_page",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "roster",
+    "page_b": "roster",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "董中林",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-c966bcbfbfd56bf64e4e",
+      "dept": "冶金工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/dongzhonglin/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-b088decf12a41109f322",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/dongzhonglin/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.9781,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
   },
   {
     "name": "李兵",
@@ -82,7 +300,198 @@
     },
     "same_dept": false,
     "emb": 0.9742,
-    "verdict": "疑似同人"
+    "verdict": "疑似异人",
+    "label": "different_person",
+    "auto_label": "different_person",
+    "strength": "medium",
+    "reason": "distinct_pages_unit_conflict",
+    "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=True）",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "朱建裕",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-2f3812410306f6def67e",
+      "dept": "冶金工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/zhujianyu/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-a48730de464a274dca63",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/zhujianyu/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.9734,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "樊春海",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-457a67066ed7ab93dcb8",
+      "dept": "物理与天文学院（含李政道研究所）",
+      "home": "http://scce.sjtu.edu.cn/jiaoshi.php?aid=2845&c=3"
+    },
+    "b": {
+      "id": "official-0be8ab3fb57ba6c34ecc",
+      "dept": "化学化工学院",
+      "home": "http://scce.sjtu.edu.cn/jiaoshi.php?aid=2845&c=3"
+    },
+    "same_dept": false,
+    "emb": 0.9721,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "same_person",
+    "strength": "none",
+    "reason": "shared_dedicated_page",
+    "note": "共享主页的站点归属与其中一条记录的院系不符（该站点 98.3% 的记录来自「化学化工学院」，样本 59 条），无法排除「按姓名匹配接错主页」",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "胡文吉豪",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-69b61c56af0b8ff641c9",
+      "dept": "材料科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/huwenjihao1/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-7e6a0890bb52c7b49c0d",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/huwenjihao1/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.9691,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "彭志伟",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-903d9073e79022622243",
+      "dept": "冶金工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/pengzhiwei/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-4a897eb790cf3af646f3",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/pengzhiwei/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.9629,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "卢洋",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-138473c1815ca6804160",
+      "dept": "冶金工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/luyang/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-0fe9026046cf5d0e1af6",
+      "dept": "材料科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/luyang/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.9601,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "宋云峰",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-ec06c45c5d0ed405f028",
+      "dept": "冶金工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/songyunfeng/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-acd513402ea92bc41678",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/songyunfeng/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.9555,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "王军",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-ac6b9c4a8992037af028",
+      "dept": "冶金工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/wangjun/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-02d2e267774018281e0e",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/wangjun/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.9551,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
   },
   {
     "name": "叶智慧",
@@ -99,7 +508,302 @@
     },
     "same_dept": false,
     "emb": 0.9522,
-    "verdict": "疑似同人"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "赵红波",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-52ad56cc58fc7b9b3ba8",
+      "dept": "冶金工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/HongboZhao/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-cbbc1e99a45e40f1e489",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/HongboZhao/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.9341,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "郭宇峰",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-0ab5e8abb74fdf797f30",
+      "dept": "冶金工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/guoyufeng/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-957ff34341b4ca5f4c51",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/guoyufeng/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.9333,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "王帅",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-4e314df33ea0fc654314",
+      "dept": "冶金工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/wang_shuai/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-24d2aebcd23876c919be",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/wang_shuai/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.9329,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "钟强",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-0139039026ede28867c4",
+      "dept": "冶金工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/zhongqiang12/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-5dfeea72cdacf89b81e2",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/zhongqiang12/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.9317,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "张元波",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-6d1fa93c044ff193ce15",
+      "dept": "冶金工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/zhangyuanbo/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-fb50c4ec306fdb40a1f1",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/zhangyuanbo/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.9308,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "徐斌",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-080014b5809f605fd5cb",
+      "dept": "冶金工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/xubin/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-26a3e6cf6b750f896d68",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/xubin/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.9288,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "李光辉",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-07f11f789488c36076d5",
+      "dept": "冶金工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/liguanghui/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-49235112bc498236808a",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/liguanghui/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.9271,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "李云",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-9cbdf3f5c85270c77441",
+      "dept": "冶金工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/liyun88/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-4ecbcff2d906bd7a9453",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/liyun88/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.9243,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "李骞",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-ccb0a8e8c60833ddbe40",
+      "dept": "冶金工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/liqian/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-8edde5a055d5830cb39a",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/liqian/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.924,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "方华婵",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-b3d46d195d110e9ae8d7",
+      "dept": "冶金工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/fanghuachan/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-54e221bfcda674668943",
+      "dept": "材料科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/fanghuachan/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.923,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "范晓慧",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-85c6b32aea0a4dbd8399",
+      "dept": "冶金工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/fanxiaohui/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-19aec694f461c51d612e",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/fanxiaohui/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.9211,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
   },
   {
     "name": "董立河",
@@ -116,7 +820,328 @@
     },
     "same_dept": false,
     "emb": 0.9165,
-    "verdict": "疑似同人"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "personal",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "刘丝靓",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-749765dffa7723b8bc98",
+      "dept": "冶金工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/liusijing/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-e97209fc55db155de3db",
+      "dept": "材料科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/liusijing/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.9068,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "窦坤",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-66b2594ae29a9240f189",
+      "dept": "冶金工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/doukun/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-1f44011b0fc44ed72db1",
+      "dept": "材料科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/doukun/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.9066,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "崔葵馨",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-be8bfbcf40ea9eaa4211",
+      "dept": "材料科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/cuikuixin/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-d471eb2c32682b2b4839",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/cuikuixin/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.9055,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "刘苏彪",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-1221efe2565f758958ba",
+      "dept": "材料科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/liusubiao/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-e3aeb3fdf0ff571f69d1",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/liusubiao/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.9033,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "刘元东",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-0587c17897fe96cb3d2a",
+      "dept": "材料科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/liuyuandong/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-bde4d0206bba2f21ee0b",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/liuyuandong/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.9017,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "李云",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-c7f28543494f0100d54f",
+      "dept": "材料科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/liyun88/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-4ecbcff2d906bd7a9453",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/liyun88/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.8972,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "李云",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-9cbdf3f5c85270c77441",
+      "dept": "冶金工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/liyun88/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-c7f28543494f0100d54f",
+      "dept": "材料科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/liyun88/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.897,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "杨晓光",
+    "institution": "中国科学院大学",
+    "a": {
+      "id": "official-b5e2671c5e0d68d2211c",
+      "dept": "数学与系统科学研究院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-c01de1831521651d863b",
+      "dept": "经济与管理学院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.895,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "汪寿阳",
+    "institution": "中国科学院大学",
+    "a": {
+      "id": "official-6fe58ea0ecc41384b65e",
+      "dept": "数学与系统科学研究院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-9afeed80ab4f03eff0fb",
+      "dept": "经济与管理学院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.895,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "洪永淼",
+    "institution": "中国科学院大学",
+    "a": {
+      "id": "official-f77229bc7d2f4b2da6be",
+      "dept": "数学与系统科学研究院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-42b76354d5bc5e678e60",
+      "dept": "经济与管理学院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.895,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "杨志峰",
+    "institution": "北京师范大学",
+    "a": {
+      "id": "official-2404e0cd70c7b0ee3760",
+      "dept": "环境学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-263a5ba84291d778a685",
+      "dept": "未来技术学院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.8935,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "谢磊",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-dfc33b953275780f280f",
+      "dept": "材料科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/xielei/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-6a4feb2db077e07beab3",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/xielei/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.891,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
   },
   {
     "name": "王博",
@@ -133,7 +1158,16 @@
     },
     "same_dept": false,
     "emb": 0.8883,
-    "verdict": "疑似同人"
+    "verdict": "疑似异人",
+    "label": "different_person",
+    "auto_label": "different_person",
+    "strength": "medium",
+    "reason": "distinct_pages_unit_conflict",
+    "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=True）",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "朱舟元",
@@ -150,7 +1184,68 @@
     },
     "same_dept": false,
     "emb": 0.8852,
-    "verdict": "疑似同人"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "颜旭",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-0636ce851d37e98f8492",
+      "dept": "冶金工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/yanxu1/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-d8a571e854080a909fdc",
+      "dept": "环境科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/yanxu1/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.8842,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "李云",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-c7f28543494f0100d54f",
+      "dept": "材料科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/liyun88/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-d33bbd328ec1a4b913f5",
+      "dept": "环境科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/liyun88/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.8825,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
   },
   {
     "name": "张逸群",
@@ -167,7 +1262,120 @@
     },
     "same_dept": false,
     "emb": 0.8813,
-    "verdict": "疑似同人"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "钟德云",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-21fe055f226c31ceabae",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/zhongdeyun/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-a1a6c706fe1cc0d9cb9d",
+      "dept": "安全科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/zhongdeyun/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.8801,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "黄麟淇",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-a7971fd8124eca5c9779",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/huanglinqi/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-0a761112f7f12c331700",
+      "dept": "安全科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/huanglinqi/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.8782,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "董陇军",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-f4bfaf8da6a55324193b",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/donglongjun/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-0dd1cde9a9c574b62cee",
+      "dept": "安全科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/donglongjun/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.8774,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "林杭",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-90d705d1950dea622dc4",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/linhang/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-1523d3671cae7f2164b0",
+      "dept": "安全科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/linhang/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.8746,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
   },
   {
     "name": "安峰辰",
@@ -184,7 +1392,120 @@
     },
     "same_dept": false,
     "emb": 0.8716,
-    "verdict": "疑似同人"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "闵小波",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-ea583ab7b2d9ddca03f8",
+      "dept": "冶金工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/minxiaobo/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-ee0b9a9a60534c4a36ad",
+      "dept": "环境科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/minxiaobo/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.8711,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "洪亮",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-cad72d65871f88874b64",
+      "dept": "计算机学院",
+      "home": "https://www.physics.sjtu.edu.cn/jsml/hongliang.html"
+    },
+    "b": {
+      "id": "official-3acd7eadeb3d9a099b12",
+      "dept": "生命科学技术学院（含系统生物医学研究院）",
+      "home": "https://www.physics.sjtu.edu.cn/jsml/hongliang.html"
+    },
+    "same_dept": false,
+    "emb": 0.8704,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "same_person",
+    "strength": "none",
+    "reason": "shared_dedicated_page",
+    "note": "共享主页的站点归属与其中一条记录的院系不符（该站点 94.6% 的记录来自「物理与天文学院」，样本 92 条），无法排除「按姓名匹配接错主页」",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "张钦礼",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-1fc2656b7aad4c8a4f8d",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/zhangqinli/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-9350a1ce2f617c22218c",
+      "dept": "安全科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/zhangqinli/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.869,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "杨珊",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-d3b6fc7dc64973d4f78d",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/yangshan/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-dd3141d1652ae8355a3f",
+      "dept": "安全科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/yangshan/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.8683,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
   },
   {
     "name": "赵海宁",
@@ -201,7 +1522,198 @@
     },
     "same_dept": false,
     "emb": 0.8675,
-    "verdict": "疑似同人"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "刘希灵",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-45d550a488ef5a038aa7",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/liuxiling1/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-2b928273eb1d78d93b32",
+      "dept": "安全科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/liuxiling1/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.8635,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "李云",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-4ecbcff2d906bd7a9453",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/liyun88/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-d33bbd328ec1a4b913f5",
+      "dept": "环境科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/liyun88/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.8605,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "陈永明",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-9eb81b81cc9091e694d7",
+      "dept": "冶金工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/chenyongming/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-9e5c5261ca9860fd4041",
+      "dept": "环境科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/chenyongming/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.8605,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "谢磊",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-dfc33b953275780f280f",
+      "dept": "材料科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/xielei/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-f88bcbcd3e68f78d5d8e",
+      "dept": "环境科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/xielei/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.8592,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "李孜军",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-a3ba55b8b18913b8dd55",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/lizijun/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-7b7d1b9e5d93526a3959",
+      "dept": "安全科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/lizijun/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.8585,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "李云",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-9cbdf3f5c85270c77441",
+      "dept": "冶金工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/liyun88/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-d33bbd328ec1a4b913f5",
+      "dept": "环境科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/liyun88/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.857,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "陈建宏",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-69235935c616245198a7",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/chenjianhong/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-ccdebe7b92393768039a",
+      "dept": "安全科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/chenjianhong/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.8527,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
   },
   {
     "name": "张宇",
@@ -218,7 +1730,16 @@
     },
     "same_dept": false,
     "emb": 0.8523,
-    "verdict": "疑似同人"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url+listing_page",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "roster",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "陈浩",
@@ -235,7 +1756,16 @@
     },
     "same_dept": false,
     "emb": 0.8513,
-    "verdict": "疑似同人"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "张涛",
@@ -252,7 +1782,68 @@
     },
     "same_dept": false,
     "emb": 0.8509,
-    "verdict": "疑似同人"
+    "verdict": "疑似异人",
+    "label": "different_person",
+    "auto_label": "different_person",
+    "strength": "medium",
+    "reason": "distinct_pages_unit_conflict",
+    "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=True）",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "张理源",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-6a17d228bf050100a040",
+      "dept": "冶金工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/zhangliyuan/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-d7f022279ec977b9c245",
+      "dept": "环境科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/zhangliyuan/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.8496,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "周子龙",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-8c5b60dca6a0f85163d3",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/zhouzilong/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-44627e43aa485e56829c",
+      "dept": "安全科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/zhouzilong/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.8495,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
   },
   {
     "name": "王宴滨",
@@ -269,7 +1860,120 @@
     },
     "same_dept": false,
     "emb": 0.8492,
-    "verdict": "待核"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "谢磊",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-6a4feb2db077e07beab3",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/xielei/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-f88bcbcd3e68f78d5d8e",
+      "dept": "环境科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/xielei/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.8482,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "柯勇",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-95dbe376bfb48a756f25",
+      "dept": "冶金工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/keyong1/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-90f08bae44e3566fadb6",
+      "dept": "环境科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/keyong1/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.8444,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "彭康",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-7e6d92fbaa81d30c3891",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/pengkang/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-d2ea0b527cde12f1795e",
+      "dept": "安全科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/pengkang/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.8441,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "李启月",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-023f6afb9edae0180dc3",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/liqiyue/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-45e2b4240ce8e84aeec2",
+      "dept": "安全科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/liqiyue/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.8432,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
   },
   {
     "name": "罗欣",
@@ -286,7 +1990,120 @@
     },
     "same_dept": false,
     "emb": 0.8427,
-    "verdict": "待核"
+    "verdict": "疑似异人",
+    "label": "different_person",
+    "auto_label": "different_person",
+    "strength": "medium",
+    "reason": "distinct_pages_unit_conflict",
+    "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "汪阳东",
+    "institution": "中国林业科学研究院",
+    "a": {
+      "id": "official-532d69a9c4316d55ae47",
+      "dept": "亚林所",
+      "home": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31491"
+    },
+    "b": {
+      "id": "official-f45ca17ba9a487c79678",
+      "dept": "重点实验室",
+      "home": "https://caf.teacher.360eol.com/teacherBasic/preview?teacherId=31491"
+    },
+    "same_dept": false,
+    "emb": 0.8397,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "strong",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "胡清纯",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-1d27f766a80e3eddc2e4",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/huqingchun/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-c8c59c78fcde289f3f6d",
+      "dept": "安全科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/huqingchun/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.8387,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "程义",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-e48f0fa749d688d0c913",
+      "dept": "冶金工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/chengyi/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-364dd32473289a37710b",
+      "dept": "环境科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/chengyi/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.8373,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "李翔",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-09c81c517db51399fc1b",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/lixiang/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-e3d14d123ba3270a1f2e",
+      "dept": "安全科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/lixiang/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.8318,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
   },
   {
     "name": "安永生",
@@ -303,7 +2120,42 @@
     },
     "same_dept": false,
     "emb": 0.8308,
-    "verdict": "待核"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "蒋冲",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-6131690fa9b4e9444d56",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/jiangchong/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-344fc3cf7a0dcb685988",
+      "dept": "安全科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/jiangchong/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.8302,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
   },
   {
     "name": "陈池来",
@@ -320,7 +2172,16 @@
     },
     "same_dept": false,
     "emb": 0.8302,
-    "verdict": "待核"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "listing_page",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "personal",
+    "page_b": "roster",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "刘洋",
@@ -337,7 +2198,42 @@
     },
     "same_dept": false,
     "emb": 0.8295,
-    "verdict": "待核"
+    "verdict": "疑似异人",
+    "label": "different_person",
+    "auto_label": "different_person",
+    "strength": "medium",
+    "reason": "distinct_pages_unit_conflict",
+    "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "邓红卫",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-918b09ab36feef80ec14",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/denghongwei/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-f2d315e24e7246abf5c6",
+      "dept": "安全科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/denghongwei/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.8261,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
   },
   {
     "name": "王琳琳",
@@ -354,7 +2250,250 @@
     },
     "same_dept": false,
     "emb": 0.8231,
-    "verdict": "待核"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "周剑之",
+    "institution": "北京师范大学",
+    "a": {
+      "id": "official-eb7f87afe496ec650ece",
+      "dept": "文学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-7ac0b5d5f55f844eb546",
+      "dept": "中华文化研究院丨京师书院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.8225,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "姚爱斌",
+    "institution": "北京师范大学",
+    "a": {
+      "id": "official-39b380265ab9c47f9f99",
+      "dept": "文学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-5fb829aba02ab14187b6",
+      "dept": "中华文化研究院丨京师书院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.8225,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "康震",
+    "institution": "北京师范大学",
+    "a": {
+      "id": "official-d87ea159c35ce27cf4b3",
+      "dept": "文学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-f7f0ad28ef46f3076e7a",
+      "dept": "中华文化研究院丨京师书院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.8225,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "张莉",
+    "institution": "北京师范大学",
+    "a": {
+      "id": "official-f52b28f7d96c0fbf03c3",
+      "dept": "文学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-2a7f77f58f16ab5348d4",
+      "dept": "中华文化研究院丨京师书院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.8225,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "杜桂萍",
+    "institution": "北京师范大学",
+    "a": {
+      "id": "official-306626512cc8a4a1fa5b",
+      "dept": "文学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-eede7a8155d619ac0b42",
+      "dept": "中华文化研究院丨京师书院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.8225,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "王立军",
+    "institution": "北京师范大学",
+    "a": {
+      "id": "official-d6dc91f3283372719a24",
+      "dept": "文学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-8e68350b0ba1b970b04b",
+      "dept": "中华文化研究院丨京师书院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.8225,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "马东瑶",
+    "institution": "北京师范大学",
+    "a": {
+      "id": "official-ce8572ef159034095ecc",
+      "dept": "文学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-af7cff17e5d6850b9689",
+      "dept": "中华文化研究院丨京师书院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.8225,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "刘敦文",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-9734b60f2ac035444151",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/liudunwen/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-b5ec05f047c7514e995e",
+      "dept": "安全科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/liudunwen/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.8195,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "刘志伟",
+    "institution": "军事科学院",
+    "a": {
+      "id": "official-664a8bbe98281a44170c",
+      "dept": "直属单位三",
+      "home": ""
+    },
+    "b": {
+      "id": "official-700ca033cfcc091cde2b",
+      "dept": "直属单位七",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.8168,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "邓金根",
@@ -371,7 +2510,16 @@
     },
     "same_dept": false,
     "emb": 0.8137,
-    "verdict": "待核"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "李帆",
@@ -388,7 +2536,42 @@
     },
     "same_dept": false,
     "emb": 0.8084,
-    "verdict": "待核"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "personal",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "张勇",
+    "institution": "中国科学院大学",
+    "a": {
+      "id": "official-1d234367a76292ba748d",
+      "dept": "南京地质古生物研究所",
+      "home": ""
+    },
+    "b": {
+      "id": "official-113f7880acdd51504d76",
+      "dept": "南京天文光学技术研究所",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.8077,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "卢运虎",
@@ -405,7 +2588,16 @@
     },
     "same_dept": false,
     "emb": 0.8071,
-    "verdict": "待核"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "张振",
@@ -422,7 +2614,42 @@
     },
     "same_dept": false,
     "emb": 0.8059,
-    "verdict": "待核"
+    "verdict": "疑似异人",
+    "label": "different_person",
+    "auto_label": "different_person",
+    "strength": "medium",
+    "reason": "distinct_pages_unit_conflict",
+    "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "黄仁东",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-fa7cfab660ea9e5b766b",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/huangrendong/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-792a06a1420ed82f858b",
+      "dept": "安全科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/huangrendong/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.8015,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
   },
   {
     "name": "杨进",
@@ -439,7 +2666,16 @@
     },
     "same_dept": false,
     "emb": 0.7981,
-    "verdict": "待核"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "王海柱",
@@ -456,7 +2692,42 @@
     },
     "same_dept": false,
     "emb": 0.7969,
-    "verdict": "待核"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "陶明",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-753636acf461b927e78b",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/Tao_Ming/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-33c52779682c548c2f22",
+      "dept": "安全科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/Tao_Ming/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.7968,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
   },
   {
     "name": "李红霞",
@@ -473,7 +2744,42 @@
     },
     "same_dept": false,
     "emb": 0.7963,
-    "verdict": "待核"
+    "verdict": "疑似异人",
+    "label": "different_person",
+    "auto_label": "different_person",
+    "strength": "medium",
+    "reason": "distinct_pages_unit_conflict",
+    "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "韩兆军",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-866dd17db55cd8c592a7",
+      "dept": "材料科学与工程学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-9b876c5df144a7ec7391",
+      "dept": "化学化工学院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.796,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "刘啸奔",
@@ -490,7 +2796,94 @@
     },
     "same_dept": false,
     "emb": 0.7916,
-    "verdict": "待核"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "刘冰",
+    "institution": "北京师范大学",
+    "a": {
+      "id": "official-021926ab54781ea14fe9",
+      "dept": "社会学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-c947ac2449e193616dc4",
+      "dept": "心理学部",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.7846,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "邹一可",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-c59a8bf3e8e08cd951c9",
+      "dept": "化学化工学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-07011a23ce891f8651bc",
+      "dept": "药学院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.7838,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "胡海龙",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-508e30f3b63544f85f7b",
+      "dept": "材料科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/huhailong/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-104204d2678417c21333",
+      "dept": "航空宇航科学与技术（学科列表）",
+      "home": "http://faculty.csu.edu.cn/huhailong/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.7831,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
   },
   {
     "name": "刘林海",
@@ -507,7 +2900,16 @@
     },
     "same_dept": false,
     "emb": 0.7827,
-    "verdict": "待核"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "personal",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "陈绪跃",
@@ -524,24 +2926,16 @@
     },
     "same_dept": false,
     "emb": 0.7795,
-    "verdict": "待核"
-  },
-  {
-    "name": "李伟",
-    "institution": "上海交通大学",
-    "a": {
-      "id": "official-f3c254568bba623f9912",
-      "dept": "机械与动力工程学院",
-      "home": "https://me.sjtu.edu.cn/teacher_directory1/liwei"
-    },
-    "b": {
-      "id": "official-2602384acac963327df3",
-      "dept": "材料科学与工程学院",
-      "home": "http://faculty.sjtu.edu.cn/liwei123456"
-    },
-    "same_dept": false,
-    "emb": 0.7738,
-    "verdict": "待核"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "张鹏",
@@ -558,7 +2952,68 @@
     },
     "same_dept": false,
     "emb": 0.7738,
-    "verdict": "待核"
+    "verdict": "疑似异人",
+    "label": "different_person",
+    "auto_label": "different_person",
+    "strength": "medium",
+    "reason": "distinct_pages_unit_conflict",
+    "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "李伟",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-f3c254568bba623f9912",
+      "dept": "机械与动力工程学院",
+      "home": "https://me.sjtu.edu.cn/teacher_directory1/liwei"
+    },
+    "b": {
+      "id": "official-2602384acac963327df3",
+      "dept": "材料科学与工程学院",
+      "home": "http://faculty.sjtu.edu.cn/liwei123456"
+    },
+    "same_dept": false,
+    "emb": 0.7738,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "listing_page",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "roster",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "申清臣",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-f430d476ff6ff27e80e4",
+      "dept": "机械与动力工程学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-baad8d58ca9e1412b042",
+      "dept": "材料科学与工程学院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.7738,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "刘磊",
@@ -575,7 +3030,42 @@
     },
     "same_dept": false,
     "emb": 0.7706,
-    "verdict": "待核"
+    "verdict": "疑似异人",
+    "label": "different_person",
+    "auto_label": "different_person",
+    "strength": "medium",
+    "reason": "distinct_pages_unit_conflict",
+    "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "鞠熙",
+    "institution": "北京师范大学",
+    "a": {
+      "id": "official-7ee5008b0718be99afec",
+      "dept": "社会学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-4bc4aa5b7107de0c2a9b",
+      "dept": "中华文化研究院丨京师书院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.7654,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "陈志明",
@@ -592,7 +3082,42 @@
     },
     "same_dept": false,
     "emb": 0.7637,
-    "verdict": "待核"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "王颖",
+    "institution": "北京师范大学",
+    "a": {
+      "id": "official-4fbbda3b57fe3cd2d640",
+      "dept": "化学学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-163d300fe97b805e9e80",
+      "dept": "环境学院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.7624,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "孙挺",
@@ -609,7 +3134,16 @@
     },
     "same_dept": false,
     "emb": 0.7621,
-    "verdict": "待核"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "刘海龙",
@@ -626,7 +3160,640 @@
     },
     "same_dept": false,
     "emb": 0.7609,
-    "verdict": "待核"
+    "verdict": "疑似异人",
+    "label": "different_person",
+    "auto_label": "different_person",
+    "strength": "medium",
+    "reason": "distinct_pages_unit_conflict",
+    "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "胡文吉豪",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-69b61c56af0b8ff641c9",
+      "dept": "材料科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/huwenjihao1/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-ff75242e46f04601e906",
+      "dept": "环境科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/huwenjihao1/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.7593,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "王飞",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-26c4d261db1e709f005c",
+      "dept": "数学科学学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-c39bfd270423779cf9d6",
+      "dept": "化学化工学院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.7579,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "陈掌星",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-3ec209a0226375dc716f",
+      "dept": "数学科学学院",
+      "home": "https://www.eias.ac.cn/?teachers_category=teachers-list"
+    },
+    "b": {
+      "id": "official-e5a45a6d3f7cf32db49f",
+      "dept": "化学化工学院",
+      "home": "https://www.eias.ac.cn/?teachers_category=teachers-list"
+    },
+    "same_dept": false,
+    "emb": 0.7579,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "陈曦",
+    "institution": "中国科学院大学",
+    "a": {
+      "id": "official-a1d2ad385a07201e6afa",
+      "dept": "大气物理研究所",
+      "home": ""
+    },
+    "b": {
+      "id": "official-6f3987578406d7569d15",
+      "dept": "精密测量科学与技术创新研究院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.7565,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "赵子谦",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-bb5c14d640fbe2d480b4",
+      "dept": "材料科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/zhaoziqian_MSSE/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-f20aea68973887529155",
+      "dept": "环境科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/zhaoziqian_MSSE/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.7555,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "张贵清",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-c8d0fbae82c034412b59",
+      "dept": "冶金工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/zhangguiqing/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-8805808c139918c692b7",
+      "dept": "环境科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/zhangguiqing/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.7512,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "余胜泉",
+    "institution": "北京师范大学",
+    "a": {
+      "id": "official-e4bb1664f2dcb2402631",
+      "dept": "教育学部",
+      "home": ""
+    },
+    "b": {
+      "id": "official-f9ed804d708fa0e8fa30",
+      "dept": "人工智能学院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.7504,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "王李管",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-2f52ccc3be915cd5faea",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/wangliguan/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-6e198262aa6543a067c3",
+      "dept": "安全科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/wangliguan/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.7502,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "张春霞",
+    "institution": "中国科学院大学",
+    "a": {
+      "id": "official-6ad9db16dd0ccda3669d",
+      "dept": "地质与地球物理研究所",
+      "home": ""
+    },
+    "b": {
+      "id": "official-c838059c2db2775ca212",
+      "dept": "遗传与发育生物学研究所",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.7495,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "陈磊",
+    "institution": "北京师范大学",
+    "a": {
+      "id": "official-887b7ca57010ec994152",
+      "dept": "哲学学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-8f841332b83ec0d28637",
+      "dept": "环境学院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.7468,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "刘晓东",
+    "institution": "中国科学院大学",
+    "a": {
+      "id": "official-ef20f0597df4d759d92e",
+      "dept": "声学研究所",
+      "home": ""
+    },
+    "b": {
+      "id": "official-cbcaf62bd9159bac1e89",
+      "dept": "数学与系统科学研究院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.7463,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "温诗辉",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-71f0d2d5f9323b7413da",
+      "dept": "材料科学与工程学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-d181ee9fe4d095ca179b",
+      "dept": "化学化工学院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.7423,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "金大勇",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-f7ee7169b82d402d16b0",
+      "dept": "材料科学与工程学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-909b983be149879b37ac",
+      "dept": "化学化工学院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.7423,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "胡文吉豪",
+    "institution": "中南大学",
+    "a": {
+      "id": "official-7e6a0890bb52c7b49c0d",
+      "dept": "矿业工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/huwenjihao1/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-ff75242e46f04601e906",
+      "dept": "环境科学与工程（学科列表）",
+      "home": "http://faculty.csu.edu.cn/huwenjihao1/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.7414,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "吴向东",
+    "institution": "北京师范大学",
+    "a": {
+      "id": "official-fb28f29e13c5c814dbd5",
+      "dept": "哲学学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-985850fb89f117fd9b51",
+      "dept": "中华文化研究院丨京师书院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.7409,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "吴玉军",
+    "institution": "北京师范大学",
+    "a": {
+      "id": "official-23a4241d044c23d6cdf2",
+      "dept": "哲学学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-7b7fa7d6ecd224e21339",
+      "dept": "中华文化研究院丨京师书院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.7409,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "唐热风",
+    "institution": "北京师范大学",
+    "a": {
+      "id": "official-298a7647a18df2c1f9e6",
+      "dept": "哲学学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-b6a20d01665052dbee32",
+      "dept": "中华文化研究院丨京师书院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.7409,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "徐克飞",
+    "institution": "北京师范大学",
+    "a": {
+      "id": "official-d62ad2bed98379548e0e",
+      "dept": "哲学学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-1ccd9db93219e35f7cd3",
+      "dept": "中华文化研究院丨京师书院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.7409,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "李祥俊",
+    "institution": "北京师范大学",
+    "a": {
+      "id": "official-a8543e05b69e6804a4fb",
+      "dept": "哲学学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-7b17e2bb18167a607030",
+      "dept": "中华文化研究院丨京师书院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.7409,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "李红",
+    "institution": "北京师范大学",
+    "a": {
+      "id": "official-5ec0e0598864e4e7fca9",
+      "dept": "哲学学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-f7fada2b1e0821c0fce0",
+      "dept": "中华文化研究院丨京师书院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.7409,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "田海平",
+    "institution": "北京师范大学",
+    "a": {
+      "id": "official-c88327d4223a7fbee5d1",
+      "dept": "哲学学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-4b7fb79c405e792346d1",
+      "dept": "中华文化研究院丨京师书院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.7409,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "章伟文",
+    "institution": "北京师范大学",
+    "a": {
+      "id": "official-076968d10db6cc457774",
+      "dept": "哲学学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-8200d9612ea72d9e06e9",
+      "dept": "中华文化研究院丨京师书院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.7409,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "蒋丽梅",
+    "institution": "北京师范大学",
+    "a": {
+      "id": "official-faa5fbbc22a4ffde1af7",
+      "dept": "哲学学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-20813b5f0998a0019ca1",
+      "dept": "中华文化研究院丨京师书院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.7409,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "许家星",
+    "institution": "北京师范大学",
+    "a": {
+      "id": "official-3d80709648751200e896",
+      "dept": "哲学学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-179f8d80609d14a8b0fa",
+      "dept": "中华文化研究院丨京师书院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.7409,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "张荻",
@@ -643,7 +3810,68 @@
     },
     "same_dept": false,
     "emb": 0.74,
-    "verdict": "待核"
+    "verdict": "疑似异人",
+    "label": "different_person",
+    "auto_label": "different_person",
+    "strength": "medium",
+    "reason": "distinct_pages_unit_conflict",
+    "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "李伟",
+    "institution": "中国科学院大学",
+    "a": {
+      "id": "official-fefd45ae6ffde6579f82",
+      "dept": "半导体研究所",
+      "home": ""
+    },
+    "b": {
+      "id": "official-a9aeb1c8d529972dc34a",
+      "dept": "数学与系统科学研究院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.733,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "金学军",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-f3cc92a892ff8b5bc011",
+      "dept": "材料科学与工程学院",
+      "home": "http://faculty.sjtu.edu.cn/jinxuejun"
+    },
+    "b": {
+      "id": "official-2c48a45bb0bda57085ec",
+      "dept": "生物医学工程学院",
+      "home": "http://faculty.sjtu.edu.cn/jinxuejun"
+    },
+    "same_dept": false,
+    "emb": 0.7323,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
   },
   {
     "name": "王晓东",
@@ -660,7 +3888,120 @@
     },
     "same_dept": false,
     "emb": 0.7312,
-    "verdict": "待核"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "personal",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "俞章盛",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-45ff3ba8884c81241fd4",
+      "dept": "数学科学学院",
+      "home": "http://faculty.sjtu.edu.cn/yuzhangsheng"
+    },
+    "b": {
+      "id": "official-5d6e928d0d951f3c2fc8",
+      "dept": "生命科学技术学院（含系统生物医学研究院）",
+      "home": "http://faculty.sjtu.edu.cn/yuzhangsheng"
+    },
+    "same_dept": false,
+    "emb": 0.7302,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "吕晖",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-9311388ab2c4311eb536",
+      "dept": "数学科学学院",
+      "home": "http://faculty.sjtu.edu.cn/lvhui"
+    },
+    "b": {
+      "id": "official-a1163882b0c162db19fd",
+      "dept": "生命科学技术学院（含系统生物医学研究院）",
+      "home": "http://faculty.sjtu.edu.cn/lvhui"
+    },
+    "same_dept": false,
+    "emb": 0.7302,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "韦朝春",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-9e25ef160557f1ff978a",
+      "dept": "数学科学学院",
+      "home": "http://faculty.sjtu.edu.cn/weichaochun"
+    },
+    "b": {
+      "id": "official-c6de12472e1d6cecf1b0",
+      "dept": "生命科学技术学院（含系统生物医学研究院）",
+      "home": "http://faculty.sjtu.edu.cn/weichaochun"
+    },
+    "same_dept": false,
+    "emb": 0.7302,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "杨静",
+    "institution": "中国科学院大学",
+    "a": {
+      "id": "official-9764912c0ebf3c3ced8d",
+      "dept": "大气物理研究所",
+      "home": ""
+    },
+    "b": {
+      "id": "official-01c15b568378b0ef4cbc",
+      "dept": "半导体研究所",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.7292,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "李锐",
@@ -677,7 +4018,172 @@
     },
     "same_dept": false,
     "emb": 0.7281,
-    "verdict": "待核"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "personal",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "王浩",
+    "institution": "中国科学院大学",
+    "a": {
+      "id": "official-64bfb689d9e19f021469",
+      "dept": "国家纳米科学中心",
+      "home": ""
+    },
+    "b": {
+      "id": "official-362290be9430614900f3",
+      "dept": "地质与地球物理研究所",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.7258,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "康世昌",
+    "institution": "中国科学院大学",
+    "a": {
+      "id": "official-933919e0f8dfe4cb321e",
+      "dept": "西北生态环境资源研究院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-754c7b72ee1efd58986d",
+      "dept": "成都山地灾害与环境研究所",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.7252,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "刘宇",
+    "institution": "中国科学院大学",
+    "a": {
+      "id": "official-f504626b311815338042",
+      "dept": "半导体研究所",
+      "home": ""
+    },
+    "b": {
+      "id": "official-c18efd0e751102102ae7",
+      "dept": "声学研究所",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.7251,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "李芳",
+    "institution": "中国科学院大学",
+    "a": {
+      "id": "official-8e5ca6ee40a347f5621e",
+      "dept": "大气物理研究所",
+      "home": ""
+    },
+    "b": {
+      "id": "official-ec51a1528c60945a8deb",
+      "dept": "半导体研究所",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.7248,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "王勇",
+    "institution": "中国科学院大学",
+    "a": {
+      "id": "official-210e268978227e7befd0",
+      "dept": "精密测量科学与技术创新研究院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-98904673c9f0d8b60152",
+      "dept": "数学与系统科学研究院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.7235,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "王颖",
+    "institution": "北京师范大学",
+    "a": {
+      "id": "official-afc9083cf8ee4652657e",
+      "dept": "政府管理学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-4fbbda3b57fe3cd2d640",
+      "dept": "化学学院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.7212,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "王丽",
@@ -694,7 +4200,94 @@
     },
     "same_dept": false,
     "emb": 0.7172,
-    "verdict": "待核"
+    "verdict": "疑似异人",
+    "label": "different_person",
+    "auto_label": "different_person",
+    "strength": "medium",
+    "reason": "distinct_pages_unit_conflict",
+    "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "王旭",
+    "institution": "中国科学院大学",
+    "a": {
+      "id": "official-5ce515bf2f770c75afe2",
+      "dept": "地质与地球物理研究所",
+      "home": ""
+    },
+    "b": {
+      "id": "official-93006cafb47cec23485d",
+      "dept": "数学与系统科学研究院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.7158,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "王立刚",
+    "institution": "中国农业科学院",
+    "a": {
+      "id": "official-a3c1ae72dd2d00c8deb4",
+      "dept": "资源区划所",
+      "home": ""
+    },
+    "b": {
+      "id": "official-bf4923071f5687c6dbef",
+      "dept": "畜牧兽医所",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.7156,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "高波",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-ccd700a6a275e05362ee",
+      "dept": "物理与天文学院（含李政道研究所）",
+      "home": ""
+    },
+    "b": {
+      "id": "official-c58c9c33979cb968f65b",
+      "dept": "航空航天学院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.7129,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "刘亚东",
@@ -711,7 +4304,16 @@
     },
     "same_dept": false,
     "emb": 0.7118,
-    "verdict": "待核"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "listing_page",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "personal",
+    "page_b": "roster",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "孙晓建",
@@ -728,7 +4330,68 @@
     },
     "same_dept": false,
     "emb": 0.7104,
-    "verdict": "待核"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url+listing_page",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "roster",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "李平",
+    "institution": "中国农业科学院",
+    "a": {
+      "id": "official-593d77787ac5761be39a",
+      "dept": "灌溉所",
+      "home": ""
+    },
+    "b": {
+      "id": "official-1fcf0ecd9912569e5252",
+      "dept": "草原所",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.7084,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "李海东",
+    "institution": "中国科学院大学",
+    "a": {
+      "id": "official-ba7ae0e1ef0011dddefa",
+      "dept": "精密测量科学与技术创新研究院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-7405e351794fafc440f0",
+      "dept": "经济与管理学院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.7077,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "张鹏",
@@ -745,7 +4408,16 @@
     },
     "same_dept": false,
     "emb": 0.7069,
-    "verdict": "待核"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "listing_page",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "roster",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "李锐",
@@ -762,7 +4434,198 @@
     },
     "same_dept": false,
     "emb": 0.7004,
-    "verdict": "待核"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "personal",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "王颖",
+    "institution": "北京师范大学",
+    "a": {
+      "id": "official-afc9083cf8ee4652657e",
+      "dept": "政府管理学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-163d300fe97b805e9e80",
+      "dept": "环境学院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.6981,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "刘建国",
+    "institution": "中国科学院大学",
+    "a": {
+      "id": "official-04d32af71bdaed211b84",
+      "dept": "半导体研究所",
+      "home": ""
+    },
+    "b": {
+      "id": "official-a7dfd243c094c2a54803",
+      "dept": "海洋研究所",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.6942,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "原亚焜",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-874ca7462ad82377c6f7",
+      "dept": "材料科学与工程学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-2905d7701eb637b54c61",
+      "dept": "物理与天文学院（含李政道研究所）",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.6941,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "张洁",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-0d679751b8aacb50b295",
+      "dept": "材料科学与工程学院",
+      "home": "https://www.physics.sjtu.edu.cn/jsml/zhangjien.html"
+    },
+    "b": {
+      "id": "official-b7191992ee45cba0d704",
+      "dept": "物理与天文学院（含李政道研究所）",
+      "home": "https://www.physics.sjtu.edu.cn/jsml/zhangjien.html"
+    },
+    "same_dept": false,
+    "emb": 0.6941,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "same_person",
+    "strength": "none",
+    "reason": "shared_dedicated_page",
+    "note": "共享主页的站点归属与其中一条记录的院系不符（该站点 94.6% 的记录来自「物理与天文学院」，样本 92 条），无法排除「按姓名匹配接错主页」",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "李润伟",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-826a205b2cd5dc280c8a",
+      "dept": "材料科学与工程学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-12fcf130ddaca1ddbcc1",
+      "dept": "物理与天文学院（含李政道研究所）",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.6941,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "赵予生",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-52bc2031909ec4c67c2c",
+      "dept": "材料科学与工程学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-175aa79433f45361565b",
+      "dept": "物理与天文学院（含李政道研究所）",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.6941,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "杨晓光",
+    "institution": "中国科学院大学",
+    "a": {
+      "id": "official-f4a3bf844a7c865bc4b3",
+      "dept": "半导体研究所",
+      "home": ""
+    },
+    "b": {
+      "id": "official-b5e2671c5e0d68d2211c",
+      "dept": "数学与系统科学研究院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.6934,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "冯永存",
@@ -779,7 +4642,94 @@
     },
     "same_dept": false,
     "emb": 0.6909,
-    "verdict": "待核"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "王光旭",
+    "institution": "中国科学院大学",
+    "a": {
+      "id": "official-6e316b0a8431bc310a34",
+      "dept": "南京地质古生物研究所",
+      "home": ""
+    },
+    "b": {
+      "id": "official-41448f2042f45cc00640",
+      "dept": "声学研究所",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.6818,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "王磊",
+    "institution": "北京师范大学",
+    "a": {
+      "id": "official-fe51005136125237fbe2",
+      "dept": "政府管理学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-61f9405e6d903e963cf9",
+      "dept": "未来教育学院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.6799,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "赵峰",
+    "institution": "中国科学院大学",
+    "a": {
+      "id": "official-be0bd6cc01ebf2e0db31",
+      "dept": "精密测量科学与技术创新研究院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-044d1f9bb70c244d1028",
+      "dept": "海洋研究所",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.6785,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "杨帆",
@@ -796,7 +4746,16 @@
     },
     "same_dept": false,
     "emb": 0.6779,
-    "verdict": "待核"
+    "verdict": "疑似异人",
+    "label": "different_person",
+    "auto_label": "different_person",
+    "strength": "medium",
+    "reason": "distinct_pages_unit_conflict",
+    "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "陈长鑫",
@@ -813,7 +4772,16 @@
     },
     "same_dept": false,
     "emb": 0.6763,
-    "verdict": "待核"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "listing_page",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "personal",
+    "page_b": "roster",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "李永福",
@@ -830,7 +4798,16 @@
     },
     "same_dept": false,
     "emb": 0.6755,
-    "verdict": "待核"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "listing_page",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "personal",
+    "page_b": "roster",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "陈华",
@@ -847,7 +4824,16 @@
     },
     "same_dept": false,
     "emb": 0.6744,
-    "verdict": "待核"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "listing_page",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "roster",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "程秀兰",
@@ -864,7 +4850,42 @@
     },
     "same_dept": false,
     "emb": 0.6706,
-    "verdict": "待核"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "listing_page",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "personal",
+    "page_b": "roster",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "张强",
+    "institution": "北京师范大学",
+    "a": {
+      "id": "official-cc3b0cb47047d411bceb",
+      "dept": "政府管理学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-830d160acd6f817ffac5",
+      "dept": "未来技术学院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.6677,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "吴开宇",
@@ -881,7 +4902,42 @@
     },
     "same_dept": false,
     "emb": 0.6674,
-    "verdict": "待核"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "listing_page",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "personal",
+    "page_b": "roster",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "徐恒",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-6f2647befd0f6ad16420",
+      "dept": "物理与天文学院（含李政道研究所）",
+      "home": "https://www.physics.sjtu.edu.cn/jsml/xuheng.html"
+    },
+    "b": {
+      "id": "official-bd55cf940d5f2d80b7e8",
+      "dept": "生命科学技术学院（含系统生物医学研究院）",
+      "home": "https://www.physics.sjtu.edu.cn/jsml/xuheng.html"
+    },
+    "same_dept": false,
+    "emb": 0.6661,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "same_person",
+    "strength": "none",
+    "reason": "shared_dedicated_page",
+    "note": "共享主页的站点归属与其中一条记录的院系不符（该站点 94.6% 的记录来自「物理与天文学院」，样本 92 条），无法排除「按姓名匹配接错主页」",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "刘庆文",
@@ -898,24 +4954,16 @@
     },
     "same_dept": false,
     "emb": 0.666,
-    "verdict": "待核"
-  },
-  {
-    "name": "马麟",
-    "institution": "上海交通大学",
-    "a": {
-      "id": "legacy-f3babb9d38ae885906cc",
-      "dept": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
-      "home": "https://icisee.sjtu.edu.cn/jiaoshiml/malin.html"
-    },
-    "b": {
-      "id": "official-52afb34b00493f98dd77",
-      "dept": "集成电路学院",
-      "home": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html"
-    },
-    "same_dept": false,
-    "emb": 0.666,
-    "verdict": "待核"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "listing_page",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "personal",
+    "page_b": "roster",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "邹卫文",
@@ -932,7 +4980,42 @@
     },
     "same_dept": false,
     "emb": 0.666,
-    "verdict": "待核"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "listing_page",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "personal",
+    "page_b": "roster",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "马麟",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "legacy-f3babb9d38ae885906cc",
+      "dept": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+      "home": "https://icisee.sjtu.edu.cn/jiaoshiml/malin.html"
+    },
+    "b": {
+      "id": "official-52afb34b00493f98dd77",
+      "dept": "集成电路学院",
+      "home": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html"
+    },
+    "same_dept": false,
+    "emb": 0.666,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "listing_page",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "personal",
+    "page_b": "roster",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "林辉锋",
@@ -949,7 +5032,16 @@
     },
     "same_dept": false,
     "emb": 0.6636,
-    "verdict": "待核"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "personal",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "肖鸣飞",
@@ -966,7 +5058,16 @@
     },
     "same_dept": false,
     "emb": 0.6625,
-    "verdict": "待核"
+    "verdict": "疑似异人",
+    "label": "different_person",
+    "auto_label": "different_person",
+    "strength": "medium",
+    "reason": "distinct_pages_unit_conflict",
+    "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "刘世元",
@@ -983,7 +5084,68 @@
     },
     "same_dept": false,
     "emb": 0.6619,
-    "verdict": "待核"
+    "verdict": "疑似异人",
+    "label": "different_person",
+    "auto_label": "different_person",
+    "strength": "medium",
+    "reason": "distinct_pages_unit_conflict",
+    "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "桑红石",
+    "institution": "华中科技大学",
+    "a": {
+      "id": "legacy-3ee923e4160e3ea8e613",
+      "dept": "人工智能与自动化学院／多谱信息智能处理技术全国重点实验室",
+      "home": "http://faculty.hust.edu.cn/sanghongshi/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-8f0715c9296b5a579cbc",
+      "dept": "图像识别与智能科学系",
+      "home": "http://faculty.hust.edu.cn/sanghongshi/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.6616,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "张波",
+    "institution": "中国科学院大学",
+    "a": {
+      "id": "official-49be695718929780fc54",
+      "dept": "青海盐湖研究所",
+      "home": ""
+    },
+    "b": {
+      "id": "official-9d5bf3f088cb59586df4",
+      "dept": "声学研究所",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.6602,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "张先得",
@@ -1000,7 +5162,68 @@
     },
     "same_dept": false,
     "emb": 0.6594,
-    "verdict": "待核"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "listing_page",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "personal",
+    "page_b": "roster",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "李娟",
+    "institution": "北京师范大学",
+    "a": {
+      "id": "official-706d91726088e6e72426",
+      "dept": "马克思主义学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-b914144b9d816385e990",
+      "dept": "未来技术学院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.6589,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "王利",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-2585d9ae78ca6125f72d",
+      "dept": "集成电路学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-f48630b9e00034de937f",
+      "dept": "物理与天文学院（含李政道研究所）",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.6559,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "王磊",
@@ -1017,7 +5240,16 @@
     },
     "same_dept": false,
     "emb": 0.6552,
-    "verdict": "待核"
+    "verdict": "疑似异人",
+    "label": "different_person",
+    "auto_label": "different_person",
+    "strength": "medium",
+    "reason": "distinct_pages_unit_conflict",
+    "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "吴豪",
@@ -1034,7 +5266,16 @@
     },
     "same_dept": false,
     "emb": 0.6468,
-    "verdict": "待核"
+    "verdict": "疑似异人",
+    "label": "different_person",
+    "auto_label": "different_person",
+    "strength": "medium",
+    "reason": "distinct_pages_unit_conflict",
+    "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "李鹏",
@@ -1051,7 +5292,16 @@
     },
     "same_dept": false,
     "emb": 0.6454,
-    "verdict": "待核"
+    "verdict": "疑似异人",
+    "label": "different_person",
+    "auto_label": "different_person",
+    "strength": "medium",
+    "reason": "distinct_pages_unit_conflict",
+    "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "马波",
@@ -1068,7 +5318,16 @@
     },
     "same_dept": false,
     "emb": 0.6415,
-    "verdict": "待核"
+    "verdict": "疑似异人",
+    "label": "different_person",
+    "auto_label": "different_person",
+    "strength": "medium",
+    "reason": "distinct_pages_unit_conflict",
+    "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "吴艳",
@@ -1085,7 +5344,68 @@
     },
     "same_dept": false,
     "emb": 0.641,
-    "verdict": "待核"
+    "verdict": "疑似异人",
+    "label": "different_person",
+    "auto_label": "different_person",
+    "strength": "medium",
+    "reason": "distinct_pages_unit_conflict",
+    "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "杨晓光",
+    "institution": "中国科学院大学",
+    "a": {
+      "id": "official-f4a3bf844a7c865bc4b3",
+      "dept": "半导体研究所",
+      "home": ""
+    },
+    "b": {
+      "id": "official-c01de1831521651d863b",
+      "dept": "经济与管理学院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.641,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "刘桐君",
+    "institution": "华中科技大学",
+    "a": {
+      "id": "legacy-7a8718b50cb55bb43577",
+      "dept": "人工智能与自动化学院",
+      "home": "http://faculty.hust.edu.cn/LIUTONGJUN/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-85dd08886ae139a19c9a",
+      "dept": "智能感知与测量科学系",
+      "home": "http://faculty.hust.edu.cn/LIUTONGJUN/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.6395,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
   },
   {
     "name": "李敏",
@@ -1102,7 +5422,42 @@
     },
     "same_dept": false,
     "emb": 0.6334,
-    "verdict": "待核"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "listing_page",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "personal",
+    "page_b": "roster",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "王伟",
+    "institution": "中国科学院大学",
+    "a": {
+      "id": "official-bf561948b81d620741f6",
+      "dept": "南京地质古生物研究所",
+      "home": ""
+    },
+    "b": {
+      "id": "official-ee59f53a67b0cc21b429",
+      "dept": "软件研究所",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.6326,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "李敏",
@@ -1119,7 +5474,16 @@
     },
     "same_dept": false,
     "emb": 0.63,
-    "verdict": "待核"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "listing_page",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "personal",
+    "page_b": "roster",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "李雨",
@@ -1136,7 +5500,16 @@
     },
     "same_dept": false,
     "emb": 0.6212,
-    "verdict": "待核"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "listing_page",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "personal",
+    "page_b": "roster",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "王旭",
@@ -1153,7 +5526,16 @@
     },
     "same_dept": false,
     "emb": 0.5999,
-    "verdict": "疑似异人"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "listing_page",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "roster",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "徐畅",
@@ -1170,7 +5552,16 @@
     },
     "same_dept": false,
     "emb": 0.5933,
-    "verdict": "疑似异人"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "personal",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "王涛",
@@ -1187,7 +5578,42 @@
     },
     "same_dept": false,
     "emb": 0.5928,
-    "verdict": "疑似异人"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "listing_page",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "personal",
+    "page_b": "roster",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "李锐",
+    "institution": "北京师范大学",
+    "a": {
+      "id": "official-60074d6afb499ad3ddc5",
+      "dept": "经济与工商管理学院",
+      "home": ""
+    },
+    "b": {
+      "id": "official-bb3804f8206d2323aff7",
+      "dept": "中华文化研究院丨京师书院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.5855,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "杨超",
@@ -1204,7 +5630,16 @@
     },
     "same_dept": false,
     "emb": 0.5839,
-    "verdict": "疑似异人"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "personal",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "赵敏",
@@ -1221,7 +5656,16 @@
     },
     "same_dept": false,
     "emb": 0.5834,
-    "verdict": "疑似异人"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "personal",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "万文杰",
@@ -1238,7 +5682,16 @@
     },
     "same_dept": false,
     "emb": 0.5793,
-    "verdict": "疑似异人"
+    "verdict": "疑似异人",
+    "label": "different_person",
+    "auto_label": "different_person",
+    "strength": "medium",
+    "reason": "distinct_pages_unit_conflict",
+    "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=True）",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "程林",
@@ -1255,7 +5708,68 @@
     },
     "same_dept": false,
     "emb": 0.5692,
-    "verdict": "疑似异人"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url+listing_page",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "roster",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "王小平",
+    "institution": "华中科技大学",
+    "a": {
+      "id": "legacy-bbd027d3f77f058a61ac",
+      "dept": "人工智能与自动化学院",
+      "home": "http://faculty.hust.edu.cn/wangxiaoping4/zh_CN/index.htm"
+    },
+    "b": {
+      "id": "official-da71ad2800e533b76691",
+      "dept": "智能系统与系统工程系",
+      "home": "http://faculty.hust.edu.cn/wangxiaoping4/zh_CN/index.htm"
+    },
+    "same_dept": false,
+    "emb": 0.568,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
+  },
+  {
+    "name": "万文杰",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-767dbe5377b4b47b0b0f",
+      "dept": "物理与天文学院（含李政道研究所）",
+      "home": "https://www.ji.sjtu.edu.cn/cn/about/faculty-staff/faculty-directory/faculty-deta"
+    },
+    "b": {
+      "id": "official-297f822fca45cae5a4a3",
+      "dept": "浦江国际学院",
+      "home": "https://www.ji.sjtu.edu.cn/cn/about/faculty-staff/faculty-directory/faculty-deta"
+    },
+    "same_dept": false,
+    "emb": 0.5673,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "same_person",
+    "strength": "none",
+    "reason": "shared_dedicated_page",
+    "note": "共享主页的站点归属与其中一条记录的院系不符（该站点 97.1% 的记录来自「浦江国际学院」，样本 34 条），无法排除「按姓名匹配接错主页」",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "殷月伟",
@@ -1272,7 +5786,16 @@
     },
     "same_dept": false,
     "emb": 0.5574,
-    "verdict": "疑似异人"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "listing_page",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "personal",
+    "page_b": "roster",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "沈胜春",
@@ -1289,7 +5812,16 @@
     },
     "same_dept": false,
     "emb": 0.5499,
-    "verdict": "疑似异人"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "listing_page",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "personal",
+    "page_b": "roster",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "张彤",
@@ -1306,7 +5838,16 @@
     },
     "same_dept": false,
     "emb": 0.5481,
-    "verdict": "疑似异人"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "listing_page",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "roster",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "张朝阳",
@@ -1323,7 +5864,16 @@
     },
     "same_dept": false,
     "emb": 0.547,
-    "verdict": "疑似异人"
+    "verdict": "疑似异人",
+    "label": "different_person",
+    "auto_label": "different_person",
+    "strength": "medium",
+    "reason": "distinct_pages_unit_conflict",
+    "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "万文杰",
@@ -1340,7 +5890,42 @@
     },
     "same_dept": false,
     "emb": 0.5408,
-    "verdict": "疑似异人"
+    "verdict": "疑似异人",
+    "label": "different_person",
+    "auto_label": "different_person",
+    "strength": "medium",
+    "reason": "distinct_pages_unit_conflict",
+    "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "金贤敏",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "legacy-80c42934e2607f027a9e",
+      "dept": "物理与天文学院 / 光子传输与通信全国重点实验室",
+      "home": "https://www.physics.sjtu.edu.cn/jsml/jinxianmin.html"
+    },
+    "b": {
+      "id": "official-6a8821230848548f579d",
+      "dept": "物理与天文学院（含李政道研究所）",
+      "home": "https://www.physics.sjtu.edu.cn/jsml/jinxianmin.html"
+    },
+    "same_dept": false,
+    "emb": 0.5346,
+    "verdict": "疑似同人",
+    "label": "same_person",
+    "auto_label": "same_person",
+    "strength": "medium",
+    "reason": "shared_dedicated_page",
+    "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": false,
+    "auto_merge": false
   },
   {
     "name": "王涛",
@@ -1357,7 +5942,16 @@
     },
     "same_dept": false,
     "emb": 0.5335,
-    "verdict": "疑似异人"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "listing_page",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "roster",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "王涛",
@@ -1374,7 +5968,16 @@
     },
     "same_dept": false,
     "emb": 0.5298,
-    "verdict": "疑似异人"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "listing_page",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "roster",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "王迪",
@@ -1391,7 +5994,42 @@
     },
     "same_dept": false,
     "emb": 0.5253,
-    "verdict": "疑似异人"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "personal",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "田长麟",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-3237ffaf1db2d79944c8",
+      "dept": "生命科学技术学院（含系统生物医学研究院）",
+      "home": ""
+    },
+    "b": {
+      "id": "official-a36ba54c6041cd45ddcc",
+      "dept": "化学化工学院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.5067,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "王成",
@@ -1408,7 +6046,16 @@
     },
     "same_dept": false,
     "emb": 0.5037,
-    "verdict": "疑似异人"
+    "verdict": "疑似异人",
+    "label": "different_person",
+    "auto_label": "different_person",
+    "strength": "medium",
+    "reason": "distinct_pages_unit_conflict",
+    "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "王伟",
@@ -1425,7 +6072,16 @@
     },
     "same_dept": false,
     "emb": 0.4986,
-    "verdict": "疑似异人"
+    "verdict": "疑似异人",
+    "label": "different_person",
+    "auto_label": "different_person",
+    "strength": "medium",
+    "reason": "distinct_pages_unit_conflict",
+    "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "王涛",
@@ -1442,7 +6098,16 @@
     },
     "same_dept": false,
     "emb": 0.4966,
-    "verdict": "疑似异人"
+    "verdict": "疑似异人",
+    "label": "different_person",
+    "auto_label": "different_person",
+    "strength": "medium",
+    "reason": "distinct_pages_unit_conflict",
+    "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "王涛",
@@ -1459,7 +6124,16 @@
     },
     "same_dept": false,
     "emb": 0.4954,
-    "verdict": "疑似异人"
+    "verdict": "疑似异人",
+    "label": "different_person",
+    "auto_label": "different_person",
+    "strength": "medium",
+    "reason": "distinct_pages_unit_conflict",
+    "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "陈诚",
@@ -1476,7 +6150,16 @@
     },
     "same_dept": false,
     "emb": 0.4866,
-    "verdict": "疑似异人"
+    "verdict": "疑似异人",
+    "label": "different_person",
+    "auto_label": "different_person",
+    "strength": "medium",
+    "reason": "distinct_pages_unit_conflict",
+    "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "王锋",
@@ -1493,7 +6176,16 @@
     },
     "same_dept": false,
     "emb": 0.4811,
-    "verdict": "疑似异人"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "personal",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "李新",
@@ -1510,7 +6202,68 @@
     },
     "same_dept": false,
     "emb": 0.48,
-    "verdict": "疑似异人"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "listing_page",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "personal",
+    "page_b": "roster",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "严畅",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-bb8504526ca2a08d679d",
+      "dept": "物理与天文学院（含李政道研究所）",
+      "home": ""
+    },
+    "b": {
+      "id": "official-2c8cd84c64d9cc21e3cc",
+      "dept": "化学化工学院",
+      "home": ""
+    },
+    "same_dept": false,
+    "emb": 0.4727,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
+  },
+  {
+    "name": "贾金平",
+    "institution": "上海交通大学",
+    "a": {
+      "id": "official-67658172c7d8c0311f0a",
+      "dept": "化学化工学院",
+      "home": "http://sese.sjtu.edu.cn/faculty/view/6"
+    },
+    "b": {
+      "id": "official-3daf0888d51796cc3394",
+      "dept": "环境科学与工程学院",
+      "home": "http://sese.sjtu.edu.cn/faculty/view/6"
+    },
+    "same_dept": false,
+    "emb": 0.468,
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "same_person",
+    "strength": "none",
+    "reason": "shared_dedicated_page",
+    "note": "共享主页的站点归属与其中一条记录的院系不符（该站点 88.2% 的记录来自「环境科学与工程学院」，样本 17 条），无法排除「按姓名匹配接错主页」",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "李向阳",
@@ -1527,7 +6280,16 @@
     },
     "same_dept": false,
     "emb": 0.4636,
-    "verdict": "疑似异人"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "listing_page",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "personal",
+    "page_b": "roster",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "吴晓东",
@@ -1544,7 +6306,16 @@
     },
     "same_dept": false,
     "emb": 0.4559,
-    "verdict": "疑似异人"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "listing_page",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "personal",
+    "page_b": "roster",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "吴昊",
@@ -1561,7 +6332,16 @@
     },
     "same_dept": false,
     "emb": 0.4413,
-    "verdict": "疑似异人"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "personal",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "马啸",
@@ -1578,7 +6358,16 @@
     },
     "same_dept": false,
     "emb": 0.439,
-    "verdict": "疑似异人"
+    "verdict": "疑似异人",
+    "label": "different_person",
+    "auto_label": "different_person",
+    "strength": "medium",
+    "reason": "distinct_pages_unit_conflict",
+    "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "李涛",
@@ -1595,7 +6384,16 @@
     },
     "same_dept": false,
     "emb": 0.4278,
-    "verdict": "疑似异人"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "none",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "王斌",
@@ -1612,7 +6410,16 @@
     },
     "same_dept": false,
     "emb": 0.4257,
-    "verdict": "疑似异人"
+    "verdict": "疑似异人",
+    "label": "different_person",
+    "auto_label": "different_person",
+    "strength": "medium",
+    "reason": "distinct_pages_unit_conflict",
+    "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
+    "page_a": "personal",
+    "page_b": "personal",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "陈斌",
@@ -1629,7 +6436,16 @@
     },
     "same_dept": false,
     "emb": 0.4215,
-    "verdict": "疑似异人"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "personal",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "李磊",
@@ -1646,7 +6462,16 @@
     },
     "same_dept": false,
     "emb": 0.4167,
-    "verdict": "疑似异人"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "personal",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
   },
   {
     "name": "陈昕",
@@ -1663,6 +6488,15 @@
     },
     "same_dept": false,
     "emb": 0.4146,
-    "verdict": "疑似异人"
+    "verdict": "待核",
+    "label": "unknown",
+    "auto_label": "unknown",
+    "strength": "none",
+    "reason": "missing_url",
+    "note": "证据不足以判定同人/异人",
+    "page_a": "personal",
+    "page_b": "none",
+    "needs_human_review": true,
+    "auto_merge": false
   }
 ]

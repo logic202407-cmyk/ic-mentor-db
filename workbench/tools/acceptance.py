@@ -71,6 +71,10 @@ def main() -> int:
                       "workbench/tests/test_research_ui.cjs"])
     check("公开前审计", ["node", "tools/audit_prepublish.mjs"])
     check("文档数字一致性", ["node", "tools/check_doc_numbers.mjs"])
+    # 上面那条只校验旧 IC 专题（3,179 人 / 22 校）。当前对外承诺的数字在技术报告、
+    # 提交材料 README 与根 README 的「当前进度」段里，历史上确实长期过期
+    # （报告写 15,177，实际 15,719）。这条把它们钉到事实表上。
+    check("对外材料事实一致性", [PY, "-m", "workbench.tools.check_facts_consistency"])
     # README 徽章是评审第一眼看到的东西，却只是写死的字符串，没人会去更新。
     # 实测曾写着「321 项测试 / 14,271 条记录」，而实际是 707 / 15,719。
     check("README 徽章数字", [PY, "-m", "workbench.tools.check_readme_badges"])

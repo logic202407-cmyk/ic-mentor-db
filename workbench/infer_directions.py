@@ -2,8 +2,10 @@
 
 为什么需要这个模块
 ------------------
-全库 14,271 条记录里有 **4,030 条方向仍为「方向待补」**，但其中 **4,007 条已经读到
-个人主页的履历文本**（中位 424 字），1,595 条还有论文目录。也就是说：**缺的不是数据，
+全库有数千条记录的研究方向仍是「方向待补」，但其中绝大多数**已经读到个人主页的
+履历文本**，不少还有论文目录。也就是说：**缺的不是数据，是把已有文本映射到方向
+标签这一步**。具体条数以 `--validate`/`--apply` 的运行输出与
+`workbench.tools.report_facts` 为准，本文件不写死。也就是说：**缺的不是数据，
 是把已有文本映射到方向标签这一步**。这一步是嵌入模型的强项，也正是本项目愿意让 AI
 参与的地方——它作用在**数据治理**上，而不是作用在对人的评价上。
 
@@ -21,7 +23,7 @@
 
 命令
 ----
-    python -m workbench.infer_directions --validate 500
+    python -m workbench.infer_directions --validate 400 --ablate-text
     python -m workbench.infer_directions --apply --min-score 0.55
 
 产物
@@ -44,7 +46,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from . import catalog, public_research as research  # noqa: E402
-from .search import MODEL_NAME, _embedder, keyword_score  # noqa: E402
+from .search import MODEL_NAME, _embedder, keyword_scores  # noqa: E402
 
 OUT_DIR = Path(".workbench-data/direction-inference")
 
@@ -56,6 +58,20 @@ DEGENERATE = {
 MIN_LABEL_COUNT = 5      # 出现太少的标签不进入词表
 MAX_TEXT_CHARS = 1200    # 控制编码开销
 PENDING = "方向待补"
+
+# ── 清洗文本变体（只用于消融，不是生产推断文本）────────────────────────────
+# 为什么需要：整段履历里塞满职称、任职年份、行政职务，方向句只占一小部分。
+# 把履历压成「只保留研究方向相关的句子」，可以检验"嵌入分数低"到底是模型
+# 不懂中文语义，还是信号被长文本稀释。清洗规则全部可枚举、可复现。
+_ROLE_NOISE = re.compile(
+    r"(教授|副教授|讲师|助理教授|研究员|副研究员|院士|博士生导师|硕士生导师|"
+    r"博导|硕导|院长|副院长|系主任|副主任|所长|副所长|处长|校长|党委书记|"
+    r"副书记|主任|秘书|委员|党支部书记)")
+_YEAR_RANGE = re.compile(r"(19|20)\d{2}\s*[-—~～至]\s*((19|20)\d{2})?\s*")
+_SENTENCE = re.compile(r"[^。；;！!？?\n]+")
+_RESEARCH_HINT = re.compile(r"(研究|方向|兴趣|领域|从事|专注|主要)")
+# 采集管线追加的注释（不是公开原文），其中可能含方向提示，推断时必须剔除。
+_PIPELINE_NOTE = re.compile(r"[^。；;！!？?\n]*用于工学导航[^。；;！!？?\n]*")
 
 
 # ── 字段提取：biography 是 {text,url} 结构，不是字符串 ────────────────────
@@ -84,13 +100,24 @@ def label_of(profile: dict) -> str:
 
 
 def profile_text(profile: dict) -> str:
-    """推断用的文本：履历为主，必要时补摘要/院系/学科/论文题目。"""
+    """推断用的文本：履历为主，必要时补摘要/院系/学科/论文题目。
+
+    两个必须避免的泄漏（实测都真实存在）：
+
+    1. **``discipline`` 字段装的是方向值**，不是一级学科——全库有 3,305 条记录的
+       ``discipline`` 与 ``direction_group`` 完全相同。把它拼进文本＝把答案喂给模型，
+       验证分数会虚高。这里只取 ``first_level_discipline``（如「0809 电子科学与技术」）。
+    2. 采集管线曾在履历末尾追加「学科归属按公开研究关键词归入…，用于工学导航」这类
+       **我们自己的注释**。它不是公开原文，且常含方向提示，必须剔除。
+    """
     dossier = research.load(profile["id"]) or {}
+    bio = _PIPELINE_NOTE.sub(" ", _as_text(dossier.get("biography")))[:600]
+    summary = _PIPELINE_NOTE.sub(" ", _as_text(profile.get("summary")))[:200]
     parts = [
-        _as_text(dossier.get("biography"))[:600],
-        _as_text(profile.get("summary"))[:200],
+        bio,
+        summary,
         f"院系 {profile.get('department', '')}",
-        f"学科 {profile.get('discipline', '')}",
+        f"一级学科 {profile.get('first_level_discipline', '')}",
     ]
     papers = dossier.get("papers") or []
     if papers:
@@ -98,6 +125,29 @@ def profile_text(profile: dict) -> str:
         parts.append("论文 " + "；".join(t for t in titles if t)[:300])
     text = "；".join(p for p in parts if p.strip("； "))
     return re.sub(r"\s+", " ", text).strip()[:MAX_TEXT_CHARS]
+
+
+def clean_profile_text(profile: dict, max_chars: int = 400) -> str:
+    """消融用的精简文本：学科/院系 + 履历中与研究方向相关的句子。
+
+    与 :func:`profile_text` 的差别是**去掉了论文题目、摘要和行政职务噪声**，
+    只留下最可能承载方向的句子。生产推断仍用完整文本（见模块说明），这里只用于
+    回答"如果把长文本稀释去掉，嵌入会变成什么样"。
+    """
+    dossier = research.load(profile["id"]) or {}
+    # 只取履历正文：``_as_text`` 在正文为空时会回落到 summary，而 summary 可能含
+    # 系统自己生成的方向提示，混进来会让消融凭空变好（实测会把 verbatim 层从 94% 拉到 78%）。
+    raw = dossier.get("biography")
+    bio = str(raw.get("text") or "") if isinstance(raw, dict) else _as_text(raw)
+    bio = _PIPELINE_NOTE.sub(" ", bio)
+    bio = _YEAR_RANGE.sub(" ", bio)
+    bio = _ROLE_NOISE.sub(" ", bio)
+    picked = [s for s in _SENTENCE.findall(bio) if _RESEARCH_HINT.search(s)]
+    body = "；".join(picked) if picked else bio
+    body = re.sub(r"\s+", " ", body).strip()[:max_chars]
+    head = (f"一级学科 {profile.get('first_level_discipline', '')}；"
+            f"院系 {profile.get('department', '')}")
+    return f"{head}；{body}".strip("； ")
 
 
 # ── 词表 ────────────────────────────────────────────────────────────────
@@ -130,6 +180,18 @@ def embed_texts(texts: list[str], batch_note: str = "") -> "object":
 
 
 # ── 验证 ────────────────────────────────────────────────────────────────
+# 分数级融合的权重：由 ``validate`` 在 dev 子集上选出（`--validate` 的 fusion_tuning），
+# 生产推断沿用同一个常数，保证"评测怎么做、线上就怎么做"。
+FUSION_KEYWORD_WEIGHT = 0.30
+FUSION_TUNING_SEED = 7
+
+
+def _ranked_labels(scores_row, vocab: list[str], k: int = 3) -> list[str]:
+    import numpy as np
+    order = np.argsort(-scores_row)[:k]
+    return [vocab[int(i)] for i in order]
+
+
 def validate(profiles: list[dict], vocab: list[str], sample: int, seed: int = 42) -> dict:
     import numpy as np
 
@@ -143,41 +205,75 @@ def validate(profiles: list[dict], vocab: list[str], sample: int, seed: int = 42
     label_vectors = embed_texts(vocab)
     texts = [profile_text(p) for p in pool]
     text_vectors = embed_texts(texts)
+    truths = [label_of(p) for p in pool]
 
     sims = text_vectors @ label_vectors.T          # (n_text, n_label)
-    top3 = np.argsort(-sims, axis=1)[:, :3]
-
-    emb_hit1 = emb_hit3 = 0
-    kw_hit1 = kw_hit3 = 0
-    hy_hit1 = hy_hit3 = 0
-    # 分层：真值标签是否在文本里被"字面写出"（履历里常有「研究方向：XXX」）
-    strata = {"verbatim": {"n": 0, "emb1": 0, "kw1": 0},
-              "non_verbatim": {"n": 0, "emb1": 0, "kw1": 0}}
-    VERBATIM_MIN = 0.8
-
-    for row, profile in enumerate(pool):
-        truth = label_of(profile)
-        ranked = [vocab[i] for i in top3[row]]
-        emb_hit1 += ranked[0] == truth
-        emb_hit3 += truth in ranked
-
-        kw_scores = {lab: keyword_score(lab, texts[row]) for lab in vocab}
-        kw = sorted(vocab, key=lambda lab: kw_scores[lab], reverse=True)
-        kw_hit1 += kw[0] == truth
-        kw_hit3 += truth in kw[:3]
-
-        # 混合：关键词足够强就用它，否则回落到嵌入
-        best_kw = kw_scores[kw[0]]
-        hybrid_top1 = kw[0] if best_kw >= VERBATIM_MIN else ranked[0]
-        hy_hit1 += hybrid_top1 == truth
-        hy_hit3 += truth in ([kw[0]] if best_kw >= VERBATIM_MIN else ranked)
-
-        bucket = "verbatim" if best_kw >= VERBATIM_MIN else "non_verbatim"
-        strata[bucket]["n"] += 1
-        strata[bucket]["emb1"] += ranked[0] == truth
-        strata[bucket]["kw1"] += kw[0] == truth
-
+    sims_clipped = np.clip(sims, 0.0, 1.0)
+    kw_rows = [keyword_scores(vocab, text) for text in texts]
+    kw_matrix = np.array([[row[lab] for lab in vocab] for row in kw_rows], dtype=np.float32)
     n = len(pool)
+
+    def hit(matrix) -> tuple[int, int, int, int]:
+        h1 = h3 = 0
+        strata_hits = {"verbatim": [0, 0], "non_verbatim": [0, 0]}
+        for row, profile in enumerate(pool):
+            truth = truths[row]
+            ranked = _ranked_labels(matrix[row], vocab)
+            h1 += ranked[0] == truth
+            h3 += truth in ranked
+            bucket = "verbatim" if truth in texts[row] else "non_verbatim"
+            strata_hits[bucket][0] += 1
+            strata_hits[bucket][1] += ranked[0] == truth
+        return h1, h3, strata_hits
+
+    kw_hit1, kw_hit3, strata_kw = hit(kw_matrix)
+    emb_hit1, emb_hit3, strata_emb = hit(sims)
+
+    # 阈值式混合：关键词得分够高就用关键词排序，否则回落嵌入。
+    # Top-3 必须给满三个候选：旧实现关键词胜出时只把 kw[0] 放进列表，
+    # 于是混合 Top-3 天然最多 1 个正确项，系统性低估。
+    VERBATIM_MIN = 0.8
+    hy_hit1 = hy_hit3 = 0
+    for row in range(n):
+        truth = truths[row]
+        kw_ranked = _ranked_labels(kw_matrix[row], vocab)
+        emb_ranked = _ranked_labels(sims[row], vocab)
+        hybrid_ranked = (kw_ranked if kw_matrix[row].max() >= VERBATIM_MIN
+                         else emb_ranked)
+        hy_hit1 += hybrid_ranked[0] == truth
+        hy_hit3 += truth in hybrid_ranked
+
+    # 分数级融合 + dev/test 调参：权重只在 dev 上选，test 只报数。
+    fused = FUSION_KEYWORD_WEIGHT * kw_matrix + (1 - FUSION_KEYWORD_WEIGHT) * sims_clipped
+    fu_hit1, fu_hit3, strata_fu = hit(fused)
+
+    order_idx = list(range(n))
+    random.Random(FUSION_TUNING_SEED).shuffle(order_idx)
+    cut = max(1, int(n * 0.4))
+    dev, test = order_idx[:cut], order_idx[cut:]
+
+    def on(rows, matrix) -> dict:
+        h1 = sum(_ranked_labels(matrix[r], vocab)[0] == truths[r] for r in rows)
+        h3 = sum(truths[r] in _ranked_labels(matrix[r], vocab) for r in rows)
+        return {"n": len(rows), "top1": h1 / len(rows), "top3": h3 / len(rows)}
+
+    best_weight, best_score = FUSION_KEYWORD_WEIGHT, -1.0
+    for step in range(21):
+        weight = step / 20
+        matrix = weight * kw_matrix + (1 - weight) * sims_clipped
+        metric = on(dev, matrix)
+        score = metric["top1"] + metric["top3"]
+        if score > best_score:
+            best_weight, best_score = weight, score
+
+    tuned = best_weight * kw_matrix + (1 - best_weight) * sims_clipped
+    tuning = {
+        "dev": len(dev), "test": len(test), "chosen_weight": best_weight,
+        "test": {"keyword": on(test, kw_matrix),
+                 "embedding": on(test, sims),
+                 "fusion": on(test, tuned)},
+    }
+
     return {
         "sampled": n,
         "vocab_size": len(vocab),
@@ -185,10 +281,66 @@ def validate(profiles: list[dict], vocab: list[str], sample: int, seed: int = 42
         "embedding": {"top1": emb_hit1 / n if n else 0.0, "top3": emb_hit3 / n if n else 0.0},
         "keyword": {"top1": kw_hit1 / n if n else 0.0, "top3": kw_hit3 / n if n else 0.0},
         "hybrid": {"top1": hy_hit1 / n if n else 0.0, "top3": hy_hit3 / n if n else 0.0},
-        "strata": {k: {"n": v["n"],
-                       "embedding_top1": (v["emb1"] / v["n"]) if v["n"] else None,
-                       "keyword_top1": (v["kw1"] / v["n"]) if v["n"] else None}
-                   for k, v in strata.items()},
+        "fusion": {"top1": fu_hit1 / n if n else 0.0, "top3": fu_hit3 / n if n else 0.0,
+                   "keyword_weight": FUSION_KEYWORD_WEIGHT},
+        "fusion_tuning": tuning,
+        "strata": {
+            name: {
+                "n": strata_kw[name][0],
+                "embedding_top1": (strata_emb[name][1] / strata_emb[name][0])
+                if strata_emb[name][0] else None,
+                "keyword_top1": (strata_kw[name][1] / strata_kw[name][0])
+                if strata_kw[name][0] else None,
+                "fusion_top1": (strata_fu[name][1] / strata_fu[name][0])
+                if strata_fu[name][0] else None,
+            }
+            for name in ("verbatim", "non_verbatim")
+        },
+    }
+
+
+# ── 清洗文本消融 ────────────────────────────────────────────────────────
+def text_ablation(profiles: list[dict], vocab: list[str], sample: int,
+                  seed: int = 42) -> dict:
+    """同一抽样上比较「完整文本」与「只保留方向句」的嵌入表现。
+
+    分层口径与 :func:`validate` 完全一致：真值标签是否作为字符串出现在**完整**
+    文本里。verbatim 层的关键词基线几乎必然命中；真正需要语义能力的是
+    non_verbatim 层——消融的价值就在于把这两层分开看。
+    """
+    import numpy as np
+
+    pool = [p for p in profiles if label_of(p) in vocab and profile_text(p)]
+    rng = random.Random(seed)
+    if len(pool) > sample:
+        pool = rng.sample(pool, sample)
+
+    label_vectors = embed_texts(vocab)
+    full_texts = [profile_text(p) for p in pool]
+    clean_texts = [clean_profile_text(p) for p in pool]
+    truths = [label_of(p) for p in pool]
+    order_full = np.argsort(-(embed_texts(full_texts) @ label_vectors.T), axis=1)[:, :3]
+    order_clean = np.argsort(-(embed_texts(clean_texts) @ label_vectors.T), axis=1)[:, :3]
+
+    buckets: dict[str, list[int]] = {"verbatim": [], "non_verbatim": []}
+    for row, text in enumerate(full_texts):
+        buckets["verbatim" if truths[row] in text else "non_verbatim"].append(row)
+
+    def score(rows: list[int], order) -> dict:
+        n = len(rows)
+        if not n:
+            return {"n": 0, "top1": None, "top3": None}
+        top1 = sum(vocab[int(order[r][0])] == truths[r] for r in rows) / n
+        top3 = sum(truths[r] in [vocab[int(j)] for j in order[r]] for r in rows) / n
+        return {"n": n, "top1": top1, "top3": top3}
+
+    return {
+        "sampled": len(pool),
+        "vocab_size": len(vocab),
+        "strata": {name: {"n": len(rows),
+                          "full": score(rows, order_full),
+                          "clean": score(rows, order_clean)}
+                   for name, rows in buckets.items()},
     }
 
 
@@ -210,32 +362,36 @@ def infer(profiles: list[dict], vocab: list[str], min_score: float) -> dict:
     label_vectors = embed_texts(vocab)
     text_vectors = embed_texts(texts)
     sims = text_vectors @ label_vectors.T
-    best = np.argmax(sims, axis=1)
-    best_score = sims[np.arange(len(targets)), best]
+    # 先按行算一次全词表分数，再拼矩阵。**不要**把 keyword_scores() 放进内层推导式：
+    # 那样每行会被调用 256 次（一次 per label），全库推断从几分钟变成几小时（实测踩过）。
+    kw_rows = [keyword_scores(vocab, t) for t in texts]
+    kw_matrix = np.array([[row[lab] for lab in vocab] for row in kw_rows], dtype=np.float32)
+    fused = FUSION_KEYWORD_WEIGHT * kw_matrix + (1 - FUSION_KEYWORD_WEIGHT) * np.clip(sims, 0.0, 1.0)
+    best = np.argmax(fused, axis=1)
+    best_score = fused[np.arange(len(targets)), best]
+    # 「是否写入」的阈值仍按**嵌入相似度**判定：这样 0.55 的含义与历史产物一致，
+    # 不会因为换了融合权重就让同一个阈值突然放宽或收紧。
+    best_emb = np.argmax(sims, axis=1)
+    best_emb_score = sims[np.arange(len(targets)), best_emb]
 
-    # 与验证阶段保持同一策略：关键词字面命中优先，否则回落嵌入。
-    VERBATIM_MIN = 0.8
     suggestions = []
     for i, p in enumerate(targets):
-        top3_idx = np.argsort(-sims[i])[:3]
-        kw_scores = {lab: keyword_score(lab, texts[i]) for lab in vocab}
-        kw_best = max(kw_scores, key=kw_scores.get)
-        if kw_scores[kw_best] >= VERBATIM_MIN:
-            chosen, score, method = kw_best, kw_scores[kw_best], "keyword"
-        else:
-            chosen = vocab[int(best[i])]
-            score, method = float(best_score[i]), "embedding"
+        top3_idx = np.argsort(-fused[i])[:3]
+        kw_scores = {lab: float(kw_matrix[i][j]) for j, lab in enumerate(vocab)}
+        chosen = vocab[int(best[i])]
         suggestions.append({
             "id": p["id"],
             "name": p["name"],
             "institution": p["institution"],
             "discipline": p.get("first_level_discipline", ""),
             "suggested": chosen,
-            "score": round(float(score), 4),
-            "method": method,
-            "top3": [{"label": vocab[int(j)], "score": round(float(sims[i][j]), 4)}
+            "score": round(float(best_score[i]), 4),
+            "embedding_score": round(float(best_emb_score[i]), 4),
+            "keyword_score": round(float(kw_scores[chosen]), 4),
+            "method": "fusion",
+            "top3": [{"label": vocab[int(j)], "score": round(float(fused[i][j]), 4)}
                      for j in top3_idx],
-            "apply": bool(score >= min_score),
+            "apply": bool(best_emb_score[i] >= min_score),
         })
 
     return {
@@ -244,8 +400,7 @@ def infer(profiles: list[dict], vocab: list[str], min_score: float) -> dict:
         "min_score": min_score,
         "would_apply": sum(1 for s in suggestions if s["apply"]),
         "by_method": {
-            "keyword": sum(1 for s in suggestions if s["method"] == "keyword"),
-            "embedding": sum(1 for s in suggestions if s["method"] == "embedding"),
+            "fusion": len(suggestions),
         },
         "suggestions": suggestions,
     }
@@ -256,6 +411,10 @@ def main() -> int:
     ap.add_argument("--validate", type=int, default=0, metavar="N",
                     help="留出验证：抽样 N 条有方向的记录，报告 Top-1/Top-3")
     ap.add_argument("--apply", action="store_true", help="对「方向待补」产出建议")
+    ap.add_argument("--reuse-suggestions", action="store_true",
+                    help="复用已有的 suggestions.json 重建报告（改报告/消融时不必重跑全库推断）")
+    ap.add_argument("--ablate-text", action="store_true",
+                    help="追加一次清洗文本消融（只保留研究方向句），用于定位长文本稀释")
     ap.add_argument("--min-score", type=float, default=0.55,
                     help="相似度阈值，低于此值不填（默认 0.55）")
     ap.add_argument("--seed", type=int, default=42)
@@ -282,60 +441,155 @@ def main() -> int:
         result = validate(pairs, vocab, args.validate, args.seed)
         s = result["strata"]
         verb, nonverb = s["verbatim"], s["non_verbatim"]
+        tuning = result["fusion_tuning"]
+        labelled = [p for p in pairs if label_of(p) in vocab]
+        leaked = sum(1 for p in labelled
+                     if (p.get("discipline") or "") == label_of(p))
+        leak_share = leaked / len(labelled) if labelled else 0.0
         lines += [
             "## 留出验证",
+            "",
+            "**先做泄漏审计。** ``discipline`` 字段在 "
+            f"**{leak_share:.1%}** 的已标注记录上等于 ``direction_group``（同一取值）。"
+            "把这个字段拼进输入文本，等于把答案喂给模型——修正前关键词基线因此虚高到 64.0%。"
+            "本版验证文本只用 ``first_level_discipline``（如「0809 电子科学与技术」）"
+            "与履历正文，并剔除采集管线追加的注释。",
             "",
             f"抽样 **{result['sampled']}** 条已有方向的记录，藏起方向、只用履历等文本预测：",
             "",
             "| 方法 | Top-1 | Top-3 |",
             "|:--|--:|--:|",
-            f"| 关键词基线 | **{result['keyword']['top1']:.1%}** | {result['keyword']['top3']:.1%} |",
+            f"| 关键词基线 | {result['keyword']['top1']:.1%} | {result['keyword']['top3']:.1%} |",
             f"| 嵌入模型（bge-small-zh-v1.5） | {result['embedding']['top1']:.1%} "
             f"| {result['embedding']['top3']:.1%} |",
-            f"| 混合（关键词优先，弱则回落嵌入） | **{result['hybrid']['top1']:.1%}** "
+            f"| 阈值混合（旧策略：关键词够强就用它） | {result['hybrid']['top1']:.1%} "
             f"| {result['hybrid']['top3']:.1%} |",
+            f"| **分数级融合（关键词 {result['fusion']['keyword_weight']:.2f} + "
+            f"嵌入 {1 - result['fusion']['keyword_weight']:.2f}）** | "
+            f"**{result['fusion']['top1']:.1%}** | **{result['fusion']['top3']:.1%}** |",
             "",
-            "### 消融：为什么关键词会赢",
+            "### 调参隔离：融合权重只在 dev 上选",
             "",
-            "把样本按「真值标签是否被字面写进文本」分层：",
+            f"把同一样本按固定种子划成 dev {tuning['dev']} 条 / "
+            f"test {tuning['test']['keyword']['n']} 条，"
+            f"在 dev 上选中关键词权重 **{tuning['chosen_weight']:.2f}**"
+            "（选择标准为 Top-1+Top-3），只在 test 上报数：",
             "",
-            "| 分层 | 条数 | 关键词 Top-1 | 嵌入 Top-1 |",
-            "|:--|--:|--:|--:|",
-            f"| 字面命中（履历里直接写了方向） | {verb['n']} | "
-            f"{(verb['keyword_top1'] or 0):.1%} | {(verb['embedding_top1'] or 0):.1%} |",
+            "| 方法 | test Top-1 | test Top-3 |",
+            "|:--|--:|--:|",
+            f"| 关键词基线 | {tuning['test']['keyword']['top1']:.1%} | "
+            f"{tuning['test']['keyword']['top3']:.1%} |",
+            f"| 嵌入模型 | {tuning['test']['embedding']['top1']:.1%} | "
+            f"{tuning['test']['embedding']['top3']:.1%} |",
+            f"| 分数级融合 | **{tuning['test']['fusion']['top1']:.1%}** | "
+            f"**{tuning['test']['fusion']['top3']:.1%}** |",
+            "",
+            "### 分层：字面命中 vs 需要语义推断",
+            "",
+            "| 分层 | 条数 | 关键词 Top-1 | 嵌入 Top-1 | 融合 Top-1 |",
+            "|:--|--:|--:|--:|--:|",
+            f"| 字面命中（文本里出现该标签） | {verb['n']} | "
+            f"{(verb['keyword_top1'] or 0):.1%} | {(verb['embedding_top1'] or 0):.1%} | "
+            f"{(verb.get('fusion_top1') or 0):.1%} |",
             f"| 未字面命中（需要语义推断） | {nonverb['n']} | "
-            f"{(nonverb['keyword_top1'] or 0):.1%} | {(nonverb['embedding_top1'] or 0):.1%} |",
+            f"{(nonverb['keyword_top1'] or 0):.1%} | {(nonverb['embedding_top1'] or 0):.1%} | "
+            f"{(nonverb.get('fusion_top1') or 0):.1%} |",
             "",
-            "**这个分层的意义**：高校个人页常直接写「研究方向：XXX」，这类记录用关键词就能"
-            "命中，嵌入模型反而因为把整段履历（职称、任职时间、行政职务）一起编码而被稀释。"
-            "嵌入的价值只在「没有字面线索」的那一部分——所以本模块采用**混合策略**，"
-            "而不是宣称嵌入一定更好。",
+            "**怎么读**：修正泄漏后，绝大多数样本都落在「未字面命中」层——方向标签是归一化后的"
+            "名称，很少与公开原文逐字相同。这一层才是真实场景；任何宣称高准确率的报告，"
+            "都应先排除「输入里直接含标签」这种假象。",
             "",
             f"耗时 {result['seconds']} 秒。",
             "",
         ]
-        print(f"验证：关键词 Top-1 {result['keyword']['top1']:.1%} / "
-              f"Top-3 {result['keyword']['top3']:.1%}；"
-              f"嵌入 Top-1 {result['embedding']['top1']:.1%} / "
-              f"Top-3 {result['embedding']['top3']:.1%}；混合 Top-1 {result['hybrid']['top1']:.1%}")
+        print(f"验证：关键词 Top-1 {result['keyword']['top1']:.1%}；"
+              f"嵌入 {result['embedding']['top1']:.1%}；"
+              f"阈值混合 {result['hybrid']['top1']:.1%}；"
+              f"分数级融合 {result['fusion']['top1']:.1%}"
+              f"（test-only {tuning['test']['fusion']['top1']:.1%}）")
         (OUT_DIR / "validation.json").write_text(
             json.dumps(result, ensure_ascii=False, indent=2) + "\n",
             encoding="utf-8", newline="\n")
 
-    if args.apply:
-        result = infer(pairs, vocab, args.min_score)
+    if args.ablate_text:
+        ablation = text_ablation(pairs, vocab, args.validate or 400, args.seed)
+        strata = ablation["strata"]
+        verb, nonverb = strata["verbatim"], strata["non_verbatim"]
+        keyword_by_stratum = {}
+        if args.validate:
+            keyword_by_stratum = {
+                name: (result["strata"][name] or {}).get("keyword_top1")
+                for name in ("verbatim", "non_verbatim")}
+
+        def pct(value) -> str:
+            return "—" if value is None else f"{value:.1%}"
+
+        def gain(row) -> float:
+            full = (row["full"] or {}).get("top1") or 0.0
+            clean = (row["clean"] or {}).get("top1") or 0.0
+            return clean - full
+
+        lines += [
+            "### 消融：长文本稀释，还是模型不懂中文语义？",
+            "",
+            "把同一批样本的输入换成**只保留研究方向句**的清洗文本（去掉论文题目、摘要、"
+            "任职年份与行政职务），再算一次嵌入。关键词列取自同一层的基线：",
+            "",
+            "| 分层 | 条数 | 关键词 Top-1 | 完整文本·嵌入 Top-1 | 清洗文本·嵌入 Top-1 | 清洗文本·嵌入 Top-3 |",
+            "|:--|--:|--:|--:|--:|--:|",
+        ]
+        for name, label in (("verbatim", "字面命中（履历里写了方向）"),
+                            ("non_verbatim", "未字面命中（需语义推断）")):
+            row = strata[name]
+            lines.append(
+                f"| {label} | {row['n']} | {pct(keyword_by_stratum.get(name))} | "
+                f"{pct(row['full']['top1'])} | {pct(row['clean']['top1'])} | "
+                f"{pct(row['clean']['top3'])} |")
+        lines += [
+            "",
+            "**怎么读这张表**：",
+            "",
+            f"1. 字面命中层：完整文本 {pct(verb['full']['top1'])} → 清洗后 "
+            f"{pct(verb['clean']['top1'])}（{gain(verb)*100:+.1f} 个百分点）。"
+            "这一层的关键词基线本就接近上限，收益主要说明**整段履历确实稀释了方向信号**。",
+            f"2. 未字面命中层：完整文本 {pct(nonverb['full']['top1'])} → 清洗后 "
+            f"{pct(nonverb['clean']['top1'])}（{gain(nonverb)*100:+.1f} 个百分点）。"
+            "这一层才是真正需要语义推断的部分。",
+            "3. 因此生产推断仍用**完整文本 + 分数级融合**；清洗文本只作为"
+            "诊断实验保留，用来解释分数来源，而不是用来刷指标。",
+            "",
+            f"消融耗时含在总耗时内；样本 {ablation['sampled']} 条、词表 "
+            f"{ablation['vocab_size']} 个标签。",
+            "",
+        ]
+        (OUT_DIR / "text_ablation.json").write_text(
+            json.dumps(ablation, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8", newline="\n")
+        print(f"文本消融：字面层 {pct(verb['full']['top1'])}→{pct(verb['clean']['top1'])}；"
+              f"未字面层 {pct(nonverb['full']['top1'])}→{pct(nonverb['clean']['top1'])}")
+
+    if args.apply or args.reuse_suggestions:
+        if args.reuse_suggestions and not args.apply:
+            cached = OUT_DIR / "suggestions.json"
+            if not cached.is_file():
+                print(f"没有可复用的建议产物：{cached}，请先跑一次 --apply")
+                return 1
+            result = json.loads(cached.read_text(encoding="utf-8"))
+        else:
+            result = infer(pairs, vocab, args.min_score)
         lines += [
             "## 覆盖",
             "",
             f"- 方向待补：**{result['pending']}** 条",
             f"- 其中有可用文本：**{result['with_text']}** 条",
-            f"- 相似度 ≥ {args.min_score} 因而会写入：**{result['would_apply']}** 条",
+            f"- 嵌入相似度 ≥ {args.min_score} 因而会写入：**{result['would_apply']}** 条",
             f"- 低于阈值留空：**{result['with_text'] - result['would_apply']}** 条（宁可不填，不猜）",
             "",
         ]
-        (OUT_DIR / "suggestions.json").write_text(
-            json.dumps(result, ensure_ascii=False, indent=2) + "\n",
-            encoding="utf-8", newline="\n")
+        if args.apply:
+            (OUT_DIR / "suggestions.json").write_text(
+                json.dumps(result, ensure_ascii=False, indent=2) + "\n",
+                encoding="utf-8", newline="\n")
         print(f"覆盖：待补 {result['pending']}，有文本 {result['with_text']}，"
               f"可写入 {result['would_apply']}")
 

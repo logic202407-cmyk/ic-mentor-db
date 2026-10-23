@@ -35,7 +35,9 @@ def call(path: str, method: str = "GET", payload: dict | None = None,
          timeout: int = 120) -> tuple[int, object, float]:
     url = BASE + path
     data = None
-    headers = {"Content-Type": "application/json"}
+    # 工作台的写请求要求带 Origin（防 DNS rebinding / 跨站表单）。本工具是本地命令行，
+    # 不是浏览器，必须显式声明自己就是本机页面这一来源；否则会被 403 拦下。
+    headers = {"Content-Type": "application/json", "Origin": BASE}
     if payload is not None:
         data = json.dumps(payload).encode("utf-8")
     req = urllib.request.Request(url, data=data, headers=headers, method=method)
@@ -102,12 +104,24 @@ def main() -> int:
     else:
         checks.append(("语义检索可用且已缓存", False, "拿不到演示项目 id"))
 
-    # 深链
-    with open(".workbench-data/_shot_target.txt", encoding="utf-8") as fh:
-        mentor_id = fh.read().strip()
-    html = urllib.request.urlopen(f"{BASE}/?mentor={mentor_id}", timeout=60).read().decode(
-        "utf-8", "replace")
-    checks.append(("详情页深链可打开", "mentorTitle" in html, f"mentor={mentor_id}"))
+    # 深链：优先用本地截图工具留下的目标，没有就现挑一位（与 ui_smoke 同一套逻辑），
+    # 这样干净 clone 上也能跑这项检查，不会因为少一个本地临时文件就整体报错。
+    target = Path(".workbench-data/_shot_target.txt")
+    mentor_id = ""
+    if target.is_file():
+        mentor_id = target.read_text(encoding="utf-8").strip()
+    if not mentor_id:
+        try:
+            from .ui_smoke import pick_mentor
+            mentor_id = pick_mentor()
+        except SystemExit:
+            mentor_id = ""
+    if mentor_id:
+        html = urllib.request.urlopen(f"{BASE}/?mentor={mentor_id}", timeout=60).read().decode(
+            "utf-8", "replace")
+        checks.append(("详情页深链可打开", "mentorTitle" in html, f"mentor={mentor_id}"))
+    else:
+        checks.append(("详情页深链可打开", False, "没有可用的导师 id（先跑 AI 产物或放 _shot_target.txt）"))
 
     ok = all(passed for _n, passed, _d in checks)
     lines = ["录制前就绪检查", ""]

@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>算法评测 · 导师调查工作台</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2311302e'/%3E%3Ctext x='16' y='23' font-size='19' text-anchor='middle' fill='%23ffffff' font-family='serif'%3E研%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/assets/eval.css?v=20261024-eval1">
+</head>
+<body>
+<a class="skip-link" href="#mainContent">跳到主内容</a>
+
+<header class="site-head">
+  <div class="head-inner">
+    <div class="identity">
+      <div class="seal" aria-hidden="true">研</div>
+      <div>
+        <h1>算法评测</h1>
+        <p>检索 · 方向推断 · 同名消歧 · 失败案例</p>
+      </div>
+    </div>
+    <nav class="head-meta" aria-label="站点导航">
+      <a href="/">返回工作台</a>
+      <a href="/classic">资料整理视图（经典版）</a>
+    </nav>
+  </div>
+</header>
+
+<main id="mainContent" class="eval-wrap">
+  <p class="eyebrow">评测产物</p>
+  <p class="page-lede">
+    这一页只呈现本机实跑后写进仓库的评测产物，界面不做任何重新计算，也不做补零。
+    同一个数字能在下方列出的产物文件里找到原始出处；某份产物还没入库时，对应分区会写「待产出」
+    并给出复现入口，而不是显示 0 或占位数字。
+  </p>
+
+  <p id="evalStatus" role="status" aria-live="polite" class="quiet"></p>
+
+  <section id="loadingPanel" class="loading-panel" aria-busy="true" aria-label="正在加载评测产物">
+    <p class="quiet">正在读取评测产物…</p>
+    <div class="skeleton skeleton--card"></div>
+    <div class="skeleton skeleton--line w-90"></div>
+    <div class="skeleton skeleton--line w-70"></div>
+    <div class="skeleton skeleton--line w-40"></div>
+    <div class="skeleton skeleton--block"></div>
+  </section>
+
+  <section id="errorPanel" class="notice notice--error" hidden aria-labelledby="errorTitle">
+    <h3 id="errorTitle">没能读到评测产物</h3>
+    <p id="errorDetail">接口没有返回可用数据。</p>
+    <p class="quiet" style="margin-bottom:4px">评测在本机跑一次即可产出（命令来自产物自身的复现说明）：</p>
+    <pre class="code-block" id="errorRepro">python -m workbench.retrieval_eval</pre>
+    <p class="quiet" style="margin-bottom:0">
+      跑完之后刷新本页；产物路径与字段说明见 <code class="inline">workbench/eval_report.py</code>。
+    </p>
+  </section>
+
+  <div id="evalRoot" hidden>
+
+    <!-- ───────────────── 摘要 ───────────────── -->
+    <section class="eval-section" id="summarySection" aria-labelledby="hSummary">
+      <h2 id="hSummary"><span class="sec-num" aria-hidden="true">摘要</span>这份评测是什么</h2>
+      <p class="sec-lede" id="summaryLede"></p>
+      <div class="card-deck" id="summaryCards"></div>
+
+      <div class="notice notice--honesty" id="honestyBox">
+        <h3>口径：这批评测不是人工标注</h3>
+        <p id="honestyText"></p>
+        <p class="micro" id="honestyExtra"></p>
+      </div>
+
+      <div class="notice" id="reproduceBox">
+        <h3>复现</h3>
+        <p class="micro" style="margin-bottom:6px">在仓库根目录执行下面的命令即可重新产出这些产物（命令原文取自产物文件的复现说明字段）：</p>
+        <pre class="code-block" id="reproduceCommand"></pre>
+        <p class="micro" style="margin-bottom:0" id="reproduceNote"></p>
+      </div>
+
+      <p class="source-note">本页数字均来自以下产物文件，页面不做任何重算：</p>
+      <ul class="source-list" id="sourceList"></ul>
+    </section>
+
+    <!-- ───────────────── 检索 ───────────────── -->
+    <section class="eval-section" id="retrievalSection" aria-labelledby="hRetrieval">
+      <h2 id="hRetrieval"><span class="sec-num" aria-hidden="true">01</span>检索</h2>
+      <p class="sec-lede">
+        同一批查询、同一份语料，只换检索方法。指标统一报在 test 划分上；阈值与权重只在 dev 上选，
+        test 只用于汇报——所以这里的数字比 dev 上的调参结果略低是正常现象。
+      </p>
+
+      <h3 id="hMethodA">A 类 · 结构化查询（test）</h3>
+      <p class="chart-note" id="noteMethodA"></p>
+      <figure class="chart" aria-labelledby="hMethodA">
+        <div class="chart-scroll">
+          <div class="bars" id="chartMethodA" role="group" aria-describedby="noteMethodA"></div>
+        </div>
+      </figure>
+      <details class="data-fold">
+        <summary>数值表：A 类（与上图同一组数字）</summary>
+        <div id="methodTableA"></div>
+      </details>
+
+      <h3 id="hMethodB" style="margin-top:26px">B 类 · 自然语言查询（test）</h3>
+      <p class="chart-note" id="noteMethodB"></p>
+      <figure class="chart" aria-labelledby="hMethodB">
+        <div class="chart-scroll">
+          <div class="bars" id="chartMethodB" role="group" aria-describedby="noteMethodB"></div>
+        </div>
+      </figure>
+      <details class="data-fold">
+        <summary>数值表：B 类（与上图同一组数字）</summary>
+        <div id="methodTableB"></div>
+      </details>
+
+      <div class="callout" id="calloutAb" aria-labelledby="hCalloutAb">
+        <h3 id="hCalloutAb">为什么混合方法在 B 类更明显</h3>
+        <div id="calloutAbBody"></div>
+      </div>
+
+      <h3 id="hFilter" style="margin-top:26px">过滤前后对比（test）</h3>
+      <p class="chart-note" id="noteFilter"></p>
+      <figure class="chart" aria-labelledby="hFilter">
+        <div class="chart-scroll">
+          <div class="bars" id="chartFilter" role="group" aria-describedby="noteFilter"></div>
+        </div>
+      </figure>
+      <details class="data-fold">
+        <summary>数值表：四档过滤（test）</summary>
+        <div id="filterTable"></div>
+      </details>
+
+      <h3 id="hSweep" style="margin-top:26px">BM25 权重扫描 → NDCG@10</h3>
+      <p class="chart-note" id="noteSweep"></p>
+      <figure class="chart" aria-labelledby="hSweep">
+        <div class="svg-wrap"><div id="chartSweep"></div></div>
+        <figcaption class="legend" id="legendSweep"></figcaption>
+      </figure>
+      <details class="data-fold">
+        <summary>数值表：权重扫描（逐点）</summary>
+        <div id="sweepTable"></div>
+      </details>
+
+      <h3 id="hLatency" style="margin-top:26px">单次查询延迟</h3>
+      <p class="chart-note" id="noteLatency"></p>
+      <figure class="chart" aria-labelledby="hLatency">
+        <div class="chart-scroll">
+          <div class="bars" id="chartLatency" role="group" aria-describedby="noteLatency"></div>
+        </div>
+      </figure>
+      <details class="data-fold">
+        <summary>数值表：延迟分位与本次运行的资源占用</summary>
+        <div id="latencyTable"></div>
+        <div id="resourcesBlock"></div>
+      </details>
+    </section>
+
+    <!-- ───────────────── 方向推断 ───────────────── -->
+    <section class="eval-section" id="directionsSection" aria-labelledby="hDirections">
+      <h2 id="hDirections"><span class="sec-num" aria-hidden="true">02</span>方向推断</h2>
+      <p class="sec-lede">
+        把一条导师记录的研究方向藏起来，只用履历与论文文本去预测，看能不能推回来。
+        这个分区回答的是「自动补方向」这件事本身靠不靠得住。
+      </p>
+      <div id="directionsBody"></div>
+    </section>
+
+    <!-- ───────────────── 同名消歧 ───────────────── -->
+    <section class="eval-section" id="disambiguationSection" aria-labelledby="hDisambiguation">
+      <h2 id="hDisambiguation"><span class="sec-num" aria-hidden="true">03</span>同名消歧</h2>
+      <p class="sec-lede">
+        同名同姓是这类数据里最危险的错误来源：一旦把两个人的成果合并，后面的观察全部失真。
+        这里报告的是「判定两名同名导师是不是同一个人」的准确率、覆盖率与阈值取舍。
+      </p>
+      <div id="disambiguationBody"></div>
+      <div id="significanceBody"></div>
+    </section>
+
+    <!-- ───────────────── 失败案例 ───────────────── -->
+    <section class="eval-section" id="failuresSection" aria-labelledby="hFailures">
+      <h2 id="hFailures"><span class="sec-num" aria-hidden="true">04</span>失败案例</h2>
+      <p class="sec-lede">
+        挑出来的失败样本比平均分更有信息量：它们说明了检索在什么情况下会给出看起来很像、
+        其实不对的答案。下表逐条来自产物的人工分析字段，没有改写。
+      </p>
+      <p class="chart-note" id="failuresMeta"></p>
+      <div class="table-wrap">
+        <table class="data-table" id="failuresTable">
+          <caption>失败案例：查询、方法、类别、实际 Top-1 与说明</caption>
+          <thead>
+            <tr>
+              <th scope="col">查询</th>
+              <th scope="col">方法</th>
+              <th scope="col">类别</th>
+              <th scope="col">实际 Top-1</th>
+              <th scope="col">说明</th>
+            </tr>
+          </thead>
+          <tbody id="failuresBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ───────────────── 边界与局限 ───────────────── -->
+    <section class="eval-section" id="limitsSection" aria-labelledby="hLimits">
+      <h2 id="hLimits"><span class="sec-num" aria-hidden="true">05</span>边界与局限</h2>
+      <p class="sec-lede">
+        这一节记录的是「这套检索在什么情况下不可信」。它比上面的分数更重要：分数会随语料变化，
+        但这些失效模式不会自己消失。
+      </p>
+
+      <h3 id="hAcronym">英文缩写：模型把不同缩写编码成了同一个向量</h3>
+      <div id="acronymBlock"></div>
+
+      <h3 id="hCollision" style="margin-top:24px">英文探针的向量碰撞</h3>
+      <div id="collisionsBlock"></div>
+
+      <h3 id="hOffTopic" style="margin-top:24px">离题查询与空结果兜底</h3>
+      <div id="offTopicBlock"></div>
+
+      <h3 id="hDegenerate" style="margin-top:24px">退化标签对排序的影响</h3>
+      <div id="degenerateBlock"></div>
+    </section>
+
+    <footer class="eval-foot">
+      <p style="margin-bottom:4px">
+        页面本身不含任何指标常量：所有数字在打开时从 <code class="inline">/api/evaluation/summary</code> 读取，
+        接口只读产物文件、不现算指标。
+      </p>
+      <p style="margin-bottom:0"><a href="/">返回工作台</a></p>
+    </footer>
+  </div>
+
+  <noscript>
+    <div class="notice notice--pending">
+      <h3>需要 JavaScript</h3>
+      <p>本页的数字是在浏览器里从接口读取后渲染的，关闭脚本后只剩结构。接口地址：<code class="inline">/api/evaluation/summary</code>。</p>
+    </div>
+  </noscript>
+</main>
+
+<script src="/assets/eval.js?v=20261024-eval1"></script>
+</body>
+</html>

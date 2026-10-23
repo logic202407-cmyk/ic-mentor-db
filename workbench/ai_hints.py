@@ -37,7 +37,7 @@ def _pick(local: Path, repo: Path) -> Path:
 SUGGESTIONS_PATH = _pick(_LOCAL_SUGGESTIONS, _REPO_SUGGESTIONS)
 REVIEW_PATH = _pick(_LOCAL_REVIEW, _REPO_REVIEW)
 
-DISCLAIMER = ("AI 推断结果，仅供人工复核时参考，不构成事实、不改变参考分、"
+DISCLAIMER = ("AI 推断结果，仅供人工复核时参考，不构成事实、不改变任何原始字段、"
               "也不会被自动写入数据。")
 
 

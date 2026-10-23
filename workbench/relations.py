@@ -61,6 +61,9 @@ def _empty() -> dict:
         "reason": "该条目没有公开的关系数据（关系分析目前覆盖历史集成电路专题的导师）。",
         "layers": LAYERS,
         "counts": {code: 0 for code in LAYERS},
+        # 与「课题组公开信息观察」用同一套三态词表：无关系数据时四层都是 unknown，
+        # 而不是「0 条」——0 条会被读成「查过了，确实没有师承」。
+        "layer_states": {code: "unknown" for code in LAYERS},
         "edges": [],
         "peer_names": [],
     }
@@ -170,6 +173,9 @@ def analyze(network_key: str | None, *, limit_per_layer: int = 20) -> dict:
         "available": True,
         "layers": LAYERS,
         "counts": counts,
+        # 该条目在关系网内，四层都查过：有记录为 present，无记录为 absent。
+        "layer_states": {code: ("present" if counts.get(code) else "absent")
+                         for code in ("L1", "L2", "L3", "L4")},
         "edges": edges,
         "mentorship_count": counts.get("L1", 0),
         "peer_names": sorted({e["to_name"] for e in edges

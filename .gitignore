@@ -33,6 +33,16 @@ node_modules/
 Thumbs.db
 desktop.ini
 .DS_Store
+# 本地运行产生的截图与一次性输出目录（界面走查、验收截图等）。
+# 需要长期留存的图应放进 docs/ 或 reports/ 并显式命名。
+/outputs/
+# 凭据兜底：当前仓库没有这些文件，但没有规则就意味着"哪天有了也不会被挡住"。
+.env
+.env.*
+*.pem
+*.key
+credentials*
+secrets*
 
 # ── 一次性侦察/调试产物（新增采集来源时常常留下，不应入库）──
 # 采集脚本的临时页面、探查脚本与输出。放进 workbench/tests/fixtures/ 的正式快照

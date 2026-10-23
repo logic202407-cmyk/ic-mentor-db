@@ -89,6 +89,47 @@ class HybridDecisionTests(unittest.TestCase):
         score = keyword_score("海洋工程结构", "研究方向：电子器件与工艺")
         self.assertLess(score, 0.5)
 
+    def test_batch_scores_match_single_scores(self):
+        """批量版只是把文本规范化提到循环外，打分必须逐项一致。"""
+        from workbench.search import keyword_score, keyword_scores
+        text = "研究方向：电子器件与工艺；职称：教授；论文 新型器件"
+        labels = ["电子器件与工艺", "海洋工程", "器件", "", "电子器件"]
+        got = keyword_scores(labels, text)
+        for label in labels:
+            self.assertAlmostEqual(got[label], keyword_score(label, text), places=12)
+
+
+class TextLeakageTests(unittest.TestCase):
+    """``discipline`` 字段装的是方向值，拼进推断文本就是把答案喂给模型。"""
+
+    def _text_for(self, profile: dict, dossier: dict) -> str:
+        from workbench import infer_directions as module
+        original = module.research.load
+        module.research.load = lambda _pid: dossier
+        try:
+            return module.profile_text(profile)
+        finally:
+            module.research.load = original
+
+    def test_uses_first_level_discipline_not_direction_field(self):
+        text = self._text_for(
+            {"id": "x", "discipline": "电子器件与工艺",
+             "first_level_discipline": "0809 电子科学与技术",
+             "department": "集成电路学院", "summary": ""},
+            {"biography": [], "papers": []})
+        self.assertIn("0809 电子科学与技术", text)
+        self.assertNotIn("电子器件与工艺", text)
+
+    def test_pipeline_annotation_is_stripped(self):
+        text = self._text_for(
+            {"id": "x", "discipline": "射频与通信",
+             "first_level_discipline": "0809 电子科学与技术", "department": "微电子学院"},
+            {"biography": [{"text": "研究方向：射频电路。"},
+                           {"text": "学科归属按公开研究关键词归入「0809」，用于工学导航"}],
+             "papers": []})
+        self.assertIn("射频电路", text)
+        self.assertNotIn("用于工学导航", text)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -18,7 +18,7 @@ import sys
 import markdown
 
 CSS = """
-@page { size: A4; margin: 12mm 11mm 13mm 11mm; }
+@page { size: A4; margin: 10mm 10mm 11mm 10mm; }
 * { box-sizing: border-box; }
 body {
   font-family: "Microsoft YaHei", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", sans-serif;
@@ -27,13 +27,13 @@ body {
 }
 h1 { font-size: 17pt; margin: 0 0 4mm; padding-bottom: 2mm; border-bottom: 2.2px solid #1f4e79; color: #14304a; }
 h1 + blockquote { margin-top: 0; }
-h2 { font-size: 12.2pt; margin: 4.6mm 0 2mm; padding: 1.6mm 0 1.6mm 3mm; border-left: 4px solid #1f4e79; background: #f2f6fa; color: #14304a; page-break-after: avoid; }
-h3 { font-size: 10.4pt; margin: 3.4mm 0 1.4mm; color: #1f4e79; page-break-after: avoid; }
+h2 { font-size: 12.2pt; margin: 3.8mm 0 1.7mm; padding: 1.6mm 0 1.6mm 3mm; border-left: 4px solid #1f4e79; background: #f2f6fa; color: #14304a; page-break-after: avoid; }
+h3 { font-size: 10.4pt; margin: 3mm 0 1.2mm; color: #1f4e79; page-break-after: avoid; }
 h4 { font-size: 10.4pt; margin: 4mm 0 1.5mm; color: #333; page-break-after: avoid; }
-p { margin: 0 0 1.5mm; text-align: justify; }
+p { margin: 0 0 1.2mm; text-align: justify; }
 ul, ol { margin: 0 0 2.4mm; padding-left: 6.5mm; }
-li { margin-bottom: 0.7mm; }
-table { border-collapse: collapse; width: 100%; margin: 2.5mm 0 4mm; font-size: 9.1pt; page-break-inside: auto; }
+li { margin-bottom: 0.5mm; }
+table { border-collapse: collapse; width: 100%; margin: 2mm 0 3mm; font-size: 9.1pt; page-break-inside: auto; }
 th, td { border: 0.7px solid #b8c4d0; padding: 1.5mm 2mm; text-align: left; vertical-align: top; }
 th { background: #e8eef5; font-weight: 600; color: #14304a; }
 thead { display: table-header-group; }

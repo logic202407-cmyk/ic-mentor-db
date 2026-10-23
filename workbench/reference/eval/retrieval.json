@@ -1,0 +1,2648 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-23T15:32:09+0800",
+  "how_to_reproduce": "python -m workbench.retrieval_eval",
+  "honesty": "相关性来自规则生成的 A 类查询与作者手写的 B 类术语表（弱监督 qrels），不是人工标注，也不是第三方评测集；指标由本机实跑产生。",
+  "config": {
+    "seed": 42,
+    "dev_ratio": 0.3,
+    "corpus_size": 15719,
+    "limit": null,
+    "model": "BAAI/bge-small-zh-v1.5",
+    "bm25": {
+      "k1": 1.5,
+      "b": 0.75,
+      "rrf_k": 60
+    },
+    "return_limit": 20,
+    "k_values": [
+      5,
+      10,
+      20
+    ],
+    "chosen": {
+      "hybrid_bm25_weight": 0.75,
+      "hybrid_bm25_weight_on_dev_B_only": 0.1,
+      "tau": 0.35,
+      "delta": 0.0,
+      "empty_tau": 0.5,
+      "ndcg_tolerance": 0.005
+    },
+    "queries": {
+      "A": 186,
+      "B": 40,
+      "by_subclass": {
+        "a_discipline": 36,
+        "a_direction": 60,
+        "a_interest": 90,
+        "b_natural": 40
+      },
+      "dev": 68,
+      "test": 158
+    },
+    "terminology_map": {
+      "path": "workbench\\reference\\eval\\terminology_map.json",
+      "entries": 40,
+      "sha256": "d91f0e157067b206"
+    }
+  },
+  "splits": {
+    "seed": 42,
+    "dev": [
+      "a1-000",
+      "a1-015",
+      "a1-016",
+      "a1-019",
+      "a1-022",
+      "a1-025",
+      "a1-026",
+      "a1-028",
+      "a1-029",
+      "a1-030",
+      "a1-033",
+      "a2-039",
+      "a2-045",
+      "a2-047",
+      "a2-052",
+      "a2-055",
+      "a2-056",
+      "a2-057",
+      "a2-059",
+      "a2-066",
+      "a2-067",
+      "a2-069",
+      "a2-072",
+      "a2-074",
+      "a2-081",
+      "a2-085",
+      "a2-090",
+      "a2-091",
+      "a2-094",
+      "a3-097",
+      "a3-098",
+      "a3-102",
+      "a3-107",
+      "a3-108",
+      "a3-109",
+      "a3-110",
+      "a3-111",
+      "a3-115",
+      "a3-116",
+      "a3-118",
+      "a3-121",
+      "a3-122",
+      "a3-126",
+      "a3-132",
+      "a3-133",
+      "a3-138",
+      "a3-141",
+      "a3-153",
+      "a3-155",
+      "a3-156",
+      "a3-158",
+      "a3-161",
+      "a3-162",
+      "a3-170",
+      "a3-177",
+      "a3-184",
+      "b01",
+      "b03",
+      "b08",
+      "b11",
+      "b19",
+      "b21",
+      "b22",
+      "b26",
+      "b28",
+      "b29",
+      "b35",
+      "b40"
+    ],
+    "test": [
+      "a1-001",
+      "a1-002",
+      "a1-003",
+      "a1-004",
+      "a1-005",
+      "a1-006",
+      "a1-007",
+      "a1-008",
+      "a1-009",
+      "a1-010",
+      "a1-011",
+      "a1-012",
+      "a1-013",
+      "a1-014",
+      "a1-017",
+      "a1-018",
+      "a1-020",
+      "a1-021",
+      "a1-023",
+      "a1-024",
+      "a1-027",
+      "a1-031",
+      "a1-032",
+      "a1-034",
+      "a1-035",
+      "a2-036",
+      "a2-037",
+      "a2-038",
+      "a2-040",
+      "a2-041",
+      "a2-042",
+      "a2-043",
+      "a2-044",
+      "a2-046",
+      "a2-048",
+      "a2-049",
+      "a2-050",
+      "a2-051",
+      "a2-053",
+      "a2-054",
+      "a2-058",
+      "a2-060",
+      "a2-061",
+      "a2-062",
+      "a2-063",
+      "a2-064",
+      "a2-065",
+      "a2-068",
+      "a2-070",
+      "a2-071",
+      "a2-073",
+      "a2-075",
+      "a2-076",
+      "a2-077",
+      "a2-078",
+      "a2-079",
+      "a2-080",
+      "a2-082",
+      "a2-083",
+      "a2-084",
+      "a2-086",
+      "a2-087",
+      "a2-088",
+      "a2-089",
+      "a2-092",
+      "a2-093",
+      "a2-095",
+      "a3-096",
+      "a3-099",
+      "a3-100",
+      "a3-101",
+      "a3-103",
+      "a3-104",
+      "a3-105",
+      "a3-106",
+      "a3-112",
+      "a3-113",
+      "a3-114",
+      "a3-117",
+      "a3-119",
+      "a3-120",
+      "a3-123",
+      "a3-124",
+      "a3-125",
+      "a3-127",
+      "a3-128",
+      "a3-129",
+      "a3-130",
+      "a3-131",
+      "a3-134",
+      "a3-135",
+      "a3-136",
+      "a3-137",
+      "a3-139",
+      "a3-140",
+      "a3-142",
+      "a3-143",
+      "a3-144",
+      "a3-145",
+      "a3-146",
+      "a3-147",
+      "a3-148",
+      "a3-149",
+      "a3-150",
+      "a3-151",
+      "a3-152",
+      "a3-154",
+      "a3-157",
+      "a3-159",
+      "a3-160",
+      "a3-163",
+      "a3-164",
+      "a3-165",
+      "a3-166",
+      "a3-167",
+      "a3-168",
+      "a3-169",
+      "a3-171",
+      "a3-172",
+      "a3-173",
+      "a3-174",
+      "a3-175",
+      "a3-176",
+      "a3-178",
+      "a3-179",
+      "a3-180",
+      "a3-181",
+      "a3-182",
+      "a3-183",
+      "a3-185",
+      "b02",
+      "b04",
+      "b05",
+      "b06",
+      "b07",
+      "b09",
+      "b10",
+      "b12",
+      "b13",
+      "b14",
+      "b15",
+      "b16",
+      "b17",
+      "b18",
+      "b20",
+      "b23",
+      "b24",
+      "b25",
+      "b27",
+      "b30",
+      "b31",
+      "b32",
+      "b33",
+      "b34",
+      "b36",
+      "b37",
+      "b38",
+      "b39"
+    ]
+  },
+  "corpus": {
+    "entries": 15719,
+    "engineering_entries": 11040,
+    "degenerate_direction_share": 0.4492,
+    "document_length": {
+      "mean": 70.9,
+      "median": 70,
+      "max": 374,
+      "at_cap_1500": 0
+    },
+    "labels": {
+      "discipline_values": 117,
+      "direction_values": 2401
+    }
+  },
+  "indexes": {
+    "keyword_substring": {
+      "build_seconds": 0.0,
+      "bytes": 0,
+      "note": "无索引，逐条 O(N) 扫描"
+    },
+    "bm25": {
+      "documents": 15719,
+      "vocabulary": 31106,
+      "postings": 642045,
+      "array_bytes": 5136360,
+      "avg_document_tokens": 46.89,
+      "k1": 1.5,
+      "b": 0.75,
+      "build_seconds": 0.49
+    },
+    "embedding": {
+      "reused": true,
+      "cold_build_seconds": 116.29,
+      "load_seconds": 0.01,
+      "bytes": 32192640,
+      "count": 15719
+    }
+  },
+  "metrics": {
+    "keyword_substring": {
+      "A/dev": {
+        "recall@5": 0.3492,
+        "recall@10": 0.5241,
+        "recall@20": 0.6708,
+        "mrr@10": 0.9278,
+        "ndcg@10": 0.9036,
+        "top1": 0.8929,
+        "empty": 0.0,
+        "queries": 56,
+        "median_relevant": 20
+      },
+      "A/test": {
+        "recall@5": 0.3101,
+        "recall@10": 0.4824,
+        "recall@20": 0.6118,
+        "mrr@10": 0.9328,
+        "ndcg@10": 0.9202,
+        "top1": 0.9154,
+        "empty": 0.0,
+        "queries": 130,
+        "median_relevant": 22
+      },
+      "B/dev": {
+        "recall@5": 0.0017,
+        "recall@10": 0.004,
+        "recall@20": 0.0081,
+        "mrr@10": 0.248,
+        "ndcg@10": 0.1171,
+        "top1": 0.1667,
+        "empty": 0.0,
+        "queries": 12,
+        "median_relevant": 313
+      },
+      "B/test": {
+        "recall@5": 0.0103,
+        "recall@10": 0.0168,
+        "recall@20": 0.03,
+        "mrr@10": 0.2739,
+        "ndcg@10": 0.1586,
+        "top1": 0.2143,
+        "empty": 0.0,
+        "queries": 28,
+        "median_relevant": 137
+      },
+      "ALL/dev": {
+        "recall@5": 0.2879,
+        "recall@10": 0.4323,
+        "recall@20": 0.5538,
+        "mrr@10": 0.8079,
+        "ndcg@10": 0.7648,
+        "top1": 0.7647,
+        "empty": 0.0,
+        "queries": 68,
+        "median_relevant": 23
+      },
+      "ALL/test": {
+        "recall@5": 0.257,
+        "recall@10": 0.3999,
+        "recall@20": 0.5087,
+        "mrr@10": 0.816,
+        "ndcg@10": 0.7853,
+        "top1": 0.7911,
+        "empty": 0.0,
+        "queries": 158,
+        "median_relevant": 38
+      }
+    },
+    "bm25": {
+      "A/dev": {
+        "recall@5": 0.3439,
+        "recall@10": 0.5257,
+        "recall@20": 0.6693,
+        "mrr@10": 0.9539,
+        "ndcg@10": 0.9543,
+        "top1": 0.9286,
+        "empty": 0.0,
+        "queries": 56,
+        "median_relevant": 20
+      },
+      "A/test": {
+        "recall@5": 0.3209,
+        "recall@10": 0.4913,
+        "recall@20": 0.6191,
+        "mrr@10": 0.9731,
+        "ndcg@10": 0.9689,
+        "top1": 0.9538,
+        "empty": 0.0,
+        "queries": 130,
+        "median_relevant": 22
+      },
+      "B/dev": {
+        "recall@5": 0.0042,
+        "recall@10": 0.0065,
+        "recall@20": 0.0133,
+        "mrr@10": 0.375,
+        "ndcg@10": 0.2346,
+        "top1": 0.3333,
+        "empty": 0.0,
+        "queries": 12,
+        "median_relevant": 313
+      },
+      "B/test": {
+        "recall@5": 0.0107,
+        "recall@10": 0.0184,
+        "recall@20": 0.0291,
+        "mrr@10": 0.3067,
+        "ndcg@10": 0.2066,
+        "top1": 0.2143,
+        "empty": 0.0,
+        "queries": 28,
+        "median_relevant": 137
+      },
+      "ALL/dev": {
+        "recall@5": 0.284,
+        "recall@10": 0.434,
+        "recall@20": 0.5535,
+        "mrr@10": 0.8517,
+        "ndcg@10": 0.8273,
+        "top1": 0.8235,
+        "empty": 0.0,
+        "queries": 68,
+        "median_relevant": 23
+      },
+      "ALL/test": {
+        "recall@5": 0.2659,
+        "recall@10": 0.4075,
+        "recall@20": 0.5145,
+        "mrr@10": 0.855,
+        "ndcg@10": 0.8338,
+        "top1": 0.8228,
+        "empty": 0.0,
+        "queries": 158,
+        "median_relevant": 38
+      }
+    },
+    "embedding": {
+      "A/dev": {
+        "recall@5": 0.2451,
+        "recall@10": 0.3823,
+        "recall@20": 0.4842,
+        "mrr@10": 0.8458,
+        "ndcg@10": 0.7664,
+        "top1": 0.7857,
+        "empty": 0.0,
+        "queries": 56,
+        "median_relevant": 20
+      },
+      "A/test": {
+        "recall@5": 0.2217,
+        "recall@10": 0.3367,
+        "recall@20": 0.441,
+        "mrr@10": 0.8127,
+        "ndcg@10": 0.7476,
+        "top1": 0.7538,
+        "empty": 0.0,
+        "queries": 130,
+        "median_relevant": 22
+      },
+      "B/dev": {
+        "recall@5": 0.0054,
+        "recall@10": 0.0108,
+        "recall@20": 0.0211,
+        "mrr@10": 0.541,
+        "ndcg@10": 0.4273,
+        "top1": 0.5,
+        "empty": 0.0,
+        "queries": 12,
+        "median_relevant": 313
+      },
+      "B/test": {
+        "recall@5": 0.0141,
+        "recall@10": 0.0258,
+        "recall@20": 0.0557,
+        "mrr@10": 0.4816,
+        "ndcg@10": 0.3484,
+        "top1": 0.3929,
+        "empty": 0.0,
+        "queries": 28,
+        "median_relevant": 137
+      },
+      "ALL/dev": {
+        "recall@5": 0.2028,
+        "recall@10": 0.3167,
+        "recall@20": 0.4025,
+        "mrr@10": 0.792,
+        "ndcg@10": 0.7066,
+        "top1": 0.7353,
+        "empty": 0.0,
+        "queries": 68,
+        "median_relevant": 23
+      },
+      "ALL/test": {
+        "recall@5": 0.1849,
+        "recall@10": 0.2816,
+        "recall@20": 0.3727,
+        "mrr@10": 0.754,
+        "ndcg@10": 0.6769,
+        "top1": 0.6899,
+        "empty": 0.0,
+        "queries": 158,
+        "median_relevant": 38
+      }
+    },
+    "hybrid_score": {
+      "A/dev": {
+        "recall@5": 0.3441,
+        "recall@10": 0.5234,
+        "recall@20": 0.6626,
+        "mrr@10": 0.9658,
+        "ndcg@10": 0.9586,
+        "top1": 0.9464,
+        "empty": 0.0,
+        "queries": 56,
+        "median_relevant": 20
+      },
+      "A/test": {
+        "recall@5": 0.3176,
+        "recall@10": 0.4845,
+        "recall@20": 0.6157,
+        "mrr@10": 0.9808,
+        "ndcg@10": 0.9632,
+        "top1": 0.9692,
+        "empty": 0.0,
+        "queries": 130,
+        "median_relevant": 22
+      },
+      "B/dev": {
+        "recall@5": 0.005,
+        "recall@10": 0.0079,
+        "recall@20": 0.0176,
+        "mrr@10": 0.375,
+        "ndcg@10": 0.289,
+        "top1": 0.3333,
+        "empty": 0.0,
+        "queries": 12,
+        "median_relevant": 313
+      },
+      "B/test": {
+        "recall@5": 0.0116,
+        "recall@10": 0.021,
+        "recall@20": 0.0388,
+        "mrr@10": 0.3367,
+        "ndcg@10": 0.2346,
+        "top1": 0.2143,
+        "empty": 0.0,
+        "queries": 28,
+        "median_relevant": 137
+      },
+      "ALL/dev": {
+        "recall@5": 0.2843,
+        "recall@10": 0.4325,
+        "recall@20": 0.5488,
+        "mrr@10": 0.8615,
+        "ndcg@10": 0.8404,
+        "top1": 0.8382,
+        "empty": 0.0,
+        "queries": 68,
+        "median_relevant": 23
+      },
+      "ALL/test": {
+        "recall@5": 0.2634,
+        "recall@10": 0.4024,
+        "recall@20": 0.5135,
+        "mrr@10": 0.8666,
+        "ndcg@10": 0.8341,
+        "top1": 0.8354,
+        "empty": 0.0,
+        "queries": 158,
+        "median_relevant": 38
+      }
+    },
+    "hybrid_rrf": {
+      "A/dev": {
+        "recall@5": 0.2925,
+        "recall@10": 0.4492,
+        "recall@20": 0.582,
+        "mrr@10": 0.949,
+        "ndcg@10": 0.8713,
+        "top1": 0.9107,
+        "empty": 0.0,
+        "queries": 56,
+        "median_relevant": 20
+      },
+      "A/test": {
+        "recall@5": 0.2707,
+        "recall@10": 0.4096,
+        "recall@20": 0.5349,
+        "mrr@10": 0.9373,
+        "ndcg@10": 0.876,
+        "top1": 0.9077,
+        "empty": 0.0,
+        "queries": 130,
+        "median_relevant": 22
+      },
+      "B/dev": {
+        "recall@5": 0.0051,
+        "recall@10": 0.0098,
+        "recall@20": 0.019,
+        "mrr@10": 0.4444,
+        "ndcg@10": 0.3533,
+        "top1": 0.3333,
+        "empty": 0.0,
+        "queries": 12,
+        "median_relevant": 313
+      },
+      "B/test": {
+        "recall@5": 0.0103,
+        "recall@10": 0.0242,
+        "recall@20": 0.0516,
+        "mrr@10": 0.4577,
+        "ndcg@10": 0.3316,
+        "top1": 0.3214,
+        "empty": 0.0,
+        "queries": 28,
+        "median_relevant": 137
+      },
+      "ALL/dev": {
+        "recall@5": 0.2417,
+        "recall@10": 0.3717,
+        "recall@20": 0.4826,
+        "mrr@10": 0.8599,
+        "ndcg@10": 0.7799,
+        "top1": 0.8088,
+        "empty": 0.0,
+        "queries": 68,
+        "median_relevant": 23
+      },
+      "ALL/test": {
+        "recall@5": 0.2246,
+        "recall@10": 0.3413,
+        "recall@20": 0.4493,
+        "mrr@10": 0.8523,
+        "ndcg@10": 0.7795,
+        "top1": 0.8038,
+        "empty": 0.0,
+        "queries": 158,
+        "median_relevant": 38
+      }
+    },
+    "embedding_instruct": {
+      "A/dev": {
+        "recall@5": 0.2291,
+        "recall@10": 0.3798,
+        "recall@20": 0.4655,
+        "mrr@10": 0.8096,
+        "ndcg@10": 0.7508,
+        "top1": 0.7321,
+        "empty": 0.0,
+        "queries": 56,
+        "median_relevant": 20
+      },
+      "A/test": {
+        "recall@5": 0.2225,
+        "recall@10": 0.331,
+        "recall@20": 0.436,
+        "mrr@10": 0.8017,
+        "ndcg@10": 0.7263,
+        "top1": 0.7462,
+        "empty": 0.0,
+        "queries": 130,
+        "median_relevant": 22
+      },
+      "B/dev": {
+        "recall@5": 0.0051,
+        "recall@10": 0.0109,
+        "recall@20": 0.0216,
+        "mrr@10": 0.5336,
+        "ndcg@10": 0.4207,
+        "top1": 0.5,
+        "empty": 0.0,
+        "queries": 12,
+        "median_relevant": 313
+      },
+      "B/test": {
+        "recall@5": 0.0151,
+        "recall@10": 0.0274,
+        "recall@20": 0.0537,
+        "mrr@10": 0.467,
+        "ndcg@10": 0.3536,
+        "top1": 0.3929,
+        "empty": 0.0,
+        "queries": 28,
+        "median_relevant": 137
+      },
+      "ALL/dev": {
+        "recall@5": 0.1896,
+        "recall@10": 0.3147,
+        "recall@20": 0.3871,
+        "mrr@10": 0.7609,
+        "ndcg@10": 0.6926,
+        "top1": 0.6912,
+        "empty": 0.0,
+        "queries": 68,
+        "median_relevant": 23
+      },
+      "ALL/test": {
+        "recall@5": 0.1857,
+        "recall@10": 0.2772,
+        "recall@20": 0.3683,
+        "mrr@10": 0.7424,
+        "ndcg@10": 0.6602,
+        "top1": 0.6835,
+        "empty": 0.0,
+        "queries": 158,
+        "median_relevant": 38
+      }
+    }
+  },
+  "subclass_metrics": {
+    "keyword_substring": {
+      "a_direction": {
+        "recall@5": 0.4344,
+        "recall@10": 0.6223,
+        "recall@20": 0.7501,
+        "mrr@10": 0.9762,
+        "ndcg@10": 0.9706,
+        "top1": 0.9762,
+        "empty": 0.0,
+        "queries": 42,
+        "median_relevant": 14
+      },
+      "a_discipline": {
+        "recall@5": 0.0303,
+        "recall@10": 0.0623,
+        "recall@20": 0.1357,
+        "mrr@10": 0.869,
+        "ndcg@10": 0.8635,
+        "top1": 0.84,
+        "empty": 0.0,
+        "queries": 25,
+        "median_relevant": 131
+      },
+      "a_interest": {
+        "recall@5": 0.3383,
+        "recall@10": 0.5559,
+        "recall@20": 0.7086,
+        "mrr@10": 0.9291,
+        "ndcg@10": 0.9092,
+        "top1": 0.9048,
+        "empty": 0.0,
+        "queries": 63,
+        "median_relevant": 14
+      },
+      "b_natural": {
+        "recall@5": 0.0103,
+        "recall@10": 0.0168,
+        "recall@20": 0.03,
+        "mrr@10": 0.2739,
+        "ndcg@10": 0.1586,
+        "top1": 0.2143,
+        "empty": 0.0,
+        "queries": 28,
+        "median_relevant": 137
+      }
+    },
+    "bm25": {
+      "a_direction": {
+        "recall@5": 0.4364,
+        "recall@10": 0.6266,
+        "recall@20": 0.7551,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0,
+        "top1": 1.0,
+        "empty": 0.0,
+        "queries": 42,
+        "median_relevant": 14
+      },
+      "a_discipline": {
+        "recall@5": 0.0383,
+        "recall@10": 0.0739,
+        "recall@20": 0.1462,
+        "mrr@10": 0.96,
+        "ndcg@10": 0.9517,
+        "top1": 0.96,
+        "empty": 0.0,
+        "queries": 25,
+        "median_relevant": 131
+      },
+      "a_interest": {
+        "recall@5": 0.356,
+        "recall@10": 0.5667,
+        "recall@20": 0.716,
+        "mrr@10": 0.9603,
+        "ndcg@10": 0.955,
+        "top1": 0.9206,
+        "empty": 0.0,
+        "queries": 63,
+        "median_relevant": 14
+      },
+      "b_natural": {
+        "recall@5": 0.0107,
+        "recall@10": 0.0184,
+        "recall@20": 0.0291,
+        "mrr@10": 0.3067,
+        "ndcg@10": 0.2066,
+        "top1": 0.2143,
+        "empty": 0.0,
+        "queries": 28,
+        "median_relevant": 137
+      }
+    },
+    "embedding": {
+      "a_direction": {
+        "recall@5": 0.3603,
+        "recall@10": 0.5529,
+        "recall@20": 0.6832,
+        "mrr@10": 0.9206,
+        "ndcg@10": 0.8962,
+        "top1": 0.9048,
+        "empty": 0.0,
+        "queries": 42,
+        "median_relevant": 14
+      },
+      "a_discipline": {
+        "recall@5": 0.0356,
+        "recall@10": 0.0704,
+        "recall@20": 0.1393,
+        "mrr@10": 0.94,
+        "ndcg@10": 0.9325,
+        "top1": 0.92,
+        "empty": 0.0,
+        "queries": 25,
+        "median_relevant": 131
+      },
+      "a_interest": {
+        "recall@5": 0.203,
+        "recall@10": 0.2981,
+        "recall@20": 0.3992,
+        "mrr@10": 0.6902,
+        "ndcg@10": 0.5752,
+        "top1": 0.5873,
+        "empty": 0.0,
+        "queries": 63,
+        "median_relevant": 14
+      },
+      "b_natural": {
+        "recall@5": 0.0141,
+        "recall@10": 0.0258,
+        "recall@20": 0.0557,
+        "mrr@10": 0.4816,
+        "ndcg@10": 0.3484,
+        "top1": 0.3929,
+        "empty": 0.0,
+        "queries": 28,
+        "median_relevant": 137
+      }
+    },
+    "hybrid_score": {
+      "a_direction": {
+        "recall@5": 0.4364,
+        "recall@10": 0.6266,
+        "recall@20": 0.7551,
+        "mrr@10": 1.0,
+        "ndcg@10": 1.0,
+        "top1": 1.0,
+        "empty": 0.0,
+        "queries": 42,
+        "median_relevant": 14
+      },
+      "a_discipline": {
+        "recall@5": 0.0383,
+        "recall@10": 0.073,
+        "recall@20": 0.1443,
+        "mrr@10": 0.96,
+        "ndcg@10": 0.9491,
+        "top1": 0.96,
+        "empty": 0.0,
+        "queries": 25,
+        "median_relevant": 131
+      },
+      "a_interest": {
+        "recall@5": 0.3492,
+        "recall@10": 0.5531,
+        "recall@20": 0.7099,
+        "mrr@10": 0.9762,
+        "ndcg@10": 0.9443,
+        "top1": 0.9524,
+        "empty": 0.0,
+        "queries": 63,
+        "median_relevant": 14
+      },
+      "b_natural": {
+        "recall@5": 0.0116,
+        "recall@10": 0.021,
+        "recall@20": 0.0388,
+        "mrr@10": 0.3367,
+        "ndcg@10": 0.2346,
+        "top1": 0.2143,
+        "empty": 0.0,
+        "queries": 28,
+        "median_relevant": 137
+      }
+    },
+    "hybrid_rrf": {
+      "a_direction": {
+        "recall@5": 0.4109,
+        "recall@10": 0.5913,
+        "recall@20": 0.727,
+        "mrr@10": 0.9821,
+        "ndcg@10": 0.9595,
+        "top1": 0.9762,
+        "empty": 0.0,
+        "queries": 42,
+        "median_relevant": 14
+      },
+      "a_discipline": {
+        "recall@5": 0.0365,
+        "recall@10": 0.0713,
+        "recall@20": 0.1435,
+        "mrr@10": 0.94,
+        "ndcg@10": 0.9359,
+        "top1": 0.92,
+        "empty": 0.0,
+        "queries": 25,
+        "median_relevant": 131
+      },
+      "a_interest": {
+        "recall@5": 0.2703,
+        "recall@10": 0.4227,
+        "recall@20": 0.5622,
+        "mrr@10": 0.9064,
+        "ndcg@10": 0.7965,
+        "top1": 0.8571,
+        "empty": 0.0,
+        "queries": 63,
+        "median_relevant": 14
+      },
+      "b_natural": {
+        "recall@5": 0.0103,
+        "recall@10": 0.0242,
+        "recall@20": 0.0516,
+        "mrr@10": 0.4577,
+        "ndcg@10": 0.3316,
+        "top1": 0.3214,
+        "empty": 0.0,
+        "queries": 28,
+        "median_relevant": 137
+      }
+    },
+    "embedding_instruct": {
+      "a_direction": {
+        "recall@5": 0.3613,
+        "recall@10": 0.539,
+        "recall@20": 0.6708,
+        "mrr@10": 0.8937,
+        "ndcg@10": 0.8766,
+        "top1": 0.881,
+        "empty": 0.0,
+        "queries": 42,
+        "median_relevant": 14
+      },
+      "a_discipline": {
+        "recall@5": 0.0348,
+        "recall@10": 0.0687,
+        "recall@20": 0.1384,
+        "mrr@10": 0.93,
+        "ndcg@10": 0.9238,
+        "top1": 0.92,
+        "empty": 0.0,
+        "queries": 25,
+        "median_relevant": 131
+      },
+      "a_interest": {
+        "recall@5": 0.2044,
+        "recall@10": 0.2963,
+        "recall@20": 0.3977,
+        "mrr@10": 0.6896,
+        "ndcg@10": 0.5477,
+        "top1": 0.5873,
+        "empty": 0.0,
+        "queries": 63,
+        "median_relevant": 14
+      },
+      "b_natural": {
+        "recall@5": 0.0151,
+        "recall@10": 0.0274,
+        "recall@20": 0.0537,
+        "mrr@10": 0.467,
+        "ndcg@10": 0.3536,
+        "top1": 0.3929,
+        "empty": 0.0,
+        "queries": 28,
+        "median_relevant": 137
+      }
+    }
+  },
+  "small_relevant_subset": {
+    "keyword_substring": {
+      "A": {
+        "recall@5": 0.5309,
+        "recall@10": 0.809,
+        "recall@20": 0.9649,
+        "mrr@10": 0.9624,
+        "ndcg@10": 0.9505,
+        "top1": 0.9437,
+        "empty": 0.0,
+        "queries": 71,
+        "median_relevant": 9
+      },
+      "B": {
+        "recall@5": 0.0398,
+        "recall@10": 0.0556,
+        "recall@20": 0.0963,
+        "mrr@10": 0.3,
+        "ndcg@10": 0.1577,
+        "top1": 0.2,
+        "empty": 0.0,
+        "queries": 5,
+        "median_relevant": 27
+      }
+    },
+    "bm25": {
+      "A": {
+        "recall@5": 0.5453,
+        "recall@10": 0.8158,
+        "recall@20": 0.9694,
+        "mrr@10": 0.9648,
+        "ndcg@10": 0.9626,
+        "top1": 0.9296,
+        "empty": 0.0,
+        "queries": 71,
+        "median_relevant": 9
+      },
+      "B": {
+        "recall@5": 0.0315,
+        "recall@10": 0.047,
+        "recall@20": 0.0701,
+        "mrr@10": 0.2952,
+        "ndcg@10": 0.1314,
+        "top1": 0.2,
+        "empty": 0.0,
+        "queries": 5,
+        "median_relevant": 27
+      }
+    },
+    "embedding": {
+      "A": {
+        "recall@5": 0.3728,
+        "recall@10": 0.5506,
+        "recall@20": 0.6847,
+        "mrr@10": 0.7252,
+        "ndcg@10": 0.661,
+        "top1": 0.6479,
+        "empty": 0.0,
+        "queries": 71,
+        "median_relevant": 9
+      },
+      "B": {
+        "recall@5": 0.0083,
+        "recall@10": 0.0083,
+        "recall@20": 0.0405,
+        "mrr@10": 0.1,
+        "ndcg@10": 0.0278,
+        "top1": 0.0,
+        "empty": 0.0,
+        "queries": 5,
+        "median_relevant": 27
+      }
+    },
+    "hybrid_score": {
+      "A": {
+        "recall@5": 0.5395,
+        "recall@10": 0.8041,
+        "recall@20": 0.9646,
+        "mrr@10": 0.9789,
+        "ndcg@10": 0.9554,
+        "top1": 0.9577,
+        "empty": 0.0,
+        "queries": 71,
+        "median_relevant": 9
+      },
+      "B": {
+        "recall@5": 0.0315,
+        "recall@10": 0.0544,
+        "recall@20": 0.0858,
+        "mrr@10": 0.2952,
+        "ndcg@10": 0.1476,
+        "top1": 0.2,
+        "empty": 0.0,
+        "queries": 5,
+        "median_relevant": 27
+      }
+    },
+    "hybrid_rrf": {
+      "A": {
+        "recall@5": 0.4552,
+        "recall@10": 0.6715,
+        "recall@20": 0.8269,
+        "mrr@10": 0.9064,
+        "ndcg@10": 0.8157,
+        "top1": 0.8592,
+        "empty": 0.0,
+        "queries": 71,
+        "median_relevant": 9
+      },
+      "B": {
+        "recall@5": 0.0074,
+        "recall@10": 0.0315,
+        "recall@20": 0.0806,
+        "mrr@10": 0.0833,
+        "ndcg@10": 0.062,
+        "top1": 0.0,
+        "empty": 0.0,
+        "queries": 5,
+        "median_relevant": 27
+      }
+    },
+    "embedding_instruct": {
+      "A": {
+        "recall@5": 0.3756,
+        "recall@10": 0.5439,
+        "recall@20": 0.6795,
+        "mrr@10": 0.7367,
+        "ndcg@10": 0.6529,
+        "top1": 0.6761,
+        "empty": 0.0,
+        "queries": 71,
+        "median_relevant": 9
+      },
+      "B": {
+        "recall@5": 0.0083,
+        "recall@10": 0.0167,
+        "recall@20": 0.0405,
+        "mrr@10": 0.0667,
+        "ndcg@10": 0.0359,
+        "top1": 0.0,
+        "empty": 0.0,
+        "queries": 5,
+        "median_relevant": 27
+      }
+    }
+  },
+  "latency": {
+    "keyword_substring": {
+      "n": 226,
+      "mean_ms": 14.91,
+      "median_ms": 13.23,
+      "p95_ms": 25.45,
+      "max_ms": 30.33
+    },
+    "bm25": {
+      "n": 226,
+      "mean_ms": 0.18,
+      "median_ms": 0.16,
+      "p95_ms": 0.31,
+      "max_ms": 0.74
+    },
+    "embedding": {
+      "n": 226,
+      "mean_ms": 3.66,
+      "median_ms": 3.42,
+      "p95_ms": 5.17,
+      "max_ms": 10.01
+    },
+    "embedding_instruct": {
+      "n": 226,
+      "mean_ms": 4.24,
+      "median_ms": 3.91,
+      "p95_ms": 6.57,
+      "max_ms": 9.5
+    }
+  },
+  "resources": {
+    "wall_seconds": 23.7,
+    "cpu": {
+      "user_seconds": 129.2,
+      "system_seconds": 3.62,
+      "total_seconds": 132.82,
+      "cpu_utilization": 560.4
+    },
+    "phase_wall_seconds": {
+      "build_queries": 1.477,
+      "build_bm25": 0.495,
+      "build_vectors": 0.016,
+      "score_queries": 6.187,
+      "select_hyperparameters": 11.911,
+      "evaluate": 3.444
+    },
+    "phase_cpu": {
+      "build_queries": {
+        "user_seconds": 1.203,
+        "system_seconds": 0.188
+      },
+      "build_bm25": {
+        "user_seconds": 0.484,
+        "system_seconds": 0.0
+      },
+      "build_vectors": {
+        "user_seconds": 0.016,
+        "system_seconds": 0.0
+      },
+      "score_queries": {
+        "user_seconds": 81.875,
+        "system_seconds": 2.234
+      },
+      "select_hyperparameters": {
+        "user_seconds": 26.062,
+        "system_seconds": 0.703
+      },
+      "evaluate": {
+        "user_seconds": 16.891,
+        "system_seconds": 0.453
+      }
+    }
+  },
+  "weight_sweep": [
+    {
+      "bm25_weight": 0.0,
+      "ndcg@10": 0.7066,
+      "ndcg@10_A": 0.7664,
+      "ndcg@10_B": 0.4273,
+      "top1": 0.7353
+    },
+    {
+      "bm25_weight": 0.05,
+      "ndcg@10": 0.7371,
+      "ndcg@10_A": 0.804,
+      "ndcg@10_B": 0.4248,
+      "top1": 0.7353
+    },
+    {
+      "bm25_weight": 0.1,
+      "ndcg@10": 0.7629,
+      "ndcg@10_A": 0.8345,
+      "ndcg@10_B": 0.4287,
+      "top1": 0.7353
+    },
+    {
+      "bm25_weight": 0.15,
+      "ndcg@10": 0.78,
+      "ndcg@10_A": 0.8575,
+      "ndcg@10_B": 0.418,
+      "top1": 0.75
+    },
+    {
+      "bm25_weight": 0.2,
+      "ndcg@10": 0.8014,
+      "ndcg@10_A": 0.8878,
+      "ndcg@10_B": 0.398,
+      "top1": 0.7794
+    },
+    {
+      "bm25_weight": 0.25,
+      "ndcg@10": 0.8106,
+      "ndcg@10_A": 0.904,
+      "ndcg@10_B": 0.3747,
+      "top1": 0.8382
+    },
+    {
+      "bm25_weight": 0.3,
+      "ndcg@10": 0.8114,
+      "ndcg@10_A": 0.9114,
+      "ndcg@10_B": 0.3446,
+      "top1": 0.8235
+    },
+    {
+      "bm25_weight": 0.35,
+      "ndcg@10": 0.8168,
+      "ndcg@10_A": 0.9206,
+      "ndcg@10_B": 0.3325,
+      "top1": 0.8235
+    },
+    {
+      "bm25_weight": 0.4,
+      "ndcg@10": 0.8233,
+      "ndcg@10_A": 0.934,
+      "ndcg@10_B": 0.3068,
+      "top1": 0.8088
+    },
+    {
+      "bm25_weight": 0.45,
+      "ndcg@10": 0.821,
+      "ndcg@10_A": 0.9353,
+      "ndcg@10_B": 0.2877,
+      "top1": 0.7941
+    },
+    {
+      "bm25_weight": 0.5,
+      "ndcg@10": 0.827,
+      "ndcg@10_A": 0.9425,
+      "ndcg@10_B": 0.2877,
+      "top1": 0.7941
+    },
+    {
+      "bm25_weight": 0.55,
+      "ndcg@10": 0.8304,
+      "ndcg@10_A": 0.9453,
+      "ndcg@10_B": 0.2945,
+      "top1": 0.8088
+    },
+    {
+      "bm25_weight": 0.6,
+      "ndcg@10": 0.8369,
+      "ndcg@10_A": 0.9544,
+      "ndcg@10_B": 0.2884,
+      "top1": 0.8235
+    },
+    {
+      "bm25_weight": 0.65,
+      "ndcg@10": 0.8391,
+      "ndcg@10_A": 0.957,
+      "ndcg@10_B": 0.289,
+      "top1": 0.8235
+    },
+    {
+      "bm25_weight": 0.7,
+      "ndcg@10": 0.8394,
+      "ndcg@10_A": 0.9574,
+      "ndcg@10_B": 0.289,
+      "top1": 0.8382
+    },
+    {
+      "bm25_weight": 0.75,
+      "ndcg@10": 0.8404,
+      "ndcg@10_A": 0.9586,
+      "ndcg@10_B": 0.289,
+      "top1": 0.8382
+    },
+    {
+      "bm25_weight": 0.8,
+      "ndcg@10": 0.8402,
+      "ndcg@10_A": 0.9585,
+      "ndcg@10_B": 0.2877,
+      "top1": 0.8382
+    },
+    {
+      "bm25_weight": 0.85,
+      "ndcg@10": 0.839,
+      "ndcg@10_A": 0.957,
+      "ndcg@10_B": 0.2885,
+      "top1": 0.8235
+    },
+    {
+      "bm25_weight": 0.9,
+      "ndcg@10": 0.8369,
+      "ndcg@10_A": 0.9544,
+      "ndcg@10_B": 0.2885,
+      "top1": 0.8235
+    },
+    {
+      "bm25_weight": 0.95,
+      "ndcg@10": 0.8369,
+      "ndcg@10_A": 0.9545,
+      "ndcg@10_B": 0.2885,
+      "top1": 0.8235
+    },
+    {
+      "bm25_weight": 1.0,
+      "ndcg@10": 0.8273,
+      "ndcg@10_A": 0.9543,
+      "ndcg@10_B": 0.2346,
+      "top1": 0.8235
+    }
+  ],
+  "margin_stats": {
+    "n": 68,
+    "median": 0.0125,
+    "p10": 0.0044,
+    "p90": 0.032,
+    "min": 0.0004,
+    "max": 0.0687
+  },
+  "degenerate_bias": {
+    "definition": "退化文档 = direction_group 属于「方向待补/不分研究方向」等占位标签",
+    "corpus_share": 0.4492,
+    "test_top10_share_mean": 0.1538,
+    "test_top10_share_median": 0.0,
+    "corpus_mean_doc_length": 70.9,
+    "test_top10_mean_doc_length": 68.7
+  },
+  "filter_grid": [
+    {
+      "tau": 0.2,
+      "ndcg@0.0": 0.7066,
+      "trim@0.0": 0.0,
+      "empty@0.0": 0.0,
+      "ndcg@0.02": 0.1677,
+      "trim@0.02": 0.7353,
+      "empty@0.02": 0.7353,
+      "ndcg@0.04": 0.0099,
+      "trim@0.04": 0.9706,
+      "empty@0.04": 0.9706,
+      "ndcg@0.06": 0.0,
+      "trim@0.06": 0.9853,
+      "empty@0.06": 0.9853,
+      "ndcg@0.08": 0.0,
+      "trim@0.08": 1.0,
+      "empty@0.08": 1.0,
+      "ndcg@0.1": 0.0,
+      "trim@0.1": 1.0,
+      "empty@0.1": 1.0
+    },
+    {
+      "tau": 0.25,
+      "ndcg@0.0": 0.7066,
+      "trim@0.0": 0.0,
+      "empty@0.0": 0.0,
+      "ndcg@0.02": 0.1677,
+      "trim@0.02": 0.7353,
+      "empty@0.02": 0.7353,
+      "ndcg@0.04": 0.0099,
+      "trim@0.04": 0.9706,
+      "empty@0.04": 0.9706,
+      "ndcg@0.06": 0.0,
+      "trim@0.06": 0.9853,
+      "empty@0.06": 0.9853,
+      "ndcg@0.08": 0.0,
+      "trim@0.08": 1.0,
+      "empty@0.08": 1.0,
+      "ndcg@0.1": 0.0,
+      "trim@0.1": 1.0,
+      "empty@0.1": 1.0
+    },
+    {
+      "tau": 0.3,
+      "ndcg@0.0": 0.7066,
+      "trim@0.0": 0.0,
+      "empty@0.0": 0.0,
+      "ndcg@0.02": 0.1677,
+      "trim@0.02": 0.7353,
+      "empty@0.02": 0.7353,
+      "ndcg@0.04": 0.0099,
+      "trim@0.04": 0.9706,
+      "empty@0.04": 0.9706,
+      "ndcg@0.06": 0.0,
+      "trim@0.06": 0.9853,
+      "empty@0.06": 0.9853,
+      "ndcg@0.08": 0.0,
+      "trim@0.08": 1.0,
+      "empty@0.08": 1.0,
+      "ndcg@0.1": 0.0,
+      "trim@0.1": 1.0,
+      "empty@0.1": 1.0
+    },
+    {
+      "tau": 0.35,
+      "ndcg@0.0": 0.7066,
+      "trim@0.0": 0.0074,
+      "empty@0.0": 0.0,
+      "ndcg@0.02": 0.1677,
+      "trim@0.02": 0.7353,
+      "empty@0.02": 0.7353,
+      "ndcg@0.04": 0.0099,
+      "trim@0.04": 0.9706,
+      "empty@0.04": 0.9706,
+      "ndcg@0.06": 0.0,
+      "trim@0.06": 0.9853,
+      "empty@0.06": 0.9853,
+      "ndcg@0.08": 0.0,
+      "trim@0.08": 1.0,
+      "empty@0.08": 1.0,
+      "ndcg@0.1": 0.0,
+      "trim@0.1": 1.0,
+      "empty@0.1": 1.0
+    },
+    {
+      "tau": 0.4,
+      "ndcg@0.0": 0.7014,
+      "trim@0.0": 0.0471,
+      "empty@0.0": 0.0294,
+      "ndcg@0.02": 0.1626,
+      "trim@0.02": 0.7529,
+      "empty@0.02": 0.7353,
+      "ndcg@0.04": 0.0099,
+      "trim@0.04": 0.9772,
+      "empty@0.04": 0.9706,
+      "ndcg@0.06": 0.0,
+      "trim@0.06": 0.9919,
+      "empty@0.06": 0.9853,
+      "ndcg@0.08": 0.0,
+      "trim@0.08": 1.0,
+      "empty@0.08": 1.0,
+      "ndcg@0.1": 0.0,
+      "trim@0.1": 1.0,
+      "empty@0.1": 1.0
+    },
+    {
+      "tau": 0.45,
+      "ndcg@0.0": 0.691,
+      "trim@0.0": 0.086,
+      "empty@0.0": 0.0441,
+      "ndcg@0.02": 0.1563,
+      "trim@0.02": 0.7662,
+      "empty@0.02": 0.7353,
+      "ndcg@0.04": 0.0099,
+      "trim@0.04": 0.9846,
+      "empty@0.04": 0.9706,
+      "ndcg@0.06": 0.0,
+      "trim@0.06": 0.9993,
+      "empty@0.06": 0.9853,
+      "ndcg@0.08": 0.0,
+      "trim@0.08": 1.0,
+      "empty@0.08": 1.0,
+      "ndcg@0.1": 0.0,
+      "trim@0.1": 1.0,
+      "empty@0.1": 1.0
+    },
+    {
+      "tau": 0.5,
+      "ndcg@0.0": 0.6689,
+      "trim@0.0": 0.1294,
+      "empty@0.0": 0.0882,
+      "ndcg@0.02": 0.1458,
+      "trim@0.02": 0.7787,
+      "empty@0.02": 0.7647,
+      "ndcg@0.04": 0.0099,
+      "trim@0.04": 0.9853,
+      "empty@0.04": 0.9853,
+      "ndcg@0.06": 0.0,
+      "trim@0.06": 1.0,
+      "empty@0.06": 1.0,
+      "ndcg@0.08": 0.0,
+      "trim@0.08": 1.0,
+      "empty@0.08": 1.0,
+      "ndcg@0.1": 0.0,
+      "trim@0.1": 1.0,
+      "empty@0.1": 1.0
+    },
+    {
+      "tau": 0.55,
+      "ndcg@0.0": 0.6274,
+      "trim@0.0": 0.2603,
+      "empty@0.0": 0.1324,
+      "ndcg@0.02": 0.1308,
+      "trim@0.02": 0.8213,
+      "empty@0.02": 0.7794,
+      "ndcg@0.04": 0.0053,
+      "trim@0.04": 0.9985,
+      "empty@0.04": 0.9853,
+      "ndcg@0.06": 0.0,
+      "trim@0.06": 1.0,
+      "empty@0.06": 1.0,
+      "ndcg@0.08": 0.0,
+      "trim@0.08": 1.0,
+      "empty@0.08": 1.0,
+      "ndcg@0.1": 0.0,
+      "trim@0.1": 1.0,
+      "empty@0.1": 1.0
+    },
+    {
+      "tau": 0.6,
+      "ndcg@0.0": 0.4603,
+      "trim@0.0": 0.5096,
+      "empty@0.0": 0.3088,
+      "ndcg@0.02": 0.1152,
+      "trim@0.02": 0.8618,
+      "empty@0.02": 0.8088,
+      "ndcg@0.04": 0.0,
+      "trim@0.04": 1.0,
+      "empty@0.04": 1.0,
+      "ndcg@0.06": 0.0,
+      "trim@0.06": 1.0,
+      "empty@0.06": 1.0,
+      "ndcg@0.08": 0.0,
+      "trim@0.08": 1.0,
+      "empty@0.08": 1.0,
+      "ndcg@0.1": 0.0,
+      "trim@0.1": 1.0,
+      "empty@0.1": 1.0
+    },
+    {
+      "tau": 0.65,
+      "ndcg@0.0": 0.35,
+      "trim@0.0": 0.664,
+      "empty@0.0": 0.5,
+      "ndcg@0.02": 0.0876,
+      "trim@0.02": 0.9243,
+      "empty@0.02": 0.8382,
+      "ndcg@0.04": 0.0,
+      "trim@0.04": 1.0,
+      "empty@0.04": 1.0,
+      "ndcg@0.06": 0.0,
+      "trim@0.06": 1.0,
+      "empty@0.06": 1.0,
+      "ndcg@0.08": 0.0,
+      "trim@0.08": 1.0,
+      "empty@0.08": 1.0,
+      "ndcg@0.1": 0.0,
+      "trim@0.1": 1.0,
+      "empty@0.1": 1.0
+    },
+    {
+      "tau": 0.7,
+      "ndcg@0.0": 0.1273,
+      "trim@0.0": 0.8978,
+      "empty@0.0": 0.75,
+      "ndcg@0.02": 0.0281,
+      "trim@0.02": 0.9816,
+      "empty@0.02": 0.9265,
+      "ndcg@0.04": 0.0,
+      "trim@0.04": 1.0,
+      "empty@0.04": 1.0,
+      "ndcg@0.06": 0.0,
+      "trim@0.06": 1.0,
+      "empty@0.06": 1.0,
+      "ndcg@0.08": 0.0,
+      "trim@0.08": 1.0,
+      "empty@0.08": 1.0,
+      "ndcg@0.1": 0.0,
+      "trim@0.1": 1.0,
+      "empty@0.1": 1.0
+    }
+  ],
+  "filter_eval": {
+    "unfiltered/dev": {
+      "ndcg@10": 0.7066,
+      "top1": 0.7353,
+      "recall@10": 0.3167,
+      "trim_ratio": 0.0,
+      "empty_rate": 0.0,
+      "avg_returned": 20.0
+    },
+    "unfiltered/test": {
+      "ndcg@10": 0.6769,
+      "top1": 0.6899,
+      "recall@10": 0.2816,
+      "trim_ratio": 0.0,
+      "empty_rate": 0.0,
+      "avg_returned": 20.0
+    },
+    "absolute/dev": {
+      "ndcg@10": 0.7066,
+      "top1": 0.7353,
+      "recall@10": 0.3167,
+      "trim_ratio": 0.0074,
+      "empty_rate": 0.0,
+      "avg_returned": 19.85
+    },
+    "absolute/test": {
+      "ndcg@10": 0.6769,
+      "top1": 0.6899,
+      "recall@10": 0.2816,
+      "trim_ratio": 0.0,
+      "empty_rate": 0.0,
+      "avg_returned": 20.0
+    },
+    "margin/dev": {
+      "ndcg@10": 0.7066,
+      "top1": 0.7353,
+      "recall@10": 0.3167,
+      "trim_ratio": 0.0,
+      "empty_rate": 0.0,
+      "avg_returned": 20.0
+    },
+    "margin/test": {
+      "ndcg@10": 0.6769,
+      "top1": 0.6899,
+      "recall@10": 0.2816,
+      "trim_ratio": 0.0,
+      "empty_rate": 0.0,
+      "avg_returned": 20.0
+    },
+    "combined/dev": {
+      "ndcg@10": 0.7066,
+      "top1": 0.7353,
+      "recall@10": 0.3167,
+      "trim_ratio": 0.0074,
+      "empty_rate": 0.0,
+      "avg_returned": 19.85
+    },
+    "combined/test": {
+      "ndcg@10": 0.6769,
+      "top1": 0.6899,
+      "recall@10": 0.2816,
+      "trim_ratio": 0.0,
+      "empty_rate": 0.0,
+      "avg_returned": 20.0
+    },
+    "combined_with_empty/dev": {
+      "ndcg@10": 0.6782,
+      "top1": 0.7059,
+      "recall@10": 0.3158,
+      "trim_ratio": 0.0882,
+      "empty_rate": 0.0882,
+      "avg_returned": 18.24
+    },
+    "combined_with_empty/test": {
+      "ndcg@10": 0.6564,
+      "top1": 0.6646,
+      "recall@10": 0.2801,
+      "trim_ratio": 0.1013,
+      "empty_rate": 0.1013,
+      "avg_returned": 17.97
+    },
+    "guarded_empty/dev": {
+      "ndcg@10": 0.7066,
+      "top1": 0.7353,
+      "recall@10": 0.3167,
+      "trim_ratio": 0.0074,
+      "empty_rate": 0.0,
+      "avg_returned": 19.85
+    },
+    "guarded_empty/test": {
+      "ndcg@10": 0.6769,
+      "top1": 0.6899,
+      "recall@10": 0.2816,
+      "trim_ratio": 0.0,
+      "empty_rate": 0.0,
+      "avg_returned": 20.0
+    }
+  },
+  "off_topic": {
+    "queries": [
+      "红烧肉的做法",
+      "怎么煮一杯好咖啡",
+      "写一首关于春天的诗",
+      "世界杯决赛比分",
+      "红楼梦里的人物关系",
+      "如何养一只猫",
+      "装修预算怎么算",
+      "番茄炒蛋放多少盐",
+      "明天天气怎么样",
+      "怎样学弹吉他"
+    ],
+    "top1_similarity": [
+      0.3648,
+      0.2981,
+      0.394,
+      0.3843,
+      0.489,
+      0.3876,
+      0.4434,
+      0.3863,
+      0.425,
+      0.3819
+    ],
+    "bm25_max": [
+      0.0,
+      0.0,
+      11.6225,
+      10.9877,
+      10.3572,
+      0.0,
+      0.0,
+      0.0,
+      6.5423,
+      0.0
+    ],
+    "empty_tau": 0.5,
+    "returned_empty": 10,
+    "guarded_empty": 6,
+    "returned_count_without_filter": 10
+  },
+  "english_collisions": {
+    "probes": 8,
+    "distinct_vectors": 5,
+    "identical_groups": [
+      [
+        "EDA",
+        "FPGA",
+        "MEMS",
+        "VLSI"
+      ]
+    ],
+    "note": "同一组内的查询在模型眼里是同一个输入，语义检索对它们的排序完全一致。本项只统计余弦 > 0.9999 的情形，未做任何人工挑选。"
+  },
+  "acronym_audit": {
+    "probes": 30,
+    "distinct_vectors": 2,
+    "groups": [
+      {
+        "group": "G01",
+        "fingerprint": "07b33fd8",
+        "size": 29,
+        "members": [
+          "5G",
+          "6G",
+          "ADC",
+          "AI",
+          "ASIC",
+          "CMOS",
+          "CPU",
+          "CV",
+          "DAC",
+          "DDR",
+          "DRAM",
+          "DSP",
+          "EDA",
+          "FPGA",
+          "GPU",
+          "IoT",
+          "MEMS",
+          "ML",
+          "NLP",
+          "NPU",
+          "PLL",
+          "SERDES",
+          "SoC",
+          "SPI",
+          "SRAM",
+          "TCAD",
+          "UART",
+          "VLSI",
+          "WiFi"
+        ]
+      },
+      {
+        "group": "G02",
+        "fingerprint": "9dee8fc6",
+        "size": 1,
+        "members": [
+          "RISC-V"
+        ]
+      }
+    ],
+    "rows": [
+      {
+        "acronym": "5G",
+        "fingerprint": "07b33fd8",
+        "tokens": "[CLS] [UNK] [SEP]",
+        "group": "G01"
+      },
+      {
+        "acronym": "6G",
+        "fingerprint": "07b33fd8",
+        "tokens": "[CLS] [UNK] [SEP]",
+        "group": "G01"
+      },
+      {
+        "acronym": "ADC",
+        "fingerprint": "07b33fd8",
+        "tokens": "[CLS] [UNK] [SEP]",
+        "group": "G01"
+      },
+      {
+        "acronym": "AI",
+        "fingerprint": "07b33fd8",
+        "tokens": "[CLS] [UNK] [SEP]",
+        "group": "G01"
+      },
+      {
+        "acronym": "ASIC",
+        "fingerprint": "07b33fd8",
+        "tokens": "[CLS] [UNK] [SEP]",
+        "group": "G01"
+      },
+      {
+        "acronym": "CMOS",
+        "fingerprint": "07b33fd8",
+        "tokens": "[CLS] [UNK] [SEP]",
+        "group": "G01"
+      },
+      {
+        "acronym": "CPU",
+        "fingerprint": "07b33fd8",
+        "tokens": "[CLS] [UNK] [SEP]",
+        "group": "G01"
+      },
+      {
+        "acronym": "CV",
+        "fingerprint": "07b33fd8",
+        "tokens": "[CLS] [UNK] [SEP]",
+        "group": "G01"
+      },
+      {
+        "acronym": "DAC",
+        "fingerprint": "07b33fd8",
+        "tokens": "[CLS] [UNK] [SEP]",
+        "group": "G01"
+      },
+      {
+        "acronym": "DDR",
+        "fingerprint": "07b33fd8",
+        "tokens": "[CLS] [UNK] [SEP]",
+        "group": "G01"
+      },
+      {
+        "acronym": "DRAM",
+        "fingerprint": "07b33fd8",
+        "tokens": "[CLS] [UNK] [SEP]",
+        "group": "G01"
+      },
+      {
+        "acronym": "DSP",
+        "fingerprint": "07b33fd8",
+        "tokens": "[CLS] [UNK] [SEP]",
+        "group": "G01"
+      },
+      {
+        "acronym": "EDA",
+        "fingerprint": "07b33fd8",
+        "tokens": "[CLS] [UNK] [SEP]",
+        "group": "G01"
+      },
+      {
+        "acronym": "FPGA",
+        "fingerprint": "07b33fd8",
+        "tokens": "[CLS] [UNK] [SEP]",
+        "group": "G01"
+      },
+      {
+        "acronym": "GPU",
+        "fingerprint": "07b33fd8",
+        "tokens": "[CLS] [UNK] [SEP]",
+        "group": "G01"
+      },
+      {
+        "acronym": "IoT",
+        "fingerprint": "07b33fd8",
+        "tokens": "[CLS] [UNK] [SEP]",
+        "group": "G01"
+      },
+      {
+        "acronym": "MEMS",
+        "fingerprint": "07b33fd8",
+        "tokens": "[CLS] [UNK] [SEP]",
+        "group": "G01"
+      },
+      {
+        "acronym": "ML",
+        "fingerprint": "07b33fd8",
+        "tokens": "[CLS] [UNK] [SEP]",
+        "group": "G01"
+      },
+      {
+        "acronym": "NLP",
+        "fingerprint": "07b33fd8",
+        "tokens": "[CLS] [UNK] [SEP]",
+        "group": "G01"
+      },
+      {
+        "acronym": "NPU",
+        "fingerprint": "07b33fd8",
+        "tokens": "[CLS] [UNK] [SEP]",
+        "group": "G01"
+      },
+      {
+        "acronym": "PLL",
+        "fingerprint": "07b33fd8",
+        "tokens": "[CLS] [UNK] [SEP]",
+        "group": "G01"
+      },
+      {
+        "acronym": "RISC-V",
+        "fingerprint": "9dee8fc6",
+        "tokens": "[CLS] [UNK] - [UNK] [SEP]",
+        "group": "G02"
+      },
+      {
+        "acronym": "SERDES",
+        "fingerprint": "07b33fd8",
+        "tokens": "[CLS] [UNK] [SEP]",
+        "group": "G01"
+      },
+      {
+        "acronym": "SoC",
+        "fingerprint": "07b33fd8",
+        "tokens": "[CLS] [UNK] [SEP]",
+        "group": "G01"
+      },
+      {
+        "acronym": "SPI",
+        "fingerprint": "07b33fd8",
+        "tokens": "[CLS] [UNK] [SEP]",
+        "group": "G01"
+      },
+      {
+        "acronym": "SRAM",
+        "fingerprint": "07b33fd8",
+        "tokens": "[CLS] [UNK] [SEP]",
+        "group": "G01"
+      },
+      {
+        "acronym": "TCAD",
+        "fingerprint": "07b33fd8",
+        "tokens": "[CLS] [UNK] [SEP]",
+        "group": "G01"
+      },
+      {
+        "acronym": "UART",
+        "fingerprint": "07b33fd8",
+        "tokens": "[CLS] [UNK] [SEP]",
+        "group": "G01"
+      },
+      {
+        "acronym": "VLSI",
+        "fingerprint": "07b33fd8",
+        "tokens": "[CLS] [UNK] [SEP]",
+        "group": "G01"
+      },
+      {
+        "acronym": "WiFi",
+        "fingerprint": "07b33fd8",
+        "tokens": "[CLS] [UNK] [SEP]",
+        "group": "G01"
+      }
+    ],
+    "how_to_reproduce": "python -c \"from workbench.retrieval_eval import embed_query; print(embed_query('VLSI') @ embed_query('MEMS'))\"  # ≈1.0"
+  },
+  "probes": [
+    {
+      "query": "VLSI",
+      "kind": "english",
+      "expect": "",
+      "top3_embedding": [
+        {
+          "name": "罗勇江",
+          "institution": "西安电子科技大学",
+          "direction": "数字电路与 AI 芯片",
+          "interests": "高速实时信号处理、FPGA",
+          "score": 0.5046
+        },
+        {
+          "name": "程鹏",
+          "institution": "中国科学院微电子研究所",
+          "direction": "数字电路与 AI 芯片",
+          "interests": "处理器/体系结构、通信基带/无线SoC",
+          "score": 0.5041
+        },
+        {
+          "name": "张云泉",
+          "institution": "中国科学院计算技术研究所",
+          "direction": "数字电路与 AI 芯片",
+          "interests": "处理器/体系结构、高性能计算",
+          "score": 0.503
+        }
+      ],
+      "bm25_top1": "电子设计自动化·李晓维",
+      "top1_bm25": 7.8119,
+      "exact_term_hits": 11
+    },
+    {
+      "query": "MEMS",
+      "kind": "english",
+      "expect": "",
+      "top3_embedding": [
+        {
+          "name": "罗勇江",
+          "institution": "西安电子科技大学",
+          "direction": "数字电路与 AI 芯片",
+          "interests": "高速实时信号处理、FPGA",
+          "score": 0.5046
+        },
+        {
+          "name": "程鹏",
+          "institution": "中国科学院微电子研究所",
+          "direction": "数字电路与 AI 芯片",
+          "interests": "处理器/体系结构、通信基带/无线SoC",
+          "score": 0.5041
+        },
+        {
+          "name": "张云泉",
+          "institution": "中国科学院计算技术研究所",
+          "direction": "数字电路与 AI 芯片",
+          "interests": "处理器/体系结构、高性能计算",
+          "score": 0.503
+        }
+      ],
+      "bm25_top1": "电子器件与工艺·阮勇",
+      "top1_bm25": 7.1246,
+      "exact_term_hits": 309
+    },
+    {
+      "query": "photonic integration",
+      "kind": "english",
+      "expect": "",
+      "top3_embedding": [
+        {
+          "name": "程思璐",
+          "institution": "天津大学",
+          "direction": "微机电系统",
+          "interests": "CMOS图像传感器、仿生视觉芯片、图像处理",
+          "score": 0.4846
+        },
+        {
+          "name": "戴道锌",
+          "institution": "浙江大学",
+          "direction": "光电子与硅光",
+          "interests": "硅光/光电子集成、光通信器件、面向光互联、光计算的硅基光子集成前沿及应用研究、M",
+          "score": 0.4814
+        },
+        {
+          "name": "熊雄",
+          "institution": "北京大学",
+          "direction": "电子器件与工艺",
+          "interests": "新型低维半导体电子器件、互补型场效应晶体管CFET",
+          "score": 0.4772
+        }
+      ],
+      "bm25_top1": "",
+      "top1_bm25": 0.0,
+      "exact_term_hits": 0
+    },
+    {
+      "query": "EDA",
+      "kind": "english",
+      "expect": "",
+      "top3_embedding": [
+        {
+          "name": "罗勇江",
+          "institution": "西安电子科技大学",
+          "direction": "数字电路与 AI 芯片",
+          "interests": "高速实时信号处理、FPGA",
+          "score": 0.5046
+        },
+        {
+          "name": "程鹏",
+          "institution": "中国科学院微电子研究所",
+          "direction": "数字电路与 AI 芯片",
+          "interests": "处理器/体系结构、通信基带/无线SoC",
+          "score": 0.5041
+        },
+        {
+          "name": "张云泉",
+          "institution": "中国科学院计算技术研究所",
+          "direction": "数字电路与 AI 芯片",
+          "interests": "处理器/体系结构、高性能计算",
+          "score": 0.503
+        }
+      ],
+      "bm25_top1": "电子设计自动化·郭冠男",
+      "top1_bm25": 7.5161,
+      "exact_term_hits": 162
+    },
+    {
+      "query": "RISC-V",
+      "kind": "english",
+      "expect": "",
+      "top3_embedding": [
+        {
+          "name": "南天翔",
+          "institution": "清华大学",
+          "direction": "电子器件与工艺",
+          "interests": "Beyond-CMOS新原理器件、MRAM存算一体器件、微机电系统",
+          "score": 0.5207
+        },
+        {
+          "name": "徐临燕",
+          "institution": "天津大学",
+          "direction": "微机电系统",
+          "interests": "RF-MEMS振动测量、AFM探针、纳力测量、微纳测试",
+          "score": 0.5043
+        },
+        {
+          "name": "王晓晖",
+          "institution": "电子科技大学",
+          "direction": "电子器件与工艺",
+          "interests": "Ⅲ-Ⅴ、Ⅱ-Ⅵ光电材料与器件、光电探测器与系统",
+          "score": 0.5008
+        }
+      ],
+      "bm25_top1": "数字电路与 AI 芯片·何虎",
+      "top1_bm25": 10.7698,
+      "exact_term_hits": 5
+    },
+    {
+      "query": "chiplets",
+      "kind": "english",
+      "expect": "",
+      "top3_embedding": [
+        {
+          "name": "许齐敏",
+          "institution": "上海交通大学",
+          "direction": "数字电路与 AI 芯片",
+          "interests": "EDA/设计自动化、AI加速器/智能芯片",
+          "score": 0.4087
+        },
+        {
+          "name": "祝永新",
+          "institution": "中国科学院上海高等研究院",
+          "direction": "数字电路与 AI 芯片",
+          "interests": "AI加速器/智能芯片",
+          "score": 0.4017
+        },
+        {
+          "name": "舒琳",
+          "institution": "中国科学院自动化研究所",
+          "direction": "数字电路与 AI 芯片",
+          "interests": "AI加速器/智能芯片、MEMS/传感器、FPGA加速计算",
+          "score": 0.398
+        }
+      ],
+      "bm25_top1": "",
+      "top1_bm25": 0.0,
+      "exact_term_hits": 0
+    },
+    {
+      "query": "AI for Science",
+      "kind": "english",
+      "expect": "",
+      "top3_embedding": [
+        {
+          "name": "姜杰东",
+          "institution": "北京大学",
+          "direction": "AI for Math",
+          "interests": "AI for Math，数学形式化",
+          "score": 0.4486
+        },
+        {
+          "name": "杨秀梅",
+          "institution": "中国科学院上海微系统与信息技术研究所",
+          "direction": "数字电路与 AI 芯片",
+          "interests": "通信基带/无线SoC、G星地融合通信、AI的通信算法优化",
+          "score": 0.4337
+        },
+        {
+          "name": "罗勇江",
+          "institution": "西安电子科技大学",
+          "direction": "数字电路与 AI 芯片",
+          "interests": "高速实时信号处理、FPGA",
+          "score": 0.4323
+        }
+      ],
+      "bm25_top1": "数据挖掘·汪炀",
+      "top1_bm25": 24.4269,
+      "exact_term_hits": 1
+    },
+    {
+      "query": "FPGA",
+      "kind": "english",
+      "expect": "",
+      "top3_embedding": [
+        {
+          "name": "罗勇江",
+          "institution": "西安电子科技大学",
+          "direction": "数字电路与 AI 芯片",
+          "interests": "高速实时信号处理、FPGA",
+          "score": 0.5046
+        },
+        {
+          "name": "程鹏",
+          "institution": "中国科学院微电子研究所",
+          "direction": "数字电路与 AI 芯片",
+          "interests": "处理器/体系结构、通信基带/无线SoC",
+          "score": 0.5041
+        },
+        {
+          "name": "张云泉",
+          "institution": "中国科学院计算技术研究所",
+          "direction": "数字电路与 AI 芯片",
+          "interests": "处理器/体系结构、高性能计算",
+          "score": 0.503
+        }
+      ],
+      "bm25_top1": "数字电路与 AI 芯片·卢有亮",
+      "top1_bm25": 10.0027,
+      "exact_term_hits": 48
+    },
+    {
+      "query": "AI 用于材料发现",
+      "kind": "cross",
+      "expect": "材料 / 机器学习",
+      "top3_embedding": [
+        {
+          "name": "徐驰",
+          "institution": "中国科学院大学",
+          "direction": "硅基锗、锗锡材料气相外延及相关半导体物理",
+          "interests": "硅基锗、锗锡材料气相外延及相关半导体物理",
+          "score": 0.5937
+        },
+        {
+          "name": "赵超",
+          "institution": "中国科学院大学",
+          "direction": "III-V族半导体材料和器件",
+          "interests": "III-V族半导体材料和器件",
+          "score": 0.5895
+        },
+        {
+          "name": "尹奎波",
+          "institution": "东南大学",
+          "direction": "电子器件与工艺",
+          "interests": "MEMS与微纳传感、二维材料器件、原位电子显微",
+          "score": 0.5881
+        }
+      ],
+      "bm25_top1": "数据挖掘与知识发现·刘淇",
+      "top1_bm25": 10.433,
+      "exact_term_hits": 0
+    },
+    {
+      "query": "机器学习辅助芯片设计",
+      "kind": "cross",
+      "expect": "电子设计自动化 / 集成电路设计",
+      "top3_embedding": [
+        {
+          "name": "徐宁",
+          "institution": "东南大学",
+          "direction": "电子设计自动化",
+          "interests": "EDA与设计自动化、机器学习、数据挖掘、AI辅助芯片设计",
+          "score": 0.6015
+        },
+        {
+          "name": "潘忻强",
+          "institution": "电子科技大学",
+          "direction": "电子器件与工艺",
+          "interests": "单晶薄膜材料与器件、忆阻器件及类脑计算芯片",
+          "score": 0.6014
+        },
+        {
+          "name": "江哲",
+          "institution": "东南大学",
+          "direction": "电子设计自动化",
+          "interests": "AI芯片与加速器、处理器体系结构、EDA与设计自动化",
+          "score": 0.6007
+        }
+      ],
+      "bm25_top1": "电子设计自动化·徐宁",
+      "top1_bm25": 44.2892,
+      "exact_term_hits": 0
+    },
+    {
+      "query": "深度学习用于医学影像诊断",
+      "kind": "cross",
+      "expect": "医学 / 成像",
+      "top3_embedding": [
+        {
+          "name": "甘锐",
+          "institution": "北京大学",
+          "direction": "医学图像处理",
+          "interests": "医学图像处理、计算机视觉和图像处理",
+          "score": 0.6074
+        },
+        {
+          "name": "张一峰",
+          "institution": "上海交通大学",
+          "direction": "浅表器官超声诊疗、超声分子影像",
+          "interests": "浅表器官超声诊疗、超声分子影像",
+          "score": 0.5665
+        },
+        {
+          "name": "杨玉超（深研院）",
+          "institution": "北京大学",
+          "direction": "电子器件与工艺",
+          "interests": "新型忆阻器与神经动力学计算、大规模高能效存算一体芯片设计、双向闭环脑机接口技术",
+          "score": 0.5664
+        }
+      ],
+      "bm25_top1": "深度学习数学理论·吴磊",
+      "top1_bm25": 24.726,
+      "exact_term_hits": 0
+    },
+    {
+      "query": "量子计算与密码学的交叉",
+      "kind": "cross",
+      "expect": "量子技术 / 密码",
+      "top3_embedding": [
+        {
+          "name": "侯攀宇",
+          "institution": "清华大学",
+          "direction": "量子技术",
+          "interests": "离子量子计算、离子阱量子模拟、金刚石色心量子信息、量子传感、量子纠缠门",
+          "score": 0.6506
+        },
+        {
+          "name": "祁宾祥",
+          "institution": "清华大学",
+          "direction": "量子技术",
+          "interests": "离子阱量子计算控制系统、量子比特测控电子学、量子精密测量、电子学技术",
+          "score": 0.6478
+        },
+        {
+          "name": "何丽",
+          "institution": "清华大学",
+          "direction": "量子技术",
+          "interests": "离子阱量子存储、低温系统、大规模量子计算、金刚石色心量子门",
+          "score": 0.6457
+        }
+      ],
+      "bm25_top1": "量子技术·段路明",
+      "top1_bm25": 27.9486,
+      "exact_term_hits": 0
+    }
+  ],
+  "analysed_failures": [
+    {
+      "ref": "probe:VLSI",
+      "query": "VLSI",
+      "kind": "英文缩写",
+      "expect": "—",
+      "method": "embedding",
+      "category": "英文术语未覆盖",
+      "top": [
+        {
+          "direction": "数字电路与 AI 芯片",
+          "name": "罗勇江",
+          "score": 0.5046
+        },
+        {
+          "direction": "数字电路与 AI 芯片",
+          "name": "程鹏",
+          "score": 0.5041
+        },
+        {
+          "direction": "数字电路与 AI 芯片",
+          "name": "张云泉",
+          "score": 0.503
+        }
+      ],
+      "extra": "全文字面命中 11 条；BM25 Top-1：电子设计自动化·李晓维（最高分 7.8119）"
+    },
+    {
+      "ref": "probe:MEMS",
+      "query": "MEMS",
+      "kind": "英文缩写",
+      "expect": "—",
+      "method": "embedding",
+      "category": "英文术语未覆盖",
+      "top": [
+        {
+          "direction": "数字电路与 AI 芯片",
+          "name": "罗勇江",
+          "score": 0.5046
+        },
+        {
+          "direction": "数字电路与 AI 芯片",
+          "name": "程鹏",
+          "score": 0.5041
+        },
+        {
+          "direction": "数字电路与 AI 芯片",
+          "name": "张云泉",
+          "score": 0.503
+        }
+      ],
+      "extra": "全文字面命中 309 条；BM25 Top-1：电子器件与工艺·阮勇（最高分 7.1246）"
+    },
+    {
+      "ref": "probe:EDA",
+      "query": "EDA",
+      "kind": "英文缩写",
+      "expect": "—",
+      "method": "embedding",
+      "category": "英文术语未覆盖",
+      "top": [
+        {
+          "direction": "数字电路与 AI 芯片",
+          "name": "罗勇江",
+          "score": 0.5046
+        },
+        {
+          "direction": "数字电路与 AI 芯片",
+          "name": "程鹏",
+          "score": 0.5041
+        },
+        {
+          "direction": "数字电路与 AI 芯片",
+          "name": "张云泉",
+          "score": 0.503
+        }
+      ],
+      "extra": "全文字面命中 162 条；BM25 Top-1：电子设计自动化·郭冠男（最高分 7.5161）"
+    },
+    {
+      "ref": "probe:AI 用于材料发现",
+      "query": "AI 用于材料发现",
+      "kind": "跨学科",
+      "expect": "材料 / 机器学习",
+      "method": "embedding",
+      "category": "跨学科被单一学科压制",
+      "top": [
+        {
+          "direction": "硅基锗、锗锡材料气相外延及相关半导体物理",
+          "name": "徐驰",
+          "score": 0.5937
+        },
+        {
+          "direction": "III-V族半导体材料和器件",
+          "name": "赵超",
+          "score": 0.5895
+        },
+        {
+          "direction": "电子器件与工艺",
+          "name": "尹奎波",
+          "score": 0.5881
+        }
+      ],
+      "extra": "全文字面命中 0 条；BM25 Top-1：数据挖掘与知识发现·刘淇（最高分 10.433）"
+    },
+    {
+      "ref": "probe:量子计算与密码学的交叉",
+      "query": "量子计算与密码学的交叉",
+      "kind": "跨学科",
+      "expect": "量子技术 / 密码",
+      "method": "embedding",
+      "category": "跨学科被单一学科压制",
+      "top": [
+        {
+          "direction": "量子技术",
+          "name": "侯攀宇",
+          "score": 0.6506
+        },
+        {
+          "direction": "量子技术",
+          "name": "祁宾祥",
+          "score": 0.6478
+        },
+        {
+          "direction": "量子技术",
+          "name": "何丽",
+          "score": 0.6457
+        }
+      ],
+      "extra": "全文字面命中 0 条；BM25 Top-1：量子技术·段路明（最高分 27.9486）"
+    },
+    {
+      "ref": "b12",
+      "query": "从天上往下看地面这些年发生了什么变化",
+      "kind": "b_natural",
+      "expect": "遥感、测绘、卫星",
+      "method": "bm25",
+      "category": "学科术语多义（「地面」）",
+      "top": [
+        {
+          "direction": "量子技术",
+          "name": "荣亮亮",
+          "score": 9.5623
+        },
+        {
+          "direction": "光电子与硅光",
+          "name": "宋健",
+          "score": 9.1771
+        },
+        {
+          "direction": "数字电路与 AI 芯片",
+          "name": "田书林",
+          "score": 6.9856
+        }
+      ],
+      "extra": "相关集 334 条"
+    },
+    {
+      "ref": "b05",
+      "query": "让计算机自己从一张照片里认出里面有什么东西",
+      "kind": "b_natural",
+      "expect": "计算机视觉、成像、深度学习",
+      "method": "bm25",
+      "category": "学科术语多义（「计算机」）",
+      "top": [
+        {
+          "direction": "电子设计自动化",
+          "name": "李耘",
+          "score": 17.0514
+        },
+        {
+          "direction": "电子设计自动化",
+          "name": "尹霞",
+          "score": 13.1008
+        },
+        {
+          "direction": "电子设计自动化",
+          "name": "吴晋",
+          "score": 12.9347
+        }
+      ],
+      "extra": "相关集 142 条"
+    },
+    {
+      "ref": "b06",
+      "query": "在存数据的地方直接做运算，省掉来回搬运的开销",
+      "kind": "b_natural",
+      "expect": "存算一体、类脑、神经形态",
+      "method": "bm25",
+      "category": "术语不重合",
+      "top": [
+        {
+          "direction": "光电子与硅光",
+          "name": "汪毅",
+          "score": 12.6081
+        },
+        {
+          "direction": "融合多源监测数据的库坝系统响应与安全智能预测、库区地质灾害监测预警与风险防控",
+          "name": "唐小松",
+          "score": 10.4294
+        },
+        {
+          "direction": "基于跨尺度数据的融合分析开发疾病的精准分型和疗效预测模型；多模态大语言生成模型；",
+          "name": "温宁",
+          "score": 9.96
+        }
+      ],
+      "extra": "相关集 225 条"
+    },
+    {
+      "ref": "b13",
+      "query": "让机器自己看着路往前走、不做撞墙的决定",
+      "kind": "b_natural",
+      "expect": "机器人、自动驾驶、导航",
+      "method": "embedding",
+      "category": "单一领域簇压制（AI 芯片簇）",
+      "top": [
+        {
+          "direction": "电子设计自动化",
+          "name": "刘成",
+          "score": 0.4948
+        },
+        {
+          "direction": "电子设计自动化",
+          "name": "程飞",
+          "score": 0.4926
+        },
+        {
+          "direction": "电子设计自动化",
+          "name": "江哲",
+          "score": 0.4844
+        }
+      ],
+      "extra": "相关集 27 条"
+    },
+    {
+      "ref": "a3-160",
+      "query": "数模混合信号",
+      "kind": "a_interest",
+      "expect": "数模混合信号",
+      "method": "bm25",
+      "category": "标签粒度过粗（qrels 口径）",
+      "top": [
+        {
+          "direction": "微机电系统",
+          "name": "付强",
+          "score": 27.7922
+        },
+        {
+          "direction": "模拟电路",
+          "name": "张鸿",
+          "score": 27.6215
+        },
+        {
+          "direction": "模拟电路",
+          "name": "张杰",
+          "score": 27.6215
+        }
+      ],
+      "extra": "相关集 20 条"
+    }
+  ]
+}

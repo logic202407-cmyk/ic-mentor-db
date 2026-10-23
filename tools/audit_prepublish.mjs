@@ -46,10 +46,17 @@ emailHits ? add(issues, `邮箱残留 ${emailHits} 处: ${emailFiles.slice(0, 5)
 //      → 排除紧跟在 `.` `/` `-` 之后、或后面还接着 `-数字` 的形态。
 // 结果是：不加这些排除会报 1700+ 处（几乎全是 DOI 与 id），加上之后只报真正的
 // 「区号-号码 / 11 位手机」，当前仓库为 0。
+// 检测器自身必然包含要检测的模式串（手机号正则、凭证关键字）。把它们计入命中，
+// 等于要求安检门自己不能含金属。这里**精确列出**检测器文件，其余文件一律照查。
+const DETECTOR_FILES = new Set([
+  'workbench/tools/privacy_audit.py',
+  'workbench/tests/test_privacy_audit.py',
+]);
+
 const PHONE = /(?<![0-9A-Za-z.\/-])(?:1[3-9]\d{9}|0\d{2,3}[-\s]?\d{7,8}|\(\d{3,4}\)\s?\d{7,8})(?![0-9A-Za-z-])/g;
 let phoneHits = 0, phoneFiles = [];
 for (const f of tracked) {
-  if (!TEXT_SCANNABLE(f)) continue;
+  if (!TEXT_SCANNABLE(f) || DETECTOR_FILES.has(f)) continue;
   const t = fs.readFileSync(f, 'utf8');
   const m = t.match(PHONE);
   if (m && m.length) { phoneHits += m.length; phoneFiles.push(`${f}(${m.length})`); }
@@ -194,7 +201,7 @@ let sHits = [];
 for (const f of tracked) {
   // 同样只读文本：`AKIA[0-9A-Z]{16}` 这类形态在 PDF 压缩流里可能偶然命中。
   // 凭证若真被写进仓库，必然出现在文本文件里（源码、配置、文档），不会只在 PDF 中。
-  if (!TEXT_SCANNABLE(f)) continue;
+  if (!TEXT_SCANNABLE(f) || DETECTOR_FILES.has(f)) continue;
   if (SECRET.test(fs.readFileSync(f, 'utf8'))) sHits.push(f);
 }
 sHits.length ? add(issues, `疑似凭证: ${sHits.join(', ')}`) : add(oks, '未发现任何凭证 / 密钥');

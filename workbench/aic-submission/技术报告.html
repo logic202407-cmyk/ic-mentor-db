@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<!-- source-sha256: bfe756a5abe419f4031e0a936f28f9ff6af8d6160ab8210eeb95b6ec6d70e3cf -->
+<!-- source-sha256: 16c3e8551a8fcbf479ba578da07bcfe250ded275b83295d1043c7c706380e559 -->
 
 <meta charset="utf-8">
 <title>技术报告</title>
 <style>
-@page { size: A4; margin: 12mm 11mm 13mm 11mm; }
+@page { size: A4; margin: 10mm 10mm 11mm 10mm; }
 * { box-sizing: border-box; }
 body {
   font-family: "Microsoft YaHei", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", sans-serif;
@@ -15,13 +15,13 @@ body {
 }
 h1 { font-size: 17pt; margin: 0 0 4mm; padding-bottom: 2mm; border-bottom: 2.2px solid #1f4e79; color: #14304a; }
 h1 + blockquote { margin-top: 0; }
-h2 { font-size: 12.2pt; margin: 4.6mm 0 2mm; padding: 1.6mm 0 1.6mm 3mm; border-left: 4px solid #1f4e79; background: #f2f6fa; color: #14304a; page-break-after: avoid; }
-h3 { font-size: 10.4pt; margin: 3.4mm 0 1.4mm; color: #1f4e79; page-break-after: avoid; }
+h2 { font-size: 12.2pt; margin: 3.8mm 0 1.7mm; padding: 1.6mm 0 1.6mm 3mm; border-left: 4px solid #1f4e79; background: #f2f6fa; color: #14304a; page-break-after: avoid; }
+h3 { font-size: 10.4pt; margin: 3mm 0 1.2mm; color: #1f4e79; page-break-after: avoid; }
 h4 { font-size: 10.4pt; margin: 4mm 0 1.5mm; color: #333; page-break-after: avoid; }
-p { margin: 0 0 1.5mm; text-align: justify; }
+p { margin: 0 0 1.2mm; text-align: justify; }
 ul, ol { margin: 0 0 2.4mm; padding-left: 6.5mm; }
-li { margin-bottom: 0.7mm; }
-table { border-collapse: collapse; width: 100%; margin: 2.5mm 0 4mm; font-size: 9.1pt; page-break-inside: auto; }
+li { margin-bottom: 0.5mm; }
+table { border-collapse: collapse; width: 100%; margin: 2mm 0 3mm; font-size: 9.1pt; page-break-inside: auto; }
 th, td { border: 0.7px solid #b8c4d0; padding: 1.5mm 2mm; text-align: left; vertical-align: top; }
 th { background: #e8eef5; font-weight: 600; color: #14304a; }
 thead { display: table-header-group; }
@@ -58,17 +58,49 @@ h2, h3 { break-after: avoid-page; }
 <p><strong>第三，公开页面不等于事实。</strong> 学院名录没有招生年份，可能三年前的；个人主页写着“在招”可能早已招满；论文按姓名检索出来的结果可能属于同名的另一个人；共同署名不等于师生关系。网上现成的“导师评价”又多为主观打分与匿名吐槽，无法追溯，也不适合作为决策依据。</p>
 <p>本作品聚焦一个可在参赛周期内完整验证的具体问题：<strong>如何把散落在公开网页上的导师信息，整理成一条条带来源、可核对、可追溯的调查记录，同时明确区分“已核实”与“未知”，不替用户下结论。</strong></p>
 <h3>2. 目标、参赛方向与作品形态</h3>
-<p><strong>目标</strong>：为工科学生提供一个在本机运行的导师调查工作台。用户以“选择”而非“搜索”为主要操作路径——先按姓名核对同名者身份，或依次选择一级学科、高校、研究方向定位导师；选定后在同一份档案里查看公开来源、论文线索、学术关系分析与「读研体验参考分」，逐项登记人工核查状态，最后导出 Markdown 调查记录。</p>
+<p><strong>目标</strong>：为工科学生提供一个在本机运行的导师调查工作台。用户以“选择”而非“搜索”为主要操作路径——先按姓名核对同名者身份，或依次选择一级学科、高校、研究方向定位导师；选定后在同一份档案里查看公开来源、论文线索、学术关系分析与「课题组公开信息观察」，逐项登记人工核查状态，最后导出 Markdown 调查记录。</p>
 <p><strong>参赛方向</strong>：申报“（一）开源赋能的 AI 应用创新”，并融合“（三）开源项目改进与生态贡献”——本作品在既有开源导师数据库项目基础上做了实质性重构与增强。</p>
 <p><strong>作品形态</strong>：本地运行的网页应用（浏览器 + 本机 Python 服务），非小程序、非云端 SaaS。选择本地形态是刻意的：导师调查涉及学生的个人判断与意向记录，这些数据不应上传到第三方服务器。工作台只监听 <code>127.0.0.1</code>，没有账号系统，用户的项目与调查记录保存在本机 <code>.workbench-data/</code> 目录。</p>
 <h3>3. 核心亮点</h3>
-<p>与单纯的数据收纳项目相比，本作品的差异在于<strong>不只列名单，还分析关系并给出学生可用的参考分</strong>。</p>
+<p>与单纯的数据收纳项目相比，本作品的差异在于<strong>不只列名单，还分析关系，并把公开信息整理成可逐项核对的观察</strong>。</p>
 <p><strong>亮点一：关系分析按证据强度分四级，共同署名不推定为师承。</strong> 系统把导师之间的关系分成 L1 明确师承（本人页面自述、学位论文或指导记录等公开表述，全库 <strong>27 条</strong>）、L2 共同指导·长期合作、L3 同门、L4 共同署名四层，每层单独标注“是否可视为师承”。<strong>只有 L1 是师承，L4 仅为原始证据。</strong> 这一分层使学生在查找学术出身与同门资源时，能分清哪一条是有依据的结论、哪一条只是线索。</p>
-<p><strong>亮点二：学生向「读研体验参考分」，只用公开可核验信号。</strong> 四个维度——指导结构（学生一作占比，30%）、团队承载力（组内学生数下限，25%）、组内活跃度（近三年产出，25%）、信息公开度（20%）。每一项显示依据文本、样本量与权重，可逐项核对；无公开证据的维度记为「无公开证据」并按剩余权重归一，<strong>不视为低分</strong>；分数旁标注“依据覆盖”比例。<strong>论文数量、期刊档次、引用影响力与头衔一律不进入分数</strong>——它们是学者产出，不是学生体验。</p>
+<p><strong>亮点二：「课题组公开信息观察」——只列公开事实，不打分、不排名。</strong> 早期版本曾把四项公开信号加权成一个 0–100 的「读研体验参考分」，并对导师形成隐含排序。这个设计被我们自己否掉了：四个维度都是公开信息的代理指标，加权后的数字会被读成对导师的评判，而那些指标并不能衡量读研体验。现在档案页只按维度列事实：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">维度</th>
+<th style="text-align: left;">展示内容</th>
+<th style="text-align: left;">必须写明的边界</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">署名结构</td>
+<td style="text-align: left;">学生一作占比（附样本文献数）</td>
+<td style="text-align: left;">判定规则是「第一作者不是本校教师且单位可匹配到本库高校名单」，<strong>不是</strong>「导师把一作让给学生」的比例；名单未覆盖的学校会被漏计，因此比例偏低而非偏高</td>
+</tr>
+<tr>
+<td style="text-align: left;">历史一作人数</td>
+<td style="text-align: left;">累计不重复一作姓名数</td>
+<td style="text-align: left;"><strong>跨年份累加，不等于在读学生数，也不是课题组规模</strong>；资深教师天然更大，<strong>不可横向比较</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">近三年产出</td>
+<td style="text-align: left;">可核实论文数</td>
+<td style="text-align: left;">只记录可核实产出数量，不评价高低；检索未覆盖不等于没有产出</td>
+</tr>
+<tr>
+<td style="text-align: left;">信息公开度</td>
+<td style="text-align: left;">本人专属主页 / 研究方向 / 博导标注三项事实</td>
+<td style="text-align: left;">三项各自打勾，不折算成分数</td>
+</tr>
+</tbody>
+</table>
+<p>三态规则贯穿全站：<code>present</code>（有证据且值为 X）、<code>absent</code>（有证据且确为 0）、<code>unknown</code>（<strong>无公开证据，绝不显示为 0</strong>）。界面明确写出「不出现综合分，也不提供跨导师排序」。<strong>论文数量、期刊档次、引用影响力与头衔一律不进入任何展示顺序</strong>——它们是学者产出，不是学生体验。</p>
 <p><strong>亮点三：以“证据边界”为设计核心，而不是以“自动下结论”为目标。</strong> 系统内所有内容都区分三种状态——有公开来源支持的事实、来自第三方转载的线索、以及“未知”。师承关系除非有明确公开表述，否则保留空白，绝不从共同署名推断。这一取舍牺牲了“看起来信息更全”的观感，换来的是每一条信息都能追溯到具体来源。</p>
-<p><strong>亮点四：用开源中文向量模型解决“兴趣描述与学科术语不匹配”的检索难点。</strong> 学生描述研究兴趣时用的往往不是学科术语。实测中，查询“我想做中文问答和知识组织”能正确召回研究方向为“自然语言处理”的导师，而按双字重合度的关键词基线做不到——这是开源嵌入模型在本场景中不可替代的作用。</p>
-<p><strong>亮点五：把“人工核查”做成产品机制而非免责声明。</strong> 每条来源默认状态为“待人工核查”，用户可逐项标记；系统根据八项核查状态生成后续待办清单，但<strong>新增来源不会自动把核查标记为已完成</strong>。参考分也不改变任何人工核查状态。调查记录可导出为 Markdown，包含来源类别与身份核对链接，便于学生交给老师或同学复核。</p>
-<p><strong>亮点六：完整开源且可复现。</strong> 代码以 MIT 许可开放；数据整理脚本不含硬编码路径，可克隆到任意目录运行；自带 <strong>700 余项</strong> Python 测试与 11 项前端异步测试（精确数字以 <code>python -m unittest discover -s workbench/tests</code> 的输出为准），全部通过。</p>
+<p><strong>亮点四：用开源中文向量模型解决“兴趣描述与学科术语不匹配”的检索难点，并如实报告它何时不如关键词。</strong> 学生描述研究兴趣时用的往往不是学科术语。实测中，查询“我想做中文问答和知识组织”能正确召回研究方向为“自然语言处理”的导师，而按双字重合度的关键词基线做不到。但在术语直接重合的查询上，关键词/BM25 反而更锐利；在纯英文缩写（如 <code>VLSI</code>、<code>MEMS</code>）上，中文嵌入模型甚至会把不同缩写编码成<strong>完全相同的向量</strong>。因此系统同时提供语义检索与关键词基线两种模式，并在评测文档中分场景报告各自优劣，而不是宣称 AI 一定更好。</p>
+<p><strong>亮点五：把“人工核查”做成产品机制而非免责声明。</strong> 每条来源默认状态为“待人工核查”，用户可逐项标记；系统根据八项核查状态生成后续待办清单，但<strong>新增来源不会自动把核查标记为已完成</strong>。公开信息观察也不改变任何人工核查状态。调查记录可导出为 Markdown，包含来源类别与身份核对链接，便于学生交给老师或同学复核。</p>
+<p><strong>亮点六：完整开源且可复现。</strong> 代码以 MIT 许可开放；数据整理脚本不含硬编码路径，可克隆到任意目录运行；全量 Python 行为测试与 11 项前端异步测试全部通过（项数以 <code>python -m unittest discover -s workbench/tests</code> 的输出与 README 徽章为准，正文不写死，避免过期）。</p>
 <hr />
 <h2>二、需求分析与总体方案</h2>
 <h3>1. 需求分析</h3>
@@ -146,28 +178,31 @@ h2, h3 { break-after: avoid-page; }
 <hr />
 <h2>三、AI 技术与开源及第三方资源选择</h2>
 <h3>1. AI 技术作用</h3>
-<p>本作品的 AI 作用在<strong>两处</strong>，且都不是"给导师打分"：</p>
+<p>本作品的 AI 作用在<strong>两处</strong>，且都不是“给导师打分”：</p>
 <ul>
 <li><strong>语义检索</strong>：把用户用自然语言描述的研究兴趣，与各学科导师的研究方向文本匹配起来。</li>
 <li><strong>数据治理</strong>：用同一个开放嵌入模型辅助两件人工做不完的事——<strong>方向补全</strong>（把已抓到的
   履历文本映射到方向标签）与<strong>同名消歧</strong>（判断同名两条记录是不是同一个人）。</li>
 </ul>
-<p>第二处是本作品与"接一个大模型做问答"最不一样的取舍：<strong>把 AI 用在数据质量上，而不是用在
+<p>第二处是本作品与“接一个大模型做问答”最不一样的取舍：<strong>把 AI 用在数据质量上，而不是用在
 对人的评价上。</strong> 两处都做了离线评测，并且都<strong>照实报告了不利结果</strong>（见第五章）。</p>
 <p><strong>为什么需要 AI。</strong> 本作品默认覆盖 38 个工学一级学科（2022 年目录 08 门类）的导航数据，导师的研究方向文本差异极大。如果只做关键词匹配，“我想做中文问答和知识组织”与“自然语言处理”之间没有共同的双字片段，关键词基线直接漏召回。语义嵌入把两者映射到同一向量空间，用余弦相似度完成匹配。</p>
 <p><strong>如何验证 AI 输出。</strong> 我们做了两件具体的事：</p>
 <ol>
 <li><strong>并列关键词基线。</strong> 系统同时提供“关键词基线”（按查询与文本的双字重合度排序）与“语义检索”，让用户自己核查 AI 是否真的有帮助，而不是只给一个黑盒结果。两个模式的分数与排序都在界面上可见。</li>
-<li><strong>预置查询集评估。</strong> 在 8 条公开来源试点资料上，事先写定 8 个查询与期望命中项，脚本化比较两种模式的 Top-1 / Top-3（结果见第五章）。</li>
+<li><strong>离线评测集。</strong> 226 条查询（A 类结构化 186 + B 类自然语言 40）、dev/test 划分，比较五种检索方法的 Recall@K / MRR / nDCG，并报告失败案例（结果见第五章）。</li>
 </ol>
-<h3>1.1 方向补全：混合策略，并报告了嵌入模型输给关键词的结果</h3>
-<p><strong>问题。</strong> 全库有 <strong>4,936 条</strong>记录的研究方向仍是「方向待补」，但其中 <strong>4,936 条已经读到
-个人主页的履历文本</strong>（中位长度 424 字）。<strong>缺的不是数据，是把已有
-文本映射到方向标签这一步。</strong></p>
-<p><strong>做法。</strong> 用 <code>BAAI/bge-small-zh-v1.5</code> 把 256 个方向标签与履历文本各自编码，取余弦相似度。
-词表从 2,397 种已有方向取值中过滤（要求出现 ≥5 次），并<strong>剔除「不分研究方向」这类退化标签</strong>
-——否则模型只要全猜这一类就能把准确率刷上去。</p>
-<p><strong>评测（400 条留出验证，随机种子 42）。</strong> 把已有方向的记录的方向藏起来，只用履历等文本预测：</p>
+<h3>1.1 方向补全：先修评测，再谈效果（一次公开的自我纠错）</h3>
+<p><strong>问题。</strong> 全库有 <strong>5,478 条</strong>记录的研究方向仍是「方向待补」，且全部已读到个人主页的
+履历文本。缺的不是数据，是把已有文本映射到方向标签这一步。</p>
+<p><strong>第一次评测（已作废，但必须记录）。</strong> 最初得到关键词 64.0%、嵌入 9.0%、混合 66.2%。
+复核发现致命缺陷：<code>discipline</code> 字段在 <strong>55.7%</strong> 的已标注记录上等于 <code>direction_group</code>
+（方向标签本身），却被拼进了输入文本——<strong>等于把答案喂给模型</strong>。修正后关键词基线从
+64.0% 掉到 11.2%，<strong>原数字作废、不再引用</strong>。</p>
+<p><strong>现在的做法。</strong> 输入文本只用履历正文 + 院系 + <code>first_level_discipline</code>（如
+「0809 电子科学与技术」），并剔除采集管线追加的注释；标签词表 256 个（从 2,401 种取值中
+过滤，要求出现 ≥5 次，剔除「不分研究方向」等退化标签）。</p>
+<p><strong>评测（400 条留出验证，随机种子 42）。</strong></p>
 <table>
 <thead>
 <tr>
@@ -179,62 +214,104 @@ h2, h3 { break-after: avoid-page; }
 <tbody>
 <tr>
 <td style="text-align: left;">关键词基线</td>
-<td style="text-align: right;">64.0%</td>
-<td style="text-align: right;">70.2%</td>
+<td style="text-align: right;">11.2%</td>
+<td style="text-align: right;">23.0%</td>
 </tr>
 <tr>
 <td style="text-align: left;">嵌入模型（bge-small-zh-v1.5）</td>
-<td style="text-align: right;"><strong>9.0%</strong></td>
-<td style="text-align: right;">53.2%</td>
+<td style="text-align: right;">8.8%</td>
+<td style="text-align: right;">21.5%</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>混合（关键词优先，弱则回落嵌入）</strong></td>
-<td style="text-align: right;"><strong>66.2%</strong></td>
-<td style="text-align: right;"><strong>74.5%</strong></td>
+<td style="text-align: left;">阈值混合（旧策略：关键词够强就用它）</td>
+<td style="text-align: right;">10.5%</td>
+<td style="text-align: right;">22.2%</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>分数级融合（关键词 0.30 + 嵌入 0.70）</strong></td>
+<td style="text-align: right;"><strong>14.2%</strong></td>
+<td style="text-align: right;"><strong>27.0%</strong></td>
 </tr>
 </tbody>
 </table>
-<p><strong>必须如实说明：嵌入模型单用时 Top-1 只有 9.0%，远低于关键词基线。</strong> 按「真值标签是否被
-字面写进文本」分层后原因清楚：</p>
+<p><strong>调参隔离。</strong> 样本按固定种子划成 dev 160 / test 240，融合权重只在 dev 上选
+（选出的关键词权重为 0.30），test 上：关键词 <strong>9.6% / 20.8%</strong>、嵌入 <strong>10.0% / 23.3%</strong>、
+<strong>融合 12.5% / 25.4%</strong>。融合在未见过的 test 上仍优于两个单方法。</p>
+<p><strong>分层（修正泄漏后）。</strong> 文本里逐字出现真值标签的只有 18 条（<strong>4.5%</strong>），其余 382 条
+（<strong>95.5%</strong>）需要真正的语义推断：</p>
 <table>
 <thead>
 <tr>
 <th style="text-align: left;">分层</th>
-<th style="text-align: right;">占比</th>
+<th style="text-align: right;">条数</th>
 <th style="text-align: right;">关键词 Top-1</th>
 <th style="text-align: right;">嵌入 Top-1</th>
+<th style="text-align: right;">融合 Top-1</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">履历里直接写了方向</td>
-<td style="text-align: right;">63%</td>
-<td style="text-align: right;"><strong>95.6%</strong></td>
-<td style="text-align: right;">4.4%</td>
+<td style="text-align: left;">字面命中</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">94.4%</td>
+<td style="text-align: right;">50.0%</td>
+<td style="text-align: right;">94.4%</td>
 </tr>
 <tr>
-<td style="text-align: left;">需要语义推断</td>
-<td style="text-align: right;">37%</td>
-<td style="text-align: right;">10.7%</td>
-<td style="text-align: right;"><strong>16.8%</strong></td>
+<td style="text-align: left;">未字面命中（真实场景）</td>
+<td style="text-align: right;">382</td>
+<td style="text-align: right;">7.3%</td>
+<td style="text-align: right;">6.8%</td>
+<td style="text-align: right;"><strong>10.5%</strong></td>
 </tr>
 </tbody>
 </table>
-<p>高校个人主页常直接写「研究方向：XXX」，这类记录关键词就能命中；嵌入模型把整段履历
-（职称、任职时间、行政职务）一起编码，方向信号被稀释。<strong>但在没有字面线索的那 37% 上，
-嵌入确实强于关键词</strong>——这是 AI 的真实价值区间，也是我们采用混合策略、而不是宣称
-"用了 AI 所以更强"的原因。</p>
-<p><strong>保守性。</strong> 相似度低于 0.55 的 <strong>556 条一律留空</strong>；达到阈值的 4,380 条只作为<strong>建议</strong>落在
-<code>.workbench-data/direction-inference/suggestions.json</code>，逐条带分数与方法标记，
-<strong>不覆盖原始 <code>direction</code> 字段</strong>，供人工复核。</p>
-<h3>1.2 同名消歧：用个人主页 URL 当真值</h3>
-<p><strong>问题。</strong> 全库有 <strong>979 组同名</strong>（占不同姓名的 7.6%），其中 <strong>224 组是
-同校内同名</strong>——最容易把两个人看成一个人。既有实现只用"学校 + 院系"硬约束，宁可判
-"同名待核"也不猜，但它没有利用履历文本这条强信号。</p>
-<p><strong>真值从哪来。</strong> <strong>个人主页 URL 本身就是可核验的真值</strong>：同一 URL 必然是同一人，两个不同
-URL 必然是不同人。<code>homepage</code> <strong>只用作标签，绝不进入特征</strong>。按此构造 <strong>626 对</strong>带真值样本
-（同人 80 / 异人 546）；<strong>563 个同名组因缺主页被整组跳过</strong>，不补标签、不猜。</p>
-<p><strong>结果。</strong></p>
+<p><strong>清洗文本消融。</strong> 只保留研究方向句后：字面层 Top-1 50.0% → <strong>72.2%</strong>（长文本稀释确实
+存在）；未字面层 Top-1 不变（6.8%）、Top-3 从 19.4% 升到 <strong>28.3%</strong>。清洗改善排序，但不能
+凭空创造语义能力，故生产仍用完整文本 + 融合，清洗只作诊断实验。</p>
+<p><strong>保守性。</strong> 嵌入相似度低于 0.55 的 <strong>468 条一律留空</strong>；达到阈值的 <strong>5,010 条</strong>只作为
+<strong>建议</strong>落在 <code>.workbench-data/direction-inference/suggestions.json</code>，逐条带融合分、嵌入分、
+关键词分与 Top-3，<strong>不覆盖原始 <code>direction</code> 字段</strong>。方向分类 Top-1 14.2%、Top-3 27.0%，
+绝对准确率仍低，因此产品把它定位为「候选建议 + 必人工复核」；AI 真正有量化优势的地方是
+自然语言检索（第五章：B 类 nDCG@10 0.348 对关键词 0.159）。</p>
+<h3>1.2 同名消歧：证据分级，而不是“URL 不同就是两个人”</h3>
+<p><strong>问题。</strong> 全库有 <strong>1,024 组同名</strong>（占 14,197 个不同姓名的 7.2%），同名组合共 <strong>2,564 对</strong>；
+其中 <strong>578 组存在缺主页的成员</strong>。同校内同名最容易把两个人看成一个人。</p>
+<p><strong>旧协议错在哪（自己踩过并公开）。</strong> 早期把「两条记录主页 URL 不同」当成「必然不同人」。
+反例至少三类：一人多页、学校改版跳转、共用名录页。按此构造的 690 对样本里 <strong>92.8% 的
+负例是跨校组合</strong>（不需要模型就能判对），而机构特征在同校层内恒为 True——0.964 的机构
+AUC 全部来自跨校对比，是<strong>虚高</strong>。</p>
+<p><strong>新协议：只认直接证据，缺证据就标 <code>unknown</code>。</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">判定</th>
+<th style="text-align: left;">条件</th>
+<th style="text-align: right;">对数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>same_person</code></td>
+<td style="text-align: left;">指向<strong>同一专属个人主页</strong> + 同机构</td>
+<td style="text-align: right;">84</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>different_person</code></td>
+<td style="text-align: left;">两条记录各有<strong>互不相同</strong>的专属主页，且院系/一级学科冲突（或跨机构）</td>
+<td style="text-align: right;">963</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>unknown</code></td>
+<td style="text-align: left;">名录页/缺主页/同院系同学科/站点归属与院系不符</td>
+<td style="text-align: right;">1,517</td>
+</tr>
+</tbody>
+</table>
+<p><code>unknown</code> 不进入任何指标，单独报数：缺主页 1,209 对、名录页 221 对、两者兼有 87 对。
+另有独立复核集 <code>workbench/evaluation/gold_pairs.json</code>（140 对，含 35 对 <code>unknown</code>），
+与自动协议一致率 <strong>91.3%</strong>（<code>same_person</code> 88.1%、<code>different_person</code> 100%）。</p>
+<p><strong>结果（主指标：同校同名，115 对 = 同人 84 / 异人 31）。</strong></p>
 <table>
 <thead>
 <tr>
@@ -245,11 +322,15 @@ URL 必然是不同人。<code>homepage</code> <strong>只用作标签，绝不�
 <tbody>
 <tr>
 <td style="text-align: left;">仅机构是否相同</td>
-<td style="text-align: right;">0.960</td>
+<td style="text-align: right;"><strong>0.500</strong>（同校层内无区分力）</td>
 </tr>
 <tr>
-<td style="text-align: left;">仅履历文本嵌入相似度</td>
-<td style="text-align: right;">0.856</td>
+<td style="text-align: left;">仅履历文本嵌入</td>
+<td style="text-align: right;">0.822</td>
+</tr>
+<tr>
+<td style="text-align: left;">嵌入（去掉学科归属套话）</td>
+<td style="text-align: right;">0.828</td>
 </tr>
 </tbody>
 </table>
@@ -265,31 +346,32 @@ URL 必然是不同人。<code>homepage</code> <strong>只用作标签，绝不�
 <tbody>
 <tr>
 <td style="text-align: left;">朴素基线（机构相同即判同人）</td>
-<td style="text-align: right;">64.5%</td>
+<td style="text-align: right;">73.0%</td>
 <td style="text-align: right;">100%</td>
-<td style="text-align: right;">78.4%</td>
+<td style="text-align: right;">84.4%</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>机构相同 + 嵌入相似度 ≥0.7</strong></td>
-<td style="text-align: right;"><strong>86.7%</strong></td>
-<td style="text-align: right;"><strong>90.0%</strong></td>
-<td style="text-align: right;"><strong>88.3%</strong></td>
+<td style="text-align: left;"><strong>嵌入相似度 ≥0.70</strong></td>
+<td style="text-align: right;"><strong>85.4%</strong></td>
+<td style="text-align: right;"><strong>90.5%</strong></td>
+<td style="text-align: right;"><strong>87.9%</strong></td>
 </tr>
 </tbody>
 </table>
-<p>在机构相同的前提下加一道嵌入阈值，<strong>精确率从 64.5% 提升到 86.7%</strong>，召回只降 10 个百分点。
-它挡掉的正是"同校、同名、但不是同一个人"这类最容易看错的错误。</p>
-<p><strong>一个必须写明的失败模式。</strong> 嵌入相似度高<strong>不能</strong>覆盖"主页不同"这个硬事实：待核清单首位的
-「某校 王晶 · 相似度 0.990」看起来像同一个人，但采集该校名录时已确认这两个主页地址
-<strong>分别指向两个不同的个人页</strong>——是两个人。原因是同院系履历高度模板化（"2014- 某校 副教授"
-这类句式），嵌入会把两段模板相似的履历判得很近。因此本模块定死优先级：
-<strong>主页判等 &gt; 嵌入相似度</strong>，嵌入只用于排序与提示，<strong>系统不自动合并任何记录</strong>。</p>
-<p>这也解释了为什么"仅机构"的 AUC（0.952）反而高于"仅嵌入"（0.849）——机构是硬信号，
-文本相似度会被模板稀释。<strong>AI 在这里是提高精确率的辅助，不是裁判。</strong></p>
+<p>复核后（105 对，剔除 10 对错配主页）：嵌入 AUC <strong>0.834</strong>，
+阈值 0.70 时精确率 <strong>84.3%</strong> / 召回率 <strong>94.6%</strong> / F1 <strong>89.2%</strong>（朴素基线 F1 82.7%）。</p>
+<p><strong>必须写明的失败模式。</strong> 嵌入相似度高<strong>不能</strong>覆盖「主页不同」的硬事实：高危误合并
+（嵌入 ≥0.85 但判<strong>不是同人</strong>）共 <strong>124 对</strong>，例如「西安交大 王晶 · 0.990」两个主页分属
+机器人与智能系统研究所、先进制造技术研究所。原因是同院系履历高度模板化，嵌入会把两段
+模板判得很近。因此优先级定死：<strong>专属主页判等 &gt; 嵌入相似度</strong>；<code>unknown</code> 一律人工待核，
+<strong>不自动合并任何记录</strong>。</p>
+<p><strong>AI 在这里的位置。</strong> 它是提高精确率的辅助，不是裁判：同校层里机构特征完全失效
+（AUC 0.500），嵌入是唯一有区分力的信号（0.834），但这只够用来<strong>排序待核清单</strong>，
+不够用来下结论。界面上每一对都显示判定、依据与相似度，并标注「待人工核验」。</p>
 <h3>1.3 界面上能看到这些 AI 结果</h3>
 <p>两处 AI 产物接进了导师详情页，作为一个独立区块「<strong>AI 建议（待复核）</strong>」：方向建议（含相似度、
 所用方法、次选方向）与同名待核（含另一方院系与主页链接）。区块内常驻一句说明：
-<strong>"AI 推断结果，仅供人工复核时参考，不构成事实、不改变参考分、也不会被自动写入数据。"</strong>
+<strong>“AI 推断结果，仅供人工复核时参考，不构成事实、不改变任何原始字段、也不会被自动写入数据。”</strong>
 产物缺失时区块静默隐藏，不影响其它功能。</p>
 <p><strong>明确不做的 AI 用途。</strong> 我们不使用 AI 对导师作评价、打分、排序或推荐，也不让 AI 自动判定论文归属或师生关系。这些判断一旦由模型自动完成，错误的代价由学生承担，且无法追溯。系统对相似度分数的定位是“找资料的线索”，界面上明确写出它不是可信度、适配度或优劣分。</p>
 <h3>2. 开源及第三方资源选择</h3>
@@ -380,11 +462,11 @@ URL 必然是不同人。<code>homepage</code> <strong>只用作标签，绝不�
 </table>
 <p><strong>选型原则</strong>：优先选择①许可证宽松（MIT/Apache-2.0/BSD）以便本项目同样以宽松许可开放；②可在普通笔记本 CPU 上运行；③不引入需要付费或登录的依赖。<strong>我们刻意没有使用大语言模型生成内容</strong>，因为本作品的核心是“来源可追溯”。</p>
 <blockquote>
-<p><strong>关于「Academic Detective」的边界（如实说明）</strong>：本项目的<strong>调查方法论</strong>参考了该项目，并且<strong>按原样调用</strong>其异常规则模块，但<strong>未把它的任何代码复制进本仓库</strong>。工作台的七步框架落地、同名核对、调查档案、学生向参考分与关系分析均为本项目自行实现；工作台读入的 <code>academic-investigations/</code> 目录是该项目产出的逐人调查档案，仅摘录教育、任职、研究领域等事实性内容，<strong>不继承其评分、排名与评价</strong>。该项目 <code>README.md</code> 自称「GPL v3」，与其 <code>LICENSE</code> 正文（MIT）矛盾，本项目以 <code>LICENSE</code> 正文为准并在此披露该矛盾。</p>
+<p><strong>关于「Academic Detective」的边界（如实说明）</strong>：本项目的<strong>调查方法论</strong>参考了该项目，并且<strong>按原样调用</strong>其异常规则模块，但<strong>未把它的任何代码复制进本仓库</strong>。工作台的七步框架落地、同名核对、调查档案、课题组公开信息观察与关系分析均为本项目自行实现；工作台读入的 <code>academic-investigations/</code> 目录是该项目产出的逐人调查档案，仅摘录教育、任职、研究领域等事实性内容，<strong>不继承其评分、排名与评价</strong>。该项目 <code>README.md</code> 自称「GPL v3」，与其 <code>LICENSE</code> 正文（MIT）矛盾，本项目以 <code>LICENSE</code> 正文为准并在此披露该矛盾。</p>
 </blockquote>
 <h4>借鉴了它的哪些方法</h4>
-<p>采用了其七步框架中的 <strong>Step 1 基本档案</strong>、<strong>Step 2 产出核实（含 DOI 反查消歧）</strong>、<strong>Step 4 关系网络</strong>、<strong>Step 5a 异常检测规则 C01–C07</strong>、<strong>Step 6 多源验证</strong>、<strong>Step 7 报告生成</strong>，以及其按数据可得性分层的<strong>三个执行层次（L1 文献计量／L2 深度分析／L3 关系口碑）</strong>与"明示未完成部分"的做法。其中 <strong>C01–C07 异常规则是按原样调用其模块</strong>（<code>tools/skill_heuristics.py</code> → <code>analysis.common_heuristics.CommonHeuristicsClassifier</code>，经环境变量指向其安装位置；未设置时安全跳过），其余均为本项目自行实现。</p>
-<p><strong>未采用</strong>其 Step 3 六维质量评分（<code>paper_quality_rubric</code>／<code>hybrid_scorer</code>）、数据造假取证（<code>data_integrity_checker</code>／<code>stats_reverse_engineer</code>／<code>image_metadata_extractor</code>）、风格计量（<code>stylometry_profiler</code>）、引用星座图（<code>citation_constellation</code>）、学生口碑抓取与合并（<code>review_matcher</code>／<code>review_aggregator</code>）以及零宽水印（<code>watermark</code>）。理由有两条：前者需论文全文且输出的是<strong>学术质量评分</strong>，与本作品"不评价学术水平"的定位冲突；口碑类来源<strong>无法追溯且指向具体个人</strong>，与"证据可追溯"的定位冲突。Step 0 案件注册只采用其"逐人独立档案"的思路，本项目改用本机 JSON 存储，未引入其 SQLite 结构。</p>
+<p>采用了其七步框架中的 <strong>Step 1 基本档案</strong>、<strong>Step 2 产出核实（含 DOI 反查消歧）</strong>、<strong>Step 4 关系网络</strong>、<strong>Step 5a 异常检测规则 C01–C07</strong>、<strong>Step 6 多源验证</strong>、<strong>Step 7 报告生成</strong>，以及其按数据可得性分层的<strong>三个执行层次（L1 文献计量／L2 深度分析／L3 关系口碑）</strong>与“明示未完成部分”的做法。其中 <strong>C01–C07 异常规则是按原样调用其模块</strong>（<code>tools/skill_heuristics.py</code> → <code>analysis.common_heuristics.CommonHeuristicsClassifier</code>，经环境变量指向其安装位置；未设置时安全跳过），其余均为本项目自行实现。</p>
+<p><strong>未采用</strong>其 Step 3 六维质量评分（<code>paper_quality_rubric</code>／<code>hybrid_scorer</code>）、数据造假取证（<code>data_integrity_checker</code>／<code>stats_reverse_engineer</code>／<code>image_metadata_extractor</code>）、风格计量（<code>stylometry_profiler</code>）、引用星座图（<code>citation_constellation</code>）、学生口碑抓取与合并（<code>review_matcher</code>／<code>review_aggregator</code>）以及零宽水印（<code>watermark</code>）。理由有两条：前者需论文全文且输出的是<strong>学术质量评分</strong>，与本作品“不评价学术水平”的定位冲突；口碑类来源<strong>无法追溯且指向具体个人</strong>，与“证据可追溯”的定位冲突。Step 0 案件注册只采用其“逐人独立档案”的思路，本项目改用本机 JSON 存储，未引入其 SQLite 结构。</p>
 <p><strong>逐条对照与依据</strong>见附录一第五之二节（含每一条方法落在本项目哪个文件的映射）。</p>
 <h3>3. 自主开发与权利边界</h3>
 <p><strong>团队自主完成的部分：</strong></p>
@@ -407,7 +489,7 @@ URL 必然是不同人。<code>homepage</code> <strong>只用作标签，绝不�
 <p>本作品的“AI + 开源”不是“调用一个模型接口”就结束，而是形成了一条完整链路：</p>
 <p><strong>开源模型提供语义能力 → 本作品把它接入“证据可追溯”的数据结构 → 检索结果直接带着来源回到档案里。</strong></p>
 <p>具体而言：向量检索只在<strong>用户已选定的资料集</strong>内排序（<code>search.py</code> 中的 <code>search()</code> 先按学科/高校过滤再算相似度），因此检索结果天然带着结构化学科与单位标签；每条结果同时返回 <code>evidence_count</code>（该导师已有多少条来源），用户能立刻看出“这条命中是否已有来源支撑”。<strong>这是与通用 AI 应用最实质的区别</strong>：通用做法把模型输出当作答案，本作品把模型输出当作“去找哪份档案”的线索，答案仍要回到公开来源上核对。</p>
-<p>相较既有同类作品，本作品的实质改进有三点：① 从“按姓名检索并自动绑定作者”改为“列出同名候选、由用户核对身份”；② 从“只列名单的数据收纳”改为“关系分析 + 学生向参考分”，且两者都只用公开可核验信号、每项可点开看依据；③ 从“单一学科数据库”扩展为覆盖 38 个工学一级学科的导航框架（2022 年目录 08 门类；另有 79 个非工科学科数据保留在库中并可切换显示，不作删除）。</p>
+<p>相较既有同类作品，本作品的实质改进有三点：① 从“按姓名检索并自动绑定作者”改为“列出同名候选、由用户核对身份”；② 从“只列名单的数据收纳”改为“关系分析 + 课题组公开信息观察”，且两者都只用公开可核验信号、每项可点开看依据；③ 从“单一学科数据库”扩展为覆盖 38 个工学一级学科的导航框架（2022 年目录 08 门类；另有 79 个非工科学科数据保留在库中并可切换显示，不作删除）。</p>
 <hr />
 <h2>四、设计与实现过程</h2>
 <h3>1. 核心功能与流程</h3>
@@ -483,7 +565,7 @@ URL 必然是不同人。<code>homepage</code> <strong>只用作标签，绝不�
 <p><strong>（2）前端异步竞态防护。</strong> 用户在快速切换学科、高校、方向、导师时，先发出的请求可能后返回，从而覆盖当前选择——这是同类工具常见且难察觉的缺陷。实现上为每类请求保留版本序号，回包时只有序号仍为最新才允许渲染。该行为由 11 项前端测试专门覆盖（如“旧学科响应不能覆盖较新的选择”“切到新导师后旧资料请求不得刷新新档案”）。</p>
 <p><strong>（3）来源状态与“不自动完成核查”。</strong> 每条来源携带 <code>status</code> 字段，默认“待人工核查”。整理任务（身份来源、论文候选、关系证据、既有档案四项离线运行）完成后<strong>不会</strong>修改任何来源的状态。这一约束写在模块文档字符串里并有测试保护，防止后续迭代为了“体验流畅”而让系统自动认证来源。</p>
 <p><strong>（4）公开页面提取的约束。</strong> <code>public_research.py</code> 只读取已在代码中登记的院系名录与个人主页；手动录入的任意网址<strong>不进入自动抓取</strong>，避免把工具变成任意 URL 抓取器。页面读取失败时不清空既有成功结果与用户笔记。只保存提取出的简短事实与书目，不重新发布网页全文。</p>
-<p><strong>（5）测试策略。</strong> 700 余项 Python 测试覆盖个人页解析、身份来源约束、年度招生记录匹配、失败更新保留资料、重复导入去重等；11 项前端测试用 Node 内置测试器在无浏览器环境下验证异步竞态。测试不替代浏览器交互验收，这一点在文档中明确写出。</p>
+<p><strong>（5）测试策略。</strong> 900 余项 Python 测试覆盖个人页解析、身份来源约束、年度招生记录匹配、失败更新保留资料、重复导入去重等；11 项前端测试用 Node 内置测试器在无浏览器环境下验证异步竞态。测试不替代浏览器交互验收，这一点在文档中明确写出。</p>
 <h3>3. 团队分工与过程记录</h3>
 <blockquote>
 <p><strong>本节需团队补充</strong>：请按实际情况填写成员角色（如：需求与资料整理、后端与数据管道、前端与测试）、时间计划与版本迭代节点。</p>
@@ -522,12 +604,22 @@ URL 必然是不同人。<code>homepage</code> <strong>只用作标签，绝不�
 </tr>
 <tr>
 <td style="text-align: left;">检索评估</td>
-<td style="text-align: left;">预置 8 查询 × 8 条试点资料，脚本化比较</td>
-<td style="text-align: left;">语义检索 vs 关键词基线（Top-1 / Top-3）</td>
+<td style="text-align: left;">弱监督 qrels：226 条查询（A 类结构化 186 + B 类自然语言 40），dev/test 划分，五种方法对比</td>
+<td style="text-align: left;">Recall@K、MRR@10、nDCG@10、延迟、失败案例</td>
+</tr>
+<tr>
+<td style="text-align: left;">方向推断评估</td>
+<td style="text-align: left;">400 条留出验证 + 清洗文本消融 + 分层</td>
+<td style="text-align: left;">关键词 / 嵌入 / 混合，Top-1 与 Top-3</td>
+</tr>
+<tr>
+<td style="text-align: left;">同名消歧评估</td>
+<td style="text-align: left;">证据分级协议 + 独立复核集 140 对</td>
+<td style="text-align: left;">精确率 / 召回率 / F1 / AUC / 高危误合并</td>
 </tr>
 <tr>
 <td style="text-align: left;">数据审计</td>
-<td style="text-align: left;"><code>audit_prepublish.mjs</code> 16 项自动检查</td>
+<td style="text-align: left;"><code>audit_prepublish.mjs</code> 与 <code>privacy_audit</code> 自动检查</td>
 <td style="text-align: left;">邮箱残留、个人信息、硬编码路径、评价性用语、链接、凭证、统计自洽</td>
 </tr>
 <tr>
@@ -556,7 +648,7 @@ URL 必然是不同人。<code>homepage</code> <strong>只用作标签，绝不�
 <tr>
 <td style="text-align: left;">Python 行为测试</td>
 <td style="text-align: left;"><code>python -m unittest discover -s workbench/tests</code></td>
-<td style="text-align: left;"><strong>700 余项通过</strong>（约 100 秒；以实际输出为准）</td>
+<td style="text-align: left;"><strong>全部通过</strong>（约 51 秒；项数以命令输出为准，正文不写死）</td>
 </tr>
 <tr>
 <td style="text-align: left;">前端异步测试</td>
@@ -566,78 +658,135 @@ URL 必然是不同人。<code>homepage</code> <strong>只用作标签，绝不�
 <tr>
 <td style="text-align: left;">公开前审计</td>
 <td style="text-align: left;"><code>node tools/audit_prepublish.mjs</code></td>
-<td style="text-align: left;"><strong>16 项通过 / 1 项警告 / 0 项阻塞</strong>（警告为单个产物文件超过 5 MB）</td>
+<td style="text-align: left;"><strong>17 项通过 / 1 项警告 / 0 项阻塞</strong>（警告为单个产物文件超过 5 MB）</td>
 </tr>
 </tbody>
 </table>
-<p><strong>（2）检索评估（8 条试点 × 8 个预置查询）。</strong></p>
+<p><strong>（2）检索评估（弱监督 qrels，test 集 158 条查询）。</strong></p>
+<p>评测集由两类查询组成：<strong>A 类 186 条</strong>（由一级学科、<code>direction_group</code>、<code>interests</code> 字段
+规则生成）与 <strong>B 类 40 条</strong>（自然语言描述，由人工术语映射表定义）。按种子 42 划分
+dev 68 / test 158；<strong>融合权重与阈值只在 dev 上选</strong>，指标全部报在 test。</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">模式</th>
-<th style="text-align: left;">Top-1</th>
-<th style="text-align: left;">Top-3</th>
+<th style="text-align: left;">方法</th>
+<th style="text-align: right;">nDCG@10</th>
+<th style="text-align: right;">MRR@10</th>
+<th style="text-align: right;">Recall@20</th>
+<th style="text-align: right;">Top-1</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">语义检索（开源嵌入模型）</td>
-<td style="text-align: left;">7/8</td>
-<td style="text-align: left;">8/8</td>
+<td style="text-align: left;">关键词（双字覆盖率，现网基线）</td>
+<td style="text-align: right;">0.785</td>
+<td style="text-align: right;">0.816</td>
+<td style="text-align: right;">50.9%</td>
+<td style="text-align: right;">79.1%</td>
 </tr>
+<tr>
+<td style="text-align: left;">BM25（纯 Python，k1=1.5 b=0.75）</td>
+<td style="text-align: right;">0.834</td>
+<td style="text-align: right;">0.855</td>
+<td style="text-align: right;">51.5%</td>
+<td style="text-align: right;">82.3%</td>
+</tr>
+<tr>
+<td style="text-align: left;">向量检索（bge-small-zh-v1.5）</td>
+<td style="text-align: right;">0.677</td>
+<td style="text-align: right;">0.754</td>
+<td style="text-align: right;">37.3%</td>
+<td style="text-align: right;">69.0%</td>
+</tr>
+<tr>
+<td style="text-align: left;">向量 + bge 检索指令（补充基线）</td>
+<td style="text-align: right;">0.660</td>
+<td style="text-align: right;">0.742</td>
+<td style="text-align: right;">36.8%</td>
+<td style="text-align: right;">68.4%</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>混合：BM25 + 向量（加权）</strong></td>
+<td style="text-align: right;"><strong>0.834</strong></td>
+<td style="text-align: right;"><strong>0.867</strong></td>
+<td style="text-align: right;">51.4%</td>
+<td style="text-align: right;"><strong>83.5%</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">混合：BM25 + 向量（RRF）</td>
+<td style="text-align: right;">0.780</td>
+<td style="text-align: right;">0.852</td>
+<td style="text-align: right;">44.9%</td>
+<td style="text-align: right;">80.4%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>（3）分层结果：AI 在自然语言查询上赢，在结构化查询上输。</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">方法</th>
+<th style="text-align: right;">A 类（结构化）nDCG@10</th>
+<th style="text-align: right;">B 类（自然语言）nDCG@10</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td style="text-align: left;">关键词基线</td>
-<td style="text-align: left;">7/8</td>
-<td style="text-align: left;">8/8</td>
+<td style="text-align: right;">0.920</td>
+<td style="text-align: right;">0.159</td>
+</tr>
+<tr>
+<td style="text-align: left;">BM25</td>
+<td style="text-align: right;"><strong>0.969</strong></td>
+<td style="text-align: right;">0.207</td>
+</tr>
+<tr>
+<td style="text-align: left;">向量检索</td>
+<td style="text-align: right;">0.748</td>
+<td style="text-align: right;"><strong>0.348</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">向量 + 检索指令</td>
+<td style="text-align: right;">0.726</td>
+<td style="text-align: right;"><strong>0.354</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">混合（加权）</td>
+<td style="text-align: right;">0.963</td>
+<td style="text-align: right;">0.235</td>
+</tr>
+<tr>
+<td style="text-align: left;">混合（RRF）</td>
+<td style="text-align: right;">0.876</td>
+<td style="text-align: right;">0.332</td>
 </tr>
 </tbody>
 </table>
-<p><strong>（3）语义检索的分场景实测</strong>（在 10 条合成演示资料上，逐条实际调用接口）：</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">查询</th>
-<th style="text-align: left;">语义检索 Top-1</th>
-<th style="text-align: left;">关键词基线 Top-1</th>
-<th style="text-align: left;">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">我想做中文问答和知识组织</td>
-<td style="text-align: left;">自然语言处理（0.556）</td>
-<td style="text-align: left;">自然语言处理（0.455），命中 2 条</td>
-<td style="text-align: left;">两种模式都能命中，语义分更高</td>
-</tr>
-<tr>
-<td style="text-align: left;">固态电池界面退化</td>
-<td style="text-align: left;">固态电池（0.604）</td>
-<td style="text-align: left;">固态电池（0.714）</td>
-<td style="text-align: left;">术语直接重合，基线反而更锐利</td>
-</tr>
-<tr>
-<td style="text-align: left;">数字平台的数据监管</td>
-<td style="text-align: left;">法学·数据保护（0.569）</td>
-<td style="text-align: left;">法学·数据保护（0.875）</td>
-<td style="text-align: left;">同上</td>
-</tr>
-<tr>
-<td style="text-align: left;">青少年学习动机</td>
-<td style="text-align: left;">心理学·认知心理学（0.545）</td>
-<td style="text-align: left;">心理学·认知心理学（0.833）</td>
-<td style="text-align: left;">同上</td>
-</tr>
-</tbody>
-</table>
-<p><strong>（4）关键发现：语义检索与关键词基线各有优势，不能只留一个。</strong> 在术语直接重合的查询上，关键词基线的分数更锐利（0.71–0.88，明显高于第二名）；语义检索在<strong>同一查询下会把不相关的导师也排进前三</strong>，相似度约 0.21–0.36。这意味着语义检索的弱尾部分需要用阈值或关键词二次过滤，否则会给用户带来噪声。这也正是我们把两种模式并列展示、而不是只保留“看起来更先进”的语义检索的原因。</p>
-<p><strong>（5）规模数据的可复现性。</strong> 截至 2026-10-23，工作台目录含 <strong>15,177 条</strong>记录
-（其中工学 38 个一级学科 <strong>10,540 条</strong>、公开来源 <strong>12,004 条</strong>、涉及 <strong>61 所</strong>高校或机构），
+<p>结构化查询上 BM25 最强（0.969），向量反而最弱；自然语言查询上向量领先
+（0.348，关键词只有 0.159）。<strong>因此产品同时保留语义检索与关键词/BM25 两条路径</strong>，
+而不是用「更先进」的语义检索替换掉关键词。</p>
+<p><strong>（4）代价与边界（如实报告）。</strong></p>
+<ul>
+<li><strong>延迟</strong>（单次查询，CPU）：BM25 0.18 ms、向量 3.66 ms、关键词基线 14.9 ms；整轮评测
+  23.7 秒（CPU 时间 132.8 秒，多线程）。</li>
+<li><strong>过滤阈值在 test 上没有裁剪收益</strong>（裁剪比例 0%）。它真正的作用是挡住无关查询：
+  10 条无关探针中 6 条返回空，而不是硬推弱相关结果。我们没有为了让表格好看去调阈值。</li>
+<li><strong>英文缩写会坍缩</strong>：30 个学科缩写只产生 <strong>2 个不同向量</strong>（<code>VLSI</code>/<code>MEMS</code>/<code>EDA</code>/<code>FPGA</code>
+  等 29 个完全重合）。<strong>这是必须保留关键词模式的硬理由</strong>。</li>
+<li><strong>典型失败案例</strong>：<code>AI 用于材料发现</code> 被单一学科簇压制（Top-3 全是半导体方向）；
+  <code>让机器自己看着路往前走</code> 的 Top-3 全部落在 AI 芯片簇（相似度 0.48–0.49）。</li>
+<li>qrels 是规则生成的<strong>弱监督标签</strong>，不是人工标注，也不是第三方评测集；指标衡量的是
+  与规则的吻合度，不能当作绝对准确率。</li>
+</ul>
+<p><strong>（5）规模数据的可复现性。</strong> 截至 2026-10-23，工作台目录含 <strong>15,719 条</strong>记录
+（其中工学 38 个一级学科 <strong>11,082 条</strong>、公开来源 <strong>12,546 条</strong>、涉及 <strong>67 所</strong>高校或机构），
 覆盖 117 个正式一级学科，可由接口 <code>GET /api/catalog/disciplines</code> 逐项核验。
 所有对外引用的数字由 <code>python -m workbench.tools.report_facts</code> 一次算出，<strong>不靠手抄</strong>——
-这是为了根治一类历史问题：报告曾长期写着"10,441 条"，而实际早已过万。</p>
+这是为了根治一类历史问题：报告曾长期写着“10,441 条”，而实际早已过万。</p>
 <p><strong>（6）机构分布达标：一个我们自己定出来、并且卡住了自己的标准。</strong></p>
-<p>一个学科"有人"不等于"能用来做跨校比较"。如果某学科 90% 的记录来自同一所学校，学生在上面
-看到的"不同学校导师"其实是同校几位老师，跨校比较就是假的。因此本项目定了一条硬标准：</p>
+<p>一个学科“有人”不等于“能用来做跨校比较”。如果某学科 90% 的记录来自同一所学校，学生在上面
+看到的“不同学校导师”其实是同校几位老师，跨校比较就是假的。因此本项目定了一条硬标准：</p>
 <blockquote>
 <p><strong>最大单一机构占比必须 &lt; 60%</strong>，该学科才可用于跨校比较；未达标的在界面上按实际数字展示，
 不宣称已覆盖。</p>
@@ -647,9 +796,9 @@ URL 必然是不同人。<code>homepage</code> <strong>只用作标签，绝不�
 </code></pre>
 <p><strong>这条式子在实践中救回了一个错。</strong> 0801 力学原有 35 条、上海交通大学 34 条（97.1%）。
 我们补入北京大学 96 位后，主导校从上海交大换成了北京大学（96/131 = <strong>73.3%</strong>）——<strong>只是把
-偏斜挪了个位置，仍未达标</strong>。第二步按式子算出"需再补 ≥29 位且必须来自第三所学校"，
+偏斜挪了个位置，仍未达标</strong>。第二步按式子算出“需再补 ≥29 位且必须来自第三所学校”，
 补入同济大学 73 位后变为 96/204 = <strong>47.1%</strong>，才真正达标。</p>
-<p><strong>这条标准也让我们主动放弃了若干"能取但不能用"的来源</strong>（宁可数字小，不要假分布）：</p>
+<p><strong>这条标准也让我们主动放弃了若干“能取但不能用”的来源</strong>（宁可数字小，不要假分布）：</p>
 <table>
 <thead>
 <tr>
@@ -687,17 +836,17 @@ URL 必然是不同人。<code>homepage</code> <strong>只用作标签，绝不�
 <tr>
 <td style="text-align: left;">哈尔滨工程大学 核学院（整页）</td>
 <td style="text-align: left;">120 条</td>
-<td style="text-align: left;">全收会让该校占 76.4%，把"独大"从上海交平移过去</td>
+<td style="text-align: left;">全收会让该校占 76.4%，把“独大”从上海交平移过去</td>
 </tr>
 </tbody>
 </table>
-<p><strong>同一条标准还决定了"只取一部分"的取舍</strong>：哈工程整页 120 人只取学院仅有的两个"系"25 人；
-同济交通运输学院 197 人只取交通信息与控制系 35 人；华南理工食品学院只取"教授"序列 48 人。
-每个模块的 docstring 与每条记录的备注都写明了覆盖范围——<strong>"取了多少"必须能被读者看出来，
+<p><strong>同一条标准还决定了“只取一部分”的取舍</strong>：哈工程整页 120 人只取学院仅有的两个“系”25 人；
+同济交通运输学院 197 人只取交通信息与控制系 35 人；华南理工食品学院只取“教授”序列 48 人。
+每个模块的 docstring 与每条记录的备注都写明了覆盖范围——<strong>“取了多少”必须能被读者看出来，
 否则 25 人看起来就像全系只有这些人。</strong></p>
 <p><strong>当前状态：38 个工学学科全部达标（38/38）。</strong></p>
 <p>这个结论来之不易，而且<strong>推翻了我们自己先前的一个错误判断</strong>。本报告早先曾把兵器、纺织、
-林业三个学科写成"全国设点高校或院所本身就极少，属学科结构性限制，不是方法不足"。
+林业三个学科写成“全国设点高校或院所本身就极少，属学科结构性限制，不是方法不足”。
 <strong>这个判断是错的。</strong> 后来做了一轮针对性的设点单位普查（依据教育部学位中心第四轮学科
 评估公开名单与各校官网），事实是：</p>
 <table>
@@ -726,7 +875,7 @@ URL 必然是不同人。<code>homepage</code> <strong>只用作标签，绝不�
 </tr>
 </tbody>
 </table>
-<p><strong>真正的瓶颈不是"没有第二所学校"，而是公开的逐人师资名录可达率低</strong>：三个学科的
+<p><strong>真正的瓶颈不是“没有第二所学校”，而是公开的逐人师资名录可达率低</strong>：三个学科的
 设点单位里，能拿到可核验逐人名单的分别只有 3/12、3/11、2/11——其余单位的站点
 要么 TLS 握手失败（本轮网络不可达），要么只有纯文本名单没有个人页，要么是军队院校
 不公开名录。</p>
@@ -761,19 +910,19 @@ URL 必然是不同人。<code>homepage</code> <strong>只用作标签，绝不�
 </tr>
 </tbody>
 </table>
-<p><strong>这条更正值得留在报告里，因为它记录了一个方法论错误</strong>：把"我没找到入口"当成
-"世界上没有入口"，然后写进文档当成结论。区别"做不到"与"没做到"不能靠印象，
+<p><strong>这条更正值得留在报告里，因为它记录了一个方法论错误</strong>：把“我没找到入口”当成
+“世界上没有入口”，然后写进文档当成结论。区别“做不到”与“没做到”不能靠印象，
 只能靠<strong>把设点单位清单列出来、逐个实测并记录现象</strong>——这次普查正是这么做的，
 逐单位的 HTTP 状态与页面形态见 <code>reports/单一机构学科-设点单位普查-20261023.md</code>。</p>
 <p><strong>（7）尚未达到的目标（如实说明）。</strong></p>
 <ul>
-<li><strong>没有独立用户研究。</strong> 未开展访谈、问卷或任务实验，因此本报告不声称“提高效率”或“改善决策”。检索评估是 8 条资料上的工程冒烟检查，样本量小，不能证明语义检索优于关键词。</li>
+<li><strong>没有独立用户研究。</strong> 未开展访谈、问卷或任务实验，因此本报告不声称“提高效率”或“改善决策”。检索评估使用弱监督 qrels（规则生成，不是人工标注），指标反映的是与规则的吻合度；A/B 两类的结论必须分开看。</li>
 <li><strong>全国覆盖率未评估。</strong> 117 个学科“均有名单”不等于全国完整。部分学科的收录人数仍很少（最少的 0839 网络空间安全 63 位、0827 核科学与技术 63 位，38 个工学学科的“最大单一机构占比”现已全部低于 60%，逐项数值见 <code>python -m workbench.tools.distribution_audit</code>），且部分线索来自第三方转载名录，已在页面与文档中分开标明来源强度。</li>
-<li><strong>11.5% 的记录没有个人专属页面。</strong> 部分院校（如中国刑事警察学院、中国人民警察大学、
+<li><strong>10.9% 的记录没有个人专属页面。</strong> 部分院校（如中国刑事警察学院、中国人民警察大学、
   武汉大学测绘学科的部分来源）<strong>只公布名录、不公布逐人详情页</strong>，这些记录的 <code>homepage</code> 只能
-  回落到名录页本身。全库实测：<strong>488 / 4,238 条 = 11.5%</strong>，涉及 23 个来源 key
+  回落到名录页本身。新增来源实测：<strong>488 / 4,495 条 = 10.9%</strong>，涉及 23 个来源 key
   （<code>python -m workbench.tools.audit_new_sources</code> 会逐 key 列出）。
-  这不违反"可追溯"——名录页上确实列有该姓名、点开可以核验；但读者不应假设每条记录都能
+  这不违反“可追溯”——名录页上确实列有该姓名、点开可以核验；但读者不应假设每条记录都能
   点进本人的专属页面。<strong>这一项此前未被度量，是本轮新增审计项后才暴露的。</strong></li>
 <li><strong>数据完整度有限。</strong> 公开来源已覆盖相当规模的条目，但每个导师的论文、师承、招生信息远未补齐；没有公开依据的师承保持空白。</li>
 <li><strong>模型对英文与专业术语的表现未系统验证。</strong> 所用中文嵌入模型在英语查询和生僻专业术语上的效果尚未评估。</li>
@@ -786,7 +935,7 @@ URL 必然是不同人。<code>homepage</code> <strong>只用作标签，绝不�
 <p><strong>① 交互范式：从“检索”改为“核对”。</strong> 同类工具默认“输入姓名 → 返回结果”，把同名消歧问题留给了用户却又不提示。本作品把同名候选<strong>显式并列展示</strong>（含学校、院系、一级学科、方向、来源数量），要求用户先核对身份再调查，并在论文线索环节坚持“只给候选、由用户选择”，不自动绑定作者。</p>
 <p><strong>② 产品伦理：从“生成评价”改为“呈现证据边界”。</strong> 本作品明确不生成导师评价、不打分、不排名，也不让 AI 自动判定师生关系。取而代之的是八项人工核查状态与“不自动完成核查”的机制约束。这是一个操作性取舍：它让产品在演示时“看起来信息更少”，但让每一条信息都可追溯。</p>
 <p><strong>③ 检索设计：并列基线与多学科导航框架。</strong> 语义检索与关键词基线并列展示，便于用户与评审共同核查 AI 是否真有帮助；覆盖 38 个工学一级学科的导航框架使工具不局限于单一专业；另有 79 个非工科学科的数据保留在库中并可切换显示。</p>
-<p><strong>与上游开源项目的关系（开源项目改进与生态贡献）：</strong> 本作品在既有开源导师数据库项目基础上做了实质性重构——新增工学范围导航与选择式定位、同名核对机制、调查档案与本机存储、检索评估脚本、76 项 Python 与 11 项前端测试、以及逐批可追溯的核对记录。上游项目的原始数据与许可声明保持不变。</p>
+<p><strong>与上游开源项目的关系（开源项目改进与生态贡献）：</strong> 本作品在既有开源导师数据库项目基础上做了实质性重构——新增工学范围导航与选择式定位、同名核对机制、调查档案与本机存储、检索评估脚本、900 余项 Python 与 11 项前端测试、以及逐批可追溯的核对记录。上游项目的原始数据与许可声明保持不变。</p>
 <h3>2. 开放成果</h3>
 <table>
 <thead>
@@ -890,7 +1039,7 @@ URL 必然是不同人。<code>homepage</code> <strong>只用作标签，绝不�
 <p><strong>更正与删除机制</strong>：任何人对自己的信息可提出更正或整条移除请求，<strong>无需提供任何证件</strong>，承诺 7 个工作日内处理。</p>
 <h3>3. AI 输出、知识产权与内容安全</h3>
 <p><strong>模型幻觉风险与处置。</strong> 本作品的 AI 用途限于向量检索，<strong>不生成任何事实性文本</strong>，因此不存在“模型编造导师信息”的路径。检索结果的排序错误（如把不相关导师排进前三）已在第五章实测并如实披露。</p>
-<p><strong>相似度分数的误用风险与提示。</strong> 风险在于用户把相似度当成导师优劣。处置：① 界面与文档明确写出“相似度只用于找资料，不评价导师水平或指导质量”“语义分数没有跨查询可比性”；② 不提供任何基于相似度的导师排名；③ 读研体验参考分与语义相似度相互独立，且明确不进入论文数量、期刊档次、引用与头衔。</p>
+<p><strong>相似度分数的误用风险与提示。</strong> 风险在于用户把相似度当成导师优劣。处置：① 界面与文档明确写出“相似度只用于找资料，不评价导师水平或指导质量”“语义分数没有跨查询可比性”；② 不提供任何基于相似度的导师排名；③ 课题组公开信息观察与语义相似度相互独立；两者都不进入论文数量、期刊档次、引用与头衔，也不产生任何跨导师排序。</p>
 <p><strong>提示注入风险。</strong> 作品不把抓取的网页文本交给任何大模型处理，也不据此执行动作，因此不构成提示注入的攻击面。公开页面提取仅做结构化字段解析。</p>
 <p><strong>数据错误风险。</strong> 主要风险是信息过时或同名误配。处置：① 每条内容带来源链接与来源类别，招生记录带年份；② 学院名录类“无年份”来源明确标注为身份与任职记录，不当作年度招生；③ 军兵种作战学等少数条目依据为第三方转载，页面与文档中单独标明“来源强度”；④ 未检索到资料时显示“未知”，不填充推断内容。</p>
 <p><strong>AI 生成内容的权利核查。</strong> 开发中使用了生成式 AI 辅助（见第四章第 3 节）。团队对纳入作品的内容做了人工审阅与实际运行验证、来源与权利核查，确认未引入权利状态不清的代码；报告全部统计数字可由仓库脚本复现。</p>
@@ -947,7 +1096,7 @@ URL 必然是不同人。<code>homepage</code> <strong>只用作标签，绝不�
 <hr />
 <h2>八、总结与展望</h2>
 <h3>1. 项目总结</h3>
-<p><strong>完成情况。</strong> 本作品完成了一个可运行的本地导师调查工作台：覆盖 38 个工学一级学科的选择式导航与同名核对，以及关系分析四级分层与学生向读研体验参考分、带来源与状态的调查档案、八项人工核查与待办生成、OpenAlex 作者候选与 Crossref DOI 核对、CSV/JSON 导入、Markdown 导出；配套 76 项 Python 测试与 11 项前端测试全部通过，公开前审计 16 项通过、0 项阻塞。</p>
+<p><strong>完成情况。</strong> 本作品完成了一个可运行的本地导师调查工作台：覆盖 38 个工学一级学科的选择式导航与同名核对，以及关系分析四级分层与课题组公开信息观察、带来源与状态的调查档案、八项人工核查与待办生成、OpenAlex 作者候选与 Crossref DOI 核对、CSV/JSON 导入、Markdown 导出；全量 Python 行为测试与 11 项前端测试全部通过（项数以命令输出为准），公开前审计 17 项通过、0 项阻塞。</p>
 <p><strong>主要价值。</strong> 把“导师信息搜集”从打开十几个标签页、靠自己拼记事本，变成一份份带来源、可核对、可导出的调查记录；并用产品机制保证系统不会替用户对导师下结论。</p>
 <p><strong>团队收获。</strong> 一是理解了“证据边界”比“功能丰富”更难也更重要——把“未知”如实显示出来，需要抵抗住把页面填满的冲动；二是经历了一次典型的静默失效排查：采集脚本字段名写错导致机构校验匹配一切、81.7% 匹配失真，最终靠独立于采集过程的产出侧复核抓出来，此后把“不要只信任采集过程，要独立复核最终数据”写进了维护指南；三是实践了在真实项目里判断“什么该交给 AI、什么绝不能交给 AI”。</p>
 <p><strong>未完成事项。</strong> ① 无独立用户研究与任务实验，效率与决策改善效果未知；② 全国覆盖率未评估，部分学科收录很少；③ 多数导师的论文、师承、招生信息尚未补齐；④ 尚未向上游提交 Issue/PR；⑤ 语义检索的弱尾噪声未做阈值过滤，目前靠并列关键词基线缓解。</p>

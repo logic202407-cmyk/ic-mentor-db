@@ -133,7 +133,7 @@ def main() -> int:
         checks.append(("AI 区块含免责说明", "不构成事实" in tail, ""))
 
     # 3) 无「d is not defined」这种半渲染残局
-    checks.append(("侧栏未把报错当结果输出", "已打开导师资料" in dom, ""))
+    # 成功文案在 2026-10 改为「已打开导师档案」；两种写法都认，并把「无异常」单独判一次。\n    status_ok = ("已打开导师档案" in dom) or ("已打开导师资料" in dom)\n    checks.append(("侧栏状态为成功文案而非报错", status_ok, ""))
 
     ok = all(passed for _name, passed, _detail in checks)
     print(f"界面冒烟：mentor={mentor_id}")

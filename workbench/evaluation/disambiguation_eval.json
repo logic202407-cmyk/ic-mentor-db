@@ -1,0 +1,2270 @@
+{
+  "schema": "mentor-workbench/disambiguation-eval/v1",
+  "generated_at": "2026-10-24T01:30:42+08:00",
+  "how_to_reproduce": "python -m workbench.disambiguate_names --evaluate --gold",
+  "protocol": {
+    "same_person": "同一专属个人主页 + 同机构 + 站点归属与院系一致",
+    "different_person": "两个互不相同的专属主页且院系/一级学科冲突（或跨机构）",
+    "unknown": "名录页/缺主页/同院系同学科/站点归属不符 —— 不进入指标"
+  },
+  "description": "同名消歧独立复核集：每对的判定可由 a/b 内的原始字段直接复现；verdict 是独立复核结论，auto_label 是模块自动协议给出的标签，两者不一致之处即为协议的残余风险。",
+  "stats": {
+    "groups": 1024,
+    "pairs_total": 2564,
+    "labels": {
+      "different_person": 963,
+      "unknown": 1517,
+      "same_person": 84
+    },
+    "unknown_reasons": {
+      "missing_url": 1209,
+      "listing_page": 221,
+      "missing_url+listing_page": 87
+    },
+    "groups_with_missing_home": 578,
+    "same_institution": {
+      "unknown": 135,
+      "different_person": 31,
+      "same_person": 84
+    },
+    "cross_institution": {
+      "different_person": 932,
+      "unknown": 1382
+    }
+  },
+  "primary": {
+    "scope": "同校同名（主指标）",
+    "labelled_pairs": 115,
+    "positives": 84,
+    "negatives": 31,
+    "excluded_unknown": 135,
+    "auc_defined": true,
+    "auc": {
+      "institution_only": 0.5,
+      "embedding_only": 0.8218125960061444,
+      "embedding_clean_only": 0.8279569892473119
+    },
+    "baseline_institution": {
+      "tp": 84,
+      "fp": 31,
+      "fn": 0,
+      "tn": 0,
+      "precision": 0.7304347826086957,
+      "recall": 1.0,
+      "f1": 0.8442211055276382,
+      "support": {
+        "positives": 84,
+        "negatives": 31
+      }
+    },
+    "baseline_embedding": {
+      "confusion": {
+        "tp": 50,
+        "fp": 4,
+        "fn": 34,
+        "tn": 27,
+        "precision": 0.9259259259259259,
+        "recall": 0.5952380952380952,
+        "f1": 0.7246376811594204,
+        "support": {
+          "positives": 84,
+          "negatives": 31
+        }
+      },
+      "threshold": 0.85
+    },
+    "thresholds": [
+      {
+        "emb>=": 0.5,
+        "same_inst_and_emb": {
+          "tp": 83,
+          "fp": 25,
+          "fn": 1,
+          "tn": 6,
+          "precision": 0.7685185185185185,
+          "recall": 0.9880952380952381,
+          "f1": 0.8645833333333333,
+          "support": {
+            "positives": 84,
+            "negatives": 31
+          }
+        },
+        "emb_only": {
+          "tp": 83,
+          "fp": 25,
+          "fn": 1,
+          "tn": 6,
+          "precision": 0.7685185185185185,
+          "recall": 0.9880952380952381,
+          "f1": 0.8645833333333333,
+          "support": {
+            "positives": 84,
+            "negatives": 31
+          }
+        },
+        "emb_clean_only": {
+          "tp": 83,
+          "fp": 28,
+          "fn": 1,
+          "tn": 3,
+          "precision": 0.7477477477477478,
+          "recall": 0.9880952380952381,
+          "f1": 0.8512820512820515,
+          "support": {
+            "positives": 84,
+            "negatives": 31
+          }
+        }
+      },
+      {
+        "emb>=": 0.55,
+        "same_inst_and_emb": {
+          "tp": 82,
+          "fp": 22,
+          "fn": 2,
+          "tn": 9,
+          "precision": 0.7884615384615384,
+          "recall": 0.9761904761904762,
+          "f1": 0.8723404255319148,
+          "support": {
+            "positives": 84,
+            "negatives": 31
+          }
+        },
+        "emb_only": {
+          "tp": 82,
+          "fp": 22,
+          "fn": 2,
+          "tn": 9,
+          "precision": 0.7884615384615384,
+          "recall": 0.9761904761904762,
+          "f1": 0.8723404255319148,
+          "support": {
+            "positives": 84,
+            "negatives": 31
+          }
+        },
+        "emb_clean_only": {
+          "tp": 83,
+          "fp": 25,
+          "fn": 1,
+          "tn": 6,
+          "precision": 0.7685185185185185,
+          "recall": 0.9880952380952381,
+          "f1": 0.8645833333333333,
+          "support": {
+            "positives": 84,
+            "negatives": 31
+          }
+        }
+      },
+      {
+        "emb>=": 0.6,
+        "same_inst_and_emb": {
+          "tp": 80,
+          "fp": 21,
+          "fn": 4,
+          "tn": 10,
+          "precision": 0.7920792079207921,
+          "recall": 0.9523809523809523,
+          "f1": 0.8648648648648649,
+          "support": {
+            "positives": 84,
+            "negatives": 31
+          }
+        },
+        "emb_only": {
+          "tp": 80,
+          "fp": 21,
+          "fn": 4,
+          "tn": 10,
+          "precision": 0.7920792079207921,
+          "recall": 0.9523809523809523,
+          "f1": 0.8648648648648649,
+          "support": {
+            "positives": 84,
+            "negatives": 31
+          }
+        },
+        "emb_clean_only": {
+          "tp": 82,
+          "fp": 17,
+          "fn": 2,
+          "tn": 14,
+          "precision": 0.8282828282828283,
+          "recall": 0.9761904761904762,
+          "f1": 0.8961748633879781,
+          "support": {
+            "positives": 84,
+            "negatives": 31
+          }
+        }
+      },
+      {
+        "emb>=": 0.65,
+        "same_inst_and_emb": {
+          "tp": 79,
+          "fp": 17,
+          "fn": 5,
+          "tn": 14,
+          "precision": 0.8229166666666666,
+          "recall": 0.9404761904761905,
+          "f1": 0.8777777777777778,
+          "support": {
+            "positives": 84,
+            "negatives": 31
+          }
+        },
+        "emb_only": {
+          "tp": 79,
+          "fp": 17,
+          "fn": 5,
+          "tn": 14,
+          "precision": 0.8229166666666666,
+          "recall": 0.9404761904761905,
+          "f1": 0.8777777777777778,
+          "support": {
+            "positives": 84,
+            "negatives": 31
+          }
+        },
+        "emb_clean_only": {
+          "tp": 79,
+          "fp": 16,
+          "fn": 5,
+          "tn": 15,
+          "precision": 0.8315789473684211,
+          "recall": 0.9404761904761905,
+          "f1": 0.88268156424581,
+          "support": {
+            "positives": 84,
+            "negatives": 31
+          }
+        }
+      },
+      {
+        "emb>=": 0.7,
+        "same_inst_and_emb": {
+          "tp": 76,
+          "fp": 13,
+          "fn": 8,
+          "tn": 18,
+          "precision": 0.8539325842696629,
+          "recall": 0.9047619047619048,
+          "f1": 0.8786127167630058,
+          "support": {
+            "positives": 84,
+            "negatives": 31
+          }
+        },
+        "emb_only": {
+          "tp": 76,
+          "fp": 13,
+          "fn": 8,
+          "tn": 18,
+          "precision": 0.8539325842696629,
+          "recall": 0.9047619047619048,
+          "f1": 0.8786127167630058,
+          "support": {
+            "positives": 84,
+            "negatives": 31
+          }
+        },
+        "emb_clean_only": {
+          "tp": 77,
+          "fp": 14,
+          "fn": 7,
+          "tn": 17,
+          "precision": 0.8461538461538461,
+          "recall": 0.9166666666666666,
+          "f1": 0.8799999999999999,
+          "support": {
+            "positives": 84,
+            "negatives": 31
+          }
+        }
+      },
+      {
+        "emb>=": 0.75,
+        "same_inst_and_emb": {
+          "tp": 71,
+          "fp": 11,
+          "fn": 13,
+          "tn": 20,
+          "precision": 0.8658536585365854,
+          "recall": 0.8452380952380952,
+          "f1": 0.8554216867469879,
+          "support": {
+            "positives": 84,
+            "negatives": 31
+          }
+        },
+        "emb_only": {
+          "tp": 71,
+          "fp": 11,
+          "fn": 13,
+          "tn": 20,
+          "precision": 0.8658536585365854,
+          "recall": 0.8452380952380952,
+          "f1": 0.8554216867469879,
+          "support": {
+            "positives": 84,
+            "negatives": 31
+          }
+        },
+        "emb_clean_only": {
+          "tp": 71,
+          "fp": 11,
+          "fn": 13,
+          "tn": 20,
+          "precision": 0.8658536585365854,
+          "recall": 0.8452380952380952,
+          "f1": 0.8554216867469879,
+          "support": {
+            "positives": 84,
+            "negatives": 31
+          }
+        }
+      },
+      {
+        "emb>=": 0.8,
+        "same_inst_and_emb": {
+          "tp": 64,
+          "fp": 7,
+          "fn": 20,
+          "tn": 24,
+          "precision": 0.9014084507042254,
+          "recall": 0.7619047619047619,
+          "f1": 0.8258064516129031,
+          "support": {
+            "positives": 84,
+            "negatives": 31
+          }
+        },
+        "emb_only": {
+          "tp": 64,
+          "fp": 7,
+          "fn": 20,
+          "tn": 24,
+          "precision": 0.9014084507042254,
+          "recall": 0.7619047619047619,
+          "f1": 0.8258064516129031,
+          "support": {
+            "positives": 84,
+            "negatives": 31
+          }
+        },
+        "emb_clean_only": {
+          "tp": 64,
+          "fp": 7,
+          "fn": 20,
+          "tn": 24,
+          "precision": 0.9014084507042254,
+          "recall": 0.7619047619047619,
+          "f1": 0.8258064516129031,
+          "support": {
+            "positives": 84,
+            "negatives": 31
+          }
+        }
+      },
+      {
+        "emb>=": 0.85,
+        "same_inst_and_emb": {
+          "tp": 50,
+          "fp": 4,
+          "fn": 34,
+          "tn": 27,
+          "precision": 0.9259259259259259,
+          "recall": 0.5952380952380952,
+          "f1": 0.7246376811594204,
+          "support": {
+            "positives": 84,
+            "negatives": 31
+          }
+        },
+        "emb_only": {
+          "tp": 50,
+          "fp": 4,
+          "fn": 34,
+          "tn": 27,
+          "precision": 0.9259259259259259,
+          "recall": 0.5952380952380952,
+          "f1": 0.7246376811594204,
+          "support": {
+            "positives": 84,
+            "negatives": 31
+          }
+        },
+        "emb_clean_only": {
+          "tp": 50,
+          "fp": 4,
+          "fn": 34,
+          "tn": 27,
+          "precision": 0.9259259259259259,
+          "recall": 0.5952380952380952,
+          "f1": 0.7246376811594204,
+          "support": {
+            "positives": 84,
+            "negatives": 31
+          }
+        }
+      },
+      {
+        "emb>=": 0.9,
+        "same_inst_and_emb": {
+          "tp": 30,
+          "fp": 2,
+          "fn": 54,
+          "tn": 29,
+          "precision": 0.9375,
+          "recall": 0.35714285714285715,
+          "f1": 0.5172413793103449,
+          "support": {
+            "positives": 84,
+            "negatives": 31
+          }
+        },
+        "emb_only": {
+          "tp": 30,
+          "fp": 2,
+          "fn": 54,
+          "tn": 29,
+          "precision": 0.9375,
+          "recall": 0.35714285714285715,
+          "f1": 0.5172413793103449,
+          "support": {
+            "positives": 84,
+            "negatives": 31
+          }
+        },
+        "emb_clean_only": {
+          "tp": 30,
+          "fp": 2,
+          "fn": 54,
+          "tn": 29,
+          "precision": 0.9375,
+          "recall": 0.35714285714285715,
+          "f1": 0.5172413793103449,
+          "support": {
+            "positives": 84,
+            "negatives": 31
+          }
+        }
+      }
+    ]
+  },
+  "reviewed": {
+    "scope": "同校同名（复核后）",
+    "labelled_pairs": 105,
+    "positives": 74,
+    "negatives": 31,
+    "excluded_unknown": 145,
+    "auc_defined": true,
+    "auc": {
+      "institution_only": 0.5,
+      "embedding_only": 0.8343504795117699,
+      "embedding_clean_only": 0.8430688753269399
+    },
+    "baseline_institution": {
+      "tp": 74,
+      "fp": 31,
+      "fn": 0,
+      "tn": 0,
+      "precision": 0.7047619047619048,
+      "recall": 1.0,
+      "f1": 0.8268156424581006,
+      "support": {
+        "positives": 74,
+        "negatives": 31
+      }
+    },
+    "baseline_embedding": {
+      "confusion": {
+        "tp": 44,
+        "fp": 4,
+        "fn": 30,
+        "tn": 27,
+        "precision": 0.9166666666666666,
+        "recall": 0.5945945945945946,
+        "f1": 0.7213114754098361,
+        "support": {
+          "positives": 74,
+          "negatives": 31
+        }
+      },
+      "threshold": 0.85
+    },
+    "thresholds": [
+      {
+        "emb>=": 0.5,
+        "same_inst_and_emb": {
+          "tp": 74,
+          "fp": 25,
+          "fn": 0,
+          "tn": 6,
+          "precision": 0.7474747474747475,
+          "recall": 1.0,
+          "f1": 0.8554913294797689,
+          "support": {
+            "positives": 74,
+            "negatives": 31
+          }
+        },
+        "emb_only": {
+          "tp": 74,
+          "fp": 25,
+          "fn": 0,
+          "tn": 6,
+          "precision": 0.7474747474747475,
+          "recall": 1.0,
+          "f1": 0.8554913294797689,
+          "support": {
+            "positives": 74,
+            "negatives": 31
+          }
+        },
+        "emb_clean_only": {
+          "tp": 74,
+          "fp": 28,
+          "fn": 0,
+          "tn": 3,
+          "precision": 0.7254901960784313,
+          "recall": 1.0,
+          "f1": 0.8409090909090908,
+          "support": {
+            "positives": 74,
+            "negatives": 31
+          }
+        }
+      },
+      {
+        "emb>=": 0.55,
+        "same_inst_and_emb": {
+          "tp": 73,
+          "fp": 22,
+          "fn": 1,
+          "tn": 9,
+          "precision": 0.7684210526315789,
+          "recall": 0.9864864864864865,
+          "f1": 0.8639053254437868,
+          "support": {
+            "positives": 74,
+            "negatives": 31
+          }
+        },
+        "emb_only": {
+          "tp": 73,
+          "fp": 22,
+          "fn": 1,
+          "tn": 9,
+          "precision": 0.7684210526315789,
+          "recall": 0.9864864864864865,
+          "f1": 0.8639053254437868,
+          "support": {
+            "positives": 74,
+            "negatives": 31
+          }
+        },
+        "emb_clean_only": {
+          "tp": 74,
+          "fp": 25,
+          "fn": 0,
+          "tn": 6,
+          "precision": 0.7474747474747475,
+          "recall": 1.0,
+          "f1": 0.8554913294797689,
+          "support": {
+            "positives": 74,
+            "negatives": 31
+          }
+        }
+      },
+      {
+        "emb>=": 0.6,
+        "same_inst_and_emb": {
+          "tp": 72,
+          "fp": 21,
+          "fn": 2,
+          "tn": 10,
+          "precision": 0.7741935483870968,
+          "recall": 0.972972972972973,
+          "f1": 0.8622754491017964,
+          "support": {
+            "positives": 74,
+            "negatives": 31
+          }
+        },
+        "emb_only": {
+          "tp": 72,
+          "fp": 21,
+          "fn": 2,
+          "tn": 10,
+          "precision": 0.7741935483870968,
+          "recall": 0.972972972972973,
+          "f1": 0.8622754491017964,
+          "support": {
+            "positives": 74,
+            "negatives": 31
+          }
+        },
+        "emb_clean_only": {
+          "tp": 74,
+          "fp": 17,
+          "fn": 0,
+          "tn": 14,
+          "precision": 0.8131868131868132,
+          "recall": 1.0,
+          "f1": 0.896969696969697,
+          "support": {
+            "positives": 74,
+            "negatives": 31
+          }
+        }
+      },
+      {
+        "emb>=": 0.65,
+        "same_inst_and_emb": {
+          "tp": 71,
+          "fp": 17,
+          "fn": 3,
+          "tn": 14,
+          "precision": 0.8068181818181818,
+          "recall": 0.9594594594594594,
+          "f1": 0.8765432098765431,
+          "support": {
+            "positives": 74,
+            "negatives": 31
+          }
+        },
+        "emb_only": {
+          "tp": 71,
+          "fp": 17,
+          "fn": 3,
+          "tn": 14,
+          "precision": 0.8068181818181818,
+          "recall": 0.9594594594594594,
+          "f1": 0.8765432098765431,
+          "support": {
+            "positives": 74,
+            "negatives": 31
+          }
+        },
+        "emb_clean_only": {
+          "tp": 71,
+          "fp": 16,
+          "fn": 3,
+          "tn": 15,
+          "precision": 0.8160919540229885,
+          "recall": 0.9594594594594594,
+          "f1": 0.8819875776397516,
+          "support": {
+            "positives": 74,
+            "negatives": 31
+          }
+        }
+      },
+      {
+        "emb>=": 0.7,
+        "same_inst_and_emb": {
+          "tp": 70,
+          "fp": 13,
+          "fn": 4,
+          "tn": 18,
+          "precision": 0.8433734939759037,
+          "recall": 0.9459459459459459,
+          "f1": 0.8917197452229301,
+          "support": {
+            "positives": 74,
+            "negatives": 31
+          }
+        },
+        "emb_only": {
+          "tp": 70,
+          "fp": 13,
+          "fn": 4,
+          "tn": 18,
+          "precision": 0.8433734939759037,
+          "recall": 0.9459459459459459,
+          "f1": 0.8917197452229301,
+          "support": {
+            "positives": 74,
+            "negatives": 31
+          }
+        },
+        "emb_clean_only": {
+          "tp": 71,
+          "fp": 14,
+          "fn": 3,
+          "tn": 17,
+          "precision": 0.8352941176470589,
+          "recall": 0.9594594594594594,
+          "f1": 0.8930817610062894,
+          "support": {
+            "positives": 74,
+            "negatives": 31
+          }
+        }
+      },
+      {
+        "emb>=": 0.75,
+        "same_inst_and_emb": {
+          "tp": 65,
+          "fp": 11,
+          "fn": 9,
+          "tn": 20,
+          "precision": 0.8552631578947368,
+          "recall": 0.8783783783783784,
+          "f1": 0.8666666666666667,
+          "support": {
+            "positives": 74,
+            "negatives": 31
+          }
+        },
+        "emb_only": {
+          "tp": 65,
+          "fp": 11,
+          "fn": 9,
+          "tn": 20,
+          "precision": 0.8552631578947368,
+          "recall": 0.8783783783783784,
+          "f1": 0.8666666666666667,
+          "support": {
+            "positives": 74,
+            "negatives": 31
+          }
+        },
+        "emb_clean_only": {
+          "tp": 65,
+          "fp": 11,
+          "fn": 9,
+          "tn": 20,
+          "precision": 0.8552631578947368,
+          "recall": 0.8783783783783784,
+          "f1": 0.8666666666666667,
+          "support": {
+            "positives": 74,
+            "negatives": 31
+          }
+        }
+      },
+      {
+        "emb>=": 0.8,
+        "same_inst_and_emb": {
+          "tp": 58,
+          "fp": 7,
+          "fn": 16,
+          "tn": 24,
+          "precision": 0.8923076923076924,
+          "recall": 0.7837837837837838,
+          "f1": 0.8345323741007195,
+          "support": {
+            "positives": 74,
+            "negatives": 31
+          }
+        },
+        "emb_only": {
+          "tp": 58,
+          "fp": 7,
+          "fn": 16,
+          "tn": 24,
+          "precision": 0.8923076923076924,
+          "recall": 0.7837837837837838,
+          "f1": 0.8345323741007195,
+          "support": {
+            "positives": 74,
+            "negatives": 31
+          }
+        },
+        "emb_clean_only": {
+          "tp": 58,
+          "fp": 7,
+          "fn": 16,
+          "tn": 24,
+          "precision": 0.8923076923076924,
+          "recall": 0.7837837837837838,
+          "f1": 0.8345323741007195,
+          "support": {
+            "positives": 74,
+            "negatives": 31
+          }
+        }
+      },
+      {
+        "emb>=": 0.85,
+        "same_inst_and_emb": {
+          "tp": 44,
+          "fp": 4,
+          "fn": 30,
+          "tn": 27,
+          "precision": 0.9166666666666666,
+          "recall": 0.5945945945945946,
+          "f1": 0.7213114754098361,
+          "support": {
+            "positives": 74,
+            "negatives": 31
+          }
+        },
+        "emb_only": {
+          "tp": 44,
+          "fp": 4,
+          "fn": 30,
+          "tn": 27,
+          "precision": 0.9166666666666666,
+          "recall": 0.5945945945945946,
+          "f1": 0.7213114754098361,
+          "support": {
+            "positives": 74,
+            "negatives": 31
+          }
+        },
+        "emb_clean_only": {
+          "tp": 44,
+          "fp": 4,
+          "fn": 30,
+          "tn": 27,
+          "precision": 0.9166666666666666,
+          "recall": 0.5945945945945946,
+          "f1": 0.7213114754098361,
+          "support": {
+            "positives": 74,
+            "negatives": 31
+          }
+        }
+      },
+      {
+        "emb>=": 0.9,
+        "same_inst_and_emb": {
+          "tp": 25,
+          "fp": 2,
+          "fn": 49,
+          "tn": 29,
+          "precision": 0.9259259259259259,
+          "recall": 0.33783783783783783,
+          "f1": 0.49504950495049505,
+          "support": {
+            "positives": 74,
+            "negatives": 31
+          }
+        },
+        "emb_only": {
+          "tp": 25,
+          "fp": 2,
+          "fn": 49,
+          "tn": 29,
+          "precision": 0.9259259259259259,
+          "recall": 0.33783783783783783,
+          "f1": 0.49504950495049505,
+          "support": {
+            "positives": 74,
+            "negatives": 31
+          }
+        },
+        "emb_clean_only": {
+          "tp": 25,
+          "fp": 2,
+          "fn": 49,
+          "tn": 29,
+          "precision": 0.9259259259259259,
+          "recall": 0.33783783783783783,
+          "f1": 0.49504950495049505,
+          "support": {
+            "positives": 74,
+            "negatives": 31
+          }
+        }
+      }
+    ]
+  },
+  "supplementary": {
+    "scope": "跨校同名（简单负例，仅补充）",
+    "labelled_pairs": 932,
+    "positives": 0,
+    "negatives": 932,
+    "excluded_unknown": 1382,
+    "auc_defined": false,
+    "auc": {
+      "institution_only": null,
+      "embedding_only": null,
+      "embedding_clean_only": null
+    },
+    "baseline_institution": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 932,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": {
+        "positives": 0,
+        "negatives": 932
+      }
+    },
+    "baseline_embedding": {
+      "confusion": {
+        "tp": 0,
+        "fp": 89,
+        "fn": 0,
+        "tn": 843,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": {
+          "positives": 0,
+          "negatives": 932
+        }
+      },
+      "threshold": 0.85
+    },
+    "thresholds": [
+      {
+        "emb>=": 0.5,
+        "same_inst_and_emb": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 932,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": {
+            "positives": 0,
+            "negatives": 932
+          }
+        },
+        "emb_only": {
+          "tp": 0,
+          "fp": 846,
+          "fn": 0,
+          "tn": 86,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": {
+            "positives": 0,
+            "negatives": 932
+          }
+        },
+        "emb_clean_only": {
+          "tp": 0,
+          "fp": 848,
+          "fn": 0,
+          "tn": 84,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": {
+            "positives": 0,
+            "negatives": 932
+          }
+        }
+      },
+      {
+        "emb>=": 0.55,
+        "same_inst_and_emb": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 932,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": {
+            "positives": 0,
+            "negatives": 932
+          }
+        },
+        "emb_only": {
+          "tp": 0,
+          "fp": 663,
+          "fn": 0,
+          "tn": 269,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": {
+            "positives": 0,
+            "negatives": 932
+          }
+        },
+        "emb_clean_only": {
+          "tp": 0,
+          "fp": 659,
+          "fn": 0,
+          "tn": 273,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": {
+            "positives": 0,
+            "negatives": 932
+          }
+        }
+      },
+      {
+        "emb>=": 0.6,
+        "same_inst_and_emb": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 932,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": {
+            "positives": 0,
+            "negatives": 932
+          }
+        },
+        "emb_only": {
+          "tp": 0,
+          "fp": 492,
+          "fn": 0,
+          "tn": 440,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": {
+            "positives": 0,
+            "negatives": 932
+          }
+        },
+        "emb_clean_only": {
+          "tp": 0,
+          "fp": 440,
+          "fn": 0,
+          "tn": 492,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": {
+            "positives": 0,
+            "negatives": 932
+          }
+        }
+      },
+      {
+        "emb>=": 0.65,
+        "same_inst_and_emb": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 932,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": {
+            "positives": 0,
+            "negatives": 932
+          }
+        },
+        "emb_only": {
+          "tp": 0,
+          "fp": 346,
+          "fn": 0,
+          "tn": 586,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": {
+            "positives": 0,
+            "negatives": 932
+          }
+        },
+        "emb_clean_only": {
+          "tp": 0,
+          "fp": 329,
+          "fn": 0,
+          "tn": 603,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": {
+            "positives": 0,
+            "negatives": 932
+          }
+        }
+      },
+      {
+        "emb>=": 0.7,
+        "same_inst_and_emb": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 932,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": {
+            "positives": 0,
+            "negatives": 932
+          }
+        },
+        "emb_only": {
+          "tp": 0,
+          "fp": 257,
+          "fn": 0,
+          "tn": 675,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": {
+            "positives": 0,
+            "negatives": 932
+          }
+        },
+        "emb_clean_only": {
+          "tp": 0,
+          "fp": 250,
+          "fn": 0,
+          "tn": 682,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": {
+            "positives": 0,
+            "negatives": 932
+          }
+        }
+      },
+      {
+        "emb>=": 0.75,
+        "same_inst_and_emb": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 932,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": {
+            "positives": 0,
+            "negatives": 932
+          }
+        },
+        "emb_only": {
+          "tp": 0,
+          "fp": 197,
+          "fn": 0,
+          "tn": 735,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": {
+            "positives": 0,
+            "negatives": 932
+          }
+        },
+        "emb_clean_only": {
+          "tp": 0,
+          "fp": 182,
+          "fn": 0,
+          "tn": 750,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": {
+            "positives": 0,
+            "negatives": 932
+          }
+        }
+      },
+      {
+        "emb>=": 0.8,
+        "same_inst_and_emb": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 932,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": {
+            "positives": 0,
+            "negatives": 932
+          }
+        },
+        "emb_only": {
+          "tp": 0,
+          "fp": 134,
+          "fn": 0,
+          "tn": 798,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": {
+            "positives": 0,
+            "negatives": 932
+          }
+        },
+        "emb_clean_only": {
+          "tp": 0,
+          "fp": 90,
+          "fn": 0,
+          "tn": 842,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": {
+            "positives": 0,
+            "negatives": 932
+          }
+        }
+      },
+      {
+        "emb>=": 0.85,
+        "same_inst_and_emb": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 932,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": {
+            "positives": 0,
+            "negatives": 932
+          }
+        },
+        "emb_only": {
+          "tp": 0,
+          "fp": 89,
+          "fn": 0,
+          "tn": 843,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": {
+            "positives": 0,
+            "negatives": 932
+          }
+        },
+        "emb_clean_only": {
+          "tp": 0,
+          "fp": 34,
+          "fn": 0,
+          "tn": 898,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": {
+            "positives": 0,
+            "negatives": 932
+          }
+        }
+      },
+      {
+        "emb>=": 0.9,
+        "same_inst_and_emb": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 932,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": {
+            "positives": 0,
+            "negatives": 932
+          }
+        },
+        "emb_only": {
+          "tp": 0,
+          "fp": 65,
+          "fn": 0,
+          "tn": 867,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": {
+            "positives": 0,
+            "negatives": 932
+          }
+        },
+        "emb_clean_only": {
+          "tp": 0,
+          "fp": 15,
+          "fn": 0,
+          "tn": 917,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": {
+            "positives": 0,
+            "negatives": 932
+          }
+        }
+      }
+    ]
+  },
+  "combined": {
+    "scope": "全部同名组合（含跨校）",
+    "labelled_pairs": 1047,
+    "positives": 84,
+    "negatives": 963,
+    "excluded_unknown": 1517,
+    "auc_defined": true,
+    "auc": {
+      "institution_only": 0.9839044652128764,
+      "embedding_only": 0.8657098353360035,
+      "embedding_clean_only": 0.9111531424615537
+    },
+    "baseline_institution": {
+      "tp": 84,
+      "fp": 31,
+      "fn": 0,
+      "tn": 932,
+      "precision": 0.7304347826086957,
+      "recall": 1.0,
+      "f1": 0.8442211055276382,
+      "support": {
+        "positives": 84,
+        "negatives": 963
+      }
+    },
+    "baseline_embedding": {
+      "confusion": {
+        "tp": 50,
+        "fp": 93,
+        "fn": 34,
+        "tn": 870,
+        "precision": 0.34965034965034963,
+        "recall": 0.5952380952380952,
+        "f1": 0.44052863436123346,
+        "support": {
+          "positives": 84,
+          "negatives": 963
+        }
+      },
+      "threshold": 0.85
+    },
+    "thresholds": [
+      {
+        "emb>=": 0.5,
+        "same_inst_and_emb": {
+          "tp": 83,
+          "fp": 25,
+          "fn": 1,
+          "tn": 938,
+          "precision": 0.7685185185185185,
+          "recall": 0.9880952380952381,
+          "f1": 0.8645833333333333,
+          "support": {
+            "positives": 84,
+            "negatives": 963
+          }
+        },
+        "emb_only": {
+          "tp": 83,
+          "fp": 871,
+          "fn": 1,
+          "tn": 92,
+          "precision": 0.0870020964360587,
+          "recall": 0.9880952380952381,
+          "f1": 0.1599229287090559,
+          "support": {
+            "positives": 84,
+            "negatives": 963
+          }
+        },
+        "emb_clean_only": {
+          "tp": 83,
+          "fp": 876,
+          "fn": 1,
+          "tn": 87,
+          "precision": 0.08654848800834203,
+          "recall": 0.9880952380952381,
+          "f1": 0.1591562799616491,
+          "support": {
+            "positives": 84,
+            "negatives": 963
+          }
+        }
+      },
+      {
+        "emb>=": 0.55,
+        "same_inst_and_emb": {
+          "tp": 82,
+          "fp": 22,
+          "fn": 2,
+          "tn": 941,
+          "precision": 0.7884615384615384,
+          "recall": 0.9761904761904762,
+          "f1": 0.8723404255319148,
+          "support": {
+            "positives": 84,
+            "negatives": 963
+          }
+        },
+        "emb_only": {
+          "tp": 82,
+          "fp": 685,
+          "fn": 2,
+          "tn": 278,
+          "precision": 0.10691003911342895,
+          "recall": 0.9761904761904762,
+          "f1": 0.1927144535840188,
+          "support": {
+            "positives": 84,
+            "negatives": 963
+          }
+        },
+        "emb_clean_only": {
+          "tp": 83,
+          "fp": 684,
+          "fn": 1,
+          "tn": 279,
+          "precision": 0.10821382007822686,
+          "recall": 0.9880952380952381,
+          "f1": 0.19506462984723855,
+          "support": {
+            "positives": 84,
+            "negatives": 963
+          }
+        }
+      },
+      {
+        "emb>=": 0.6,
+        "same_inst_and_emb": {
+          "tp": 80,
+          "fp": 21,
+          "fn": 4,
+          "tn": 942,
+          "precision": 0.7920792079207921,
+          "recall": 0.9523809523809523,
+          "f1": 0.8648648648648649,
+          "support": {
+            "positives": 84,
+            "negatives": 963
+          }
+        },
+        "emb_only": {
+          "tp": 80,
+          "fp": 513,
+          "fn": 4,
+          "tn": 450,
+          "precision": 0.13490725126475547,
+          "recall": 0.9523809523809523,
+          "f1": 0.2363367799113737,
+          "support": {
+            "positives": 84,
+            "negatives": 963
+          }
+        },
+        "emb_clean_only": {
+          "tp": 82,
+          "fp": 457,
+          "fn": 2,
+          "tn": 506,
+          "precision": 0.15213358070500926,
+          "recall": 0.9761904761904762,
+          "f1": 0.26324237560192615,
+          "support": {
+            "positives": 84,
+            "negatives": 963
+          }
+        }
+      },
+      {
+        "emb>=": 0.65,
+        "same_inst_and_emb": {
+          "tp": 79,
+          "fp": 17,
+          "fn": 5,
+          "tn": 946,
+          "precision": 0.8229166666666666,
+          "recall": 0.9404761904761905,
+          "f1": 0.8777777777777778,
+          "support": {
+            "positives": 84,
+            "negatives": 963
+          }
+        },
+        "emb_only": {
+          "tp": 79,
+          "fp": 363,
+          "fn": 5,
+          "tn": 600,
+          "precision": 0.17873303167420815,
+          "recall": 0.9404761904761905,
+          "f1": 0.30038022813688214,
+          "support": {
+            "positives": 84,
+            "negatives": 963
+          }
+        },
+        "emb_clean_only": {
+          "tp": 79,
+          "fp": 345,
+          "fn": 5,
+          "tn": 618,
+          "precision": 0.18632075471698112,
+          "recall": 0.9404761904761905,
+          "f1": 0.31102362204724404,
+          "support": {
+            "positives": 84,
+            "negatives": 963
+          }
+        }
+      },
+      {
+        "emb>=": 0.7,
+        "same_inst_and_emb": {
+          "tp": 76,
+          "fp": 13,
+          "fn": 8,
+          "tn": 950,
+          "precision": 0.8539325842696629,
+          "recall": 0.9047619047619048,
+          "f1": 0.8786127167630058,
+          "support": {
+            "positives": 84,
+            "negatives": 963
+          }
+        },
+        "emb_only": {
+          "tp": 76,
+          "fp": 270,
+          "fn": 8,
+          "tn": 693,
+          "precision": 0.21965317919075145,
+          "recall": 0.9047619047619048,
+          "f1": 0.3534883720930232,
+          "support": {
+            "positives": 84,
+            "negatives": 963
+          }
+        },
+        "emb_clean_only": {
+          "tp": 77,
+          "fp": 264,
+          "fn": 7,
+          "tn": 699,
+          "precision": 0.22580645161290322,
+          "recall": 0.9166666666666666,
+          "f1": 0.3623529411764706,
+          "support": {
+            "positives": 84,
+            "negatives": 963
+          }
+        }
+      },
+      {
+        "emb>=": 0.75,
+        "same_inst_and_emb": {
+          "tp": 71,
+          "fp": 11,
+          "fn": 13,
+          "tn": 952,
+          "precision": 0.8658536585365854,
+          "recall": 0.8452380952380952,
+          "f1": 0.8554216867469879,
+          "support": {
+            "positives": 84,
+            "negatives": 963
+          }
+        },
+        "emb_only": {
+          "tp": 71,
+          "fp": 208,
+          "fn": 13,
+          "tn": 755,
+          "precision": 0.25448028673835127,
+          "recall": 0.8452380952380952,
+          "f1": 0.39118457300275483,
+          "support": {
+            "positives": 84,
+            "negatives": 963
+          }
+        },
+        "emb_clean_only": {
+          "tp": 71,
+          "fp": 193,
+          "fn": 13,
+          "tn": 770,
+          "precision": 0.2689393939393939,
+          "recall": 0.8452380952380952,
+          "f1": 0.40804597701149425,
+          "support": {
+            "positives": 84,
+            "negatives": 963
+          }
+        }
+      },
+      {
+        "emb>=": 0.8,
+        "same_inst_and_emb": {
+          "tp": 64,
+          "fp": 7,
+          "fn": 20,
+          "tn": 956,
+          "precision": 0.9014084507042254,
+          "recall": 0.7619047619047619,
+          "f1": 0.8258064516129031,
+          "support": {
+            "positives": 84,
+            "negatives": 963
+          }
+        },
+        "emb_only": {
+          "tp": 64,
+          "fp": 141,
+          "fn": 20,
+          "tn": 822,
+          "precision": 0.3121951219512195,
+          "recall": 0.7619047619047619,
+          "f1": 0.4429065743944637,
+          "support": {
+            "positives": 84,
+            "negatives": 963
+          }
+        },
+        "emb_clean_only": {
+          "tp": 64,
+          "fp": 97,
+          "fn": 20,
+          "tn": 866,
+          "precision": 0.39751552795031053,
+          "recall": 0.7619047619047619,
+          "f1": 0.5224489795918368,
+          "support": {
+            "positives": 84,
+            "negatives": 963
+          }
+        }
+      },
+      {
+        "emb>=": 0.85,
+        "same_inst_and_emb": {
+          "tp": 50,
+          "fp": 4,
+          "fn": 34,
+          "tn": 959,
+          "precision": 0.9259259259259259,
+          "recall": 0.5952380952380952,
+          "f1": 0.7246376811594204,
+          "support": {
+            "positives": 84,
+            "negatives": 963
+          }
+        },
+        "emb_only": {
+          "tp": 50,
+          "fp": 93,
+          "fn": 34,
+          "tn": 870,
+          "precision": 0.34965034965034963,
+          "recall": 0.5952380952380952,
+          "f1": 0.44052863436123346,
+          "support": {
+            "positives": 84,
+            "negatives": 963
+          }
+        },
+        "emb_clean_only": {
+          "tp": 50,
+          "fp": 38,
+          "fn": 34,
+          "tn": 925,
+          "precision": 0.5681818181818182,
+          "recall": 0.5952380952380952,
+          "f1": 0.5813953488372093,
+          "support": {
+            "positives": 84,
+            "negatives": 963
+          }
+        }
+      },
+      {
+        "emb>=": 0.9,
+        "same_inst_and_emb": {
+          "tp": 30,
+          "fp": 2,
+          "fn": 54,
+          "tn": 961,
+          "precision": 0.9375,
+          "recall": 0.35714285714285715,
+          "f1": 0.5172413793103449,
+          "support": {
+            "positives": 84,
+            "negatives": 963
+          }
+        },
+        "emb_only": {
+          "tp": 30,
+          "fp": 67,
+          "fn": 54,
+          "tn": 896,
+          "precision": 0.30927835051546393,
+          "recall": 0.35714285714285715,
+          "f1": 0.3314917127071823,
+          "support": {
+            "positives": 84,
+            "negatives": 963
+          }
+        },
+        "emb_clean_only": {
+          "tp": 30,
+          "fp": 17,
+          "fn": 54,
+          "tn": 946,
+          "precision": 0.6382978723404256,
+          "recall": 0.35714285714285715,
+          "f1": 0.4580152671755725,
+          "support": {
+            "positives": 84,
+            "negatives": 963
+          }
+        }
+      }
+    ]
+  },
+  "gold_agreement": {
+    "reviewed_pairs": 140,
+    "labelled_candidates": 115,
+    "agreed": 105,
+    "agreement": 0.9130434782608695,
+    "by_auto_label": {
+      "same_person": {
+        "auto": 84,
+        "agreed": 74,
+        "agreement": 0.8809523809523809
+      },
+      "different_person": {
+        "auto": 31,
+        "agreed": 31,
+        "agreement": 1.0
+      }
+    },
+    "verdict_distribution": {
+      "different_person": 31,
+      "unknown": 35,
+      "same_person": 74
+    }
+  },
+  "risk_cases": [
+    {
+      "name": "王晶",
+      "institution": "西安交通大学",
+      "emb": 0.9899,
+      "emb_clean": 0.9899,
+      "label": "different_person",
+      "strength": "medium",
+      "reason": "distinct_pages_unit_conflict",
+      "same_institution": true,
+      "a": {
+        "id": "official-3b34bbf9879d19994308",
+        "dept": "机器人与智能系统研究所",
+        "discipline": "0802 机械工程",
+        "home": "https://gr.xjtu.edu.cn/en/web/wangpele666",
+        "page": "personal"
+      },
+      "b": {
+        "id": "official-fe5e726e820bcbbde6a9",
+        "dept": "先进制造技术研究所",
+        "discipline": "0802 机械工程",
+        "home": "https://mec.xjtu.edu.cn/info/1261/11798.htm",
+        "page": "personal"
+      },
+      "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=True）"
+    },
+    {
+      "name": "毛红威",
+      "institution": "西安交通大学",
+      "emb": 0.9815,
+      "emb_clean": 0.9815,
+      "label": "unknown",
+      "strength": "none",
+      "reason": "listing_page",
+      "same_institution": true,
+      "a": {
+        "id": "official-03e0355f5d74d900bd51",
+        "dept": "航空发动机研究所",
+        "discipline": "0802 机械工程",
+        "home": "https://mec.xjtu.edu.cn/szdw/jsml/hkfdjyjs.htm",
+        "page": "roster"
+      },
+      "b": {
+        "id": "official-59d47499cf897a23be11",
+        "dept": "航天制造与信息工程研究所",
+        "discipline": "0802 机械工程",
+        "home": "https://mec.xjtu.edu.cn/szdw/jsml/htzzyxxgcyjs.htm",
+        "page": "roster"
+      },
+      "note": "证据不足以判定同人/异人"
+    },
+    {
+      "name": "马壮",
+      "institution": "西安交通大学",
+      "emb": 0.9805,
+      "emb_clean": 0.9805,
+      "label": "unknown",
+      "strength": "none",
+      "reason": "listing_page",
+      "same_institution": true,
+      "a": {
+        "id": "official-74f4c1bda873ae39bb80",
+        "dept": "航空发动机研究所",
+        "discipline": "0802 机械工程",
+        "home": "https://mec.xjtu.edu.cn/szdw/jsml/hkfdjyjs.htm",
+        "page": "roster"
+      },
+      "b": {
+        "id": "official-54b0ad45b0ba4a4b096d",
+        "dept": "航天制造与信息工程研究所",
+        "discipline": "0802 机械工程",
+        "home": "https://mec.xjtu.edu.cn/szdw/jsml/htzzyxxgcyjs.htm",
+        "page": "roster"
+      },
+      "note": "证据不足以判定同人/异人"
+    },
+    {
+      "name": "李敏",
+      "institution": "西安交通大学",
+      "emb": 0.9799,
+      "emb_clean": 0.9799,
+      "label": "unknown",
+      "strength": "none",
+      "reason": "listing_page",
+      "same_institution": true,
+      "a": {
+        "id": "official-c83bcd0b74db1ebb565a",
+        "dept": "医工交叉研究所",
+        "discipline": "0802 机械工程",
+        "home": "https://mec.xjtu.edu.cn/szdw/jsml/ygjcyjs.htm",
+        "page": "roster"
+      },
+      "b": {
+        "id": "official-c8e02359df785288b833",
+        "dept": "装备智能诊断与控制研究所",
+        "discipline": "0802 机械工程",
+        "home": "https://mec.xjtu.edu.cn/szdw/jsml/zbznzdykzyjs.htm",
+        "page": "roster"
+      },
+      "note": "证据不足以判定同人/异人"
+    },
+    {
+      "name": "李兵",
+      "institution": "西安交通大学",
+      "emb": 0.9742,
+      "emb_clean": 0.9742,
+      "label": "different_person",
+      "strength": "medium",
+      "reason": "distinct_pages_unit_conflict",
+      "same_institution": true,
+      "a": {
+        "id": "official-2540b83e76aaf1007ca9",
+        "dept": "航空发动机研究所",
+        "discipline": "0802 机械工程",
+        "home": "https://gr.xjtu.edu.cn/en/web/bli",
+        "page": "personal"
+      },
+      "b": {
+        "id": "official-942ad3dc480a03cfc511",
+        "dept": "精密工程研究所",
+        "discipline": "0802 机械工程",
+        "home": "https://gr.xjtu.edu.cn/en/web/lb",
+        "page": "personal"
+      },
+      "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=True）"
+    },
+    {
+      "name": "叶智慧",
+      "institution": "中国石油大学（北京）",
+      "emb": 0.9522,
+      "emb_clean": 0.9522,
+      "label": "unknown",
+      "strength": "none",
+      "reason": "missing_url",
+      "same_institution": true,
+      "a": {
+        "id": "official-930167f6fa392ea2ddb0",
+        "dept": "安全与海洋工程学院",
+        "discipline": "0820 石油与天然气工程",
+        "home": "",
+        "page": "none"
+      },
+      "b": {
+        "id": "official-ae8f82159dab7c7758b6",
+        "dept": "石油工程学院",
+        "discipline": "0820 石油与天然气工程",
+        "home": "https://faculty.cup.edu.cn/yezhihui/",
+        "page": "personal"
+      },
+      "note": "证据不足以判定同人/异人"
+    },
+    {
+      "name": "董立河",
+      "institution": "北京师范大学",
+      "emb": 0.9165,
+      "emb_clean": 0.9165,
+      "label": "unknown",
+      "strength": "none",
+      "reason": "missing_url",
+      "same_institution": true,
+      "a": {
+        "id": "official-4f7e2d4618cb2aa8bc1b",
+        "dept": "历史学院",
+        "discipline": "0603 世界史",
+        "home": "https://history.bnu.edu.cn/szdw/f7242bd4b6ff45078aec56fca7cc9070.htm",
+        "page": "personal"
+      },
+      "b": {
+        "id": "official-396e56195e89f434289a",
+        "dept": "文理学院",
+        "discipline": "0603 世界史",
+        "home": "",
+        "page": "none"
+      },
+      "note": "证据不足以判定同人/异人"
+    },
+    {
+      "name": "杨晓光",
+      "institution": "中国科学院大学",
+      "emb": 0.895,
+      "emb_clean": 0.895,
+      "label": "unknown",
+      "strength": "none",
+      "reason": "missing_url",
+      "same_institution": true,
+      "a": {
+        "id": "official-b5e2671c5e0d68d2211c",
+        "dept": "数学与系统科学研究院",
+        "discipline": "0202 应用经济学",
+        "home": "",
+        "page": "none"
+      },
+      "b": {
+        "id": "official-c01de1831521651d863b",
+        "dept": "经济与管理学院",
+        "discipline": "0202 应用经济学",
+        "home": "",
+        "page": "none"
+      },
+      "note": "证据不足以判定同人/异人"
+    },
+    {
+      "name": "汪寿阳",
+      "institution": "中国科学院大学",
+      "emb": 0.895,
+      "emb_clean": 0.895,
+      "label": "unknown",
+      "strength": "none",
+      "reason": "missing_url",
+      "same_institution": true,
+      "a": {
+        "id": "official-6fe58ea0ecc41384b65e",
+        "dept": "数学与系统科学研究院",
+        "discipline": "0202 应用经济学",
+        "home": "",
+        "page": "none"
+      },
+      "b": {
+        "id": "official-9afeed80ab4f03eff0fb",
+        "dept": "经济与管理学院",
+        "discipline": "0202 应用经济学",
+        "home": "",
+        "page": "none"
+      },
+      "note": "证据不足以判定同人/异人"
+    },
+    {
+      "name": "洪永淼",
+      "institution": "中国科学院大学",
+      "emb": 0.895,
+      "emb_clean": 0.895,
+      "label": "unknown",
+      "strength": "none",
+      "reason": "missing_url",
+      "same_institution": true,
+      "a": {
+        "id": "official-f77229bc7d2f4b2da6be",
+        "dept": "数学与系统科学研究院",
+        "discipline": "0202 应用经济学",
+        "home": "",
+        "page": "none"
+      },
+      "b": {
+        "id": "official-42b76354d5bc5e678e60",
+        "dept": "经济与管理学院",
+        "discipline": "0202 应用经济学",
+        "home": "",
+        "page": "none"
+      },
+      "note": "证据不足以判定同人/异人"
+    },
+    {
+      "name": "杨志峰",
+      "institution": "北京师范大学",
+      "emb": 0.8935,
+      "emb_clean": 0.8935,
+      "label": "unknown",
+      "strength": "none",
+      "reason": "missing_url",
+      "same_institution": true,
+      "a": {
+        "id": "official-2404e0cd70c7b0ee3760",
+        "dept": "环境学院",
+        "discipline": "0830 环境科学与工程",
+        "home": "",
+        "page": "none"
+      },
+      "b": {
+        "id": "official-263a5ba84291d778a685",
+        "dept": "未来技术学院",
+        "discipline": "0830 环境科学与工程",
+        "home": "",
+        "page": "none"
+      },
+      "note": "证据不足以判定同人/异人"
+    },
+    {
+      "name": "王博",
+      "institution": "华中科技大学",
+      "emb": 0.8883,
+      "emb_clean": 0.8883,
+      "label": "different_person",
+      "strength": "medium",
+      "reason": "distinct_pages_unit_conflict",
+      "same_institution": true,
+      "a": {
+        "id": "official-bf81b58241df1b4b49a7",
+        "dept": "智能系统与系统工程系",
+        "discipline": "0811 控制科学与工程",
+        "home": "http://faculty.hust.edu.cn/WANGBo/zh_CN/index.htm",
+        "page": "personal"
+      },
+      "b": {
+        "id": "official-023e161e84e29b9b8e68",
+        "dept": "图像识别与智能科学系",
+        "discipline": "0811 控制科学与工程",
+        "home": "http://faculty.hust.edu.cn/bowang/zh_CN/more/2538470/jsjjgd/index.htm",
+        "page": "personal"
+      },
+      "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=True）"
+    }
+  ],
+  "risk_total": 124,
+  "legacy": {
+    "pairs": 690,
+    "positives": 80,
+    "negatives": 610,
+    "auc": {
+      "institution_only": 0.9639344262295082,
+      "embedding_only": 0.857827868852459
+    },
+    "baseline_institution": {
+      "precision": 0.6451612903225806,
+      "recall": 1.0,
+      "f1": 0.7843137254901961,
+      "tp": 80,
+      "fp": 44,
+      "fn": 0,
+      "tn": 566,
+      "support": {
+        "positives": 80,
+        "negatives": 610
+      }
+    },
+    "thresholds": [
+      {
+        "emb>=": 0.5,
+        "same_inst_and_emb": {
+          "precision": 0.6810344827586207,
+          "recall": 0.9875,
+          "f1": 0.8061224489795918,
+          "tp": 79,
+          "fp": 37,
+          "fn": 1,
+          "tn": 573,
+          "support": {
+            "positives": 80,
+            "negatives": 610
+          }
+        },
+        "emb_only": {
+          "precision": 0.12559618441971382,
+          "recall": 0.9875,
+          "f1": 0.2228490832157969,
+          "tp": 79,
+          "fp": 550,
+          "fn": 1,
+          "tn": 60,
+          "support": {
+            "positives": 80,
+            "negatives": 610
+          }
+        }
+      },
+      {
+        "emb>=": 0.6,
+        "same_inst_and_emb": {
+          "precision": 0.7307692307692307,
+          "recall": 0.95,
+          "f1": 0.8260869565217392,
+          "tp": 76,
+          "fp": 28,
+          "fn": 4,
+          "tn": 582,
+          "support": {
+            "positives": 80,
+            "negatives": 610
+          }
+        },
+        "emb_only": {
+          "precision": 0.18052256532066507,
+          "recall": 0.95,
+          "f1": 0.30339321357285426,
+          "tp": 76,
+          "fp": 345,
+          "fn": 4,
+          "tn": 265,
+          "support": {
+            "positives": 80,
+            "negatives": 610
+          }
+        }
+      },
+      {
+        "emb>=": 0.7,
+        "same_inst_and_emb": {
+          "precision": 0.8674698795180723,
+          "recall": 0.9,
+          "f1": 0.8834355828220859,
+          "tp": 72,
+          "fp": 11,
+          "fn": 8,
+          "tn": 599,
+          "support": {
+            "positives": 80,
+            "negatives": 610
+          }
+        },
+        "emb_only": {
+          "precision": 0.27169811320754716,
+          "recall": 0.9,
+          "f1": 0.41739130434782606,
+          "tp": 72,
+          "fp": 193,
+          "fn": 8,
+          "tn": 417,
+          "support": {
+            "positives": 80,
+            "negatives": 610
+          }
+        }
+      },
+      {
+        "emb>=": 0.8,
+        "same_inst_and_emb": {
+          "precision": 0.8955223880597015,
+          "recall": 0.75,
+          "f1": 0.816326530612245,
+          "tp": 60,
+          "fp": 7,
+          "fn": 20,
+          "tn": 603,
+          "support": {
+            "positives": 80,
+            "negatives": 610
+          }
+        },
+        "emb_only": {
+          "precision": 0.4,
+          "recall": 0.75,
+          "f1": 0.5217391304347827,
+          "tp": 60,
+          "fp": 90,
+          "fn": 20,
+          "tn": 520,
+          "support": {
+            "positives": 80,
+            "negatives": 610
+          }
+        }
+      },
+      {
+        "emb>=": 0.9,
+        "same_inst_and_emb": {
+          "precision": 0.8709677419354839,
+          "recall": 0.3375,
+          "f1": 0.48648648648648646,
+          "tp": 27,
+          "fp": 4,
+          "fn": 53,
+          "tn": 606,
+          "support": {
+            "positives": 80,
+            "negatives": 610
+          }
+        },
+        "emb_only": {
+          "precision": 0.38028169014084506,
+          "recall": 0.3375,
+          "f1": 0.35761589403973504,
+          "tp": 27,
+          "fp": 44,
+          "fn": 53,
+          "tn": 566,
+          "support": {
+            "positives": 80,
+            "negatives": 610
+          }
+        }
+      }
+    ],
+    "skipped_missing_home_groups": 578
+  },
+  "comparison": {
+    "legacy": {
+      "protocol": "两两不同 URL ⇒ 异人（无 unknown 档）",
+      "pairs": 690,
+      "positives": 80,
+      "negatives": 610,
+      "same_institution_pairs": 124,
+      "cross_institution_pairs": 566,
+      "auc_institution": 0.9639344262295082,
+      "auc_embedding": 0.857827868852459,
+      "baseline_institution": {
+        "precision": 0.6451612903225806,
+        "recall": 1.0,
+        "f1": 0.7843137254901961,
+        "tp": 80,
+        "fp": 44,
+        "fn": 0,
+        "tn": 566,
+        "support": {
+          "positives": 80,
+          "negatives": 610
+        }
+      }
+    },
+    "evidence": {
+      "protocol": "专属页/名录页分级 + unknown 剔除",
+      "pairs_total": 2564,
+      "labelled_same_institution": 115,
+      "labelled_cross_institution": 932,
+      "excluded_unknown": 135,
+      "auc_institution": 0.5,
+      "auc_embedding": 0.8218125960061444,
+      "baseline_institution": {
+        "tp": 84,
+        "fp": 31,
+        "fn": 0,
+        "tn": 0,
+        "precision": 0.7304347826086957,
+        "recall": 1.0,
+        "f1": 0.8442211055276382,
+        "support": {
+          "positives": 84,
+          "negatives": 31
+        }
+      }
+    },
+    "verdict": {
+      "legacy_negative_share_cross_institution": 0.9278688524590164,
+      "why_overestimated": "旧协议的负例绝大多数是跨校同名组合——不同学校几乎必然不是同一个人。这类简单负例让 AUC 看起来很高，但它衡量的是「能不能把两所学校分开」，不是本项目真正要回答的「同校同名是不是同一人」。在同校层内，机构特征恒为 True，AUC 直接塌到 0.5。"
+    }
+  }
+}
