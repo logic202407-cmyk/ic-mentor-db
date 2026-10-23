@@ -30,8 +30,12 @@ def size_of(paths) -> tuple[int, int]:
 
 
 def main() -> int:
-    tracked = subprocess.run(["git", "ls-files"], cwd=str(ROOT), capture_output=True,
-                             text=True, encoding="utf-8", errors="replace").stdout.split()
+    # 见 workbench/tools/check_readme_badges.py 的同名说明：git 默认转义非 ASCII 路径。
+    tracked = subprocess.run(
+        ["git", "-c", "core.quotepath=false", "ls-files", "-z"],
+        cwd=str(ROOT), capture_output=True, text=True,
+        encoding="utf-8", errors="replace").stdout.split("\0")
+    tracked = [p for p in tracked if p]
     total, count = size_of(tracked)
     print(f"tracked files: {count}")
     print(f"working copy (tracked): {total / 1024 / 1024:.1f} MB")

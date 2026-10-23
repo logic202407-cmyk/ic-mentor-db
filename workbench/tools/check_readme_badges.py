@@ -60,9 +60,14 @@ def tracked_size() -> tuple[int, float]:
     """返回 (跟踪文件数, 跟踪内容总 MB)——与 tools/repo_size.py 的算法一致。"""
     import subprocess
 
-    proc = subprocess.run(["git", "ls-files"], cwd=str(ROOT), capture_output=True,
-                          text=True, encoding="utf-8", errors="replace")
-    paths = proc.stdout.split()
+    # 必须关掉 core.quotepath 并用 -z：git 默认把非 ASCII 路径转义成八进制
+    # （`启动.cmd` → `"\345\220\257..."`），在 Linux/CI 上这些路径匹配不到
+    # 真实文件，统计会少 30 多个——本地 Windows 因关过 quotepath 反而看不出来。
+    proc = subprocess.run(
+        ["git", "-c", "core.quotepath=false", "ls-files", "-z"],
+        cwd=str(ROOT), capture_output=True, text=True,
+        encoding="utf-8", errors="replace")
+    paths = [p for p in proc.stdout.split("\0") if p]
     total = 0
     count = 0
     for rel in paths:
