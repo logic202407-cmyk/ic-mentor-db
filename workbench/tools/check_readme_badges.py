@@ -57,27 +57,43 @@ def count_tests() -> int:
 
 
 def tracked_size() -> tuple[int, float]:
-    """返回 (跟踪文件数, 跟踪内容总 MB)——与 tools/repo_size.py 的算法一致。"""
+    """返回 (跟踪文件数, 跟踪内容总 MB)，数据取自 git 自身的 blob 大小。
+
+    两点都是为了"在任何平台上得到同一个数字"：
+
+    1. **文件列表用 HEAD 树**（`git ls-tree`），而不是索引。README 说的是
+       "clone 能拿到什么"，索引还包含已 add 未提交的文件（本轮真实踩过：
+       新文件提交后 README 少算一个，CI 变红）。
+    2. **大小用 blob 字节数**（`ls-tree -l`），而不是工作区文件大小。工作区体积受
+       行尾影响（Windows CRLF / Linux LF，差 2 MB 以上），blob 大小则处处一致。
+
+    另外必须 `-c core.quotepath=false`：git 默认把非 ASCII 路径转义成八进制
+    （`启动.cmd` → `"\\345\\220\\257..."`），在别人的环境里匹配不到文件。
+    """
     import subprocess
 
-    # 必须关掉 core.quotepath 并用 -z：git 默认把非 ASCII 路径转义成八进制
-    # （`启动.cmd` → `"\345\220\257..."`），在 Linux/CI 上这些路径匹配不到
-    # 真实文件，统计会少 30 多个——本地 Windows 因关过 quotepath 反而看不出来。
-    # 用 HEAD 树而不是索引：README 说的是"clone 能拿到什么"，那就是 HEAD。
-    # 索引还包含已 add 未 commit 的文件，会让"刚加文件、README 却已计入"这种
-    # 自相矛盾的状态出现（本轮真实踩过：新文件提交后 README 少算一个，CI 变红）。
     proc = subprocess.run(
-        ["git", "-c", "core.quotepath=false", "ls-tree", "-r", "-z", "--name-only", "HEAD"],
+        ["git", "-c", "core.quotepath=false", "ls-tree", "-r", "-l", "-z", "HEAD"],
         cwd=str(ROOT), capture_output=True, text=True,
         encoding="utf-8", errors="replace")
-    paths = [p for p in proc.stdout.split("\0") if p]
-    total = 0
+
     count = 0
-    for rel in paths:
-        p = ROOT / rel
-        if p.is_file():
-            total += p.stat().st_size
-            count += 1
+    total = 0
+    for record in proc.stdout.split("\0"):
+        record = record.strip()
+        if not record:
+            continue
+        # 格式：<mode> SP <type> SP <object> SP <size> TAB <path>
+        head, _, _path = record.partition("\t")
+        fields = head.split()
+        if len(fields) < 4:
+            continue
+        try:
+            size = int(fields[3])
+        except ValueError:
+            continue  # 符号链接等 size 为 "-"
+        count += 1
+        total += size
     return count, total / 1024 / 1024
 
 
