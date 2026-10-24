@@ -13,6 +13,20 @@
 这一版的主题是**先把评测做对，再谈效果**：撤回了一组因字段泄漏而虚高的数字，
 并把「文档里的数字」变成可自动校验的产物。
 
+### 可靠性（本地存储）
+
+- **修复并发写入可能写坏 JSON**：原来用固定临时文件 `<name>.tmp`，两个保存同时发生时
+  会互相覆盖临时文件。现在改为**唯一临时文件 + fsync + 原子替换**，并在覆盖前保留 `.bak`。
+- **修复读—改—写丢更新**：项目与逐人档案的修改改为**锁内读取→修改→写回**
+  （`core.update_project` / `catalog.mutate_case`），并发 PATCH、并发导入不再互相覆盖。
+- **损坏文件不再静默重置**：解析失败会保留 `.corrupt-<时间>` 副本、优先从 `.bak` 恢复；
+  恢复不了就抛 `DataCorruptError`（HTTP 500），而不是当成「找不到项目」返回 404、
+  更不会把用户的调查记录覆盖成空白档案。
+- 新增 `workbench/storage.py` 作为存储基座；新增 `workbench.tools.backup_records`
+  （`--backup / --list / --verify / --restore`，恢复前自动另存 `before-restore`）。
+- 新增测试：`test_storage_safety`（并发写、丢更新、损坏恢复、`.bak` 保留）、
+  `test_backup_restore`（打包/校验/恢复/篡改拒绝）。
+
 ### 界面（产品级重做）
 
 - **拆成两个视图**：首页门户（`#homeView`）与研究工作台（`#workspaceView`），

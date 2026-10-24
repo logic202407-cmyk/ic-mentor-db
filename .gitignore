@@ -78,3 +78,5 @@ data/processed/cv_network.json
 /probe*.txt
 /_*.html
 /_*.json
+# 本地调查记录备份（由 workbench.tools.backup_records 生成）
+/backups/
