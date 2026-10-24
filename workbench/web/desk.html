@@ -1077,11 +1077,18 @@ async function renderAiHints(id){
   if(sug){
     const top=(sug.top3||[]).map(t=>`${esc2(t.label)} <small>${Number(t.score).toFixed(3)}</small>`).join('、');
     const methodName=({keyword:'关键词命中',embedding:'嵌入推断',fusion:'关键词+嵌入融合'})[sug.method]||'融合建议';
-    rows.push(`<div class="ai-row"><b>方向建议</b>
-      <span>${esc2(sug.suggested)}</span>
-      <small>相似度 ${Number(sug.score).toFixed(3)} · ${methodName}
-      ${sug.passes_threshold?'':' · 低于阈值，仅供参考'}</small>
-      ${top?`<div class="ai-top3"><small>次选：${top}</small></div>`:''}</div>`);
+    if(sug.state==='unknown'){
+      rows.push(`<div class="ai-row"><b>方向建议</b>
+        <span>证据不足，暂不给出建议</span>
+        <small>融合分 ${Number(sug.score).toFixed(3)} · ${methodName} · 低于阈值，已标为 unknown</small>
+        ${top?`<div class="ai-top3"><small>候选线索（仅供人工核查，不是结论）：${top}</small></div>`:''}</div>`);
+    } else {
+      rows.push(`<div class="ai-row"><b>方向建议</b>
+        <span>${esc2(sug.suggested)}</span>
+        <small>融合分 ${Number(sug.score).toFixed(3)} · ${methodName}
+        ${sug.band?` · 区间 ${esc2(sug.band)}`:''}</small>
+        ${top?`<div class="ai-top3"><small>次选：${top}</small></div>`:''}</div>`);
+    }
   }
   if(rev.length){
     rows.push('<div class="ai-row"><b>同名待核</b>'+rev.map(r=>`

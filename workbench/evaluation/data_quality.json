@@ -1,0 +1,49 @@
+{
+  "generated_at": "2026-10-24T19:21:55+08:00",
+  "records": {
+    "total": 15719,
+    "public_source": 12546,
+    "engineering": 7763,
+    "distinct_names": 11516,
+    "duplicate_name_groups": 715,
+    "duplicate_name_records": 1745,
+    "max_same_name": 10
+  },
+  "homepage_kind": {
+    "personal": 7634,
+    "none": 4424,
+    "roster": 488
+  },
+  "coverage": {
+    "with_any_source": 12546,
+    "with_statements": 12546,
+    "with_papers": 3434,
+    "with_relations": 377,
+    "with_recruitment": 6620,
+    "with_admission_notices": 1414,
+    "papers_total": 34549,
+    "relations_total": 692,
+    "admission_notices_total": 5768,
+    "author_attribution_checked": 0
+  },
+  "recruitment_years": {
+    "2024": 5,
+    "2025": 4,
+    "2026": 7107
+  },
+  "collected_months": {
+    "2026-10": 12539
+  },
+  "missing_fields": {
+    "department": 0,
+    "homepage": 4424,
+    "direction_pending": 5478,
+    "papers": 9112,
+    "recruitment": 5926
+  },
+  "notes": {
+    "records_are_not_people": "记录条数是「学科—导师」条目：同一自然人在多个学科/来源下会重复计数；全库自然人数量没有独立去重统计。",
+    "homepage": "personal=本人专属页，roster=学院名录页，none=未收录主页。",
+    "author_attribution": "只统计「已选 OpenAlex 作者并读过作品」的记录，不代表全库。"
+  }
+}

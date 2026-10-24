@@ -77,8 +77,22 @@ class WorkflowTests(unittest.TestCase):
         trig = self.data.get("on") or self.data.get(True)
         self.assertIn("push", trig)
 
-    def test_job_count_is_two(self):
-        self.assertEqual(set(self.jobs), {"validate", "workbench"})
+    def test_jobs_are_quick_and_full(self):
+        # validate（旧专题）+ workbench（轻量检查）+ full（完整业务测试）
+        self.assertEqual(set(self.jobs), {"validate", "workbench", "full"})
+
+    def test_full_job_runs_the_real_test_suite(self):
+        text = yaml.safe_dump(self.jobs["full"], allow_unicode=True)
+        self.assertIn("unittest discover -s workbench/tests", text,
+                      "full job 应跑全部 Python 测试")
+        self.assertIn("node --test", text, "full job 应跑前端测试")
+        self.assertIn("check_facts_consistency", text)
+
+    def test_full_job_still_avoids_model_runtime(self):
+        text = yaml.safe_dump(self.jobs["full"], allow_unicode=True)
+        for heavy in ("fastembed", "onnxruntime"):
+            self.assertNotIn(heavy, text,
+                             f"full job 不应安装 {heavy}（模型测试只在本地跑）")
 
 
 if __name__ == "__main__":

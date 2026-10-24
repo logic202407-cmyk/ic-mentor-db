@@ -123,3 +123,41 @@ jobs:
 
       - name: 技术报告页数与大小限制
         run: python -m workbench.tools.check_pdf_limits
+
+      - name: 对外材料数字一致性
+        run: python -m workbench.tools.check_facts_consistency
+
+  # ── 完整业务测试（PR / main 推送触发）──────────────────────────────────
+  # 与上面的轻量检查分开：这里安装测试真正 import 的依赖（fastapi/httpx/bs4/numpy/
+  # pyyaml），跑全部 Python 测试与前端竞态测试。仍然**不安装** fastembed/onnxruntime：
+  # 需要向量的测试只在本地跑，CI 不因几百 MB 模型下载而变红。
+  full:
+    if: github.event_name == 'pull_request' || github.ref == 'refs/heads/main' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 安装测试依赖（不含模型运行时）
+        run: |
+          python -m pip install --quiet --upgrade pip
+          python -m pip install --quiet fastapi httpx requests beautifulsoup4 numpy pyyaml pypdf urllib3
+
+      - name: 全部 Python 测试
+        run: python -m unittest discover -s workbench/tests
+
+      - name: 前端异步竞态测试
+        run: node --test workbench/tests/test_ui_races.cjs workbench/tests/test_research_ui.cjs
+
+      - name: 对外材料数字一致性
+        run: python -m workbench.tools.check_facts_consistency
+
+      - name: 数据质量报告可生成（不联网）
+        run: python -m workbench.tools.data_quality --check

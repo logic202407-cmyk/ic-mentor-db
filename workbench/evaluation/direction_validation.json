@@ -1,11 +1,11 @@
 {
   "schema": "mentor-workbench/direction-validation/v1",
-  "generated_at": "2026-10-24T18:51:44+08:00",
+  "generated_at": "2026-10-24T19:18:45+08:00",
   "how_to_reproduce": "python -m workbench.infer_directions --validate 400 --ablate-text",
   "note": "指标由本机实跑产生；逐人建议在 .workbench-data，未随仓库提交。",
   "sampled": 400,
   "vocab_size": 256,
-  "seconds": 39.6,
+  "seconds": 47.0,
   "embedding": {
     "top1": 0.0875,
     "top3": 0.215
@@ -43,6 +43,178 @@
       }
     },
     "chosen_weight": 0.3
+  },
+  "calibration": {
+    "note": "余弦相似度与融合分都**不是**正确概率；下表是实测的「阈值 → 接受量 / 接受中正确比例」，用于选择保守阈值。",
+    "embedding": [
+      {
+        "score>=": 0.4,
+        "accepted": 400,
+        "coverage": 1.0,
+        "precision": 0.0875,
+        "hits": 35
+      },
+      {
+        "score>=": 0.45,
+        "accepted": 400,
+        "coverage": 1.0,
+        "precision": 0.0875,
+        "hits": 35
+      },
+      {
+        "score>=": 0.5,
+        "accepted": 400,
+        "coverage": 1.0,
+        "precision": 0.0875,
+        "hits": 35
+      },
+      {
+        "score>=": 0.55,
+        "accepted": 382,
+        "coverage": 0.955,
+        "precision": 0.08376963350785341,
+        "hits": 32
+      },
+      {
+        "score>=": 0.6,
+        "accepted": 154,
+        "coverage": 0.385,
+        "precision": 0.2012987012987013,
+        "hits": 31
+      },
+      {
+        "score>=": 0.65,
+        "accepted": 78,
+        "coverage": 0.195,
+        "precision": 0.24358974358974358,
+        "hits": 19
+      },
+      {
+        "score>=": 0.7,
+        "accepted": 17,
+        "coverage": 0.0425,
+        "precision": 0.23529411764705882,
+        "hits": 4
+      },
+      {
+        "score>=": 0.75,
+        "accepted": 4,
+        "coverage": 0.01,
+        "precision": 0.25,
+        "hits": 1
+      },
+      {
+        "score>=": 0.8,
+        "accepted": 0,
+        "coverage": 0.0,
+        "precision": null,
+        "hits": 0
+      }
+    ],
+    "fusion": [
+      {
+        "score>=": 0.4,
+        "accepted": 397,
+        "coverage": 0.9925,
+        "precision": 0.14357682619647355,
+        "hits": 57
+      },
+      {
+        "score>=": 0.45,
+        "accepted": 393,
+        "coverage": 0.9825,
+        "precision": 0.1450381679389313,
+        "hits": 57
+      },
+      {
+        "score>=": 0.5,
+        "accepted": 344,
+        "coverage": 0.86,
+        "precision": 0.11918604651162791,
+        "hits": 41
+      },
+      {
+        "score>=": 0.55,
+        "accepted": 259,
+        "coverage": 0.6475,
+        "precision": 0.13127413127413126,
+        "hits": 34
+      },
+      {
+        "score>=": 0.6,
+        "accepted": 76,
+        "coverage": 0.19,
+        "precision": 0.35526315789473684,
+        "hits": 27
+      },
+      {
+        "score>=": 0.65,
+        "accepted": 51,
+        "coverage": 0.1275,
+        "precision": 0.45098039215686275,
+        "hits": 23
+      },
+      {
+        "score>=": 0.7,
+        "accepted": 31,
+        "coverage": 0.0775,
+        "precision": 0.4838709677419355,
+        "hits": 15
+      },
+      {
+        "score>=": 0.75,
+        "accepted": 12,
+        "coverage": 0.03,
+        "precision": 0.5833333333333334,
+        "hits": 7
+      },
+      {
+        "score>=": 0.8,
+        "accepted": 2,
+        "coverage": 0.005,
+        "precision": 0.5,
+        "hits": 1
+      }
+    ],
+    "recommended": {
+      "embedding": {
+        "score>=": 0.75,
+        "precision": 0.25,
+        "coverage": 0.01,
+        "target_precision": 0.3,
+        "note": "没有阈值同时满足目标精确率与最小覆盖率；以上为可达的最高精确率。"
+      },
+      "fusion": {
+        "score>=": 0.75,
+        "precision": 0.5833333333333334,
+        "coverage": 0.03,
+        "target_precision": 0.3,
+        "note": "没有阈值同时满足目标精确率与最小覆盖率；以上为可达的最高精确率。"
+      }
+    },
+    "default_threshold": 0.6,
+    "default_at_0_55": {
+      "score>=": 0.55,
+      "accepted": 382,
+      "coverage": 0.955,
+      "precision": 0.08376963350785341,
+      "hits": 32
+    },
+    "default_at_threshold": {
+      "score>=": 0.6,
+      "accepted": 76,
+      "coverage": 0.19,
+      "precision": 0.35526315789473684,
+      "hits": 27
+    },
+    "base_rate": 0.1425
+  },
+  "discipline_restricted": {
+    "rows": 329,
+    "coverage": 0.8225,
+    "top1": 0.2066869300911854,
+    "unrestricted_top1": 0.1425,
+    "note": "候选限制在「同一级学科下已出现过的方向标签」；这只在样本里有该学科标签时生效，覆盖率低于 100% 属正常。"
   },
   "strata": {
     "verbatim": {

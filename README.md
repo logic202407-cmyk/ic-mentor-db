@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/代码许可-MIT-yellow.svg)](LICENSE)
 [![Data License](https://img.shields.io/badge/数据许可-见%20LICENSE--DATA-blue.svg)](LICENSE-DATA)
 [![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB.svg)](workbench/requirements.txt)
-[![Tests](https://img.shields.io/badge/tests-971%20passed-brightgreen.svg)](workbench/tests)
+[![Tests](https://img.shields.io/badge/tests-976%20passed-brightgreen.svg)](workbench/tests)
 [![Records](https://img.shields.io/badge/记录-15%2C719%20条-informational.svg)](CHANGELOG.md)
 [![Local Only](https://img.shields.io/badge/数据-仅存本机-success.svg)](SECURITY.md)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
@@ -59,7 +59,7 @@ py -3 -m venv .venv
 
 | 项目 | 体积 | 说明 |
 |:--|--:|:--|
-| 纳入 git 的文件（637 个） | **约 109 MB** | 按 git blob 大小统计（与平台无关）；大头是数据本体，见下方明细 |
+| 纳入 git 的文件（640 个） | **约 109 MB** | 按 git blob 大小统计（与平台无关）；大头是数据本体，见下方明细 |
 | `.git` | 约 67 MB | 历史提交 |
 | `.venv` | 约 211 MB | 虚拟环境，可由 `requirements.txt` 重建 |
 | `data/raw` | 约 890 MB | **抓取到的网页原文**，只在采集脚本里用；运行期不读它，已 gitignore |
@@ -625,9 +625,9 @@ node tools/verify_html.mjs reports/导师推荐.html reports/导师库.html
 （6.8%）但 Top-3 19.4% → 28.3%。长文本稀释确实存在，但清洗不能凭空创造语义能力，
 所以生产推断用完整文本 + 分数级融合。
 
-**保守性**：嵌入相似度低于 0.55 的 **468 条一律留空**；推断结果只作为建议落在
+**保守性（按校准后的阈值）**：不再用「余弦 ≥ 0.55 就写入」——实测那个阈值会接受 95.5% 的记录、而接受中 Top-1 仅 8.4%。现改为按**融合分 ≥ 0.60** 且通过学科约束：全库 5,478 条待补中**只给 591 条建议**，**4,887 条标 unknown**（区间 high 188 / medium 193 / low 210）。推断结果只作为建议落在
 `.workbench-data/direction-inference/suggestions.json`，**不覆盖原始 `direction` 字段**，
-逐条带融合分、嵌入分、关键词分与次选方向供人工复核。
+逐条带融合分、嵌入分、关键词分、次选方向与**相似度区间**，并注明「区间不是概率」。
 
 复现：`python -m workbench.infer_directions --validate 400 --ablate-text`。
 完整评测见 [方向推断评测](workbench/aic-submission/evidence/方向推断评测.md)。

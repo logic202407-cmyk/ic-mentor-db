@@ -1,6 +1,6 @@
 {
   "schema": "mentor-workbench/disambiguation-eval/v1",
-  "generated_at": "2026-10-24T18:51:44+08:00",
+  "generated_at": "2026-10-24T19:18:45+08:00",
   "how_to_reproduce": "python -m workbench.disambiguate_names --evaluate --gold",
   "protocol": {
     "same_person": "同一专属个人主页 + 同机构 + 站点归属与院系一致",
