@@ -21,7 +21,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
 
 from workbench import catalog  # noqa: E402
-from workbench.collect_engineering_scale import discover_sources  # noqa: E402
+
 
 FIXTURES = Path(__file__).resolve().parent.parent / "tests" / "fixtures"
 
@@ -59,6 +59,9 @@ def build_facts() -> dict:
 
     dir_pending = sum(1 for p in pairs if label_of(p) in ("", PENDING))
 
+    # 惰性导入：采集器链路里仍有模块级 bs4（历史代码），而统计事实这一步
+    # 不需要 HTML 解析器。放进函数里，未装 bs4 的环境（如轻量 CI）也能跑。
+    from workbench.collect_engineering_scale import discover_sources
     sources = discover_sources()
     fixtures = [p for p in FIXTURES.glob("*.html")]
 
