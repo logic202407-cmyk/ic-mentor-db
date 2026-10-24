@@ -181,7 +181,7 @@ def main() -> int:
     # 研究覆盖度字段来自 catalog.coverage()，report_facts 只取了一部分，这里补齐。
     try:
         from workbench import catalog
-        cov = catalog.coverage()
+        cov = catalog.coverage(bundle_only=True)   # 对外数字以仓库档案包为准
         for key, value in (cov.get("research") or {}).items():
             facts.setdefault(key, value)
     except Exception:  # noqa: BLE001

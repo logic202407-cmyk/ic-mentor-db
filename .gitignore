@@ -78,3 +78,9 @@ data/processed/cv_network.json
 /probe*.txt
 /_*.html
 /_*.json
+# 本地调查记录备份（由 workbench.tools.backup_records 生成）
+/backups/
+
+# 人工标注过程文件：原始标注含标注者姓名与逐条判断，留在本机；仓库只放协议与模板。
+workbench/evaluation/human_annotation/annotator-*.csv
+workbench/evaluation/human_annotation/human_labels.json

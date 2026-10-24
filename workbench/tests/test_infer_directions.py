@@ -131,5 +131,43 @@ class TextLeakageTests(unittest.TestCase):
         self.assertNotIn("用于工学导航", text)
 
 
+class CalibrationTests(unittest.TestCase):
+    """阈值校准与 unknown 拒绝：分数是相似度，不是概率。"""
+
+    def test_confidence_band_thresholds(self):
+        from workbench.infer_directions import confidence_band
+        self.assertEqual(confidence_band(0.80), "high")
+        self.assertEqual(confidence_band(0.66), "medium")
+        self.assertEqual(confidence_band(0.60), "low")
+        self.assertEqual(confidence_band(0.59), "unknown")
+        self.assertEqual(confidence_band(None), "unknown")
+
+    def test_calibration_curve_counts(self):
+        from workbench.infer_directions import calibration_curve
+        records = [
+            {"score": 0.7, "pred": "a", "truth": "a"},
+            {"score": 0.65, "pred": "b", "truth": "a"},
+            {"score": 0.5, "pred": "a", "truth": "a"},
+        ]
+        curve = calibration_curve(records, "emb", thresholds=(0.6, 0.8))
+        high = next(r for r in curve if r["score>="] == 0.6)
+        self.assertEqual(high["accepted"], 2)
+        self.assertAlmostEqual(high["precision"], 0.5)
+        self.assertAlmostEqual(high["coverage"], 2 / 3)
+        none = next(r for r in curve if r["score>="] == 0.8)
+        self.assertEqual(none["accepted"], 0)
+        self.assertIsNone(none["precision"])
+
+    def test_recommend_threshold_respects_minimum_coverage(self):
+        from workbench.infer_directions import recommend_threshold
+        curve = [
+            {"score>=": 0.5, "accepted": 90, "coverage": 0.9, "precision": 0.1},
+            {"score>=": 0.6, "accepted": 20, "coverage": 0.2, "precision": 0.4},
+            {"score>=": 0.7, "accepted": 1, "coverage": 0.01, "precision": 1.0},
+        ]
+        chosen = recommend_threshold(curve, target_precision=0.3, min_coverage=0.1)
+        self.assertEqual(chosen["score>="], 0.6)
+
+
 if __name__ == "__main__":
     unittest.main()

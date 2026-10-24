@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<!-- source-sha256: 16c3e8551a8fcbf479ba578da07bcfe250ded275b83295d1043c7c706380e559 -->
+<!-- source-sha256: bca868a8d8f359f81d42fa5ec7baf844f79bd8009cdec149d4415448fbdb2d77 -->
 
 <meta charset="utf-8">
 <title>技术报告</title>
@@ -10,7 +10,7 @@
 * { box-sizing: border-box; }
 body {
   font-family: "Microsoft YaHei", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", sans-serif;
-  font-size: 9.4pt; line-height: 1.46; color: #1a1a1a; margin: 0;
+  font-size: 9.4pt; line-height: 1.43; color: #1a1a1a; margin: 0;
   -webkit-print-color-adjust: exact; print-color-adjust: exact;
 }
 h1 { font-size: 17pt; margin: 0 0 4mm; padding-bottom: 2mm; border-bottom: 2.2px solid #1f4e79; color: #14304a; }
@@ -18,7 +18,7 @@ h1 + blockquote { margin-top: 0; }
 h2 { font-size: 12.2pt; margin: 3.8mm 0 1.7mm; padding: 1.6mm 0 1.6mm 3mm; border-left: 4px solid #1f4e79; background: #f2f6fa; color: #14304a; page-break-after: avoid; }
 h3 { font-size: 10.4pt; margin: 3mm 0 1.2mm; color: #1f4e79; page-break-after: avoid; }
 h4 { font-size: 10.4pt; margin: 4mm 0 1.5mm; color: #333; page-break-after: avoid; }
-p { margin: 0 0 1.2mm; text-align: justify; }
+p { margin: 0 0 1.1mm; text-align: justify; }
 ul, ol { margin: 0 0 2.4mm; padding-left: 6.5mm; }
 li { margin-bottom: 0.5mm; }
 table { border-collapse: collapse; width: 100%; margin: 2mm 0 3mm; font-size: 9.1pt; page-break-inside: auto; }
@@ -269,11 +269,48 @@ h2, h3 { break-after: avoid-page; }
 <p><strong>清洗文本消融。</strong> 只保留研究方向句后：字面层 Top-1 50.0% → <strong>72.2%</strong>（长文本稀释确实
 存在）；未字面层 Top-1 不变（6.8%）、Top-3 从 19.4% 升到 <strong>28.3%</strong>。清洗改善排序，但不能
 凭空创造语义能力，故生产仍用完整文本 + 融合，清洗只作诊断实验。</p>
-<p><strong>保守性。</strong> 嵌入相似度低于 0.55 的 <strong>468 条一律留空</strong>；达到阈值的 <strong>5,010 条</strong>只作为
-<strong>建议</strong>落在 <code>.workbench-data/direction-inference/suggestions.json</code>，逐条带融合分、嵌入分、
-关键词分与 Top-3，<strong>不覆盖原始 <code>direction</code> 字段</strong>。方向分类 Top-1 14.2%、Top-3 27.0%，
-绝对准确率仍低，因此产品把它定位为「候选建议 + 必人工复核」；AI 真正有量化优势的地方是
-自然语言检索（第五章：B 类 nDCG@10 0.348 对关键词 0.159）。</p>
+<p><strong>阈值与拒绝：余弦不是概率。</strong> 早期用「嵌入余弦 ≥ 0.55 就写入」，实测在 400 条留出验证上
+<strong>接受 95.5% 的记录，而接受中 Top-1 只有 8.4%</strong>——这个阈值几乎不筛任何东西，且把相似度
+当成了置信度。改为按<strong>融合分</strong>校准（阈值 → 接受量 → 接受中正确率）：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">融合分 ≥</th>
+<th style="text-align: right;">覆盖率</th>
+<th style="text-align: right;">接受中 Top-1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">0.55</td>
+<td style="text-align: right;">64.8%</td>
+<td style="text-align: right;">13.1%</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>0.60（采用）</strong></td>
+<td style="text-align: right;"><strong>19.0%</strong></td>
+<td style="text-align: right;"><strong>35.5%</strong></td>
+</tr>
+<tr>
+<td style="text-align: right;">0.65</td>
+<td style="text-align: right;">12.8%</td>
+<td style="text-align: right;">45.1%</td>
+</tr>
+<tr>
+<td style="text-align: right;">0.70</td>
+<td style="text-align: right;">7.8%</td>
+<td style="text-align: right;">48.4%</td>
+</tr>
+</tbody>
+</table>
+<p>同时加入两条保守措施：<strong>学科约束</strong>（候选限制在同一级学科已出现过的方向标签内，留出验证上
+可约束样本占 82.3%，Top-1 由 14.2% 提到 <strong>20.7%</strong>）与 <strong>unknown 拒绝</strong>（低于 0.60 一律
+标 <code>unknown</code>，不写建议）。全库效果：5,478 条待补中，<strong>591 条给出建议</strong>（区间 high 188 /
+medium 193 / low 210），<strong>4,887 条标为 unknown</strong>。建议逐条带融合分、嵌入分、关键词分、
+Top-3 与相似度区间（明确标注「区间不是概率」），<strong>不覆盖原始 <code>direction</code> 字段</strong>。</p>
+<p>方向分类 Top-1 14.2%、Top-3 27.0%，绝对准确率仍低，因此产品把它定位为「候选建议 +
+必人工复核」；AI 真正有量化优势的地方是自然语言检索（第五章：B 类 nDCG@10 0.348 对
+关键词 0.159）。</p>
 <h3>1.2 同名消歧：证据分级，而不是“URL 不同就是两个人”</h3>
 <p><strong>问题。</strong> 全库有 <strong>1,024 组同名</strong>（占 14,197 个不同姓名的 7.2%），同名组合共 <strong>2,564 对</strong>；
 其中 <strong>578 组存在缺主页的成员</strong>。同校内同名最容易把两个人看成一个人。</p>
@@ -309,8 +346,12 @@ AUC 全部来自跨校对比，是<strong>虚高</strong>。</p>
 </tbody>
 </table>
 <p><code>unknown</code> 不进入任何指标，单独报数：缺主页 1,209 对、名录页 221 对、两者兼有 87 对。
-另有独立复核集 <code>workbench/evaluation/gold_pairs.json</code>（140 对，含 35 对 <code>unknown</code>），
-与自动协议一致率 <strong>91.3%</strong>（<code>same_person</code> 88.1%、<code>different_person</code> 100%）。</p>
+另有<strong>规则复核集</strong> <code>workbench/evaluation/gold_pairs.json</code>（140 对，含 35 对 <code>unknown</code>）。
+它由 <code>adjudicate()</code> 的规则生成，与自动判定 <code>pair_label()</code> 同源，因此
+<strong>91.3% 只是一致性检查</strong>（<code>same_person</code> 88.1%、<code>different_person</code> 100%），
+<strong>不是人工验证的准确率</strong>。人工金标准尚未完成：仓库已提供盲标协议、空白标注表与
+导入校验工具（<code>workbench/evaluation/human_annotation/protocol.md</code>），
+需 ≥30 对独立人工判断后才报告 Precision / Recall / F1。</p>
 <p><strong>结果（主指标：同校同名，115 对 = 同人 84 / 异人 31）。</strong></p>
 <table>
 <thead>
@@ -358,7 +399,7 @@ AUC 全部来自跨校对比，是<strong>虚高</strong>。</p>
 </tr>
 </tbody>
 </table>
-<p>复核后（105 对，剔除 10 对错配主页）：嵌入 AUC <strong>0.834</strong>，
+<p>规则复核后（105 对，剔除 10 对错配主页）：嵌入 AUC <strong>0.834</strong>，
 阈值 0.70 时精确率 <strong>84.3%</strong> / 召回率 <strong>94.6%</strong> / F1 <strong>89.2%</strong>（朴素基线 F1 82.7%）。</p>
 <p><strong>必须写明的失败模式。</strong> 嵌入相似度高<strong>不能</strong>覆盖「主页不同」的硬事实：高危误合并
 （嵌入 ≥0.85 但判<strong>不是同人</strong>）共 <strong>124 对</strong>，例如「西安交大 王晶 · 0.990」两个主页分属

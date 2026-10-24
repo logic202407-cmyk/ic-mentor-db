@@ -179,6 +179,65 @@ def embed_texts(texts: list[str], batch_note: str = "") -> "object":
     return _normalize(vectors)
 
 
+# 生产决策用的是**融合分**（关键词分与嵌入余弦的加权），不是裸余弦。
+# 0.60 来自 400 条留出验证的校准：该阈值下接受约 19% 记录、接受中 Top-1 正确率约 35%
+# （整体 Top-1 只有 14.2%）。相似度仍然是相似度，**不是正确概率**。
+FUSION_APPLY_THRESHOLD = 0.60
+CONFIDENCE_BANDS = ((0.70, "high"), (0.65, "medium"), (0.60, "low"))
+CALIBRATION_THRESHOLDS = (0.40, 0.45, 0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.80)
+
+
+def confidence_band(score) -> str:
+    """把**融合分**映射成区间标签；低于 0.60 一律 unknown。"""
+    if score is None:
+        return "unknown"
+    for threshold, name in CONFIDENCE_BANDS:
+        if float(score) >= threshold:
+            return name
+    return "unknown"
+
+
+def calibration_curve(records: list[dict], key: str,
+                      thresholds=CALIBRATION_THRESHOLDS) -> list[dict]:
+    """按阈值统计「接受多少 / 接受里对了多少」，用来谈精确率—覆盖率权衡。
+
+    ``records`` 每项含 ``score``（该方法的 Top-1 分数）、``pred``、``truth``。
+    这里只做统计，不把分数当概率。
+    """
+    total = len(records)
+    rows = []
+    for threshold in thresholds:
+        accepted = [r for r in records if (r.get("score") or 0) >= threshold]
+        hits = sum(1 for r in accepted if r["pred"] == r["truth"])
+        rows.append({
+            "score>=": threshold,
+            "accepted": len(accepted),
+            "coverage": (len(accepted) / total) if total else 0.0,
+            "precision": (hits / len(accepted)) if accepted else None,
+            "hits": hits,
+        })
+    return rows
+
+
+def recommend_threshold(curve: list[dict], target_precision: float = 0.30,
+                        min_coverage: float = 0.20) -> dict:
+    """在满足目标精确率的前提下，取覆盖率可接受的最低阈值。"""
+    for row in curve:
+        precision = row.get("precision")
+        if precision is None:
+            continue
+        if precision >= target_precision and row["coverage"] >= min_coverage:
+            return {"score>=": row["score>="], "precision": precision,
+                    "coverage": row["coverage"], "target_precision": target_precision}
+    fallback = [row for row in curve if row.get("precision") is not None]
+    best = max(fallback, key=lambda r: r["precision"]) if fallback else None
+    return {"score>=": best["score>="] if best else None,
+            "precision": best["precision"] if best else None,
+            "coverage": best["coverage"] if best else None,
+            "target_precision": target_precision,
+            "note": "没有阈值同时满足目标精确率与最小覆盖率；以上为可达的最高精确率。"}
+
+
 # ── 验证 ────────────────────────────────────────────────────────────────
 # 分数级融合的权重：由 ``validate`` 在 dev 子集上选出（`--validate` 的 fusion_tuning），
 # 生产推断沿用同一个常数，保证"评测怎么做、线上就怎么做"。
@@ -274,6 +333,65 @@ def validate(profiles: list[dict], vocab: list[str], sample: int, seed: int = 42
                  "fusion": on(test, tuned)},
     }
 
+    # ── 阈值校准：分别看「嵌入分数」与「融合分数」的精确率—覆盖率 ──────────
+    emb_top = sims.argmax(axis=1)
+    fuse_top = fused.argmax(axis=1)
+    sorted_fused = np.sort(fused, axis=1)
+    records = [{
+        "score": float(sims[r, emb_top[r]]),
+        "pred": vocab[int(emb_top[r])],
+        "truth": truths[r],
+    } for r in range(n)]
+    fused_records = [{
+        "score": float(fused[r, fuse_top[r]]),
+        "pred": vocab[int(fuse_top[r])],
+        "truth": truths[r],
+    } for r in range(n)]
+    emb_curve = calibration_curve(records, "emb")
+    fused_curve = calibration_curve(fused_records, "fused")
+    calibration = {
+        "note": ("余弦相似度与融合分都**不是**正确概率；下表是实测的"
+                 "「阈值 → 接受量 / 接受中正确比例」，用于选择保守阈值。"),
+        "embedding": emb_curve,
+        "fusion": fused_curve,
+        "recommended": {
+            "embedding": recommend_threshold(emb_curve),
+            "fusion": recommend_threshold(fused_curve),
+        },
+        "default_threshold": FUSION_APPLY_THRESHOLD,
+        "default_at_0_55": next((r for r in emb_curve if r["score>="] == 0.55), None),
+        "default_at_threshold": next(
+            (r for r in fused_curve if r["score>="] == FUSION_APPLY_THRESHOLD), None),
+        "base_rate": (fu_hit1 / n) if n else 0.0,
+    }
+
+    # ── 学科约束消融：把候选限制在同院系/同二级学科常见的方向标签内 ────────
+    import collections as _collections
+    by_discipline: dict[str, set[str]] = _collections.defaultdict(set)
+    for profile in profiles:
+        label = label_of(profile)
+        discipline = (profile.get("first_level_discipline") or "").strip()
+        if label in vocab and discipline:
+            by_discipline[discipline].add(label)
+    restricted_rows = restricted_hits = 0
+    for row, profile in enumerate(pool):
+        discipline = (profile.get("first_level_discipline") or "").strip()
+        allowed = by_discipline.get(discipline) or set()
+        index = [i for i, label in enumerate(vocab) if label in allowed]
+        if len(index) < 5:
+            continue
+        restricted_rows += 1
+        best = index[int(np.argmax(fused[row][index]))]
+        restricted_hits += vocab[best] == truths[row]
+    discipline_ablation = {
+        "rows": restricted_rows,
+        "coverage": (restricted_rows / n) if n else 0.0,
+        "top1": (restricted_hits / restricted_rows) if restricted_rows else None,
+        "unrestricted_top1": fu_hit1 / n if n else 0.0,
+        "note": ("候选限制在「同一级学科下已出现过的方向标签」；这只在样本里有该学科"
+                 "标签时生效，覆盖率低于 100% 属正常。"),
+    }
+
     return {
         "sampled": n,
         "vocab_size": len(vocab),
@@ -284,6 +402,8 @@ def validate(profiles: list[dict], vocab: list[str], sample: int, seed: int = 42
         "fusion": {"top1": fu_hit1 / n if n else 0.0, "top3": fu_hit3 / n if n else 0.0,
                    "keyword_weight": FUSION_KEYWORD_WEIGHT},
         "fusion_tuning": tuning,
+        "calibration": calibration,
+        "discipline_restricted": discipline_ablation,
         "strata": {
             name: {
                 "n": strata_kw[name][0],
@@ -345,8 +465,19 @@ def text_ablation(profiles: list[dict], vocab: list[str], sample: int,
 
 
 # ── 推断 ────────────────────────────────────────────────────────────────
-def infer(profiles: list[dict], vocab: list[str], min_score: float) -> dict:
+def infer(profiles: list[dict], vocab: list[str], min_score: float,
+          min_margin: float = 0.0, restrict_discipline: bool = True) -> dict:
     import numpy as np
+
+    # 学科约束：同一级学科下已出现过的方向标签作为候选集。
+    # 留出验证显示它把 Top-1 从 14.2% 提到 20.7%（覆盖 82% 的样本）。
+    by_discipline: dict[str, set[str]] = {}
+    if restrict_discipline:
+        for profile in profiles:
+            label = label_of(profile)
+            discipline = (profile.get("first_level_discipline") or "").strip()
+            if label in vocab and discipline:
+                by_discipline.setdefault(discipline, set()).add(label)
 
     pending = [p for p in profiles if label_of(p) in ("", PENDING)]
     targets, texts = [], []
@@ -367,12 +498,25 @@ def infer(profiles: list[dict], vocab: list[str], min_score: float) -> dict:
     kw_rows = [keyword_scores(vocab, t) for t in texts]
     kw_matrix = np.array([[row[lab] for lab in vocab] for row in kw_rows], dtype=np.float32)
     fused = FUSION_KEYWORD_WEIGHT * kw_matrix + (1 - FUSION_KEYWORD_WEIGHT) * np.clip(sims, 0.0, 1.0)
+    if by_discipline:
+        # 只在该学科已有足够标签（≥5）时收紧；否则保持原候选，避免误伤。
+        for row, profile in enumerate(targets):
+            allowed = by_discipline.get(
+                (profile.get("first_level_discipline") or "").strip()) or set()
+            index = [i for i, label in enumerate(vocab) if label in allowed]
+            if len(index) >= 5:
+                keep = fused[row][index]
+                masked = np.full_like(fused[row], -1.0)
+                masked[index] = keep
+                fused[row] = masked
     best = np.argmax(fused, axis=1)
     best_score = fused[np.arange(len(targets)), best]
     # 「是否写入」的阈值仍按**嵌入相似度**判定：这样 0.55 的含义与历史产物一致，
     # 不会因为换了融合权重就让同一个阈值突然放宽或收紧。
     best_emb = np.argmax(sims, axis=1)
     best_emb_score = sims[np.arange(len(targets)), best_emb]
+    fused_sorted = np.sort(fused, axis=1)
+    margins = fused_sorted[:, -1] - fused_sorted[:, -2]
 
     suggestions = []
     for i, p in enumerate(targets):
@@ -391,14 +535,26 @@ def infer(profiles: list[dict], vocab: list[str], min_score: float) -> dict:
             "method": "fusion",
             "top3": [{"label": vocab[int(j)], "score": round(float(fused[i][j]), 4)}
                      for j in top3_idx],
-            "apply": bool(best_emb_score[i] >= min_score),
+            "margin": round(float(margins[i]), 4),
+            "confidence_band": confidence_band(float(best_score[i])),
+            "band_note": "confidence_band 是融合分区间，不是正确概率",
+            "state": ("suggested"
+                      if float(best_score[i]) >= min_score
+                      and margins[i] >= min_margin
+                      else "unknown"),
+            "apply": bool(float(best_score[i]) >= min_score
+                          and margins[i] >= min_margin),
         })
 
     return {
         "pending": len(pending),
         "with_text": len(targets),
         "min_score": min_score,
+        "min_margin": min_margin,
         "would_apply": sum(1 for s in suggestions if s["apply"]),
+        "unknown_state": sum(1 for s in suggestions if s["state"] == "unknown"),
+        "bands": {band: sum(1 for s in suggestions if s["confidence_band"] == band)
+                  for band in ("high", "medium", "low", "unknown")},
         "by_method": {
             "fusion": len(suggestions),
         },
@@ -415,8 +571,12 @@ def main() -> int:
                     help="复用已有的 suggestions.json 重建报告（改报告/消融时不必重跑全库推断）")
     ap.add_argument("--ablate-text", action="store_true",
                     help="追加一次清洗文本消融（只保留研究方向句），用于定位长文本稀释")
-    ap.add_argument("--min-score", type=float, default=0.55,
-                    help="相似度阈值，低于此值不填（默认 0.55）")
+    ap.add_argument("--min-score", type=float, default=FUSION_APPLY_THRESHOLD,
+                    help="融合分阈值，低于此值标为 unknown 不写入（默认 0.60）")
+    ap.add_argument("--no-restrict-discipline", action="store_true",
+                    help="关闭「候选限制在同一级学科标签内」的约束（用于对照）")
+    ap.add_argument("--min-margin", type=float, default=0.0,
+                    help="Top-1 与 Top-2 融合分差的最小值；低于它标为 unknown（默认 0）")
     ap.add_argument("--seed", type=int, default=42)
     args = ap.parse_args()
 
@@ -467,6 +627,41 @@ def main() -> int:
             f"| **分数级融合（关键词 {result['fusion']['keyword_weight']:.2f} + "
             f"嵌入 {1 - result['fusion']['keyword_weight']:.2f}）** | "
             f"**{result['fusion']['top1']:.1%}** | **{result['fusion']['top3']:.1%}** |",
+            "",
+        ]
+        calibration = result["calibration"]
+        cal_rows = []
+        for row in calibration["embedding"]:
+            precision = ("—" if row["precision"] is None
+                         else f"{row['precision']:.1%}")
+            cal_rows.append(f"| {row['score>=']:.2f} | {row['accepted']} | "
+                            f"{row['coverage']:.1%} | {precision} |")
+        at_default = calibration["default_at_0_55"] or {}
+        default_precision = ("—" if at_default.get("precision") is None
+                             else f"{at_default['precision']:.1%}")
+        restricted = result["discipline_restricted"]
+        restricted_top1 = ("—" if restricted["top1"] is None
+                           else f"{restricted['top1']:.1%}")
+        lines += [
+            "### 阈值与拒绝：余弦不是概率",
+            "",
+            calibration["note"],
+            "",
+            "| 嵌入 Top-1 分数 ≥ | 接受条数 | 覆盖率 | 接受中正确率 |",
+            "|--:|--:|--:|--:|",
+        ] + cal_rows + [
+            "",
+            f"默认阈值 **0.55** 的实测：接受 {at_default.get('accepted', 0)} 条，"
+            f"覆盖率 {at_default.get('coverage', 0):.1%}，"
+            f"接受中正确率 {default_precision}。"
+            "**这是实测比例，不是概率校准结果**——它只说明在该阈值下被接受的那批里"
+            "有多少 Top-1 正确。低于阈值的记录一律标为 `unknown`，不写入建议。",
+            "",
+            "### 学科约束消融（候选限制在同一级学科已出现过的方向标签内）",
+            "",
+            f"可约束样本 **{restricted['rows']}** 条"
+            f"（覆盖验证样本 {restricted['coverage']:.1%}）；约束后 Top-1 "
+            f"{restricted_top1}，不约束 {restricted['unrestricted_top1']:.1%}。",
             "",
             "### 调参隔离：融合权重只在 dev 上选",
             "",
@@ -576,14 +771,21 @@ def main() -> int:
                 return 1
             result = json.loads(cached.read_text(encoding="utf-8"))
         else:
-            result = infer(pairs, vocab, args.min_score)
+            result = infer(pairs, vocab, args.min_score, args.min_margin,
+                   restrict_discipline=not args.no_restrict_discipline)
         lines += [
             "## 覆盖",
             "",
             f"- 方向待补：**{result['pending']}** 条",
             f"- 其中有可用文本：**{result['with_text']}** 条",
-            f"- 嵌入相似度 ≥ {args.min_score} 因而会写入：**{result['would_apply']}** 条",
-            f"- 低于阈值留空：**{result['with_text'] - result['would_apply']}** 条（宁可不填，不猜）",
+            f"- 融合分 ≥ {args.min_score} 因而给出建议：**{result['would_apply']}** 条",
+            f"- 标为 unknown（证据不足、不写入）：**{result['unknown_state']}** 条",
+            f"- 区间分布：high {result['bands']['high']} / medium {result['bands']['medium']} /"
+            f" low {result['bands']['low']} / unknown {result['bands']['unknown']}",
+            "",
+            "**关于阈值**：0.60 是留出验证上实测的权衡点（接受约 19% 记录、接受中 Top-1"
+            " 正确率约 35%，整体只有 14.2%），不是「60% 会正确」。低于阈值的记录写"
+            " unknown，不填。",
             "",
         ]
         if args.apply:

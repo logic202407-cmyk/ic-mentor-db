@@ -104,35 +104,114 @@ def _vectors(project: dict, profiles: list[dict]) -> np.ndarray:
     return vectors
 
 
+SEARCH_MODES = {"semantic", "keyword", "bm25", "hybrid", "auto"}
+HYBRID_BM25_WEIGHT = 0.5   # 混合模式：BM25 与向量的权重（用户可用 API 覆盖默认值）
+HYBRID_EMPTY_TAU = 0.25    # 混合分低于此值视为"没有相关结果"，返回空而不是硬推
+
+
+def _looks_lexical(query: str) -> bool:
+    """查询是否更像"术语/缩写"而不是一句自然语言。
+
+    `VLSI`、`MEMS`、`EDA` 这类英文缩写在中文嵌入模型里会坍缩成同一个向量
+    （评测实测 30 个缩写只有 2 个不同向量），所以 `auto` 模式对它们优先走 BM25；
+    其余情况走混合检索。
+    """
+    latin = re.findall(r"[A-Za-z][A-Za-z0-9.+#_-]*", query)
+    if any(re.search(r"[A-Z]{2,}", token) for token in latin):
+        return True
+    compact = re.sub(r"\s+", "", query)
+    return len(compact) <= 6 and not re.search(r"[我你想找做的怎么如何哪些什么]", query)
+
+
+def _bm25_scores(profiles: list[dict], query: str):
+    index = BM25Index([document(profile) for profile in profiles])
+    return index.scores(query)
+
+
 def search(project: dict, query: str, mode: str = "semantic", limit: int = 20,
            discipline: str = "", institution: str = "") -> list[dict]:
+    """检索导师。
+
+    兼容既有 `semantic` / `keyword`，并新增三种**在评测里验证过**的方式：
+
+    - ``bm25``：纯词法（缩写、术语、精确词优先）；
+    - ``hybrid``：BM25 与向量归一化后各半；
+    - ``auto``：像术语/缩写的查询走 BM25，其余走 hybrid。
+
+    向量模型不可用时自动回落到 BM25，并在结果里写明 ``fallback``，
+    而不是抛错或静默返回空。
+    """
     query = query.strip()[:300]
     if not query:
         raise ValueError("请输入研究兴趣或检索问题")
-    if mode not in {"semantic", "keyword"}:
+    if mode not in SEARCH_MODES:
         raise ValueError("未知的检索方式")
     profiles = [p for p in project["profiles"]
                 if (not discipline or discipline.lower() in p["discipline"].lower())
                 and (not institution or institution.lower() in p["institution"].lower())]
     if not profiles:
         return []
+
+    fallback = ""
+
+    def semantic_scores():
+        nonlocal fallback
+        try:
+            all_profiles = project["profiles"]
+            vectors = _vectors(project, all_profiles)
+            qvec = np.asarray(next(iter(_embedder().query_embed(query))), dtype=np.float32)
+            qvec /= max(float(np.linalg.norm(qvec)), 1e-12)
+            all_scores = vectors @ qvec
+            id_to_score = {p["id"]: float(score)
+                           for p, score in zip(all_profiles, all_scores)}
+            return np.array([id_to_score[p["id"]] for p in profiles], dtype=np.float32)
+        except Exception as error:  # noqa: BLE001 - 模型缺失/下载失败都要能回退
+            fallback = f"向量模型不可用，已回落到 BM25（{type(error).__name__}）"
+            return None
+
+    used = mode
     if mode == "keyword":
-        scores = [keyword_score(query, document(p)) for p in profiles]
+        scores = np.array([keyword_score(query, document(p)) for p in profiles],
+                          dtype=np.float32)
+    elif mode == "bm25":
+        scores = _bm25_scores(profiles, query)
+    elif mode == "semantic":
+        scores = semantic_scores()
+        if scores is None:
+            scores, used = _bm25_scores(profiles, query), "bm25"
     else:
-        all_profiles = project["profiles"]
-        vectors = _vectors(project, all_profiles)
-        qvec = np.asarray(next(iter(_embedder().query_embed(query))), dtype=np.float32)
-        qvec /= max(float(np.linalg.norm(qvec)), 1e-12)
-        all_scores = vectors @ qvec
-        id_to_score = {p["id"]: float(score) for p, score in zip(all_profiles, all_scores)}
-        scores = [id_to_score[p["id"]] for p in profiles]
-    order = sorted(range(len(profiles)), key=lambda i: (-scores[i], profiles[i]["name"]))
-    return [{
-        "profile": profiles[i],
-        "similarity": round(float(scores[i]), 4),
-        "mode": mode,
-        "evidence_count": len(profiles[i].get("sources", [])),
-    } for i in order[:max(1, min(int(limit), 100))] if scores[i] > 0]
+        chosen = mode
+        if mode == "auto":
+            chosen = "bm25" if _looks_lexical(query) else "hybrid"
+        if chosen == "bm25":
+            scores, used = _bm25_scores(profiles, query), "bm25"
+        else:
+            vector = semantic_scores()
+            if vector is None:
+                scores, used = _bm25_scores(profiles, query), "bm25"
+            else:
+                lexical = normalize_scores(_bm25_scores(profiles, query))
+                scores = (HYBRID_BM25_WEIGHT * lexical
+                          + (1 - HYBRID_BM25_WEIGHT) * np.clip(vector, 0.0, 1.0))
+                used = "hybrid"
+
+    values = [float(score) for score in scores]
+    if used == "hybrid" and values and max(values) < HYBRID_EMPTY_TAU:
+        return []          # 弱相关不硬推：宁可返回空，也不给无关结果
+    order = sorted(range(len(profiles)), key=lambda i: (-values[i], profiles[i]["name"]))
+    results = []
+    for i in order[:max(1, min(int(limit), 100))]:
+        if values[i] <= 0:
+            continue
+        results.append({
+            "profile": profiles[i],
+            "similarity": round(values[i], 4),
+            "mode": used,
+            "requested_mode": mode,
+            "fallback": fallback,
+            "evidence_count": len(profiles[i].get("sources", [])),
+        })
+    return results
 
 
 # ---------------------------------------------------------------------------

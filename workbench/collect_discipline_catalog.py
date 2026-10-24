@@ -16,7 +16,6 @@ from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from urllib.parse import urljoin, urlsplit
 import requests
-from bs4 import BeautifulSoup
 from . import core
 
 REFERENCE = Path(__file__).parent / 'reference'
@@ -29,6 +28,16 @@ CODES = {d['code']: d['code']+' '+d['name'] for d in json.loads((REFERENCE/'firs
 
 def clean(text):
     return re.sub(r'\s+', ' ', text or '').strip()
+
+def _soup(html: str):
+    """惰性导入 BeautifulSoup：只统计来源数量时不需要 HTML 解析器。
+
+    `report_facts` → `collect_engineering_scale` → 本模块 的导入链会在
+    未安装 bs4 的 CI 环境里直接失败（真实发生过），所以把导入放到真正解析时。
+    """
+    from bs4 import BeautifulSoup
+    return BeautifulSoup(html, "html.parser")
+
 
 def fetch(url, refresh=False, encoding=None):
     host=urlsplit(url).hostname
@@ -58,7 +67,7 @@ def teacher_names(cell, page):
         yield name,link
 
 def parse(html, url, institution, department='', kind='bnu', year=2026):
-    soup=BeautifulSoup(html,'html.parser');rows=[];subject='';direction=''
+    soup=_soup(html);rows=[];subject='';direction=''
     if kind=='ucas':trs=soup.select('#detail tr')
     elif kind=='bnu':
         tables=[t for t in soup.select('table') if any(clean(th.get_text())=='导师' for th in t.select('th'))]
@@ -118,7 +127,7 @@ def collect(refresh=False):
         for r in rows:r['collected_at']=data['collected_at']
         all_rows.extend(rows);pages.append({k:v for k,v in data.items() if k!='html'}|{'records_before_dedup':len(rows),'institution':institution,'department':department})
     add(fetch(SJTU,refresh,'gb18030'),'上海交通大学',kind='sjtu')
-    index=fetch(BNU,refresh);soup=BeautifulSoup(index['html'],'html.parser')
+    index=fetch(BNU,refresh);soup=_soup(index['html'])
     bnu_urls=list(dict.fromkeys(urljoin(BNU,a['href']) for a in soup.select('a[href]') if re.fullmatch(r'bsxx_yxsm-0\d\d\.html',a['href'])))
     def read_one(url):
         try:return fetch(url,refresh)
@@ -131,7 +140,7 @@ def collect(refresh=False):
     # Cover still-empty subjects with two distinct UCAS institutes when possible.
     existing=json.loads((REFERENCE/'official_faculty.json').read_text(encoding='utf8'))['profiles']
     covered={p['first_level_discipline'][:4] for p in existing}|{r['assignment']['subject'][:4] for r in all_rows}
-    index=fetch(UCAS,refresh);soup=BeautifulSoup(index['html'],'html.parser');choices=defaultdict(dict)
+    index=fetch(UCAS,refresh);soup=_soup(index['html']);choices=defaultdict(dict)
     for tr in soup.select('#detail tr'):
         tds=tr.find_all('td');a=tr.find('a',href=True)
         if len(tds)!=3 or not a:continue

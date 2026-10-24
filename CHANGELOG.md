@@ -13,6 +13,61 @@
 这一版的主题是**先把评测做对，再谈效果**：撤回了一组因字段泄漏而虚高的数字，
 并把「文档里的数字」变成可自动校验的产物。
 
+### 检索（生产接线）
+
+- `workbench.search.search()` 新增 `bm25` / `hybrid` / `auto` 三种模式，
+  原有 `semantic` / `keyword` 行为保持不变；`auto` 对英文缩写优先 BM25。
+- 向量模型缺失或加载失败时自动回落 BM25，结果带 `fallback` 原因；混合检索在
+  最高分低于 0.25 时返回空，不硬推弱相关结果。
+- 经典视图（`/classic`）新增 BM25 与「混合（术语自动切换）」入口，仅接线、不改造版式。
+- 新增 test_search_modes（10 项）：模式校验、缩写走词法、模型缺失回退、启发式分类。
+
+### 评测（两套人工协议，标注待完成）
+
+- 新增 `workbench/evaluation/retrieval_annotation/`：0–3 级相关性标注协议与
+  7 类查询模板；现有 226 条弱监督评测继续保留，但不得当作真实用户准确率。
+- 新增 `workbench/evaluation/user_tasks/`：6 项调查任务、错误编码与记录模板；
+  **未招募用户**，不报告任何完成时间/成功率/主观评分。
+
+### 算法可信度（方向推断）
+
+- **把「余弦相似度」当置信度的做法撤掉**。旧规则是「嵌入余弦 ≥ 0.55 就写入」，
+  在 400 条留出验证上实测**接受 95.5%、接受中 Top-1 仅 8.4%**——几乎不筛任何东西。
+- 改为按**融合分**校准：融合分 ≥ 0.60 时覆盖率 19.0%、接受中 Top-1 35.5%；
+  ≥0.65 时 12.8% / 45.1%。报告新增「阈值 → 接受量 → 覆盖率 → 接受中正确率」曲线，
+  并明确写「这是实测比例，不是概率校准」。
+- 新增**学科约束**（候选限制在同一级学科已出现过的标签内）：可约束样本占 82.3%，
+  Top-1 由 14.2% 提到 **20.7%**。
+- 新增 **unknown 拒绝**：低于阈值的记录不写建议、状态标 `unknown`；界面显示
+  「证据不足，暂不给出建议」，Top-3 只作候选线索。全库建议数 5,010 → **591**，
+  unknown 4,887。
+- `suggestions.json` 增加 `state / confidence_band / margin / band_note`；
+  `ai_hints` 与工作台 AI 区块同步显示新状态。
+
+### 工程（CI 与数据质量）
+
+- CI 增加 **full job**：安装测试真正用到的依赖（fastapi/httpx/bs4/numpy/pyyaml），
+  跑全部 Python 测试与前端竞态测试；仍**不安装** fastembed/onnxruntime，
+  避免模型下载让 CI 变红。轻量 job 补上事实一致性检查。
+- 新增 `workbench.tools.data_quality`：生成 `reports/data-quality.md` 与
+  `workbench/evaluation/data_quality.json`，量化「记录 ≠ 自然人」、同名组、
+  主页类型覆盖（personal 7,634 / none 4,424 / roster 488）、论文与招生覆盖、
+  缺失字段与采集月份；`--check` 供 CI 使用，不联网、不改数据。
+
+### 可靠性（本地存储）
+
+- **修复并发写入可能写坏 JSON**：原来用固定临时文件 `<name>.tmp`，两个保存同时发生时
+  会互相覆盖临时文件。现在改为**唯一临时文件 + fsync + 原子替换**，并在覆盖前保留 `.bak`。
+- **修复读—改—写丢更新**：项目与逐人档案的修改改为**锁内读取→修改→写回**
+  （`core.update_project` / `catalog.mutate_case`），并发 PATCH、并发导入不再互相覆盖。
+- **损坏文件不再静默重置**：解析失败会保留 `.corrupt-<时间>` 副本、优先从 `.bak` 恢复；
+  恢复不了就抛 `DataCorruptError`（HTTP 500），而不是当成「找不到项目」返回 404、
+  更不会把用户的调查记录覆盖成空白档案。
+- 新增 `workbench/storage.py` 作为存储基座；新增 `workbench.tools.backup_records`
+  （`--backup / --list / --verify / --restore`，恢复前自动另存 `before-restore`）。
+- 新增测试：`test_storage_safety`（并发写、丢更新、损坏恢复、`.bak` 保留）、
+  `test_backup_restore`（打包/校验/恢复/篡改拒绝）。
+
 ### 界面（产品级重做）
 
 - **拆成两个视图**：首页门户（`#homeView`）与研究工作台（`#workspaceView`），

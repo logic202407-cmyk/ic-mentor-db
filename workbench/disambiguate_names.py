@@ -53,7 +53,7 @@
 ----
     python -m workbench.disambiguate_names --evaluate      # 新协议指标 + 旧协议对照
     python -m workbench.disambiguate_names --review        # 同校同名待核队列
-    python -m workbench.disambiguate_names --gold          # 写独立复核集 gold_pairs.json
+    python -m workbench.disambiguate_names --gold          # 写程序辅助核验集 gold_pairs.json
 
 产物
 ----
@@ -73,6 +73,7 @@ import re
 import sys
 from collections import Counter, defaultdict
 from itertools import combinations
+import pathlib
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
@@ -651,11 +652,18 @@ def _quote(row_a: dict, row_b: dict) -> list[dict]:
 
 def gold_set(rows: list[dict], pages: PageIndex, seed: int = 42,
              unknown_sample: int = 25) -> list[dict]:
-    """构造小规模独立复核集。
+    """构造**程序辅助核验**样本集。
 
-    组成为：同校同名的**全部** ``same_person`` 与 ``different_person`` 候选（这是真正
-    有决策难度的全域，不做抽样），再从 ``unknown`` 里按固定种子抽样，保证三类都有
-    代表。总数由 ``unknown_sample`` 控制在 60–150 对。
+    重要：这里的 ``verdict`` 由 :func:`adjudicate` 的规则给出，而 ``auto_label`` 由
+    :func:`pair_label` 的规则给出——**两者都是程序，不是人工标注**。因此本集合只用于
+    「自动协议与规则复核是否一致」，不能当作 Precision/Recall 的人工金标准。
+
+    真正的独立标注走 :mod:`workbench.human_labels`：导出盲标表 → 人工填写
+    ``human_verdict``/``reviewer``/``reviewed_at`` → 导入后才计算指标；标注不足时
+    只记录状态，不报告指标。
+
+    组成为：同校同名的全部 ``same_person`` 与 ``different_person`` 候选（真正有决策
+    难度的全域，不做抽样），再从 ``unknown`` 里按固定种子抽样，保证三类都有代表。
     """
     same_inst = [r for r in rows if r["same_inst"]]
 
@@ -711,7 +719,11 @@ def gold_set(rows: list[dict], pages: PageIndex, seed: int = 42,
 
 
 def gold_agreement(gold: list[dict]) -> dict:
-    """复核集与自动协议的一致率（按类别）。"""
+    """自动协议与**规则复核**的一致率（按类别）。
+
+    两者同源（都读主页类型/站点归属/院系字段），所以这是一致性检查，
+    不是"人工验证自动协议"的准确率。
+    """
     clean = [g for g in gold if g["auto_label"] in (SAME, DIFFERENT)]
     agree = sum(1 for g in clean if g["verdict"] == g["auto_label"])
     per = {}
@@ -721,6 +733,9 @@ def gold_agreement(gold: list[dict]) -> dict:
         per[label] = {"auto": len(sub), "agreed": hit,
                       "agreement": (hit / len(sub)) if sub else None}
     return {
+        "protocol_status": "program-assisted",
+        "protocol_note": ("auto_label 与 verdict 都由程序规则生成，二者同源；"
+                          "该一致率不代表人工核验准确率。人工金标准见 human_labels。"),
         "reviewed_pairs": len(gold),
         "labelled_candidates": len(clean),
         "agreed": agree,
@@ -916,10 +931,11 @@ def _build_report(stats: dict, primary: dict | None = None,
             downgraded = reviewed["excluded_unknown"] - primary["excluded_unknown"]
         lines += [
             "",
-            "## 复核后指标（独立复核集判定，主指标的最终口径）",
+            "## 规则复核后指标（程序判定，非人工金标准）",
             "",
-            "复核对「同一 URL 但站点归属与院系不符」的组合降级为 `unknown`——这类主页"
-            "很可能是按姓名匹配接错的，不能算直接证据。",
+            "复核规则对「同一 URL 但站点归属与院系不符」的组合降级为 `unknown`——这类"
+            "主页很可能是按姓名匹配接错的，不能算直接证据。**注意：这一节仍是程序复核，"
+            "不是人工标注**；人工金标准尚未完成，见文末「人工标注状态」。",
             "",
             f"样本 **{reviewed['labelled_pairs']}** 对"
             f"（同人 {reviewed['positives']} / 异人 {reviewed['negatives']}）；"
@@ -945,6 +961,32 @@ def _build_report(stats: dict, primary: dict | None = None,
             lines.append(f"| {t['emb>=']:.2f} | {m['tp']} | {m['fp']} | {m['fn']} | "
                          f"{_pct(m['precision'])} | {_pct(m['recall'])} | "
                          f"{_pct(m['f1'])} |")
+
+    if reviewed is not None:
+        lines += [
+            "",
+            "## 人工标注状态：**待完成**",
+            "",
+            "上面所有指标都来自**程序规则**：`pair_label`（自动判定）与 `adjudicate`"
+            "（规则复核）同源，因此 91.3% 只是「两套规则是否一致」，不是人工验证的准确率。",
+            "",
+            "仓库已提供人工盲标协议与工具：",
+            "",
+            "```bat",
+            ".venv\\Scripts\\python.exe -m workbench.disambiguate_names --export-human "
+            "workbench/evaluation/human_annotation/annotation-template.csv",
+            ".venv\\Scripts\\python.exe -m workbench.disambiguate_names --import-human "
+            "<标注完成的CSV> --min-human 30",
+            "```",
+            "",
+            "- 盲标表不含模型分数与自动判定；评分用键单独保存，标注者不可见；",
+            "- 导入校验要求每行都有 verdict / reviewer / reviewed_at，缺一项整批拒绝；",
+            "- 标注 ≥30 对且正负例各 ≥5 后，才计算人工金标准指标；在此之前"
+            "**不得**把本节数字写成人工验证结果。",
+            "",
+            "协议与字段说明：`workbench/evaluation/human_annotation/protocol.md`。",
+            "",
+        ]
 
     if supplementary is not None:
         lines += [
@@ -1049,11 +1091,34 @@ def main() -> int:
                     help="跑新协议评测，并给出旧 URL 协议对照")
     ap.add_argument("--review", action="store_true", help="产出同校同名待核队列")
     ap.add_argument("--gold", action="store_true",
-                    help="写出独立复核集 workbench/evaluation/gold_pairs.json")
+                    help="写出程序辅助核验集 workbench/evaluation/gold_pairs.json（非人工金标准）")
+    ap.add_argument("--export-human", metavar="CSV", default="",
+                    help="导出人工盲标表（不含模型分数）")
+    ap.add_argument("--import-human", metavar="CSV", default="",
+                    help="导入人工判断并（在样本足够时）重算指标")
+    ap.add_argument("--human-status", action="store_true", help="查看人工金标准状态")
+    ap.add_argument("--min-human", type=int, default=30,
+                    help="报告人工指标所需的最小标注对数（默认 30）")
     ap.add_argument("--limit", type=int, default=0,
                     help="旧协议对照评测最多取多少对（0=全部）")
     ap.add_argument("--seed", type=int, default=42)
     args = ap.parse_args()
+
+    from . import human_labels
+    if args.export_human or args.import_human or args.human_status:
+        if args.export_human:
+            result = human_labels.export(pathlib.Path(args.export_human))
+            print(f"盲标表 {result['template']}（{result['pairs']} 对；"
+                  f"{result['categories']}）；评分用键 {result['key']}")
+        if args.import_human:
+            summary = human_labels.import_labels(
+                pathlib.Path(args.import_human), out_dir=EVAL_DIR,
+                min_labels=args.min_human)
+            print(json.dumps(summary, ensure_ascii=False, indent=2))
+        if args.human_status:
+            print(json.dumps(human_labels.status(EVAL_DIR), ensure_ascii=False, indent=2))
+        if not (args.evaluate or args.review or args.gold):
+            return 0
     if not (args.evaluate or args.review or args.gold):
         args.evaluate = args.review = args.gold = True
 
@@ -1206,10 +1271,12 @@ def main() -> int:
         agreement = gold_agreement(gold)
         payload = {
             "schema": "mentor-workbench/gold-pairs/v1",
+            "protocol_status": "program-assisted",
+            "human_gold_status": "pending",
             "description": (
-                "同名消歧独立复核集：每对的判定可由 a/b 内的原始字段直接复现；"
-                "verdict 是独立复核结论，auto_label 是模块自动协议给出的标签，"
-                "两者不一致之处即为协议的残余风险。"),
+                "程序辅助核验集：判定字段可由 a/b 内的原始字段直接复现；"
+                "verdict 由 adjudicate() 规则给出、auto_label 由 pair_label() 规则给出，"
+                "两者都是程序，并非人工标注。人工金标准见 workbench/evaluation/human_annotation/。"),
             "seed": args.seed,
             "protocol": {
                 "same_person": "同一专属个人主页 + 同机构 + 站点归属与院系一致",
