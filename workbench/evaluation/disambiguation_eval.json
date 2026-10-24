@@ -1,13 +1,13 @@
 {
   "schema": "mentor-workbench/disambiguation-eval/v1",
-  "generated_at": "2026-10-24T01:30:42+08:00",
+  "generated_at": "2026-10-24T18:51:44+08:00",
   "how_to_reproduce": "python -m workbench.disambiguate_names --evaluate --gold",
   "protocol": {
     "same_person": "同一专属个人主页 + 同机构 + 站点归属与院系一致",
     "different_person": "两个互不相同的专属主页且院系/一级学科冲突（或跨机构）",
     "unknown": "名录页/缺主页/同院系同学科/站点归属不符 —— 不进入指标"
   },
-  "description": "同名消歧独立复核集：每对的判定可由 a/b 内的原始字段直接复现；verdict 是独立复核结论，auto_label 是模块自动协议给出的标签，两者不一致之处即为协议的残余风险。",
+  "description": "程序辅助核验集：判定字段可由 a/b 内的原始字段直接复现；verdict 由 adjudicate() 规则给出、auto_label 由 pair_label() 规则给出，两者都是程序，并非人工标注。人工金标准见 workbench/evaluation/human_annotation/。",
   "stats": {
     "groups": 1024,
     "pairs_total": 2564,
@@ -1721,6 +1721,8 @@
     ]
   },
   "gold_agreement": {
+    "protocol_status": "program-assisted",
+    "protocol_note": "auto_label 与 verdict 都由程序规则生成，二者同源；该一致率不代表人工核验准确率。人工金标准见 human_labels。",
     "reviewed_pairs": 140,
     "labelled_candidates": 115,
     "agreed": 105,

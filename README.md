@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/代码许可-MIT-yellow.svg)](LICENSE)
 [![Data License](https://img.shields.io/badge/数据许可-见%20LICENSE--DATA-blue.svg)](LICENSE-DATA)
 [![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB.svg)](workbench/requirements.txt)
-[![Tests](https://img.shields.io/badge/tests-962%20passed-brightgreen.svg)](workbench/tests)
+[![Tests](https://img.shields.io/badge/tests-971%20passed-brightgreen.svg)](workbench/tests)
 [![Records](https://img.shields.io/badge/记录-15%2C719%20条-informational.svg)](CHANGELOG.md)
 [![Local Only](https://img.shields.io/badge/数据-仅存本机-success.svg)](SECURITY.md)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
@@ -59,7 +59,7 @@ py -3 -m venv .venv
 
 | 项目 | 体积 | 说明 |
 |:--|--:|:--|
-| 纳入 git 的文件（632 个） | **约 109 MB** | 按 git blob 大小统计（与平台无关）；大头是数据本体，见下方明细 |
+| 纳入 git 的文件（637 个） | **约 109 MB** | 按 git blob 大小统计（与平台无关）；大头是数据本体，见下方明细 |
 | `.git` | 约 67 MB | 历史提交 |
 | `.venv` | 约 211 MB | 虚拟环境，可由 `requirements.txt` 重建 |
 | `data/raw` | 约 890 MB | **抓取到的网页原文**，只在采集脚本里用；运行期不读它，已 gitignore |
@@ -643,7 +643,10 @@ node tools/verify_html.mjs reports/导师推荐.html reports/导师库.html
 
 **新协议**：只有「同一专属个人主页 + 同机构」才判 `same_person`（84 对）；各有互不相同
 的专属主页且院系/学科冲突才判 `different_person`（963 对）；缺主页/名录页/证据不足一律
-`unknown`（1,517 对，不进指标）。独立复核集 140 对与自动协议一致率 **91.3%**。
+`unknown`（1,517 对，不进指标）。规则复核集 140 对与自动判定一致率 **91.3%**——
+注意这是**两套程序规则的一致性**，不是人工金标准。人工标注协议、空白标注表与导入校验
+已备好（`workbench/evaluation/human_annotation/protocol.md`），**人工金标准状态：待完成**；
+在收集到 ≥30 对独立判断前，本页不报告人工 Precision/Recall。
 
 **主指标（同校同名，115 对 = 同人 84 / 异人 31）**：
 

@@ -1,6 +1,6 @@
 {
   "schema": "mentor-workbench/direction-validation/v1",
-  "generated_at": "2026-10-24T01:30:42+08:00",
+  "generated_at": "2026-10-24T18:51:44+08:00",
   "how_to_reproduce": "python -m workbench.infer_directions --validate 400 --ablate-text",
   "note": "指标由本机实跑产生；逐人建议在 .workbench-data，未随仓库提交。",
   "sampled": 400,

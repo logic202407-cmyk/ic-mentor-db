@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<!-- source-sha256: 16c3e8551a8fcbf479ba578da07bcfe250ded275b83295d1043c7c706380e559 -->
+<!-- source-sha256: 21dfac69c5e155f79118ab0396889aa21bf3558bed1f7fbbe6f55e7a9b242055 -->
 
 <meta charset="utf-8">
 <title>技术报告</title>
@@ -10,7 +10,7 @@
 * { box-sizing: border-box; }
 body {
   font-family: "Microsoft YaHei", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", sans-serif;
-  font-size: 9.4pt; line-height: 1.46; color: #1a1a1a; margin: 0;
+  font-size: 9.4pt; line-height: 1.43; color: #1a1a1a; margin: 0;
   -webkit-print-color-adjust: exact; print-color-adjust: exact;
 }
 h1 { font-size: 17pt; margin: 0 0 4mm; padding-bottom: 2mm; border-bottom: 2.2px solid #1f4e79; color: #14304a; }
@@ -18,7 +18,7 @@ h1 + blockquote { margin-top: 0; }
 h2 { font-size: 12.2pt; margin: 3.8mm 0 1.7mm; padding: 1.6mm 0 1.6mm 3mm; border-left: 4px solid #1f4e79; background: #f2f6fa; color: #14304a; page-break-after: avoid; }
 h3 { font-size: 10.4pt; margin: 3mm 0 1.2mm; color: #1f4e79; page-break-after: avoid; }
 h4 { font-size: 10.4pt; margin: 4mm 0 1.5mm; color: #333; page-break-after: avoid; }
-p { margin: 0 0 1.2mm; text-align: justify; }
+p { margin: 0 0 1.1mm; text-align: justify; }
 ul, ol { margin: 0 0 2.4mm; padding-left: 6.5mm; }
 li { margin-bottom: 0.5mm; }
 table { border-collapse: collapse; width: 100%; margin: 2mm 0 3mm; font-size: 9.1pt; page-break-inside: auto; }
@@ -309,8 +309,12 @@ AUC 全部来自跨校对比，是<strong>虚高</strong>。</p>
 </tbody>
 </table>
 <p><code>unknown</code> 不进入任何指标，单独报数：缺主页 1,209 对、名录页 221 对、两者兼有 87 对。
-另有独立复核集 <code>workbench/evaluation/gold_pairs.json</code>（140 对，含 35 对 <code>unknown</code>），
-与自动协议一致率 <strong>91.3%</strong>（<code>same_person</code> 88.1%、<code>different_person</code> 100%）。</p>
+另有<strong>规则复核集</strong> <code>workbench/evaluation/gold_pairs.json</code>（140 对，含 35 对 <code>unknown</code>）。
+它由 <code>adjudicate()</code> 的规则生成，与自动判定 <code>pair_label()</code> 同源，因此
+<strong>91.3% 只是一致性检查</strong>（<code>same_person</code> 88.1%、<code>different_person</code> 100%），
+<strong>不是人工验证的准确率</strong>。人工金标准尚未完成：仓库已提供盲标协议、空白标注表与
+导入校验工具（<code>workbench/evaluation/human_annotation/protocol.md</code>），
+需 ≥30 对独立人工判断后才报告 Precision / Recall / F1。</p>
 <p><strong>结果（主指标：同校同名，115 对 = 同人 84 / 异人 31）。</strong></p>
 <table>
 <thead>
@@ -358,7 +362,7 @@ AUC 全部来自跨校对比，是<strong>虚高</strong>。</p>
 </tr>
 </tbody>
 </table>
-<p>复核后（105 对，剔除 10 对错配主页）：嵌入 AUC <strong>0.834</strong>，
+<p>规则复核后（105 对，剔除 10 对错配主页）：嵌入 AUC <strong>0.834</strong>，
 阈值 0.70 时精确率 <strong>84.3%</strong> / 召回率 <strong>94.6%</strong> / F1 <strong>89.2%</strong>（朴素基线 F1 82.7%）。</p>
 <p><strong>必须写明的失败模式。</strong> 嵌入相似度高<strong>不能</strong>覆盖「主页不同」的硬事实：高危误合并
 （嵌入 ≥0.85 但判<strong>不是同人</strong>）共 <strong>124 对</strong>，例如「西安交大 王晶 · 0.990」两个主页分属
