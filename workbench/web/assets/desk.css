@@ -1947,6 +1947,211 @@ body{overflow-wrap:anywhere}
 .skeleton.block { height: 80px; margin-top: 14px; }
 @keyframes shimmer { 0% { background-position: 100% 50%; } 100% { background-position: 0 50%; } }
 
+/* ── 移动端汉堡按钮与抽屉导航 ── */
+.mobile-menu-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  color: #ffffff;
+  cursor: pointer;
+  margin-right: 8px;
+  flex-shrink: 0;
+  transition: all 0.15s ease;
+}
+.mobile-menu-btn:hover, .mobile-menu-btn:focus-visible {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+.mobile-nav-drawer {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+}
+.mobile-nav-drawer[hidden] {
+  display: none;
+}
+.mobile-nav-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(2px);
+}
+.mobile-nav-sheet {
+  position: relative;
+  z-index: 1001;
+  width: min(290px, 80vw);
+  height: 100%;
+  background: #ffffff;
+  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+}
+.mobile-drawer-head {
+  padding: 16px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+  background: #f8fafc;
+}
+.mobile-brand-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1e293b;
+}
+.mobile-brand-subtitle {
+  font-size: 11px;
+  color: var(--muted);
+  margin-left: 6px;
+}
+.mobile-drawer-close {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  color: var(--muted);
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+.mobile-drawer-close:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+.mobile-drawer-menu {
+  flex: 1;
+  padding: 12px 10px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.mobile-drawer-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  color: #334155;
+  font-size: 14.5px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.15s ease;
+  width: 100%;
+}
+.mobile-drawer-item:hover {
+  background: #f1f5f9;
+  color: var(--primary);
+}
+.mobile-drawer-item.active {
+  background: #eff6ff;
+  color: var(--primary);
+  font-weight: 600;
+}
+.mobile-drawer-footer {
+  padding: 12px 14px;
+  border-top: 1px solid var(--border);
+  background: #f8fafc;
+}
+.mobile-status-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* ── 移动端返回搜索结果按钮 (<=960px) ── */
+.mobile-back-row {
+  display: none;
+  margin-bottom: 12px;
+}
+.mobile-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 13px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.mobile-back-btn:hover {
+  background: #dbeafe;
+}
+
+/* ── 5 项紧凑摘要状态栏 ── */
+.entry-cards-row.compact-ribbon {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.entry-feature-card.compact-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  font-size: 12.5px;
+  color: #334155;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+}
+.entry-feature-card.compact-pill:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+  color: var(--primary);
+  transform: translateY(-1px);
+}
+.entry-feature-card.compact-pill .pill-icon {
+  font-size: 13px;
+}
+.entry-feature-card.compact-pill .pill-label {
+  font-weight: 600;
+  color: var(--muted);
+  font-size: 12px;
+}
+.entry-feature-card.compact-pill .pill-value {
+  color: #0f172a;
+  max-width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ── 学科导航规范徽章 ── */
+.disc-spec-pill {
+  display: inline-block;
+  margin-top: 3px;
+  font-size: 11.5px;
+  color: #0284c7;
+  background: #e0f2fe;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+
 /* 必须包含的三个断点，满足 test_web_structure.py 断言 */
 @media(max-width:1240px) {
   .tri-split-layout {
@@ -1986,6 +2191,9 @@ body{overflow-wrap:anywhere}
   .dossier-action-btns {
     justify-content: flex-start;
   }
+  .mobile-back-row {
+    display: flex;
+  }
   .entry-cards-row {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -2000,6 +2208,9 @@ body{overflow-wrap:anywhere}
 @media(max-width:860px) {
   .sidebar {
     display: none;
+  }
+  .mobile-menu-btn {
+    display: flex;
   }
   .main-content {
     padding: 14px 12px 48px;
@@ -2026,6 +2237,21 @@ body{overflow-wrap:anywhere}
 }
 
 @media(max-width: 560px) {
+  .brand-subtitle {
+    display: none;
+  }
+  .top-status-pills .status-pill.is-neutral {
+    display: none;
+  }
+  .search-filter-card {
+    padding: 14px 12px;
+  }
+  .card-search-input-row {
+    gap: 8px;
+  }
+  .search-box-inner {
+    padding: 2px 10px;
+  }
   .filter-selects-row {
     grid-template-columns: 1fr;
   }
@@ -2035,7 +2261,41 @@ body{overflow-wrap:anywhere}
   .workflow-steps-row {
     grid-template-columns: 1fr;
   }
+  .entry-feature-card.compact-pill {
+    padding: 5px 9px;
+    font-size: 11.5px;
+  }
 }
+
+@media(max-width: 360px) {
+  .brand-title {
+    font-size: 16px;
+  }
+  .brand-logo-svg {
+    width: 28px;
+    height: 28px;
+  }
+  .top-status-pills {
+    display: none;
+  }
+  .search-filter-card {
+    padding: 12px 10px;
+  }
+  .card-search-input-row {
+    gap: 6px;
+  }
+  .search-box-inner {
+    padding: 2px 8px;
+  }
+  .card-search-btn {
+    padding: 0 12px;
+    font-size: 13px;
+  }
+  .main-content {
+    padding: 10px 6px 40px;
+  }
+}
+
 
 @media(prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

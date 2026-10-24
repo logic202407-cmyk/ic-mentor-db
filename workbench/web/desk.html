@@ -15,6 +15,15 @@
   <!-- 顶部主导航 -->
   <header class="top-nav" role="banner">
     <div class="nav-inner">
+      <!-- 移动端汉堡菜单按钮 (<=860px) -->
+      <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="打开导航菜单" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+
       <!-- 品牌标识 -->
       <a href="/" class="brand-identity" data-nav="home" aria-label="循证知途首页">
         <svg class="brand-logo-svg" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -60,6 +69,52 @@
       </div>
     </div>
   </header>
+
+  <!-- 移动端侧边抽屉导航 (<=860px) -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer" hidden>
+    <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
+    <div class="mobile-nav-sheet" role="dialog" aria-modal="true" aria-label="移动端主导航">
+      <div class="mobile-drawer-head">
+        <div class="mobile-brand-row">
+          <span class="mobile-brand-title">循证知途</span>
+          <span class="mobile-brand-subtitle">导航菜单</span>
+        </div>
+        <button type="button" class="mobile-drawer-close" id="mobileDrawerClose" aria-label="关闭导航">✕</button>
+      </div>
+      <nav class="mobile-drawer-menu" role="tablist">
+        <button type="button" class="mobile-drawer-item" data-nav="home">
+          <svg class="nav-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 7-7 7 7v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 20 9 12 11 12 11 20"/></svg>
+          <span>首页总览</span>
+        </button>
+        <button type="button" class="mobile-drawer-item active" data-nav="workspace">
+          <svg class="nav-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="9" r="6"/><line x1="19" y1="19" x2="13.5" y2="13.5"/></svg>
+          <span>导师检索</span>
+        </button>
+        <button type="button" class="mobile-drawer-item" data-nav="discipline">
+          <svg class="nav-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 7l8-4 8 4-8 4-8-4z"/><path d="M5 8.5V14c0 1.5 2.5 3 5 3s5-1.5 5-3V8.5"/><path d="M18 10v4"/></svg>
+          <span>学科导航</span>
+        </button>
+        <button type="button" class="mobile-drawer-item" data-nav="records">
+          <svg class="nav-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/><path d="M9 7h3"/><path d="M9 11h3"/><path d="M9 15h2"/></svg>
+          <span>调查记录</span>
+        </button>
+        <button type="button" class="mobile-drawer-item" data-nav="sources">
+          <svg class="nav-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="10" cy="5" rx="7" ry="3"/><path d="M3 5v5c0 1.7 3.1 3 7 3s7-1.3 7-3V5"/><path d="M3 10v5c0 1.7 3.1 3 7 3s7-1.3 7-3v-5"/></svg>
+          <span>数据来源</span>
+        </button>
+        <button type="button" class="mobile-drawer-item" data-nav="about">
+          <svg class="nav-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="8"/><line x1="10" y1="14" x2="10" y2="10"/><line x1="10" y1="6" x2="10.01" y2="6"/></svg>
+          <span>关于说明</span>
+        </button>
+      </nav>
+      <div class="mobile-drawer-footer">
+        <div class="mobile-status-badge">
+          <span class="pulse-dot"></span>
+          <span>本机运行 · 保护调查隐私</span>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- 主应用体：左侧边栏 + 右侧主视图 -->
   <div class="app-body">
@@ -393,6 +448,16 @@
 
             <!-- 完整导师档案展示区域 -->
             <article id="dossier" hidden aria-labelledby="mentorTitle">
+              <!-- 移动端返回搜索结果按钮 (<=960px) -->
+              <div class="mobile-back-row">
+                <button type="button" class="mobile-back-btn" id="mobileBackBtn">
+                  <svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>返回导师检索列表</span>
+                </button>
+              </div>
+
               <nav class="breadcrumb" id="breadcrumb" aria-label="面包屑导航"></nav>
 
               <!-- 顶部导师档案摘要大卡片 -->
@@ -438,58 +503,33 @@
                 <dl class="dossier-facts hidden" id="dossierFacts"></dl>
               </header>
 
-              <!-- 5 张核心信息入口卡片自适应网格 -->
-              <div class="entry-cards-row" role="group" aria-label="快速信息定位">
-                <div class="entry-feature-card" data-jump-pane="identity">
-                  <div class="entry-card-top">
-                    <span class="entry-card-title">
-                      <svg class="line-icon" style="width:14px;height:14px;color:#1e60d5;flex-shrink:0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"/></svg>
-                      研究方向
-                    </span>
-                    <span class="entry-card-arrow">›</span>
-                  </div>
-                  <span class="entry-card-desc" id="entryInterestsDesc">查阅研究方向关键词</span>
-                </div>
-                <div class="entry-feature-card" data-jump-pane="papers">
-                  <div class="entry-card-top">
-                    <span class="entry-card-title">
-                      <svg class="line-icon" style="width:14px;height:14px;color:#1e60d5;flex-shrink:0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd"/></svg>
-                      论文成果
-                    </span>
-                    <span class="entry-card-arrow">›</span>
-                  </div>
-                  <span class="entry-card-desc" id="entryPapersDesc">已收录公开论文线索</span>
-                </div>
-                <div class="entry-feature-card" data-jump-pane="admission">
-                  <div class="entry-card-top">
-                    <span class="entry-card-title">
-                      <svg class="line-icon" style="width:14px;height:14px;color:#1e60d5;flex-shrink:0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v1h8v-1zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 16v-1a4 4 0 00-3-3.874V14a5.98 5.98 0 013 2zM4 16a5.98 5.98 0 013-2v-2.874A4 4 0 004 15v1z"/></svg>
-                      招生信息
-                    </span>
-                    <span class="entry-card-arrow">›</span>
-                  </div>
-                  <span class="entry-card-desc" id="entryAdmissionDesc">公开招生简章与年份</span>
-                </div>
-                <div class="entry-feature-card" data-jump-pane="network">
-                  <div class="entry-card-top">
-                    <span class="entry-card-title">
-                      <svg class="line-icon" style="width:14px;height:14px;color:#1e60d5;flex-shrink:0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd"/></svg>
-                      团队信息
-                    </span>
-                    <span class="entry-card-arrow">›</span>
-                  </div>
-                  <span class="entry-card-desc" id="entryTeamDesc">团队主页与关系线索</span>
-                </div>
-                <div class="entry-feature-card" data-jump-pane="investigation">
-                  <div class="entry-card-top">
-                    <span class="entry-card-title">
-                      <svg class="line-icon" style="width:14px;height:14px;color:#1e60d5;flex-shrink:0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"/></svg>
-                      公开来源
-                    </span>
-                    <span class="entry-card-arrow">›</span>
-                  </div>
-                  <span class="entry-card-desc" id="entrySourcesDesc">学校官网、名录等出处</span>
-                </div>
+              <!-- 5 项核心信息紧凑摘要状态栏 (直接联动 5 个 Tab，高度精简) -->
+              <div class="entry-cards-row compact-ribbon" role="group" aria-label="快速信息定位">
+                <button type="button" class="entry-feature-card compact-pill" data-jump-pane="identity" title="查看导师研究方向与基本信息">
+                  <span class="pill-icon" aria-hidden="true">📚</span>
+                  <span class="pill-label">方向:</span>
+                  <span class="pill-value" id="entryInterestsDesc">查阅方向关键词</span>
+                </button>
+                <button type="button" class="entry-feature-card compact-pill" data-jump-pane="papers" title="查看公开论文成果线索">
+                  <span class="pill-icon" aria-hidden="true">📄</span>
+                  <span class="pill-label">成果:</span>
+                  <span class="pill-value" id="entryPapersDesc">已收录公开论文</span>
+                </button>
+                <button type="button" class="entry-feature-card compact-pill" data-jump-pane="admission" title="查看公开招生简章">
+                  <span class="pill-icon" aria-hidden="true">🎓</span>
+                  <span class="pill-label">招生:</span>
+                  <span class="pill-value" id="entryAdmissionDesc">公开招生简章</span>
+                </button>
+                <button type="button" class="entry-feature-card compact-pill" data-jump-pane="network" title="查看团队主页与关系线索">
+                  <span class="pill-icon" aria-hidden="true">👥</span>
+                  <span class="pill-label">团队:</span>
+                  <span class="pill-value" id="entryTeamDesc">主页与关系线索</span>
+                </button>
+                <button type="button" class="entry-feature-card compact-pill" data-jump-pane="investigation" title="查看学校官网出处与核查记录">
+                  <span class="pill-icon" aria-hidden="true">🔍</span>
+                  <span class="pill-label">来源:</span>
+                  <span class="pill-value" id="entrySourcesDesc">学校官网出处</span>
+                </button>
               </div>
 
               <!-- 5 核心详情标签栏 (Tabs) -->
@@ -524,8 +564,8 @@
 
           <!-- ── 右栏：轻量辅助信息与使用说明 (~20%) ────────────────────────── -->
           <aside class="aux-col" id="auxSidebar" aria-label="辅助信息与使用提示">
-            <!-- 模块一：信息完整情况 -->
-            <article class="aux-card">
+            <!-- 模块一：信息完整情况（仅在选中导师后展示真实核实数据） -->
+            <article class="aux-card" id="auxCompletenessCard" hidden>
               <div class="aux-card-head">
                 <div class="aux-card-title">
                   <svg class="title-icon green" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -537,21 +577,32 @@
               </div>
               <div class="completeness-stats-row">
                 <div class="comp-stat-item">
-                  <span class="comp-stat-num is-green" id="auxVerifiedNum">12</span>
+                  <span class="comp-stat-num is-green" id="auxVerifiedNum">-</span>
                   <span class="comp-stat-label">已核验证据源</span>
                 </div>
                 <div class="comp-stat-item">
-                  <span class="comp-stat-num is-orange" id="auxPendingNum">2</span>
+                  <span class="comp-stat-num is-orange" id="auxPendingNum">-</span>
                   <span class="comp-stat-label">待补充来源</span>
                 </div>
               </div>
               <div class="completeness-footer">
                 <div class="comp-update-info">
                   <small>最近更新日期</small>
-                  <strong id="auxUpdatedDate">2024-06-10</strong>
+                  <strong id="auxUpdatedDate">暂无记录</strong>
                 </div>
-                <span class="completeness-pill-badge" id="auxCompletenessBadge">✓ 信息较完整</span>
+                <span class="completeness-pill-badge" id="auxCompletenessBadge">待核查</span>
               </div>
+            </article>
+
+            <!-- 模块一占位：未选择导师时的提示 -->
+            <article class="aux-card aux-placeholder-card" id="auxEmptyPlaceholder">
+              <div class="aux-card-head">
+                <div class="aux-card-title">
+                  <span aria-hidden="true" style="font-size:16px">📋</span>
+                  <span>核查与证据说明</span>
+                </div>
+              </div>
+              <p class="quiet" style="margin:8px 0 0;font-size:13px;line-height:1.6">从左侧检索并选择一位导师，即可在此查看该导师的公开来源收录数、核查进展及更新时间线。</p>
             </article>
 
             <!-- 模块二：来源说明 -->
@@ -640,6 +691,10 @@
           <div class="home-section-title-wrap">
             <h2 id="discNavTitle">工学一级学科导航</h2>
             <p>基于教育部规范学科目录，覆盖38个工学一级学科，点击学科即可快速过滤已收录导师与机构。</p>
+          </div>
+          <div class="discipline-search-wrap" style="margin: 0 0 16px;">
+            <label for="disciplineSearchInput" class="hidden">搜索学科代码或名称</label>
+            <input type="search" id="disciplineSearchInput" class="field" placeholder="输入学科代码或学科名称快速过滤（如 0811、计算机、控制、材料）…" style="max-width: 480px; width: 100%;">
           </div>
           <div class="discipline-grid" id="fullDisciplinesGrid">
             <p class="quiet">正在读取学科目录…</p>
@@ -879,6 +934,13 @@ function setView(viewName) {
     btn.setAttribute('aria-selected', String(active));
   });
 
+  // 更新移动端抽屉菜单高亮
+  document.querySelectorAll('.mobile-drawer-item').forEach(btn => {
+    const active = btn.dataset.nav === viewName;
+    btn.classList.toggle('active', active);
+  });
+  if (typeof closeMobileDrawer === 'function') closeMobileDrawer();
+
   // 切换对应视图显隐
   $('homeView').hidden = (viewName !== 'home');
   $('workspaceView').hidden = (viewName !== 'workspace');
@@ -907,6 +969,8 @@ function clearDossier() {
   if (intro) intro.hidden = false;
   $('dossier').hidden = true;
   if ($('loadingPanel')) $('loadingPanel').hidden = true;
+  if ($('auxCompletenessCard')) $('auxCompletenessCard').hidden = true;
+  if ($('auxEmptyPlaceholder')) $('auxEmptyPlaceholder').hidden = false;
   history.replaceState(null, '', location.pathname);
 }
 
@@ -1112,6 +1176,8 @@ function renderDossier() {
   $('entrySourcesDesc').textContent = totalSources > 0 ? `${totalSources} 条来源出处` : '暂无来源原文';
 
   // 3. 右侧辅助栏信息完整度与说明联动更新（严禁虚假兜底）
+  if ($('auxCompletenessCard')) $('auxCompletenessCard').hidden = false;
+  if ($('auxEmptyPlaceholder')) $('auxEmptyPlaceholder').hidden = true;
   const verifiedCount = (data.sources || []).filter(s => s.status === '已人工核查').length;
   const pendingCount = (data.sources || []).filter(s => s.status !== '已人工核查').length;
   $('auxVerifiedNum').textContent = verifiedCount;
@@ -1669,31 +1735,62 @@ function renderRelationGraph(data) {
 function bindNetworkFilters() {}
 
 /* ── 38个工学一级学科导航网格 ── */
+function renderDisciplineCards(list) {
+  const grid = $('fullDisciplinesGrid');
+  if (!grid) return;
+  if (!list.length) {
+    grid.innerHTML = emptyState('未找到匹配的一级学科', '请尝试输入其他学科代码或名称，如 0811、计算机、材料等。');
+    return;
+  }
+  grid.innerHTML = list.map(d => `
+    <div class="discipline-card-btn" data-disc-name="${esc(d.name)}" role="button" tabindex="0">
+      <div class="disc-code-name">
+        <strong>${esc(d.name)}</strong>
+        <span class="disc-spec-pill">工学一级学科</span>
+      </div>
+      <span class="disc-count-pill">${d.count} 位导师</span>
+    </div>
+  `).join('');
+
+  grid.querySelectorAll('[data-disc-name]').forEach(card => {
+    card.onclick = async () => {
+      const disc = card.dataset.discName;
+      setView('workspace');
+      setSearchMode('filter');
+      const sel = $('disciplineSelect');
+      if (sel) {
+        sel.value = disc;
+        await chooseDiscipline();
+      }
+      $('candidateList')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+  });
+}
+
 async function renderFullDisciplines() {
   const grid = $('fullDisciplinesGrid');
   if (!grid) return;
   grid.innerHTML = '<p class="quiet">正在读取38个工学一级学科收录情况…</p>';
   try {
     const items = await api('/api/catalog/disciplines?' + params({ project_id: state.projectId, include_non_engineering: true }));
-    const engineering = items.filter(i => i.engineering);
-    grid.innerHTML = engineering.map(d => `
-      <div class="discipline-card-btn" data-disc-name="${esc(d.name)}" role="button" tabindex="0">
-        <div class="disc-code-name">
-          <strong>${esc(d.name)}</strong>
-          <small>${d.institutions || 0} 所高校覆盖</small>
-        </div>
-        <span class="disc-count-pill">${d.count} 人</span>
-      </div>
-    `).join('');
+    state.cachedEngineeringDisciplines = items.filter(i => i.engineering);
+    const searchInput = $('disciplineSearchInput');
+    const q = searchInput ? searchInput.value.trim().toLowerCase() : '';
+    const filtered = q
+      ? state.cachedEngineeringDisciplines.filter(d => d.name.toLowerCase().includes(q))
+      : state.cachedEngineeringDisciplines;
+    renderDisciplineCards(filtered);
 
-    grid.querySelectorAll('[data-disc-name]').forEach(card => {
-      card.onclick = async () => {
-        const disc = card.dataset.discName;
-        setView('workspace');
-        $('disciplineSelect').value = disc;
-        await chooseDiscipline();
+    if (searchInput && !searchInput.dataset.bound) {
+      searchInput.dataset.bound = 'true';
+      searchInput.oninput = () => {
+        const query = searchInput.value.trim().toLowerCase();
+        const res = query
+          ? (state.cachedEngineeringDisciplines || []).filter(d => d.name.toLowerCase().includes(query))
+          : (state.cachedEngineeringDisciplines || []);
+        renderDisciplineCards(res);
       };
-    });
+    }
   } catch (err) {
     grid.innerHTML = emptyState('学科目录加载失败', err.message);
   }
@@ -1709,17 +1806,42 @@ async function renderLocalRecords() {
       list.innerHTML = emptyState('当前暂无正在调查的导师记录', '在导师检索中创建资料夹或标记核对后将在此持久化显示。');
       return;
     }
-    list.innerHTML = projects.map(p => `
-      <div style="background:#ffffff;border:1px solid var(--border);border-radius:8px;padding:16px;margin-bottom:12px">
-        <div style="display:flex;justify-content:space-between;align-items:center">
-          <strong style="font-size:16px;color:#0f172a">${esc(p.name)}</strong>
-          <span style="font-size:12px;color:var(--muted)">收录 ${p.count} 条导师档案</span>
+    const active = projects.filter(p => p.count > 0);
+    const emptyProjects = projects.filter(p => p.count === 0);
+
+    let html = '';
+    if (active.length > 0) {
+      html += active.map(p => `
+        <div class="record-project-card" style="background:#ffffff;border:1px solid var(--border);border-radius:10px;padding:16px 20px;margin-bottom:12px;box-shadow:0 1px 3px rgba(0,0,0,0.03);display:flex;justify-content:space-between;align-items:center">
+          <div>
+            <strong style="font-size:16px;color:#0f172a">${esc(p.name)}</strong>
+            <p style="margin:4px 0 0;font-size:13px;color:var(--muted)">已收录 <b>${p.count}</b> 条导师调查档案</p>
+          </div>
+          <div style="display:flex;gap:10px">
+            <a class="button light slim" href="/api/projects/${p.id}/export">导出资料包 (JSON)</a>
+          </div>
         </div>
-        <div style="margin-top:10px;display:flex;gap:10px">
-          <a class="button light slim" href="/api/projects/${p.id}/export">导出资料夹 (JSON)</a>
-        </div>
-      </div>
-    `).join('');
+      `).join('');
+    } else {
+      html += '<p class="quiet" style="margin-bottom:16px">暂无已收录导师的活跃项目资料夹。</p>';
+    }
+
+    if (emptyProjects.length > 0) {
+      html += `
+        <details class="empty-projects-accordion" style="margin-top:16px;border:1px dashed var(--border);border-radius:8px;padding:12px 16px;background:#f8fafc">
+          <summary style="font-weight:600;font-size:13px;color:var(--muted);cursor:pointer">未归档/空资料夹 (${emptyProjects.length} 个项目，点击展开)</summary>
+          <div style="margin-top:12px;display:flex;flex-direction:column;gap:8px">
+            ${emptyProjects.map(p => `
+              <div style="background:#ffffff;border:1px solid var(--border);border-radius:6px;padding:10px 14px;display:flex;justify-content:space-between;align-items:center">
+                <span style="font-size:13px;color:#475569">${esc(p.name)} (0 条档案)</span>
+                <a class="button light slim" style="padding:4px 8px;font-size:12px" href="/api/projects/${p.id}/export">导出</a>
+              </div>
+            `).join('')}
+          </div>
+        </details>
+      `;
+    }
+    list.innerHTML = html;
   } catch (err) {
     list.innerHTML = emptyState('无法读取本地记录', err.message);
   }
@@ -1739,69 +1861,12 @@ async function loadDisciplines() {
   } catch (e) {}
 }
 
-async function chooseDiscipline() {
-  clearDossier();
-  const disc = $('disciplineSelect').value;
-  $('institutionSelect').innerHTML = '<option value="">全部高校</option>';
-  $('institutionSelect').disabled = !disc;
-  $('directionSelect').innerHTML = '<option value="">全部研究方向</option>';
-  $('directionSelect').disabled = true;
-  state.candidates = [];
-  renderCandidates();
-
-  if (!disc) return;
-  message('正在列出高校…');
-  try {
-    const items = await api('/api/catalog/institutions?' + params({ discipline: disc, project_id: state.projectId, ...scopeParams() }));
-    $('institutionSelect').innerHTML = '<option value="__all__">全部高校</option>' + items.map(i => `
-      <option value="${esc(i.name)}">${esc(i.name)} (${i.count})</option>
-    `).join('');
-    $('institutionSelect').disabled = false;
-    $('institutionSelect').value = '__all__';
-    await chooseInstitution();
-  } catch (err) { message(err.message, true); }
-}
-
-async function chooseInstitution() {
-  clearDossier();
-  const disc = $('disciplineSelect').value;
-  const inst = $('institutionSelect').value;
-  $('directionSelect').innerHTML = '<option value="">全部研究方向</option>';
-  $('directionSelect').disabled = !inst;
-  state.candidates = [];
-  renderCandidates();
-
-  if (!inst) return;
-  message('正在列出研究方向…');
-  try {
-    const items = await api('/api/catalog/directions?' + params({ discipline: disc, institution: inst, project_id: state.projectId, ...scopeParams() }));
-    $('directionSelect').innerHTML = '<option value="__all__">全部研究方向</option>' + items.map(d => `
-      <option value="${esc(d.name)}">${esc(formatDirection(d.name))} (${d.count})</option>
-    `).join('');
-    $('directionSelect').disabled = false;
-    $('directionSelect').value = '__all__';
-    await chooseDirection();
-  } catch (err) { message(err.message, true); }
-}
-
-async function chooseDirection() {
-  clearDossier();
-  const disc = $('disciplineSelect').value;
-  const inst = $('institutionSelect').value;
-  const dir = $('directionSelect').value;
-  if (!dir) return;
-
-  message('正在列出导师…');
-  try {
-    const items = await api('/api/catalog/mentors?' + params({ discipline: disc, institution: inst, direction: dir, project_id: state.projectId, ...scopeParams() }));
-    state.candidates = items;
-    renderCandidates();
-    message(`找到 ${items.length} 位匹配导师。`);
-    if (items.length > 0) {
-      openMentor(items[0].id, { quietScroll: true });
-    }
-  } catch (err) { message(err.message, true); }
-}
+function resetSelect(id, label) { const el = $(id); if (el) { el.innerHTML = `<option value="">${esc(label)}</option>`; el.disabled = true; } }
+async function chooseDiscipline(){clearDossier();const version=state.queryVersion;const discipline=$('disciplineSelect').value;resetSelect('institutionSelect','请选择高校');resetSelect('directionSelect','先选高校');state.candidates=[];renderCandidates();if(!discipline){message('先选择一级学科…');return;}message('正在列出高校…');try{const items=await api('/api/catalog/institutions?'+params({discipline,project_id:state.projectId,...scopeParams()}));if(version!==state.queryVersion)return;$('institutionSelect').innerHTML='<option value="__all__">全部高校 / 机构</option>'+items.map(item=>`<option value="${esc(item.name)}">${esc(item.name)} · ${item.count} 人</option>`).join('');$('institutionSelect').disabled=!items.length;if(items.length){$('institutionSelect').value='__all__';await chooseInstitution();}else{message('这个学科还没有导师资料，可以自己添加。');}}catch(error){if(version===state.queryVersion)message(error.message,true);}}
+async function chooseInstitution(){clearDossier();const version=state.queryVersion;const discipline=$('disciplineSelect').value,institution=$('institutionSelect').value;resetSelect('directionSelect','请选择方向');state.candidates=[];renderCandidates();if(!institution){message('先选择高校…');return;}message('正在列出研究方向…');try{const items=await api('/api/catalog/directions?'+params({discipline,institution,project_id:state.projectId,...scopeParams()}));if(version!==state.queryVersion)return;$('directionSelect').innerHTML='<option value="__all__">全部方向</option>'+items.map(item=>`<option value="${esc(item.name)}">${esc((typeof formatDirection==='function'?formatDirection(item.name):item.name))} · ${item.count} 人</option>`).join('');$('directionSelect').disabled=!items.length;if(items.length){$('directionSelect').value='__all__';await chooseDirection();}else{message('当前选择下暂无已收录方向。');}}catch(error){if(version===state.queryVersion)message(error.message,true);}}
+async function chooseDirection(){clearDossier();const version=state.queryVersion;const discipline=$('disciplineSelect').value,institution=$('institutionSelect').value,direction=$('directionSelect').value;state.candidates=[];renderCandidates();if(!direction){message('请选方向…');return;}message('正在列出导师…');try{const items=await api('/api/catalog/mentors?'+params({discipline,institution,direction,project_id:state.projectId,...scopeParams()}));if(version!==state.queryVersion)return;state.candidates=items;renderCandidates();message(`找到 ${state.candidates.length} 条记录，请选择导师。`);if(items.length>0&&typeof openMentor==='function'){openMentor(items[0].id,{quietScroll:true});}}catch(error){if(version===state.queryVersion)message(error.message,true);}}
+async function linkAuthor(authorId){const d=state.mentor;if(!d)return;if($('authorStatus'))$('authorStatus').textContent='正在读取所选作者的公开作品…';try{d.case=await api('/api/catalog/mentor/'+encodeURIComponent(d.profile.id)+'/case',{method:'PATCH',body:JSON.stringify({openalex_author_id:authorId})});if(state.mentor!==d)return;await refreshAuthorWorks();}catch(error){if(state.mentor===d&&$('authorStatus'))$('authorStatus').textContent=error.message;}}
+async function refreshAuthorWorks(){const d=state.mentor;if(!d)return;const button=$('refreshOpenalex');if(button)button.disabled=true;if($('authorStatus'))$('authorStatus').textContent='正在更新公开作品…';try{d.case=await api('/api/catalog/mentor/'+encodeURIComponent(d.profile.id)+'/openalex/refresh',{method:'POST'});if(state.mentor!==d)return;renderPapers();renderNetwork();if($('authorStatus'))$('authorStatus').textContent=`已读取 ${(d.case&&d.case.openalex_snapshot&&d.case.openalex_snapshot.papers||[]).length} 条最近作品线索，仍需逐篇核查。`;}catch(error){if(state.mentor===d&&$('authorStatus'))$('authorStatus').textContent=error.message;}finally{if(button)button.disabled=false;}}
 
 /* ── 首页统计与收录范围读取 ── */
 async function loadCoverage() {
@@ -1858,17 +1923,59 @@ $('workspaceSearchForm').onsubmit = e => {
   lookupName($('nameInput').value);
 };
 
-$('btnSearchMode').onclick = () => {
-  $('btnSearchMode').classList.add('active');
-  $('btnFilterMode').classList.remove('active');
-  $('nameInput').focus();
-};
+function setSearchMode(mode) {
+  const isFilter = (mode === 'filter');
+  $('btnFilterMode')?.classList.toggle('active', isFilter);
+  $('btnFilterMode')?.setAttribute('aria-selected', String(isFilter));
+  $('btnSearchMode')?.classList.toggle('active', !isFilter);
+  $('btnSearchMode')?.setAttribute('aria-selected', String(!isFilter));
+  if (isFilter) {
+    $('disciplineSelect')?.focus();
+  } else {
+    $('nameInput')?.focus();
+  }
+}
 
-$('btnFilterMode').onclick = () => {
-  $('btnFilterMode').classList.add('active');
-  $('btnSearchMode').classList.remove('active');
-  $('disciplineSelect').focus();
-};
+$('btnSearchMode').onclick = () => setSearchMode('search');
+$('btnFilterMode').onclick = () => setSearchMode('filter');
+
+// 移动端侧边抽屉控制
+function openMobileDrawer() {
+  const drawer = $('mobileNavDrawer');
+  if (drawer) {
+    drawer.hidden = false;
+    $('mobileMenuBtn')?.setAttribute('aria-expanded', 'true');
+    document.body.classList.add('mobile-drawer-open');
+  }
+}
+
+function closeMobileDrawer() {
+  const drawer = $('mobileNavDrawer');
+  if (drawer) {
+    drawer.hidden = true;
+    $('mobileMenuBtn')?.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('mobile-drawer-open');
+  }
+}
+
+$('mobileMenuBtn')?.addEventListener('click', openMobileDrawer);
+$('mobileDrawerClose')?.addEventListener('click', closeMobileDrawer);
+$('mobileNavBackdrop')?.addEventListener('click', closeMobileDrawer);
+
+document.querySelectorAll('.mobile-drawer-item').forEach(btn => {
+  btn.onclick = () => {
+    setView(btn.dataset.nav);
+    closeMobileDrawer();
+  };
+});
+
+// 移动端返回搜索结果按钮
+$('mobileBackBtn')?.addEventListener('click', () => {
+  const list = $('candidateList');
+  if (list) {
+    list.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+});
 
 $('disciplineSelect').onchange = chooseDiscipline;
 $('institutionSelect').onchange = chooseInstitution;

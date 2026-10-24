@@ -11,27 +11,27 @@
 :root{
   color-scheme:light;
 
-  /* 底色与文字 */
-  --paper:#f7f7f2;--paper-2:#fbfaf5;--surface:#fff;
-  --ink:#263330;--deep:#183c39;--deep-strong:#0f2c29;
-  --muted:#697873;--faint:#8a9791;
+  /* 底色与文字 - 统一为循证知途蓝白现代系统 */
+  --paper:#f8fafc;--paper-2:#f1f5f9;--surface:#ffffff;
+  --ink:#0f172a;--deep:#1e293b;--deep-strong:#0f172a;
+  --muted:#64748b;--faint:#94a3b8;
 
-  /* 主色与强调 */
-  --accent:#527c70;--accent-soft:#eaf0ec;--sage:#84a49a;
-  --copper:#b6875a;--copper-soft:#f6eee4;--copper-line:#e3d3bd;
+  /* 主色与强调 - 统一为知途蓝 */
+  --accent:#1e60d5;--accent-soft:#eff6ff;--sage:#3b82f6;
+  --copper:#2563eb;--copper-soft:#eff6ff;--copper-line:#bfdbfe;
 
   /* 语义色 */
-  --ok:#2f6b52;--ok-soft:#e9f2ec;
-  --warn:#8a5a12;--warn-soft:#fbf3e3;
-  --unk:#6c7772;--unk-soft:#eef1ef;
-  --danger:#9a3b32;--danger-soft:#fbeeec;--danger-line:#e8c4bf;
+  --ok:#16a34a;--ok-soft:#f0fdf4;
+  --warn:#d97706;--warn-soft:#fffbeb;
+  --unk:#64748b;--unk-soft:#f1f5f9;
+  --danger:#dc2626;--danger-soft:#fef2f2;--danger-line:#fecaca;
 
   /* 线、圆角、阴影 */
-  --line:#e3e8e1;--line-strong:#cfd8d0;--line-soft:#edf0e9;
-  --radius:12px;--radius-sm:8px;
-  --shadow:0 1px 2px rgba(24,60,57,.04),0 14px 32px -24px rgba(24,60,57,.42);
+  --line:#e2e8f0;--line-strong:#cbd5e1;--line-soft:#f8fafc;
+  --radius:10px;--radius-sm:6px;
+  --shadow:0 1px 3px rgba(15,23,42,.06),0 12px 28px -18px rgba(15,23,42,.15);
   --max:1180px;
-  --nav-h:52px;
+  --nav-h:56px;
 
   /* 字体：只用本机已装字体，不加载网络字体 */
   --font-sans:"Inter","SF Pro Text","PingFang SC","Hiragino Sans GB",
@@ -40,8 +40,8 @@
     "Source Han Serif SC","Songti SC","SimSun",serif;
   --font-mono:"JetBrains Mono","Cascadia Mono","Consolas","DejaVu Sans Mono",monospace;
 
-  /* 数据色：与 eval.js 图例取色一致 */
-  --bar-1:#215b52;--bar-2:#7a5a1e;--bar-3:#41637f;--bar-ghost:#c6d2c7;
+  /* 数据色：知途蓝、青蓝与深靛紫 */
+  --bar-1:#1e60d5;--bar-2:#0284c7;--bar-3:#4f46e5;--bar-ghost:#e2e8f0;
 
   /* 条形栅格：方法名 + 三档指标 */
   --bar-cols:minmax(140px,220px) repeat(3,minmax(0,1fr));
@@ -88,8 +88,8 @@ img,svg{max-width:100%}
 .brand{display:flex;align-items:center;gap:12px;color:var(--deep);text-decoration:none;min-width:0}
 .brand:hover{text-decoration:none}
 .seal{
-  width:36px;height:36px;flex:0 0 auto;border:1px solid var(--deep);display:grid;place-items:center;
-  font:700 19px/1 var(--font-serif);color:var(--deep);background:var(--paper-2);
+  width:36px;height:36px;flex:0 0 auto;border:1px solid #bfdbfe;border-radius:8px;display:grid;place-items:center;
+  font:700 18px/1 var(--font-serif);color:#1e60d5;background:#eff6ff;
 }
 .brand-text{display:flex;flex-direction:column;min-width:0}
 .brand-text b{font:650 15px/1.35 var(--font-sans);color:var(--deep);letter-spacing:.01em}
@@ -98,10 +98,10 @@ img,svg{max-width:100%}
 .head-meta a{color:var(--muted);font-size:13px}
 .head-meta a:hover{color:var(--deep)}
 .head-cta{
-  display:inline-flex;align-items:center;gap:7px;height:34px;padding:0 15px;border-radius:999px;
-  background:var(--deep);color:#fff!important;font-size:13px;letter-spacing:.02em;
+  display:inline-flex;align-items:center;gap:7px;height:34px;padding:0 15px;border-radius:8px;
+  background:#1e60d5;color:#fff!important;font-size:13px;letter-spacing:.02em;
 }
-.head-cta:hover{background:var(--deep-strong);text-decoration:none}
+.head-cta:hover{background:#1d4ed8;text-decoration:none}
 .head-cta span{font-size:14px;line-height:1}
 
 /* ── 页首：标题 + 数据版本 ──────────────────────────────────── */
