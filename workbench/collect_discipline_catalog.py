@@ -36,7 +36,7 @@ def _soup(html: str):
     未安装 bs4 的 CI 环境里直接失败（真实发生过），所以把导入放到真正解析时。
     """
     from bs4 import BeautifulSoup
-    return _soup(html)
+    return BeautifulSoup(html, "html.parser")
 
 
 def fetch(url, refresh=False, encoding=None):
