@@ -73,13 +73,16 @@
               <div class="mock-src"><i></i><div><b>论文目录 · 12 条候选</b><small>OpenAlex 候选 · 归属待核对</small></div></div>
             </article>
             <article class="mock-card mock-network">
-              <b>学术关系 · L1–L4</b>
+              <div class="mock-network-head"><b>学术关系 · L1–L4</b><span class="mock-tag">4 个关联线索</span></div>
               <svg viewBox="0 0 260 74" aria-hidden="true">
-                <path class="mg-line" d="M130 37 L42 14"/><path class="mg-line" d="M130 37 L218 14"/>
-                <path class="mg-line" d="M130 37 L42 62"/><path class="mg-line" d="M130 37 L218 62"/>
-                <circle class="mg-node core" cx="130" cy="37" r="7"/>
-                <circle class="mg-node" cx="42" cy="14" r="4"/><circle class="mg-node" cx="218" cy="14" r="4"/>
-                <circle class="mg-node" cx="42" cy="62" r="4"/><circle class="mg-node" cx="218" cy="62" r="4"/>
+                <path class="mg-line l1" d="M130 37 L42 16"/><path class="mg-line l2" d="M130 37 L218 16"/>
+                <path class="mg-line l4" d="M130 37 L42 60"/><path class="mg-line l3" d="M130 37 L218 60"/>
+                <circle class="mg-node core" cx="130" cy="37" r="7.5"/>
+                <circle class="mg-node" cx="42" cy="16" r="4.5"/><circle class="mg-node" cx="218" cy="16" r="4.5"/>
+                <circle class="mg-node" cx="42" cy="60" r="4.5"/><circle class="mg-node" cx="218" cy="60" r="4.5"/>
+                <text class="mg-text core" x="130" y="40">本人</text>
+                <text class="mg-text" x="42" y="27">L1 师承</text><text class="mg-text" x="218" y="27">L2 交叉</text>
+                <text class="mg-text" x="42" y="55">L4 署名</text><text class="mg-text" x="218" y="55">L3 同门</text>
               </svg>
             </article>
           </div>
@@ -418,14 +421,50 @@ async function lookupName(){
     message(items.length?`找到 ${items.length} 条身份线索，请核对学校、院系后选择。`:'还没收录这位导师，可展开下方「没找到？添加导师」自己补一条。');
   }catch(error){if(version===state.queryVersion)message(error.message,true)}
 }
+function animateStatNumber(id,target,useLocale=false){
+  const el=$(id);if(!el)return;
+  const num=Number(target)||0;
+  if(!num||window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    el.textContent=useLocale?num.toLocaleString('zh-CN'):String(num);return;
+  }
+  const dur=650,start=performance.now();
+  function tick(now){
+    const progress=Math.min((now-start)/dur,1);
+    const ease=1-Math.pow(1-progress,3);
+    const cur=Math.round(num*ease);
+    el.textContent=useLocale?cur.toLocaleString('zh-CN'):String(cur);
+    if(progress<1)requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+
+function setupProductVisualTilt(){
+  const visual=document.querySelector('.product-visual');
+  const frame=document.querySelector('.visual-frame');
+  if(!visual||!frame)return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  let ticking=false;
+  visual.addEventListener('mousemove',e=>{
+    if(ticking)return;
+    ticking=true;
+    requestAnimationFrame(()=>{
+      const rect=visual.getBoundingClientRect();
+      const x=(e.clientX-rect.left)/rect.width-0.5;
+      const y=(e.clientY-rect.top)/rect.height-0.5;
+      frame.style.transform=`perspective(800px) rotateY(${(x*5).toFixed(2)}deg) rotateX(${(-y*4).toFixed(2)}deg)`;
+      ticking=false;
+    });
+  });
+  visual.addEventListener('mouseleave',()=>{frame.style.transform=''});
+}
+
 async function loadCoverage(){
   const box=$('catalogCoverage');
-  const setText=(id,value)=>{const el=$(id);if(el)el.textContent=value};
   try{
     const summary=await api('/api/catalog/summary');
-    setText('homeRecords',Number(summary.public_records||0).toLocaleString('zh-CN'));
-    setText('homeDisciplines',String(summary.disciplines_engineering||0));
-    setText('homeSources',String(summary.public_institutions||0));
+    animateStatNumber('homeRecords',summary.public_records||0,true);
+    animateStatNumber('homeDisciplines',summary.disciplines_engineering||0,false);
+    animateStatNumber('homeSources',summary.public_institutions||0,false);
     box.innerHTML=`<h3>现在能查到哪些资料</h3>
       <p class="coverage-total">公开来源资料 ${summary.public_records} 条，涉及 ${summary.public_institutions} 所高校或机构、${summary.disciplines_total} 个一级学科（其中工学 ${summary.disciplines_engineering} 个）。</p>
       <p class="quiet" id="landingScope">工学 ${summary.engineering_records} 条 · 另有 ${summary.non_engineering_records} 条非工科默认隐藏</p>
@@ -745,7 +784,11 @@ function relationNodes(data){
     else if(kind==='collab'||kind==='overlap')level='L4';
     else if(kind==='sibling')level='L3';
     else level='L2';
-    nodes.push({person,kind,level});
+    const detail=kind==='advisor'?(item.direction?`方向：${item.direction}；${item.note||item.basis||''}`:(item.note||item.basis||'来源已核对'))
+      :kind==='collab'?(item.papers?`${item.papers} 条共同署名线索 · ${item.span||''}`:(item.span||'共同发表作品'))
+      :kind==='overlap'?(item.span?`重叠时期：${item.span}`:'同期/同机构经历')
+      :(item.note||'关联线索');
+    nodes.push({person,kind,level,detail});
   };
   (rel.advisor||[]).forEach(x=>push('advisor',x));
   (rel.collab||[]).slice(0,6).forEach(x=>push('collab',x));
@@ -763,23 +806,25 @@ function renderRelationGraph(data){
     const x=(cx+Math.cos(angle)*rx).toFixed(1),y=(cy+Math.sin(angle)*ry).toFixed(1);
     const nameOnly=String(n.person).split('·')[0].trim();
     const short=nameOnly.length>7?nameOnly.slice(0,7)+'…':nameOnly;
-    return `<g class="nx-group" data-level="${n.level}">
+    return `<g class="nx-group" data-level="${n.level}" data-index="${i}" data-person="${esc(n.person)}" data-kind="${esc(REL_KIND_LABEL[n.kind]||n.kind)}" data-detail="${esc(n.detail)}">
       <line class="nx-edge" data-level="${n.level}" x1="${cx}" y1="${cy}" x2="${x}" y2="${y}"><title>${esc(n.person)} · ${esc(REL_KIND_LABEL[n.kind]||'')} · ${n.level}</title></line>
-      <circle class="nx-node" cx="${x}" cy="${y}" r="5.5"><title>${esc(n.person)} · ${esc(n.level)}</title></circle>
+      <circle class="nx-node" cx="${x}" cy="${y}" r="6.5"><title>${esc(n.person)} · ${esc(n.level)}</title></circle>
       <text class="nx-label" x="${x}" y="${(Number(y)+17).toFixed(1)}">${esc(short)}</text>
     </g>`;
   }).join('');
   const counts=(data.relations_analysis||{}).counts||{};
   const legend=['L1','L2','L3','L4'].map(code=>`<button class="network-filter" type="button" data-filter="${code}" aria-pressed="true">${code} ${counts[code]||0}</button>`).join('');
-  return `<section class="section-block"><div class="network-panel">
+  return `<section class="section-block"><div class="network-panel" id="networkPanel">
     <div class="network-head"><h3>关系证据图</h3><div class="network-legend" role="group" aria-label="按证据层级筛选">${legend}</div></div>
-    <div class="network-canvas"><svg viewBox="0 0 ${w} ${h}" role="img" aria-label="以当前导师为中心的关系证据图，共 ${nodes.length} 个关联节点">
+    <div class="network-canvas" id="networkCanvas"><svg id="networkSvg" viewBox="0 0 ${w} ${h}" role="img" aria-label="以当前导师为中心的关系证据图，共 ${nodes.length} 个关联节点">
       <title>关系证据图</title><desc>中心为当前导师；连线样式对应 L1 至 L4 证据层级，仅绘制有公开证据的关联。</desc>
       ${items}
-      <circle class="nx-node core" cx="${cx}" cy="${cy}" r="14"></circle>
+      <circle class="nx-node core" cx="${cx}" cy="${cy}" r="15"></circle>
       <text class="nx-label core" x="${cx}" y="${cy+4}">本人</text>
-    </svg></div>
-    <p class="network-foot"><span>仅绘制有证据的关联；<strong>共同署名不等于师承</strong>。悬停节点可看姓名与层级。</span><span>${nodes.length} 个节点</span></p>
+    </svg>
+    <div class="network-detail-card" id="networkDetailCard" hidden></div>
+    </div>
+    <p class="network-foot"><span>仅绘制有证据的关联；<strong>共同署名不等于师承</strong>。悬停节点可看姓名与层级，点击查看线索依据。</span><span>${nodes.length} 个节点</span></p>
   </div></section>`;
 }
 function bindNetworkFilters(){
@@ -791,6 +836,38 @@ function bindNetworkFilters(){
       document.querySelectorAll('.nx-group[data-level="'+code+'"]').forEach(group=>group.classList.toggle('is-hidden',on));
     };
   });
+  const svg=$('networkSvg');
+  const card=$('networkDetailCard');
+  if(svg){
+    svg.querySelectorAll('.nx-group').forEach(group=>{
+      group.addEventListener('mouseenter',()=>{
+        svg.classList.add('has-hover-node');
+        group.classList.add('is-active');
+      });
+      group.addEventListener('mouseleave',()=>{
+        svg.classList.remove('has-hover-node');
+        group.classList.remove('is-active');
+      });
+      group.addEventListener('click',e=>{
+        e.stopPropagation();
+        if(!card)return;
+        const person=group.dataset.person;
+        const kind=group.dataset.kind;
+        const level=group.dataset.level;
+        const detail=group.dataset.detail;
+        card.innerHTML=`<div class="nd-head">
+          <strong>${esc(person)}</strong>
+          <span class="nd-badge ${level==='L4'?'l4':''}">${esc(level)} ${esc(kind)}</span>
+          <button type="button" class="nd-close" aria-label="关闭详情">×</button>
+        </div>
+        <p class="nd-desc">${esc(detail||'有收录的公开线索记录')}</p>
+        <div class="nd-caveat">注意：仅绘制公开证据；<strong>共同署名不等于师承</strong>。</div>`;
+        card.hidden=false;
+        card.querySelector('.nd-close').onclick=()=>{card.hidden=true};
+      });
+    });
+    svg.addEventListener('click',()=>{if(card)card.hidden=true});
+  }
 }
 function renderNetwork(){
   const data=state.mentor,relations=data.relations;
@@ -949,6 +1026,7 @@ $('importButton').onclick=async()=>{
     await refreshProjects();
     await loadDisciplines();
     setupAddMentor();
+    setupProductVisualTilt();
     const id=new URLSearchParams(location.search).get('mentor');
     if(id)await openMentor(id,{quietScroll:true});else setView('home');
   }catch(error){message(error.message,true)}

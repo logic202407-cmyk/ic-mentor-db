@@ -233,8 +233,8 @@
 
   /* ────────────────────────── 摘要 ────────────────────────── */
 
-  function statCard(label, value, note, isText) {
-    var card = el("div", "stat-card");
+  function statCard(label, value, note, isText, isPrimary) {
+    var card = el("div", "stat-card" + (isPrimary ? " stat-card--primary" : ""));
     card.appendChild(el("p", "stat-label", label));
     card.appendChild(el("p", "stat-value" + (isText ? " is-text" : ""), value));
     if (note) card.appendChild(el("p", "stat-note", note));
@@ -257,32 +257,41 @@
       "评测生成时间",
       formatTime(data.generated_at),
       "本机实跑后写入产物文件",
-      true
+      true,
+      false
     ));
 
     host.appendChild(statCard(
       "语料规模",
       isNum(corpus.entries) ? int(corpus.entries) + " 条" : "—",
-      isNum(corpus.engineering_entries) ? "其中工科 " + int(corpus.engineering_entries) + " 条" : ""
+      isNum(corpus.engineering_entries) ? "其中工科 " + int(corpus.engineering_entries) + " 条" : "",
+      false,
+      true
     ));
 
     host.appendChild(statCard(
       "查询数",
       totalQueries + " 条",
       isNum(queries.A) && isNum(queries.B)
-        ? "A 类 " + int(queries.A) + " / B 类 " + int(queries.B) : ""
+        ? "A 类 " + int(queries.A) + " / B 类 " + int(queries.B) : "",
+      false,
+      true
     ));
 
     host.appendChild(statCard(
       "dev / test 划分",
       devTest,
-      "seed " + plain(config.seed) + " · dev_ratio " + plain(config.dev_ratio)
+      "seed " + plain(config.seed) + " · dev_ratio " + plain(config.dev_ratio),
+      false,
+      true
     ));
 
     host.appendChild(statCard(
       "单次返回上限",
       isNum(config.return_limit) ? int(config.return_limit) + " 条" : "—",
-      "所有指标都在这个截断下计算"
+      "所有指标都在这个截断下计算",
+      false,
+      false
     ));
 
     var res = data.retrieval && data.retrieval.resources ? data.retrieval.resources : {};
@@ -675,10 +684,36 @@
       svg.appendChild(svgEl("polyline", { points: d, class: "series " + s.cls }));
 
       seq.forEach(function (p) {
-        var c = svgEl("circle", { cx: px(p.bm25_weight), cy: py(p[s.key]), r: 3, class: "dot " + s.cls });
+        var isChosen = isNum(chosen) && Math.abs(p.bm25_weight - chosen) < 1 / 1000;
+        var c = svgEl("circle", {
+          cx: px(p.bm25_weight),
+          cy: py(p[s.key]),
+          r: isChosen ? 5 : 3,
+          class: "dot " + s.cls + (isChosen ? " is-chosen" : "")
+        });
         var ct = svgEl("title");
         ct.textContent = s.label + " · BM25 权重 " + num(p.bm25_weight, 2) + " → NDCG@10 " + pct(p[s.key]);
         c.appendChild(ct);
+
+        c.addEventListener("mouseenter", function () {
+          var tt = $("sweepTooltip");
+          if (!tt) return;
+          tt.innerHTML = s.label + " · 权重 <b>" + num(p.bm25_weight, 2) + "</b> → NDCG@10 <b>" + pct(p[s.key]) + "</b>";
+          var pctX = ((px(p.bm25_weight) / W) * 100).toFixed(1);
+          var pctY = ((py(p[s.key]) / H) * 100).toFixed(1);
+          tt.style.left = pctX + "%";
+          tt.style.top = pctY + "%";
+          tt.hidden = false;
+          tt.classList.add("is-visible");
+        });
+        c.addEventListener("mouseleave", function () {
+          var tt = $("sweepTooltip");
+          if (tt) {
+            tt.classList.remove("is-visible");
+            tt.hidden = true;
+          }
+        });
+
         svg.appendChild(c);
       });
     });
@@ -1314,6 +1349,7 @@
     clear(body);
 
     var meta = $("failuresMeta");
+    var filterHost = $("failuresFilters");
     var list = Array.isArray(failures) ? failures : [];
 
     if (!list.length) {
@@ -1323,37 +1359,77 @@
       tr.appendChild(td);
       body.appendChild(tr);
       if (meta) meta.textContent = "";
+      if (filterHost) clear(filterHost);
       return;
     }
 
+    var kinds = {};
+    var categories = {};
+    list.forEach(function (f) {
+      var k = has(f.kind) ? String(f.kind) : "未分类";
+      kinds[k] = (kinds[k] || 0) + 1;
+      var cat = has(f.category) ? String(f.category) : "其它";
+      categories[cat] = (categories[cat] || 0) + 1;
+    });
+
     if (meta) {
-      var kinds = {};
-      list.forEach(function (f) {
-        var k = has(f.kind) ? String(f.kind) : "未分类";
-        kinds[k] = (kinds[k] || 0) + 1;
-      });
       var kindText = Object.keys(kinds).map(function (k) { return k + " " + kinds[k] + " 条"; }).join("、");
       meta.textContent = "共 " + list.length + " 条，按类型：" + kindText + "。";
     }
 
+    if (filterHost) {
+      clear(filterHost);
+      var catKeys = ["全部"].concat(Object.keys(categories));
+
+      function applyFilter(cat) {
+        var btns = filterHost.querySelectorAll(".failure-filter-btn");
+        for (var b = 0; b < btns.length; b++) {
+          if (btns[b].getAttribute("data-cat") === cat) btns[b].classList.add("is-active");
+          else btns[b].classList.remove("is-active");
+        }
+        var rows = body.querySelectorAll("tr");
+        for (var r = 0; r < rows.length; r++) {
+          var rowCat = rows[r].getAttribute("data-cat");
+          rows[r].hidden = (cat !== "全部" && rowCat !== cat);
+        }
+      }
+
+      catKeys.forEach(function (cat) {
+        var count = cat === "全部" ? list.length : categories[cat];
+        var btn = el("button", "failure-filter-btn" + (cat === "全部" ? " is-active" : ""), cat + " (" + count + ")");
+        btn.type = "button";
+        btn.setAttribute("data-cat", cat);
+        btn.addEventListener("click", function () { applyFilter(cat); });
+        filterHost.appendChild(btn);
+      });
+    }
+
     list.forEach(function (f) {
       var row = el("tr");
+      var catName = has(f.category) ? String(f.category) : "其它";
+      row.setAttribute("data-cat", catName);
 
       var qCell = el("td", "cell-query");
       qCell.textContent = has(f.query) ? String(f.query) : (has(f.ref) ? String(f.ref) : "—");
       if (has(f.kind)) {
         var kind = el("div", "cell-quiet");
-        kind.textContent = String(f.kind) + (has(f.expect) ? " · 期望 " + String(f.expect) : "");
+        kind.textContent = String(f.kind);
+        if (has(f.expect)) {
+          kind.appendChild(document.createTextNode(" · "));
+          var expTag = el("span", "tag-diff-expect", "期望 " + String(f.expect));
+          kind.appendChild(expTag);
+        }
         qCell.appendChild(kind);
       }
       row.appendChild(qCell);
 
       var mCell = el("td");
-      mCell.textContent = LABEL_CACHE[f.method] || plain(f.method);
+      var methodLabel = LABEL_CACHE[f.method] || plain(f.method);
+      mCell.appendChild(el("span", "pill-method", methodLabel));
       row.appendChild(mCell);
 
       var cCell = el("td");
-      cCell.textContent = plain(f.category);
+      cCell.appendChild(el("span", "tag-category", plain(f.category)));
       row.appendChild(cCell);
 
       var topCell = el("td", "cell-top");
@@ -1657,6 +1733,8 @@
     var root = $("evalRoot");
     if (root) root.hidden = false;
 
+    safe(function () { initScrollspy(); });
+
     var status = $("evalStatus");
     if (status) {
       var pending = [];
@@ -1666,6 +1744,41 @@
         + formatTime(data.generated_at)
         + (pending.length ? "；" + pending.join("、") + "的产物尚未入库，对应分区显示为待产出。" : "。");
     }
+  }
+
+  function initScrollspy() {
+    var sections = ["summarySection", "retrievalSection", "directionsSection", "disambiguationSection", "failuresSection", "limitsSection"];
+    var nav = document.querySelector(".sec-nav");
+    if (!nav) return;
+    var links = {};
+    var aList = nav.querySelectorAll("a[href^='#']");
+    for (var i = 0; i < aList.length; i++) {
+      var href = aList[i].getAttribute("href").replace("#", "");
+      links[href] = aList[i];
+    }
+
+    function update() {
+      var current = sections[0];
+      for (var j = 0; j < sections.length; j++) {
+        var sec = document.getElementById(sections[j]);
+        if (sec) {
+          var rect = sec.getBoundingClientRect();
+          if (rect.top <= 140) {
+            current = sections[j];
+          }
+        }
+      }
+      for (var k in links) {
+        if (k === current) {
+          links[k].classList.add("is-active");
+        } else {
+          links[k].classList.remove("is-active");
+        }
+      }
+    }
+
+    window.addEventListener("scroll", update, { passive: true });
+    update();
   }
 
   function boot() {
