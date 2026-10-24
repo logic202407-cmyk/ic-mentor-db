@@ -134,7 +134,7 @@
             <h1 class="home-hero-title" id="homeTitle">公开信息，<em>有据可查</em>。</h1>
             <p class="home-hero-desc">检索导师公开资料，了解研究方向、论文线索与招生信息。整合学校官网、院系名录与学术数据源，每条结论都能回到原文，每个不确定都标成「待核实」。</p>
             <div class="home-hero-ctas">
-              <button type="button" class="btn-primary-cta" data-start="name">开始检索导师 <span aria-hidden="true">→</span></button>
+              <button type="button" class="btn-primary-cta" data-start="name">开始检索导师 / 找导师 <span aria-hidden="true">→</span></button>
               <button type="button" class="btn-secondary-cta" data-start="discipline">按学科浏览</button>
             </div>
           </article>
@@ -260,8 +260,8 @@
         <!-- 顶部搜索与筛选宽幅卡片 -->
         <section class="search-filter-card" aria-label="搜索与筛选工具栏">
           <div class="filter-tabs-row" role="tablist">
-            <button type="button" class="tab-pill-btn active" id="btnSearchMode" role="tab" aria-selected="true">搜索导师</button>
-            <button type="button" class="tab-pill-btn" id="btnFilterMode" role="tab" aria-selected="false">按条件筛选</button>
+            <button type="button" class="tab-pill-btn active" id="btnSearchMode" role="tab" aria-selected="true">搜索导师姓名</button>
+            <button type="button" class="tab-pill-btn" id="btnFilterMode" role="tab" aria-selected="false">按学科与方向查找</button>
             <!-- 兼容测试的不可见隐藏触发点 -->
             <button type="button" id="nameMode" class="hidden" role="tab" aria-selected="true" data-start="name">按姓名</button>
             <button type="button" id="disciplineMode" class="hidden" role="tab" aria-selected="false" data-start="discipline">按学科</button>
@@ -273,8 +273,8 @@
               <svg class="search-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                 <path d="M9 16A7 7 0 1 0 9 2a7 7 0 0 0 0 14Zm10 3-4.35-4.35" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
               </svg>
-              <label for="nameInput" class="hidden">请输入导师姓名、学校或研究方向关键词</label>
-              <input class="field" id="nameInput" name="name" autocomplete="off" placeholder="请输入导师姓名、学校或研究方向关键词...">
+              <label for="nameInput" class="hidden">请输入导师姓名（支持中文、英文及别名查找）</label>
+              <input class="field" id="nameInput" name="name" autocomplete="off" placeholder="输入导师姓名查找（如：张、李波、Lieber）...">
             </div>
             <button type="submit" class="card-search-btn">搜索</button>
           </form>
@@ -294,9 +294,9 @@
               </select>
             </div>
             <div class="filter-select-wrap">
-              <label for="directionSelect" class="hidden">全部院系或方向</label>
+              <label for="directionSelect" class="hidden">全部研究方向</label>
               <select class="field" id="directionSelect" disabled>
-                <option value="">全部院系</option>
+                <option value="">全部研究方向</option>
               </select>
             </div>
             <div class="filter-select-wrap">
@@ -397,32 +397,35 @@
 
               <!-- 顶部导师档案摘要大卡片 -->
               <header class="dossier-header-card">
-                <div class="dossier-large-avatar" id="mentorDossierAvatar">张</div>
-                <div class="dossier-meta-col">
-                  <div class="dossier-name-row">
-                    <h2 id="mentorTitle">张明远</h2>
-                    <span class="pill-title" id="mentorTitleBadge">教授</span>
-                    <span class="pill-status" id="mentorStatusPill">● 公开名录</span>
-                  </div>
-                  <div class="dossier-meta-lines">
-                    <div class="dossier-meta-line">
-                      <span aria-hidden="true">🏛️</span>
-                      <span id="mentorInstitutionText">清华大学 计算机科学与技术系</span>
+                <div class="dossier-header-main">
+                  <div class="dossier-large-avatar" id="mentorDossierAvatar">师</div>
+                  <div class="dossier-meta-col">
+                    <div class="dossier-name-row">
+                      <h2 id="mentorTitle">导师姓名</h2>
+                      <span class="dossier-orig-name" id="mentorOrigName" hidden></span>
+                      <span class="pill-title" id="mentorTitleBadge">职称待核</span>
+                      <span class="pill-status" id="mentorStatusPill">● 公开名录</span>
                     </div>
-                    <div class="dossier-meta-line">
-                      <span aria-hidden="true">🧭</span>
-                      <span>研究方向：<span id="mentorInterestsText">人工智能、计算机视觉、多模态大模型</span></span>
-                    </div>
-                    <div class="dossier-meta-line" id="mentorBackgroundRow">
-                      <span aria-hidden="true">🎓</span>
-                      <span id="mentorBackgroundText">来源记录：官方师资名录收录</span>
+                    <div class="dossier-meta-lines">
+                      <div class="dossier-meta-line">
+                        <svg class="line-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 2L2 7h16L10 2zM4 9v6h2V9H4zm5 0v6h2V9H9zm5 0v6h2V9h-2zM2 17v2h16v-2H2z"/></svg>
+                        <span id="mentorInstitutionText">所属高校与院系</span>
+                      </div>
+                      <div class="dossier-meta-line">
+                        <svg class="line-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd"/></svg>
+                        <span>研究方向：<span id="mentorInterestsText">暂无方向收录</span></span>
+                      </div>
+                      <div class="dossier-meta-line" id="mentorBackgroundRow">
+                        <svg class="line-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a10.993 10.993 0 01-1.2 5.94 1 1 0 001.764.938A9.002 9.002 0 007.018 10h5.964a9.002 9.002 0 001.204 4.929 1 1 0 001.764-.938 10.993 10.993 0 01-1.2-5.94l2.644-1.131a1 1 0 000-1.84l-7-3z"/></svg>
+                        <span id="mentorBackgroundText">来源依据：官方师资名录直录</span>
+                      </div>
                     </div>
                   </div>
                 </div>
 
                 <div class="dossier-top-right-stats">
-                  <span class="stat-source-count" id="dossierSourceCount">🗂️ 12 个公开来源</span>
-                  <span class="stat-update-date" id="dossierUpdateDate">🕒 最近更新: 2024-06-10</span>
+                  <span class="stat-source-count" id="dossierSourceCount">🗂️ 暂无公开来源</span>
+                  <span class="stat-update-date" id="dossierUpdateDate">🕒 时间未记录</span>
                   <div class="dossier-action-btns">
                     <a class="button slim" id="reportLink" href="#">导出资料（Markdown）</a>
                     <a class="button light slim" id="homepageLink" href="#" target="_blank" rel="noopener noreferrer" hidden>导师主页 ↗</a>
@@ -435,39 +438,54 @@
                 <dl class="dossier-facts hidden" id="dossierFacts"></dl>
               </header>
 
-              <!-- 5 张核心信息入口卡片横排 -->
+              <!-- 5 张核心信息入口卡片自适应网格 -->
               <div class="entry-cards-row" role="group" aria-label="快速信息定位">
                 <div class="entry-feature-card" data-jump-pane="identity">
                   <div class="entry-card-top">
-                    <span class="entry-card-title"><span aria-hidden="true">📖</span> 研究方向</span>
+                    <span class="entry-card-title">
+                      <svg class="line-icon" style="width:14px;height:14px;color:#1e60d5;flex-shrink:0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"/></svg>
+                      研究方向
+                    </span>
                     <span class="entry-card-arrow">›</span>
                   </div>
-                  <span class="entry-card-desc" id="entryInterestsDesc">人工智能、计算机视觉</span>
+                  <span class="entry-card-desc" id="entryInterestsDesc">查阅研究方向关键词</span>
                 </div>
                 <div class="entry-feature-card" data-jump-pane="papers">
                   <div class="entry-card-top">
-                    <span class="entry-card-title"><span aria-hidden="true">📄</span> 近年论文</span>
+                    <span class="entry-card-title">
+                      <svg class="line-icon" style="width:14px;height:14px;color:#1e60d5;flex-shrink:0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd"/></svg>
+                      论文成果
+                    </span>
                     <span class="entry-card-arrow">›</span>
                   </div>
                   <span class="entry-card-desc" id="entryPapersDesc">已收录公开论文线索</span>
                 </div>
                 <div class="entry-feature-card" data-jump-pane="admission">
                   <div class="entry-card-top">
-                    <span class="entry-card-title"><span aria-hidden="true">👥</span> 招生信息</span>
+                    <span class="entry-card-title">
+                      <svg class="line-icon" style="width:14px;height:14px;color:#1e60d5;flex-shrink:0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v1h8v-1zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 16v-1a4 4 0 00-3-3.874V14a5.98 5.98 0 013 2zM4 16a5.98 5.98 0 013-2v-2.874A4 4 0 004 15v1z"/></svg>
+                      招生信息
+                    </span>
                     <span class="entry-card-arrow">›</span>
                   </div>
                   <span class="entry-card-desc" id="entryAdmissionDesc">公开招生简章与年份</span>
                 </div>
                 <div class="entry-feature-card" data-jump-pane="network">
                   <div class="entry-card-top">
-                    <span class="entry-card-title"><span aria-hidden="true">🔗</span> 团队主页</span>
+                    <span class="entry-card-title">
+                      <svg class="line-icon" style="width:14px;height:14px;color:#1e60d5;flex-shrink:0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd"/></svg>
+                      团队信息
+                    </span>
                     <span class="entry-card-arrow">›</span>
                   </div>
                   <span class="entry-card-desc" id="entryTeamDesc">团队主页与关系线索</span>
                 </div>
                 <div class="entry-feature-card" data-jump-pane="investigation">
                   <div class="entry-card-top">
-                    <span class="entry-card-title"><span aria-hidden="true">💾</span> 公开来源</span>
+                    <span class="entry-card-title">
+                      <svg class="line-icon" style="width:14px;height:14px;color:#1e60d5;flex-shrink:0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"/></svg>
+                      公开来源
+                    </span>
                     <span class="entry-card-arrow">›</span>
                   </div>
                   <span class="entry-card-desc" id="entrySourcesDesc">学校官网、名录等出处</span>
@@ -735,6 +753,85 @@ const TAB_LABELS = {
   investigation: '公开来源'
 };
 
+/* ── 导师姓名规范化映射（官方权威来源支持，保持原始ID与底层数据完全不变） ── */
+const MENTOR_CHINESE_NAMES = {
+  "legacy-70d0b480a18a3704f200": {
+    chineseName: "查尔斯·李波",
+    originalName: "Charles M. Lieber",
+    avatarChar: "李",
+    aliases: ["查尔斯·李波", "查尔斯·利伯", "Charles M. Lieber", "Lieber", "李波"],
+    officialSource: "清华大学官方网站 (https://www.tsinghua.edu.cn/info/1167/124887.htm)",
+    status: "官方中文名已核实"
+  },
+  "legacy-421abeb76248f7dd70f4": {
+    chineseName: "宋毅",
+    originalName: "SONG YI",
+    avatarChar: "宋",
+    aliases: ["宋毅", "SONG YI", "Song Yi"],
+    officialSource: "浙江大学微纳电子学院教师名录",
+    status: "院系中文原名匹配"
+  },
+  "legacy-3514c5d798ef4329140b": {
+    chineseName: "陈一宁",
+    originalName: "CHEN YINING",
+    avatarChar: "陈",
+    aliases: ["陈一宁", "CHEN YINING", "Chen Yining"],
+    officialSource: "浙江大学微纳电子学院教师名录",
+    status: "院系中文原名匹配"
+  },
+  "legacy-8a512b206ad485caab73": {
+    chineseName: "龚小武",
+    originalName: "GONG,XIAOWU",
+    avatarChar: "龚",
+    aliases: ["龚小武", "GONG,XIAOWU", "Gong Xiaowu"],
+    officialSource: "电子科技大学教师名录",
+    status: "院系中文原名匹配"
+  }
+};
+
+/* ── 英文研究方向规范化中文对照表（显示与接口查询值严格分离） ── */
+const DIRECTION_CHINESE_MAP = {
+  "device": "半导体与微纳器件（Device）",
+  "mems": "微机电系统（MEMS）",
+  "other": "其他交叉研究方向",
+  "photonics": "光子学与光电集成（Photonics）",
+  "power": "功率电子与电源管理（Power）",
+  "quantum": "量子器件与量子计算（Quantum）",
+  "analog": "模拟集成电路与射频（Analog）",
+  "digital_ai": "数字集成电路与智能计算（Digital/AI）",
+  "eda": "电子设计自动化（EDA）",
+  "rf": "射频微波与通信芯片（RF）",
+  "rf_comm": "射频与通信（RF）"
+};
+
+function formatDirection(dir) {
+  if (!dir) return '方向待收录';
+  return DIRECTION_CHINESE_MAP[dir] || dir;
+}
+
+function getMentorNameInfo(p) {
+  if (!p) return { primaryName: '导师', secondaryName: '', avatarChar: '师', isMapped: false };
+  const mapping = MENTOR_CHINESE_NAMES[p.id];
+  if (mapping) {
+    return {
+      primaryName: mapping.chineseName,
+      secondaryName: mapping.originalName,
+      avatarChar: mapping.avatarChar,
+      officialSource: mapping.officialSource,
+      isMapped: true
+    };
+  }
+  const name = String(p.name || '导师').trim();
+  const firstChar = name.charAt(0);
+  return {
+    primaryName: name,
+    secondaryName: '',
+    avatarChar: firstChar.toUpperCase(),
+    officialSource: null,
+    isMapped: false
+  };
+}
+
 /* ── 基础工具函数 ── */
 const esc = value => String(value ?? '').replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
 const params = obj => new URLSearchParams(Object.entries(obj).filter(([, v]) => v !== undefined && v !== null && v !== ''));
@@ -815,9 +912,9 @@ function clearDossier() {
 
 function renderCandidates() {
   const box = $('candidateList');
-  $('candidateCount').textContent = state.candidates.length ? `约 ${state.candidates.length} 位导师` : '0 位导师';
+  $('candidateCount').textContent = state.candidates.length ? `共匹配 ${state.candidates.length} 位导师` : '0 位导师';
   if (!state.candidates.length) {
-    box.innerHTML = emptyState('暂无匹配导师', '请尝试更换关键词、学校或学科筛选条件。');
+    box.innerHTML = emptyState('暂无匹配导师', '请尝试更换关键词、高校或学科筛选条件。');
     return;
   }
   const exactNames = new Map();
@@ -825,28 +922,55 @@ function renderCandidates() {
 
   box.innerHTML = state.candidates.map(p => {
     const isSelected = state.mentor?.profile.id === p.id;
-    const initialChar = esc((p.name || '师').charAt(0));
-    const titleText = esc(p.direction_group?.includes('教授') ? p.direction_group : (p.origin?.includes('历史') ? '研究学者' : '教授/专家'));
-    const interests = (p.interests || p.direction_group || '').split(/[；;、,，\s]/).filter(Boolean).slice(0, 3);
+    const nameInfo = getMentorNameInfo(p);
+    const initialChar = esc(nameInfo.avatarChar);
+
+    // 真实职称，严禁编造“教授/专家”
+    const explicitTitle = p.title || p.post || (p.direction_group?.includes('院士') ? '院士' : null);
+    const cardTitle = explicitTitle || '职称待核';
+
+    // 研究方向：最多取 2 个并规范化为中文
+    const rawInterests = (p.interests || p.direction_group || '').split(/[；;、,，\s]/).filter(Boolean);
+    const interests = rawInterests.slice(0, 2).map(formatDirection);
+    const hasMoreInterests = rawInterests.length > 2;
     const tagsHtml = interests.length
-      ? `<div class="card-tags-list">${interests.map(t => `<span class="card-tag">${esc(t)}</span>`).join('')}</div>`
+      ? `<div class="card-tags-list">
+          ${interests.map(t => `<span class="card-tag tag-direction" title="${esc(t)}">${esc(t)}</span>`).join('')}
+          ${hasMoreInterests ? `<span class="card-tag" style="color:#64748b" title="共收录 ${rawInterests.length} 个方向">+${rawInterests.length - 2}</span>` : ''}
+        </div>`
       : '';
-    const dateText = esc((p.collected_at || '2024-06-10').split('T')[0]);
+
+    // 真实招生状态徽章，严禁无来源统一打绿色
+    let admissionBadge = '<span class="card-tag tag-admission-unknown">暂无公开招生</span>';
+    if (p.admission_catalog) {
+      const years = (p.discipline_assignments || []).map(a => a.year).filter(Boolean);
+      if (years.length > 0) {
+        admissionBadge = `<span class="card-tag tag-admission-year">${years[0]}招生目录</span>`;
+      } else {
+        admissionBadge = '<span class="card-tag tag-admission-history">历史招生线索</span>';
+      }
+    }
+
+    // 真实来源数与真实日期
+    const srcCount = p.source_count !== undefined && p.source_count !== null ? p.source_count : (p.sources ? p.sources.length : 0);
+    const srcText = srcCount > 0 ? `${srcCount} 个公开来源` : '暂无公开来源';
+    const dateText = p.collected_at ? esc(p.collected_at.split('T')[0]) : '时间未记录';
 
     return `<div class="mentor-card-item ${isSelected ? 'selected' : ''}" data-person="${esc(p.id)}" role="button" tabindex="0">
       <div class="initial-avatar" aria-hidden="true">${initialChar}</div>
       <div class="mentor-card-main">
         <div class="card-name-title">
-          <strong>${esc(p.name)}</strong>
-          <span class="card-title">${titleText}</span>
+          <strong title="${esc(nameInfo.primaryName)}">${esc(nameInfo.primaryName)}</strong>
+          ${nameInfo.secondaryName ? `<span class="dossier-orig-name" style="font-size:11px;color:#64748b;max-width:110px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" title="${esc(nameInfo.secondaryName)}">(${esc(nameInfo.secondaryName)})</span>` : ''}
+          <span class="card-title ${explicitTitle ? '' : 'is-unrecorded'}" style="font-size:11px">${esc(cardTitle)}</span>
           ${exactNames.get(p.name) > 1 ? '<span class="same-name" style="font-size:10px;padding:1px 5px;background:#fef3c7;color:#b45309;border-radius:3px">同名</span>' : ''}
         </div>
         <div class="card-school-dept">${esc(p.institution)}${p.department ? ' · ' + esc(p.department) : ''}</div>
         ${tagsHtml}
         <div class="card-foot-meta">
-          <span class="card-status-badge">● 招生线索</span>
-          <span class="card-sources-count">🗂️ ${p.source_count || 1} 个来源</span>
-          <span>${dateText}</span>
+          ${admissionBadge}
+          <span class="card-sources-count" title="公开信息来源总数">🗂️ ${srcText}</span>
+          <span title="数据采集与核验记录时间">${dateText}</span>
         </div>
       </div>
     </div>`;
@@ -860,15 +984,25 @@ function renderCandidates() {
 
 async function lookupName(query = '') {
   const q = (query || $('nameInput').value).trim();
-  if (!q) { message('请输入导师姓名、高校或研究方向。', true); return; }
+  if (!q) { message('请输入导师姓名进行检索。', true); return; }
   setView('workspace');
   clearDossier();
   state.candidates = [];
   renderCandidates();
   const version = ++state.queryVersion;
   message('正在检索导师公开资料…');
+
+  // 支持输入中文别名（如“李波”、“查尔斯”）查找对应英文原始名字
+  let searchQ = q;
+  for (const [id, info] of Object.entries(MENTOR_CHINESE_NAMES)) {
+    if (info.aliases.some(alias => alias.toLowerCase().includes(q.toLowerCase()) || q.toLowerCase().includes(alias.toLowerCase()))) {
+      searchQ = info.originalName;
+      break;
+    }
+  }
+
   try {
-    const items = await api('/api/catalog/name?' + params({ q, project_id: state.projectId, ...scopeParams() }));
+    const items = await api('/api/catalog/name?' + params({ q: searchQ, project_id: state.projectId, ...scopeParams() }));
     if (version !== state.queryVersion) return;
     state.candidates = items;
     renderCandidates();
@@ -925,19 +1059,35 @@ function renderDossier() {
   $('dossier').hidden = false;
 
   // 1. 顶部身份卡片
-  const initial = (profile.name || '师').charAt(0);
-  $('mentorDossierAvatar').textContent = initial;
-  $('mentorTitle').textContent = profile.name;
+  const nameInfo = getMentorNameInfo(profile);
+  $('mentorDossierAvatar').textContent = nameInfo.avatarChar;
+  $('mentorTitle').textContent = nameInfo.primaryName;
+  if (nameInfo.secondaryName) {
+    $('mentorOrigName').textContent = `（原名：${nameInfo.secondaryName}）`;
+    $('mentorOrigName').hidden = false;
+  } else {
+    $('mentorOrigName').hidden = true;
+  }
+
+  // 真实职称，严禁编造“教授/专家”
+  const explicitTitle = profile.title || profile.post || (profile.direction_group?.includes('院士') ? '中国工程院/科学院院士' : null);
+  $('mentorTitleBadge').textContent = explicitTitle || '职称未收录';
+  $('mentorTitleBadge').className = `pill-title ${explicitTitle ? 'is-recorded' : 'is-unrecorded'}`;
+
   $('mentorSubtitle').textContent = [profile.institution, profile.department].filter(Boolean).join(' · ');
   $('breadcrumb').textContent = `导师库 / ${profile.first_level_discipline || '学科待归类'} / ${profile.institution}`;
 
   $('mentorInstitutionText').textContent = [profile.institution, profile.department].filter(Boolean).join(' ');
-  $('mentorInterestsText').textContent = profile.interests || profile.direction_group || '暂无详细关键词收录';
+  const rawInterests = profile.interests || profile.direction_group || '';
+  const formattedInterests = rawInterests ? rawInterests.split(/[；;、,，\s]/).filter(Boolean).map(formatDirection).join('、') : '暂无详细关键词收录';
+  $('mentorInterestsText').textContent = formattedInterests;
   $('mentorBackgroundText').textContent = profile.classification_basis || (profile.secondary_source ? '转载名录（待人工核实）' : '官方名录直录，有据可查');
 
-  $('dossierSourceCount').textContent = `🗂️ ${(data.sources?.length || profile.source_count || 1)} 个公开来源`;
-  const updateDateStr = (profile.collected_at || '2024-06-10').split('T')[0];
-  $('dossierUpdateDate').textContent = `🕒 最近更新: ${updateDateStr}`;
+  // 真实来源数量与真实更新日期（严禁虚假兜底）
+  const totalSources = (Array.isArray(data.sources) ? data.sources.length : (profile.source_count || 0));
+  $('dossierSourceCount').textContent = totalSources > 0 ? `🗂️ ${totalSources} 个公开来源` : '🗂️ 暂无公开来源';
+  const updateDateStr = profile.collected_at ? profile.collected_at.split('T')[0] : '时间未记录';
+  $('dossierUpdateDate').textContent = updateDateStr !== '时间未记录' ? `🕒 最近更新: ${updateDateStr}` : '🕒 采集时间未记录';
 
   // 导出与主页链接
   $('reportLink').href = '/api/catalog/mentor/' + encodeURIComponent(profile.id) + '/report.md';
@@ -948,20 +1098,38 @@ function renderDossier() {
   }
 
   // 2. 5张快捷入口卡片内容预览填充
-  const shortInterests = (profile.interests || profile.direction_group || '研究方向').split(/[；;、,，\s]/).filter(Boolean).slice(0, 2).join('、') || '暂无';
+  const shortInterests = rawInterests ? rawInterests.split(/[；;、,，\s]/).filter(Boolean).slice(0, 2).map(formatDirection).join('、') : '暂无方向';
   $('entryInterestsDesc').textContent = shortInterests;
-  $('entryPapersDesc').textContent = `已收录 ${(data.papers?.length || 0)} 篇论文线索`;
-  $('entryAdmissionDesc').textContent = profile.admission_catalog ? '招生简章已收录' : '查阅公开招生线索';
-  $('entryTeamDesc').textContent = profile.homepage ? '个人主页与团队入口' : '暂未收录主页';
-  $('entrySourcesDesc').textContent = `${(data.sources?.length || 1)} 条来源原文`;
+  $('entryPapersDesc').textContent = (data.papers?.length || 0) > 0 ? `已收录 ${data.papers.length} 篇论文线索` : '暂无论文线索';
 
-  // 3. 右侧辅助栏信息完整度与说明联动更新
+  let admissionShort = '暂无公开招生';
+  if (profile.admission_catalog) {
+    const years = (profile.discipline_assignments || []).map(a => a.year).filter(Boolean);
+    admissionShort = years.length > 0 ? `${years[0]} 招生简章已收录` : '历史招生名录线索';
+  }
+  $('entryAdmissionDesc').textContent = admissionShort;
+  $('entryTeamDesc').textContent = profile.homepage ? (data.homepage_kind === 'roster' ? '院系名录出处' : '个人主页已收录') : '暂未收录主页';
+  $('entrySourcesDesc').textContent = totalSources > 0 ? `${totalSources} 条来源出处` : '暂无来源原文';
+
+  // 3. 右侧辅助栏信息完整度与说明联动更新（严禁虚假兜底）
   const verifiedCount = (data.sources || []).filter(s => s.status === '已人工核查').length;
   const pendingCount = (data.sources || []).filter(s => s.status !== '已人工核查').length;
-  $('auxVerifiedNum').textContent = verifiedCount || 1;
+  $('auxVerifiedNum').textContent = verifiedCount;
   $('auxPendingNum').textContent = pendingCount;
   $('auxUpdatedDate').textContent = updateDateStr;
-  $('auxCompletenessBadge').textContent = verifiedCount > 0 ? '✓ 信息较完整' : '待补充核验';
+  if (verifiedCount > 0 && pendingCount === 0) {
+    $('auxCompletenessBadge').textContent = `✓ 已核实 ${verifiedCount} 条`;
+    $('auxCompletenessBadge').className = 'completeness-pill-badge is-verified';
+  } else if (verifiedCount > 0 && pendingCount > 0) {
+    $('auxCompletenessBadge').textContent = `已核查 ${verifiedCount} 条 / 待核 ${pendingCount} 条`;
+    $('auxCompletenessBadge').className = 'completeness-pill-badge is-partial';
+  } else if (pendingCount > 0) {
+    $('auxCompletenessBadge').textContent = `待人工核实 (${pendingCount} 条)`;
+    $('auxCompletenessBadge').className = 'completeness-pill-badge is-pending';
+  } else {
+    $('auxCompletenessBadge').textContent = '来源覆盖待补充';
+    $('auxCompletenessBadge').className = 'completeness-pill-badge is-unknown';
+  }
 
   // 4. 各分区渲染
   renderOverview();
@@ -998,12 +1166,12 @@ function renderOverview() {
   const profile = data.profile;
   const keywords = (profile.interests || '').split(/[；;、,，]/).map(i => i.trim()).filter(Boolean);
   const keywordsHtml = keywords.length
-    ? `<div class="interests-chips-wrap">${keywords.map(k => `<span class="interest-chip">${esc(k)}</span>`).join('')}</div>`
+    ? `<div class="interests-chips-wrap">${keywords.map(k => `<span class="interest-chip">${esc(formatDirection(k))}</span>`).join('')}</div>`
     : '<p class="quiet">名录暂未提取到研究关键词，这不表示导师没有方向，仅说明公开源未提供。</p>';
 
   const bioText = (data.public_research?.biography?.[0]?.text)
     || profile.summary
-    || `${profile.name}，${profile.institution}${profile.department ? ' ' + profile.department : ''}，主要从事${profile.interests || profile.direction_group || '相关领域'}的教学与科研工作。`;
+    || '暂未收录官方个人简介。本平台不编造履历，请查阅下方公开来源与院系原始页面。';
 
   $('pane-identity').innerHTML = `
     <div class="pane-section">
@@ -1576,7 +1744,7 @@ async function chooseDiscipline() {
   const disc = $('disciplineSelect').value;
   $('institutionSelect').innerHTML = '<option value="">全部高校</option>';
   $('institutionSelect').disabled = !disc;
-  $('directionSelect').innerHTML = '<option value="">全部院系</option>';
+  $('directionSelect').innerHTML = '<option value="">全部研究方向</option>';
   $('directionSelect').disabled = true;
   state.candidates = [];
   renderCandidates();
@@ -1598,7 +1766,7 @@ async function chooseInstitution() {
   clearDossier();
   const disc = $('disciplineSelect').value;
   const inst = $('institutionSelect').value;
-  $('directionSelect').innerHTML = '<option value="">全部院系</option>';
+  $('directionSelect').innerHTML = '<option value="">全部研究方向</option>';
   $('directionSelect').disabled = !inst;
   state.candidates = [];
   renderCandidates();
@@ -1607,8 +1775,8 @@ async function chooseInstitution() {
   message('正在列出研究方向…');
   try {
     const items = await api('/api/catalog/directions?' + params({ discipline: disc, institution: inst, project_id: state.projectId, ...scopeParams() }));
-    $('directionSelect').innerHTML = '<option value="__all__">全部方向</option>' + items.map(d => `
-      <option value="${esc(d.name)}">${esc(d.name)} (${d.count})</option>
+    $('directionSelect').innerHTML = '<option value="__all__">全部研究方向</option>' + items.map(d => `
+      <option value="${esc(d.name)}">${esc(formatDirection(d.name))} (${d.count})</option>
     `).join('');
     $('directionSelect').disabled = false;
     $('directionSelect').value = '__all__';
@@ -1773,11 +1941,19 @@ async function checkServerHealth() {
     const viewParam = urlParams.get('view') || 'workspace';
     setView(viewParam);
 
-    // 优先读取 URL 中指定的 mentor ID，否则默认搜索并打开第一个导师
+    const discParam = urlParams.get('discipline');
     const id = urlParams.get('mentor');
+
+    if (discParam) {
+      $('btnFilterMode').click();
+      $('disciplineSelect').value = discParam;
+      await chooseDiscipline();
+    }
+
+    // 优先读取 URL 中指定的 mentor ID，否则默认搜索并打开第一个导师
     if (id) {
       await openMentor(id, { quietScroll: true });
-    } else if (viewParam === 'workspace') {
+    } else if (viewParam === 'workspace' && !discParam) {
       // 默认加载导师，使左侧列表、中央档案、右侧辅助栏丰满，完整还原参考图三栏布局
       lookupName('张');
     }
