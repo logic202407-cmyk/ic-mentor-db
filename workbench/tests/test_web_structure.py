@@ -20,8 +20,7 @@ WEB = pathlib.Path(__file__).resolve().parent.parent / "web"
 DESK = WEB / "desk.html"
 DESK_CSS = WEB / "assets" / "desk.css"
 
-PANES = ("investigation", "identity", "papers", "admission",
-         "network", "observation", "check")
+PANES = ("identity", "papers", "admission", "network", "investigation")
 
 
 def read() -> str:
