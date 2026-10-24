@@ -94,79 +94,26 @@
     <section class="home-section" aria-labelledby="whatTitle">
       <div class="section-head">
         <div>
-          <p class="eyebrow">这是什么</p>
-          <h2 id="whatTitle">一位导师的公开信息，收在同一页</h2>
-          <p>不是又一个搜索框，而是一张可核对的调查台：来源、证据、AI 建议与人工结论分开摆放。</p>
+          <p class="eyebrow">这是什么 · 解决什么问题</p>
+          <h2 id="whatTitle">把散落各处的导师公开信息，聚拢为可核对的证据链</h2>
+          <p id="problemTitle">针对同名混淆、网页改版与信息碎片化问题；来源、证据、推断与记录分层摆放，不搞主观评分。</p>
         </div>
       </div>
-      <div class="capability-grid">
-        <article class="capability">
-          <span class="num">01</span>
-          <h3>来源可追溯</h3>
-          <p>每条记录都带公开来源、抓取日期与核查状态；页面改版后仍能回到当时的原文。</p>
-          <ul><li>名录页与本人主页区分标注</li><li>转载名录单独提示</li></ul>
+      <div class="value-bento">
+        <article class="bento-card">
+          <span class="bento-num">01</span>
+          <h3>同名导师，先核身份</h3>
+          <p>结合学校、院系、专属主页与履历文本分级确认，证据不足就标「待核」，避免人物与成果混淆。</p>
         </article>
-        <article class="capability">
-          <span class="num">02</span>
-          <h3>同名先核对</h3>
-          <p>同名同姓不靠猜：以专属主页、院系、学科与履历文本做证据分级，证据不足就写「待核」。</p>
-          <ul><li>L1–L4 关系证据分层</li><li>共同署名不推定为师承</li></ul>
+        <article class="bento-card">
+          <span class="bento-num">02</span>
+          <h3>公开来源，原文可溯</h3>
+          <p>记录抓取日期、快照出处与核查状态；招生与名录即使改版下线，也能还原当时的公开记录。</p>
         </article>
-        <article class="capability">
-          <span class="num">03</span>
-          <h3>AI 只作建议</h3>
-          <p>开源中文向量模型本地运行，负责检索与方向候选；它不评价导师，也不替代人工判断。</p>
-          <ul><li>本地推理，不调用在线 API</li><li>结果标注相似度与「待复核」</li></ul>
-        </article>
-      </div>
-    </section>
-
-    <section class="home-section" aria-labelledby="problemTitle">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">解决什么问题</p>
-          <h2 id="problemTitle">同名、改版、信息散落，都会让判断失真</h2>
-          <p>这些不是数据量问题，而是证据链问题。工作台围绕「能不能核对」来组织信息。</p>
-        </div>
-      </div>
-      <div class="problem-split">
-        <div class="problem-list">
-          <div class="problem-item"><b>同名导师被当成一个人</b><span>两所学校、两个院系，同名同姓的记录混在一起，论文与方向就全错位了。</span></div>
-          <div class="problem-item"><b>公开页面会改版消失</b><span>招生目录、个人主页、名录页随时改版；截图和链接一旦丢了，结论就不可复核。</span></div>
-          <div class="problem-item"><b>信息散落在十几个页面</b><span>身份、方向、论文、招生、关系、公告各在一处，学生只能靠手工拼接与记忆。</span></div>
-        </div>
-        <aside class="answer-panel">
-          <h3>把它变成一条可核对的证据链</h3>
-          <p>记录、来源、结论三层分开：事实带出处，推断写清依据，未核验的保持空白。</p>
-          <ul>
-            <li>按姓名或「学科 → 高校 → 方向」定位导师</li>
-            <li>在档案里逐项核对身份、论文与招生年份</li>
-            <li>把疑问写进核查记录，导出 Markdown 带走</li>
-            <li>所有观察只列事实，不给导师打分或排名</li>
-          </ul>
-        </aside>
-      </div>
-    </section>
-
-    <section class="home-section" aria-labelledby="aiTitle">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">AI 用在哪</p>
-          <h2 id="aiTitle">两处建议，都必须人工复核</h2>
-          <p>AI 只负责「找线索」：方向候选与同名比对。它不写回原始字段，也不参与任何评价。</p>
-        </div>
-        <a class="button ghost slim" href="/eval">查看算法评测</a>
-      </div>
-      <div class="ai-grid">
-        <article class="ai-card">
-          <header><h3>研究方向建议</h3><span class="ai-tag">待复核</span></header>
-          <p>用关键词分与中文向量余弦做分数级融合，给出候选方向、融合分与次选。低于阈值就留空，不用猜测填表。</p>
-          <div class="ai-foot"><span>未标注方向的记录 · 本地推理</span><a href="/eval">看分层与消融 →</a></div>
-        </article>
-        <article class="ai-card">
-          <header><h3>同名记录比对</h3><span class="ai-tag">待复核</span></header>
-          <p>只认直接证据：同一专属主页才判同人；缺主页、共用名录页一律「待人工核验」，系统不自动合并。</p>
-          <div class="ai-foot"><span>证据分级 · unknown 不进指标</span><a href="/eval">看消歧评测 →</a></div>
+        <article class="bento-card">
+          <span class="bento-num">03</span>
+          <h3>客观事实，不作评级</h3>
+          <p>仅提取论文年限、署名分布等公开学术事实；不提供主观评分或跨导师优劣排名。</p>
         </article>
       </div>
     </section>
@@ -175,29 +122,51 @@
       <div class="section-head">
         <div>
           <p class="eyebrow">怎么开始调查一位导师</p>
-          <h2 id="howTitle">四步，从姓名到一份可带走的记录</h2>
+          <h2 id="howTitle">四步工作流：从姓名到一份可导出的核查报告</h2>
         </div>
       </div>
       <div class="process">
-        <div class="step"><span class="step-num">01</span><b>定位</b><p>按姓名查，或从一级学科、高校、研究方向逐层缩小范围；同名时先核对学校与院系。</p></div>
-        <div class="step"><span class="step-num">02</span><b>核对身份</b><p>看身份信息与公开来源，确认主页、名录页与院系是否指向同一个人。</p></div>
-        <div class="step"><span class="step-num">03</span><b>读证据</b><p>论文、招生年份、关系线索逐项看依据；AI 建议单独标注，不混进事实。</p></div>
-        <div class="step"><span class="step-num">04</span><b>留记录</b><p>把结论写进核查记录，导出 Markdown；下次打开仍在，换电脑也能带走。</p></div>
+        <div class="step"><span class="step-num">01</span><b>定位</b><p>按姓名或学科逐层筛选，定位候选导师。</p></div>
+        <div class="step"><span class="step-num">02</span><b>核对身份</b><p>比对院系与专属主页，确认是否指向同一个人。</p></div>
+        <div class="step"><span class="step-num">03</span><b>查阅证据</b><p>核实论文、招生年份与学术关系出处；AI 建议单独标注，不混进事实。</p></div>
+        <div class="step"><span class="step-num">04</span><b>保存记录</b><p>本地保存调查笔记，随时导出 Markdown。</p></div>
       </div>
     </section>
 
-    <section class="home-section">
-      <section class="algo-slot" id="algoEvalEntry" aria-labelledby="algoTitle">
-        <div class="algo-copy">
-          <div class="algo-head">
-            <p class="eyebrow">可复现证据</p>
-            <h3 id="algoTitle">算法评测</h3>
-            <span class="badge muted">真实产物</span>
-          </div>
-          <p>五种检索方法在 dev/test 上的 Recall@K、MRR、nDCG；方向推断的分层与清洗文本消融；同名消歧的证据分级指标；以及英文缩写失效、跨学科被压制等真实失败案例。所有数字来自仓库内评测产物，一条命令可复现。</p>
+    <section class="home-section" aria-labelledby="aiTitle">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">AI 用在哪</p>
+          <h2 id="aiTitle">仅作线索建议，人工复核兜底</h2>
+          <p>开源模型本地推理，不参与任何结论认定；每个建议均附带置信度与评测产物。</p>
         </div>
-        <div class="algo-actions"><a class="button light" href="/eval">打开评测看板</a></div>
-      </section>
+      </div>
+      <div class="ai-eval-split">
+        <div class="ai-cards-col">
+          <article class="ai-mini-card">
+            <div class="ai-mini-head">
+              <b>研究方向建议</b>
+              <span class="ai-tag">待复核</span>
+            </div>
+            <p>基于关键词与中文向量余弦相似度推荐方向候选；低于阈值保持留空，不盲目填充。</p>
+          </article>
+          <article class="ai-mini-card">
+            <div class="ai-mini-head">
+              <b>同名记录比对</b>
+              <span class="ai-tag">待复核</span>
+            </div>
+            <p>依托专属主页与机构线索判别；无直接证据一律判定「待核」，绝不自动合并。</p>
+          </article>
+        </div>
+        <section class="algo-slot-compact" id="algoEvalEntry" aria-labelledby="algoTitle">
+          <div class="algo-compact-head">
+            <span class="badge muted">真实产物</span>
+            <h3 id="algoTitle">算法评测</h3>
+          </div>
+          <p>五种检索方法对比、参数扫描曲线、消歧指标与真实失败案例，基于 dev/test 划分，一条命令全流程复现。</p>
+          <a class="button light slim" href="/eval">打开评测看板 →</a>
+        </section>
+      </div>
     </section>
 
     <section class="home-section coverage" id="catalogCoverage" aria-label="收录情况">
@@ -226,7 +195,7 @@
           <button class="button" type="submit">查找</button>
         </div>
       </form>
-      <p class="quiet" style="margin-top:8px">同名很常见：先核对学校与院系，再决定看哪一位。</p>
+      <p class="quiet" style="margin-top:6px">同名导师请核对学校与院系。</p>
     </section>
 
     <section id="disciplinePanel" role="tabpanel" aria-labelledby="disciplineMode" hidden>
@@ -268,15 +237,25 @@
 
   <main class="content" id="mainContent" tabindex="-1">
     <section class="workspace-intro" id="workspaceIntro" aria-labelledby="wsIntroTitle">
-      <p class="eyebrow">工作台</p>
-      <h2 id="wsIntroTitle">从左侧定位一位导师</h2>
-      <p>按姓名查，或按一级学科 → 高校 → 研究方向逐层缩小范围。打开档案后，七个分区会保留你的核查记录与判断。</p>
-      <p class="quiet"><a class="inline-link" href="/" data-home>← 返回首页，看看这个工作台能做什么</a></p>
-      <div class="ws-hints">
-        <div class="ws-hint"><b>同名先核对</b><span>同名结果会列出学校、院系与来源，先确认是哪一位。</span></div>
-        <div class="ws-hint"><b>看证据再看结论</b><span>身份与来源分区给出原文链接；AI 建议单独标注「待复核」。</span></div>
-        <div class="ws-hint"><b>记录会留在本机</b><span>核查状态与笔记自动保存，可导出 Markdown 带走。</span></div>
+      <div class="ws-empty-graphic" aria-hidden="true">
+        <svg viewBox="0 0 64 64" width="52" height="52" fill="none">
+          <circle cx="32" cy="32" r="30" stroke="var(--line-strong)" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <circle cx="28" cy="28" r="14" stroke="var(--deep)" stroke-width="2.5"/>
+          <path d="M38 38 L48 48" stroke="var(--copper)" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="28" cy="28" r="4" fill="var(--sage)"/>
+        </svg>
       </div>
+      <h2 id="wsIntroTitle">开始调查一位导师</h2>
+      <p class="ws-empty-lead">在左侧输入姓名，或按学科查找。</p>
+      <p class="quiet"><a class="inline-link" href="/" data-home>← 返回首页</a></p>
+      <details class="ws-help-fold">
+        <summary>如何使用与核查须知</summary>
+        <div class="ws-hints">
+          <div class="ws-hint"><b>同名先核对</b><span>同名结果会列出学校、院系与来源，先确认是哪一位。</span></div>
+          <div class="ws-hint"><b>看证据再看结论</b><span>身份与来源分区给出原文链接；AI 建议单独标注「待复核」。</span></div>
+          <div class="ws-hint"><b>记录会留在本机</b><span>核查状态与笔记自动保存，可导出 Markdown 带走。</span></div>
+        </div>
+      </details>
     </section>
 
     <section class="loading-panel" id="loadingPanel" hidden aria-live="polite">
@@ -375,13 +354,20 @@ function detailBlock(summary,bodyHtml){return `<details class="obs-detail"><summ
 /* ── 视图切换：首页门户 / 工作台 ── */
 function setView(view){
   const home=view==='home';
-  const homeView=$('homeView'),workspaceView=$('workspaceView');
-  if(homeView)homeView.hidden=!home;
-  if(workspaceView)workspaceView.hidden=home;
-  document.body.dataset.view=view;
-  const homeLink=$('homeLink');
-  if(homeLink)homeLink.hidden=home;
-  if(home)window.scrollTo(0,0);
+  const switchViews=()=>{
+    const homeView=$('homeView'),workspaceView=$('workspaceView');
+    if(homeView)homeView.hidden=!home;
+    if(workspaceView)workspaceView.hidden=home;
+    document.body.dataset.view=view;
+    const homeLink=$('homeLink');
+    if(homeLink)homeLink.hidden=home;
+    if(home)window.scrollTo(0,0);
+  };
+  if(document.startViewTransition && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    document.startViewTransition(switchViews);
+  } else {
+    switchViews();
+  }
 }
 function goHome(){setView('home')}
 
@@ -577,16 +563,22 @@ function obsCard(key,dim){
   const valueText=String(dim.display||'');
   const valueHtml=known?(facts.length?'':`<p class="obs-value${valueText.length>10?' is-long':''}">${esc(valueText)}</p>`):'<p class="obs-value is-unknown">无公开证据</p>';
   const factsHtml=facts.length?`<ul class="obs-facts">${facts.map(item=>`<li>${obsBadge(item.state)}<strong>${esc(item.label)}</strong><span>${esc(item.value)}</span>${item.detail?`<small>${esc(item.detail)}</small>`:''}</li>`).join('')}</ul>`:'';
+  const isFirstAuthor = key === 'first_author_students' || (dim.label && dim.label.includes('一作'));
+  const authorCaveat = isFirstAuthor ? '<span class="obs-caveat-pill">累计署名统计 · 非在读人数</span>' : '';
   return `<article class="obs-card ${known?'':'is-muted'}" data-dim="${esc(key)}">
     <header class="obs-card-head">
       <div><h4>${esc(dim.label||key)}</h4><p class="obs-metric">${esc(dim.metric||'')}</p></div>
       ${obsBadge(stateName)}
     </header>
-    ${factsHtml}${valueHtml}
-    <p class="obs-fact">${esc(dim.fact||'')}</p>
-    ${dim.sample_label?`<p class="obs-sample">样本：${esc(dim.sample_label)}</p>`:''}
+    <div class="obs-main-stat">
+      ${valueHtml}${factsHtml}
+    </div>
+    <div class="obs-sub-info">
+      ${dim.sample_label?`<p class="obs-sample">样本：${esc(dim.sample_label)}</p>`:''}
+      ${authorCaveat}
+    </div>
     ${(dim.basis||dim.boundary)?detailBlock('取数依据与边界说明',
-      `${dim.basis?`<p><b>取数依据</b>${esc(dim.basis)}</p>`:''}${dim.boundary?`<p><b>边界说明</b>${esc(dim.boundary)}</p>`:''}`):''}
+      `${dim.fact?`<p class="obs-fact"><b>事实概述：</b>${esc(dim.fact)}</p>`:''}${dim.basis?`<p><b>取数依据</b>${esc(dim.basis)}</p>`:''}${dim.boundary?`<p><b>边界说明</b>${esc(dim.boundary)}</p>`:''}`):''}
   </article>`;
 }
 function renderStudentScore(){
@@ -654,14 +646,47 @@ function renderDossier(){
   renderEvidenceForm();
   setPane('investigation');
 }
+function toggleEvidenceDetail(btn){
+  const item=btn.closest('.evidence-item');
+  if(!item)return;
+  const drawer=item.querySelector('.ev-detail-drawer');
+  if(!drawer)return;
+  const isHidden=drawer.hidden;
+  drawer.hidden=!isHidden;
+  btn.setAttribute('aria-expanded',String(isHidden));
+  btn.textContent=isHidden?'收起 ▴':'详情 ▾';
+  item.classList.toggle('is-expanded',isHidden);
+}
 function evidenceCard(item){
   let host='';try{host=new URL(item.url).hostname.replace(/^www\./,'')}catch{}
   const status=String(item.status||'待人工核查');
   const cls=status.includes('已')?'ok':status.includes('待')?'pending':'';
-  return `<article class="evidence-card">
-    <div class="ev-head"><strong>${esc(item.title||'来源页面')}</strong><span class="status ${cls}">${esc(status)}</span></div>
-    <p class="ev-claim">${esc(item.claim||'打开页面核对姓名、机构与研究方向；本条尚未写摘要。')}</p>
-    <div class="ev-foot"><a href="${esc(item.url)}" target="_blank" rel="noopener noreferrer">打开来源页面</a><span class="host">${esc(host)}</span></div>
+  const shortClaim=item.claim?(item.claim.length>48?item.claim.slice(0,48)+'…':item.claim):'打开页面核对姓名、机构与研究方向。';
+  return `<article class="evidence-card evidence-item ${cls}">
+    <div class="ev-item-summary">
+      <div class="ev-item-main">
+        <div class="ev-item-title-row">
+          <strong class="ev-title">${esc(item.title||'来源页面')}</strong>
+          <span class="status ${cls}">${esc(status)}</span>
+          ${host?`<span class="ev-host-chip">${esc(host)}</span>`:''}
+        </div>
+        <p class="ev-claim ev-snippet">${esc(shortClaim)}</p>
+      </div>
+      <div class="ev-item-actions">
+        <a class="ev-link-btn" href="${esc(item.url)}" target="_blank" rel="noopener noreferrer">查看出处 ↗</a>
+        <button class="ev-toggle-btn" type="button" aria-expanded="false" onclick="toggleEvidenceDetail(this)">详情 ▾</button>
+      </div>
+    </div>
+    <div class="ev-detail-drawer" hidden>
+      <div class="ev-drawer-inner">
+        <p class="ev-full-claim"><b>证据完整说明：</b>${esc(item.claim||'本条记录暂无更多说明。请打开原网页核实。')}</p>
+        <div class="ev-drawer-meta">
+          <span>来源域名：<code>${esc(host||'未知')}</code></span>
+          ${item.added_at?`<span>收录时间：${esc(item.added_at)}</span>`:''}
+          <span class="ev-status-text">核查状态：${esc(status)}</span>
+        </div>
+      </div>
+    </div>
   </article>`;
 }
 function renderOverview(){
@@ -800,26 +825,33 @@ function relationNodes(data){
 function renderRelationGraph(data){
   const nodes=relationNodes(data);
   if(!nodes.length)return '';
-  const w=680,h=360,cx=w/2,cy=h/2,rx=252,ry=126;
+  const w=720,h=400,cx=w/2,cy=h/2,rx=270,ry=146;
   const items=nodes.map((n,i)=>{
     const angle=(-Math.PI/2)+(i*2*Math.PI/Math.max(nodes.length,1));
     const x=(cx+Math.cos(angle)*rx).toFixed(1),y=(cy+Math.sin(angle)*ry).toFixed(1);
     const nameOnly=String(n.person).split('·')[0].trim();
     const short=nameOnly.length>7?nameOnly.slice(0,7)+'…':nameOnly;
+    const textY=Number(y)>cy?(Number(y)+17).toFixed(1):(Number(y)-9).toFixed(1);
     return `<g class="nx-group" data-level="${n.level}" data-index="${i}" data-person="${esc(n.person)}" data-kind="${esc(REL_KIND_LABEL[n.kind]||n.kind)}" data-detail="${esc(n.detail)}">
       <line class="nx-edge" data-level="${n.level}" x1="${cx}" y1="${cy}" x2="${x}" y2="${y}"><title>${esc(n.person)} · ${esc(REL_KIND_LABEL[n.kind]||'')} · ${n.level}</title></line>
       <circle class="nx-node" cx="${x}" cy="${y}" r="6.5"><title>${esc(n.person)} · ${esc(n.level)}</title></circle>
-      <text class="nx-label" x="${x}" y="${(Number(y)+17).toFixed(1)}">${esc(short)}</text>
+      <text class="nx-label" x="${x}" y="${textY}">${esc(short)}</text>
     </g>`;
   }).join('');
   const counts=(data.relations_analysis||{}).counts||{};
   const legend=['L1','L2','L3','L4'].map(code=>`<button class="network-filter" type="button" data-filter="${code}" aria-pressed="true">${code} ${counts[code]||0}</button>`).join('');
   return `<section class="section-block"><div class="network-panel" id="networkPanel">
-    <div class="network-head"><h3>关系证据图</h3><div class="network-legend" role="group" aria-label="按证据层级筛选">${legend}</div></div>
+    <div class="network-head">
+      <div>
+        <h3>关系证据图</h3>
+        <p class="network-subhead">中心为当前导师；按连线样式区分证据层级，<strong>共同署名不等于师承</strong>。</p>
+      </div>
+      <div class="network-legend" role="group" aria-label="按证据层级筛选">${legend}</div>
+    </div>
     <div class="network-canvas" id="networkCanvas"><svg id="networkSvg" viewBox="0 0 ${w} ${h}" role="img" aria-label="以当前导师为中心的关系证据图，共 ${nodes.length} 个关联节点">
       <title>关系证据图</title><desc>中心为当前导师；连线样式对应 L1 至 L4 证据层级，仅绘制有公开证据的关联。</desc>
       ${items}
-      <circle class="nx-node core" cx="${cx}" cy="${cy}" r="15"></circle>
+      <circle class="nx-node core" cx="${cx}" cy="${cy}" r="16"></circle>
       <text class="nx-label core" x="${cx}" y="${cy+4}">本人</text>
     </svg>
     <div class="network-detail-card" id="networkDetailCard" hidden></div>

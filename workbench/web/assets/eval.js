@@ -1734,6 +1734,7 @@
     if (root) root.hidden = false;
 
     safe(function () { initScrollspy(); });
+    safe(function () { initMethodSegmentToggle(); });
 
     var status = $("evalStatus");
     if (status) {
@@ -1779,6 +1780,54 @@
 
     window.addEventListener("scroll", update, { passive: true });
     update();
+  }
+
+  function initMethodSegmentToggle() {
+    var nav = document.querySelector(".method-segment-nav");
+    if (!nav) return;
+    var btns = nav.querySelectorAll(".segment-btn");
+    var blockA = $("methodBlockA");
+    var blockB = $("methodBlockB");
+
+    function setSplit(split) {
+      for (var i = 0; i < btns.length; i++) {
+        var btn = btns[i];
+        var active = btn.getAttribute("data-split") === split;
+        if (active) {
+          btn.classList.add("active");
+          btn.setAttribute("aria-selected", "true");
+        } else {
+          btn.classList.remove("active");
+          btn.setAttribute("aria-selected", "false");
+        }
+      }
+      if (blockA) {
+        if (split === "b") {
+          blockA.setAttribute("hidden", "hidden");
+        } else {
+          blockA.removeAttribute("hidden");
+        }
+      }
+      if (blockB) {
+        if (split === "a") {
+          blockB.setAttribute("hidden", "hidden");
+        } else {
+          blockB.removeAttribute("hidden");
+        }
+      }
+    }
+
+    for (var j = 0; j < btns.length; j++) {
+      (function (btn) {
+        btn.addEventListener("click", function () {
+          var split = btn.getAttribute("data-split");
+          setSplit(split);
+        });
+      })(btns[j]);
+    }
+
+    var activeBtn = nav.querySelector(".segment-btn.active");
+    setSplit(activeBtn ? activeBtn.getAttribute("data-split") : "a");
   }
 
   function boot() {
