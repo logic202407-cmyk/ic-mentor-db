@@ -1,0 +1,11 @@
+query_id,category,query,candidate_id,candidate_name,institution,direction,relevance,reviewer,reviewed_at,notes
+EX01,自然语言,"研究兴趣示例：电池快充时界面怎么退化",,,,,,,,
+EX02,中文术语,硅光调制器,,,,,,,,
+EX03,英文缩写,VLSI,,,,,,,,
+EX04,英文缩写,MEMS,,,,,,,,
+EX05,中英混合,用 Transformer 做芯片布局,,,,,,,,
+EX06,跨学科,AI 用于材料发现,,,,,,,,
+EX07,跨学科,机器学习辅助芯片设计,,,,,,,,
+EX08,无关负例,红烧肉的做法,,,,,,,,
+EX09,无关负例,明天天气怎么样,,,,,,,,
+EX10,身份歧义,清华 王伟 教授,,,,,,,,

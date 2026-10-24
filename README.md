@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/代码许可-MIT-yellow.svg)](LICENSE)
 [![Data License](https://img.shields.io/badge/数据许可-见%20LICENSE--DATA-blue.svg)](LICENSE-DATA)
 [![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB.svg)](workbench/requirements.txt)
-[![Tests](https://img.shields.io/badge/tests-976%20passed-brightgreen.svg)](workbench/tests)
+[![Tests](https://img.shields.io/badge/tests-986%20passed-brightgreen.svg)](workbench/tests)
 [![Records](https://img.shields.io/badge/记录-15%2C719%20条-informational.svg)](CHANGELOG.md)
 [![Local Only](https://img.shields.io/badge/数据-仅存本机-success.svg)](SECURITY.md)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
@@ -59,7 +59,7 @@ py -3 -m venv .venv
 
 | 项目 | 体积 | 说明 |
 |:--|--:|:--|
-| 纳入 git 的文件（640 个） | **约 109 MB** | 按 git blob 大小统计（与平台无关）；大头是数据本体，见下方明细 |
+| 纳入 git 的文件（646 个） | **约 110 MB** | 按 git blob 大小统计（与平台无关）；大头是数据本体，见下方明细 |
 | `.git` | 约 67 MB | 历史提交 |
 | `.venv` | 约 211 MB | 虚拟环境，可由 `requirements.txt` 重建 |
 | `data/raw` | 约 890 MB | **抓取到的网页原文**，只在采集脚本里用；运行期不读它，已 gitignore |
@@ -631,6 +631,34 @@ node tools/verify_html.mjs reports/导师推荐.html reports/导师库.html
 
 复现：`python -m workbench.infer_directions --validate 400 --ablate-text`。
 完整评测见 [方向推断评测](workbench/aic-submission/evidence/方向推断评测.md)。
+
+### 检索：把评测过的方法接进真实接口
+
+`/api/projects/{id}/search` 现在支持五种 `mode`：`semantic`（原样保留）、`keyword`、
+`bm25`、`hybrid`（BM25 与向量各半）与 `auto`。`auto` 对 `VLSI`、`MEMS`、`EDA`
+这类英文缩写优先走 BM25——评测实测它们在中文嵌入模型里会坍缩成同一个向量；
+其余查询走混合检索。向量模型缺失或加载失败时**自动回落到 BM25**，结果里带
+`fallback` 说明，不会抛错或返回空。经典整理视图（`/classic`）的检索方式已加上
+`BM25` 与「混合（术语自动切换）」两个按钮，原有语义/关键词方式不变。
+
+### 两套人工评测：协议已备，标注待完成
+
+- **同名消歧**：盲标协议、193 对困难样本表与导入校验工具在
+  [`workbench/evaluation/human_annotation/`](workbench/evaluation/human_annotation/protocol.md)；
+  未达到「≥30 对且正负例各 ≥5」前不报告人工 Precision/Recall。
+- **检索相关性**：0–3 级人工标注协议与 7 类查询模板在
+  [`workbench/evaluation/retrieval_annotation/`](workbench/evaluation/retrieval_annotation/protocol.md)；
+  现有 226 条弱监督查询只作为工程回归，不作为真实用户准确率。
+- **用户任务验证**：6 项任务、错误编码与记录模板在
+  [`workbench/evaluation/user_tasks/`](workbench/evaluation/user_tasks/protocol.md)；
+  **尚未招募用户**，因此不报告完成时间、成功率或主观评分。
+
+### 数据质量报告
+
+`python -m workbench.tools.data_quality` 生成
+[`reports/data-quality.md`](reports/data-quality.md) 与 `workbench/evaluation/data_quality.json`：
+记录 ≠ 自然人（同名组、主页类型分布）、论文/招生/关系覆盖、缺失字段与采集月份。
+只读、不联网、不改数据。
 
 ### 同名消歧：证据分级，不再把「URL 不同」当「不同人」
 
