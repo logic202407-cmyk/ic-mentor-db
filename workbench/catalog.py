@@ -283,6 +283,33 @@ def scope_info() -> dict:
     }
 
 
+def public_counts() -> dict:
+    """公开来源的**轻量计数**：不读逐人档案，给首页首屏用。
+
+    ``coverage()`` 需要对 1.2 万条记录逐条取档案来统计论文/关系/招生，
+    冷启动要 8–17 秒；首页只显示「多少条、多少所、多少学科」时没必要付这个代价。
+    """
+    entries = static_catalog()[0]
+    public = [p for p in entries
+              if p.get("catalog_source") or (p.get("id") or "").startswith("pilot-")]
+    official = [p for p in public if not p.get("secondary_source")]
+    institutions = {p.get("institution") for p in public if p.get("institution")}
+    names = {p.get("first_level_discipline") for p in public if p.get("first_level_discipline")}
+    engineering = {n for n in names if (n or "")[:2] == "08"}
+    info = scope_info()
+    return {
+        "total_records": len(entries),
+        "public_records": len(public),
+        "official_records": len(official),
+        "secondary_records": len(public) - len(official),
+        "public_institutions": len(institutions),
+        "disciplines_total": len(names),
+        "disciplines_engineering": len(engineering),
+        "engineering_records": info.get("engineering_records"),
+        "non_engineering_records": info.get("non_engineering_records"),
+    }
+
+
 def coverage() -> dict:
     from . import public_research
     entries = static_catalog()[0]

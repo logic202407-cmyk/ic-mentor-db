@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/代码许可-MIT-yellow.svg)](LICENSE)
 [![Data License](https://img.shields.io/badge/数据许可-见%20LICENSE--DATA-blue.svg)](LICENSE-DATA)
 [![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB.svg)](workbench/requirements.txt)
-[![Tests](https://img.shields.io/badge/tests-946%20passed-brightgreen.svg)](workbench/tests)
+[![Tests](https://img.shields.io/badge/tests-950%20passed-brightgreen.svg)](workbench/tests)
 [![Records](https://img.shields.io/badge/记录-15%2C719%20条-informational.svg)](CHANGELOG.md)
 [![Local Only](https://img.shields.io/badge/数据-仅存本机-success.svg)](SECURITY.md)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
@@ -11,6 +11,20 @@
 这是一个面向工科学生的**本地导师调查工作台**。输入姓名后可在同名候选中核对学校与院系；也可依次选择一级学科、高校、方向和导师。选定身份后，集中查看公开来源、论文线索和学术关系网，补充证据、记录人工核查状态并导出调查记录。
 
 与单纯的数据收纳项目相比，工作台多做两件事：**分析导师之间的关系**（四级证据分层，见下），以及给出**「课题组公开信息观察」**——四个维度各自列公开可核验的事实，不输出综合分、不加权、不排名，每个维度可点开看依据，并明确写出它不衡量什么。原有的开源中文向量检索保留在资料整理视图。
+
+## 界面
+
+> 以下为真实运行截图（1440×900）。首页右侧的产品预览与其中的姓名、分数是**虚构演示数据**，界面已标注；档案与评测图来自公开来源记录与真实评测产物。设计规范（颜色、字号、组件、断点、可访问性）见 [docs/DESIGN.md](docs/DESIGN.md)。
+
+| 首页门户 | 导师档案 |
+|:--:|:--:|
+| ![首页](docs/screenshots/01-home.png) | ![导师档案](docs/screenshots/02-dossier.png) |
+| **公开来源证据**（状态为文字胶囊，不靠颜色） | **学术关系证据图**（仅绘制有证据的关联） |
+| ![证据卡](docs/screenshots/03-evidence.png) | ![关系图](docs/screenshots/04-network.png) |
+| **课题组公开信息观察**（四维事实，无综合分） | **算法评测看板**（数字来自产物） |
+| ![观察](docs/screenshots/05-observation.png) | ![评测](docs/screenshots/06-eval-overview.png) |
+
+![检索方法对比：五种方法在 A/B 两类查询上的 nDCG、Recall、MRR](docs/screenshots/07-eval-retrieval.png)
 
 ## 一键启动
 
@@ -45,7 +59,7 @@ py -3 -m venv .venv
 
 | 项目 | 体积 | 说明 |
 |:--|--:|:--|
-| 纳入 git 的文件（618 个） | **约 107 MB** | 按 git blob 大小统计（与平台无关）；大头是数据本体，见下方明细 |
+| 纳入 git 的文件（618 个） | **约 108 MB** | 按 git blob 大小统计（与平台无关）；大头是数据本体，见下方明细 |
 | `.git` | 约 67 MB | 历史提交 |
 | `.venv` | 约 211 MB | 虚拟环境，可由 `requirements.txt` 重建 |
 | `data/raw` | 约 890 MB | **抓取到的网页原文**，只在采集脚本里用；运行期不读它，已 gitignore |

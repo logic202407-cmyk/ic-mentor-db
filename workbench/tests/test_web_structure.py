@@ -18,6 +18,7 @@ import unittest
 
 WEB = pathlib.Path(__file__).resolve().parent.parent / "web"
 DESK = WEB / "desk.html"
+DESK_CSS = WEB / "assets" / "desk.css"
 
 PANES = ("investigation", "identity", "papers", "admission",
          "network", "observation", "check")
@@ -25,6 +26,14 @@ PANES = ("investigation", "identity", "papers", "admission",
 
 def read() -> str:
     return DESK.read_text(encoding="utf-8")
+
+
+def read_styles() -> str:
+    """页面源码 + 外链样式：样式已经抽到 desk.css，检查必须合并后再断言。"""
+    text = read()
+    if DESK_CSS.is_file():
+        text += "\n" + DESK_CSS.read_text(encoding="utf-8")
+    return text
 
 
 def static_markup(src: str) -> str:
@@ -154,16 +163,17 @@ class ReadabilityTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         cls.src = read()
+        cls.styles = read_styles()
         cls.markup = static_markup(cls.src)
 
     def test_body_font_is_at_least_15px(self) -> None:
-        match = re.search(r"body\{[^}]*font:(\d+(?:\.\d+)?)px", self.src)
+        match = re.search(r"body\{[^}]*font:(\d+(?:\.\d+)?)px", self.styles)
         self.assertIsNotNone(match, "找不到 body 的 font 声明")
         self.assertGreaterEqual(float(match.group(1)), 15.0)
 
     def test_empty_state_helper_exists_and_is_used(self) -> None:
         self.assertIn("function emptyState(", self.src)
-        self.assertIn(".empty-state{", self.src)
+        self.assertIn(".empty-state{", self.styles)
         # 空状态文案至少要覆盖：论文、招生、来源、观察、关系、自保存网页
         for phrase in ("还没有找到当年的招生信息", "还没有自己保存的网页",
                        "暂无其他来源的论文记录", "四项观察都没有公开证据",
@@ -183,13 +193,13 @@ class ReadabilityTests(unittest.TestCase):
 
     def test_three_responsive_breakpoints(self) -> None:
         for width in (1240, 960, 860):
-            self.assertIn(f"@media(max-width:{width}px)", self.src,
+            self.assertIn(f"@media(max-width:{width}px)", self.styles,
                           f"缺少 {width}px 断点")
 
     def test_no_horizontal_overflow_guards(self) -> None:
         # 双栏骨架的两条防溢出措施：grid 子项 min-width:0 + 长词换行
-        self.assertIn(".workspace>*{min-width:0}", self.src)
-        self.assertIn("overflow-wrap:anywhere", self.src)
+        self.assertIn(".workspace>*{min-width:0}", self.styles)
+        self.assertIn("overflow-wrap:anywhere", self.styles)
 
 
 class AccessibilityTests(unittest.TestCase):
@@ -198,6 +208,7 @@ class AccessibilityTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         cls.src = read()
+        cls.styles = read_styles()
         cls.markup = static_markup(cls.src)
 
     def test_static_form_controls_have_labels(self) -> None:
@@ -221,7 +232,7 @@ class AccessibilityTests(unittest.TestCase):
 
     def test_skip_link_and_focus_style(self) -> None:
         self.assertIn('class="skip-link"', self.markup)
-        self.assertIn(":focus-visible", self.src)
+        self.assertIn(":focus-visible", self.styles)
 
     def test_status_is_announced(self) -> None:
         self.assertIn('id="resultStatus"', self.markup)

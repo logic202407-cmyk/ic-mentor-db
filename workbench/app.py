@@ -190,6 +190,12 @@ def catalog_mentors(discipline: str, institution: str, direction: str, project_i
         raise HTTPException(status_code=404, detail=str(error)) from error
 
 
+@app.get("/api/catalog/summary")
+def catalog_summary():
+    """首页用的轻量计数（不扫逐人档案），完整明细仍走 /api/catalog/coverage。"""
+    return catalog.public_counts()
+
+
 @app.get("/api/catalog/coverage")
 def catalog_coverage():
     return catalog.coverage()
