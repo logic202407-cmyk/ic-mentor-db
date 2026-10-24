@@ -35,7 +35,7 @@ def build_facts() -> dict:
     # 口径直接复用 catalog.coverage()——报告与接口必须一致，不要各算一套。
     # 早先这里用 `origin == "public"` 判公开来源，取到 0 条（origin 是中文字符串），
     # 这种"自己另写一套口径"正是过期数字的来源。
-    cov = catalog.coverage()
+    cov = catalog.coverage(bundle_only=True)   # 对外数字以仓库档案包为准，避免受本机缓存影响
 
     # 机构分布只在工学学科内统计（报告引用的是工学规模）。
     per_disc: dict[str, Counter] = {}

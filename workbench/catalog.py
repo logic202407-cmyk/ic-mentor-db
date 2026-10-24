@@ -311,13 +311,25 @@ def public_counts() -> dict:
     }
 
 
-def coverage() -> dict:
+def coverage(bundle_only: bool = False) -> dict:
+    """覆盖率与资料计数。
+
+    `bundle_only=True` 时只读**随仓库提交的档案包**（dossiers.json.gz），
+    用于「对外材料事实」这类必须与仓库一致、不能受本机缓存影响的统计；
+    接口默认读本机档案（用户刚 enrich 过的内容应立即可见）。
+    """
     from . import public_research
     entries = static_catalog()[0]
     public = [p for p in entries if p.get('catalog_source') or p['id'].startswith('pilot-')]
     official = [p for p in public if not p.get('secondary_source')]
     counts = Counter(name for p in public for name in subject_names(p))
-    reports = [data for p in public if (data := public_research.load(p['id'])) and data['status'] in {'ready','catalog'}]
+    if bundle_only:
+        bundle = public_research._bundle()
+        reports = [data for p in public
+                   if (data := bundle.get(p['id'])) and data.get('status') in {'ready','catalog'}]
+    else:
+        reports = [data for p in public
+                   if (data := public_research.load(p['id'])) and data['status'] in {'ready','catalog'}]
     return {"total_records": len(entries), "official_records": len(official),
             "public_records": len(public), "secondary_records": len(public)-len(official),
             "public_institutions": len({p['institution'] for p in public}),
