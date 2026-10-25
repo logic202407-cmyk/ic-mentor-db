@@ -48,7 +48,7 @@ def run_acceptance_tests():
         # 测试 1: 首页总览
         # ──────────────────────────────────────────────────────────
         print("\n[1/8] 检查首页总览...")
-        page.goto(f"{BASE_URL}/?view=home", wait_until="networkidle")
+        page.goto(f"{BASE_URL}/?view=home", wait_until="domcontentloaded")
         page.wait_for_selector("#homeRecords")
         records_text = page.locator("#homeRecords").inner_text()
         print(f"  首页已加载，公开记录数: {records_text}")
@@ -182,7 +182,7 @@ def run_acceptance_tests():
         # 测试 7: /eval 算法评测蓝白设计系统一致性
         # ──────────────────────────────────────────────────────────
         print("\n[7/8] 检查算法评测页 (/eval) 蓝白设计一致性...")
-        page.goto(f"{BASE_URL}/eval", wait_until="networkidle")
+        page.goto(f"{BASE_URL}/eval", wait_until="domcontentloaded")
         page.wait_for_selector(".site-head")
         page_title = page.title()
         print(f"  评测看板页面标题: {page_title}")
@@ -206,7 +206,7 @@ def run_acceptance_tests():
             has_touch=True,
         )
         m_page = m_context.new_page()
-        m_page.goto(f"{BASE_URL}/?view=workspace", wait_until="networkidle")
+        m_page.goto(f"{BASE_URL}/?view=workspace", wait_until="domcontentloaded")
 
         # 检查汉堡按钮可见并点击打开抽屉
         menu_btn = m_page.locator("#mobileMenuBtn")

@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" width="900" height="560" fill="none">
+  <defs>
+    <linearGradient id="heroBlueGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#1e60d5" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#1e3a8a" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="heroCyanGrad" x1="0" y1="0" x2="1" y2="0.8">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="heroEmeraldGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="paperGrad" x1="0" y1="0" x2="0.2" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#f1f5f9" stop-opacity="0.85"/>
+    </linearGradient>
+    <radialGradient id="heroGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25"/>
+      <stop offset="60%" stop-color="#1e60d5" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#1e60d5" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadowLight" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#1e3a8a" flood-opacity="0.12"/>
+    </filter>
+    <filter id="glowFilt" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- 柔和背景光晕层 -->
+  <circle cx="480" cy="270" r="260" fill="url(#heroGlow)" />
+  <circle cx="680" cy="200" r="180" fill="url(#heroGlow)" opacity="0.6"/>
+
+  <!-- 几何坐标网格与连接轨道 -->
+  <g opacity="0.4" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 6">
+    <circle cx="450" cy="280" r="210"/>
+    <circle cx="450" cy="280" r="140"/>
+    <circle cx="620" cy="200" r="90"/>
+    <line x1="220" y1="280" x2="720" y2="280"/>
+    <line x1="450" y1="70" x2="450" y2="490"/>
+  </g>
+
+  <!-- 学术文献层叠图层 (左中) -->
+  <g transform="translate(180, 140)" filter="url(#shadowLight)">
+    <!-- 底层文献 -->
+    <rect x="0" y="40" width="220" height="280" rx="14" fill="#e2e8f0" transform="rotate(-7 110 180)"/>
+    <!-- 中层文献 -->
+    <rect x="15" y="20" width="220" height="280" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" transform="rotate(-2 125 160)"/>
+    <!-- 顶层学术专著/档案卡片 -->
+    <rect x="30" y="0" width="230" height="290" rx="14" fill="url(#paperGrad)" stroke="#93c5fd" stroke-width="2"/>
+    <!-- 卡片装饰纹理与文字线 -->
+    <rect x="52" y="32" width="70" height="12" rx="4" fill="url(#heroBlueGrad)"/>
+    <rect x="52" y="56" width="130" height="8" rx="3" fill="#94a3b8" opacity="0.5"/>
+    <rect x="52" y="74" width="165" height="6" rx="3" fill="#cbd5e1"/>
+    <rect x="52" y="90" width="145" height="6" rx="3" fill="#cbd5e1"/>
+    <rect x="52" y="106" width="120" height="6" rx="3" fill="#cbd5e1"/>
+
+    <!-- 迷你图表区域 -->
+    <rect x="52" y="132" width="186" height="84" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+    <path d="M68 190 Q 110 160, 145 175 T 222 148" fill="none" stroke="url(#heroCyanGrad)" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="145" cy="175" r="4.5" fill="#1e60d5"/>
+    <circle cx="222" cy="148" r="4.5" fill="#10b981"/>
+
+    <!-- 证据存证印章微章 -->
+    <g transform="translate(160, 226)">
+      <circle cx="36" cy="36" r="28" fill="#ecfdf5" stroke="#10b981" stroke-width="1.8" stroke-dasharray="3 2"/>
+      <path d="M26 36 L33 43 L48 28" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+
+  <!-- 动态知识网络节点系统 (右中) -->
+  <g>
+    <!-- 节点间曲线链路 -->
+    <path d="M390 240 C 460 160, 560 180, 620 140" fill="none" stroke="#60a5fa" stroke-width="2.5" opacity="0.8"/>
+    <path d="M620 140 C 690 110, 750 170, 760 250" fill="none" stroke="#38bdf8" stroke-width="2" opacity="0.7"/>
+    <path d="M620 140 C 600 230, 520 280, 530 360" fill="none" stroke="#93c5fd" stroke-width="2" stroke-dasharray="5 4"/>
+    <path d="M530 360 C 590 410, 700 390, 750 330" fill="none" stroke="#34d399" stroke-width="2.2" opacity="0.8"/>
+    <path d="M760 250 C 780 290, 770 310, 750 330" fill="none" stroke="#60a5fa" stroke-width="2"/>
+
+    <!-- 知识节点 1 (核心顶) -->
+    <g transform="translate(620, 140)" filter="url(#glowFilt)">
+      <circle cx="0" cy="0" r="24" fill="url(#heroBlueGrad)"/>
+      <circle cx="0" cy="0" r="32" stroke="#60a5fa" stroke-width="1.5" opacity="0.6"/>
+      <!-- 学术图书小图标 -->
+      <path d="M-8 -6 C-4 -8, 0 -7, 0 8 C0 -7, 4 -8, 8 -6 M0 -7 L0 8" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round"/>
+    </g>
+
+    <!-- 知识节点 2 (右侧网络) -->
+    <g transform="translate(760, 250)">
+      <circle cx="0" cy="0" r="18" fill="url(#heroCyanGrad)"/>
+      <circle cx="0" cy="0" r="26" stroke="#38bdf8" stroke-width="1.2" stroke-dasharray="3 3"/>
+      <circle cx="0" cy="0" r="6" fill="#ffffff"/>
+    </g>
+
+    <!-- 知识节点 3 (核验绿色节点) -->
+    <g transform="translate(750, 330)" filter="url(#glowFilt)">
+      <circle cx="0" cy="0" r="17" fill="url(#heroEmeraldGrad)"/>
+      <path d="M-5 0 L-1 4 L6 -4" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- 知识节点 4 (下侧分支) -->
+    <g transform="translate(530, 360)">
+      <circle cx="0" cy="0" r="15" fill="#1e3a8a"/>
+      <circle cx="0" cy="0" r="5" fill="#38bdf8"/>
+    </g>
+
+    <!-- 漂浮学术数据胶囊 -->
+    <g transform="translate(680, 190)" filter="url(#shadowLight)">
+      <rect x="0" y="0" width="110" height="32" rx="16" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>
+      <circle cx="16" cy="16" r="6" fill="#10b981"/>
+      <text x="32" y="20" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="600" fill="#1e3a8a">工学 · 0811</text>
+    </g>
+
+    <g transform="translate(480, 170)" filter="url(#shadowLight)">
+      <rect x="0" y="0" width="124" height="32" rx="16" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>
+      <circle cx="16" cy="16" r="6" fill="#0284c7"/>
+      <text x="30" y="20" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="600" fill="#0f172a">客观证据溯源</text>
+    </g>
+  </g>
+
+  <!-- 居中证据追踪放大镜 (Evidence Tracing Magnifier) -->
+  <g transform="translate(440, 220)" filter="url(#shadowLight)">
+    <!-- 镜柄 -->
+    <path d="M55 55 L105 105" stroke="#1e293b" stroke-width="14" stroke-linecap="round"/>
+    <path d="M55 55 L105 105" stroke="#3b82f6" stroke-width="6" stroke-linecap="round"/>
+    <!-- 镜框 -->
+    <circle cx="15" cy="15" r="62" fill="url(#paperGrad)" stroke="#1e3a8a" stroke-width="7"/>
+    <circle cx="15" cy="15" r="58" stroke="#38bdf8" stroke-width="2.5" opacity="0.9"/>
+    <!-- 透镜光泽 -->
+    <path d="M-20 -15 A 40 40 0 0 1 35 -30" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" opacity="0.8"/>
+    <!-- 镜中聚焦靶心 -->
+    <circle cx="15" cy="15" r="14" stroke="#1e60d5" stroke-width="2.5" stroke-dasharray="3 2" fill="none"/>
+    <circle cx="15" cy="15" r="4.5" fill="#10b981"/>
+  </g>
+
+  <!-- 微粒星点 -->
+  <circle cx="340" cy="110" r="3" fill="#38bdf8" opacity="0.8"/>
+  <circle cx="820" cy="180" r="3.5" fill="#60a5fa" opacity="0.8"/>
+  <circle cx="580" cy="440" r="2.5" fill="#34d399" opacity="0.9"/>
+  <circle cx="210" cy="380" r="3" fill="#93c5fd" opacity="0.7"/>
+</svg>

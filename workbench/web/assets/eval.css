@@ -109,6 +109,12 @@ img,svg{max-width:100%}
 .page-hero{
   display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,340px);
   gap:52px;align-items:end;padding:40px 0 28px;
+  position:relative;
+}
+.page-hero::before{
+  content:"";position:absolute;top:0;right:0;bottom:0;left:0;
+  background-image:radial-gradient(circle at 85% 35%, rgba(30,96,213,0.04) 0%, transparent 60%);
+  pointer-events:none;z-index:0;
 }
 .page-hero h1{
   font:600 clamp(30px,4.2vw,44px)/1.12 var(--font-serif);letter-spacing:-.02em;

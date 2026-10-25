@@ -186,11 +186,22 @@
         <div class="landing" id="landing">
           <!-- 门户 Hero 大横幅 -->
           <article class="home-hero-card">
-            <h1 class="home-hero-title" id="homeTitle">公开信息，<em>有据可查</em>。</h1>
-            <p class="home-hero-desc">检索导师公开资料，了解研究方向、论文线索与招生信息。整合学校官网、院系名录与学术数据源，每条结论都能回到原文，每个不确定都标成「待核实」。</p>
-            <div class="home-hero-ctas">
-              <button type="button" class="btn-primary-cta" data-start="name">开始检索导师 / 找导师 <span aria-hidden="true">→</span></button>
-              <button type="button" class="btn-secondary-cta" data-start="discipline">按学科浏览</button>
+            <div class="home-hero-layout">
+              <div class="home-hero-text-col">
+                <h1 class="home-hero-title" id="homeTitle">公开信息，<em>有据可查</em>。</h1>
+                <p class="home-hero-desc">检索导师公开资料，了解研究方向、论文线索与招生信息。整合学校官网、院系名录与学术数据源，每条结论都能回到原文，每个不确定都标成「待核实」。</p>
+                <div class="home-hero-ctas">
+                  <button type="button" class="btn-primary-cta" data-start="name">开始检索导师 / 找导师 <span aria-hidden="true">→</span></button>
+                  <button type="button" class="btn-secondary-cta" data-start="discipline">按学科浏览</button>
+                </div>
+              </div>
+              <div class="home-hero-visual-col" aria-hidden="true">
+                <picture>
+                  <source media="(max-width: 640px)" srcset="/assets/visuals/hero-academic-mobile.webp" type="image/webp">
+                  <source srcset="/assets/visuals/hero-academic.webp" type="image/webp">
+                  <img src="/assets/visuals/hero-academic.svg" alt="" class="hero-art-img" width="450" height="280" loading="eager" fetchpriority="high" decoding="async">
+                </picture>
+              </div>
             </div>
           </article>
 
@@ -427,12 +438,10 @@
             <!-- 未选择导师时的引导界面 -->
             <article class="workspace-intro" id="workspaceIntro" aria-labelledby="wsIntroTitle">
               <div class="ws-empty-graphic" aria-hidden="true">
-                <svg viewBox="0 0 64 64" width="48" height="48" fill="none">
-                  <circle cx="32" cy="32" r="30" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4 3"/>
-                  <circle cx="28" cy="28" r="14" stroke="#1e60d5" stroke-width="2.5"/>
-                  <path d="M38 38 L48 48" stroke="#0ea5e9" stroke-width="3" stroke-linecap="round"/>
-                  <circle cx="28" cy="28" r="4" fill="#60a5fa"/>
-                </svg>
+                <picture>
+                  <source srcset="/assets/visuals/search-empty.webp" type="image/webp">
+                  <img src="/assets/visuals/search-empty.svg" alt="" class="ws-empty-img" width="180" height="123" loading="lazy" decoding="async">
+                </picture>
               </div>
               <h2 id="wsIntroTitle">开始调查一位导师</h2>
               <p class="ws-empty-lead">在左侧列表选择导师，或在上方输入姓名、研究方向、学校与学科检索。</p>
@@ -688,13 +697,21 @@
            ══════════════════════════════════════════════════════════════════════ -->
       <section class="home-container" id="disciplineNavView" hidden aria-labelledby="discNavTitle">
         <article class="home-section-card">
-          <div class="home-section-title-wrap">
-            <h2 id="discNavTitle">工学一级学科导航</h2>
-            <p>基于教育部规范学科目录，覆盖38个工学一级学科，点击学科即可快速过滤已收录导师与机构。</p>
-          </div>
-          <div class="discipline-search-wrap" style="margin: 0 0 16px;">
-            <label for="disciplineSearchInput" class="hidden">搜索学科代码或名称</label>
-            <input type="search" id="disciplineSearchInput" class="field" placeholder="输入学科代码或学科名称快速过滤（如 0811、计算机、控制、材料）…" style="max-width: 480px; width: 100%;">
+          <div class="discipline-hero-row">
+            <div class="home-section-title-wrap">
+              <h2 id="discNavTitle">工学一级学科导航</h2>
+              <p>基于教育部规范学科目录，覆盖38个工学一级学科，点击学科即可快速过滤已收录导师与机构。</p>
+              <div class="discipline-search-wrap" style="margin: 12px 0 0;">
+                <label for="disciplineSearchInput" class="hidden">搜索学科代码或名称</label>
+                <input type="search" id="disciplineSearchInput" class="field" placeholder="输入学科代码或学科名称快速过滤（如 0811、计算机、控制、材料）…" style="max-width: 480px; width: 100%;">
+              </div>
+            </div>
+            <div class="discipline-visual-box" aria-hidden="true">
+              <picture>
+                <source srcset="/assets/visuals/discipline-explore.webp" type="image/webp">
+                <img src="/assets/visuals/discipline-explore.svg" alt="" class="discipline-art-img" width="320" height="106" loading="lazy">
+              </picture>
+            </div>
           </div>
           <div class="discipline-grid" id="fullDisciplinesGrid">
             <p class="quiet">正在读取学科目录…</p>
@@ -713,6 +730,12 @@
           </div>
           <div id="localRecordsList">
             <div class="empty-state">
+              <div class="empty-state-art" aria-hidden="true">
+                <picture>
+                  <source srcset="/assets/visuals/records-empty.webp" type="image/webp">
+                  <img src="/assets/visuals/records-empty.svg" alt="" class="records-empty-img" width="160" height="110" loading="lazy">
+                </picture>
+              </div>
               <p class="empty-title">当前暂无正在调查的导师记录</p>
               <p class="empty-hint">在导师档案的「核查记录」中保存笔记或网页后，会在此集中展示。</p>
             </div>
@@ -728,6 +751,12 @@
           <div class="home-section-title-wrap">
             <h2 id="sourcesPageTitle">数据来源与核查原则</h2>
             <p>循证知途坚持客观事实、证据可溯与中立公开四大基本准则。</p>
+          </div>
+          <div class="sources-flow-art-wrap" aria-hidden="true">
+            <picture>
+              <source srcset="/assets/visuals/source-academic.webp" type="image/webp">
+              <img src="/assets/visuals/source-academic.svg" alt="" class="sources-flow-img" width="720" height="212" loading="lazy">
+            </picture>
           </div>
           <div class="home-bento-grid" style="grid-template-columns: repeat(2, 1fr);">
             <div class="bento-card-item">
@@ -763,12 +792,20 @@
             <h2 id="aboutPageTitle">关于循证知途</h2>
             <p>2026年全球校园人工智能算法精英大赛 —— 主题赛 —— AI+开源赛道参赛作品</p>
           </div>
-          <div class="pane-section">
-            <p class="bio-paragraph"><strong>循证知途</strong>是一款专注于学术规范与证据可溯的工学导师信息查询平台。我们致力于帮助广大学子在保研、考研和申博过程中，集中、理性、客观地查阅导师公开资料，了解研究方向演进、论文线索与招生公告。</p>
-            <p class="bio-paragraph"><strong>本地运行保障：</strong>本项目完全本地化部署运行，所有调查数据、个人笔记与导入资料存放在本机，杜绝云端泄露与商业追踪。</p>
-            <p class="bio-paragraph"><strong>开源与第三方许可：</strong>遵循 MIT 许可协议开源，使用原生 HTML5、CSS 与现代 JavaScript 构建，离线可用，不依赖商业云服务。</p>
-            <div style="margin-top: 14px;">
-              <a href="/eval" class="button light" style="display: inline-flex; align-items: center; gap: 8px;">查看算法评测看板与复现指南 →</a>
+          <div class="about-split-layout">
+            <div class="pane-section about-text-side">
+              <p class="bio-paragraph"><strong>循证知途</strong>是一款专注于学术规范与证据可溯的工学导师信息查询平台。我们致力于帮助广大学子在保研、考研和申博过程中，集中、理性、客观地查阅导师公开资料，了解研究方向演进、论文线索与招生公告。</p>
+              <p class="bio-paragraph"><strong>本地运行保障：</strong>本项目完全本地化部署运行，所有调查数据、个人笔记与导入资料存放在本机，杜绝云端泄露与商业追踪。</p>
+              <p class="bio-paragraph"><strong>开源与第三方许可：</strong>遵循 MIT 许可协议开源，使用原生 HTML5、CSS 与现代 JavaScript 构建，离线可用，不依赖商业云服务。</p>
+              <div style="margin-top: 14px;">
+                <a href="/eval" class="button light" style="display: inline-flex; align-items: center; gap: 8px;">查看算法评测看板与复现指南 →</a>
+              </div>
+            </div>
+            <div class="about-visual-side" aria-hidden="true">
+              <picture>
+                <source srcset="/assets/visuals/about-academic.webp" type="image/webp">
+                <img src="/assets/visuals/about-academic.svg" alt="" class="about-art-img" width="340" height="260" loading="lazy">
+              </picture>
             </div>
           </div>
         </article>

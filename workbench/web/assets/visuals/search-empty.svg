@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 260" width="380" height="260" fill="none">
+  <defs>
+    <linearGradient id="seBlue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#1e60d5"/>
+    </linearGradient>
+    <radialGradient id="seGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="190" cy="130" r="110" fill="url(#seGlow)"/>
+
+  <!-- 档案文件夹背景 -->
+  <g transform="translate(100, 45)">
+    <!-- 后封皮 -->
+    <path d="M0 16 C0 7 7 0 16 0 L60 0 C68 0 74 6 78 12 L90 24 L164 24 C173 24 180 31 180 40 L180 154 C180 163 173 170 164 170 L16 170 C7 170 0 163 0 154 Z" fill="#cbd5e1"/>
+    <!-- 内部文献纸张 -->
+    <rect x="18" y="22" width="144" height="136" rx="6" fill="#ffffff" stroke="#e2e8f0"/>
+    <rect x="36" y="42" width="54" height="8" rx="2" fill="url(#seBlue)"/>
+    <rect x="36" y="58" width="108" height="5" rx="2" fill="#cbd5e1"/>
+    <rect x="36" y="70" width="92" height="5" rx="2" fill="#cbd5e1"/>
+    <rect x="36" y="82" width="100" height="5" rx="2" fill="#cbd5e1"/>
+    <!-- 前封皮 -->
+    <path d="M0 48 C0 39 7 32 16 32 L164 32 C173 32 180 39 180 48 L180 154 C180 163 173 170 164 170 L16 170 C7 170 0 163 0 154 Z" fill="#e2e8f0" opacity="0.95"/>
+    <rect x="24" y="54" width="70" height="14" rx="4" fill="#ffffff" stroke="#93c5fd"/>
+    <text x="32" y="65" font-family="-apple-system, sans-serif" font-size="9" font-weight="700" fill="#1e40af">导师调查档案</text>
+  </g>
+
+  <!-- 放大镜与聚焦 -->
+  <g transform="translate(195, 115)">
+    <path d="M38 38 L72 72" stroke="#1e293b" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="10" cy="10" r="44" fill="#ffffff" stroke="#1e40af" stroke-width="5"/>
+    <circle cx="10" cy="10" r="41" stroke="#38bdf8" stroke-width="1.8"/>
+    <!-- 聚焦标记 -->
+    <circle cx="10" cy="10" r="10" stroke="#10b981" stroke-width="2" stroke-dasharray="3 2" fill="none"/>
+    <path d="M6 10 L9 13 L15 7" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

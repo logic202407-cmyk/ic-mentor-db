@@ -2302,3 +2302,256 @@ body{overflow-wrap:anywhere}
   .skeleton { animation: none; }
   * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
 }
+
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   视觉素材融合与动态微动效 (Visual Assets Integration & Micro-interactions)
+   ══════════════════════════════════════════════════════════════════════════════ */
+
+/* 全局柔和微光背景 (pointer-events: none 防阻挡点击) */
+.app-container::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background-image:
+    radial-gradient(circle at 90% 12%, rgba(30, 96, 213, 0.04) 0%, transparent 55%),
+    radial-gradient(circle at 8% 85%, rgba(2, 132, 199, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 首页 Hero 2栏艺术布局 */
+.home-hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.95fr);
+  gap: 36px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.home-hero-text-col {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-width: 0;
+}
+
+.home-hero-visual-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-width: 0;
+}
+
+.hero-art-img {
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 14px 28px rgba(30, 96, 213, 0.12));
+  animation: subtleHeroFloat 7s ease-in-out infinite alternate;
+  transform-origin: center center;
+  pointer-events: auto;
+  transition: transform 0.4s var(--ease);
+}
+
+.hero-art-img:hover {
+  transform: translateY(-4px) scale(1.015);
+}
+
+/* 导师检索页：未选中导师的空状态艺术插画 */
+.ws-empty-graphic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.ws-empty-img {
+  width: 180px;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  filter: drop-shadow(0 8px 20px rgba(30, 96, 213, 0.08));
+  animation: subtleFloat 5s ease-in-out infinite alternate;
+}
+
+/* 学科导航横幅视觉 */
+.discipline-hero-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 28px;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.discipline-visual-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 0;
+}
+
+.discipline-art-img {
+  width: 320px;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  filter: drop-shadow(0 6px 16px rgba(30, 96, 213, 0.08));
+  transition: transform 0.3s var(--ease);
+}
+
+.discipline-art-img:hover {
+  transform: scale(1.02);
+}
+
+/* 调查记录空状态插画 */
+.empty-state-art {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.records-empty-img {
+  width: 160px;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  filter: drop-shadow(0 6px 14px rgba(15, 23, 42, 0.06));
+}
+
+/* 数据来源多源汇聚架构图 */
+.sources-flow-art-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 16px 0 28px;
+  padding: 16px 20px;
+  background: linear-gradient(180deg, rgba(248, 250, 252, 0.85) 0%, rgba(241, 245, 249, 0.5) 100%);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: border-color var(--speed) var(--ease), box-shadow var(--speed) var(--ease);
+}
+
+.sources-flow-art-wrap:hover {
+  border-color: #bfdbfe;
+  box-shadow: var(--shadow-md);
+}
+
+.sources-flow-img {
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 8px 20px rgba(30, 96, 213, 0.08));
+}
+
+/* 关于说明页：左文右图平衡排版 */
+.about-split-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 1fr);
+  gap: 32px;
+  align-items: center;
+  margin-top: 14px;
+}
+
+.about-text-side {
+  min-width: 0;
+}
+
+.about-visual-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+}
+
+.about-art-img {
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 10px 24px rgba(30, 96, 213, 0.08));
+  animation: subtleFloat 6s ease-in-out infinite alternate;
+}
+
+/* 细腻浮动关键帧动画 */
+@keyframes subtleHeroFloat {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-8px) rotate(0.35deg);
+  }
+}
+
+@keyframes subtleFloat {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-6px);
+  }
+}
+
+/* 响应式调整与降级 (960px, 860px, 640px, 390px, 320px) */
+@media (max-width: 960px) {
+  .home-hero-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .home-hero-visual-col {
+    order: 2;
+    justify-content: flex-start;
+  }
+  .hero-art-img {
+    max-width: 400px;
+  }
+  .about-split-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .about-visual-side {
+    order: 2;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 860px) {
+  .discipline-hero-row {
+    grid-template-columns: 1fr;
+  }
+  .discipline-visual-box {
+    display: none;
+  }
+  .sources-flow-art-wrap {
+    padding: 10px 12px;
+    margin: 12px 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-art-img {
+    max-width: 100%;
+  }
+  .ws-empty-img {
+    width: 140px;
+  }
+  .about-art-img {
+    max-width: 260px;
+  }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-art-img,
+  .ws-empty-img,
+  .about-art-img {
+    animation: none !important;
+  }
+}
