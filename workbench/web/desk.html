@@ -199,7 +199,7 @@
                 <picture>
                   <source media="(max-width: 640px)" srcset="/assets/visuals/hero-academic-mobile.webp" type="image/webp">
                   <source srcset="/assets/visuals/hero-academic.webp" type="image/webp">
-                  <img src="/assets/visuals/hero-academic.svg" alt="" class="hero-art-img" width="450" height="280" loading="eager" fetchpriority="high" decoding="async">
+                  <img src="/assets/visuals/hero-academic.png" alt="" class="hero-art-img" width="450" height="280" loading="eager" fetchpriority="high" decoding="async">
                 </picture>
               </div>
             </div>
@@ -440,7 +440,7 @@
               <div class="ws-empty-graphic" aria-hidden="true">
                 <picture>
                   <source srcset="/assets/visuals/search-empty.webp" type="image/webp">
-                  <img src="/assets/visuals/search-empty.svg" alt="" class="ws-empty-img" width="180" height="123" loading="lazy" decoding="async">
+                  <img src="/assets/visuals/search-empty.png" alt="" class="ws-empty-img" width="180" height="123" loading="lazy" decoding="async">
                 </picture>
               </div>
               <h2 id="wsIntroTitle">开始调查一位导师</h2>
@@ -709,7 +709,7 @@
             <div class="discipline-visual-box" aria-hidden="true">
               <picture>
                 <source srcset="/assets/visuals/discipline-explore.webp" type="image/webp">
-                <img src="/assets/visuals/discipline-explore.svg" alt="" class="discipline-art-img" width="320" height="106" loading="lazy">
+                <img src="/assets/visuals/discipline-explore.png" alt="" class="discipline-art-img" width="320" height="106" loading="lazy">
               </picture>
             </div>
           </div>
@@ -722,22 +722,23 @@
       <!-- ══════════════════════════════════════════════════════════════════════
            视图 4: 调查记录 (#recordsView)
            ══════════════════════════════════════════════════════════════════════ -->
-      <section class="home-container" id="recordsView" hidden aria-labelledby="recordsTitle">
+      <section class="h<section class="home-container" id="recordsView" hidden aria-labelledby="recordsTitle">
         <article class="home-section-card">
-          <div class="home-section-title-wrap">
-            <h2 id="recordsTitle">我的本地调查记录</h2>
-            <p>数据仅保存在本机浏览器与本地存储中，不上传云端，无须注册账号，保护调查隐私。</p>
+          <div class="records-hero-row">
+            <div class="home-section-title-wrap">
+              <h2 id="recordsTitle">我的本地调查手记与档案</h2>
+              <p>数据仅保存在本机浏览器与本地存储中，不上传云端，无须注册账号，全流程保护您的调查隐私。</p>
+            </div>
+            <div class="records-visual-box empty-state-art" aria-hidden="true">
+              <picture>
+                <source srcset="/assets/visuals/records-empty.webp" type="image/webp">
+                <img src="/assets/visuals/records-empty.png" alt="本地私密手记本" class="records-empty-img" width="160" height="110" loading="lazy">
+              </picture>
+            </div>
           </div>
           <div id="localRecordsList">
             <div class="empty-state">
-              <div class="empty-state-art" aria-hidden="true">
-                <picture>
-                  <source srcset="/assets/visuals/records-empty.webp" type="image/webp">
-                  <img src="/assets/visuals/records-empty.svg" alt="" class="records-empty-img" width="160" height="110" loading="lazy">
-                </picture>
-              </div>
-              <p class="empty-title">当前暂无正在调查的导师记录</p>
-              <p class="empty-hint">在导师档案的「核查记录」中保存笔记或网页后，会在此集中展示。</p>
+              <p class="empty-title">正在读取本地调查记录…</p>
             </div>
           </div>
         </article>
@@ -755,7 +756,7 @@
           <div class="sources-flow-art-wrap" aria-hidden="true">
             <picture>
               <source srcset="/assets/visuals/source-academic.webp" type="image/webp">
-              <img src="/assets/visuals/source-academic.svg" alt="" class="sources-flow-img" width="720" height="212" loading="lazy">
+              <img src="/assets/visuals/source-academic.png" alt="" class="sources-flow-img" width="720" height="212" loading="lazy">
             </picture>
           </div>
           <div class="home-bento-grid" style="grid-template-columns: repeat(2, 1fr);">
@@ -804,7 +805,7 @@
             <div class="about-visual-side" aria-hidden="true">
               <picture>
                 <source srcset="/assets/visuals/about-academic.webp" type="image/webp">
-                <img src="/assets/visuals/about-academic.svg" alt="" class="about-art-img" width="340" height="260" loading="lazy">
+                <img src="/assets/visuals/about-academic.png" alt="" class="about-art-img" width="340" height="260" loading="lazy">
               </picture>
             </div>
           </div>
@@ -949,8 +950,9 @@ function message(value, error = false) {
   box.setAttribute('aria-busy', String(busy));
 }
 
-function emptyState(title, hint, extra = '') {
-  return `<div class="empty-state"><p class="empty-title">${esc(title)}</p><p class="empty-hint">${esc(hint)}</p>${extra ? '<p class="empty-hint">' + esc(extra) + '</p>' : ''}</div>`;
+function emptyState(title, hint, extra = '', visualArt = '') {
+  const artHtml = visualArt ? `<div class="empty-state-art" aria-hidden="true"><picture><source srcset="${esc(visualArt)}.webp" type="image/webp"><img src="${esc(visualArt)}.png" alt="" class="records-empty-img" width="160" height="110" loading="lazy"></picture></div>` : '';
+  return `<div class="empty-state">${artHtml}<p class="empty-title">${esc(title)}</p><p class="empty-hint">${esc(hint)}</p>${extra ? '<p class="empty-hint">' + esc(extra) + '</p>' : ''}</div>`;
 }
 
 function detailBlock(summary, bodyHtml) {
@@ -1840,7 +1842,7 @@ async function renderLocalRecords() {
   try {
     const projects = await api('/api/projects');
     if (!projects.length) {
-      list.innerHTML = emptyState('当前暂无正在调查的导师记录', '在导师检索中创建资料夹或标记核对后将在此持久化显示。');
+      list.innerHTML = emptyState('当前暂无正在调查的导师记录', '在导师检索中创建资料夹或标记核对后将在此持久化显示。', '', '/assets/visuals/records-empty');
       return;
     }
     const active = projects.filter(p => p.count > 0);
@@ -1860,7 +1862,7 @@ async function renderLocalRecords() {
         </div>
       `).join('');
     } else {
-      html += '<p class="quiet" style="margin-bottom:16px">暂无已收录导师的活跃项目资料夹。</p>';
+      html += emptyState('当前暂无正在调查的导师记录', '在导师档案的「核查记录」中保存笔记或网页后，会在此集中展示。', '', '/assets/visuals/records-empty');
     }
 
     if (emptyProjects.length > 0) {
@@ -2095,6 +2097,7 @@ async function checkServerHealth() {
     }
 
     // 优先读取 URL 中指定的 mentor ID，否则默认搜索并打开第一个导师
+
     if (id) {
       await openMentor(id, { quietScroll: true });
     } else if (viewParam === 'workspace' && !discParam) {

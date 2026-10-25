@@ -2343,6 +2343,20 @@ body{overflow-wrap:anywhere}
   justify-content: center;
   position: relative;
   min-width: 0;
+  perspective: 1200px;
+}
+
+.home-hero-visual-col::before {
+  content: "";
+  position: absolute;
+  width: 78%;
+  height: 78%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(30, 96, 213, 0.15) 0%, rgba(16, 185, 129, 0.08) 50%, transparent 75%);
+  filter: blur(36px);
+  pointer-events: none;
+  z-index: 0;
+  animation: subtleAuraPulse 8s ease-in-out infinite alternate;
 }
 
 .hero-art-img {
@@ -2350,15 +2364,25 @@ body{overflow-wrap:anywhere}
   max-width: 460px;
   height: auto;
   display: block;
-  filter: drop-shadow(0 14px 28px rgba(30, 96, 213, 0.12));
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 16px 36px rgba(30, 96, 213, 0.16)) drop-shadow(0 4px 12px rgba(16, 185, 129, 0.10));
   animation: subtleHeroFloat 7s ease-in-out infinite alternate;
   transform-origin: center center;
+  cursor: grab;
   pointer-events: auto;
-  transition: transform 0.4s var(--ease);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.35s var(--ease);
+  will-change: transform, filter;
 }
 
 .hero-art-img:hover {
-  transform: translateY(-4px) scale(1.015);
+  transform: translateY(-8px) scale(1.03) rotate(0.8deg);
+  filter: drop-shadow(0 26px 48px rgba(30, 96, 213, 0.24)) drop-shadow(0 8px 18px rgba(16, 185, 129, 0.16));
+}
+
+.hero-art-img:active {
+  transform: translateY(-2px) scale(0.985);
+  cursor: grabbing;
 }
 
 /* 导师检索页：未选中导师的空状态艺术插画 */
@@ -2367,6 +2391,20 @@ body{overflow-wrap:anywhere}
   justify-content: center;
   align-items: center;
   margin-bottom: 14px;
+  position: relative;
+  perspective: 1000px;
+}
+
+.ws-empty-graphic::before {
+  content: "";
+  position: absolute;
+  width: 160px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(30, 96, 213, 0.12) 0%, transparent 70%);
+  filter: blur(24px);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .ws-empty-img {
@@ -2374,8 +2412,22 @@ body{overflow-wrap:anywhere}
   height: auto;
   max-width: 100%;
   display: block;
-  filter: drop-shadow(0 8px 20px rgba(30, 96, 213, 0.08));
-  animation: subtleFloat 5s ease-in-out infinite alternate;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  filter: drop-shadow(0 12px 28px rgba(30, 96, 213, 0.14)) drop-shadow(0 2px 8px rgba(15, 23, 42, 0.08));
+  animation: subtleEmptyFloat 5.5s ease-in-out infinite alternate;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.35s var(--ease);
+  will-change: transform, filter;
+}
+
+.ws-empty-img:hover {
+  transform: translateY(-6px) scale(1.05) rotate(-1deg);
+  filter: drop-shadow(0 20px 38px rgba(30, 96, 213, 0.22)) drop-shadow(0 4px 12px rgba(15, 23, 42, 0.12));
+}
+
+.ws-empty-img:active {
+  transform: translateY(-1px) scale(0.975);
 }
 
 /* 学科导航横幅视觉 */
@@ -2392,6 +2444,20 @@ body{overflow-wrap:anywhere}
   align-items: center;
   justify-content: flex-end;
   min-width: 0;
+  position: relative;
+  perspective: 1000px;
+}
+
+.discipline-visual-box::before {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.14) 0%, rgba(30, 96, 213, 0.08) 50%, transparent 70%);
+  filter: blur(28px);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .discipline-art-img {
@@ -2399,12 +2465,22 @@ body{overflow-wrap:anywhere}
   height: auto;
   max-width: 100%;
   display: block;
-  filter: drop-shadow(0 6px 16px rgba(30, 96, 213, 0.08));
-  transition: transform 0.3s var(--ease);
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  filter: drop-shadow(0 10px 24px rgba(30, 96, 213, 0.12)) drop-shadow(0 3px 10px rgba(99, 102, 241, 0.10));
+  animation: subtleDisciplineFloat 6.5s ease-in-out infinite alternate;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.35s var(--ease);
+  will-change: transform, filter;
 }
 
 .discipline-art-img:hover {
-  transform: scale(1.02);
+  transform: translateY(-5px) scale(1.04) rotate(0.6deg);
+  filter: drop-shadow(0 20px 38px rgba(99, 102, 241, 0.22)) drop-shadow(0 6px 16px rgba(30, 96, 213, 0.18));
+}
+
+.discipline-art-img:active {
+  transform: translateY(-1px) scale(0.98);
 }
 
 /* 调查记录空状态插画 */
@@ -2413,6 +2489,20 @@ body{overflow-wrap:anywhere}
   justify-content: center;
   align-items: center;
   margin-bottom: 14px;
+  position: relative;
+  perspective: 1000px;
+}
+
+.empty-state-art::before {
+  content: "";
+  position: absolute;
+  width: 160px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.16) 0%, rgba(30, 96, 213, 0.10) 50%, transparent 70%);
+  filter: blur(24px);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .records-empty-img {
@@ -2420,7 +2510,22 @@ body{overflow-wrap:anywhere}
   height: auto;
   max-width: 100%;
   display: block;
-  filter: drop-shadow(0 6px 14px rgba(15, 23, 42, 0.06));
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  filter: drop-shadow(0 12px 28px rgba(16, 185, 129, 0.16)) drop-shadow(0 4px 14px rgba(30, 96, 213, 0.10));
+  animation: subtleRecordsFloat 6s ease-in-out infinite alternate;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.35s var(--ease);
+  will-change: transform, filter;
+}
+
+.records-empty-img:hover {
+  transform: translateY(-6px) scale(1.05) rotate(1deg);
+  filter: drop-shadow(0 22px 42px rgba(16, 185, 129, 0.25)) drop-shadow(0 6px 18px rgba(30, 96, 213, 0.18));
+}
+
+.records-empty-img:active {
+  transform: translateY(-1px) scale(0.975);
 }
 
 /* 数据来源多源汇聚架构图 */
@@ -2429,18 +2534,21 @@ body{overflow-wrap:anywhere}
   justify-content: center;
   align-items: center;
   margin: 16px 0 28px;
-  padding: 16px 20px;
-  background: linear-gradient(180deg, rgba(248, 250, 252, 0.85) 0%, rgba(241, 245, 249, 0.5) 100%);
+  padding: 18px 24px;
+  background: linear-gradient(180deg, rgba(248, 250, 252, 0.95) 0%, rgba(241, 245, 249, 0.65) 100%);
   border: 1px solid var(--border-light);
   border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
-  transition: border-color var(--speed) var(--ease), box-shadow var(--speed) var(--ease);
+  position: relative;
+  perspective: 1200px;
+  transition: border-color var(--speed) var(--ease), box-shadow var(--speed) var(--ease), transform 0.35s var(--ease);
 }
 
 .sources-flow-art-wrap:hover {
-  border-color: #bfdbfe;
-  box-shadow: var(--shadow-md);
+  border-color: #93c5fd;
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px -8px rgba(30, 96, 213, 0.16), 0 0 0 1px rgba(30, 96, 213, 0.12);
 }
 
 .sources-flow-img {
@@ -2448,7 +2556,15 @@ body{overflow-wrap:anywhere}
   max-width: 720px;
   height: auto;
   display: block;
-  filter: drop-shadow(0 8px 20px rgba(30, 96, 213, 0.08));
+  filter: drop-shadow(0 10px 24px rgba(30, 96, 213, 0.10));
+  animation: subtleSourcesFloat 8s ease-in-out infinite alternate;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.35s var(--ease);
+  will-change: transform, filter;
+}
+
+.sources-flow-img:hover {
+  transform: scale(1.02);
+  filter: drop-shadow(0 18px 36px rgba(30, 96, 213, 0.18));
 }
 
 /* 关于说明页：左文右图平衡排版 */
@@ -2469,6 +2585,20 @@ body{overflow-wrap:anywhere}
   justify-content: center;
   align-items: center;
   min-width: 0;
+  position: relative;
+  perspective: 1000px;
+}
+
+.about-visual-side::before {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(30, 96, 213, 0.12) 0%, rgba(16, 185, 129, 0.08) 50%, transparent 70%);
+  filter: blur(32px);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .about-art-img {
@@ -2476,26 +2606,86 @@ body{overflow-wrap:anywhere}
   max-width: 340px;
   height: auto;
   display: block;
-  filter: drop-shadow(0 10px 24px rgba(30, 96, 213, 0.08));
-  animation: subtleFloat 6s ease-in-out infinite alternate;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 14px 30px rgba(30, 96, 213, 0.12)) drop-shadow(0 4px 12px rgba(16, 185, 129, 0.08));
+  animation: subtleAboutFloat 7s ease-in-out infinite alternate;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.35s var(--ease);
+  will-change: transform, filter;
 }
 
-/* 细腻浮动关键帧动画 */
+.about-art-img:hover {
+  transform: translateY(-8px) scale(1.035) rotate(-0.8deg);
+  filter: drop-shadow(0 24px 46px rgba(30, 96, 213, 0.22)) drop-shadow(0 6px 18px rgba(16, 185, 129, 0.14));
+}
+
+.about-art-img:active {
+  transform: translateY(-2px) scale(0.985);
+}
+
+/* 细腻浮动与光晕关键帧动画 */
 @keyframes subtleHeroFloat {
   0% {
     transform: translateY(0px) rotate(0deg);
   }
   100% {
-    transform: translateY(-8px) rotate(0.35deg);
+    transform: translateY(-9px) rotate(0.45deg);
   }
 }
 
-@keyframes subtleFloat {
+@keyframes subtleEmptyFloat {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-7px) rotate(-0.4deg);
+  }
+}
+
+@keyframes subtleRecordsFloat {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-7px) rotate(0.4deg);
+  }
+}
+
+@keyframes subtleDisciplineFloat {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+  100% {
+    transform: translateY(-6px) scale(1.015);
+  }
+}
+
+@keyframes subtleSourcesFloat {
   0% {
     transform: translateY(0px);
   }
   100% {
-    transform: translateY(-6px);
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes subtleAboutFloat {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-8px) rotate(-0.4deg);
+  }
+}
+
+@keyframes subtleAuraPulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.06);
+    opacity: 1;
   }
 }
 
@@ -2547,11 +2737,70 @@ body{overflow-wrap:anywhere}
   }
 }
 
-
 @media (prefers-reduced-motion: reduce) {
   .hero-art-img,
   .ws-empty-img,
-  .about-art-img {
+  .discipline-art-img,
+  .records-empty-img,
+  .sources-flow-img,
+  .about-art-img,
+  .home-hero-visual-col::before {
     animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* 交互反馈动画 (聚焦波纹与轻量弹跳) */
+.input-focus-pulse {
+  animation: inputRingPulse 1.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+@keyframes inputRingPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(30, 96, 213, 0.45);
+    border-color: var(--primary);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(30, 96, 213, 0.18);
+    border-color: var(--primary);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(30, 96, 213, 0);
+  }
+}
+
+.interactive-bounce {
+  animation: visualBounce 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+@keyframes visualBounce {
+  0% { transform: scale(1); }
+  35% { transform: scale(0.94) translateY(-3px); }
+  65% { transform: scale(1.05) translateY(-10px); }
+  100% { transform: scale(1) translateY(0); }
+}
+
+/* 调查记录头部栅格与视觉框 */
+.records-hero-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 28px;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.records-visual-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 0;
+}
+
+@media (max-width: 860px) {
+  .records-hero-row {
+    grid-template-columns: 1fr;
+  }
+  .records-visual-box {
+    display: none;
   }
 }
