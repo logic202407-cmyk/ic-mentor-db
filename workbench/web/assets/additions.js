@@ -63,36 +63,94 @@ function setupAddMentor() {
   };
 }
 
-// ── 视觉素材微交互与 3D 景深跟踪 (全局事件委托·交互感拉满) ──
+// ── ThreeUI 灵感：学术感精密微视差与触觉微交互 (RAF 阻尼节流与克制反馈) ──
 (function setupVisualInteractions() {
   if (typeof window === 'undefined') return;
 
-  // 1. 鼠标悬停 3D 景深视差微倾斜 (Mouse 3D Parallax Tilt)
+  // 1. 高性能阻尼微视差引擎 (Subtle Academic Parallax with RAF & Damping)
+  const isReducedMotion = () => window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  let activeContainer = null;
+  let activeImg = null;
+  let curRx = 0, curRy = 0;
+  let tgtRx = 0, tgtRy = 0;
+  let rafId = null;
+
+  function updateParallax() {
+    if (!activeImg || isReducedMotion()) {
+      if (activeImg) activeImg.style.transform = '';
+      rafId = null;
+      return;
+    }
+
+    // 线性阻尼缓动 (Lerp Damping: 0.14)
+    curRx += (tgtRx - curRx) * 0.14;
+    curRy += (tgtRy - curRy) * 0.14;
+
+    activeImg.style.transform = 'perspective(1200px) rotateX(' + curRx.toFixed(2) + 'deg) rotateY(' + curRy.toFixed(2) + 'deg) scale(1.008)';
+
+    // 如果未完全回正或目标值有差异，持续驱动下一帧
+    if (Math.abs(tgtRx - curRx) > 0.01 || Math.abs(tgtRy - curRy) > 0.01) {
+      rafId = requestAnimationFrame(updateParallax);
+    } else {
+      rafId = null;
+      if (tgtRx === 0 && tgtRy === 0) {
+        activeImg.style.transform = '';
+      }
+    }
+  }
+
   document.addEventListener('mousemove', function(e) {
-    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (isReducedMotion() || document.hidden) return;
+
     const container = e.target.closest('.home-hero-visual-col, .ws-empty-graphic, .discipline-visual-box, .empty-state-art, .sources-flow-art-wrap, .about-visual-side');
-    if (!container) return;
+    if (!container) {
+      if (activeContainer) {
+        tgtRx = 0;
+        tgtRy = 0;
+        if (!rafId) rafId = requestAnimationFrame(updateParallax);
+        activeContainer = null;
+      }
+      return;
+    }
+
     const img = container.querySelector('img');
     if (!img) return;
+
+    activeContainer = container;
+    activeImg = img;
 
     const rect = container.getBoundingClientRect();
     if (!rect.width || !rect.height) return;
 
     const normX = (e.clientX - rect.left) / rect.width - 0.5;
     const normY = (e.clientY - rect.top) / rect.height - 0.5;
-    const maxAngle = container.classList.contains('sources-flow-art-wrap') ? 5 : 8;
-    const tgtRx = (-normY * maxAngle).toFixed(2);
-    const tgtRy = (normX * maxAngle).toFixed(2);
 
-    img.style.transform = 'perspective(1000px) rotateX(' + tgtRx + 'deg) rotateY(' + tgtRy + 'deg) scale(1.025)';
-  });
+    // 显著收敛最大倾斜幅度至 1.8 - 2.2 度，杜绝大幅晃动
+    const maxAngle = container.classList.contains('home-hero-visual-col') ? 2.2 : (container.classList.contains('sources-flow-art-wrap') ? 1.4 : 1.8);
+    tgtRx = -normY * maxAngle;
+    tgtRy = normX * maxAngle;
 
-  // 鼠标移出容器平滑复位
+    if (!rafId) {
+      rafId = requestAnimationFrame(updateParallax);
+    }
+  }, { passive: true });
+
   document.addEventListener('mouseout', function(e) {
     const container = e.target.closest('.home-hero-visual-col, .ws-empty-graphic, .discipline-visual-box, .empty-state-art, .sources-flow-art-wrap, .about-visual-side');
     if (container && (!e.relatedTarget || !container.contains(e.relatedTarget))) {
-      const img = container.querySelector('img');
-      if (img) img.style.transform = '';
+      tgtRx = 0;
+      tgtRy = 0;
+      if (!rafId) rafId = requestAnimationFrame(updateParallax);
+      activeContainer = null;
+    }
+  });
+
+  // 页面不可见时挂起渲染
+  document.addEventListener('visibilitychange', function() {
+    if (document.hidden && rafId) {
+      cancelAnimationFrame(rafId);
+      rafId = null;
     }
   });
 
@@ -140,7 +198,7 @@ function setupAddMentor() {
       return;
     }
 
-    // D. 点击首页 Hero 主图 -> 触发弹性微弹跳动效
+    // D. 点击首页 Hero 主图 -> 触发精密微触压反馈
     if (e.target.matches('.hero-art-img') || e.target.closest('.home-hero-visual-col')) {
       const heroImg = document.querySelector('.hero-art-img');
       if (heroImg) {
@@ -148,9 +206,25 @@ function setupAddMentor() {
         heroImg.classList.remove('interactive-bounce');
         void heroImg.offsetWidth;
         heroImg.classList.add('interactive-bounce');
-        setTimeout(() => heroImg.classList.remove('interactive-bounce'), 800);
+        setTimeout(() => heroImg.classList.remove('interactive-bounce'), 500);
       }
       return;
     }
   });
+
+  // 3. 数据来源多源汇聚交互 (Stream Convergence Hover Linkage)
+  const sourceBentoCards = document.querySelectorAll('#sourcesView .bento-card-item');
+  const sourcesWrap = document.querySelector('.sources-flow-art-wrap');
+  if (sourceBentoCards && sourcesWrap) {
+    sourceBentoCards.forEach(function(card, idx) {
+      card.addEventListener('mouseenter', function() {
+        sourcesWrap.classList.add('source-focus-flow');
+        sourcesWrap.dataset.activeStream = String(idx);
+      });
+      card.addEventListener('mouseleave', function() {
+        sourcesWrap.classList.remove('source-focus-flow');
+        delete sourcesWrap.dataset.activeStream;
+      });
+    });
+  }
 })();
