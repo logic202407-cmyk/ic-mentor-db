@@ -120,5 +120,130 @@ class StatusTests(unittest.TestCase):
             self.assertEqual(result["protocol_status"], "pending")
 
 
+def _label(pair_id: str, verdict: str, reviewer: str, **overrides) -> dict:
+    row = {name: "" for name in human_labels.COLUMNS}
+    row.update({"pair_id": pair_id, "human_verdict": verdict, "reviewer": reviewer,
+                "reviewed_at": "2026-10-24", "human_confidence": "medium"})
+    row.update(overrides)
+    return row
+
+
+def _write_key(csv_path: pathlib.Path, items: dict) -> None:
+    key_path = csv_path.with_name(csv_path.stem + "-key.json")
+    key_path.write_text(
+        json.dumps({"schema": "mentor-workbench/human-annotation-key/v1",
+                    "items": items}, ensure_ascii=False),
+        encoding="utf-8")
+
+
+class ReviewerIndependenceTests(unittest.TestCase):
+    """同一对的多份人工判断只能算一条真值，否则样本量会凭空翻倍。
+
+    真实事故形态：协议建议两位标注者，于是 15 对 × 2 人 = 30 行，
+    旧实现把它当成 30 对独立样本，直接跨过 ``MIN_LABELS=30`` 的「人工金标准 ready」
+    门槛——用重复计数冒充了足够的标注量。
+    """
+
+    def setUp(self) -> None:
+        self._tmp = tempfile.TemporaryDirectory()
+        self.dir = pathlib.Path(self._tmp.name)
+
+    def tearDown(self) -> None:
+        self._tmp.cleanup()
+
+    def test_two_reviewers_on_the_same_pairs_do_not_double_the_sample(self) -> None:
+        rows = []
+        for index in range(10):
+            for reviewer in ("标注者甲", "标注者乙"):
+                rows.append(_label(f"p{index}", "same_person", reviewer))
+        for index in range(5):
+            for reviewer in ("标注者甲", "标注者乙"):
+                rows.append(_label(f"q{index}", "different_person", reviewer))
+        path = self.dir / "two-reviewers.csv"
+        _write_labels(path, rows)
+        summary = human_labels.import_labels(path, out_dir=self.dir / "out")
+        self.assertEqual(summary["labelled_total"], 15)
+        self.assertEqual(summary["usable_pairs"], 15)
+        self.assertEqual(summary["positives"], 10)
+        self.assertEqual(summary["negatives"], 5)
+        self.assertEqual(summary["status"], "insufficient",
+                         "15 对即使有两位标注者也不能算达到 30 对门槛")
+
+    def test_conflicting_reviewers_are_flagged_and_excluded(self) -> None:
+        path = self.dir / "conflict.csv"
+        _write_labels(path, [_label("p0", "same_person", "甲"),
+                             _label("p0", "different_person", "乙")])
+        summary = human_labels.import_labels(path, out_dir=self.dir / "out")
+        self.assertEqual(summary["conflicts"], 1)
+        self.assertEqual(summary["usable_pairs"], 0,
+                         "互相矛盾的两位标注者不能被同时当成真值")
+        self.assertEqual(summary["positives"], 0)
+        self.assertEqual(summary["negatives"], 0)
+        stored = json.loads((self.dir / "out" / "human_labels.json")
+                            .read_text(encoding="utf-8"))
+        self.assertEqual(len(stored["labels"]), 1, "同一 pair_id 只保留一条真值")
+        self.assertTrue(stored["labels"][0]["conflict"])
+        self.assertEqual(stored["conflicts"], ["p0"])
+
+    def test_blank_pair_id_is_rejected(self) -> None:
+        path = self.dir / "blank.csv"
+        _write_labels(path, [_label("", "same_person", "甲")])
+        with self.assertRaises(ValueError) as ctx:
+            human_labels.import_labels(path, out_dir=self.dir / "out")
+        self.assertIn("pair_id", str(ctx.exception))
+
+
+class UnmeasuredMetricTests(unittest.TestCase):
+    """评分用键缺失时，指标必须输出 null，绝不能输出 0.0。
+
+    旧实现把缺失的 ``emb`` 当成 0、把缺失的 ``program_label`` 当成「不是同人」，
+    于是打印出「精确率 0.000 / 召回率 0.000」——读者会以为是实测结果很差，
+    实际上根本没有测过。
+    """
+
+    def setUp(self) -> None:
+        self._tmp = tempfile.TemporaryDirectory()
+        self.dir = pathlib.Path(self._tmp.name)
+
+    def tearDown(self) -> None:
+        self._tmp.cleanup()
+
+    def _enough_rows(self) -> list[dict]:
+        rows = [_label(f"s{i}", "same_person", "甲") for i in range(20)]
+        rows += [_label(f"d{i}", "different_person", "甲") for i in range(20)]
+        return rows
+
+    def test_missing_key_yields_null_metrics(self) -> None:
+        path = self.dir / "nokey.csv"
+        _write_labels(path, self._enough_rows())
+        summary = human_labels.import_labels(path, out_dir=self.dir / "out")
+        self.assertEqual(summary["status"], "ready")
+        self.assertIsNone(summary["program_rule"],
+                          "评分用键缺失时不得报告程序规则指标")
+        self.assertIsNone(summary["embedding_thresholds"],
+                          "评分用键缺失时不得报告嵌入阈值指标")
+        self.assertEqual(summary["embedding_pairs"], 0)
+        self.assertIn("metrics_note", summary)
+
+    def test_key_present_still_produces_metrics(self) -> None:
+        path = self.dir / "withkey.csv"
+        _write_labels(path, self._enough_rows())
+        items = {}
+        for index in range(20):
+            items[f"s{index}"] = {"emb": 0.9, "program_label": "same_person"}
+        for index in range(20):
+            items[f"d{index}"] = {"emb": 0.2, "program_label": "different_person"}
+        _write_key(path, items)
+        summary = human_labels.import_labels(path, out_dir=self.dir / "out")
+        self.assertEqual(summary["status"], "ready")
+        self.assertEqual(summary["embedding_pairs"], 40)
+        self.assertEqual(summary["program_rule"]["tp"], 20)
+        self.assertEqual(summary["program_rule"]["fp"], 0)
+        self.assertAlmostEqual(summary["program_rule"]["precision"], 1.0)
+        top = summary["embedding_thresholds"][0]
+        self.assertEqual(top["emb>="], 0.50)
+        self.assertEqual((top["tp"], top["fp"]), (20, 0))
+
+
 if __name__ == "__main__":
     unittest.main()

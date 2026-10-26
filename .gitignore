@@ -84,3 +84,18 @@ data/processed/cv_network.json
 # 人工标注过程文件：原始标注含标注者姓名与逐条判断，留在本机；仓库只放协议与模板。
 workbench/evaluation/human_annotation/annotator-*.csv
 workbench/evaluation/human_annotation/human_labels.json
+
+# ── 参赛专用交付物：已停止跟踪（公开仓库只作为长期开源项目仓库）──
+# 技术报告三件产物、演示视频脚本/提词稿/录制清单、提交材料 README 都是参赛材料，
+# 不再随仓库同步；原件保留在所有者本机，工作区文件不删除。
+# 注意：.gitignore 不会取消**已被跟踪**的文件——索引里的历史副本由维护者用
+# `git rm --cached <path>` 处理（工作区保留），本文件只负责"别再误提交"。
+# 保留跟踪的：workbench/aic-submission/evidence/*.md（评测文档）、
+# 开源及第三方资源使用清单.md（开源合规文档）——它们不属于被忽略的范围。
+/workbench/aic-submission/技术报告.*
+/workbench/aic-submission/演示视频脚本.md
+/workbench/aic-submission/录制提词稿.txt
+/workbench/aic-submission/录制URL清单.md
+/workbench/aic-submission/README.md
+# 本地会话过程文件（验证脚本、原始截图、任务快照、补丁），只在所有者机器保留
+/.work/

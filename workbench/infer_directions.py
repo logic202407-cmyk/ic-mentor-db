@@ -180,8 +180,9 @@ def embed_texts(texts: list[str], batch_note: str = "") -> "object":
 
 
 # 生产决策用的是**融合分**（关键词分与嵌入余弦的加权），不是裸余弦。
-# 0.60 来自 400 条留出验证的校准：该阈值下接受约 19% 记录、接受中 Top-1 正确率约 35%
-# （整体 Top-1 只有 14.2%）。相似度仍然是相似度，**不是正确概率**。
+# 0.60 是留出验证上选的保守应用阈值；「接受多少 / 接受里对了多少」必须看
+# `--validate` 现场生成的校准表（`validation.json` 的 calibration.fusion），
+# 本文件不写死那些比例——它们会随语料与词表变化。相似度不是正确概率。
 FUSION_APPLY_THRESHOLD = 0.60
 CONFIDENCE_BANDS = ((0.70, "high"), (0.65, "medium"), (0.60, "low"))
 CALIBRATION_THRESHOLDS = (0.40, 0.45, 0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.80)
@@ -236,6 +237,21 @@ def recommend_threshold(curve: list[dict], target_precision: float = 0.30,
             "coverage": best["coverage"] if best else None,
             "target_precision": target_precision,
             "note": "没有阈值同时满足目标精确率与最小覆盖率；以上为可达的最高精确率。"}
+
+
+def threshold_note(min_score: float, row: dict | None) -> str:
+    """报告里那句「阈值 X 的实测」：X 只能来自配置，不能在文案里写字面量。
+
+    历史缺陷：报告长期硬编码「默认阈值 0.55」，而 ``FUSION_APPLY_THRESHOLD`` 早已是
+    0.60——对外文档写错默认值就是在误导使用者。这里把阈值与实测行一起传入，两者
+    不同步时也不可能再写出矛盾的数字。
+    """
+    if not row:
+        return (f"当前阈值 **{min_score:.2f}** 不在本次校准网格上（步长 0.05），"
+                "下表仅作参照。")
+    precision = "—" if row.get("precision") is None else f"{row['precision']:.1%}"
+    return (f"当前阈值 **{min_score:.2f}** 的实测：接受 {row.get('accepted', 0)} 条，"
+            f"覆盖率 {row.get('coverage', 0):.1%}，接受中正确率 {precision}。")
 
 
 # ── 验证 ────────────────────────────────────────────────────────────────
@@ -312,26 +328,41 @@ def validate(profiles: list[dict], vocab: list[str], sample: int, seed: int = 42
     dev, test = order_idx[:cut], order_idx[cut:]
 
     def on(rows, matrix) -> dict:
+        if not rows:
+            # 样本太少时 dev/test 会切成空集：空集上的准确率没有定义，
+            # 旧实现在这里对空列表求平均直接 ZeroDivisionError。
+            return {"n": 0, "top1": None, "top3": None}
         h1 = sum(_ranked_labels(matrix[r], vocab)[0] == truths[r] for r in rows)
         h3 = sum(truths[r] in _ranked_labels(matrix[r], vocab) for r in rows)
         return {"n": len(rows), "top1": h1 / len(rows), "top3": h3 / len(rows)}
 
-    best_weight, best_score = FUSION_KEYWORD_WEIGHT, -1.0
-    for step in range(21):
-        weight = step / 20
-        matrix = weight * kw_matrix + (1 - weight) * sims_clipped
-        metric = on(dev, matrix)
-        score = metric["top1"] + metric["top3"]
-        if score > best_score:
-            best_weight, best_score = weight, score
+    tuning = {"dev": len(dev), "test": len(test),
+              "chosen_weight": FUSION_KEYWORD_WEIGHT}
+    if not dev or not test:
+        # 样本不足 2 条时切分必然有一边为空，调参隔离无从谈起。这里给出明确提示，
+        # 而不是把空集当成「全错」去报 0%。
+        tuning["insufficient_sample"] = True
+        tuning["note"] = ("样本不足 2 条，无法划分 dev/test，调参隔离一节省略；"
+                          "请用更大的 --validate N。")
+        tuning["test"] = {name: {"n": 0, "top1": None, "top3": None}
+                          for name in ("keyword", "embedding", "fusion")}
+    else:
+        best_weight, best_score = FUSION_KEYWORD_WEIGHT, -1.0
+        for step in range(21):
+            weight = step / 20
+            matrix = weight * kw_matrix + (1 - weight) * sims_clipped
+            metric = on(dev, matrix)
+            score = metric["top1"] + metric["top3"]
+            if score > best_score:
+                best_weight, best_score = weight, score
 
-    tuned = best_weight * kw_matrix + (1 - best_weight) * sims_clipped
-    tuning = {
-        "dev": len(dev), "test": len(test), "chosen_weight": best_weight,
-        "test": {"keyword": on(test, kw_matrix),
-                 "embedding": on(test, sims),
-                 "fusion": on(test, tuned)},
-    }
+        tuned = best_weight * kw_matrix + (1 - best_weight) * sims_clipped
+        tuning.update({
+            "chosen_weight": best_weight,
+            "test": {"keyword": on(test, kw_matrix),
+                     "embedding": on(test, sims),
+                     "fusion": on(test, tuned)},
+        })
 
     # ── 阈值校准：分别看「嵌入分数」与「融合分数」的精确率—覆盖率 ──────────
     emb_top = sims.argmax(axis=1)
@@ -511,10 +542,12 @@ def infer(profiles: list[dict], vocab: list[str], min_score: float,
                 fused[row] = masked
     best = np.argmax(fused, axis=1)
     best_score = fused[np.arange(len(targets)), best]
-    # 「是否写入」的阈值仍按**嵌入相似度**判定：这样 0.55 的含义与历史产物一致，
-    # 不会因为换了融合权重就让同一个阈值突然放宽或收紧。
-    best_emb = np.argmax(sims, axis=1)
-    best_emb_score = sims[np.arange(len(targets)), best_emb]
+    # 「是否写入」的阈值按**融合分**判定，与 FUSION_APPLY_THRESHOLD / confidence_band
+    # 的口径一致（融合分才是生产决策用的分数）。
+    # embedding_score 必须取**被建议那个标签**的余弦，不能用全词表 argmax(sims)：
+    # 学科约束会把候选裁到「该学科下已出现过的标签」，两者可能不是同一个标签，
+    # 那时报出来的嵌入分就属于另一个方向，等于建议无据可查。
+    best_emb_score = sims[np.arange(len(targets)), best]
     fused_sorted = np.sort(fused, axis=1)
     margins = fused_sorted[:, -1] - fused_sorted[:, -2]
 
@@ -636,9 +669,9 @@ def main() -> int:
                          else f"{row['precision']:.1%}")
             cal_rows.append(f"| {row['score>=']:.2f} | {row['accepted']} | "
                             f"{row['coverage']:.1%} | {precision} |")
-        at_default = calibration["default_at_0_55"] or {}
-        default_precision = ("—" if at_default.get("precision") is None
-                             else f"{at_default['precision']:.1%}")
+        at_threshold = next(
+            (row for row in calibration["fusion"]
+             if abs(float(row["score>="]) - float(args.min_score)) < 1e-9), None)
         restricted = result["discipline_restricted"]
         restricted_top1 = ("—" if restricted["top1"] is None
                            else f"{restricted['top1']:.1%}")
@@ -651,9 +684,7 @@ def main() -> int:
             "|--:|--:|--:|--:|",
         ] + cal_rows + [
             "",
-            f"默认阈值 **0.55** 的实测：接受 {at_default.get('accepted', 0)} 条，"
-            f"覆盖率 {at_default.get('coverage', 0):.1%}，"
-            f"接受中正确率 {default_precision}。"
+            threshold_note(args.min_score, at_threshold),
             "**这是实测比例，不是概率校准结果**——它只说明在该阈值下被接受的那批里"
             "有多少 Top-1 正确。低于阈值的记录一律标为 `unknown`，不写入建议。",
             "",
@@ -665,20 +696,27 @@ def main() -> int:
             "",
             "### 调参隔离：融合权重只在 dev 上选",
             "",
-            f"把同一样本按固定种子划成 dev {tuning['dev']} 条 / "
-            f"test {tuning['test']['keyword']['n']} 条，"
-            f"在 dev 上选中关键词权重 **{tuning['chosen_weight']:.2f}**"
-            "（选择标准为 Top-1+Top-3），只在 test 上报数：",
-            "",
-            "| 方法 | test Top-1 | test Top-3 |",
-            "|:--|--:|--:|",
-            f"| 关键词基线 | {tuning['test']['keyword']['top1']:.1%} | "
-            f"{tuning['test']['keyword']['top3']:.1%} |",
-            f"| 嵌入模型 | {tuning['test']['embedding']['top1']:.1%} | "
-            f"{tuning['test']['embedding']['top3']:.1%} |",
-            f"| 分数级融合 | **{tuning['test']['fusion']['top1']:.1%}** | "
-            f"**{tuning['test']['fusion']['top3']:.1%}** |",
-            "",
+        ]
+        if tuning.get("insufficient_sample"):
+            lines += [f"- {tuning['note']}", ""]
+        else:
+            lines += [
+                f"把同一样本按固定种子划成 dev {tuning['dev']} 条 / "
+                f"test {tuning['test']['keyword']['n']} 条，"
+                f"在 dev 上选中关键词权重 **{tuning['chosen_weight']:.2f}**"
+                "（选择标准为 Top-1+Top-3），只在 test 上报数：",
+                "",
+                "| 方法 | test Top-1 | test Top-3 |",
+                "|:--|--:|--:|",
+                f"| 关键词基线 | {tuning['test']['keyword']['top1']:.1%} | "
+                f"{tuning['test']['keyword']['top3']:.1%} |",
+                f"| 嵌入模型 | {tuning['test']['embedding']['top1']:.1%} | "
+                f"{tuning['test']['embedding']['top3']:.1%} |",
+                f"| 分数级融合 | **{tuning['test']['fusion']['top1']:.1%}** | "
+                f"**{tuning['test']['fusion']['top3']:.1%}** |",
+                "",
+            ]
+        lines += [
             "### 分层：字面命中 vs 需要语义推断",
             "",
             "| 分层 | 条数 | 关键词 Top-1 | 嵌入 Top-1 | 融合 Top-1 |",
@@ -697,11 +735,15 @@ def main() -> int:
             f"耗时 {result['seconds']} 秒。",
             "",
         ]
-        print(f"验证：关键词 Top-1 {result['keyword']['top1']:.1%}；"
-              f"嵌入 {result['embedding']['top1']:.1%}；"
-              f"阈值混合 {result['hybrid']['top1']:.1%}；"
-              f"分数级融合 {result['fusion']['top1']:.1%}"
-              f"（test-only {tuning['test']['fusion']['top1']:.1%}）")
+        message = (f"验证：关键词 Top-1 {result['keyword']['top1']:.1%}；"
+                   f"嵌入 {result['embedding']['top1']:.1%}；"
+                   f"阈值混合 {result['hybrid']['top1']:.1%}；"
+                   f"分数级融合 {result['fusion']['top1']:.1%}")
+        if not tuning.get("insufficient_sample"):
+            message += f"（test-only {tuning['test']['fusion']['top1']:.1%}）"
+        else:
+            message += f"（{tuning['note']}）"
+        print(message)
         (OUT_DIR / "validation.json").write_text(
             json.dumps(result, ensure_ascii=False, indent=2) + "\n",
             encoding="utf-8", newline="\n")
@@ -783,9 +825,10 @@ def main() -> int:
             f"- 区间分布：high {result['bands']['high']} / medium {result['bands']['medium']} /"
             f" low {result['bands']['low']} / unknown {result['bands']['unknown']}",
             "",
-            "**关于阈值**：0.60 是留出验证上实测的权衡点（接受约 19% 记录、接受中 Top-1"
-            " 正确率约 35%，整体只有 14.2%），不是「60% 会正确」。低于阈值的记录写"
-            " unknown，不填。",
+            f"**关于阈值**：本次用的阈值是 **{args.min_score:.2f}**（融合分）。它是不是"
+            "「会正确的概率」——不是。接受多少条、接受里对了多少，见上面"
+            "「阈值与拒绝」一节的实测表；那张表的阈值与这里一致。"
+            "低于阈值的记录一律写 unknown，不填。",
             "",
         ]
         if args.apply:

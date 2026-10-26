@@ -147,6 +147,35 @@ def canonical_home(url: str) -> str:
     return u.rstrip("/")
 
 
+def identity_home(url: str) -> str:
+    """判「是不是**同一个页面**」用的归一化：保留查询串。
+
+    为什么必须和 :func:`canonical_home` 分开
+    ----------------------------------------
+    ``canonical_home`` 会丢掉整个查询串。这用于「按标题/文件名识别名录页」没问题，
+    但当查询串本身就是页面标识时——``jiaoshi.php?aid=100``、
+    ``teacherBasic/preview?teacherId=31448``、``_redirect?articleId=464818`` 这类
+    CMS——把两条不同的个人页压成同一个 URL，就会让 :func:`pair_label` 得出
+    「同一个专属主页 ⇒ 同一个人」，也就是**仅凭姓名相同 + 同一站点模板就把两个
+    不同的人合并**。
+
+    这不是理论风险：全库实测 **473 条记录、471 个互不相同的个人页**，只因查询串不同
+    就被 ``canonical_home`` 压成 **11 个 URL**（中国林科院 111 页、南大电子 101 页、
+    中科大 dslx 72 页、同济 62 页、上海交大化学化工学院 58 页、华东师大 48 页 …）。
+    当前同名组里恰好没有落在这些 URL 上的两人组合，所以本次改动不改变任何标签；
+    但判等口径本身不成立，一旦出现同名就会直接合并两个人。
+
+    所以身份判等保留查询串，只抹掉协议、www、锚点与末尾斜杠这些装饰性差异。
+    """
+    u = (url or "").strip().lower()
+    if not u:
+        return ""
+    u = re.sub(r"^https?://", "", u)
+    u = re.sub(r"^www\.", "", u)
+    u = u.split("#")[0].replace("/?", "?")
+    return u.rstrip("/")
+
+
 def host_of(url: str) -> str:
     """取 URL 的主机名。"""
     u = (url or "").strip().lower()
@@ -276,7 +305,7 @@ def pair_label(a: dict, b: dict, pages: PageIndex) -> dict:
     home_b = (b.get("homepage") or "").strip()
     kind_a = pages.kind(home_a)
     kind_b = pages.kind(home_b)
-    canon_a, canon_b = canonical_home(home_a), canonical_home(home_b)
+    ident_a, ident_b = identity_home(home_a), identity_home(home_b)
 
     same_inst = a.get("institution") == b.get("institution")
     same_dept = a.get("department") == b.get("department")
@@ -303,7 +332,9 @@ def pair_label(a: dict, b: dict, pages: PageIndex) -> dict:
         return row
 
     # 2) 同一个专属页 + 同机构 → 直接公开证据
-    if canon_a and canon_a == canon_b:
+    # 判等用 identity_home（保留查询串）：查询串常常就是页面 id，抹掉它会把
+    # 「同一站点模板下的两个不同个人页」误判成同一页，从而把两个人合并。
+    if ident_a and ident_a == ident_b:
         if not same_inst:
             row.update(label=UNKNOWN, strength="none",
                        reason="same_url_cross_institution")
@@ -852,7 +883,9 @@ def _build_report(stats: dict, primary: dict | None = None,
                   risky: list[dict] | None = None,
                   queue: list[dict] | None = None,
                   profiles_total: int = 0,
-                  reviewed: dict | None = None) -> list[str]:
+                  reviewed: dict | None = None,
+                  agreement: dict | None = None,
+                  human_status: dict | None = None) -> list[str]:
     lines = [
         "# 同名导师消歧：证据分级评测与待核清单",
         "",
@@ -963,13 +996,41 @@ def _build_report(stats: dict, primary: dict | None = None,
                          f"{_pct(m['f1'])} |")
 
     if reviewed is not None:
+        # 一致率必须来自本次运行，不能把某次跑出来的数字写死在文案里——
+        # 数据一变，报告就会继续复述一个不再成立的「实测值」。
+        if agreement and agreement.get("agreement") is not None:
+            agreement_line = (
+                "上面所有指标都来自**程序规则**：`pair_label`（自动判定）与 `adjudicate`"
+                "（规则复核）同源，因此本次实测的一致率 "
+                f"**{_pct(agreement['agreement'])}**"
+                f"（{agreement['agreed']}/{agreement['labelled_candidates']} 对，"
+                "与 `--gold` 写出的 `workbench/evaluation/gold_pairs.json` 同一批样本）"
+                "只是「两套规则是否一致」，不是人工验证的准确率。")
+        else:
+            agreement_line = (
+                "上面所有指标都来自**程序规则**：`pair_label`（自动判定）与`adjudicate`"
+                "（规则复核）同源，两者的一致率只能说明规则之间是否自洽，"
+                "不是人工验证的准确率。")
+        # 状态必须按磁盘上是否真的有人工判断来渲染，不能写死成「待完成」：
+        # 一旦跑过 --import-human，写死的「待完成」就成了假话。
+        collected = bool(human_status
+                         and human_status.get("protocol_status") == "human-collected")
+        if collected:
+            heading = "## 人工标注状态：**已收集人工判断**（人工金标准）"
+            status_line = (
+                f"本次同时读到 `human_labels.json`：人工独立判断 "
+                f"**{human_status.get('distinct_pairs')}** 对"
+                f"（同人 {human_status.get(SAME, 0)} / 异人 {human_status.get(DIFFERENT, 0)}"
+                f" / 未知 {human_status.get(UNKNOWN, 0)}；争议 "
+                f"{human_status.get('conflicts', 0)} 对）。"
+                "**上表仍是程序指标，不是人工准确率**；人工指标见 `human_metrics.json`。")
+        else:
+            heading = "## 人工标注状态：**待完成**"
+            status_line = ""
+        lines += ["", heading, "", agreement_line, ""]
+        if status_line:
+            lines += [status_line, ""]
         lines += [
-            "",
-            "## 人工标注状态：**待完成**",
-            "",
-            "上面所有指标都来自**程序规则**：`pair_label`（自动判定）与 `adjudicate`"
-            "（规则复核）同源，因此 91.3% 只是「两套规则是否一致」，不是人工验证的准确率。",
-            "",
             "仓库已提供人工盲标协议与工具：",
             "",
             "```bat",
@@ -1135,6 +1196,7 @@ def main() -> int:
           f"待核 {stats['labels'][UNKNOWN]}")
 
     primary = supplementary = legacy = comparison = reviewed = None
+    report_agreement = None
     risky: list[dict] = []
     queue: list[dict] = []
     with_feat: list[dict] = []
@@ -1269,6 +1331,7 @@ def main() -> int:
     if args.gold:
         gold = gold_set(rows, pages, seed=args.seed)
         agreement = gold_agreement(gold)
+        report_agreement = agreement
         payload = {
             "schema": "mentor-workbench/gold-pairs/v1",
             "protocol_status": "program-assisted",
@@ -1295,8 +1358,14 @@ def main() -> int:
               f"与自动协议一致率 {agreement['agreement']:.3f}"
               f" -> {EVAL_DIR / 'gold_pairs.json'}")
 
+    # 报告要引用「两套规则的一致率」时，必须现场算一遍；样本只依赖规则，不需要嵌入。
+    if reviewed is not None and report_agreement is None:
+        report_agreement = gold_agreement(gold_set(rows, pages, seed=args.seed))
+
     lines = _build_report(stats, primary, supplementary, legacy, comparison,
-                          risky, queue, len(profiles), reviewed)
+                          risky, queue, len(profiles), reviewed,
+                          report_agreement,
+                          human_labels.status(EVAL_DIR))
     (OUT_DIR / "report.md").write_text("\n".join(lines) + "\n",
                                        encoding="utf-8", newline="\n")
     print(f"报告 -> {OUT_DIR / 'report.md'}")

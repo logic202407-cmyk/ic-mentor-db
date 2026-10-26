@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import csv
 import json
+import logging
 import uuid
 from pathlib import Path
 
@@ -41,6 +42,9 @@ app.mount("/assets", StaticFiles(directory=WEB.parent / "assets"), name="assets"
 ALLOWED_HOSTS = {"127.0.0.1", "localhost", "::1", "testserver"}
 SAFE_METHODS = {"GET", "HEAD", "OPTIONS"}
 MAX_BODY_BYTES = 12 * 1024 * 1024   # 导入内容上限 10 MB，留出 JSON 包装余量
+# 413 的文案只写一处。此前中间件与 `_read_body` 各写了一遍字面量：今天两处都是
+# 12 MB 所以看不出来，但改了 `MAX_BODY_BYTES` 之后提示语不会跟着变，变成自相矛盾的错误信息。
+BODY_TOO_LARGE = f"请求体超过 {MAX_BODY_BYTES // 1024 // 1024} MB"
 
 
 def _host_only(value: str) -> str:
@@ -78,9 +82,33 @@ async def local_origin(request: Request, call_next):
     # 读进内存，再交给 core.parse_import 判断 10 MB——内存已经被占用了。
     length = request.headers.get("content-length", "")
     if length.isdigit() and int(length) > MAX_BODY_BYTES:
-        return JSONResponse({"detail": "请求体超过 12 MB"}, status_code=413)
+        return JSONResponse({"detail": BODY_TOO_LARGE}, status_code=413)
 
     return await call_next(request)
+
+
+async def _read_body(request: Request) -> bytes:
+    """按 ``MAX_BODY_BYTES`` 上限读取请求体，超限直接 413。
+
+    中间件只能看懂 ``content-length``；chunked 请求（没有这个头）会绕过它。
+    真实字节数只有读的时候才知道，所以这里边读边计数，超限立刻停手，
+    不把整个 body 先攒进内存。
+    """
+    length = request.headers.get("content-length", "")
+    if length.isdigit():
+        # 走 app 时中间件已经按同一个上限拦过；这里再复核一次，是为了让
+        # 「绕过中间件直接调用本函数」这条路径也不依赖调用方的自律。
+        if int(length) > MAX_BODY_BYTES:
+            raise HTTPException(status_code=413, detail=BODY_TOO_LARGE)
+        return await request.body()
+    chunks: list[bytes] = []
+    total = 0
+    async for chunk in request.stream():
+        total += len(chunk)
+        if total > MAX_BODY_BYTES:
+            raise HTTPException(status_code=413, detail=BODY_TOO_LARGE)
+        chunks.append(chunk)
+    return b"".join(chunks)
 
 
 async def _json_body(request: Request) -> dict:
@@ -89,8 +117,9 @@ async def _json_body(request: Request) -> dict:
     原先多处写成 `await request.json()` 且放在 try 之外，无效 JSON 会直接冒成 500
     并在 detail 里回显解析器原文（实测 4 处）。
     """
+    raw = await _read_body(request)
     try:
-        data = await request.json()
+        data = json.loads(raw)
     except (ValueError, UnicodeDecodeError) as error:
         raise HTTPException(status_code=400, detail="请求体不是合法 JSON") from error
     if not isinstance(data, dict):
@@ -113,6 +142,10 @@ def _mutate_project(project_id: str, mutate):
     except storage.DataCorruptError:
         raise
     except FileNotFoundError as error:
+        raise HTTPException(status_code=404, detail=str(error)) from error
+    except ValueError as error:
+        # 非法项目 ID 由 core._project_path 抛 ValueError。读接口（_project）把同样的
+        # 值映射成 404，写接口如果不映射就会变成 500——同一份坏 URL 两种结果。
         raise HTTPException(status_code=404, detail=str(error)) from error
 
 

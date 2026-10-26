@@ -1,6 +1,17 @@
 """Source-aware mentor discovery using a small open embedding model.
 
 Similarity is relevance to the user's query, never a measure of mentor quality.
+
+两条工程纪律写在这里，改代码前先读：
+
+1. **与查询无关的工作只做一次。** ``search()`` 是每个 Web 请求调用一次的，文档
+   格式化、切词建 BM25 索引、解压向量文件都与查询无关，按文档内容指纹缓存
+   （``_Corpus``）。全量目录实测：缓存前 BM25 请求 0.48–1.70 s、语义请求
+   0.24–1.25 s，而真正的打分只要 0.07 ms / 4.5 ms。
+2. **弱相关不硬推。** ``guarded_empty_decision`` 把评测层验证过的空判规则接进
+   检索路径：最高余弦低于 ``SEMANTIC_EMPTY_TAU`` **且**全库没有任何字面命中时返回
+   空结果。只加余弦阈值会误杀正常查询（评测：10.1% 的 test 查询被判空），加上
+   「无字面命中」这个前置条件后误杀为 0——两组数字都来自 ``retrieval_eval`` 实跑。
 """
 
 from __future__ import annotations
@@ -9,6 +20,8 @@ import hashlib
 import json
 import math
 import re
+import threading
+from collections import OrderedDict
 from pathlib import Path
 
 import numpy as np
@@ -17,6 +30,15 @@ from .core import DATA_DIR
 
 MODEL_NAME = "BAAI/bge-small-zh-v1.5"
 _model = None
+
+_CACHE_LOCK = threading.Lock()
+# 上限取 2 而不是更大：这是本地桌面工具，一份全量目录的缓存条目实测约 100 MB
+# （文档文本 + 归一化文本 + BM25 数组 + 向量矩阵 30 MB），4 份就是 400 MB 常驻内存，
+# 对单机工具不合理。缓存的用途是「语料内容没变就别重建」，2 份足够覆盖
+# 「刷新前后各一份」的常见场景；超出就按 LRU 淘汰，下次用到时重建（代价见 _Corpus）。
+# 注意：淘汰只影响速度，不影响正确性——缓存键是**文档内容指纹**，内容一改就失配重建。
+_CACHE_MAX_CORPORA = 2
+_CORPUS_CACHE: "OrderedDict[tuple[str, str], _Corpus]" = OrderedDict()
 
 
 def document(profile: dict) -> str:
@@ -32,17 +54,29 @@ def document(profile: dict) -> str:
     return "；".join(parts)[:1500]
 
 
-def keyword_score(query: str, text: str) -> float:
-    q = re.sub(r"\s+", "", query.lower())
-    t = re.sub(r"\s+", "", text.lower())
-    if not q or not t:
+def _normalize_text(text: str) -> str:
+    """``keyword_score`` 内部的归一化：去空白 + 小写。"""
+    return re.sub(r"\s+", "", text.lower())
+
+
+def _gram_score(query: str, text: str) -> float:
+    """二元组覆盖率，输入必须**已归一化**。
+
+    ``keyword_score`` / ``keyword_scores`` / ``keyword_scores_for_texts`` 共用这一份
+    公式，避免三处各写一遍再漂移（历史上逐标签与批量版就因此需要专门的对齐测试）。
+    """
+    if not query or not text:
         return 0.0
-    if q in t:
+    if query in text:
         return 1.0
-    grams = {q[i:i + 2] for i in range(max(1, len(q) - 1))}
+    grams = {query[i:i + 2] for i in range(max(1, len(query) - 1))}
     if not grams:
-        return float(q in t)
-    return sum(g in t for g in grams) / len(grams)
+        return float(query in text)
+    return sum(gram in text for gram in grams) / len(grams)
+
+
+def keyword_score(query: str, text: str) -> float:
+    return _gram_score(_normalize_text(query), _normalize_text(text))
 
 
 def keyword_scores(labels, text: str) -> dict[str, float]:
@@ -50,23 +84,96 @@ def keyword_scores(labels, text: str) -> dict[str, float]:
 
     逐标签调用时，每个标签都会对**整段文本**重跑一次 ``re.sub``；方向推断一次要算
     「5,478 条 × 256 个标签」，实测把全库推断拖到 40 分钟以上。这里把文本规范化提到
-    循环外，打分公式与 ``keyword_score`` 逐项一致（测试里对齐两者）。
+    循环外，打分公式与 ``keyword_score`` 逐项一致（两者共用 ``_gram_score``，测试对齐）。
     """
-    t = re.sub(r"\s+", "", text.lower())
+    t = _normalize_text(text)
     result: dict[str, float] = {}
     if not t:
         return {label: 0.0 for label in labels}
     for label in labels:
-        q = re.sub(r"\s+", "", label.lower())
-        if not q:
-            result[label] = 0.0
-        elif q in t:
-            result[label] = 1.0
-        else:
-            grams = {q[i:i + 2] for i in range(max(1, len(q) - 1))}
-            result[label] = (sum(g in t for g in grams) / len(grams)
-                             if grams else float(q in t))
+        result[label] = _gram_score(_normalize_text(label), t)
     return result
+
+
+def keyword_scores_for_texts(query: str, normalized_texts: list[str]) -> np.ndarray:
+    """一条查询对**多段已归一化文本**打分，语义与逐条 ``keyword_score`` 完全一致。
+
+    检索路径用它：旧实现每次检索都重新调 ``keyword_score``，等于把一万五千多段文本
+    各自重新归一化一遍（实测全库 250 ms，这里约 15 ms，差在把规范化提出循环）。
+    """
+    q = _normalize_text(query)
+    out = np.zeros(len(normalized_texts), dtype=np.float32)
+    if not q:
+        return out
+    for index, text in enumerate(normalized_texts):
+        if text:
+            out[index] = _gram_score(q, text)
+    return out
+
+
+def _document_digest(profiles: list[dict], texts: list[str]) -> str:
+    """文档内容指纹：与 ``_vectors`` 落盘 npz 里存的完全同一口径（可直接对账）。"""
+    return hashlib.sha256(json.dumps(
+        [(profile["id"], text) for profile, text in zip(profiles, texts)],
+        ensure_ascii=False,
+    ).encode("utf-8")).hexdigest()
+
+
+class _Corpus:
+    """一份文档集合 + 它的派生索引（归一化文本、BM25、向量），按内容指纹复用。
+
+    为什么需要：``search()`` 每个请求都会被调用一次，而旧实现**每次都**重新格式化
+    全部文档、重新切词建 BM25 索引、重新解压 32 MB 向量文件。这些工作与查询无关。
+    全量目录（15,719 条）实测单项成本：文档格式化 11 ms、切词 237 ms、BM25 索引
+    0.5–1.6 s、解压向量 npz 278 ms；建好之后的打分只要 0.07 ms（BM25）/
+    4.5 ms（全库余弦）。缓存之后热查询省掉上面全部重复工作。
+
+    指纹覆盖 ``id`` 与文档正文，任何一条记录被编辑指纹就变，不会返回陈旧结果；
+    缓存条目数有上限（``_CACHE_MAX_CORPORA``），条目里也只在真正用到时才构建派生对象。
+    """
+
+    def __init__(self, project_id: str, digest: str, texts: list[str]):
+        self.project_id = project_id
+        self.digest = digest
+        self.texts = texts
+        self._normalized: list[str] | None = None
+        self._bm25: "BM25Index | None" = None
+        self.vectors: np.ndarray | None = None
+
+    @property
+    def normalized(self) -> list[str]:
+        if self._normalized is None:
+            self._normalized = [_normalize_text(text) for text in self.texts]
+        return self._normalized
+
+    def bm25(self) -> "BM25Index":
+        if self._bm25 is None:
+            self._bm25 = BM25Index(self.texts)
+        return self._bm25
+
+
+def clear_cache() -> None:
+    """清空进程内文档/索引缓存（测试用；生产无需调用）。"""
+    with _CACHE_LOCK:
+        _CORPUS_CACHE.clear()
+
+
+def _corpus(project_id: str, profiles: list[dict]) -> _Corpus:
+    """取（或登记）该内容指纹对应的 ``_Corpus``。"""
+    texts = [document(profile) for profile in profiles]
+    digest = _document_digest(profiles, texts)
+    key = (project_id, digest)
+    with _CACHE_LOCK:
+        cached = _CORPUS_CACHE.get(key)
+        if cached is not None:
+            _CORPUS_CACHE.move_to_end(key)
+            return cached
+    corpus = _Corpus(project_id, digest, texts)
+    with _CACHE_LOCK:
+        _CORPUS_CACHE[key] = corpus
+        while len(_CORPUS_CACHE) > _CACHE_MAX_CORPORA:
+            _CORPUS_CACHE.popitem(last=False)
+    return corpus
 
 
 def _embedder():
@@ -86,21 +193,28 @@ def _index_path(project_id: str) -> Path:
 
 
 def _vectors(project: dict, profiles: list[dict]) -> np.ndarray:
-    texts = [document(p) for p in profiles]
-    fingerprint = hashlib.sha256(json.dumps(
-        [(p["id"], t) for p, t in zip(profiles, texts)], ensure_ascii=False,
-    ).encode("utf-8")).hexdigest()
+    """语料向量：进程内缓存 → 磁盘 npz → 真算，三级复用。返回已归一化矩阵。"""
+    return _vectors_of(_corpus(project["id"], profiles), project)
+
+
+def _vectors_of(corpus: _Corpus, project: dict) -> np.ndarray:
+    """``_vectors`` 的正文：接受已建好的 corpus，避免同一次请求里重复格式化文档。"""
+    if corpus.vectors is not None:
+        return corpus.vectors
     path = _index_path(project["id"])
     if path.exists():
         with np.load(path, allow_pickle=False) as saved:
-            if str(saved["fingerprint"]) == fingerprint and str(saved["model"]) == MODEL_NAME:
-                return saved["vectors"]
-    vectors = np.asarray(list(_embedder().embed(texts)), dtype=np.float32)
-    if len(vectors) != len(profiles):
+            if (str(saved["fingerprint"]) == corpus.digest
+                    and str(saved["model"]) == MODEL_NAME):
+                corpus.vectors = saved["vectors"]
+                return corpus.vectors
+    vectors = np.asarray(list(_embedder().embed(corpus.texts)), dtype=np.float32)
+    if len(vectors) != len(corpus.texts):
         raise RuntimeError("模型返回的向量数量与导师数量不一致")
     norms = np.linalg.norm(vectors, axis=1, keepdims=True)
     vectors = vectors / np.maximum(norms, 1e-12)
-    np.savez_compressed(path, vectors=vectors, fingerprint=fingerprint, model=MODEL_NAME)
+    np.savez_compressed(path, vectors=vectors, fingerprint=corpus.digest, model=MODEL_NAME)
+    corpus.vectors = vectors
     return vectors
 
 
@@ -123,9 +237,9 @@ def _looks_lexical(query: str) -> bool:
     return len(compact) <= 6 and not re.search(r"[我你想找做的怎么如何哪些什么]", query)
 
 
-def _bm25_scores(profiles: list[dict], query: str):
-    index = BM25Index([document(profile) for profile in profiles])
-    return index.scores(query)
+def _bm25_scores(corpus: "_Corpus", query: str) -> np.ndarray:
+    """在该文档集合的 BM25 索引上打分；索引按内容指纹缓存，不会每次重建。"""
+    return corpus.bm25().scores(query)
 
 
 def search(project: dict, query: str, mode: str = "semantic", limit: int = 20,
@@ -140,25 +254,35 @@ def search(project: dict, query: str, mode: str = "semantic", limit: int = 20,
 
     向量模型不可用时自动回落到 BM25，并在结果里写明 ``fallback``，
     而不是抛错或静默返回空。
+
+    向量路径上还会做一次**低相关空判**（``guarded_empty_decision``）：查询与全库
+    既没有字面命中、最高余弦又低于 ``SEMANTIC_EMPTY_TAU`` 时返回空列表而不是硬塞
+    20 条无关记录。带学科/学校筛选时不做空判——评测口径只覆盖无筛选场景。
     """
     query = query.strip()[:300]
     if not query:
         raise ValueError("请输入研究兴趣或检索问题")
     if mode not in SEARCH_MODES:
         raise ValueError("未知的检索方式")
-    profiles = [p for p in project["profiles"]
+    all_profiles = project["profiles"]
+    profiles = [p for p in all_profiles
                 if (not discipline or discipline.lower() in p["discipline"].lower())
                 and (not institution or institution.lower() in p["institution"].lower())]
     if not profiles:
         return []
 
+    project_id = str(project.get("id") or "")
+    corpus = _corpus(project_id, profiles)
+    filtered = bool(discipline or institution)
+    # 向量始终按「全量文档」建；无筛选时与 ``corpus`` 是同一个缓存对象，
+    # 有筛选时是另一个条目——这里显式取一次，避免同一次请求里重复格式化文档。
+    full_corpus = _corpus(project_id, all_profiles) if filtered else corpus
     fallback = ""
 
     def semantic_scores():
         nonlocal fallback
         try:
-            all_profiles = project["profiles"]
-            vectors = _vectors(project, all_profiles)
+            vectors = _vectors_of(full_corpus, project)
             qvec = np.asarray(next(iter(_embedder().query_embed(query))), dtype=np.float32)
             qvec /= max(float(np.linalg.norm(qvec)), 1e-12)
             all_scores = vectors @ qvec
@@ -170,27 +294,30 @@ def search(project: dict, query: str, mode: str = "semantic", limit: int = 20,
             return None
 
     used = mode
+    vector = None
+    lexical = None
     if mode == "keyword":
-        scores = np.array([keyword_score(query, document(p)) for p in profiles],
-                          dtype=np.float32)
+        scores = keyword_scores_for_texts(query, corpus.normalized)
     elif mode == "bm25":
-        scores = _bm25_scores(profiles, query)
+        scores = _bm25_scores(corpus, query)
     elif mode == "semantic":
-        scores = semantic_scores()
-        if scores is None:
-            scores, used = _bm25_scores(profiles, query), "bm25"
+        vector = semantic_scores()
+        if vector is None:
+            scores, used = _bm25_scores(corpus, query), "bm25"
+        else:
+            scores = vector
     else:
         chosen = mode
         if mode == "auto":
             chosen = "bm25" if _looks_lexical(query) else "hybrid"
         if chosen == "bm25":
-            scores, used = _bm25_scores(profiles, query), "bm25"
+            scores, used = _bm25_scores(corpus, query), "bm25"
         else:
             vector = semantic_scores()
             if vector is None:
-                scores, used = _bm25_scores(profiles, query), "bm25"
+                scores, used = _bm25_scores(corpus, query), "bm25"
             else:
-                lexical = normalize_scores(_bm25_scores(profiles, query))
+                lexical = normalize_scores(_bm25_scores(corpus, query))
                 scores = (HYBRID_BM25_WEIGHT * lexical
                           + (1 - HYBRID_BM25_WEIGHT) * np.clip(vector, 0.0, 1.0))
                 used = "hybrid"
@@ -198,6 +325,12 @@ def search(project: dict, query: str, mode: str = "semantic", limit: int = 20,
     values = [float(score) for score in scores]
     if used == "hybrid" and values and max(values) < HYBRID_EMPTY_TAU:
         return []          # 弱相关不硬推：宁可返回空，也不给无关结果
+    if vector is not None and not filtered:
+        # 空判只看「查询对全库」的信号，所以用未筛选文档集合的 BM25 最高分。
+        lexical_max = (float(np.max(lexical)) if lexical is not None
+                       else float(np.max(_bm25_scores(corpus, query))))
+        if guarded_empty_decision(vector, lexical_max):
+            return []
     order = sorted(range(len(profiles)), key=lambda i: (-values[i], profiles[i]["name"]))
     results = []
     for i in order[:max(1, min(int(limit), 100))]:
@@ -225,11 +358,17 @@ def search(project: dict, query: str, mode: str = "semantic", limit: int = 20,
 BM25_K1 = 1.5
 BM25_B = 0.75
 RRF_K = 60
-# 由 workbench.retrieval_eval 在 dev 划分上选出、并在 test 划分上复核过的取值。
-# 这里只作为默认常量，search() 的既有行为不受影响（不会自动启用过滤）。
-SEMANTIC_TAU = 0.40          # 语义余弦的绝对下限
+# 下面三个阈值只用于「低相关空判」，默认行为由 ``search()`` 决定（见函数说明）。
+# 出处是 workbench.retrieval_eval 的实跑产物，不是估的：
+#   - 无关探针的 10 条查询最高余弦最大 0.489，取网格里高于它的最小值 → empty_tau=0.50
+#     （``workbench/reference/eval/retrieval.json`` 的 config.chosen.empty_tau）；
+#   - 绝对阈值 tau 在 dev 上选出的 0.35 实际一行都没裁掉（trim_ratio=0），所以这里
+#     的 0.40 只是更保守的尾巴下限，不作为空判依据；
+#   - top1−top3 相对边际在 dev 上中位仅 0.0125，任何有实际作用的 delta 都会误杀，
+#     因此 delta 默认 0（用 ``filter_low_relevance`` 时可显式传值）。
+SEMANTIC_TAU = 0.40          # 语义余弦的绝对下限（尾部裁剪用，不参与空判）
 SEMANTIC_MARGIN = 0.02       # top1 与 top3 的最小差距（相对边际）
-SEMANTIC_EMPTY_TAU = 0.52    # 最高分低于此值视为低置信，建议返回空结果
+SEMANTIC_EMPTY_TAU = 0.50    # 最高余弦低于此值且无字面命中 → 返回空结果
 
 _CJK_RUN = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff]+")
 _LATIN_RUN = re.compile(r"[a-z0-9]+(?:[._+#-][a-z0-9]+)*")
@@ -410,3 +549,26 @@ def filter_low_relevance(scores, tau: float, delta: float = 0.0) -> tuple[list[f
     if not any(keep):
         return [], reason
     return [score for score, flag in zip(ordered, keep) if flag], reason
+
+
+def guarded_empty_decision(vector_scores, lexical_max: float,
+                           tau: float = SEMANTIC_EMPTY_TAU) -> bool:
+    """「是否该返回空结果」的最终判定：低余弦 **且** 全库没有任何字面命中。
+
+    这条规则与 ``workbench.retrieval_eval`` 里 ``guarded_empty`` 配置逐项一致，
+    那两个数都是从评测产物里读出来的，不是调的：
+
+    - 只加余弦阈值（``combined_with_empty``）：无关探针 10/10 全部判空，但 test 上
+      **10.1%** 的正常查询被误判为空，NDCG@10 从 0.6769 掉到 0.6564；
+    - 加上「全库没有任何字面命中」这个前置条件（``guarded_empty``）：无关探针仍有
+      6/10 判空，而 test 上误判率为 **0**、NDCG@10 维持 0.6769 不变。
+
+    ``tau`` 的语义因此是：语义分低**同时**又完全查不到字面证据，才认定“这条查询与
+    本库无关”。只要还有任何字面命中就交回排序层，不替用户删结果。
+    """
+    values = np.asarray(vector_scores, dtype=np.float32)
+    if values.size == 0:
+        return False
+    if float(values.max()) >= float(tau):
+        return False
+    return float(lexical_max) <= 0.0

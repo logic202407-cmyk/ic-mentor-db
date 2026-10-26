@@ -171,5 +171,48 @@ class CaseConcurrencyTests(TempDataDirCase):
         self.assertEqual(path.read_text(encoding="utf-8"), "{not json")
 
 
+class BomToleranceTests(TempDataDirCase):
+    """带 UTF-8 BOM 的记录必须照常读取，不能被当成损坏再被旧 .bak 顶掉。
+
+    缺陷：`read_json()` 用 ``utf-8`` 解码，Windows 编辑器（记事本等）保存时加的 BOM
+    会让解析失败；此时因为 `.bak` 存在，恢复分支会用**旧版本**覆盖文件——
+    用户刚写进去的最新内容静默消失，而且没有任何报错。
+    """
+
+    def test_bom_file_is_read_instead_of_reverted_to_stale_bak(self) -> None:
+        path = self.dir / "bom.json"
+        storage.atomic_write_json(path, {"notes": "old"})
+        storage.atomic_write_json(path, {"notes": "newer"})   # .bak = {"notes": "old"}
+        path.write_bytes(b"\xef\xbb\xbf" + json.dumps(
+            {"notes": "hand edited"}, ensure_ascii=False).encode("utf-8"))
+
+        data = storage.read_json(path)
+
+        self.assertEqual(data["notes"], "hand edited")
+        self.assertEqual(json.loads(path.read_text(encoding="utf-8-sig"))["notes"],
+                         "hand edited")
+        self.assertFalse(list(self.dir.glob("bom.json.corrupt-*")))
+
+
+class CorruptCopyNamingTests(TempDataDirCase):
+    """连续损坏必须各留一份副本，不能互相覆盖。
+
+    缺陷：副本名只精确到秒（``.corrupt-YYYYmmdd-HHMMSS``）。同一秒内的第二次损坏
+    会覆盖第一次留下的取证副本，最后只剩一份——排查时看不出先后。
+    """
+
+    def test_each_corruption_keeps_its_own_copy(self) -> None:
+        path = self.dir / "multi.json"
+        with mock.patch.object(storage.time, "strftime",
+                               return_value="20261026-120000"):
+            for text in ("{first", "{second"):
+                path.write_text(text, encoding="utf-8")
+                with self.assertRaises(storage.DataCorruptError):
+                    storage.read_json(path)
+        copies = sorted(copy.read_text(encoding="utf-8")
+                        for copy in self.dir.glob("multi.json.corrupt-*"))
+        self.assertEqual(copies, ["{first", "{second"])
+
+
 if __name__ == "__main__":
     unittest.main()

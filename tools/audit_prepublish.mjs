@@ -206,11 +206,12 @@ for (const f of tracked) {
 }
 sHits.length ? add(issues, `疑似凭证: ${sHits.join(', ')}`) : add(oks, '未发现任何凭证 / 密钥');
 
-// ── 13b. 文档中的统计数字与实际数据一致（README 声称值 vs mentor_ranked.json）──
+// ── 13b. 文档中的统计数字与实际数据一致（文档声称值 vs mentor_ranked.json）──
+// 这批是**原集成电路专题**的口径，对应文档已从根 README 迁到 docs/历史-集成电路专题.md。
 try {
   const ranked = JSON.parse(fs.readFileSync('data/processed/mentor_ranked.json', 'utf8'));
   const curated = JSON.parse(fs.readFileSync('data/processed/curated.json', 'utf8'));
-  const readme = fs.readFileSync('README.md', 'utf8');
+  const legacyDoc = fs.readFileSync('docs/历史-集成电路专题.md', 'utf8');
   const checks = [
     [/共 (\d+) 位导师有可访问的个人主页/, ranked.filter((d) => d.homepage).length, '主页覆盖人数'],
     [/主页明确写了在招\*\* \| \*\*(\d+) 位/, curated.filter((d) => d.recruit_signal_count > 0).length, '在招人数'],
@@ -218,12 +219,16 @@ try {
     [/A 级）合计 \| \*\*(\d+) 篇\*\*/, ranked.reduce((a, b) => a + b.A, 0), 'A 级合计'],
   ];
   const mismatch = [];
+  let matched = 0;
   for (const [re, actual, label] of checks) {
-    const m = readme.match(re);
-    if (m && Number(String(m[1]).replace(/,/g, '')) !== actual) mismatch.push(`${label}(文档 ${m[1]} vs 实际 ${actual})`);
+    const m = legacyDoc.match(re);
+    if (!m) continue; // 未匹配到就是"没核对"，不能算通过
+    matched++;
+    if (Number(String(m[1]).replace(/,/g, '')) !== actual) mismatch.push(`${label}(文档 ${m[1]} vs 实际 ${actual})`);
   }
-  mismatch.length ? add(issues, `README 数字与实际不符: ${mismatch.join(', ')}`)
-    : add(oks, `README 关键数字与数据一致（逐项核对 ${checks.length} 项）`);
+  if (mismatch.length) add(issues, `历史文档数字与实际不符: ${mismatch.join(', ')}`);
+  else if (matched === checks.length) add(oks, `历史文档关键数字与数据一致（逐项核对 ${matched} 项）`);
+  else add(warns, `历史文档数字核对只匹配到 ${matched}/${checks.length} 项——未匹配的按"未核对"处理，不计为通过`);
 } catch (e) {
   add(warns, `文档数字核对跳过: ${e.message.slice(0, 60)}`);
 }

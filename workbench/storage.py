@@ -138,16 +138,34 @@ def atomic_write_json(path: Path, payload, *, backup: bool = True) -> None:
         raise
 
 
+def _corrupt_copy_path(path: Path) -> Path:
+    """给损坏文件挑一个不冲突的副本名。
+
+    只精确到秒会让同一秒内的第二次损坏覆盖第一次的取证副本，最后只剩一份。
+    """
+    stamp = time.strftime("%Y%m%d-%H%M%S")
+    candidate = Path(f"{path}.corrupt-{stamp}")
+    index = 1
+    while candidate.exists():
+        index += 1
+        candidate = Path(f"{path}.corrupt-{stamp}-{index}")
+    return candidate
+
+
 def read_json(path: Path, *, recover: bool = True):
-    """读 JSON；损坏时保留副本并尽量从 ``.bak`` 恢复，否则抛 DataCorruptError。"""
+    """读 JSON；损坏时保留副本并尽量从 ``.bak`` 恢复，否则抛 DataCorruptError。
+
+    解码用 ``utf-8-sig``：Windows 编辑器保存时可能加 UTF-8 BOM。按纯 utf-8 解码会
+    把它判成「损坏」，而只要 ``.bak`` 存在，恢复分支就会用旧版本覆盖文件——
+    用户刚写入的最新内容静默消失。BOM 只是编码前缀，不是损坏。
+    """
     path = Path(path)
     try:
-        return json.loads(path.read_text(encoding="utf-8"))
+        return json.loads(path.read_text(encoding="utf-8-sig"))
     except FileNotFoundError:
         raise
     except (OSError, UnicodeDecodeError, ValueError) as error:
-        stamp = time.strftime("%Y%m%d-%H%M%S")
-        corrupt = Path(f"{path}.corrupt-{stamp}")
+        corrupt = _corrupt_copy_path(path)
         try:
             shutil.copyfile(path, corrupt)
         except OSError:
@@ -155,7 +173,7 @@ def read_json(path: Path, *, recover: bool = True):
         backup = Path(str(path) + ".bak")
         if recover and backup.exists():
             try:
-                data = json.loads(backup.read_text(encoding="utf-8"))
+                data = json.loads(backup.read_text(encoding="utf-8-sig"))
             except (OSError, ValueError):
                 data = None
             if data is not None:
@@ -171,6 +189,6 @@ def restore_backup(path: Path) -> bool:
     backup = Path(str(path) + ".bak")
     if not backup.exists():
         return False
-    data = json.loads(backup.read_text(encoding="utf-8"))
+    data = json.loads(backup.read_text(encoding="utf-8-sig"))
     atomic_write_json(path, data, backup=False)
     return True

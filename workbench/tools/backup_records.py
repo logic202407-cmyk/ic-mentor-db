@@ -24,11 +24,14 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
+import re
 import shutil
 import sys
+import tempfile
 import zipfile
 from datetime import datetime
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 
 ROOT = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(ROOT))
@@ -38,10 +41,41 @@ from workbench import core, storage  # noqa: E402
 KINDS = ("projects", "investigations")
 DEFAULT_BACKUP_DIR = ROOT / "backups"
 MANIFEST = "manifest.json"
+ENTRY_FILE = re.compile(r"^[^/\\]+\.json$")
 
 
 def _stamp() -> str:
     return datetime.now().strftime("%Y%m%d-%H%M%S")
+
+
+def _checked_name(name: object) -> str:
+    """只接受 ``<projects|investigations>/<文件名>.json`` 这种条目名。
+
+    备份包是用户可以转发、也可以手工编辑的文件，manifest 里的名字**不可信**：
+    一条 ``../x.json`` 就能让 ``--restore`` 把内容写到数据目录之外。
+    """
+    if not isinstance(name, str) or "\\" in name or ":" in name:
+        raise ValueError(f"备份包含非法条目：{name!r}")
+    parts = PurePosixPath(name).parts
+    if (len(parts) != 2 or parts[0] not in KINDS
+            or not ENTRY_FILE.fullmatch(parts[1])):
+        raise ValueError(f"备份包含非法条目：{name!r}")
+    return name
+
+
+def _target_path(dest_dir: Path) -> Path:
+    """挑一个不冲突的备份文件名。
+
+    只精确到秒会让同一秒内的第二份备份 ``ZipFile(..., "w")`` 截断并覆盖第一份，
+    用户以为有两份、其实只剩一份。同秒内重名时追加 ``-2``、``-3``。
+    """
+    stamp = _stamp()
+    candidate = dest_dir / f"records-{stamp}.zip"
+    index = 1
+    while candidate.exists():
+        index += 1
+        candidate = dest_dir / f"records-{stamp}-{index}.zip"
+    return candidate
 
 
 def _entries(data_dir: Path) -> list[tuple[str, Path]]:
@@ -60,38 +94,61 @@ def backup(data_dir: Path | None = None, dest_dir: Path | None = None) -> Path:
     dest_dir = Path(dest_dir or DEFAULT_BACKUP_DIR)
     dest_dir.mkdir(parents=True, exist_ok=True)
     files = _entries(data_dir)
-    target = dest_dir / f"records-{_stamp()}.zip"
+    target = _target_path(dest_dir)
     manifest = {"created_at": datetime.now().astimezone().isoformat(timespec="seconds"),
                 "source": str(data_dir), "files": {}, "counts": {}}
-    with zipfile.ZipFile(target, "w", compression=zipfile.ZIP_DEFLATED) as archive:
-        for name, path in files:
-            blob = path.read_bytes()
-            archive.writestr(name, blob)
-            manifest["files"][name] = {
-                "sha256": hashlib.sha256(blob).hexdigest(), "bytes": len(blob)}
-        manifest["counts"] = {kind: sum(1 for name, _ in files if name.startswith(kind + "/"))
-                              for kind in KINDS}
-        archive.writestr(MANIFEST, json.dumps(manifest, ensure_ascii=False, indent=2))
+    # 先写临时文件再改名：备份中途失败（磁盘满、进程被杀）时不会留下一个
+    # 名字看起来正常、内容却不完整的 records-*.zip。
+    fd, partial_name = tempfile.mkstemp(prefix=".records-", suffix=".partial",
+                                       dir=str(dest_dir))
+    os.close(fd)
+    partial = Path(partial_name)
+    try:
+        with zipfile.ZipFile(partial, "w", compression=zipfile.ZIP_DEFLATED) as archive:
+            for name, path in files:
+                blob = path.read_bytes()
+                archive.writestr(name, blob)
+                manifest["files"][name] = {
+                    "sha256": hashlib.sha256(blob).hexdigest(), "bytes": len(blob)}
+            manifest["counts"] = {kind: sum(1 for name, _ in files
+                                            if name.startswith(kind + "/"))
+                                  for kind in KINDS}
+            archive.writestr(MANIFEST, json.dumps(manifest, ensure_ascii=False, indent=2))
+        os.replace(partial, target)
+    except BaseException:
+        try:
+            partial.unlink()
+        except OSError:
+            pass
+        raise
     return target
 
 
 def verify(zip_path: Path) -> dict:
-    """校验压缩包：清单齐全、每个 JSON 可解析、摘要一致。返回统计。"""
+    """校验压缩包：清单齐全、条目名合法、每个 JSON 可解析、摘要一致。返回统计。"""
     with zipfile.ZipFile(zip_path) as archive:
         names = set(archive.namelist())
         if MANIFEST not in names:
             raise ValueError("备份缺少 manifest.json，无法确认完整性")
         manifest = json.loads(archive.read(MANIFEST).decode("utf-8"))
+        if not isinstance(manifest, dict):
+            raise ValueError("备份的 manifest.json 不是 JSON 对象")
         declared = manifest.get("files") or {}
+        if not isinstance(declared, dict):
+            raise ValueError("备份的 manifest.json 文件清单格式不正确")
+        for name in declared:
+            _checked_name(name)
         missing = sorted(set(declared) - names)
         if missing:
             raise ValueError(f"备份缺少 {len(missing)} 个文件：{missing[:3]}")
         for name, meta in declared.items():
+            if not isinstance(meta, dict) or not isinstance(meta.get("sha256"), str):
+                raise ValueError(f"{name} 清单条目格式不正确")
             blob = archive.read(name)
             if hashlib.sha256(blob).hexdigest() != meta.get("sha256"):
                 raise ValueError(f"{name} 摘要与清单不符（文件可能损坏）")
             try:
-                json.loads(blob.decode("utf-8"))
+                json.loads(blob.decode("utf-8-sig"))
             except ValueError as error:
                 raise ValueError(f"{name} 不是合法 JSON：{error}") from error
     return {"files": len(declared), "counts": manifest.get("counts") or {},
@@ -118,16 +175,20 @@ def restore(zip_path: Path, data_dir: Path | None = None) -> dict:
     safety = None
     if _entries(data_dir):
         safety = backup(data_dir, data_dir.parent / "backups" / "before-restore")
-    restored = 0
     with zipfile.ZipFile(zip_path) as archive:
         manifest = json.loads(archive.read(MANIFEST).decode("utf-8"))
-        names = list((manifest.get("files") or {}))
-        for kind in KINDS:
-            (data_dir / kind).mkdir(parents=True, exist_ok=True)
-        for name in names:
-            payload = json.loads(archive.read(name).decode("utf-8"))
-            storage.atomic_write_json(data_dir / name, payload)
-            restored += 1
+        # 校验阶段已经拒绝过非法条目名，这里再核一遍：restore 也可能被直接调用，
+        # 并且写文件之前就要确定所有名字都落在两个数据目录里。
+        names = [_checked_name(name) for name in (manifest.get("files") or {})]
+        # 先把所有内容解析完再落盘，任何一份读不出来都不会出现"恢复了一半"。
+        payloads = {name: json.loads(archive.read(name).decode("utf-8-sig"))
+                    for name in names}
+    for kind in KINDS:
+        (data_dir / kind).mkdir(parents=True, exist_ok=True)
+    restored = 0
+    for name, payload in payloads.items():
+        storage.atomic_write_json(data_dir / name, payload)
+        restored += 1
     return {"restored": restored, "safety_backup": str(safety) if safety else None,
             "counts": stats.get("counts")}
 

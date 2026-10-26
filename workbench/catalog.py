@@ -526,14 +526,6 @@ def mutate_case(mentor_id: str, mutate):
         return record if result is None else result
 
 
-def _write_case(record: dict) -> None:
-    path = _case_path(record["mentor_id"])
-    path.parent.mkdir(parents=True, exist_ok=True)
-    temporary = path.with_suffix(".tmp")
-    temporary.write_text(json.dumps(record, ensure_ascii=False, indent=2), encoding="utf-8")
-    temporary.replace(path)
-
-
 def update_case(mentor_id: str, changes: dict) -> dict:
     if entry_by_id(mentor_id) is None:
         raise ValueError("找不到这位导师")
