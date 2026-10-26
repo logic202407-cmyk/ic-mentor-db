@@ -171,5 +171,71 @@ class WorkbenchBehaviorTest(unittest.TestCase):
         self.assertIn("共同署名", data["relations"]["message"])
 
 
+class LongInputTests(unittest.TestCase):
+    """超长输入不得在正则上退化（可用性与隐私双重原因）。
+
+    缺陷：`core.EMAIL` 原来是 `[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}`。
+    这是一条"无锚定 + 无上界"的邮箱正则：在一段很长的、不含 `@` 的字符上，每个
+    起点都会把左侧量词吃到结尾再回退，复杂度 O(n²)。实测 64,000 字符 9.7 s；
+    走 API 更糟——写入端点都是 `async def`，卡的是整个事件循环（PATCH 备注 24.35 s），
+    而 `MAX_BODY_BYTES` 允许 12 MB，一次请求就能把本机服务冻住。
+    用户误粘贴一条超长链接或长串也会中招，所以这不是"只有攻击者才关心"的问题。
+
+    修法：左侧加定界断言 `(?<![A-Za-z0-9._%+-])`（让匹配从候选起点线性推进）+
+    两侧量词加上界 + `clean_text` 里没有 `@` 就跳过替换。
+
+    这里用 < 2 s 的宽松上界：修复前是 9–24 s 量级，修复后是 15 ms 量级，
+    两者差三个数量级，足以在不稳定的 CI 机器上稳定区分，又不会误报。
+    """
+
+    def test_very_long_text_without_at_sign_is_fast(self):
+        import time
+
+        blob = "n" * 64_000
+        started = time.perf_counter()
+        out = core.clean_text(blob)
+        elapsed = time.perf_counter() - started
+        self.assertLess(elapsed, 2.0,
+                        f"64k 无 @ 文本耗时 {elapsed:.3f}s，正则又退化了")
+        self.assertEqual(len(out), 500, "输出仍应被 limit 截断")
+
+    def test_very_long_text_with_at_sign_is_fast_and_redacted(self):
+        import time
+
+        blob = "n" * 5_000 + " someone@example.edu " + "m" * 58_000
+        started = time.perf_counter()
+        out = core.clean_text(blob, limit=200_000)
+        elapsed = time.perf_counter() - started
+        self.assertLess(elapsed, 2.0,
+                        f"64k 含 @ 文本耗时 {elapsed:.3f}s，正则又退化了")
+        self.assertIn("[联系方式见来源页面]", out)
+        self.assertNotIn("someone@example.edu", out)
+
+    def test_normal_emails_are_still_redacted(self):
+        cases = [
+            "联系：zhang.san@example.edu 谢谢",
+            "a@example.org",
+            "MIXED.Case+x@Example.ORG",
+            "末尾邮址 someone@example.edu",
+        ]
+        for text in cases:
+            with self.subTest(text=text):
+                out = core.clean_text(text)
+                self.assertIn("[联系方式见来源页面]", out)
+                self.assertNotIn("@", out)
+
+    def test_overlong_local_part_is_fully_redacted_not_partially_left(self):
+        """本地部分 80 字符（超过 RFC 的 64）：必须整体替换，不能留下前段残片。
+
+        若只把量词写成 `{1,64}` 而不加定界断言，匹配会从串中间开始，
+        于是留下十几个字符的残片——那既难看，也违背"不在前台留下可拼接的邮箱片段"。
+        """
+        text = "a" * 80 + "@example.com"
+        out = core.clean_text(text)
+        self.assertIn("[联系方式见来源页面]", out)
+        self.assertNotIn("aaaaaaaaaa", out, "留下了本地部分残片")
+        self.assertNotIn("example.com", out)
+
+
 if __name__ == "__main__":
     unittest.main()

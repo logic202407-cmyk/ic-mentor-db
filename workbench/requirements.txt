@@ -19,4 +19,6 @@ urllib3==2.8.0
 #   markdown                    -> workbench/tools/make_aic_html.py (system Python)
 #   pypdf, pypdfium2, pillow     -> report page-count / layout tools
 #   pdfplumber                  -> lazy import inside collect_caas_catalog.main()
-# Install with: py -3.12 -m pip install markdown pypdf pypdfium2 pillow pdfplumber
+#   playwright                  -> workbench/tools/generate_visual_assets.py only
+#                                  (one-off asset script; also needs `playwright install chromium`)
+# Install with: py -3.12 -m pip install markdown pypdf pypdfium2 pillow pdfplumber playwright

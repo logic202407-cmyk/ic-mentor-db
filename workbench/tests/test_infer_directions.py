@@ -3,7 +3,12 @@
 from __future__ import annotations
 
 import unittest
+from pathlib import Path
+from unittest import mock
 
+import numpy as np
+
+from workbench import infer_directions
 from workbench.infer_directions import (
     DEGENERATE,
     MIN_LABEL_COUNT,
@@ -129,6 +134,181 @@ class TextLeakageTests(unittest.TestCase):
              "papers": []})
         self.assertIn("射频电路", text)
         self.assertNotIn("用于工学导航", text)
+
+
+class CalibrationTests(unittest.TestCase):
+    """阈值校准与 unknown 拒绝：分数是相似度，不是概率。"""
+
+    def test_confidence_band_thresholds(self):
+        from workbench.infer_directions import confidence_band
+        self.assertEqual(confidence_band(0.80), "high")
+        self.assertEqual(confidence_band(0.66), "medium")
+        self.assertEqual(confidence_band(0.60), "low")
+        self.assertEqual(confidence_band(0.59), "unknown")
+        self.assertEqual(confidence_band(None), "unknown")
+
+    def test_calibration_curve_counts(self):
+        from workbench.infer_directions import calibration_curve
+        records = [
+            {"score": 0.7, "pred": "a", "truth": "a"},
+            {"score": 0.65, "pred": "b", "truth": "a"},
+            {"score": 0.5, "pred": "a", "truth": "a"},
+        ]
+        curve = calibration_curve(records, "emb", thresholds=(0.6, 0.8))
+        high = next(r for r in curve if r["score>="] == 0.6)
+        self.assertEqual(high["accepted"], 2)
+        self.assertAlmostEqual(high["precision"], 0.5)
+        self.assertAlmostEqual(high["coverage"], 2 / 3)
+        none = next(r for r in curve if r["score>="] == 0.8)
+        self.assertEqual(none["accepted"], 0)
+        self.assertIsNone(none["precision"])
+
+    def test_recommend_threshold_respects_minimum_coverage(self):
+        from workbench.infer_directions import recommend_threshold
+        curve = [
+            {"score>=": 0.5, "accepted": 90, "coverage": 0.9, "precision": 0.1},
+            {"score>=": 0.6, "accepted": 20, "coverage": 0.2, "precision": 0.4},
+            {"score>=": 0.7, "accepted": 1, "coverage": 0.01, "precision": 1.0},
+        ]
+        chosen = recommend_threshold(curve, target_precision=0.3, min_coverage=0.1)
+        self.assertEqual(chosen["score>="], 0.6)
+
+
+class InferenceConsistencyTests(unittest.TestCase):
+    """学科约束会改变最终选择，``embedding_score`` 必须跟着换到同一个标签。
+
+    历史缺陷：``embedding_score`` 取的是**全词表** ``argmax(sims)``，而 ``suggested``
+    取的是学科约束后的 ``argmax(fused)``。两者不是同一个标签时，报出来的嵌入分属于
+    另一个方向——「建议的方向，分数却不是它的」。
+    """
+
+    DISCIPLINE = "0809 电子科学与技术"
+    IN_DISCIPLINE = ("甲方向", "乙方向", "丙方向", "丁方向", "戊方向", "己方向")
+    OUTSIDE = "庚方向"
+    # 待补文本的假向量：与「庚方向」几乎同向（0.954），与「甲方向」只有 0.301。
+    TEXT_VECTOR = (0.30, 0.0, 0.0, 0.0, 0.0, 0.0, 0.95)
+
+    def setUp(self):
+        self.vocab = list(self.IN_DISCIPLINE) + [self.OUTSIDE]
+        profiles = [{
+            "id": f"label-{index}", "name": f"有向{index}", "institution": "示例大学",
+            "direction_group": label, "first_level_discipline": self.DISCIPLINE,
+            "department": "示例学院", "summary": "",
+        } for index, label in enumerate(self.IN_DISCIPLINE)]
+        profiles.append({
+            "id": "pending-target", "name": "待补", "institution": "示例大学",
+            "direction_group": "方向待补", "first_level_discipline": self.DISCIPLINE,
+            "department": "示例学院", "summary": "研究方向：硅基器件",
+        })
+        self.profiles = profiles
+
+    def _fake_embed(self, texts, batch_note=""):
+        """标签各占一个正交方向，待补文本同向于约束外的「庚方向」。"""
+        rows = []
+        for text in texts:
+            if text in self.vocab:
+                row = np.zeros(len(self.vocab), dtype=np.float32)
+                row[self.vocab.index(text)] = 1.0
+            else:
+                row = np.asarray(self.TEXT_VECTOR, dtype=np.float32)
+            rows.append(row)
+        matrix = np.asarray(rows, dtype=np.float32)
+        return matrix / np.maximum(np.linalg.norm(matrix, axis=1, keepdims=True), 1e-12)
+
+    def test_embedding_score_belongs_to_the_suggested_label(self):
+        with mock.patch.object(infer_directions, "embed_texts", self._fake_embed):
+            result = infer_directions.infer(self.profiles, self.vocab, min_score=0.0)
+        self.assertEqual(len(result["suggestions"]), 1)
+        suggestion = result["suggestions"][0]
+
+        # 学科约束把候选裁到「甲…己方向」，所以建议里不应出现约束外的「庚方向」；
+        # 而全词表 argmax(sims) 恰恰是「庚方向」——这就是旧实现会报错分的地方。
+        self.assertEqual(suggestion["suggested"], "甲方向")
+        text_vector = np.asarray(self.TEXT_VECTOR, dtype=np.float32)
+        text_vector /= np.linalg.norm(text_vector)
+        chosen_cosine = float(text_vector[self.vocab.index(suggestion["suggested"])])
+        global_cosine = float(text_vector[self.vocab.index(self.OUTSIDE)])
+        self.assertAlmostEqual(suggestion["embedding_score"], chosen_cosine, places=3,
+                               msg="embedding_score 必须是被建议标签的余弦")
+        self.assertGreater(global_cosine - chosen_cosine, 0.5,
+                           "构造用例失效：全局 argmax 与被建议标签的余弦必须明显不同")
+        self.assertLess(suggestion["embedding_score"], global_cosine,
+                        "报出的嵌入分不能是约束外标签的余弦")
+
+    def test_keyword_score_belongs_to_the_suggested_label(self):
+        from workbench.search import keyword_score
+        with mock.patch.object(infer_directions, "embed_texts", self._fake_embed):
+            result = infer_directions.infer(self.profiles, self.vocab, min_score=0.0)
+        suggestion = result["suggestions"][0]
+        text = infer_directions.profile_text(self.profiles[-1])
+        self.assertAlmostEqual(
+            suggestion["keyword_score"],
+            round(keyword_score(suggestion["suggested"], text), 4), places=3)
+
+
+class SmallSampleTests(unittest.TestCase):
+    """样本不足 2 条时 dev/test 会切成空集：要给提示，不能 ZeroDivisionError。"""
+
+    def setUp(self):
+        self.vocab = ["甲方向", "乙方向"]
+        self.profiles = [
+            {"id": "only-one", "name": "唯一", "institution": "示例大学",
+             "direction_group": "甲方向", "first_level_discipline": "0809 电子科学与技术",
+             "department": "示例学院", "summary": ""},
+        ]
+
+    def test_validate_reports_instead_of_dividing_by_zero(self):
+        def fake_embed(texts, batch_note=""):
+            matrix = np.eye(len(self.vocab), dtype=np.float32)[
+                np.arange(len(texts)) % len(self.vocab)]
+            return matrix
+
+        with mock.patch.object(infer_directions, "embed_texts", fake_embed):
+            result = infer_directions.validate(self.profiles, self.vocab, 1)
+        self.assertEqual(result["sampled"], 1)
+        tuning = result["fusion_tuning"]
+        self.assertTrue(tuning.get("insufficient_sample"))
+        self.assertIn("无法划分", tuning["note"])
+        self.assertEqual(tuning["test"]["keyword"]["n"], 0)
+        self.assertIsNone(tuning["test"]["keyword"]["top1"],
+                          "空 test 集不能报 0%（那会被读成模型全错）")
+
+
+class ThresholdNoteTests(unittest.TestCase):
+    """报告里「默认阈值」必须是配置值：曾经硬编码 0.55，而实际默认已是 0.60。"""
+
+    def test_note_prints_the_configured_threshold(self):
+        row = {"score>=": 0.55, "accepted": 12, "coverage": 0.19, "precision": 0.35}
+        note = infer_directions.threshold_note(0.55, row)
+        self.assertIn("0.55", note)
+        self.assertIn("12", note)
+        self.assertIn("19.0%", note)
+
+    def test_note_does_not_inherit_a_stale_default(self):
+        note = infer_directions.threshold_note(0.60, None)
+        self.assertIn("0.60", note)
+        self.assertIn("不在本次校准网格上", note)
+
+    def test_source_has_no_hardcoded_default_threshold_in_report_text(self):
+        source = Path(infer_directions.__file__).read_text(encoding="utf-8")
+        for literal in ("默认阈值 **0.55**", "**关于阈值**：0.60"):
+            self.assertNotIn(literal, source,
+                             f"报告文案里又出现写死的阈值：{literal}")
+
+    def test_coverage_note_does_not_conflate_embedding_table_with_fusion_threshold(self):
+        """「覆盖」段不得声称校准表的阈值与决策阈值一致——两者量纲不同。
+
+        缺陷：原文案写「接受多少条、接受里对了多少，见上面『阈值与拒绝』一节的实测表；
+        那张表的阈值与这里一致。」但那张表的横轴是**嵌入 Top-1 分数**，而决策阈值
+        `--min-score` 是**融合分**（关键词 0.30 + 嵌入 0.70）。读者会拿表里的 0.60 行
+        （154 条 / 38.5% / 20.1%）去对决策阈值 0.60（76 条 / 19.0% / 35.5%），
+        得到互相矛盾的结论——这正属于"对外数字写错"。
+        """
+        source = Path(infer_directions.__file__).read_text(encoding="utf-8")
+        self.assertNotIn("那张表的阈值与这里一致", source,
+                         "又出现把嵌入分表与融合分阈值混为一谈的措辞")
+        self.assertIn("不是同一个量纲", source,
+                      "报告应明确写出表(嵌入分)与阈值(融合分)量纲不同")
 
 
 if __name__ == "__main__":

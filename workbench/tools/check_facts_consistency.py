@@ -21,12 +21,21 @@
 `CHANGELOG.md` 里的 `321 / 715` 经 `git show v1.0.0:…`、`v1.1.0:…` 实测分别为
 两个 tag 当时的真实测试方法数，因此**不纳入**本检查。
 
+参赛交付物停止跟踪后的处理
+--------------------------
+技术报告与提交材料 README 属**参赛专用交付物**，仓库已停止跟踪，干净 clone 上不存在。
+若把它们当成「文件缺失」判错，CI 与干净 clone 上这道检查永远红——维护者只会把整条
+检查关掉。所以这两份文件缺失时**显式跳过**（`OPTIONAL_FILES` + `⊘ 跳过 …`），并以 0
+退出，措辞明确写「未做实质校验」，绝不静默当作一致。根 `README.md` 是长期开源仓库的
+必需文档，缺失仍然算问题。需要把缺失当失败时用 ``--strict``。
+
 用法::
 
     python -m workbench.tools.check_facts_consistency
     python -m workbench.tools.check_facts_consistency --json out.json
+    python -m workbench.tools.check_facts_consistency --strict   # 交付物缺失即失败
 
-退出码：全部一致 0，否则 1。
+退出码：全部一致 0，否则 1；交付物缺失按跳过处理（0），加 ``--strict`` 时按失败处理。
 """
 
 from __future__ import annotations
@@ -42,6 +51,15 @@ sys.path.insert(0, str(ROOT))
 
 from workbench.tools.check_readme_badges import count_tests  # noqa: E402
 from workbench.tools.report_facts import build_facts  # noqa: E402
+
+SKIP_REASON = "未随仓库发布，已跳过"
+
+# 参赛专用交付物：仓库已停止跟踪，干净 clone 上不存在。缺失时整组跳过。
+# 未列出的文件（根 README.md）缺失仍然算问题——那是长期开源仓库的必需文档。
+OPTIONAL_FILES: frozenset[str] = frozenset({
+    "workbench/aic-submission/技术报告.md",
+    "workbench/aic-submission/README.md",
+})
 
 
 def _extra_facts() -> dict:
@@ -135,7 +153,11 @@ def _fact_values(facts: dict, spec) -> list[int | None]:
 def check_file(path: Path, claims: list[dict], facts: dict) -> list[dict]:
     problems: list[dict] = []
     if not path.is_file():
-        return [{"文件": str(path.relative_to(ROOT)), "名称": "文件缺失",
+        try:
+            shown = path.relative_to(ROOT).as_posix()
+        except ValueError:  # 临时目录里的路径（测试用）
+            shown = path.as_posix()
+        return [{"文件": shown, "名称": "文件缺失",
                  "行号": 0, "问题": "声明表引用的文件不存在"}]
 
     lines = path.read_text(encoding="utf-8").splitlines()
@@ -171,35 +193,48 @@ def check_file(path: Path, claims: list[dict], facts: dict) -> list[dict]:
     return problems
 
 
-def main() -> int:
-    ap = argparse.ArgumentParser(description="对外材料事实一致性检查")
-    ap.add_argument("--json", default="", help="把结果写入该 JSON")
-    args = ap.parse_args()
+def run_checks(root: Path, claims: list[dict], facts: dict, strict: bool = False,
+               optional_files: frozenset[str] | set[str] = OPTIONAL_FILES,
+               ) -> tuple[list[dict], list[dict], int]:
+    """按文件分组跑声明检查。
 
-    facts = build_facts()
-    facts.update(_extra_facts())
-    # 研究覆盖度字段来自 catalog.coverage()，report_facts 只取了一部分，这里补齐。
-    try:
-        from workbench import catalog
-        cov = catalog.coverage()
-        for key, value in (cov.get("research") or {}).items():
-            facts.setdefault(key, value)
-    except Exception:  # noqa: BLE001
-        pass
+    返回 ``(problems, skipped, checked)``：
 
+    - ``skipped`` 每项形如 ``{"文件": ..., "声明数": N}``——**可选交付物**缺失时整组跳过，
+      不产生问题；这是「显式跳过」，调用方必须把跳过如实打印出来；
+    - ``strict=True`` 时不跳过，缺失按「文件缺失」问题上报；
+    - 非可选文件（根 README.md）缺失永远算问题。
+    """
     by_file: dict[str, list[dict]] = {}
-    for claim in CLAIMS:
+    for claim in claims:
         by_file.setdefault(claim["file"], []).append(claim)
 
     problems: list[dict] = []
+    skipped: list[dict] = []
     checked = 0
-    for file, claims in by_file.items():
-        between = check_file(ROOT / file, claims, facts)
-        checked += len(claims)
-        problems.extend(between)
+    for file, group in by_file.items():
+        path = root / file
+        if not path.is_file() and file in optional_files and not strict:
+            skipped.append({"文件": file, "声明数": len(group)})
+            continue
+        problems.extend(check_file(path, group, facts))
+        checked += len(group)
+    return problems, skipped, checked
 
+
+def summary_lines(facts: dict, problems: list[dict], skipped: list[dict], checked: int,
+                  files_total: int) -> list[str]:
+    """把检查结果渲染成给人看的多行文本。
+
+    跳过的文件必须出现在输出里，且结论要写明「未做实质校验」——否则读者会把
+    「跳过」看成「通过」，这正是这类检查最容易失效的方式。
+    """
     lines = ["对外材料事实一致性", ""]
-    lines.append(f"  检查 {checked} 条声明，涉及 {len(by_file)} 个文件")
+    for item in skipped:
+        lines.append(f"  ⊘ 跳过 {item['文件']}：该材料{SKIP_REASON}，"
+                     f"其中 {item['声明数']} 条声明未校验")
+    lines.append(f"  检查 {checked} 条声明，涉及 {files_total} 个文件"
+                 + (f"（其中 {len(skipped)} 个文件已跳过）" if skipped else ""))
     for key in ("records_total", "records_public", "institutions_public",
                 "engineering_records", "disciplines_engineering", "tests", "dossiers"):
         if key in facts:
@@ -214,9 +249,37 @@ def main() -> int:
                 lines.append(f"      原文：{item['原文']}")
         lines.append("")
         lines.append("结论: 不一致（请按事实表改正；改动后重跑本命令）")
+    elif skipped:
+        lines.append("")
+        lines.append("结论: 一致（注意：有文件未随仓库发布已跳过，"
+                     "其上声明未做实质校验；加 --strict 可把缺失当作失败）")
     else:
         lines.append("")
         lines.append("结论: 一致")
+    return lines
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser(description="对外材料事实一致性检查")
+    ap.add_argument("--json", default="", help="把结果写入该 JSON")
+    ap.add_argument("--strict", action="store_true",
+                    help="参赛交付物缺失时判为失败（默认显式跳过并返回 0）")
+    args = ap.parse_args()
+
+    facts = build_facts()
+    facts.update(_extra_facts())
+    # 研究覆盖度字段来自 catalog.coverage()，report_facts 只取了一部分，这里补齐。
+    try:
+        from workbench import catalog
+        cov = catalog.coverage(bundle_only=True)   # 对外数字以仓库档案包为准
+        for key, value in (cov.get("research") or {}).items():
+            facts.setdefault(key, value)
+    except Exception:  # noqa: BLE001
+        pass
+
+    problems, skipped, checked = run_checks(ROOT, CLAIMS, facts, strict=args.strict)
+    files_total = len({claim["file"] for claim in CLAIMS})
+    lines = summary_lines(facts, problems, skipped, checked, files_total)
 
     text = "\n".join(lines)
     try:
@@ -226,7 +289,7 @@ def main() -> int:
 
     if args.json:
         Path(args.json).write_text(
-            json.dumps({"problems": problems, "checked": checked},
+            json.dumps({"problems": problems, "skipped": skipped, "checked": checked},
                        ensure_ascii=False, indent=2) + "\n",
             encoding="utf-8", newline="\n")
     return 0 if not problems else 1

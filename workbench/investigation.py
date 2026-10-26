@@ -246,9 +246,10 @@ def run(mentor_id: str, selected: list[str], paper_ids: list[str]) -> dict:
     result = {"id": uuid.uuid4().hex, "created_at": core.now(), "modules": modules,
               "fingerprint": fingerprint(data), "selected": selected,
               "caveat": "模块状态只描述本次资料整理和查询结果，人工核查状态不会自动改变。"}
-    # Reload to preserve notes/evidence edited while a remote call was running.
-    record = catalog.load_case(mentor_id)
-    record["investigation_run"] = result
-    record["updated_at"] = core.now()
-    catalog._write_case(record)
+    # 远程调用期间用户可能改过备注/证据：在锁内重新读取再写入，避免覆盖这些修改。
+    def apply(record):
+        record["investigation_run"] = result
+        return record
+
+    catalog.mutate_case(mentor_id, apply)
     return result

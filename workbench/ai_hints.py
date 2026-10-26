@@ -88,6 +88,12 @@ def direction_suggestion(mentor_id: str) -> dict | None:
         "method": item.get("method"),
         "top3": item.get("top3") or [],
         "passes_threshold": bool(item.get("apply")),
+        # 2026-10 起：低于阈值不再叫"建议"，而是明确的 unknown 状态。
+        "state": item.get("state") or ("suggested" if item.get("apply") else "unknown"),
+        "band": item.get("confidence_band"),
+        "confidence_band": item.get("confidence_band"),
+        "band_note": item.get("band_note"),
+        "margin": item.get("margin"),
         "disclaimer": DISCLAIMER,
     }
 

@@ -62,3 +62,95 @@ function setupAddMentor() {
     finally{button.disabled=false;}
   };
 }
+
+// ── 视觉素材微交互与 3D 景深跟踪 (全局事件委托·交互感拉满) ──
+(function setupVisualInteractions() {
+  if (typeof window === 'undefined') return;
+
+  // 1. 鼠标悬停 3D 景深视差微倾斜 (Mouse 3D Parallax Tilt)
+  document.addEventListener('mousemove', function(e) {
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const container = e.target.closest('.home-hero-visual-col, .ws-empty-graphic, .discipline-visual-box, .empty-state-art, .sources-flow-art-wrap, .about-visual-side');
+    if (!container) return;
+    const img = container.querySelector('img');
+    if (!img) return;
+
+    const rect = container.getBoundingClientRect();
+    if (!rect.width || !rect.height) return;
+
+    const normX = (e.clientX - rect.left) / rect.width - 0.5;
+    const normY = (e.clientY - rect.top) / rect.height - 0.5;
+    const maxAngle = container.classList.contains('sources-flow-art-wrap') ? 5 : 8;
+    const tgtRx = (-normY * maxAngle).toFixed(2);
+    const tgtRy = (normX * maxAngle).toFixed(2);
+
+    img.style.transform = 'perspective(1000px) rotateX(' + tgtRx + 'deg) rotateY(' + tgtRy + 'deg) scale(1.025)';
+  });
+
+  // 鼠标移出容器平滑复位
+  document.addEventListener('mouseout', function(e) {
+    const container = e.target.closest('.home-hero-visual-col, .ws-empty-graphic, .discipline-visual-box, .empty-state-art, .sources-flow-art-wrap, .about-visual-side');
+    if (container && (!e.relatedTarget || !container.contains(e.relatedTarget))) {
+      const img = container.querySelector('img');
+      if (img) img.style.transform = '';
+    }
+  });
+
+  // 2. 有感点击与触觉反馈 (Tactile Click Feedbacks)
+  document.addEventListener('click', function(e) {
+    // A. 点击导师检索空状态图 -> 聚焦并波纹高亮导师姓名搜索框
+    if (e.target.matches('.ws-empty-img') || e.target.closest('.ws-empty-graphic')) {
+      e.preventDefault();
+      e.stopPropagation();
+      const input = document.getElementById('nameInput');
+      if (input) {
+        input.focus();
+        input.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        input.classList.remove('input-focus-pulse');
+        void input.offsetWidth;
+        input.classList.add('input-focus-pulse');
+        setTimeout(() => input.classList.remove('input-focus-pulse'), 1200);
+      }
+      return;
+    }
+
+    // B. 点击学科导航横幅图 -> 聚焦并波纹高亮学科过滤搜索框
+    if (e.target.matches('.discipline-art-img') || e.target.closest('.discipline-visual-box')) {
+      e.preventDefault();
+      e.stopPropagation();
+      const discInput = document.getElementById('disciplineSearchInput');
+      if (discInput) {
+        discInput.focus();
+        discInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        discInput.classList.remove('input-focus-pulse');
+        void discInput.offsetWidth;
+        discInput.classList.add('input-focus-pulse');
+        setTimeout(() => discInput.classList.remove('input-focus-pulse'), 1200);
+      }
+      return;
+    }
+
+    // C. 点击调查手记空状态图 -> 弹出私密调查提示气泡
+    if (e.target.matches('.records-empty-img') || e.target.closest('.empty-state-art')) {
+      e.preventDefault();
+      e.stopPropagation();
+      if (typeof message === 'function') {
+        message('🔒 本地调查手记已就绪：选择任意导师后，在档案的「核查记录」点击保存，数据将仅安全留存于您的本机浏览器。');
+      }
+      return;
+    }
+
+    // D. 点击首页 Hero 主图 -> 触发弹性微弹跳动效
+    if (e.target.matches('.hero-art-img') || e.target.closest('.home-hero-visual-col')) {
+      const heroImg = document.querySelector('.hero-art-img');
+      if (heroImg) {
+        e.preventDefault();
+        heroImg.classList.remove('interactive-bounce');
+        void heroImg.offsetWidth;
+        heroImg.classList.add('interactive-bounce');
+        setTimeout(() => heroImg.classList.remove('interactive-bounce'), 800);
+      }
+      return;
+    }
+  });
+})();

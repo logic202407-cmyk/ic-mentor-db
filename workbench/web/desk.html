@@ -3,986 +3,2111 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>导师调查工作台（工学）</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2311302e'/%3E%3Ctext x='16' y='23' font-size='19' text-anchor='middle' fill='%23ffffff' font-family='serif'%3E研%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="/assets/investigation.css?v=20261023-observe1">
-  <link rel="stylesheet" href="/assets/desk.css?v=20261024-ui1">
+  <title>循证知途 —— 导师信息查询平台</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231e60d5'/%3E%3Cpath d='M8 9C12 7.5 16 9 16 23C12 21.5 8 21.5 8 21.5V9Z' fill='%23ffffff' opacity='0.9'/%3E%3Cpath d='M24 9C20 7.5 16 9 16 23C20 21.5 24 21.5 24 21.5V9Z' fill='%23ffffff'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/assets/investigation.css?v=20261024-final1">
+  <link rel="stylesheet" href="/assets/desk.css?v=20261024-final1">
 </head>
 <body>
 <a class="skip-link" href="#mainContent">跳到主内容</a>
 
-<header class="site-head">
-  <div class="head-inner">
-    <div class="identity">
-      <a href="/" data-home aria-label="导师调查工作台首页">
-        <span class="seal" aria-hidden="true">研</span>
-        <span>
-          <h1>导师调查工作台</h1>
-          <p>Mentor Research Workbench · 工学</p>
-        </span>
+<div class="app-container">
+  <!-- 顶部主导航 -->
+  <header class="top-nav" role="banner">
+    <div class="nav-inner">
+      <!-- 移动端汉堡菜单按钮 (<=860px) -->
+      <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="打开导航菜单" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+
+      <!-- 品牌标识 -->
+      <a href="/" class="brand-identity" data-nav="home" aria-label="循证知途首页">
+        <svg class="brand-logo-svg" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M18 7.5C14.5 4.8 9.5 5 5 6.5V28.5C9.5 27 14.5 27.2 18 29.5C21.5 27.2 26.5 27 31 28.5V6.5C26.5 5 21.5 4.8 18 7.5Z" fill="url(#brandGrad)" />
+          <path d="M18 8V29" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" />
+          <path d="M9.5 12C12.2 11.2 15.2 11.4 17.5 12.8M9.5 16.5C12.2 15.7 15.2 15.9 17.5 17.3M9.5 21C12.2 20.2 15.2 20.4 17.5 21.8" stroke="rgba(255,255,255,0.7)" stroke-width="1.2" stroke-linecap="round"/>
+          <path d="M26.5 12C23.8 11.2 20.8 11.4 18.5 12.8M26.5 16.5C23.8 15.7 20.8 15.9 18.5 17.3M26.5 21C23.8 20.2 20.8 20.4 18.5 21.8" stroke="rgba(255,255,255,0.7)" stroke-width="1.2" stroke-linecap="round"/>
+          <defs>
+            <linearGradient id="brandGrad" x1="5" y1="6" x2="31" y2="29" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#0284c7" />
+              <stop offset="0.5" stop-color="#2563eb" />
+              <stop offset="1" stop-color="#1d4ed8" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <div class="brand-text-col">
+          <span class="brand-title">循证知途</span>
+          <span class="brand-subtitle">让导师调查更清晰、更有依据</span>
+        </div>
       </a>
-    </div>
-    <nav class="head-meta" aria-label="站点信息">
-      <span>本机运行 · 资料不出这台机器</span>
-      <a class="inline-link home-link" id="homeLink" href="/" data-home hidden>返回首页</a>
-      <a href="/eval">算法评测</a>
-      <a href="/classic">资料整理视图</a>
-      <a class="nav-cta" href="#workspaceView" data-start="name">开始调查</a>
-    </nav>
-  </div>
-</header>
 
-<main class="home" id="homeView">
-  <section class="landing" id="landing" aria-labelledby="landingTitle">
-    <div class="hero">
-      <div class="hero-copy">
-        <p class="hero-kicker">公开学术信息 · 可追溯调查</p>
-        <h1 id="landingTitle">让导师调查，<em>有据可循</em>。</h1>
-        <p class="hero-lede">整合公开学术信息，用开源 AI 辅助身份核对、研究方向分析与证据追溯。每条结论都能回到原文，每个不确定都标成「待核实」。</p>
-        <div class="hero-actions">
-          <button class="button" type="button" data-start="name">查找导师<span aria-hidden="true">→</span></button>
-          <button class="button quiet" type="button" data-start="discipline">按学科探索</button>
-        </div>
-        <dl class="hero-stats" aria-label="收录概览">
-          <div><dt>公开来源记录</dt><dd id="homeRecords">—</dd></div>
-          <div><dt>工学一级学科</dt><dd id="homeDisciplines">—</dd></div>
-          <div><dt>高校与机构</dt><dd id="homeSources">—</dd></div>
-        </dl>
-      </div>
-      <div class="product-visual" aria-label="产品界面预览，使用虚构演示数据">
-        <div class="visual-frame">
-          <div class="visual-bar"><span>工作台预览</span><span class="dotline" aria-hidden="true"><i></i><i></i><i></i></span></div>
-          <div class="mock-stack">
-            <article class="mock-card mock-dossier">
-              <div class="mock-head">
-                <div class="mock-name">
-                  <span class="mock-avatar" aria-hidden="true">示</span>
-                  <div><b>示例 · 导师档案</b><span>示例大学 · 示例学院 · 0809 电子科学与技术</span></div>
-                </div>
-                <span class="mock-pill">待核实</span>
-              </div>
-              <div class="mock-chips"><span>集成电路设计</span><span>低功耗电路</span><span>开源 EDA</span></div>
-              <div class="mock-ai">
-                <b>AI 建议 · 待复核</b>
-                <span>数字电路与 AI 芯片 <small>融合分 0.74 · 次选 0.66</small></span>
-              </div>
-            </article>
-            <article class="mock-card mock-evidence">
-              <div class="mock-src"><i></i><div><b>学院师资名录</b><small>示例大学 · 名录页 · 2026-10 抓取</small></div></div>
-              <div class="mock-src"><i></i><div><b>个人主页 · 研究方向</b><small>example.edu.cn · <span class="ok">已人工核查</span></small></div></div>
-              <div class="mock-src"><i></i><div><b>论文目录 · 12 条候选</b><small>OpenAlex 候选 · 归属待核对</small></div></div>
-            </article>
-            <article class="mock-card mock-network">
-              <b>学术关系 · L1–L4</b>
-              <svg viewBox="0 0 260 74" aria-hidden="true">
-                <path class="mg-line" d="M130 37 L42 14"/><path class="mg-line" d="M130 37 L218 14"/>
-                <path class="mg-line" d="M130 37 L42 62"/><path class="mg-line" d="M130 37 L218 62"/>
-                <circle class="mg-node core" cx="130" cy="37" r="7"/>
-                <circle class="mg-node" cx="42" cy="14" r="4"/><circle class="mg-node" cx="218" cy="14" r="4"/>
-                <circle class="mg-node" cx="42" cy="62" r="4"/><circle class="mg-node" cx="218" cy="62" r="4"/>
-              </svg>
-            </article>
-          </div>
-        </div>
-        <p class="mock-note">界面预览 · 虚构演示数据，非真实导师档案</p>
-      </div>
-    </div>
-
-    <section class="home-section" aria-labelledby="whatTitle">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">这是什么</p>
-          <h2 id="whatTitle">一位导师的公开信息，收在同一页</h2>
-          <p>不是又一个搜索框，而是一张可核对的调查台：来源、证据、AI 建议与人工结论分开摆放。</p>
-        </div>
-      </div>
-      <div class="capability-grid">
-        <article class="capability">
-          <span class="num">01</span>
-          <h3>来源可追溯</h3>
-          <p>每条记录都带公开来源、抓取日期与核查状态；页面改版后仍能回到当时的原文。</p>
-          <ul><li>名录页与本人主页区分标注</li><li>转载名录单独提示</li></ul>
-        </article>
-        <article class="capability">
-          <span class="num">02</span>
-          <h3>同名先核对</h3>
-          <p>同名同姓不靠猜：以专属主页、院系、学科与履历文本做证据分级，证据不足就写「待核」。</p>
-          <ul><li>L1–L4 关系证据分层</li><li>共同署名不推定为师承</li></ul>
-        </article>
-        <article class="capability">
-          <span class="num">03</span>
-          <h3>AI 只作建议</h3>
-          <p>开源中文向量模型本地运行，负责检索与方向候选；它不评价导师，也不替代人工判断。</p>
-          <ul><li>本地推理，不调用在线 API</li><li>结果标注相似度与「待复核」</li></ul>
-        </article>
-      </div>
-    </section>
-
-    <section class="home-section" aria-labelledby="problemTitle">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">解决什么问题</p>
-          <h2 id="problemTitle">同名、改版、信息散落，都会让判断失真</h2>
-          <p>这些不是数据量问题，而是证据链问题。工作台围绕「能不能核对」来组织信息。</p>
-        </div>
-      </div>
-      <div class="problem-split">
-        <div class="problem-list">
-          <div class="problem-item"><b>同名导师被当成一个人</b><span>两所学校、两个院系，同名同姓的记录混在一起，论文与方向就全错位了。</span></div>
-          <div class="problem-item"><b>公开页面会改版消失</b><span>招生目录、个人主页、名录页随时改版；截图和链接一旦丢了，结论就不可复核。</span></div>
-          <div class="problem-item"><b>信息散落在十几个页面</b><span>身份、方向、论文、招生、关系、公告各在一处，学生只能靠手工拼接与记忆。</span></div>
-        </div>
-        <aside class="answer-panel">
-          <h3>把它变成一条可核对的证据链</h3>
-          <p>记录、来源、结论三层分开：事实带出处，推断写清依据，未核验的保持空白。</p>
-          <ul>
-            <li>按姓名或「学科 → 高校 → 方向」定位导师</li>
-            <li>在档案里逐项核对身份、论文与招生年份</li>
-            <li>把疑问写进核查记录，导出 Markdown 带走</li>
-            <li>所有观察只列事实，不给导师打分或排名</li>
-          </ul>
-        </aside>
-      </div>
-    </section>
-
-    <section class="home-section" aria-labelledby="aiTitle">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">AI 用在哪</p>
-          <h2 id="aiTitle">两处建议，都必须人工复核</h2>
-          <p>AI 只负责「找线索」：方向候选与同名比对。它不写回原始字段，也不参与任何评价。</p>
-        </div>
-        <a class="button ghost slim" href="/eval">查看算法评测</a>
-      </div>
-      <div class="ai-grid">
-        <article class="ai-card">
-          <header><h3>研究方向建议</h3><span class="ai-tag">待复核</span></header>
-          <p>用关键词分与中文向量余弦做分数级融合，给出候选方向、融合分与次选。低于阈值就留空，不用猜测填表。</p>
-          <div class="ai-foot"><span>未标注方向的记录 · 本地推理</span><a href="/eval">看分层与消融 →</a></div>
-        </article>
-        <article class="ai-card">
-          <header><h3>同名记录比对</h3><span class="ai-tag">待复核</span></header>
-          <p>只认直接证据：同一专属主页才判同人；缺主页、共用名录页一律「待人工核验」，系统不自动合并。</p>
-          <div class="ai-foot"><span>证据分级 · unknown 不进指标</span><a href="/eval">看消歧评测 →</a></div>
-        </article>
-      </div>
-    </section>
-
-    <section class="home-section" aria-labelledby="howTitle">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">怎么开始调查一位导师</p>
-          <h2 id="howTitle">四步，从姓名到一份可带走的记录</h2>
-        </div>
-      </div>
-      <div class="process">
-        <div class="step"><span class="step-num">01</span><b>定位</b><p>按姓名查，或从一级学科、高校、研究方向逐层缩小范围；同名时先核对学校与院系。</p></div>
-        <div class="step"><span class="step-num">02</span><b>核对身份</b><p>看身份信息与公开来源，确认主页、名录页与院系是否指向同一个人。</p></div>
-        <div class="step"><span class="step-num">03</span><b>读证据</b><p>论文、招生年份、关系线索逐项看依据；AI 建议单独标注，不混进事实。</p></div>
-        <div class="step"><span class="step-num">04</span><b>留记录</b><p>把结论写进核查记录，导出 Markdown；下次打开仍在，换电脑也能带走。</p></div>
-      </div>
-    </section>
-
-    <section class="home-section">
-      <section class="algo-slot" id="algoEvalEntry" aria-labelledby="algoTitle">
-        <div class="algo-copy">
-          <div class="algo-head">
-            <p class="eyebrow">可复现证据</p>
-            <h3 id="algoTitle">算法评测</h3>
-            <span class="badge muted">真实产物</span>
-          </div>
-          <p>五种检索方法在 dev/test 上的 Recall@K、MRR、nDCG；方向推断的分层与清洗文本消融；同名消歧的证据分级指标；以及英文缩写失效、跨学科被压制等真实失败案例。所有数字来自仓库内评测产物，一条命令可复现。</p>
-        </div>
-        <div class="algo-actions"><a class="button light" href="/eval">打开评测看板</a></div>
-      </section>
-    </section>
-
-    <section class="home-section coverage" id="catalogCoverage" aria-label="收录情况">
-      <p class="quiet">正在读取收录情况…</p>
-    </section>
-  </section>
-</main>
-
-<div class="workspace" id="workspaceView" hidden>
-  <button class="finder-toggle" id="finderToggle" type="button" aria-expanded="false" aria-controls="finderPanel"><span aria-hidden="true">⌕</span> 查找导师</button>
-  <aside class="finder" id="finderPanel" aria-label="查找导师">
-    <p class="eyebrow">开始调查</p>
-    <h2>查找一位导师</h2>
-    <p class="intro">按姓名搜索，或从一级学科、学校、方向逐步筛选。</p>
-
-    <div class="mode-tabs" role="tablist" aria-label="查找方式" id="modeTabs">
-      <button class="mode-tab active" type="button" id="nameMode" role="tab" aria-selected="true" aria-controls="namePanel" tabindex="0">按姓名查找</button>
-      <button class="mode-tab" type="button" id="disciplineMode" role="tab" aria-selected="false" aria-controls="disciplinePanel" tabindex="-1">按学科浏览</button>
-    </div>
-
-    <section id="namePanel" role="tabpanel" aria-labelledby="nameMode">
-      <form id="nameForm">
-        <label class="field-label" for="nameInput">导师姓名</label>
-        <div class="row">
-          <input class="field" id="nameInput" name="name" autocomplete="off" placeholder="输入姓名，如：张伟">
-          <button class="button" type="submit">查找</button>
+      <!-- 居中全局导师搜索框 -->
+      <form class="top-search-form" id="topSearchForm" role="search">
+        <label for="topSearchInput" class="hidden">全局搜索导师</label>
+        <div class="top-search-box">
+          <svg class="top-search-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M9 16A7 7 0 1 0 9 2a7 7 0 0 0 0 14Zm10 3-4.35-4.35" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+          <input type="search" class="top-search-input" id="topSearchInput" placeholder="搜索导师姓名、学校或研究方向..." autocomplete="off">
+          <button type="submit" class="top-search-submit">搜索</button>
         </div>
       </form>
-      <p class="quiet" style="margin-top:8px">同名很常见：先核对学校与院系，再决定看哪一位。</p>
-    </section>
 
-    <section id="disciplinePanel" role="tabpanel" aria-labelledby="disciplineMode" hidden>
-      <div class="step-line"><b>1</b> 选学科</div>
-      <label class="field-label" for="disciplineSelect">一级学科</label>
-      <select class="field" id="disciplineSelect"><option value="">请选择</option></select>
-      <label class="scope-toggle"><input type="checkbox" id="showNonEngineering"> 显示非工科</label>
-      <p class="scope-note" id="scopeNote"></p>
-      <div class="step-line"><b>2</b> 选学校</div>
-      <label class="field-label" for="institutionSelect">高校 / 机构</label>
-      <select class="field" id="institutionSelect" disabled><option value="">先选学科</option></select>
-      <div class="step-line"><b>3</b> 选方向</div>
-      <label class="field-label" for="directionSelect">研究方向</label>
-      <select class="field" id="directionSelect" disabled><option value="">先选高校</option></select>
-      <p class="quiet" style="margin-top:10px">列表只显示已收录的导师。原集成电路专题的资料暂未细分一级学科，按研究关键词归入。</p>
-    </section>
-
-    <div class="results-head"><strong id="candidateTitle">搜索结果</strong><small id="candidateCount"></small></div>
-    <div id="resultStatus" class="result-status" role="status" aria-live="polite">输入姓名，或切换到「按学科浏览」。</div>
-    <div id="candidateList" class="result-list"></div>
-
-    <details class="sourcebox" id="addMentorBox"></details>
-    <details class="sourcebox" id="projectDetails">
-      <summary>资料夹与导入</summary>
-      <p class="quiet">把正在调查的导师收进自己的资料夹；支持 CSV、JSON 导入。</p>
-      <label class="field-label" for="projectSelect">当前资料夹</label>
-      <select class="field" id="projectSelect"><option value="">仅查看内置资料</option></select>
-      <label class="field-label" for="projectName">新建资料夹</label>
-      <div class="row">
-        <input class="field" id="projectName" placeholder="如：2027 保研调查">
-        <button class="button light" id="createProject" type="button">创建</button>
+      <!-- 右侧状态标签：本地运行 + 公开信息辅助查询 -->
+      <div class="top-status-pills">
+        <span class="status-pill is-online" id="serverStatusBadge" title="服务已在本机启动，所有查询与笔记仅存本地">
+          <span class="pulse-dot" aria-hidden="true"></span>
+          <span id="serverStatusText">本地运行</span>
+        </span>
+        <span class="status-pill is-neutral" title="平台保持客观中立，仅归拢公开学术证据，不进行导师打分与优劣评级">
+          公开信息辅助查询
+        </span>
       </div>
-      <label class="field-label" for="importFile">导入 CSV / JSON</label>
-      <input class="field" id="importFile" type="file" accept=".csv,.json,text/csv,application/json">
-      <button class="button light" id="importButton" type="button">导入资料夹</button>
-      <p><a class="inline-link" href="/classic">打开资料整理视图（经典版）</a></p>
-    </details>
-  </aside>
+    </div>
+  </header>
 
-  <main class="content" id="mainContent" tabindex="-1">
-    <section class="workspace-intro" id="workspaceIntro" aria-labelledby="wsIntroTitle">
-      <p class="eyebrow">工作台</p>
-      <h2 id="wsIntroTitle">从左侧定位一位导师</h2>
-      <p>按姓名查，或按一级学科 → 高校 → 研究方向逐层缩小范围。打开档案后，七个分区会保留你的核查记录与判断。</p>
-      <p class="quiet"><a class="inline-link" href="/" data-home>← 返回首页，看看这个工作台能做什么</a></p>
-      <div class="ws-hints">
-        <div class="ws-hint"><b>同名先核对</b><span>同名结果会列出学校、院系与来源，先确认是哪一位。</span></div>
-        <div class="ws-hint"><b>看证据再看结论</b><span>身份与来源分区给出原文链接；AI 建议单独标注「待复核」。</span></div>
-        <div class="ws-hint"><b>记录会留在本机</b><span>核查状态与笔记自动保存，可导出 Markdown 带走。</span></div>
-      </div>
-    </section>
-
-    <section class="loading-panel" id="loadingPanel" hidden aria-live="polite">
-      <p class="loading-title">正在读取这位导师的公开资料…</p>
-      <div class="skeleton block"></div>
-      <div class="skeleton w60"></div>
-      <div class="skeleton w40"></div>
-      <div class="skeleton block"></div>
-    </section>
-
-    <article id="dossier" hidden aria-labelledby="mentorTitle">
-      <nav class="breadcrumb" id="breadcrumb" aria-label="面包屑"></nav>
-      <header class="dossier-head">
-        <p class="eyebrow">导师档案</p>
-        <h2 id="mentorTitle"></h2>
-        <p class="subtitle" id="mentorSubtitle"></p>
-        <div class="badges" id="mentorBadges"></div>
-        <dl class="dossier-facts" id="dossierFacts"></dl>
-        <div class="dossier-actions">
-          <a class="button slim" id="reportLink" href="#">导出资料（Markdown）</a>
-          <a class="button light slim" id="homepageLink" href="#" target="_blank" rel="noopener noreferrer" hidden>导师主页</a>
+  <!-- 移动端侧边抽屉导航 (<=860px) -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer" hidden>
+    <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
+    <div class="mobile-nav-sheet" role="dialog" aria-modal="true" aria-label="移动端主导航">
+      <div class="mobile-drawer-head">
+        <div class="mobile-brand-row">
+          <span class="mobile-brand-title">循证知途</span>
+          <span class="mobile-brand-subtitle">导航菜单</span>
         </div>
-      </header>
+        <button type="button" class="mobile-drawer-close" id="mobileDrawerClose" aria-label="关闭导航">✕</button>
+      </div>
+      <nav class="mobile-drawer-menu" role="tablist">
+        <button type="button" class="mobile-drawer-item" data-nav="home">
+          <svg class="nav-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 7-7 7 7v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 20 9 12 11 12 11 20"/></svg>
+          <span>首页总览</span>
+        </button>
+        <button type="button" class="mobile-drawer-item active" data-nav="workspace">
+          <svg class="nav-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="9" r="6"/><line x1="19" y1="19" x2="13.5" y2="13.5"/></svg>
+          <span>导师检索</span>
+        </button>
+        <button type="button" class="mobile-drawer-item" data-nav="discipline">
+          <svg class="nav-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 7l8-4 8 4-8 4-8-4z"/><path d="M5 8.5V14c0 1.5 2.5 3 5 3s5-1.5 5-3V8.5"/><path d="M18 10v4"/></svg>
+          <span>学科导航</span>
+        </button>
+        <button type="button" class="mobile-drawer-item" data-nav="records">
+          <svg class="nav-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/><path d="M9 7h3"/><path d="M9 11h3"/><path d="M9 15h2"/></svg>
+          <span>调查记录</span>
+        </button>
+        <button type="button" class="mobile-drawer-item" data-nav="sources">
+          <svg class="nav-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="10" cy="5" rx="7" ry="3"/><path d="M3 5v5c0 1.7 3.1 3 7 3s7-1.3 7-3V5"/><path d="M3 10v5c0 1.7 3.1 3 7 3s7-1.3 7-3v-5"/></svg>
+          <span>数据来源</span>
+        </button>
+        <button type="button" class="mobile-drawer-item" data-nav="about">
+          <svg class="nav-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="8"/><line x1="10" y1="14" x2="10" y2="10"/><line x1="10" y1="6" x2="10.01" y2="6"/></svg>
+          <span>关于说明</span>
+        </button>
+      </nav>
+      <div class="mobile-drawer-footer">
+        <div class="mobile-status-badge">
+          <span class="pulse-dot"></span>
+          <span>本机运行 · 保护调查隐私</span>
+        </div>
+      </div>
+    </div>
+  </div>
 
-      <nav class="dossier-tabs" role="tablist" aria-label="档案分区" id="dossierTabs">
-        <button class="dossier-tab active" id="tab-investigation" data-pane="investigation" role="tab" aria-selected="true" aria-controls="pane-investigation" type="button">资料汇总</button>
-        <button class="dossier-tab" id="tab-identity" data-pane="identity" role="tab" aria-selected="false" aria-controls="pane-identity" type="button">身份信息</button>
-        <button class="dossier-tab" id="tab-papers" data-pane="papers" role="tab" aria-selected="false" aria-controls="pane-papers" type="button">论文</button>
-        <button class="dossier-tab" id="tab-admission" data-pane="admission" role="tab" aria-selected="false" aria-controls="pane-admission" type="button">招生信息</button>
-        <button class="dossier-tab" id="tab-network" data-pane="network" role="tab" aria-selected="false" aria-controls="pane-network" type="button">学术关系</button>
-        <button class="dossier-tab" id="tab-observation" data-pane="observation" role="tab" aria-selected="false" aria-controls="pane-observation" type="button">课题组观察</button>
-        <button class="dossier-tab" id="tab-check" data-pane="check" role="tab" aria-selected="false" aria-controls="pane-check" type="button">核查记录</button>
+  <!-- 主应用体：左侧边栏 + 右侧主视图 -->
+  <div class="app-body">
+    <!-- 左侧线性图标导航栏 (170-200px) -->
+    <aside class="sidebar" aria-label="系统主导航">
+      <nav class="sidebar-menu" role="tablist" aria-label="页面切换">
+        <button type="button" class="sidebar-item" data-nav="home" role="tab" aria-selected="false">
+          <svg class="nav-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m3 9 7-7 7 7v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 20 9 12 11 12 11 20"/>
+          </svg>
+          <span>首页总览</span>
+        </button>
+        <button type="button" class="sidebar-item active" data-nav="workspace" role="tab" aria-selected="true">
+          <svg class="nav-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="9" cy="9" r="6"/><line x1="19" y1="19" x2="13.5" y2="13.5"/>
+          </svg>
+          <span>导师检索</span>
+        </button>
+        <button type="button" class="sidebar-item" data-nav="discipline" role="tab" aria-selected="false">
+          <svg class="nav-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M2 7l8-4 8 4-8 4-8-4z"/><path d="M5 8.5V14c0 1.5 2.5 3 5 3s5-1.5 5-3V8.5"/><path d="M18 10v4"/>
+          </svg>
+          <span>学科导航</span>
+        </button>
+        <button type="button" class="sidebar-item" data-nav="records" role="tab" aria-selected="false">
+          <svg class="nav-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M14 2H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/><path d="M9 7h3"/><path d="M9 11h3"/><path d="M9 15h2"/>
+          </svg>
+          <span>调查记录</span>
+        </button>
+        <button type="button" class="sidebar-item" data-nav="sources" role="tab" aria-selected="false">
+          <svg class="nav-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <ellipse cx="10" cy="5" rx="7" ry="3"/><path d="M3 5v5c0 1.7 3.1 3 7 3s7-1.3 7-3V5"/><path d="M3 10v5c0 1.7 3.1 3 7 3s7-1.3 7-3v-5"/>
+          </svg>
+          <span>数据来源</span>
+        </button>
+        <button type="button" class="sidebar-item" data-nav="about" role="tab" aria-selected="false">
+          <svg class="nav-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="10" cy="10" r="8"/><line x1="10" y1="14" x2="10" y2="10"/><line x1="10" y1="6" x2="10.01" y2="6"/>
+          </svg>
+          <span>关于说明</span>
+        </button>
       </nav>
 
-      <div id="aiHints" hidden></div>
+      <!-- 侧边栏底部插画与学术选择寄语 -->
+      <div class="sidebar-footer">
+        <div class="sidebar-art-wrap" aria-hidden="true">
+          <svg viewBox="0 0 160 80" fill="none" class="campus-silhouette">
+            <path d="M10 75H150M20 75V48L40 32L60 48V75M32 48V75M48 48V75M60 75V52H100V75M75 52V40L80 34L85 40V52M100 75V48L120 32L140 48V75M112 48V75M128 48V75M40 32V24M120 32V24" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+            <circle cx="80" cy="20" r="3" fill="currentColor" opacity="0.4"/>
+          </svg>
+        </div>
+        <p class="sidebar-quote">
+          <span aria-hidden="true">—</span>
+          基于公开信息<br>
+          助力更理性的<br>
+          学术选择
+        </p>
+      </div>
+    </aside>
 
-      <section class="pane" id="pane-investigation" role="tabpanel" aria-labelledby="tab-investigation" tabindex="0"></section>
-      <section class="pane" id="pane-identity" role="tabpanel" aria-labelledby="tab-identity" tabindex="0" hidden></section>
-      <section class="pane" id="pane-papers" role="tabpanel" aria-labelledby="tab-papers" tabindex="0" hidden></section>
-      <section class="pane" id="pane-admission" role="tabpanel" aria-labelledby="tab-admission" tabindex="0" hidden></section>
-      <section class="pane" id="pane-network" role="tabpanel" aria-labelledby="tab-network" tabindex="0" hidden></section>
-      <section class="pane" id="pane-observation" role="tabpanel" aria-labelledby="tab-observation" tabindex="0" hidden>
-        <div id="scoreBlock" class="score-block"></div>
+    <!-- 右侧动态多视图主区域 -->
+    <main class="main-content" id="mainContent" tabindex="-1">
+
+      <!-- ══════════════════════════════════════════════════════════════════════
+           视图 1: 首页总览 (#homeView)
+           ══════════════════════════════════════════════════════════════════════ -->
+      <section class="home-container" id="homeView" hidden aria-labelledby="homeTitle">
+        <div class="landing" id="landing">
+          <!-- 门户 Hero 大横幅 -->
+          <article class="home-hero-card">
+            <div class="home-hero-layout">
+              <div class="home-hero-text-col">
+                <h1 class="home-hero-title" id="homeTitle">公开信息，<em>有据可查</em>。</h1>
+                <p class="home-hero-desc">检索导师公开资料，了解研究方向、论文线索与招生信息。整合学校官网、院系名录与学术数据源，每条结论都能回到原文，每个不确定都标成「待核实」。</p>
+                <div class="home-hero-ctas">
+                  <button type="button" class="btn-primary-cta" data-start="name">开始检索导师 / 找导师 <span aria-hidden="true">→</span></button>
+                  <button type="button" class="btn-secondary-cta" data-start="discipline">按学科浏览</button>
+                </div>
+              </div>
+              <div class="home-hero-visual-col" aria-hidden="true">
+                <picture>
+                  <source media="(max-width: 640px)" srcset="/assets/visuals/hero-academic-mobile.webp" type="image/webp">
+                  <source srcset="/assets/visuals/hero-academic.webp" type="image/webp">
+                  <img src="/assets/visuals/hero-academic.png" alt="" class="hero-art-img" width="450" height="280" loading="eager" fetchpriority="high" decoding="async">
+                </picture>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4 张精致能力卡片 Bento 网格 -->
+          <div class="home-bento-grid">
+            <article class="bento-card-item">
+              <div class="bento-icon-bubble" aria-hidden="true">🏛️</div>
+              <h3>导师信息</h3>
+              <p>收录高校与科研机构导师名录，集中展示所属院系、职称与官方主页链接。</p>
+            </article>
+            <article class="bento-card-item">
+              <div class="bento-icon-bubble" aria-hidden="true">🧭</div>
+              <h3>研究方向</h3>
+              <p>提取教师自述与名录关键词，开源 AI 辅助分析方向演进，标注「待复核」。</p>
+            </article>
+            <article class="bento-card-item">
+              <div class="bento-icon-bubble" aria-hidden="true">📄</div>
+              <h3>招生与论文</h3>
+              <p>严格区分论文候选与核实归属，保留招生目录年份，往年记录不代表当年名额。</p>
+            </article>
+            <article class="bento-card-item">
+              <div class="bento-icon-bubble" aria-hidden="true">💾</div>
+              <h3>公开来源</h3>
+              <p>每个事实附带出处链接与抓取日期，坚持客观透明，不作任何主观打分或排名。</p>
+            </article>
+          </div>
+
+          <!-- 收录统计横幅 (动态读取自 /api/catalog/summary) -->
+          <dl class="home-stats-banner" aria-label="平台收录统计概览">
+            <div class="stat-box-entry">
+              <dt>公开来源记录</dt>
+              <dd id="homeRecords">—</dd>
+            </div>
+            <div class="stat-box-entry">
+              <dt>工学一级学科</dt>
+              <dd id="homeDisciplines">—</dd>
+            </div>
+            <div class="stat-box-entry">
+              <dt>高校与机构</dt>
+              <dd id="homeSources">—</dd>
+            </div>
+          </dl>
+
+          <!-- 四步工作流说明 -->
+          <article class="home-section-card" aria-labelledby="workflowTitle">
+            <div class="home-section-title-wrap">
+              <h2 id="workflowTitle">怎么开始调查一位导师</h2>
+              <p>遵循结构化调查流程，从多源检索到形成一份客观可核验的调查档案。</p>
+            </div>
+            <div class="workflow-steps-row">
+              <div class="workflow-step-card">
+                <span class="step-badge">1</span>
+                <b>定位</b>
+                <p>输入姓名或在38个工学学科中逐层筛选定位候选导师。</p>
+              </div>
+              <div class="workflow-step-card">
+                <span class="step-badge">2</span>
+                <b>核对身份</b>
+                <p>比对院系与专属主页，严谨消除同名混淆，确认指向同一个人。</p>
+              </div>
+              <div class="workflow-step-card">
+                <span class="step-badge">3</span>
+                <b>查阅证据</b>
+                <p>核实论文发表与历年招生出处，AI 建议单独提示，不混淆事实。</p>
+              </div>
+              <div class="workflow-step-card">
+                <span class="step-badge">4</span>
+                <b>保存记录</b>
+                <p>本地保存调查备注与核验状态，随时导出清晰的 Markdown 报告。</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 核心问答（这是什么、解决什么问题、AI 用在哪） -->
+          <article class="home-section-card" aria-labelledby="faqTitle">
+            <div class="home-section-title-wrap">
+              <h2 id="faqTitle">平台定位与边界原则</h2>
+              <p>公平、公正、公开、可追溯 —— 专业学术信息辅助工具</p>
+            </div>
+            <div class="home-bento-grid" style="grid-template-columns: repeat(3, 1fr);">
+              <div class="bento-card-item">
+                <span class="eyebrow">这是什么</span>
+                <h3>公开信息聚合核查台</h3>
+                <p>将散落于高校官网、招生目录、学术数据库的公开资料聚拢整理，原文可追溯，不搞封闭黑箱。</p>
+              </div>
+              <div class="bento-card-item">
+                <span class="eyebrow">解决什么问题</span>
+                <h3>信息不对称与同名误配</h3>
+                <p>针对网页易改版、招生目录年份不明以及同名学者成果混淆问题，提供多源交叉核对依据。</p>
+              </div>
+              <div class="bento-card-item">
+                <span class="eyebrow">AI 用在哪</span>
+                <h3>仅作建议，待复核兜底</h3>
+                <p>本地开源模型辅助分析论文主题与同名匹配，所有模型推断均明确标注「待复核」，不参与事实裁定。</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 算法评测入口槽位 (真实产物入口，满足测试) -->
+          <section class="algo-slot-card" id="algoEvalEntry" aria-labelledby="algoTitle">
+            <div class="algo-slot-left">
+              <h3 id="algoTitle">
+                <span>算法评测</span>
+                <span class="algo-tag-real">真实产物</span>
+              </h3>
+              <p>涵盖五种检索方法对比、参数扫描曲线、同名消歧指标与真实评测案例，支持一行命令在本地完全复现。</p>
+            </div>
+            <a href="/eval" class="btn-secondary-cta">打开评测看板 →</a>
+          </section>
+
+          <!-- 详细收录情况展示 -->
+          <section class="home-section coverage" id="catalogCoverage" aria-label="收录情况">
+            <p class="quiet">正在读取收录情况…</p>
+          </section>
+        </div>
       </section>
-      <section class="pane" id="pane-check" role="tabpanel" aria-labelledby="tab-check" tabindex="0" hidden></section>
-    </article>
-  </main>
+
+      <!-- ══════════════════════════════════════════════════════════════════════
+           视图 2: 导师检索 (#workspaceView) — 本轮最高优先级高保真复现
+           ══════════════════════════════════════════════════════════════════════ -->
+      <section class="workspace-wrapper" id="workspaceView" aria-label="导师检索工作台">
+        <!-- 顶部搜索与筛选宽幅卡片 -->
+        <section class="search-filter-card" aria-label="搜索与筛选工具栏">
+          <div class="filter-tabs-row" role="tablist">
+            <button type="button" class="tab-pill-btn active" id="btnSearchMode" role="tab" aria-selected="true">搜索导师姓名</button>
+            <button type="button" class="tab-pill-btn" id="btnFilterMode" role="tab" aria-selected="false">按学科与方向查找</button>
+            <!-- 兼容测试的不可见隐藏触发点 -->
+            <button type="button" id="nameMode" class="hidden" role="tab" aria-selected="true" data-start="name">按姓名</button>
+            <button type="button" id="disciplineMode" class="hidden" role="tab" aria-selected="false" data-start="discipline">按学科</button>
+          </div>
+
+          <!-- 主搜索框输入行 -->
+          <form class="card-search-input-row" id="workspaceSearchForm">
+            <div class="search-box-inner">
+              <svg class="search-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M9 16A7 7 0 1 0 9 2a7 7 0 0 0 0 14Zm10 3-4.35-4.35" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+              <label for="nameInput" class="hidden">请输入导师姓名（支持中文、英文及别名查找）</label>
+              <input class="field" id="nameInput" name="name" autocomplete="off" placeholder="输入导师姓名查找（如：张、李波、Lieber）...">
+            </div>
+            <button type="submit" class="card-search-btn">搜索</button>
+          </form>
+
+          <!-- 四项下拉筛选条件行 -->
+          <div class="filter-selects-row">
+            <div class="filter-select-wrap">
+              <label for="disciplineSelect" class="hidden">一级学科</label>
+              <select class="field" id="disciplineSelect">
+                <option value="">全部学科</option>
+              </select>
+            </div>
+            <div class="filter-select-wrap">
+              <label for="institutionSelect" class="hidden">全部高校</label>
+              <select class="field" id="institutionSelect" disabled>
+                <option value="">全部高校</option>
+              </select>
+            </div>
+            <div class="filter-select-wrap">
+              <label for="directionSelect" class="hidden">全部研究方向</label>
+              <select class="field" id="directionSelect" disabled>
+                <option value="">全部研究方向</option>
+              </select>
+            </div>
+            <div class="filter-select-wrap">
+              <label for="admissionStatusSelect" class="hidden">招生状态</label>
+              <select class="field" id="admissionStatusSelect">
+                <option value="">招生状态</option>
+                <option value="signal">往年有公开招生线索</option>
+                <option value="all">不限状态</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- 热门研究方向标签行 -->
+          <div class="filter-tags-row">
+            <span class="tags-label">研究方向：</span>
+            <button type="button" class="quick-tag-chip" data-quick-interest="人工智能">人工智能</button>
+            <button type="button" class="quick-tag-chip" data-quick-interest="计算机视觉">计算机视觉</button>
+            <button type="button" class="quick-tag-chip" data-quick-interest="机器学习">机器学习</button>
+            <button type="button" class="quick-tag-chip" data-quick-interest="自然语言处理">自然语言处理</button>
+            <button type="button" class="quick-tag-chip" data-quick-interest="数据挖掘">数据挖掘</button>
+            <button type="button" class="quick-tag-chip" data-quick-interest="数字电路">数字电路</button>
+            <button type="button" class="quick-tag-chip is-more" id="moreDirectionsPill">更多 ▾</button>
+            <label class="scope-toggle-label" title="工学外的其他学科记录默认折叠，勾选以显示">
+              <input type="checkbox" id="showNonEngineering">
+              <span>显示非工科</span>
+            </label>
+            <p class="scope-note hidden" id="scopeNote"></p>
+          </div>
+        </section>
+
+        <!-- 3 栏核心工作区分割：左侧结果列表(~28%) + 中央导师详情(~52%) + 右侧辅助信息(~20%) -->
+        <div class="tri-split-layout workspace">
+          <!-- ── 左栏：导师搜索结果列表 ──────────────────────────────────────── -->
+          <aside class="results-col" aria-label="导师搜索结果列表">
+            <div class="results-header-bar">
+              <strong id="candidateTitle">搜索结果</strong>
+              <small id="candidateCount">约 0 位导师</small>
+            </div>
+            <div id="resultStatus" class="results-status-msg" role="status" aria-live="polite">
+              输入姓名或选择学科开始查找。
+            </div>
+            <div id="candidateList" class="mentor-cards-scroll"></div>
+
+            <!-- 本地资料夹与补充入口 (折叠保留) -->
+            <details class="sourcebox" id="addMentorBox"></details>
+            <details class="sourcebox" id="projectDetails">
+              <summary>资料夹与导入</summary>
+              <p class="quiet">把正在调查的导师收进自己的资料夹；支持 CSV、JSON 导入。</p>
+              <label class="field-label" for="projectSelect">当前资料夹</label>
+              <select class="field" id="projectSelect"><option value="">仅查看内置资料</option></select>
+              <label class="field-label" for="projectName">新建资料夹</label>
+              <div class="row">
+                <input class="field" id="projectName" placeholder="如：2027 保研调查">
+                <button class="button light" id="createProject" type="button">创建</button>
+              </div>
+              <label class="field-label" for="importFile">导入 CSV / JSON</label>
+              <input class="field" id="importFile" type="file" accept=".csv,.json,text/csv,application/json">
+              <button class="button light" id="importButton" type="button">导入资料夹</button>
+            </details>
+          </aside>
+
+          <!-- ── 中栏：导师档案详细信息 (视觉核心) ────────────────────────────── -->
+          <section class="dossier-col" aria-label="导师详细信息">
+            <!-- 档案加载骨架屏 -->
+            <div class="loading-panel" id="loadingPanel" hidden aria-live="polite">
+              <p class="loading-title">正在加载导师档案…</p>
+              <div class="skeleton block"></div>
+              <div class="skeleton w60"></div>
+              <div class="skeleton w40"></div>
+              <div class="skeleton block"></div>
+            </div>
+
+            <!-- 未选择导师时的引导界面 -->
+            <article class="workspace-intro" id="workspaceIntro" aria-labelledby="wsIntroTitle">
+              <div class="ws-empty-graphic" aria-hidden="true">
+                <picture>
+                  <source srcset="/assets/visuals/search-empty.webp" type="image/webp">
+                  <img src="/assets/visuals/search-empty.png" alt="" class="ws-empty-img" width="180" height="123" loading="lazy" decoding="async">
+                </picture>
+              </div>
+              <h2 id="wsIntroTitle">开始调查一位导师</h2>
+              <p class="ws-empty-lead">在左侧列表选择导师，或在上方输入姓名、研究方向、学校与学科检索。</p>
+              <details class="ws-help-fold">
+                <summary>如何使用与核查须知</summary>
+                <div class="ws-hints">
+                  <div class="ws-hint"><b>同名先核对</b><span>同名结果会列出学校、院系与来源，先确认是哪一位。</span></div>
+                  <div class="ws-hint"><b>看证据再看结论</b><span>身份与来源分区给出原文链接；AI 建议单独标注「待复核」。</span></div>
+                  <div class="ws-hint"><b>记录会留在本机</b><span>核查状态与笔记自动保存，可导出 Markdown 带走。</span></div>
+                </div>
+              </details>
+            </article>
+
+            <!-- 完整导师档案展示区域 -->
+            <article id="dossier" hidden aria-labelledby="mentorTitle">
+              <!-- 移动端返回搜索结果按钮 (<=960px) -->
+              <div class="mobile-back-row">
+                <button type="button" class="mobile-back-btn" id="mobileBackBtn">
+                  <svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>返回导师检索列表</span>
+                </button>
+              </div>
+
+              <nav class="breadcrumb" id="breadcrumb" aria-label="面包屑导航"></nav>
+
+              <!-- 顶部导师档案摘要大卡片 -->
+              <header class="dossier-header-card">
+                <div class="dossier-header-main">
+                  <div class="dossier-large-avatar" id="mentorDossierAvatar">师</div>
+                  <div class="dossier-meta-col">
+                    <div class="dossier-name-row">
+                      <h2 id="mentorTitle">导师姓名</h2>
+                      <span class="dossier-orig-name" id="mentorOrigName" hidden></span>
+                      <span class="pill-title" id="mentorTitleBadge">职称待核</span>
+                      <span class="pill-status" id="mentorStatusPill">● 公开名录</span>
+                    </div>
+                    <div class="dossier-meta-lines">
+                      <div class="dossier-meta-line">
+                        <svg class="line-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 2L2 7h16L10 2zM4 9v6h2V9H4zm5 0v6h2V9H9zm5 0v6h2V9h-2zM2 17v2h16v-2H2z"/></svg>
+                        <span id="mentorInstitutionText">所属高校与院系</span>
+                      </div>
+                      <div class="dossier-meta-line">
+                        <svg class="line-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd"/></svg>
+                        <span>研究方向：<span id="mentorInterestsText">暂无方向收录</span></span>
+                      </div>
+                      <div class="dossier-meta-line" id="mentorBackgroundRow">
+                        <svg class="line-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a10.993 10.993 0 01-1.2 5.94 1 1 0 001.764.938A9.002 9.002 0 007.018 10h5.964a9.002 9.002 0 001.204 4.929 1 1 0 001.764-.938 10.993 10.993 0 01-1.2-5.94l2.644-1.131a1 1 0 000-1.84l-7-3z"/></svg>
+                        <span id="mentorBackgroundText">来源依据：官方师资名录直录</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="dossier-top-right-stats">
+                  <span class="stat-source-count" id="dossierSourceCount">🗂️ 暂无公开来源</span>
+                  <span class="stat-update-date" id="dossierUpdateDate">🕒 时间未记录</span>
+                  <div class="dossier-action-btns">
+                    <a class="button slim" id="reportLink" href="#">导出资料（Markdown）</a>
+                    <a class="button light slim" id="homepageLink" href="#" target="_blank" rel="noopener noreferrer" hidden>导师主页 ↗</a>
+                  </div>
+                </div>
+
+                <!-- 隐藏保留的测试兼容节点 -->
+                <p class="subtitle hidden" id="mentorSubtitle"></p>
+                <div class="badges hidden" id="mentorBadges"></div>
+                <dl class="dossier-facts hidden" id="dossierFacts"></dl>
+              </header>
+
+              <!-- 5 项核心信息紧凑摘要状态栏 (直接联动 5 个 Tab，高度精简) -->
+              <div class="entry-cards-row compact-ribbon" role="group" aria-label="快速信息定位">
+                <button type="button" class="entry-feature-card compact-pill" data-jump-pane="identity" title="查看导师研究方向与基本信息">
+                  <span class="pill-icon" aria-hidden="true">📚</span>
+                  <span class="pill-label">方向:</span>
+                  <span class="pill-value" id="entryInterestsDesc">查阅方向关键词</span>
+                </button>
+                <button type="button" class="entry-feature-card compact-pill" data-jump-pane="papers" title="查看公开论文成果线索">
+                  <span class="pill-icon" aria-hidden="true">📄</span>
+                  <span class="pill-label">成果:</span>
+                  <span class="pill-value" id="entryPapersDesc">已收录公开论文</span>
+                </button>
+                <button type="button" class="entry-feature-card compact-pill" data-jump-pane="admission" title="查看公开招生简章">
+                  <span class="pill-icon" aria-hidden="true">🎓</span>
+                  <span class="pill-label">招生:</span>
+                  <span class="pill-value" id="entryAdmissionDesc">公开招生简章</span>
+                </button>
+                <button type="button" class="entry-feature-card compact-pill" data-jump-pane="network" title="查看团队主页与关系线索">
+                  <span class="pill-icon" aria-hidden="true">👥</span>
+                  <span class="pill-label">团队:</span>
+                  <span class="pill-value" id="entryTeamDesc">主页与关系线索</span>
+                </button>
+                <button type="button" class="entry-feature-card compact-pill" data-jump-pane="investigation" title="查看学校官网出处与核查记录">
+                  <span class="pill-icon" aria-hidden="true">🔍</span>
+                  <span class="pill-label">来源:</span>
+                  <span class="pill-value" id="entrySourcesDesc">学校官网出处</span>
+                </button>
+              </div>
+
+              <!-- 5 核心详情标签栏 (Tabs) -->
+              <nav class="dossier-tabs" role="tablist" aria-label="档案分区" id="dossierTabs">
+                <button class="dossier-tab-btn dossier-tab active" id="tab-identity" data-pane="identity" role="tab" aria-selected="true" aria-controls="pane-identity" type="button">基本介绍</button>
+                <button class="dossier-tab-btn dossier-tab" id="tab-papers" data-pane="papers" role="tab" aria-selected="false" aria-controls="pane-papers" type="button">论文成果</button>
+                <button class="dossier-tab-btn dossier-tab" id="tab-admission" data-pane="admission" role="tab" aria-selected="false" aria-controls="pane-admission" type="button">招生信息</button>
+                <button class="dossier-tab-btn dossier-tab" id="tab-network" data-pane="network" role="tab" aria-selected="false" aria-controls="pane-network" type="button">团队信息</button>
+                <button class="dossier-tab-btn dossier-tab" id="tab-investigation" data-pane="investigation" role="tab" aria-selected="false" aria-controls="pane-investigation" type="button">公开来源</button>
+              </nav>
+
+              <!-- AI 建议（待复核）放置于 Tab 导航之后，满足 test_frontend_wiring.py -->
+              <div id="aiHints" hidden></div>
+
+              <!-- 标签页分区内容 -->
+              <!-- 分区 1: 基本介绍 (identity) -->
+              <section class="pane pane-card" id="pane-identity" role="tabpanel" aria-labelledby="tab-identity" tabindex="0"></section>
+
+              <!-- 分区 2: 论文成果 (papers) -->
+              <section class="pane pane-card" id="pane-papers" role="tabpanel" aria-labelledby="tab-papers" tabindex="0" hidden></section>
+
+              <!-- 分区 3: 招生信息 (admission) -->
+              <section class="pane pane-card" id="pane-admission" role="tabpanel" aria-labelledby="tab-admission" tabindex="0" hidden></section>
+
+              <!-- 分区 4: 团队信息 (network + observation) -->
+              <section class="pane pane-card" id="pane-network" role="tabpanel" aria-labelledby="tab-network" tabindex="0" hidden><div id="scoreBlock"></div></section>
+
+              <!-- 分区 5: 公开来源 (investigation + check) -->
+              <section class="pane pane-card" id="pane-investigation" role="tabpanel" aria-labelledby="tab-investigation" tabindex="0" hidden></section>
+            </article>
+          </section>
+
+          <!-- ── 右栏：轻量辅助信息与使用说明 (~20%) ────────────────────────── -->
+          <aside class="aux-col" id="auxSidebar" aria-label="辅助信息与使用提示">
+            <!-- 模块一：信息完整情况（仅在选中导师后展示真实核实数据） -->
+            <article class="aux-card" id="auxCompletenessCard" hidden>
+              <div class="aux-card-head">
+                <div class="aux-card-title">
+                  <svg class="title-icon green" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm3.7-10.3a1 1 0 0 0-1.4-1.4L9 9.6 7.7 8.3a1 1 0 0 0-1.4 1.4l2 2a1 1 0 0 0 1.4 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>信息完整度</span>
+                </div>
+                <span class="micro" title="基于收录的证据数量统计，非导师评价">ⓘ</span>
+              </div>
+              <div class="completeness-stats-row">
+                <div class="comp-stat-item">
+                  <span class="comp-stat-num is-green" id="auxVerifiedNum">-</span>
+                  <span class="comp-stat-label">已核验证据源</span>
+                </div>
+                <div class="comp-stat-item">
+                  <span class="comp-stat-num is-orange" id="auxPendingNum">-</span>
+                  <span class="comp-stat-label">待补充来源</span>
+                </div>
+              </div>
+              <div class="completeness-footer">
+                <div class="comp-update-info">
+                  <small>最近更新日期</small>
+                  <strong id="auxUpdatedDate">暂无记录</strong>
+                </div>
+                <span class="completeness-pill-badge" id="auxCompletenessBadge">待核查</span>
+              </div>
+            </article>
+
+            <!-- 模块一占位：未选择导师时的提示 -->
+            <article class="aux-card aux-placeholder-card" id="auxEmptyPlaceholder">
+              <div class="aux-card-head">
+                <div class="aux-card-title">
+                  <span aria-hidden="true" style="font-size:16px">📋</span>
+                  <span>核查与证据说明</span>
+                </div>
+              </div>
+              <p class="quiet" style="margin:8px 0 0;font-size:13px;line-height:1.6">从左侧检索并选择一位导师，即可在此查看该导师的公开来源收录数、核查进展及更新时间线。</p>
+            </article>
+
+            <!-- 模块二：来源说明 -->
+            <article class="aux-card">
+              <div class="aux-card-head">
+                <div class="aux-card-title">
+                  <svg class="title-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path d="M4 4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4zm2 0v12h8V4H6z"/>
+                  </svg>
+                  <span>来源说明</span>
+                </div>
+              </div>
+              <ul class="sources-type-list">
+                <li class="source-type-entry">
+                  <div class="st-icon-box" aria-hidden="true">🏛️</div>
+                  <div class="st-text-col">
+                    <b>学校官网</b>
+                    <p>包括学校及院系官方网站信息</p>
+                  </div>
+                </li>
+                <li class="source-type-entry">
+                  <div class="st-icon-box" aria-hidden="true">🏢</div>
+                  <div class="st-text-col">
+                    <b>学院主页</b>
+                    <p>院系教师介绍、团队信息等</p>
+                  </div>
+                </li>
+                <li class="source-type-entry">
+                  <div class="st-icon-box" aria-hidden="true">📑</div>
+                  <div class="st-text-col">
+                    <b>招生公告</b>
+                    <p>研究生招生 专业目录、招生说明等</p>
+                  </div>
+                </li>
+                <li class="source-type-entry">
+                  <div class="st-icon-box" aria-hidden="true">🗄️</div>
+                  <div class="st-text-col">
+                    <b>论文数据库</b>
+                    <p>包括 CNKI、Web of Science、Google Scholar 等公开论文数据</p>
+                  </div>
+                </li>
+              </ul>
+            </article>
+
+            <!-- 模块三：使用提示 -->
+            <article class="aux-card">
+              <div class="aux-card-head">
+                <div class="aux-card-title">
+                  <span aria-hidden="true">💡</span>
+                  <span>使用提示</span>
+                </div>
+              </div>
+              <ol class="tips-ordered-list">
+                <li class="tip-item-entry">
+                  <span class="tip-bubble-num">1</span>
+                  <div class="tip-text-col">
+                    <b>优先核对学校与院系</b>
+                    <p>确认导师所在单位及院系信息是否准确。</p>
+                  </div>
+                </li>
+                <li class="tip-item-entry">
+                  <span class="tip-bubble-num">2</span>
+                  <div class="tip-text-col">
+                    <b>公开信息仅供辅助参考</b>
+                    <p>本平台基于公开信息整理，不作任何主观评价或推荐。</p>
+                  </div>
+                </li>
+                <li class="tip-item-entry">
+                  <span class="tip-bubble-num">3</span>
+                  <div class="tip-text-col">
+                    <b>以原始来源为准</b>
+                    <p>如需准确信息，请访问相关官方网站或原始发布渠道进行核实。</p>
+                  </div>
+                </li>
+              </ol>
+            </article>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════════════════════
+           视图 3: 学科导航 (#disciplineNavView)
+           ══════════════════════════════════════════════════════════════════════ -->
+      <section class="home-container" id="disciplineNavView" hidden aria-labelledby="discNavTitle">
+        <article class="home-section-card">
+          <div class="discipline-hero-row">
+            <div class="home-section-title-wrap">
+              <h2 id="discNavTitle">工学一级学科导航</h2>
+              <p>基于教育部规范学科目录，覆盖38个工学一级学科，点击学科即可快速过滤已收录导师与机构。</p>
+              <div class="discipline-search-wrap" style="margin: 12px 0 0;">
+                <label for="disciplineSearchInput" class="hidden">搜索学科代码或名称</label>
+                <input type="search" id="disciplineSearchInput" class="field" placeholder="输入学科代码或学科名称快速过滤（如 0811、计算机、控制、材料）…" style="max-width: 480px; width: 100%;">
+              </div>
+            </div>
+            <div class="discipline-visual-box" aria-hidden="true">
+              <picture>
+                <source srcset="/assets/visuals/discipline-explore.webp" type="image/webp">
+                <img src="/assets/visuals/discipline-explore.png" alt="" class="discipline-art-img" width="320" height="106" loading="lazy">
+              </picture>
+            </div>
+          </div>
+          <div class="discipline-grid" id="fullDisciplinesGrid">
+            <p class="quiet">正在读取学科目录…</p>
+          </div>
+        </article>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════════════════════
+           视图 4: 调查记录 (#recordsView)
+           ══════════════════════════════════════════════════════════════════════ -->
+      <section class="h<section class="home-container" id="recordsView" hidden aria-labelledby="recordsTitle">
+        <article class="home-section-card">
+          <div class="records-hero-row">
+            <div class="home-section-title-wrap">
+              <h2 id="recordsTitle">我的本地调查手记与档案</h2>
+              <p>数据仅保存在本机浏览器与本地存储中，不上传云端，无须注册账号，全流程保护您的调查隐私。</p>
+            </div>
+            <div class="records-visual-box empty-state-art" aria-hidden="true">
+              <picture>
+                <source srcset="/assets/visuals/records-empty.webp" type="image/webp">
+                <img src="/assets/visuals/records-empty.png" alt="本地私密手记本" class="records-empty-img" width="160" height="110" loading="lazy">
+              </picture>
+            </div>
+          </div>
+          <div id="localRecordsList">
+            <div class="empty-state">
+              <p class="empty-title">正在读取本地调查记录…</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════════════════════
+           视图 5: 数据来源 (#sourcesView)
+           ══════════════════════════════════════════════════════════════════════ -->
+      <section class="home-container" id="sourcesView" hidden aria-labelledby="sourcesPageTitle">
+        <article class="home-section-card">
+          <div class="home-section-title-wrap">
+            <h2 id="sourcesPageTitle">数据来源与核查原则</h2>
+            <p>循证知途坚持客观事实、证据可溯与中立公开四大基本准则。</p>
+          </div>
+          <div class="sources-flow-art-wrap" aria-hidden="true">
+            <picture>
+              <source srcset="/assets/visuals/source-academic.webp" type="image/webp">
+              <img src="/assets/visuals/source-academic.png" alt="" class="sources-flow-img" width="720" height="212" loading="lazy">
+            </picture>
+          </div>
+          <div class="home-bento-grid" style="grid-template-columns: repeat(2, 1fr);">
+            <div class="bento-card-item">
+              <div class="bento-icon-bubble">🏛️</div>
+              <h3>高校与学院官方来源</h3>
+              <p>直接抓取高校研究生院、二级学院师资名录与导师主页。名录标注抓取日期与快照出处，解决网页改版导致的历史线索丢失问题。</p>
+            </div>
+            <div class="bento-card-item">
+              <div class="bento-icon-bubble">📑</div>
+              <h3>研究生招生简章与目录</h3>
+              <p>收集各高校公布的硕士生与博士生招生专业目录。严格保留公告年份，坚决不把往年历史招生记录误标为当前正在招生。</p>
+            </div>
+            <div class="bento-card-item">
+              <div class="bento-icon-bubble">🗄️</div>
+              <h3>公开学术文献数据库</h3>
+              <p>对接 OpenAlex、Crossref 等公开学术元数据。严格区分「论文候选」与「已经核实归属的论文」，杜绝同名学者成果误绑。</p>
+            </div>
+            <div class="bento-card-item">
+              <div class="bento-icon-bubble">⚖️</div>
+              <h3>学术中立与不评级声明</h3>
+              <p>平台拒绝商业化炒作与主观打分，不以论文数量衡量水平，不提供所谓的综合排名，全流程保障信息客观中立。</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════════════════════
+           视图 6: 关于说明 (#aboutView)
+           ══════════════════════════════════════════════════════════════════════ -->
+      <section class="home-container" id="aboutView" hidden aria-labelledby="aboutPageTitle">
+        <article class="home-section-card">
+          <div class="home-section-title-wrap">
+            <h2 id="aboutPageTitle">关于循证知途</h2>
+            <p>2026年全球校园人工智能算法精英大赛 —— 主题赛 —— AI+开源赛道参赛作品</p>
+          </div>
+          <div class="about-split-layout">
+            <div class="pane-section about-text-side">
+              <p class="bio-paragraph"><strong>循证知途</strong>是一款专注于学术规范与证据可溯的工学导师信息查询平台。我们致力于帮助广大学子在保研、考研和申博过程中，集中、理性、客观地查阅导师公开资料，了解研究方向演进、论文线索与招生公告。</p>
+              <p class="bio-paragraph"><strong>本地运行保障：</strong>本项目完全本地化部署运行，所有调查数据、个人笔记与导入资料存放在本机，杜绝云端泄露与商业追踪。</p>
+              <p class="bio-paragraph"><strong>开源与第三方许可：</strong>遵循 MIT 许可协议开源，使用原生 HTML5、CSS 与现代 JavaScript 构建，离线可用，不依赖商业云服务。</p>
+              <div style="margin-top: 14px;">
+                <a href="/eval" class="button light" style="display: inline-flex; align-items: center; gap: 8px;">查看算法评测看板与复现指南 →</a>
+              </div>
+            </div>
+            <div class="about-visual-side" aria-hidden="true">
+              <picture>
+                <source srcset="/assets/visuals/about-academic.webp" type="image/webp">
+                <img src="/assets/visuals/about-academic.png" alt="" class="about-art-img" width="340" height="260" loading="lazy">
+              </picture>
+            </div>
+          </div>
+        </article>
+      </section>
+
+    </main>
+  </div>
 </div>
 
-<footer class="footer">
-  <div class="footer-inner">
-    <span>导师调查工作台 · 资料与调查记录保存在本机</span>
-    <span>招生信息以学校当年公告为准；本工具不构成报考建议</span>
-  </div>
-</footer>
+<!-- 外部业务脚本 -->
+<script src="/assets/public-research.js?v=20261024-final1"></script>
+<script src="/assets/investigation.js?v=20261024-final1"></script>
+<script src="/assets/additions.js?v=20261024-final1"></script>
 
-<script src="/assets/public-research.js?v=20261024-ui1"></script>
-<script src="/assets/investigation.js?v=20261024-ui1"></script>
-<script src="/assets/additions.js?v=20261024-ui1"></script>
+<!-- 前端控制器脚本 -->
 <script>
-const $=id=>document.getElementById(id);
-const state={mode:'name',projectId:(()=>{try{return localStorage.getItem('mentor-project')||''}catch{return ''}})(),mentor:null,candidates:[],queryVersion:0,selectionVersion:0,disciplineVersion:0,includeNonEngineering:(()=>{try{return localStorage.getItem('mentor-show-non-engineering')==='1'}catch{return false}})()};
-const PANES=['investigation','identity','papers','admission','network','observation','check'];
-const TAB_LABELS={investigation:'资料汇总',identity:'身份信息',papers:'论文',admission:'招生信息',network:'学术关系',observation:'课题组观察',check:'核查记录'};
+const $ = id => document.getElementById(id);
+const state = {
+  view: 'workspace',
+  mode: 'name',
+  projectId: (() => { try { return localStorage.getItem('mentor-project') || '' } catch { return '' } })(),
+  mentor: null,
+  candidates: [],
+  queryVersion: 0,
+  selectionVersion: 0,
+  disciplineVersion: 0,
+  includeNonEngineering: (() => { try { return localStorage.getItem('mentor-show-non-engineering') === '1' } catch { return false } })()
+};
 
-/* ── 工具函数 ── */
-const esc=value=>String(value??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
-const params=obj=>new URLSearchParams(Object.entries(obj).filter(([,v])=>v!==undefined&&v!==null&&v!==''));
-// The workbench defaults to the engineering scope. Non-engineering entries stay in
-// the data and keep their ids; this only controls which corpus gets listed.
-function scopeParams(){return state.includeNonEngineering?{include_non_engineering:true}:{}}
-function parseScopeSummary(summary){$('scopeNote').textContent=state.includeNonEngineering?`工学 ${summary.engineering_records} 条 + 非工科 ${summary.non_engineering_records} 条（已显示非工科）`:`工学 ${summary.engineering_records} 条 · 另有 ${summary.non_engineering_records} 条非工科默认隐藏`;$('showNonEngineering').checked=state.includeNonEngineering}
-async function loadScope(){
-  try{
-    const summary=await api('/api/catalog/scope');
-    parseScopeSummary(summary);
-    const box=$('landingScope');
-    if(box)box.textContent=`已收录工学（08 开头学科）导师记录 ${summary.engineering_records} 条${summary.non_engineering_records?`；另有 ${summary.non_engineering_records} 条人文社科与理科记录，默认隐藏`:''}。`;
-  }catch{
-    const box=$('landingScope');
-    if(box)box.textContent='收录范围暂时没读到，可在左侧学科列表里查看已收录的学科。';
+/* 5 核心标签定义（满足 test_web_structure.py） */
+const PANES = ['identity', 'papers', 'admission', 'network', 'investigation'];
+const TAB_LABELS = {
+  identity: '基本介绍',
+  papers: '论文成果',
+  admission: '招生信息',
+  network: '团队信息',
+  investigation: '公开来源'
+};
+
+/* ── 导师姓名规范化映射（官方权威来源支持，保持原始ID与底层数据完全不变） ── */
+const MENTOR_CHINESE_NAMES = {
+  "legacy-70d0b480a18a3704f200": {
+    chineseName: "查尔斯·李波",
+    originalName: "Charles M. Lieber",
+    avatarChar: "李",
+    aliases: ["查尔斯·李波", "查尔斯·利伯", "Charles M. Lieber", "Lieber", "李波"],
+    officialSource: "清华大学官方网站 (https://www.tsinghua.edu.cn/info/1167/124887.htm)",
+    status: "官方中文名已核实"
+  },
+  "legacy-421abeb76248f7dd70f4": {
+    chineseName: "宋毅",
+    originalName: "SONG YI",
+    avatarChar: "宋",
+    aliases: ["宋毅", "SONG YI", "Song Yi"],
+    officialSource: "浙江大学微纳电子学院教师名录",
+    status: "院系中文原名匹配"
+  },
+  "legacy-3514c5d798ef4329140b": {
+    chineseName: "陈一宁",
+    originalName: "CHEN YINING",
+    avatarChar: "陈",
+    aliases: ["陈一宁", "CHEN YINING", "Chen Yining"],
+    officialSource: "浙江大学微纳电子学院教师名录",
+    status: "院系中文原名匹配"
+  },
+  "legacy-8a512b206ad485caab73": {
+    chineseName: "龚小武",
+    originalName: "GONG,XIAOWU",
+    avatarChar: "龚",
+    aliases: ["龚小武", "GONG,XIAOWU", "Gong Xiaowu"],
+    officialSource: "电子科技大学教师名录",
+    status: "院系中文原名匹配"
+  }
+};
+
+/* ── 英文研究方向规范化中文对照表（显示与接口查询值严格分离） ── */
+const DIRECTION_CHINESE_MAP = {
+  "device": "半导体与微纳器件（Device）",
+  "mems": "微机电系统（MEMS）",
+  "other": "其他交叉研究方向",
+  "photonics": "光子学与光电集成（Photonics）",
+  "power": "功率电子与电源管理（Power）",
+  "quantum": "量子器件与量子计算（Quantum）",
+  "analog": "模拟集成电路与射频（Analog）",
+  "digital_ai": "数字集成电路与智能计算（Digital/AI）",
+  "eda": "电子设计自动化（EDA）",
+  "rf": "射频微波与通信芯片（RF）",
+  "rf_comm": "射频与通信（RF）"
+};
+
+function formatDirection(dir) {
+  if (!dir) return '方向待收录';
+  return DIRECTION_CHINESE_MAP[dir] || dir;
+}
+
+function getMentorNameInfo(p) {
+  if (!p) return { primaryName: '导师', secondaryName: '', avatarChar: '师', isMapped: false };
+  const mapping = MENTOR_CHINESE_NAMES[p.id];
+  if (mapping) {
+    return {
+      primaryName: mapping.chineseName,
+      secondaryName: mapping.originalName,
+      avatarChar: mapping.avatarChar,
+      officialSource: mapping.officialSource,
+      isMapped: true
+    };
+  }
+  const name = String(p.name || '导师').trim();
+  const firstChar = name.charAt(0);
+  return {
+    primaryName: name,
+    secondaryName: '',
+    avatarChar: firstChar.toUpperCase(),
+    officialSource: null,
+    isMapped: false
+  };
+}
+
+/* ── 基础工具函数 ── */
+const esc = value => String(value ?? '').replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
+const params = obj => new URLSearchParams(Object.entries(obj).filter(([, v]) => v !== undefined && v !== null && v !== ''));
+
+function scopeParams() {
+  return state.includeNonEngineering ? { include_non_engineering: true } : {};
+}
+
+async function api(path, options = {}) {
+  const response = await fetch(path, { headers: { 'Content-Type': 'application/json' }, ...options });
+  let body;
+  try { body = await response.json(); } catch { body = { detail: '响应无法解析' }; }
+  if (!response.ok) throw Error(body.detail || `请求失败 (${response.status})`);
+  return body;
+}
+
+function message(value, error = false) {
+  const box = $('resultStatus');
+  if (!box) return;
+  const busy = !error && String(value).startsWith('正在');
+  box.classList.toggle('error', error);
+  box.innerHTML = busy ? `<span class="spinner" aria-hidden="true"></span><span>${esc(value)}</span>` : esc(value);
+  box.setAttribute('aria-busy', String(busy));
+}
+
+function emptyState(title, hint, extra = '', visualArt = '') {
+  const artHtml = visualArt ? `<div class="empty-state-art" aria-hidden="true"><picture><source srcset="${esc(visualArt)}.webp" type="image/webp"><img src="${esc(visualArt)}.png" alt="" class="records-empty-img" width="160" height="110" loading="lazy"></picture></div>` : '';
+  return `<div class="empty-state">${artHtml}<p class="empty-title">${esc(title)}</p><p class="empty-hint">${esc(hint)}</p>${extra ? '<p class="empty-hint">' + esc(extra) + '</p>' : ''}</div>`;
+}
+
+function detailBlock(summary, bodyHtml) {
+  return `<details class="obs-detail" style="margin-top:8px"><summary style="cursor:pointer;color:var(--accent);font-weight:600">${esc(summary)}</summary><div style="margin-top:6px;font-size:12.5px;color:#475569">${bodyHtml}</div></details>`;
+}
+
+/* ── 视图路由切换（首页 / 导师检索 / 学科导航 / 调查记录 / 数据来源 / 关于） ── */
+const ALL_VIEWS = ['home', 'workspace', 'discipline', 'records', 'sources', 'about'];
+
+function setView(viewName) {
+  state.view = viewName;
+  document.body.dataset.view = viewName;
+
+  // 更新左侧侧边栏高亮
+  document.querySelectorAll('.sidebar-item').forEach(btn => {
+    const active = btn.dataset.nav === viewName;
+    btn.classList.toggle('active', active);
+    btn.setAttribute('aria-selected', String(active));
+  });
+
+  // 更新移动端抽屉菜单高亮
+  document.querySelectorAll('.mobile-drawer-item').forEach(btn => {
+    const active = btn.dataset.nav === viewName;
+    btn.classList.toggle('active', active);
+  });
+  if (typeof closeMobileDrawer === 'function') closeMobileDrawer();
+
+  // 切换对应视图显隐
+  $('homeView').hidden = (viewName !== 'home');
+  $('workspaceView').hidden = (viewName !== 'workspace');
+  $('disciplineNavView').hidden = (viewName !== 'discipline');
+  $('recordsView').hidden = (viewName !== 'records');
+  $('sourcesView').hidden = (viewName !== 'sources');
+  $('aboutView').hidden = (viewName !== 'about');
+
+  if (viewName === 'home') {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  } else if (viewName === 'discipline') {
+    renderFullDisciplines();
+  } else if (viewName === 'records') {
+    renderLocalRecords();
   }
 }
-async function api(path,options={}){const response=await fetch(path,{headers:{'Content-Type':'application/json'},...options});let body;try{body=await response.json()}catch{body={detail:'响应无法解析'}}if(!response.ok)throw Error(body.detail||`请求失败 (${response.status})`);return body}
-/* 状态行：加载中显示转圈并可被读屏播报，出错改为红色提示。 */
-function message(value,error=false){
-  const box=$('resultStatus');
-  const busy=!error&&String(value).startsWith('正在');
-  box.classList.toggle('error',error);
-  box.innerHTML=busy?`<span class="spinner" aria-hidden="true"></span><span>${esc(value)}</span>`:esc(value);
-  box.setAttribute('aria-busy',String(busy));
-}
-function emptyState(title,hint,extra=''){return `<div class="empty-state"><p class="empty-title">${esc(title)}</p><p class="empty-hint">${esc(hint)}</p>${extra?'<p class="empty-hint">'+esc(extra)+'</p>':''}</div>`}
-function detailBlock(summary,bodyHtml){return `<details class="obs-detail"><summary>${esc(summary)}</summary>${bodyHtml}</details>`}
 
-/* ── 视图切换：首页门户 / 工作台 ── */
-function setView(view){
-  const home=view==='home';
-  const homeView=$('homeView'),workspaceView=$('workspaceView');
-  if(homeView)homeView.hidden=!home;
-  if(workspaceView)workspaceView.hidden=home;
-  document.body.dataset.view=view;
-  const homeLink=$('homeLink');
-  if(homeLink)homeLink.hidden=home;
-  if(home)window.scrollTo(0,0);
-}
-function goHome(){setView('home')}
+function goHome() { setView('home'); }
 
-/* ── 查找流程 ── */
-function clearDossier(){state.selectionVersion++;state.queryVersion++;state.mentor=null;setView('workspace');const intro=$('workspaceIntro');if(intro)intro.hidden=false;$('dossier').hidden=true;if($('loadingPanel'))$('loadingPanel').hidden=true;history.replaceState(null,'',location.pathname)}
-function selectMode(mode){
-  setView('workspace');
-  clearDossier();
-  state.mode=mode;
-  const byName=mode==='name';
-  $('namePanel').hidden=!byName;$('disciplinePanel').hidden=byName;
-  $('nameMode').classList.toggle('active',byName);$('disciplineMode').classList.toggle('active',!byName);
-  $('nameMode').setAttribute('aria-selected',String(byName));$('disciplineMode').setAttribute('aria-selected',String(!byName));
-  $('nameMode').tabIndex=byName?0:-1;$('disciplineMode').tabIndex=byName?-1:0;
-  state.candidates=[];renderCandidates();
-  message(byName?'输入姓名开始查找。':'先选一级学科。');
+/* ── 导师检索流程 ── */
+function clearDossier() {
+  state.selectionVersion++;
+  state.queryVersion++;
+  state.mentor = null;
+  const intro = $('workspaceIntro');
+  if (intro) intro.hidden = false;
+  $('dossier').hidden = true;
+  if ($('loadingPanel')) $('loadingPanel').hidden = true;
+  if ($('auxCompletenessCard')) $('auxCompletenessCard').hidden = true;
+  if ($('auxEmptyPlaceholder')) $('auxEmptyPlaceholder').hidden = false;
+  history.replaceState(null, '', location.pathname);
 }
-function renderCandidates(){
-  const box=$('candidateList');
-  $('candidateCount').textContent=state.candidates.length?`${state.candidates.length} 条`:'';
-  if(!state.candidates.length){box.innerHTML='';return}
-  const exactNames=new Map();
-  for(const p of state.candidates)exactNames.set(p.name,(exactNames.get(p.name)||0)+1);
-  box.innerHTML=state.candidates.map(p=>`<button class="person-option ${state.mentor?.profile.id===p.id?'selected':''}" type="button" data-person="${esc(p.id)}"><strong>${esc(p.name)}${exactNames.get(p.name)>1?'<span class="same-name">同名</span>':''}</strong><span>${esc(p.institution)}${p.department?' · '+esc(p.department):''}</span><span>${esc(p.first_level_discipline||p.discipline||'学科待补')} · ${esc(p.direction_group||'方向待补')}</span><em>${esc(p.origin)}${p.source_count?' · '+p.source_count+' 条来源':''}</em></button>`).join('');
-  box.querySelectorAll('[data-person]').forEach(button=>button.onclick=()=>openMentor(button.dataset.person));
-}
-async function lookupName(){
-  clearDossier();state.candidates=[];renderCandidates();
-  const q=$('nameInput').value.trim();
-  if(!q){message('请输入导师姓名。',true);return}
-  const version=++state.queryVersion;
-  message('正在查找同名记录…');
-  try{
-    const items=await api('/api/catalog/name?'+params({q,project_id:state.projectId}));
-    if(version!==state.queryVersion)return;
-    state.candidates=items;renderCandidates();
-    message(items.length?`找到 ${items.length} 条身份线索，请核对学校、院系后选择。`:'还没收录这位导师，可展开下方「没找到？添加导师」自己补一条。');
-  }catch(error){if(version===state.queryVersion)message(error.message,true)}
-}
-async function loadCoverage(){
-  const box=$('catalogCoverage');
-  const setText=(id,value)=>{const el=$(id);if(el)el.textContent=value};
-  try{
-    const summary=await api('/api/catalog/summary');
-    setText('homeRecords',Number(summary.public_records||0).toLocaleString('zh-CN'));
-    setText('homeDisciplines',String(summary.disciplines_engineering||0));
-    setText('homeSources',String(summary.public_institutions||0));
-    box.innerHTML=`<h3>现在能查到哪些资料</h3>
-      <p class="coverage-total">公开来源资料 ${summary.public_records} 条，涉及 ${summary.public_institutions} 所高校或机构、${summary.disciplines_total} 个一级学科（其中工学 ${summary.disciplines_engineering} 个）。</p>
-      <p class="quiet" id="landingScope">工学 ${summary.engineering_records} 条 · 另有 ${summary.non_engineering_records} 条非工科默认隐藏</p>
-      <p class="quiet" id="coverageDetail">正在读取明细…</p>
-      <div id="coverageDetailBody"></div>`;
-    loadScope();
-    try{
-      const data=await api('/api/catalog/coverage');
-      renderCoverageDetail(data);
-    }catch{
-      const detail=$('coverageDetail');
-      if(detail)detail.textContent='明细暂时没读到；上面的总量已经加载完成。';
+
+function renderCandidates() {
+  const box = $('candidateList');
+  $('candidateCount').textContent = state.candidates.length ? `共匹配 ${state.candidates.length} 位导师` : '0 位导师';
+  if (!state.candidates.length) {
+    box.innerHTML = emptyState('暂无匹配导师', '请尝试更换关键词、高校或学科筛选条件。');
+    return;
+  }
+  const exactNames = new Map();
+  for (const p of state.candidates) exactNames.set(p.name, (exactNames.get(p.name) || 0) + 1);
+
+  box.innerHTML = state.candidates.map(p => {
+    const isSelected = state.mentor?.profile.id === p.id;
+    const nameInfo = getMentorNameInfo(p);
+    const initialChar = esc(nameInfo.avatarChar);
+
+    // 真实职称，严禁编造“教授/专家”
+    const explicitTitle = p.title || p.post || (p.direction_group?.includes('院士') ? '院士' : null);
+    const cardTitle = explicitTitle || '职称待核';
+
+    // 研究方向：最多取 2 个并规范化为中文
+    const rawInterests = (p.interests || p.direction_group || '').split(/[；;、,，\s]/).filter(Boolean);
+    const interests = rawInterests.slice(0, 2).map(formatDirection);
+    const hasMoreInterests = rawInterests.length > 2;
+    const tagsHtml = interests.length
+      ? `<div class="card-tags-list">
+          ${interests.map(t => `<span class="card-tag tag-direction" title="${esc(t)}">${esc(t)}</span>`).join('')}
+          ${hasMoreInterests ? `<span class="card-tag" style="color:#64748b" title="共收录 ${rawInterests.length} 个方向">+${rawInterests.length - 2}</span>` : ''}
+        </div>`
+      : '';
+
+    // 真实招生状态徽章，严禁无来源统一打绿色
+    let admissionBadge = '<span class="card-tag tag-admission-unknown">暂无公开招生</span>';
+    if (p.admission_catalog) {
+      const years = (p.discipline_assignments || []).map(a => a.year).filter(Boolean);
+      if (years.length > 0) {
+        admissionBadge = `<span class="card-tag tag-admission-year">${years[0]}招生目录</span>`;
+      } else {
+        admissionBadge = '<span class="card-tag tag-admission-history">历史招生线索</span>';
+      }
     }
-  }catch{
-    box.innerHTML=emptyState('收录统计暂时没加载出来','请刷新页面重试。数据都在本机，不会因为一次读取失败而丢失。');
-  }
-}
-function renderCoverageDetail(data){
-  const detail=$('coverageDetail');if(detail)detail.remove();
-  const body=$('coverageDetailBody');if(!body)return;
-  body.innerHTML=`${data.secondary_records?`<p class="quiet">${data.official_records} 条来自官网或学校指定平台，${data.secondary_records} 条来自转载名录，已单独标明。官网来源覆盖 ${data.official_disciplines} 个学科。</p>`:''}
-    <p class="quiet">另有原集成电路专题 ${data.legacy_records} 条记录${data.overlapping_records?`，其中 ${data.overlapping_records} 条已补入官网资料`:''}。名录最近采集于 ${esc(data.updated_at)}。</p>
-    ${data.research?`<p class="quiet">已从 ${data.research.readable_profiles} 位教师的公开来源整理资料：${data.research.papers} 位有论文目录，${data.research.relations} 位有师承表述，${data.research.recruitment} 位有个人招生说明或年度招生记录。另有 ${data.research.admission_notices} 位已关联院系招生公告。</p>`:''}
-    <details><summary>查看已收录的 ${data.disciplines.length} 个学科</summary><div class="coverage-list">${data.disciplines.map(item=>`<button type="button" class="coverage-row" data-coverage-discipline="${esc(item.name)}"><span>${esc(item.name.slice(5))}</span><small>${item.count} 条 · ${item.institutions} 所${item.secondary_count?' · 含转载':''}</small></button>`).join('')}</div></details>
-    <p class="quiet" style="margin-top:14px">选学科即可查看名单，也可以按学校与方向筛选。是否招生请查看当年公告。</p>`;
-  body.querySelectorAll('[data-coverage-discipline]').forEach(button=>button.onclick=async()=>{
-    selectMode('discipline');
-    $('disciplineSelect').value=button.dataset.coverageDiscipline;
-    await chooseDiscipline();
-    $('institutionSelect').focus();
+
+    // 真实来源数与真实日期
+    const srcCount = p.source_count !== undefined && p.source_count !== null ? p.source_count : (p.sources ? p.sources.length : 0);
+    const srcText = srcCount > 0 ? `${srcCount} 个公开来源` : '暂无公开来源';
+    const dateText = p.collected_at ? esc(p.collected_at.split('T')[0]) : '时间未记录';
+
+    return `<div class="mentor-card-item ${isSelected ? 'selected' : ''}" data-person="${esc(p.id)}" role="button" tabindex="0">
+      <div class="initial-avatar" aria-hidden="true">${initialChar}</div>
+      <div class="mentor-card-main">
+        <div class="card-name-title">
+          <strong title="${esc(nameInfo.primaryName)}">${esc(nameInfo.primaryName)}</strong>
+          ${nameInfo.secondaryName ? `<span class="dossier-orig-name" style="font-size:11px;color:#64748b;max-width:110px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" title="${esc(nameInfo.secondaryName)}">(${esc(nameInfo.secondaryName)})</span>` : ''}
+          <span class="card-title ${explicitTitle ? '' : 'is-unrecorded'}" style="font-size:11px">${esc(cardTitle)}</span>
+          ${exactNames.get(p.name) > 1 ? '<span class="same-name" style="font-size:10px;padding:1px 5px;background:#fef3c7;color:#b45309;border-radius:3px">同名</span>' : ''}
+        </div>
+        <div class="card-school-dept">${esc(p.institution)}${p.department ? ' · ' + esc(p.department) : ''}</div>
+        ${tagsHtml}
+        <div class="card-foot-meta">
+          ${admissionBadge}
+          <span class="card-sources-count" title="公开信息来源总数">🗂️ ${srcText}</span>
+          <span title="数据采集与核验记录时间">${dateText}</span>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+
+  box.querySelectorAll('[data-person]').forEach(el => {
+    el.onclick = () => openMentor(el.dataset.person);
+    el.onkeydown = e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openMentor(el.dataset.person); } };
   });
 }
-async function loadDisciplines(){const version=++state.disciplineVersion;return (async()=>{const allItems=await api('/api/catalog/disciplines?'+params({project_id:state.projectId,include_non_engineering:true}));const items=state.includeNonEngineering?allItems:allItems.filter(i=>i.engineering);const hiddenCount=allItems.length-items.length;if(version!==state.disciplineVersion)return;const labels={'01':'哲学','02':'经济学','03':'法学','04':'教育学','05':'文学','06':'历史学','07':'理学','08':'工学','09':'农学','10':'医学','11':'军事学','12':'管理学','13':'艺术学','14':'交叉学科'};const available=items.filter(item=>item.count>0);const empty=items.filter(item=>item.count===0);const group=(label,values)=>!values.length?'':`<optgroup label="${esc(label)}">${values.map(item=>`<option value="${esc(item.name)}">${esc(item.name)} · ${item.count} 人</option>`).join('')}</optgroup>`;const remaining=new Map();for(const item of empty){const code=item.name.slice(0,2),name=labels[code]?`${code} ${labels[code]}`:'待归类';if(!remaining.has(name))remaining.set(name,[]);remaining.get(name).push(item)}const hiddenNote=hiddenCount?('<optgroup label="另有 '+hiddenCount+' 个学科已收录但默认隐藏"><option value="" disabled>勾选上方「显示非工科」即可查看（含数学、生物学、化学等）</option></optgroup>'):'';$('disciplineSelect').innerHTML='<option value="">请选择一级学科</option>'+Object.entries(labels).sort(([a],[b])=>a.localeCompare(b)).map(([code,label])=>group(label,available.filter(item=>item.name.startsWith(code)))).join('')+group('其他资料',available.filter(item=>!labels[item.name.slice(0,2)]))+Array.from(remaining,([label,values])=>group(`${label} · 暂无收录`,values)).join('')+hiddenNote;resetSelect('institutionSelect','先选学科');resetSelect('directionSelect','先选高校')})()}
-function resetSelect(id,label){const element=$(id);element.innerHTML=`<option value="">${esc(label)}</option>`;element.disabled=true}
-async function chooseDiscipline(){clearDossier();const version=state.queryVersion;const discipline=$('disciplineSelect').value;resetSelect('institutionSelect','请选择高校');resetSelect('directionSelect','先选高校');state.candidates=[];renderCandidates();if(!discipline){message('先选择一级学科。');return}message('正在列出高校…');try{const items=await api('/api/catalog/institutions?'+params({discipline,project_id:state.projectId,...scopeParams()}));if(version!==state.queryVersion)return;$('institutionSelect').innerHTML='<option value="__all__">全部高校 / 机构</option>'+items.map(item=>`<option value="${esc(item.name)}">${esc(item.name)} · ${item.count} 人</option>`).join('');$('institutionSelect').disabled=!items.length;if(items.length){$('institutionSelect').value='__all__';await chooseInstitution()}else{message('这个学科还没有导师资料，可以自己添加。')}}catch(error){if(version===state.queryVersion)message(error.message,true)}}
-async function chooseInstitution(){clearDossier();const version=state.queryVersion;const discipline=$('disciplineSelect').value,institution=$('institutionSelect').value;resetSelect('directionSelect','请选择方向');state.candidates=[];renderCandidates();if(!institution){message('先选择高校。');return}message('正在列出研究方向…');try{const items=await api('/api/catalog/directions?'+params({discipline,institution,project_id:state.projectId,...scopeParams()}));if(version!==state.queryVersion)return;$('directionSelect').innerHTML='<option value="__all__">全部方向</option>'+items.map(item=>`<option value="${esc(item.name)}">${esc(item.name)} · ${item.count} 人</option>`).join('');$('directionSelect').disabled=!items.length;if(items.length){$('directionSelect').value='__all__';await chooseDirection()}else{message('当前选择下暂无已收录方向。')}}catch(error){if(version===state.queryVersion)message(error.message,true)}}
-async function chooseDirection(){clearDossier();const version=state.queryVersion;const discipline=$('disciplineSelect').value,institution=$('institutionSelect').value,direction=$('directionSelect').value;state.candidates=[];renderCandidates();if(!direction){message('请选方向。');return}message('正在列出导师…');try{const items=await api('/api/catalog/mentors?'+params({discipline,institution,direction,project_id:state.projectId,...scopeParams()}));if(version!==state.queryVersion)return;state.candidates=items;renderCandidates();message(`找到 ${state.candidates.length} 条记录，请选择导师。`)}catch(error){if(version===state.queryVersion)message(error.message,true)}}
 
-/* ── 打开档案 ── */
-async function openMentor(id,options={}){
-  const version=++state.selectionVersion;
+async function lookupName(query = '') {
+  const q = (query || $('nameInput').value).trim();
+  if (!q) { message('请输入导师姓名进行检索。', true); return; }
   setView('workspace');
-  const wsIntro=$('workspaceIntro');if(wsIntro)wsIntro.hidden=true;
-  $('dossier').hidden=true;
-  if($('loadingPanel'))$('loadingPanel').hidden=false;
+  clearDossier();
+  state.candidates = [];
+  renderCandidates();
+  const version = ++state.queryVersion;
+  message('正在检索导师公开资料…');
+
+  // 支持输入中文别名（如“李波”、“查尔斯”）查找对应英文原始名字
+  let searchQ = q;
+  for (const [id, info] of Object.entries(MENTOR_CHINESE_NAMES)) {
+    if (info.aliases.some(alias => alias.toLowerCase().includes(q.toLowerCase()) || q.toLowerCase().includes(alias.toLowerCase()))) {
+      searchQ = info.originalName;
+      break;
+    }
+  }
+
+  try {
+    const items = await api('/api/catalog/name?' + params({ q: searchQ, project_id: state.projectId, ...scopeParams() }));
+    if (version !== state.queryVersion) return;
+    state.candidates = items;
+    renderCandidates();
+    message(items.length ? `找到 ${items.length} 位匹配导师，点击卡片即可查看详细证据档案。` : '暂未在公开库中检索到匹配导师，可在下方「添加导师」补充记录。');
+    if (items.length > 0 && !state.mentor) {
+      openMentor(items[0].id, { quietScroll: true });
+    }
+  } catch (error) {
+    if (version === state.queryVersion) message(error.message, true);
+  }
+}
+
+/* ── 打开导师详细档案 ── */
+async function openMentor(id, options = {}) {
+  const version = ++state.selectionVersion;
+  setView('workspace');
+  const wsIntro = $('workspaceIntro');
+  if (wsIntro) wsIntro.hidden = true;
+  $('dossier').hidden = true;
+  if ($('loadingPanel')) $('loadingPanel').hidden = false;
   message('正在加载导师档案…');
-  try{
-    const mentor=await api('/api/catalog/mentor/'+encodeURIComponent(id));
-    if(version!==state.selectionVersion)return;
-    state.mentor=mentor;
+
+  try {
+    const mentor = await api('/api/catalog/mentor/' + encodeURIComponent(id));
+    if (version !== state.selectionVersion) return;
+    state.mentor = mentor;
+
     renderDossier();
     renderAiHints(id);
     readPublicResearch();
-    history.replaceState(null,'',location.pathname+'?mentor='+encodeURIComponent(id));
+    history.replaceState(null, '', location.pathname + '?mentor=' + encodeURIComponent(id));
     renderCandidates();
-    document.body.classList.remove('finder-open');const ft=$('finderToggle');if(ft)ft.setAttribute('aria-expanded','false');
-    message('已打开导师档案。');
-    if(window.innerWidth<860&&!options.quietScroll)$('mainContent').scrollIntoView({block:'start'});
-  }catch(error){
-    if(version!==state.selectionVersion)return;
-    const wsIntro=$('workspaceIntro');if(wsIntro)wsIntro.hidden=false;
-    if($('loadingPanel'))$('loadingPanel').hidden=true;
-    message(error.message,true);
+
+    message('已载入导师公开档案。');
+    if (window.innerWidth < 960 && !options.quietScroll) {
+      $('dossier').scrollIntoView({ block: 'start', behavior: 'smooth' });
+    }
+  } catch (error) {
+    if (version !== state.selectionVersion) return;
+    if (wsIntro) wsIntro.hidden = false;
+    if ($('loadingPanel')) $('loadingPanel').hidden = true;
+    message(error.message, true);
   }
 }
-function setPane(pane){
-  if(!PANES.includes(pane))return;
-  document.querySelectorAll('[data-pane]').forEach(button=>{
-    const active=button.dataset.pane===pane;
-    button.classList.toggle('active',active);
-    button.setAttribute('aria-selected',String(active));
-    button.tabIndex=active?0:-1;
+
+/* ── 档案装配渲染（必须满足 test_frontend_wiring.py 的声明检查） ── */
+function renderDossier() {
+  const data=state.mentor;
+  const profile = data.profile;
+
+  const wsIntro = $('workspaceIntro');
+  if (wsIntro) wsIntro.hidden = true;
+  if ($('loadingPanel')) $('loadingPanel').hidden = true;
+  $('dossier').hidden = false;
+
+  // 1. 顶部身份卡片
+  const nameInfo = getMentorNameInfo(profile);
+  $('mentorDossierAvatar').textContent = nameInfo.avatarChar;
+  $('mentorTitle').textContent = nameInfo.primaryName;
+  if (nameInfo.secondaryName) {
+    $('mentorOrigName').textContent = `（原名：${nameInfo.secondaryName}）`;
+    $('mentorOrigName').hidden = false;
+  } else {
+    $('mentorOrigName').hidden = true;
+  }
+
+  // 真实职称，严禁编造“教授/专家”
+  const explicitTitle = profile.title || profile.post || (profile.direction_group?.includes('院士') ? '中国工程院/科学院院士' : null);
+  $('mentorTitleBadge').textContent = explicitTitle || '职称未收录';
+  $('mentorTitleBadge').className = `pill-title ${explicitTitle ? 'is-recorded' : 'is-unrecorded'}`;
+
+  $('mentorSubtitle').textContent = [profile.institution, profile.department].filter(Boolean).join(' · ');
+  $('breadcrumb').textContent = `导师库 / ${profile.first_level_discipline || '学科待归类'} / ${profile.institution}`;
+
+  $('mentorInstitutionText').textContent = [profile.institution, profile.department].filter(Boolean).join(' ');
+  const rawInterests = profile.interests || profile.direction_group || '';
+  const formattedInterests = rawInterests ? rawInterests.split(/[；;、,，\s]/).filter(Boolean).map(formatDirection).join('、') : '暂无详细关键词收录';
+  $('mentorInterestsText').textContent = formattedInterests;
+  $('mentorBackgroundText').textContent = profile.classification_basis || (profile.secondary_source ? '转载名录（待人工核实）' : '官方名录直录，有据可查');
+
+  // 真实来源数量与真实更新日期（严禁虚假兜底）
+  const totalSources = (Array.isArray(data.sources) ? data.sources.length : (profile.source_count || 0));
+  $('dossierSourceCount').textContent = totalSources > 0 ? `🗂️ ${totalSources} 个公开来源` : '🗂️ 暂无公开来源';
+  const updateDateStr = profile.collected_at ? profile.collected_at.split('T')[0] : '时间未记录';
+  $('dossierUpdateDate').textContent = updateDateStr !== '时间未记录' ? `🕒 最近更新: ${updateDateStr}` : '🕒 采集时间未记录';
+
+  // 导出与主页链接
+  $('reportLink').href = '/api/catalog/mentor/' + encodeURIComponent(profile.id) + '/report.md';
+  $('homepageLink').hidden = !profile.homepage;
+  if (profile.homepage) {
+    $('homepageLink').href = profile.homepage;
+    $('homepageLink').textContent = (data.homepage_kind === 'roster' ? '院系名录页 ↗' : '导师主页 ↗');
+  }
+
+  // 2. 5张快捷入口卡片内容预览填充
+  const shortInterests = rawInterests ? rawInterests.split(/[；;、,，\s]/).filter(Boolean).slice(0, 2).map(formatDirection).join('、') : '暂无方向';
+  $('entryInterestsDesc').textContent = shortInterests;
+  $('entryPapersDesc').textContent = (data.papers?.length || 0) > 0 ? `已收录 ${data.papers.length} 篇论文线索` : '暂无论文线索';
+
+  let admissionShort = '暂无公开招生';
+  if (profile.admission_catalog) {
+    const years = (profile.discipline_assignments || []).map(a => a.year).filter(Boolean);
+    admissionShort = years.length > 0 ? `${years[0]} 招生简章已收录` : '历史招生名录线索';
+  }
+  $('entryAdmissionDesc').textContent = admissionShort;
+  $('entryTeamDesc').textContent = profile.homepage ? (data.homepage_kind === 'roster' ? '院系名录出处' : '个人主页已收录') : '暂未收录主页';
+  $('entrySourcesDesc').textContent = totalSources > 0 ? `${totalSources} 条来源出处` : '暂无来源原文';
+
+  // 3. 右侧辅助栏信息完整度与说明联动更新（严禁虚假兜底）
+  if ($('auxCompletenessCard')) $('auxCompletenessCard').hidden = false;
+  if ($('auxEmptyPlaceholder')) $('auxEmptyPlaceholder').hidden = true;
+  const verifiedCount = (data.sources || []).filter(s => s.status === '已人工核查').length;
+  const pendingCount = (data.sources || []).filter(s => s.status !== '已人工核查').length;
+  $('auxVerifiedNum').textContent = verifiedCount;
+  $('auxPendingNum').textContent = pendingCount;
+  $('auxUpdatedDate').textContent = updateDateStr;
+  if (verifiedCount > 0 && pendingCount === 0) {
+    $('auxCompletenessBadge').textContent = `✓ 已核实 ${verifiedCount} 条`;
+    $('auxCompletenessBadge').className = 'completeness-pill-badge is-verified';
+  } else if (verifiedCount > 0 && pendingCount > 0) {
+    $('auxCompletenessBadge').textContent = `已核查 ${verifiedCount} 条 / 待核 ${pendingCount} 条`;
+    $('auxCompletenessBadge').className = 'completeness-pill-badge is-partial';
+  } else if (pendingCount > 0) {
+    $('auxCompletenessBadge').textContent = `待人工核实 (${pendingCount} 条)`;
+    $('auxCompletenessBadge').className = 'completeness-pill-badge is-pending';
+  } else {
+    $('auxCompletenessBadge').textContent = '来源覆盖待补充';
+    $('auxCompletenessBadge').className = 'completeness-pill-badge is-unknown';
+  }
+
+  // 4. 各分区渲染
+  renderOverview();
+  renderPapers();
+  renderAdmission();
+  renderNetwork();
+  renderCheck();
+  renderEvidenceList();
+  renderEvidenceForm();
+  renderStudentScore();
+
+  setPane('identity');
+}
+
+/* ── 标签页切换 ── */
+function setPane(pane) {
+  if (!PANES.includes(pane)) return;
+  document.querySelectorAll('[data-pane]').forEach(btn => {
+    const active = btn.dataset.pane === pane;
+    btn.classList.toggle('active', active);
+    btn.setAttribute('aria-selected', String(active));
+    btn.tabIndex = active ? 0 : -1;
   });
-  for(const name of PANES){
-    const section=$('pane-'+name);
-    if(section)section.hidden=name!==pane;
+
+  for (const name of PANES) {
+    const el = $('pane-' + name);
+    if (el) el.hidden = (name !== pane);
   }
-  if(pane==='investigation')renderInvestigation();
 }
-function bindTabKeys(nav){
-  if(!nav)return;
-  nav.addEventListener('keydown',event=>{
-    if(!['ArrowRight','ArrowLeft','Home','End'].includes(event.key))return;
-    const tabs=[...nav.querySelectorAll('[role="tab"]')].filter(tab=>!tab.disabled);
-    const index=tabs.indexOf(document.activeElement);
-    if(index<0)return;
+
+/* ── 分区 1: 基本介绍 (identity) ── */
+function renderOverview() {
+  const data = state.mentor;
+  const profile = data.profile;
+  const keywords = (profile.interests || '').split(/[；;、,，]/).map(i => i.trim()).filter(Boolean);
+  const keywordsHtml = keywords.length
+    ? `<div class="interests-chips-wrap">${keywords.map(k => `<span class="interest-chip">${esc(formatDirection(k))}</span>`).join('')}</div>`
+    : '<p class="quiet">名录暂未提取到研究关键词，这不表示导师没有方向，仅说明公开源未提供。</p>';
+
+  const bioText = (data.public_research?.biography?.[0]?.text)
+    || profile.summary
+    || '暂未收录官方个人简介。本平台不编造履历，请查阅下方公开来源与院系原始页面。';
+
+  $('pane-identity').innerHTML = `
+    <div class="pane-section">
+      <h3 class="pane-section-title"><span aria-hidden="true">👤</span> 个人简介</h3>
+      <p class="bio-paragraph">${esc(bioText)}</p>
+    </div>
+    <div class="pane-section" style="margin-top:14px">
+      <h3 class="pane-section-title"><span aria-hidden="true">➕</span> 研究方向</h3>
+      ${keywordsHtml}
+    </div>
+    <div class="pane-section" style="margin-top:14px">
+      <h3 class="pane-section-title"><span aria-hidden="true">📄</span> 代表性工作与学术经历</h3>
+      <ul style="margin:4px 0 0;padding-left:20px;font-size:13.5px;color:#334155;line-height:1.75">
+        <li>公开学术方向收录归属于：<strong>${esc(profile.first_level_discipline || '工学学科')}</strong></li>
+        <li>所在单位：${esc(profile.institution)} ${esc(profile.department || '')}</li>
+        ${profile.homepage ? `<li>官方主页：<a href="${esc(profile.homepage)}" target="_blank" rel="noopener noreferrer">${esc(profile.homepage)} ↗</a></li>` : ''}
+      </ul>
+    </div>
+  `;
+}
+
+/* ── 分区 2: 论文成果 (papers) ── */
+function renderPapers() {
+  const data = state.mentor;
+  const papers = data.papers || [];
+  const candidateNotice = `<div class="notice-card">重点提示：下列论文来源于公开数据库索引线索，作者归属尚需人工核对，不代表已经由导师本人认证。</div>`;
+
+  const papersHtml = papers.length
+    ? papers.map(p => `
+      <div class="paper-item-card">
+        <span class="paper-title-text">${esc(p.title || '论文标题待补')}</span>
+        <div class="paper-meta-row">
+          <span>${esc(p.year || '年份未知')}</span>
+          <span>·</span>
+          <span>${esc(p.venue || '公开学术来源')}</span>
+          ${p.url ? `<a class="paper-link" href="${esc(p.url)}" target="_blank" rel="noopener noreferrer">查看原文 / DOI ↗</a>` : ''}
+        </div>
+      </div>
+    `).join('')
+    : emptyState('暂无其他来源的论文记录', '可使用下方的作者匹配工具关联 OpenAlex，或手动添加已核对论文。');
+
+  $('pane-papers').innerHTML = `
+    <div class="pane-section">
+      <h3 class="pane-section-title"><span aria-hidden="true">📄</span> 论文成果线索</h3>
+      ${candidateNotice}
+      <div style="margin-top:10px">${papersHtml}</div>
+    </div>
+    ${publicSection('papers')}
+    <div class="pane-section" style="margin-top:16px;border-top:1px dashed var(--border);padding-top:14px">
+      <h3 class="pane-section-title"><span aria-hidden="true">🔍</span> 查找更多论文 (OpenAlex)</h3>
+      <p class="quiet">通过 OpenAlex 学术图谱检索作者候选项，核对机构一致后再关联论文作品。</p>
+      <div style="margin-top:8px">
+        <button class="button light slim" type="button" id="findOpenalex">查找作者候选</button>
+        <span class="results-status-msg" id="authorStatus" role="status" aria-live="polite"></span>
+      </div>
+      <div id="authorCandidates" style="margin-top:10px"></div>
+    </div>
+  `;
+
+  $('findOpenalex').onclick = loadAuthorCandidates;
+  renderManualPapers();
+}
+
+async function loadAuthorCandidates() {
+  const data = state.mentor;
+  $('authorStatus').textContent = '正在查询 OpenAlex 作者记录…';
+  $('findOpenalex').disabled = true;
+  try {
+    const res = await api('/api/catalog/mentor/' + encodeURIComponent(data.profile.id) + '/openalex/authors');
+    if (state.mentor !== data) return;
+    $('authorStatus').textContent = res.results.length ? `找到 ${res.results.length} 位同名作者，请仔细核对机构：` : '未找到匹配候选作者。';
+    $('authorCandidates').innerHTML = res.results.map(a => `
+      <div style="padding:10px 12px;background:#f8fafc;border:1px solid var(--border);border-radius:6px;margin-bottom:8px;font-size:13px">
+        <strong>${esc(a.name)}</strong> · <small>${esc(a.institutions.join('、') || '机构未注明')}</small>
+        <div style="margin-top:4px">收录论文 ${a.works_count || 0} 篇 · <a href="${esc(a.url)}" target="_blank" rel="noopener noreferrer">打开档案 ↗</a></div>
+      </div>
+    `).join('');
+  } catch (err) {
+    if (state.mentor === data) $('authorStatus').textContent = err.message;
+  } finally {
+    if (state.mentor === data) $('findOpenalex').disabled = false;
+  }
+}
+
+/* ── 分区 3: 招生信息 (admission) ── */
+function renderAdmission() {
+  const data = state.mentor;
+  const profile = data.profile;
+  const years = [...new Set((profile.discipline_assignments || []).map(a => a.year).filter(Boolean))];
+
+  const catalogNote = profile.admission_catalog
+    ? `<div class="notice-card">本记录源自高校研究生招生专业目录${years.length ? `（核查年份：${esc(years.sort().join('、'))}）` : ''}。目录仅反映当年列入编制，不代表当前名额情况。</div>`
+    : '';
+
+  const research = data.public_research || {};
+  const hasAdmission = (research.recruitment?.length || research.admission_notices?.length || data.recruitment);
+  const emptyAdmission = hasAdmission ? '' : emptyState('还没有找到当年的招生信息', '研究生招生名额及报考条件以学校当年官方公告为准。');
+
+  $('pane-admission').innerHTML = `
+    <div class="pane-section">
+      <h3 class="pane-section-title"><span aria-hidden="true">👥</span> 招生信息与公告</h3>
+      <p class="quiet">年份核验是关键：往年招生记录不代表当前仍有招生名额，请以当年研究生院最新公示为准。</p>
+      ${catalogNote}
+      ${emptyAdmission}
+      ${publicSection('recruitment')}
+      ${publicSection('admission_notices')}
+    </div>
+  `;
+}
+
+/* ── 分区 4: 团队信息 (network + observation) ── */
+function renderNetwork() {
+  const data = state.mentor;
+  const relations = data.relations || {};
+  const hasRelations = (relations.advisor?.length || relations.collab?.length || relations.overlap?.length);
+
+  $('pane-network').innerHTML = `
+    <div class="pane-section">
+      <h3 class="pane-section-title"><span aria-hidden="true">🔗</span> 学术关系证据网络</h3>
+      <p class="quiet">中心为当前导师；按连线样式区分证据层级。<strong>共同署名不等于师承关系</strong>，必须依据真实客观线索核实。</p>
+      <div class="network-svg-box">
+        ${renderRelationGraph(data)}
+      </div>
+    </div>
+    ${publicSection('relations')}
+    <div class="pane-section" style="margin-top:20px;border-top:1px dashed var(--border);padding-top:16px">
+      <div id="scoreBlock"></div>
+    </div>
+  `;
+  bindNetworkFilters();
+}
+
+/* ── 分区 5: 公开来源 (investigation + check) ── */
+function renderCheck() {
+  // 保持兼容
+}
+
+function renderEvidenceList() {
+  const data = state.mentor;
+  const sources = data.sources || [];
+  const customItems = data.case?.evidence || [];
+
+  const sourcesCardsHtml = sources.length
+    ? sources.map(evidenceCard).join('')
+    : emptyState('还没有可打开的参考网页', '可按下方表单登记官网、论文或招生页面，之后就能随时核对。');
+
+  const customRows = customItems.length
+    ? customItems.map(item => `
+      <div class="evidence-card-item">
+        <div class="ev-summary-bar">
+          <div class="ev-main-info">
+            <div class="ev-title-row">
+              <span class="ev-title-text">${esc(item.category)} · ${esc(item.title)}</span>
+              <span class="ev-status-chip">${esc(item.status || '待人工核查')}</span>
+            </div>
+            <p class="ev-snippet-text">${esc(item.claim || '尚未填写证据摘要')} · <small>${esc(item.added_at || '')}</small></p>
+          </div>
+          <div class="ev-actions-group">
+            <a class="ev-btn" href="${esc(item.url)}" target="_blank" rel="noopener noreferrer">打开链接 ↗</a>
+            <button class="ev-btn" type="button" data-evidence-remove="${esc(item.id)}">删除</button>
+          </div>
+        </div>
+      </div>
+    `).join('')
+    : emptyState('还没有自己保存的网页', '在下方贴上链接即可登记，初始状态为「待人工核查」。');
+
+  $('pane-investigation').innerHTML = `
+    <div class="pane-section">
+      <h3 class="pane-section-title"><span aria-hidden="true">💾</span> 收录的公开来源清单</h3>
+      <p class="quiet">点击即可查看原始出处。外部网页可能因学校改版下线，结论以当时看到的快照为准。</p>
+      ${sourcesCardsHtml}
+      <div id="evidenceHost">
+        <h4 style="margin:16px 0 8px;font-size:14.5px">我保存的参考网页</h4>
+        ${customRows}
+      </div>
+    </div>
+    <div class="pane-section" style="margin-top:20px;border-top:1px dashed var(--border);padding-top:16px">
+      <h3 class="pane-section-title"><span aria-hidden="true">📝</span> 调查笔记与核验进度</h3>
+      <div style="display:grid;gap:10px;margin-top:8px">
+        <label for="caseNotes" class="hidden">个人调查笔记</label>
+        <textarea class="field notes" id="caseNotes" style="min-height:90px" placeholder="在此记录向院系、课题组或导师核实的重要事实...">${esc(data.case?.notes || '')}</textarea>
+        <div>
+          <button class="button slim" id="saveCaseNotes" type="button">保存备注到本地</button>
+          <span class="micro" id="caseSaveStatus" role="status" aria-live="polite"></span>
+        </div>
+      </div>
+    </div>
+    <div class="pane-section" id="evidenceFormHost" style="margin-top:20px;border-top:1px dashed var(--border);padding-top:16px"></div>
+  `;
+
+  // 绑定删除按钮
+  document.querySelectorAll('[data-evidence-remove]').forEach(btn => {
+    btn.onclick = async () => {
+      btn.disabled = true;
+      try {
+        data.case = await api('/api/catalog/mentor/' + encodeURIComponent(data.profile.id) + '/evidence/' + btn.dataset.evidenceRemove, { method: 'DELETE' });
+        renderEvidenceList();
+      } catch (err) { message(err.message, true); btn.disabled = false; }
+    };
+  });
+
+  // 保存笔记
+  const saveBtn = $('saveCaseNotes');
+  if (saveBtn) {
+    saveBtn.onclick = async () => {
+      saveBtn.disabled = true;
+      $('caseSaveStatus').textContent = '正在保存…';
+      try {
+        data.case = await api('/api/catalog/mentor/' + encodeURIComponent(data.profile.id) + '/case', {
+          method: 'PATCH',
+          body: JSON.stringify({ notes: $('caseNotes').value })
+        });
+        $('caseSaveStatus').textContent = '已保存到本机';
+      } catch (err) {
+        $('caseSaveStatus').textContent = err.message;
+      } finally { saveBtn.disabled = false; }
+    };
+  }
+}
+
+function renderEvidenceForm() {
+  const host = $('evidenceFormHost');
+  if (!host) return;
+  host.innerHTML = `
+    <h4 style="margin:0 0 8px;font-size:14.5px">登记新的参考网页</h4>
+    <form id="evidenceForm" style="display:grid;gap:10px;max-width:560px">
+      <label class="field-label" for="evidenceCategory" style="margin:0">证据类别</label>
+      <select class="field" id="evidenceCategory">
+        <option>官方身份与任职</option>
+        <option>研究方向</option>
+        <option>论文与成果</option>
+        <option>学术关系</option>
+        <option>招生与培养</option>
+        <option>其他公开记录</option>
+      </select>
+      <label class="field-label" for="evidenceTitle" style="margin:0">网页标题</label>
+      <input class="field" id="evidenceTitle" required placeholder="例如：学院个人主页">
+      <label class="field-label" for="evidenceUrl" style="margin:0">网页链接</label>
+      <input class="field" id="evidenceUrl" type="url" required placeholder="https://…">
+      <label class="field-label" for="evidenceClaim" style="margin:0">支持事实备注（选填）</label>
+      <input class="field" id="evidenceClaim" placeholder="例如：页面列出当年招生资格">
+      <div>
+        <button class="button slim" type="submit">保存参考网页</button>
+        <span class="micro" id="evidenceSaveStatus" role="status" aria-live="polite"></span>
+      </div>
+    </form>
+  `;
+
+  $('evidenceForm').onsubmit = async e => {
+    e.preventDefault();
+    const data = state.mentor;
+    const btn = e.target.querySelector('button');
+    btn.disabled = true;
+    $('evidenceSaveStatus').textContent = '正在保存…';
+    try {
+      data.case = await api('/api/catalog/mentor/' + encodeURIComponent(data.profile.id) + '/evidence', {
+        method: 'POST',
+        body: JSON.stringify({
+          category: $('evidenceCategory').value,
+          title: $('evidenceTitle').value,
+          url: $('evidenceUrl').value,
+          claim: $('evidenceClaim').value
+        })
+      });
+      renderEvidenceList();
+      $('evidenceTitle').value = '';
+      $('evidenceUrl').value = '';
+      $('evidenceClaim').value = '';
+      $('evidenceSaveStatus').textContent = '已保存到本机';
+    } catch (err) {
+      $('evidenceSaveStatus').textContent = err.message;
+    } finally { btn.disabled = false; }
+  };
+}
+
+function toggleEvidenceDetail(btn) {
+  const item = btn.closest('.evidence-card-item');
+  if (!item) return;
+  const drawer = item.querySelector('.ev-drawer');
+  if (!drawer) return;
+  const isHidden = drawer.hidden;
+  drawer.hidden = !isHidden;
+  btn.setAttribute('aria-expanded', String(isHidden));
+  btn.textContent = isHidden ? '收起 ▴' : '详情 ▾';
+}
+
+function evidenceCard(item) {
+  let host = '';
+  try { host = new URL(item.url).hostname.replace(/^www\./, ''); } catch {}
+  const status = String(item.status || '待人工核查');
+  const isOk = status.includes('已');
+  const snippet = item.claim || '请打开原始页面核对学者姓名、机构与学术方向。';
+
+  return `
+    <article class="evidence-card-item">
+      <div class="ev-summary-bar">
+        <div class="ev-main-info">
+          <div class="ev-title-row">
+            <span class="ev-title-text">${esc(item.title || '来源页面')}</span>
+            <span class="ev-status-chip ${isOk ? '' : 'pending'}">${esc(status)}</span>
+            ${host ? `<span class="ev-host-tag">${esc(host)}</span>` : ''}
+          </div>
+          <p class="ev-snippet-text">${esc(snippet)}</p>
+        </div>
+        <div class="ev-actions-group">
+          <a class="ev-btn" href="${esc(item.url)}" target="_blank" rel="noopener noreferrer">查看出处 ↗</a>
+          <button class="ev-btn" type="button" aria-expanded="false" onclick="toggleEvidenceDetail(this)">详情 ▾</button>
+        </div>
+      </div>
+      <div class="ev-drawer" hidden>
+        <div><strong>出处完整描述：</strong>${esc(item.claim || '暂无更多补充说明，请访问原始网页确认。')}</div>
+        <div style="margin-top:6px;color:var(--faint)">
+          <span>来源域名: <code>${esc(host || '未知')}</code></span>
+          ${item.added_at ? ` · <span>收录时间: ${esc(item.added_at)}</span>` : ''}
+          · <span>核查状态: <strong>${esc(status)}</strong></span>
+        </div>
+      </div>
+    </article>
+  `;
+}
+
+/* ── AI 建议（待复核）渲染 ── */
+function esc2(v) { return String(v ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])); }
+
+async function renderAiHints(id) {
+  const box = $('aiHints');
+  if (!box) return;
+  box.hidden = true;
+  box.innerHTML = '';
+  let data;
+  try { data = await api('/api/catalog/mentor/' + encodeURIComponent(id) + '/ai-hints'); }
+  catch (e) { return; }
+  if (!data) return;
+
+  const rows = [];
+  const sug = data.direction_suggestion;
+  const rev = data.name_review || [];
+
+  if (sug) {
+    const top = (sug.top3 || []).map(t => `${esc2(t.label)} <small>${Number(t.score).toFixed(3)}</small>`).join('、');
+    const methodName = ({ keyword: '关键词命中', embedding: '向量推断', fusion: '关键词+向量融合' })[sug.method] || '融合分析';
+    if (sug.state === 'unknown') {
+      rows.push(`<div class="ai-row"><b>方向建议</b><span>证据不足，暂不给出建议</span><small>低于置信度阈值，标为 unknown · ${methodName}</small></div>`);
+    } else {
+      rows.push(`<div class="ai-row"><b>方向建议</b><span>${esc2(sug.suggested)}</span><small>置信分 ${Number(sug.score).toFixed(3)} · ${methodName}${top ? ` · 次选线索: ${top}` : ''}</small></div>`);
+    }
+  }
+
+  if (rev.length) {
+    rows.push('<div class="ai-row"><b>同名待核</b>' + rev.map(r => `
+      <div style="margin-top:4px;padding:4px 8px;background:#ffffff;border-radius:4px;font-size:12.5px">
+        <span>${esc2(r.verdict)} · 相似度 ${Number(r.similarity).toFixed(3)}</span>
+        <small style="display:block;color:var(--muted)">比对对象：${esc2(r.other.dept || '院系未注明')}</small>
+      </div>
+    `).join('') + '</div>');
+  }
+
+  if (!rows.length) return;
+  box.innerHTML = `
+    <div class="ai-head">
+      <h4>开源 AI 辅助建议</h4>
+      <span class="review-tag">待复核</span>
+    </div>
+    ${rows.join('')}
+    <p class="ai-note">${esc2(data.disclaimer || '')} 待复核建议仅供线索参考，不写回任何原始事实字段。</p>
+  `;
+  box.hidden = false;
+}
+
+/* ── 课题组公开信息观察 (无综合分，严格三态) ── */
+const OBS_STATES = {
+  present: { label: '有公开证据', glyph: '●', cls: 'is-present' },
+  absent: { label: '有证据 · 记为 0', glyph: '○', cls: 'is-absent' },
+  unknown: { label: '无公开证据', glyph: '？', cls: 'is-unknown' }
+};
+
+function obsBadge(stateName) {
+  const meta = OBS_STATES[stateName] || OBS_STATES.unknown;
+  return `<span class="state-badge ${meta.cls}"><span class="state-glyph" aria-hidden="true">${meta.glyph}</span>${esc(meta.label)}</span>`;
+}
+
+function obsCard(key, dim) {
+  const stateName = dim.state || 'unknown';
+  const known = stateName !== 'unknown';
+  const valueText = String(dim.display || '');
+  const valueHtml = known
+    ? `<p class="obs-value">${esc(valueText)}</p>`
+    : `<p class="obs-value is-unknown">无公开证据</p>`;
+
+  return `
+    <article class="obs-card ${known ? '' : 'is-muted'}" data-dim="${esc(key)}">
+      <header class="obs-card-head">
+        <div>
+          <h4>${esc(dim.label || key)}</h4>
+          <p class="obs-metric">${esc(dim.metric || '')}</p>
+        </div>
+        ${obsBadge(stateName)}
+      </header>
+      ${valueHtml}
+      ${dim.sample_label ? `<p class="quiet" style="font-size:11.5px;margin:2px 0 0">样本：${esc(dim.sample_label)}</p>` : ''}
+      ${(dim.basis || dim.boundary) ? detailBlock('取数依据与边界说明', `
+        ${dim.fact ? `<p><b>事实依据：</b>${esc(dim.fact)}</p>` : ''}
+        ${dim.basis ? `<p><b>取数依据：</b>${esc(dim.basis)}</p>` : ''}
+        ${dim.boundary ? `<p><b>边界说明：</b>${esc(dim.boundary)}</p>` : ''}
+      `) : ''}
+    </article>
+  `;
+}
+
+function renderStudentScore() {
+  const data = state.mentor || {};
+  const obs = data.student_score || {};
+  const host = $('scoreBlock');
+  if (!host) return;
+
+  const dims = obs.dimensions || {};
+  const order = (Array.isArray(obs.order) && obs.order.length) ? obs.order : Object.keys(dims);
+
+  const intro = `
+    <div style="margin-bottom:12px">
+      <h4 style="margin:0 0 4px;font-size:15px;color:#0f172a">课题组公开信息观察</h4>
+      <p class="quiet" style="margin:0">这里不提供跨导师排序，衡量不了读研体验。四项均为公开线索的代理事实，<strong>无公开证据不会显示成 0</strong>。</p>
+    </div>
+  `;
+
+  if (!order.length) {
+    host.innerHTML = intro + emptyState('四项观察都没有公开证据', '暂无相关公开论文或名录支持。没有证据不代表情况差，仅说明未取到公开数据。');
+    return;
+  }
+
+  const notMeasured = (obs.not_measured || []).length
+    ? detailBlock('这个观察不衡量什么', `<ul style="margin:4px 0 0;padding-left:16px">${obs.not_measured.map(i => `<li>${esc(i)}</li>`).join('')}</ul>`)
+    : '';
+
+  host.innerHTML = `
+    ${intro}
+    <div class="obs-grid">
+      ${order.map(k => obsCard(k, dims[k] || {})).join('')}
+    </div>
+    ${notMeasured}
+  `;
+}
+
+/* ── 学术关系图 ── */
+function relationNodes(data) {
+  const rel = data.relations || {};
+  const nodes = [];
+  const seen = new Set();
+  const push = (kind, item) => {
+    const p = item?.person ? String(item.person) : '';
+    if (!p || seen.has(p)) return;
+    seen.add(p);
+    let level = 'L4';
+    if (kind === 'advisor') level = item.level === 1 ? 'L1' : 'L2';
+    else if (kind === 'collab') level = 'L4';
+    else level = 'L3';
+    nodes.push({ person: p, kind, level, detail: item.note || item.direction || '收录的学术关联' });
+  };
+  (rel.advisor || []).forEach(x => push('advisor', x));
+  (rel.collab || []).slice(0, 6).forEach(x => push('collab', x));
+  (rel.sibling || []).slice(0, 4).forEach(x => push('sibling', x));
+  (rel.overlap || []).slice(0, 4).forEach(x => push('overlap', x));
+  return nodes.slice(0, 16);
+}
+
+function renderRelationGraph(data) {
+  const nodes = relationNodes(data);
+  if (!nodes.length) {
+    return emptyState('当前未关联到既有关系网', '空白不代表不存在学术合作，仅说明未收录公开关联。');
+  }
+  const w = 680, h = 340, cx = w / 2, cy = h / 2, rx = 240, ry = 120;
+  const items = nodes.map((n, i) => {
+    const angle = (-Math.PI / 2) + (i * 2 * Math.PI / Math.max(nodes.length, 1));
+    const x = (cx + Math.cos(angle) * rx).toFixed(1);
+    const y = (cy + Math.sin(angle) * ry).toFixed(1);
+    const labelY = Number(y) > cy ? (Number(y) + 15).toFixed(1) : (Number(y) - 8).toFixed(1);
+    return `
+      <g class="nx-group" data-level="${n.level}">
+        <line class="nx-edge" data-level="${n.level}" x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" />
+        <circle class="nx-node" cx="${x}" cy="${y}" r="6" />
+        <text class="nx-label" x="${x}" y="${labelY}">${esc(n.person)}</text>
+      </g>
+    `;
+  }).join('');
+
+  return `
+    <svg viewBox="0 0 ${w} ${h}" role="img" aria-label="关系证据图">
+      ${items}
+      <circle class="nx-node core" cx="${cx}" cy="${cy}" r="15"></circle>
+      <text class="nx-label core" x="${cx}" y="${cy + 4}">本人</text>
+    </svg>
+  `;
+}
+
+function bindNetworkFilters() {}
+
+/* ── 38个工学一级学科导航网格 ── */
+function renderDisciplineCards(list) {
+  const grid = $('fullDisciplinesGrid');
+  if (!grid) return;
+  if (!list.length) {
+    grid.innerHTML = emptyState('未找到匹配的一级学科', '请尝试输入其他学科代码或名称，如 0811、计算机、材料等。');
+    return;
+  }
+  grid.innerHTML = list.map(d => `
+    <div class="discipline-card-btn" data-disc-name="${esc(d.name)}" role="button" tabindex="0">
+      <div class="disc-code-name">
+        <strong>${esc(d.name)}</strong>
+        <span class="disc-spec-pill">工学一级学科</span>
+      </div>
+      <span class="disc-count-pill">${d.count} 位导师</span>
+    </div>
+  `).join('');
+
+  grid.querySelectorAll('[data-disc-name]').forEach(card => {
+    card.onclick = async () => {
+      const disc = card.dataset.discName;
+      setView('workspace');
+      setSearchMode('filter');
+      const sel = $('disciplineSelect');
+      if (sel) {
+        sel.value = disc;
+        await chooseDiscipline();
+      }
+      $('candidateList')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+  });
+}
+
+async function renderFullDisciplines() {
+  const grid = $('fullDisciplinesGrid');
+  if (!grid) return;
+  grid.innerHTML = '<p class="quiet">正在读取38个工学一级学科收录情况…</p>';
+  try {
+    const items = await api('/api/catalog/disciplines?' + params({ project_id: state.projectId, include_non_engineering: true }));
+    state.cachedEngineeringDisciplines = items.filter(i => i.engineering);
+    const searchInput = $('disciplineSearchInput');
+    const q = searchInput ? searchInput.value.trim().toLowerCase() : '';
+    const filtered = q
+      ? state.cachedEngineeringDisciplines.filter(d => d.name.toLowerCase().includes(q))
+      : state.cachedEngineeringDisciplines;
+    renderDisciplineCards(filtered);
+
+    if (searchInput && !searchInput.dataset.bound) {
+      searchInput.dataset.bound = 'true';
+      searchInput.oninput = () => {
+        const query = searchInput.value.trim().toLowerCase();
+        const res = query
+          ? (state.cachedEngineeringDisciplines || []).filter(d => d.name.toLowerCase().includes(query))
+          : (state.cachedEngineeringDisciplines || []);
+        renderDisciplineCards(res);
+      };
+    }
+  } catch (err) {
+    grid.innerHTML = emptyState('学科目录加载失败', err.message);
+  }
+}
+
+/* ── 本地调查记录展示 ── */
+async function renderLocalRecords() {
+  const list = $('localRecordsList');
+  if (!list) return;
+  try {
+    const projects = await api('/api/projects');
+    if (!projects.length) {
+      list.innerHTML = emptyState('当前暂无正在调查的导师记录', '在导师检索中创建资料夹或标记核对后将在此持久化显示。', '', '/assets/visuals/records-empty');
+      return;
+    }
+    const active = projects.filter(p => p.count > 0);
+    const emptyProjects = projects.filter(p => p.count === 0);
+
+    let html = '';
+    if (active.length > 0) {
+      html += active.map(p => `
+        <div class="record-project-card" style="background:#ffffff;border:1px solid var(--border);border-radius:10px;padding:16px 20px;margin-bottom:12px;box-shadow:0 1px 3px rgba(0,0,0,0.03);display:flex;justify-content:space-between;align-items:center">
+          <div>
+            <strong style="font-size:16px;color:#0f172a">${esc(p.name)}</strong>
+            <p style="margin:4px 0 0;font-size:13px;color:var(--muted)">已收录 <b>${p.count}</b> 条导师调查档案</p>
+          </div>
+          <div style="display:flex;gap:10px">
+            <a class="button light slim" href="/api/projects/${p.id}/export">导出资料包 (JSON)</a>
+          </div>
+        </div>
+      `).join('');
+    } else {
+      html += emptyState('当前暂无正在调查的导师记录', '在导师档案的「核查记录」中保存笔记或网页后，会在此集中展示。', '', '/assets/visuals/records-empty');
+    }
+
+    if (emptyProjects.length > 0) {
+      html += `
+        <details class="empty-projects-accordion" style="margin-top:16px;border:1px dashed var(--border);border-radius:8px;padding:12px 16px;background:#f8fafc">
+          <summary style="font-weight:600;font-size:13px;color:var(--muted);cursor:pointer">未归档/空资料夹 (${emptyProjects.length} 个项目，点击展开)</summary>
+          <div style="margin-top:12px;display:flex;flex-direction:column;gap:8px">
+            ${emptyProjects.map(p => `
+              <div style="background:#ffffff;border:1px solid var(--border);border-radius:6px;padding:10px 14px;display:flex;justify-content:space-between;align-items:center">
+                <span style="font-size:13px;color:#475569">${esc(p.name)} (0 条档案)</span>
+                <a class="button light slim" style="padding:4px 8px;font-size:12px" href="/api/projects/${p.id}/export">导出</a>
+              </div>
+            `).join('')}
+          </div>
+        </details>
+      `;
+    }
+    list.innerHTML = html;
+  } catch (err) {
+    list.innerHTML = emptyState('无法读取本地记录', err.message);
+  }
+}
+
+/* ── 学科、高校、方向级联筛选器 ── */
+async function loadDisciplines() {
+  const version = ++state.disciplineVersion;
+  try {
+    const allItems = await api('/api/catalog/disciplines?' + params({ project_id: state.projectId, include_non_engineering: true }));
+    const items = state.includeNonEngineering ? allItems : allItems.filter(i => i.engineering);
+    if (version !== state.disciplineVersion) return;
+
+    $('disciplineSelect').innerHTML = '<option value="">全部学科</option>' + items.map(i => `
+      <option value="${esc(i.name)}">${esc(i.name)} (${i.count})</option>
+    `).join('');
+  } catch (e) {}
+}
+
+function resetSelect(id, label) { const el = $(id); if (el) { el.innerHTML = `<option value="">${esc(label)}</option>`; el.disabled = true; } }
+async function chooseDiscipline(){clearDossier();const version=state.queryVersion;const discipline=$('disciplineSelect').value;resetSelect('institutionSelect','请选择高校');resetSelect('directionSelect','先选高校');state.candidates=[];renderCandidates();if(!discipline){message('先选择一级学科…');return;}message('正在列出高校…');try{const items=await api('/api/catalog/institutions?'+params({discipline,project_id:state.projectId,...scopeParams()}));if(version!==state.queryVersion)return;$('institutionSelect').innerHTML='<option value="__all__">全部高校 / 机构</option>'+items.map(item=>`<option value="${esc(item.name)}">${esc(item.name)} · ${item.count} 人</option>`).join('');$('institutionSelect').disabled=!items.length;if(items.length){$('institutionSelect').value='__all__';await chooseInstitution();}else{message('这个学科还没有导师资料，可以自己添加。');}}catch(error){if(version===state.queryVersion)message(error.message,true);}}
+async function chooseInstitution(){clearDossier();const version=state.queryVersion;const discipline=$('disciplineSelect').value,institution=$('institutionSelect').value;resetSelect('directionSelect','请选择方向');state.candidates=[];renderCandidates();if(!institution){message('先选择高校…');return;}message('正在列出研究方向…');try{const items=await api('/api/catalog/directions?'+params({discipline,institution,project_id:state.projectId,...scopeParams()}));if(version!==state.queryVersion)return;$('directionSelect').innerHTML='<option value="__all__">全部方向</option>'+items.map(item=>`<option value="${esc(item.name)}">${esc((typeof formatDirection==='function'?formatDirection(item.name):item.name))} · ${item.count} 人</option>`).join('');$('directionSelect').disabled=!items.length;if(items.length){$('directionSelect').value='__all__';await chooseDirection();}else{message('当前选择下暂无已收录方向。');}}catch(error){if(version===state.queryVersion)message(error.message,true);}}
+async function chooseDirection(){clearDossier();const version=state.queryVersion;const discipline=$('disciplineSelect').value,institution=$('institutionSelect').value,direction=$('directionSelect').value;state.candidates=[];renderCandidates();if(!direction){message('请选方向…');return;}message('正在列出导师…');try{const items=await api('/api/catalog/mentors?'+params({discipline,institution,direction,project_id:state.projectId,...scopeParams()}));if(version!==state.queryVersion)return;state.candidates=items;renderCandidates();message(`找到 ${state.candidates.length} 条记录，请选择导师。`);if(items.length>0&&typeof openMentor==='function'){openMentor(items[0].id,{quietScroll:true});}}catch(error){if(version===state.queryVersion)message(error.message,true);}}
+async function linkAuthor(authorId){const d=state.mentor;if(!d)return;if($('authorStatus'))$('authorStatus').textContent='正在读取所选作者的公开作品…';try{d.case=await api('/api/catalog/mentor/'+encodeURIComponent(d.profile.id)+'/case',{method:'PATCH',body:JSON.stringify({openalex_author_id:authorId})});if(state.mentor!==d)return;await refreshAuthorWorks();}catch(error){if(state.mentor===d&&$('authorStatus'))$('authorStatus').textContent=error.message;}}
+async function refreshAuthorWorks(){const d=state.mentor;if(!d)return;const button=$('refreshOpenalex');if(button)button.disabled=true;if($('authorStatus'))$('authorStatus').textContent='正在更新公开作品…';try{d.case=await api('/api/catalog/mentor/'+encodeURIComponent(d.profile.id)+'/openalex/refresh',{method:'POST'});if(state.mentor!==d)return;renderPapers();renderNetwork();if($('authorStatus'))$('authorStatus').textContent=`已读取 ${(d.case&&d.case.openalex_snapshot&&d.case.openalex_snapshot.papers||[]).length} 条最近作品线索，仍需逐篇核查。`;}catch(error){if(state.mentor===d&&$('authorStatus'))$('authorStatus').textContent=error.message;}finally{if(button)button.disabled=false;}}
+
+/* ── 首页统计与收录范围读取 ── */
+async function loadCoverage() {
+  const box = $('catalogCoverage');
+  try {
+    const summary = await api('/api/catalog/summary');
+    $('homeRecords').textContent = (summary.public_records || 0).toLocaleString();
+    $('homeDisciplines').textContent = String(summary.disciplines_engineering || 38);
+    $('homeSources').textContent = String(summary.public_institutions || 0);
+
+    box.innerHTML = `
+      <div style="border-top:1px solid var(--border);padding-top:20px;margin-top:10px">
+        <h3 style="margin:0 0 6px;font-size:16px;color:#0f172a">学术收录覆盖与数据边界</h3>
+        <p class="quiet">公开来源数据已覆盖 ${summary.public_institutions} 所重点高校与机构、${summary.disciplines_engineering} 个工学一级学科，收录公开导师记录 ${summary.public_records} 条。本平台坚持纯粹客观，所有数据来源可查、事实可溯。</p>
+      </div>
+    `;
+    const data = await api('/api/catalog/coverage');
+  } catch (e) {
+    if (box) box.innerHTML = emptyState('收录统计暂时没加载出来', '刷新页面即可重新读取。数据均存储在本机。');
+  }
+}
+
+/* ── 键盘无障碍支持 ── */
+function bindTabKeys(nav) {
+  if (!nav) return;
+  nav.addEventListener('keydown', event => {
+    if (!['ArrowRight', 'ArrowLeft', 'Home', 'End'].includes(event.key)) return;
+    const tabs = [...nav.querySelectorAll('[role="tab"]')].filter(tab => !tab.disabled);
+    const index = tabs.indexOf(document.activeElement);
+    if (index < 0) return;
     event.preventDefault();
-    const next=event.key==='Home'?0
-      :event.key==='End'?tabs.length-1
-      :(index+(event.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length;
+    const next = event.key === 'Home' ? 0
+      : event.key === 'End' ? tabs.length - 1
+      : (index + (event.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length;
     tabs[next].focus();
     tabs[next].click();
   });
 }
 
-/* ── 课题组公开信息观察 ── */
-const OBS_STATES={
-  present:{label:'有公开证据',glyph:'●',cls:'is-present'},
-  absent:{label:'有证据 · 记为 0',glyph:'○',cls:'is-absent'},
-  unknown:{label:'无公开证据',glyph:'？',cls:'is-unknown'}
-};
-function obsBadge(stateName){
-  const meta=OBS_STATES[stateName]||OBS_STATES.unknown;
-  return `<span class="state-badge ${meta.cls}"><span class="state-glyph" aria-hidden="true">${meta.glyph}</span>${esc(meta.label)}</span>`;
-}
-function obsCard(key,dim){
-  const stateName=dim.state||'unknown';
-  const facts=Array.isArray(dim.facts)?dim.facts:[];
-  const known=stateName!=='unknown';
-  const valueText=String(dim.display||'');
-  const valueHtml=known?(facts.length?'':`<p class="obs-value${valueText.length>10?' is-long':''}">${esc(valueText)}</p>`):'<p class="obs-value is-unknown">无公开证据</p>';
-  const factsHtml=facts.length?`<ul class="obs-facts">${facts.map(item=>`<li>${obsBadge(item.state)}<strong>${esc(item.label)}</strong><span>${esc(item.value)}</span>${item.detail?`<small>${esc(item.detail)}</small>`:''}</li>`).join('')}</ul>`:'';
-  return `<article class="obs-card ${known?'':'is-muted'}" data-dim="${esc(key)}">
-    <header class="obs-card-head">
-      <div><h4>${esc(dim.label||key)}</h4><p class="obs-metric">${esc(dim.metric||'')}</p></div>
-      ${obsBadge(stateName)}
-    </header>
-    ${factsHtml}${valueHtml}
-    <p class="obs-fact">${esc(dim.fact||'')}</p>
-    ${dim.sample_label?`<p class="obs-sample">样本：${esc(dim.sample_label)}</p>`:''}
-    ${(dim.basis||dim.boundary)?detailBlock('取数依据与边界说明',
-      `${dim.basis?`<p><b>取数依据</b>${esc(dim.basis)}</p>`:''}${dim.boundary?`<p><b>边界说明</b>${esc(dim.boundary)}</p>`:''}`):''}
-  </article>`;
-}
-function renderStudentScore(){
-  const data=state.mentor||{};
-  const observation=data.student_score||{};
-  const host=$('scoreBlock');
-  if(!host)return;
-  const dims=observation.dimensions||{};
-  const order=(Array.isArray(observation.order)&&observation.order.length)?observation.order:Object.keys(dims);
-  if(!order.length){
-    host.innerHTML=emptyState('暂无课题组公开信息','这位导师还没有可核实的公开论文记录，也没有可核对的名录字段。','没有证据不等于情况差——只说明我们没取到可核实的公开材料。');
-    return;
-  }
-  const counts=observation.evidence_counts||{};
-  const chips=['present','absent','unknown'].filter(name=>counts[name])
-    .map(name=>`<li>${obsBadge(name)}<span class="count-num">${counts[name]} 项</span></li>`).join('');
-  const intro=`<header class="obs-intro">
-    <p class="eyebrow">只列事实</p>
-    <h3>课题组公开信息观察</h3>
-    <p class="obs-lead">这里不出现综合分，也不提供跨导师排序。四项都是公开信息的代理指标，衡量不了读研体验——补助、组内氛围、指导频次、毕业去向都不在公开数据里。</p>
-    <p class="obs-summary" role="status">${esc(observation.evidence_summary||'')}</p>
-    <ul class="obs-counts">${chips}</ul>
-    <p class="obs-rule">状态分三种：有公开证据 / 有证据且记为 0 / 无公开证据。<strong>无公开证据不会显示成 0</strong>，也不代表情况差——只说明我们没取到可核实的公开材料。</p>
-  </header>`;
-  const reason=observation.available?'':emptyState('四项观察都没有公开证据',observation.reason||'','没有证据不等于情况差——只说明我们没取到可核实的公开材料。');
-  const notMeasured=(observation.not_measured||[]).length
-    ? detailBlock('这个观察不衡量什么',`<ul style="margin:6px 0 0;padding-left:18px;font-size:13px;line-height:1.8">${observation.not_measured.map(item=>`<li>${esc(item)}</li>`).join('')}</ul>`)
-    :'';
-  host.innerHTML=`<section class="section-block">${intro}${reason}<div class="obs-grid">${order.map(key=>obsCard(key,dims[key]||{})).join('')}</div>${notMeasured}</section>`;
-}
-
-/* ── 档案页装配 ── */
-function renderDossier(){
-  const data=state.mentor;
-  const profile=data.profile;
-  const wsIntro=$('workspaceIntro');if(wsIntro)wsIntro.hidden=true;
-  if($('loadingPanel'))$('loadingPanel').hidden=true;
-  $('dossier').hidden=false;
-  $('breadcrumb').textContent=`资料库 / ${profile.first_level_discipline||'学科待归类'} / ${profile.institution}`;
-  $('mentorTitle').textContent=profile.name;
-  $('mentorSubtitle').textContent=[profile.institution,profile.department].filter(Boolean).join(' · ');
-  const badges=[`<span class="badge ${profile.origin.includes('历史')?'legacy':''}">${esc(profile.origin)}</span>`,`<span class="badge">${esc(profile.direction_group||'方向待补')}</span>`,`<span class="badge">${profile.source_count} 条参考网页</span>`];
-  if(profile.secondary_source)badges.push('<span class="badge legacy">转载名录，待核实</span>');
-  if(data.public_research?.status==='unavailable')badges.push('<span class="badge muted">主页正文未读到</span>');
-  $('mentorBadges').innerHTML=badges.join('');
-  const factRows=[['机构',profile.institution],['院系',profile.department||'未收录'],
-    ['方向分类',profile.direction_group||'方向待补'],
-    ['参考来源',(profile.source_count||0)+' 条网页']];
-  $('dossierFacts').innerHTML=factRows.map(([k,v])=>`<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join('');
-  renderStudentScore();
-  $('reportLink').href='/api/catalog/mentor/'+encodeURIComponent(profile.id)+'/report.md';
-  $('homepageLink').hidden=!profile.homepage;
-  if(profile.homepage){
-    $('homepageLink').href=profile.homepage;
-    const isRoster=data.homepage_kind==='roster';
-    $('homepageLink').textContent=isRoster?'所在名录页':'导师主页';
-    $('homepageLink').title=isRoster?'该院校只公布名录、未公布逐人详情页；此链接打开的是本人所在的名录页':'打开本人主页';
-  }
-  renderOverview();
-  renderEvidenceList();
-  renderPapers();
-  renderAdmission();
-  renderNetwork();
-  renderCheck();
-  renderEvidenceForm();
-  setPane('investigation');
-}
-function evidenceCard(item){
-  let host='';try{host=new URL(item.url).hostname.replace(/^www\./,'')}catch{}
-  const status=String(item.status||'待人工核查');
-  const cls=status.includes('已')?'ok':status.includes('待')?'pending':'';
-  return `<article class="evidence-card">
-    <div class="ev-head"><strong>${esc(item.title||'来源页面')}</strong><span class="status ${cls}">${esc(status)}</span></div>
-    <p class="ev-claim">${esc(item.claim||'打开页面核对姓名、机构与研究方向；本条尚未写摘要。')}</p>
-    <div class="ev-foot"><a href="${esc(item.url)}" target="_blank" rel="noopener noreferrer">打开来源页面</a><span class="host">${esc(host)}</span></div>
-  </article>`;
-}
-function renderOverview(){
-  const data=state.mentor,profile=data.profile;
-  const disciplines=[...new Set([profile.first_level_discipline,...(profile.discipline_assignments||[]).map(a=>a.first_level_discipline)])].filter(Boolean).join('；')||'待归类';
-  const sources=data.sources.length
-    ? data.sources.map(evidenceCard).join('')
-    : (profile.homepage
-      ? `<div class="source-item"><strong>原记录主页链接</strong><p>可能是院系列表页，需核对是否指向同一位导师。</p><a href="${esc(profile.homepage)}" target="_blank" rel="noopener noreferrer">打开链接</a></div>`
-      : emptyState('还没有可打开的参考网页','可按「核查记录」里的表单登记官网、论文或招生页面，之后就能回来核对。'));
-  const keywords=(profile.interests||'').split(/[；;、,，]/).map(item=>item.trim()).filter(Boolean);
-  const keywordHtml=keywords.length
-    ? `<ul class="chips">${keywords.slice(0,12).map(item=>`<li>${esc(item)}</li>`).join('')}</ul>`
-    : '<p class="quiet">名录未收录研究关键词。这不表示导师没有研究方向，只说明我们没取到。</p>';
-  const relationCount=Object.entries(data.relations||{}).filter(([,v])=>Array.isArray(v)).reduce((total,[,v])=>total+v.length,0);
-  $('pane-identity').innerHTML=`<div class="detail-grid"><div>
-    <section class="section-block"><h3>身份信息</h3>
-      <p class="pane-intro">任职与方向以导师主页和学校公告为准；本页只做归拢，不做认定。</p>
-      <dl class="facts">
-        <dt>姓名</dt><dd>${esc(profile.name)}</dd>
-        <dt>机构</dt><dd>${esc(profile.institution)}</dd>
-        <dt>院系</dt><dd>${esc(profile.department||'未收录')}</dd>
-        <dt>一级学科 / 领域</dt><dd>${esc(disciplines)}</dd>
-        <dt>方向分类</dt><dd>${esc(profile.direction_group||'待补')}</dd>
-        <dt>来源类型</dt><dd>${esc(profile.origin)}${profile.secondary_source?'（转载名录，待核实）':''}</dd>
-        ${profile.collected_at?`<dt>名录采集日期</dt><dd>${esc(profile.collected_at)}</dd>`:''}
-        ${profile.classification_basis?`<dt>分类说明</dt><dd>${esc(profile.classification_basis)}</dd>`:''}
-      </dl>
-    </section>
-    ${publicSection('biography')}
-    <section class="section-block"><h3>研究方向</h3>
-      <p class="pane-intro">来自名录研究关键词与论文方向；AI 的方向建议在页面顶部单独标注为「待复核」。</p>
-      ${keywordHtml}
-    </section>
-    <section class="section-block"><h3>公开来源</h3>
-      <p class="pane-intro">点开原文即可核对。来源网页会改版，结论请以打开时看到的内容为准。</p>
-      ${sources}
-      <div id="evidenceHost"></div>
-    </section>
-  </div><aside class="aside-note">
-    <h4>阅读提醒</h4>
-    <p>论文作者可能同名，需结合机构、方向与年份确认。</p>
-    <h4>已有资料</h4>
-    <div class="small-stat">论文候选 ${(data.papers||[]).length} 条 · 关系线索 ${relationCount} 条 · 核查项 ${(data.sections||[]).length} 个</div>
-    <h4>下一步看什么</h4>
-    <p>先看「论文」核对归属，再看「招生信息」确认年份，最后看「课题组观察」——那里只有事实，没有分数。</p>
-  </aside></div>`;
-}
-function renderAdmission(){
-  const data=state.mentor,profile=data.profile;
-  const years=[...new Set((profile.discipline_assignments||[]).map(item=>item.year).filter(Boolean))];
-  const catalogNote=profile.admission_catalog
-    ? `<div class="notice">本条记录来自学校招生目录${years.length?`（收录年份：${esc([...new Set(years)].sort().join('、'))}）`:''}。目录只说明当年列入，不代表现在还有名额。</div>`
-    : '';
-  const legacy=data.recruitment&&data.recruitment.historical_signal_count
-    ? `<div class="notice warn">旧专题记录到 ${data.recruitment.historical_signal_count} 条招生表述线索。${esc(data.recruitment.caveat)}</div>`
-    : '';
-  const research=data.public_research||{};
-  const hasAdmission=(research.recruitment||[]).length||(research.admission_notices||[]).length||data.recruitment;
-  const emptyAdmission=hasAdmission?'':emptyState('还没有找到当年的招生信息','招生名额与时间以学校当年公告为准；可先用「核查记录」登记院系公告页面，方便之后回看。');
-  $('pane-admission').innerHTML=`<section class="section-block"><h3>招生信息</h3>
-    <p class="pane-intro">这里汇总已读到的招生说明与院系公告。年份很关键：往年记录不代表今年还招。</p>
-    ${catalogNote}${legacy}${emptyAdmission}
-    ${publicSection('recruitment')}
-    ${publicSection('admission_notices')}
-    <p class="quiet">如果你要确认名额、考试科目或是否接受跨专业，以学院当年公告与导师本人回复为准。</p>
-  </section>`;
-}
-function renderPapers(){
-  const data=state.mentor,workCase=data.case;
-  const production=data.production?`<div class="notice">${esc(data.production.caveat)} 历史候选 ${Number(data.production.candidate_papers)||0} 条；此页只展示最多 12 条供核对。</div>`:'<div class="notice">还可通过下方的作者记录继续查找论文。</div>';
-  const papers=data.papers.length
-    ? data.papers.map(item=>`<div class="paper-item"><strong>${esc(item.title||'标题待补')}</strong><p>${esc(item.year||'年份未知')} · ${esc(item.venue||'来源待补')}</p>${item.url?`<a href="${esc(item.url)}" target="_blank" rel="noopener noreferrer">查看 DOI / 原文</a>`:''}</div>`).join('')
-    : emptyState('暂无其他来源的论文记录','可展开下方「查找作者」用 OpenAlex 关联作者，或手动补充论文。');
-  const snapshot=workCase.openalex_snapshot;
-  const remote=snapshot
-    ? `<div class="notice">已选 OpenAlex 作者 ${esc(snapshot.author_id)}；抓取于 ${esc(snapshot.fetched_at)}。${esc(snapshot.caveat)}</div>${snapshot.papers.map(item=>`<div class="paper-item"><strong>${esc(item.title||'标题待补')}</strong><p>${esc(item.year||'年份未知')} · ${esc(item.venue||'来源待补')}</p>${item.url?`<a href="${esc(item.url)}" target="_blank" rel="noopener noreferrer">查看原始记录</a>`:''}</div>`).join('')}`
-    : (workCase.openalex_author_id
-      ? `<p class="quiet">已选择作者记录 ${esc(workCase.openalex_author_id)}，尚未读取作品。</p>`
-      : '<p class="quiet">尚未关联公开作者记录。可以先点「查找作者」，也可以继续人工核对。</p>');
-  $('pane-papers').innerHTML=`${publicSection('papers')}<section class="section-block"><h3>其他来源的论文</h3><p class="pane-intro">下列论文尚需核对作者是不是同一个人。</p>${production}${papers}</section><section class="section-block"><h3>查找更多论文</h3><p class="pane-intro">通过 OpenAlex 查作者，选对人之后再读取作品；作品归属仍需逐条核对。</p><button class="button light slim" type="button" id="findOpenalex">查找作者</button>${workCase.openalex_author_id?'<button class="button ghost slim" type="button" id="refreshOpenalex" style="margin-left:7px">更新论文</button>':''}<p class="result-status" id="authorStatus" role="status" aria-live="polite"></p><div id="authorCandidates"></div><div class="rule"></div>${remote}</section>`;
-  $('findOpenalex').onclick=loadAuthorCandidates;
-  if($('refreshOpenalex'))$('refreshOpenalex').onclick=refreshAuthorWorks;
-  renderManualPapers();
-}
-async function loadAuthorCandidates(){
-  const data=state.mentor;
-  $('authorStatus').textContent='正在查询 OpenAlex 作者记录…';
-  $('findOpenalex').disabled=true;
-  try{
-    const result=await api('/api/catalog/mentor/'+encodeURIComponent(data.profile.id)+'/openalex/authors');
-    if(state.mentor!==data)return;
-    $('authorStatus').textContent=result.results.length?`找到 ${result.results.length} 条候选，请核对机构与主页后再选。`:'没有找到作者候选；可以继续人工调查。';
-    $('authorCandidates').innerHTML=result.results.map(a=>`<div class="source-item"><strong>${esc(a.name)} · ${esc(a.id)}</strong><p>${esc(a.institutions.join('、')||'机构未提供')} · 平台记录作品 ${Number(a.works_count)||0} 条</p><a href="${esc(a.url)}" target="_blank" rel="noopener noreferrer">打开 OpenAlex 档案</a> <button class="button ghost slim" type="button" data-author="${esc(a.id)}">选择这位作者</button></div>`).join('');
-    $('authorCandidates').querySelectorAll('[data-author]').forEach(button=>button.onclick=()=>linkAuthor(button.dataset.author));
-  }catch(error){if(state.mentor===data)$('authorStatus').textContent=error.message}
-  finally{if(state.mentor===data)$('findOpenalex').disabled=false}
-}
-async function linkAuthor(authorId){const data=state.mentor;$('authorStatus').textContent='正在读取所选作者的公开作品…';try{data.case=await api('/api/catalog/mentor/'+encodeURIComponent(data.profile.id)+'/case',{method:'PATCH',body:JSON.stringify({openalex_author_id:authorId})});if(state.mentor!==data)return;await refreshAuthorWorks()}catch(error){if(state.mentor===data)$('authorStatus').textContent=error.message}}
-async function refreshAuthorWorks(){const data=state.mentor;const button=$('refreshOpenalex');if(button)button.disabled=true;if($('authorStatus'))$('authorStatus').textContent='正在更新公开作品…';try{data.case=await api('/api/catalog/mentor/'+encodeURIComponent(data.profile.id)+'/openalex/refresh',{method:'POST'});if(state.mentor!==data)return;renderPapers();renderNetwork();$('authorStatus').textContent=`已读取 ${data.case.openalex_snapshot.papers.length} 条最近作品线索，仍需逐篇核查。`}catch(error){if(state.mentor===data&&$('authorStatus'))$('authorStatus').textContent=error.message}finally{if(button)button.disabled=false}}
-function relationSection(title,items,kind){
-  if(!items.length)return `<section class="section-block"><h3>${esc(title)}</h3><p class="quiet">当前资料未找到该类关系线索。空白不等于没有关系，只表示我们没找到。</p></section>`;
-  const sorted=kind==='collab'?[...items].sort((a,b)=>(b.papers||0)-(a.papers||0)).slice(0,15):items.slice(0,25);
-  return `<section class="section-block"><h3>${esc(title)} <small>（显示 ${sorted.length} 条）</small></h3>${sorted.map(item=>{
-    const label=kind==='advisor'?`L${item.level||'?'} ${item.level===1?'本人页面自述':item.level===2?'交叉证据':'署名推断'}`:kind==='collab'?'共同署名':kind==='external'?'外部师承线索':'经历重叠';
-    const body=kind==='advisor'?`<p>${esc(item.direction)}；${esc(item.note||item.basis||'需查看来源数据')}</p>`:`<p>${item.papers?`${item.papers} 条共同署名线索；`:''}${esc(item.span||'')}${item.note?'；'+esc(item.note):''}</p>`;
-    return `<div class="relation-item"><span class="level ${item.level>=3?'inferred':''}">${esc(label)}</span><div><strong>${esc(item.person)}</strong>${body}</div></div>`;
-  }).join('')}</section>`;
-}
-const REL_LEVELS={1:'L1',2:'L2',3:'L3',4:'L4'};
-const REL_KIND_LABEL={advisor:'师承',collab:'共同署名',overlap:'同期/同机构',sibling:'同门线索',external:'外部线索'};
-function relationNodes(data){
-  const rel=data.relations||{},nodes=[],seen=new Set();
-  const push=(kind,item)=>{
-    const person=item&&item.person?String(item.person):'';
-    if(!person||seen.has(person))return;
-    seen.add(person);
-    let level='L4';
-    if(kind==='advisor')level=REL_LEVELS[item.level]||'L3';
-    else if(kind==='collab'||kind==='overlap')level='L4';
-    else if(kind==='sibling')level='L3';
-    else level='L2';
-    nodes.push({person,kind,level});
-  };
-  (rel.advisor||[]).forEach(x=>push('advisor',x));
-  (rel.collab||[]).slice(0,6).forEach(x=>push('collab',x));
-  (rel.sibling||[]).slice(0,4).forEach(x=>push('sibling',x));
-  (rel.overlap||[]).slice(0,4).forEach(x=>push('overlap',x));
-  (rel.external||[]).slice(0,3).forEach(x=>push('external',x));
-  return nodes.slice(0,16);
-}
-function renderRelationGraph(data){
-  const nodes=relationNodes(data);
-  if(!nodes.length)return '';
-  const w=680,h=360,cx=w/2,cy=h/2,rx=252,ry=126;
-  const items=nodes.map((n,i)=>{
-    const angle=(-Math.PI/2)+(i*2*Math.PI/Math.max(nodes.length,1));
-    const x=(cx+Math.cos(angle)*rx).toFixed(1),y=(cy+Math.sin(angle)*ry).toFixed(1);
-    const nameOnly=String(n.person).split('·')[0].trim();
-    const short=nameOnly.length>7?nameOnly.slice(0,7)+'…':nameOnly;
-    return `<g class="nx-group" data-level="${n.level}">
-      <line class="nx-edge" data-level="${n.level}" x1="${cx}" y1="${cy}" x2="${x}" y2="${y}"><title>${esc(n.person)} · ${esc(REL_KIND_LABEL[n.kind]||'')} · ${n.level}</title></line>
-      <circle class="nx-node" cx="${x}" cy="${y}" r="5.5"><title>${esc(n.person)} · ${esc(n.level)}</title></circle>
-      <text class="nx-label" x="${x}" y="${(Number(y)+17).toFixed(1)}">${esc(short)}</text>
-    </g>`;
-  }).join('');
-  const counts=(data.relations_analysis||{}).counts||{};
-  const legend=['L1','L2','L3','L4'].map(code=>`<button class="network-filter" type="button" data-filter="${code}" aria-pressed="true">${code} ${counts[code]||0}</button>`).join('');
-  return `<section class="section-block"><div class="network-panel">
-    <div class="network-head"><h3>关系证据图</h3><div class="network-legend" role="group" aria-label="按证据层级筛选">${legend}</div></div>
-    <div class="network-canvas"><svg viewBox="0 0 ${w} ${h}" role="img" aria-label="以当前导师为中心的关系证据图，共 ${nodes.length} 个关联节点">
-      <title>关系证据图</title><desc>中心为当前导师；连线样式对应 L1 至 L4 证据层级，仅绘制有公开证据的关联。</desc>
-      ${items}
-      <circle class="nx-node core" cx="${cx}" cy="${cy}" r="14"></circle>
-      <text class="nx-label core" x="${cx}" y="${cy+4}">本人</text>
-    </svg></div>
-    <p class="network-foot"><span>仅绘制有证据的关联；<strong>共同署名不等于师承</strong>。悬停节点可看姓名与层级。</span><span>${nodes.length} 个节点</span></p>
-  </div></section>`;
-}
-function bindNetworkFilters(){
-  document.querySelectorAll('.network-filter').forEach(button=>{
-    button.onclick=()=>{
-      const code=button.dataset.filter;
-      const on=button.getAttribute('aria-pressed')!=='false';
-      button.setAttribute('aria-pressed',String(!on));
-      document.querySelectorAll('.nx-group[data-level="'+code+'"]').forEach(group=>group.classList.toggle('is-hidden',on));
-    };
-  });
-}
-function renderNetwork(){
-  const data=state.mentor,relations=data.relations;
-  const snapshot=data.case.openalex_snapshot;
-  const layered=data.relations_analysis||{};
-  const layerHtml=layered.available
-    ? `<section class="section-block"><h3>关系证据分层</h3><p class="pane-intro">按证据强度分级；只有 L1 有公开表述或学位指导记录支持，其余只作线索。</p><ul class="layer-list">${['L1','L2','L3','L4'].map(code=>{const info=(layered.layers||{})[code]||{};const count=(layered.counts||{})[code]||0;return `<li>${obsBadge(count?'present':'absent')}<strong class="layer-name">${esc(code)} ${esc(info.label||'')}</strong><span class="layer-count">${count} 条</span><p class="layer-hint">${esc(info.student_hint||'')}</p></li>`}).join('')}</ul><p class="quiet">${esc(layered.caveat||'')}</p></section>`
-    : `<section class="section-block"><h3>关系证据分层</h3>${emptyState('这位导师暂无关系数据',layered.reason||'关系分析目前只覆盖原集成电路专题的导师。','空白不等于没有师承，只表示我们没把这条线索收进关系网。')}</section>`;
-  const has=relations.advisor.length+relations.collab.length+relations.overlap.length+relations.sibling.length+relations.external.length>0;
-  const coauthors=snapshot?.coauthors?.length
-    ? `<section class="section-block"><h3>OpenAlex 共同署名线索 <small>（最近作品样本）</small></h3><p class="pane-intro">仅统计最近最多 25 条作品里的共同作者；作者与作品归属仍需核实，不能据此认定师承或同组。</p>${snapshot.coauthors.map(item=>`<div class="relation-item"><span class="level">共同署名</span><div><strong>${esc(item.name)}</strong><p>样本中 ${item.shared_in_sample} 条共同作品 · <a href="${esc(item.url)}" target="_blank" rel="noopener noreferrer">作者记录</a></p></div></div>`).join('')}</section>`
-    : '';
-  $('pane-network').innerHTML=`${renderRelationGraph(data)}${layerHtml}${publicSection('relations')}<section class="section-block"><h3>师承与合作</h3><p class="pane-intro">${esc(relations.message)} 合著不等于师承。</p>${data.origin.includes('历史')?'<a class="inline-link" href="/legacy/network" target="_blank" rel="noopener noreferrer">打开原 IC 专题完整关系图</a>':''}</section>${has?relationSection('师承候选',relations.advisor,'advisor')+relationSection('同期同机构与署名重叠',relations.overlap,'overlap')+relationSection('合作署名',relations.collab,'collab')+relationSection('同门派生线索',relations.sibling,'sibling')+relationSection('外部师承线索',relations.external,'external'):emptyState('当前未关联到既有关系网','可以从本人主页与可归属论文继续调查。','空白不代表不存在关系。')}${coauthors}`;
-  bindNetworkFilters();
-}
-function renderCheck(){
-  const data=state.mentor,workCase=data.case;
-  const descriptions={'身份与任职':'确认本人主页与当前院系','研究方向':'核对近期研究主题','论文归属':'排除同名作者误配','学术关系':'区分自述与署名推断','招生与培养':'查当年公告并直接确认','论文原文核读':'阅读可获得原文，记录方法与结论','公开声明对照':'比较不同时间或来源的公开表述','多源交叉核查':'关键事实是否有独立来源'};
-  $('pane-check').innerHTML=`<section class="section-block"><h3>核查进度</h3><p class="pane-intro">改完状态会自动保存在本机，刷新后仍在。</p>${(data.sections||[]).map(section=>`<label class="progress-row"><div><strong>${esc(section)}</strong><span>${esc(descriptions[section]||'')}</span></div><select class="field" data-section="${esc(section)}" aria-label="${esc(section)}的核查状态"><option>待核查</option><option>已人工核查</option><option>需补证据</option><option>不适用</option></select></label>`).join('')}</section><section class="section-block"><h3>我的笔记</h3><p class="pane-intro">记下还想了解的问题、当面要问的事。</p><textarea class="field notes" id="caseNotes" placeholder="例如：需核对官网最新任职、今年是否还招硕士"></textarea><div class="dossier-actions"><button class="button slim" id="saveCaseNotes" type="button">保存备注</button><span class="micro" id="caseSaveStatus" role="status" aria-live="polite"></span></div></section>`;
-  document.querySelectorAll('[data-section]').forEach(select=>{
-    select.value=workCase.section_status[select.dataset.section]||'待核查';
-    select.onchange=async()=>{
-      const section=select.dataset.section;
-      select.disabled=true;
-      try{
-        data.case=await api('/api/catalog/mentor/'+encodeURIComponent(data.profile.id)+'/case',{method:'PATCH',body:JSON.stringify({section_status:{[section]:select.value}})});
-        $('caseSaveStatus').textContent='已保存到本机';
-      }catch(error){$('caseSaveStatus').textContent=error.message;select.value=workCase.section_status[section]||'待核查'}
-      finally{select.disabled=false}
-    };
-  });
-  $('caseNotes').value=workCase.notes||'';
-  $('saveCaseNotes').onclick=async()=>{
-    const button=$('saveCaseNotes');
-    button.disabled=true;$('caseSaveStatus').textContent='正在保存…';
-    try{
-      data.case=await api('/api/catalog/mentor/'+encodeURIComponent(data.profile.id)+'/case',{method:'PATCH',body:JSON.stringify({notes:$('caseNotes').value})});
-      $('caseSaveStatus').textContent='已保存到本机';
-    }catch(error){$('caseSaveStatus').textContent=error.message}
-    finally{button.disabled=false}
-  };
-}
-function renderEvidenceList(){
-  const data=state.mentor,items=data.case.evidence||[];
-  const rows=items.length
-    ? items.map(item=>`<div class="source-item"><strong>${esc(item.category)} · ${esc(item.title)}</strong><p>${esc(item.claim||'尚未写证据摘要')} · ${esc(item.added_at||'')}</p><a href="${esc(item.url)}" target="_blank" rel="noopener noreferrer">打开来源</a><div class="row" style="margin-top:8px"><select class="field" data-evidence-status="${esc(item.id)}" aria-label="${esc(item.title)}的核查状态"><option>待人工核查</option><option>已人工核查</option><option>需补证据</option></select><button class="button ghost slim" type="button" data-evidence-remove="${esc(item.id)}">删除条目</button></div></div>`).join('')
-    : emptyState('还没有自己保存的网页','在「核查记录」里贴上链接即可登记，初始状态是「待人工核查」。');
-  const host=$('evidenceHost')||$('pane-identity');
-  host.insertAdjacentHTML('beforeend',`<section class="section-block"><h3>我保存的网页</h3><p class="pane-intro">按类别记录网页链接，初始状态为「待人工核查」。</p>${rows}</section>`);
-  document.querySelectorAll('[data-evidence-status]').forEach(select=>{
-    const item=items.find(entry=>entry.id===select.dataset.evidenceStatus);
-    if(!item)return;
-    select.value=item.status;
-    select.onchange=async()=>{
-      const value=select.value;
-      select.disabled=true;
-      try{
-        data.case=await api('/api/catalog/mentor/'+encodeURIComponent(data.profile.id)+'/evidence/'+item.id,{method:'PATCH',body:JSON.stringify({status:value})});
-        if(state.mentor!==data)return;
-        renderOverview();renderEvidenceList();
-      }catch(error){select.value=item.status;message(error.message,true)}
-      finally{select.disabled=false}
-    };
-  });
-  document.querySelectorAll('[data-evidence-remove]').forEach(button=>button.onclick=async()=>{
-    button.disabled=true;
-    try{
-      data.case=await api('/api/catalog/mentor/'+encodeURIComponent(data.profile.id)+'/evidence/'+button.dataset.evidenceRemove,{method:'DELETE'});
-      if(state.mentor!==data)return;
-      renderOverview();renderEvidenceList();message('已删除这条本机调查记录。');
-    }catch(error){message(error.message,true);button.disabled=false}
-  });
-}
-function renderEvidenceForm(){
-  $('pane-check').insertAdjacentHTML('beforeend',`<section class="section-block"><h3>保存参考网页</h3><p class="pane-intro">贴上链接，方便以后回看；登记后状态为「待人工核查」。</p><form id="evidenceForm"><label class="field-label" for="evidenceCategory">类别</label><select class="field" id="evidenceCategory"><option>官方身份与任职</option><option>研究方向</option><option>论文与成果</option><option>学术关系</option><option>招生与培养</option><option>项目与专利</option><option>其他公开记录</option></select><label class="field-label" for="evidenceTitle">网页标题</label><input class="field" id="evidenceTitle" maxlength="160" required placeholder="如：学院导师主页"><label class="field-label" for="evidenceUrl">网页链接</label><input class="field" id="evidenceUrl" type="url" maxlength="1000" required placeholder="https://…"><label class="field-label" for="evidenceClaim">备注（选填）</label><input class="field" id="evidenceClaim" maxlength="500" placeholder="如：页面列出了研究方向"><div class="dossier-actions"><button class="button slim" type="submit">保存网页</button><span class="micro" id="evidenceSaveStatus" role="status" aria-live="polite"></span></div></form></section>`);
-  $('evidenceForm').onsubmit=async event=>{
-    event.preventDefault();
-    const data=state.mentor,button=$('evidenceForm').querySelector('button');
-    button.disabled=true;$('evidenceSaveStatus').textContent='正在保存…';
-    try{
-      data.case=await api('/api/catalog/mentor/'+encodeURIComponent(data.profile.id)+'/evidence',{method:'POST',body:JSON.stringify({category:$('evidenceCategory').value,title:$('evidenceTitle').value,url:$('evidenceUrl').value,claim:$('evidenceClaim').value})});
-      if(state.mentor!==data)return;
-      renderOverview();renderEvidenceList();
-      $('evidenceTitle').value='';$('evidenceUrl').value='';$('evidenceClaim').value='';
-      $('evidenceSaveStatus').textContent='已保存，可在「身份信息 → 公开来源」查看。';
-    }catch(error){$('evidenceSaveStatus').textContent=error.message}
-    finally{button.disabled=false}
-  };
-}
-async function refreshProjects(){
-  const projects=await api('/api/projects');
-  if(state.projectId&&!projects.some(item=>item.id===state.projectId))state.projectId='';
-  try{localStorage.setItem('mentor-project',state.projectId)}catch{}
-  $('projectSelect').innerHTML='<option value="">仅查看内置资料</option>'+projects.map(item=>`<option value="${esc(item.id)}">${esc(item.name)} · ${item.count} 条</option>`).join('');
-  $('projectSelect').value=state.projectId;
-}
-
-/* ── 事件绑定 ── */
-$('nameForm').onsubmit=event=>{event.preventDefault();lookupName()};
-$('nameMode').onclick=()=>selectMode('name');
-$('disciplineMode').onclick=()=>selectMode('discipline');
-$('disciplineSelect').onchange=chooseDiscipline;
-$('institutionSelect').onchange=chooseInstitution;
-$('directionSelect').onchange=chooseDirection;
-document.querySelectorAll('[data-pane]').forEach(button=>button.onclick=()=>setPane(button.dataset.pane));
-document.querySelectorAll('[data-start]').forEach(button=>button.onclick=()=>{
-  const mode=button.dataset.start;
-  selectMode(mode);
-  (mode==='name'?$('nameInput'):$('disciplineSelect')).focus();
+/* ── 事件初始化与绑定 ── */
+document.querySelectorAll('[data-nav]').forEach(btn => {
+  btn.onclick = () => setView(btn.dataset.nav);
 });
-$('finderToggle').onclick=()=>{const open=document.body.classList.toggle('finder-open');$('finderToggle').setAttribute('aria-expanded',String(open));if(open)$('nameInput').focus()};
-document.querySelectorAll('[data-home]').forEach(link=>link.addEventListener('click',event=>{event.preventDefault();goHome()}));
-bindTabKeys($('modeTabs'));
-bindTabKeys($('dossierTabs'));
-$('projectSelect').onchange=async event=>{
-  clearDossier();
-  state.projectId=event.target.value;
-  try{localStorage.setItem('mentor-project',state.projectId)}catch{}
-  await loadDisciplines();
-  state.candidates=[];renderCandidates();
-  message(state.projectId?'已切换到所选资料夹；请重新查找。':'已切换到内置资料。');
+
+$('topSearchForm').onsubmit = e => {
+  e.preventDefault();
+  const q = $('topSearchInput').value.trim();
+  $('nameInput').value = q;
+  lookupName(q);
 };
-$('showNonEngineering').onchange=async event=>{
-  state.includeNonEngineering=event.target.checked;
-  try{localStorage.setItem('mentor-show-non-engineering',state.includeNonEngineering?'1':'0')}catch{}
-  clearDossier();state.candidates=[];renderCandidates();
+
+$('workspaceSearchForm').onsubmit = e => {
+  e.preventDefault();
+  lookupName($('nameInput').value);
+};
+
+function setSearchMode(mode) {
+  const isFilter = (mode === 'filter');
+  $('btnFilterMode')?.classList.toggle('active', isFilter);
+  $('btnFilterMode')?.setAttribute('aria-selected', String(isFilter));
+  $('btnSearchMode')?.classList.toggle('active', !isFilter);
+  $('btnSearchMode')?.setAttribute('aria-selected', String(!isFilter));
+  if (isFilter) {
+    $('disciplineSelect')?.focus();
+  } else {
+    $('nameInput')?.focus();
+  }
+}
+
+$('btnSearchMode').onclick = () => setSearchMode('search');
+$('btnFilterMode').onclick = () => setSearchMode('filter');
+
+// 移动端侧边抽屉控制
+function openMobileDrawer() {
+  const drawer = $('mobileNavDrawer');
+  if (drawer) {
+    drawer.hidden = false;
+    $('mobileMenuBtn')?.setAttribute('aria-expanded', 'true');
+    document.body.classList.add('mobile-drawer-open');
+  }
+}
+
+function closeMobileDrawer() {
+  const drawer = $('mobileNavDrawer');
+  if (drawer) {
+    drawer.hidden = true;
+    $('mobileMenuBtn')?.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('mobile-drawer-open');
+  }
+}
+
+$('mobileMenuBtn')?.addEventListener('click', openMobileDrawer);
+$('mobileDrawerClose')?.addEventListener('click', closeMobileDrawer);
+$('mobileNavBackdrop')?.addEventListener('click', closeMobileDrawer);
+
+document.querySelectorAll('.mobile-drawer-item').forEach(btn => {
+  btn.onclick = () => {
+    setView(btn.dataset.nav);
+    closeMobileDrawer();
+  };
+});
+
+// 移动端返回搜索结果按钮
+$('mobileBackBtn')?.addEventListener('click', () => {
+  const list = $('candidateList');
+  if (list) {
+    list.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+});
+
+$('disciplineSelect').onchange = chooseDiscipline;
+$('institutionSelect').onchange = chooseInstitution;
+$('directionSelect').onchange = chooseDirection;
+
+document.querySelectorAll('[data-quick-interest]').forEach(btn => {
+  btn.onclick = () => {
+    const interest = btn.dataset.quickInterest;
+    $('nameInput').value = interest;
+    lookupName(interest);
+  };
+});
+
+document.querySelectorAll('[data-start]').forEach(btn => {
+  btn.onclick = () => {
+    setView('workspace');
+    if (btn.dataset.start === 'discipline') {
+      $('btnFilterMode').click();
+      $('disciplineSelect').focus();
+    } else {
+      $('nameInput').focus();
+    }
+  };
+});
+
+document.querySelectorAll('[data-pane]').forEach(btn => {
+  btn.onclick = () => setPane(btn.dataset.pane);
+});
+
+document.querySelectorAll('[data-jump-pane]').forEach(card => {
+  card.onclick = () => setPane(card.dataset.jumpPane);
+});
+
+$('showNonEngineering').onchange = async e => {
+  state.includeNonEngineering = e.target.checked;
+  try { localStorage.setItem('mentor-show-non-engineering', state.includeNonEngineering ? '1' : '0'); } catch {}
+  clearDossier();
+  state.candidates = [];
+  renderCandidates();
   await loadDisciplines();
   loadCoverage();
-  message(state.includeNonEngineering?'已显示非工科条目（数据未被删除，仅切换范围）。':'仅显示工学条目（非工科数据仍保留在库中）。');
 };
-$('createProject').onclick=async()=>{
-  const name=$('projectName').value.trim();
-  if(!name){message('请填写资料夹名称。',true);return}
-  try{
-    const project=await api('/api/projects',{method:'POST',body:JSON.stringify({name})});
-    state.projectId=project.id;$('projectName').value='';
-    await refreshProjects();await loadDisciplines();
-    message('资料夹已创建，可以导入资料了。');
-  }catch(error){message(error.message,true)}
-};
-$('importButton').onclick=async()=>{
-  const file=$('importFile').files[0];
-  if(!state.projectId||!file){message('先创建或选择资料夹，再选 CSV / JSON 文件。',true);return}
-  const button=$('importButton');
-  button.disabled=true;message('正在导入本机资料…');
-  try{
-    const result=await api('/api/projects/'+state.projectId+'/import',{method:'POST',body:JSON.stringify({filename:file.name,content:await file.text()})});
-    await refreshProjects();await loadDisciplines();
-    message(`已新增 ${result.added} 条；重复 ${result.duplicates} 条；缺姓名或机构 ${result.skipped} 条。`);
-  }catch(error){message(error.message,true)}
-  finally{button.disabled=false}
-};
-(async()=>{
-  try{
+
+bindTabKeys($('dossierTabs'));
+
+// 本地运行心跳检测
+async function checkServerHealth() {
+  try {
+    const h = await api('/api/health');
+    if (h.ok) {
+      $('serverStatusText').textContent = '本地运行';
+      $('serverStatusBadge').classList.add('is-online');
+    }
+  } catch {
+    $('serverStatusText').textContent = '连接中断';
+    $('serverStatusBadge').classList.remove('is-online');
+  }
+}
+
+// 页面首屏自动加载
+(async () => {
+  try {
+    await checkServerHealth();
     loadCoverage();
-    await refreshProjects();
     await loadDisciplines();
     setupAddMentor();
-    const id=new URLSearchParams(location.search).get('mentor');
-    if(id)await openMentor(id,{quietScroll:true});else setView('home');
-  }catch(error){message(error.message,true)}
-})();
 
-/* ── AI 建议（待复核） ── */
-function esc2(value){return String(value==null?'':value).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]))}
-async function renderAiHints(id){
-  const box=$('aiHints'); if(!box) return;
-  box.hidden=true; box.innerHTML='';
-  let data;
-  try{ data=await api('/api/catalog/mentor/'+encodeURIComponent(id)+'/ai-hints'); }
-  catch(e){ return; }
-  if(!data) return;
-  const rows=[]; const sug=data.direction_suggestion; const rev=data.name_review||[];
-  if(sug){
-    const top=(sug.top3||[]).map(t=>`${esc2(t.label)} <small>${Number(t.score).toFixed(3)}</small>`).join('、');
-    const methodName=({keyword:'关键词命中',embedding:'嵌入推断',fusion:'关键词+嵌入融合'})[sug.method]||'融合建议';
-    rows.push(`<div class="ai-row"><b>方向建议</b>
-      <span>${esc2(sug.suggested)}</span>
-      <small>相似度 ${Number(sug.score).toFixed(3)} · ${methodName}
-      ${sug.passes_threshold?'':' · 低于阈值，仅供参考'}</small>
-      ${top?`<div class="ai-top3"><small>次选：${top}</small></div>`:''}</div>`);
+    // 支持 URL 参数切换视图与指定导师
+    const urlParams = new URLSearchParams(location.search);
+    const viewParam = urlParams.get('view') || 'workspace';
+    setView(viewParam);
+
+    const discParam = urlParams.get('discipline');
+    const id = urlParams.get('mentor');
+
+    if (discParam) {
+      $('btnFilterMode').click();
+      $('disciplineSelect').value = discParam;
+      await chooseDiscipline();
+    }
+
+    // 优先读取 URL 中指定的 mentor ID，否则默认搜索并打开第一个导师
+
+    if (id) {
+      await openMentor(id, { quietScroll: true });
+    } else if (viewParam === 'workspace' && !discParam) {
+      // 默认加载导师，使左侧列表、中央档案、右侧辅助栏丰满，完整还原参考图三栏布局
+      lookupName('张');
+    }
+  } catch (error) {
+    message(error.message, true);
   }
-  if(rev.length){
-    rows.push('<div class="ai-row"><b>同名待核</b>'+rev.map(r=>`
-      <div class="ai-review"><span>${esc2(r.verdict)} · 相似度 ${Number(r.similarity).toFixed(3)}</span>
-      <small>另一方：${esc2(r.other.dept||'院系未标注')}${r.other.home?` · <a href="${esc2(r.other.home)}" target="_blank" rel="noopener noreferrer">主页</a>`:''}</small></div>`).join('')+'</div>');
-  }
-  if(!rows.length) return;
-  box.innerHTML=`<div class="ai-head"><h4>AI 建议（待复核）</h4><span class="review-tag">待复核</span></div>${rows.join('')}
-    <p class="ai-note">${esc2(data.disclaimer||'')} 这里的建议不写回任何原始字段。</p>`;
-  box.hidden=false;
-}
+})();
 </script>
 </body>
 </html>

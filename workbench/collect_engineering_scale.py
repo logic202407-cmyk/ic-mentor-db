@@ -27,7 +27,8 @@ from urllib.parse import urljoin
 
 import requests
 import urllib3
-from bs4 import BeautifulSoup
+# bs4 不在本模块使用；读已存目录/统计来源数量都不需要 HTML 解析器。
+# 保留模块级导入会让 check_facts_consistency 在未装 bs4 的 CI 上直接失败。
 
 from . import catalog
 from . import public_research as research

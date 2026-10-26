@@ -13,10 +13,15 @@
 
 from __future__ import annotations
 
+import json
+import pathlib
+import tempfile
 import unittest
+from unittest import mock
 
 from fastapi.testclient import TestClient
 
+from workbench import core
 from workbench.app import ALLOWED_HOSTS, MAX_BODY_BYTES, app
 
 LOCAL_HOST = "127.0.0.1:8765"
@@ -74,7 +79,21 @@ class HostAndOriginTests(unittest.TestCase):
 
 class JsonBodyTests(unittest.TestCase):
     def setUp(self):
+        # 这里会真的建项目，必须落在临时目录里，不能往用户的真实资料夹里写测试数据。
+        self._tmp = tempfile.TemporaryDirectory()
+        self.dir = pathlib.Path(self._tmp.name)
+        self._patches = [
+            mock.patch.object(core, "DATA_DIR", self.dir),
+            mock.patch.object(core, "PROJECTS_DIR", self.dir / "projects"),
+        ]
+        for patch in self._patches:
+            patch.start()
         self.client = TestClient(app)
+
+    def tearDown(self):
+        for patch in reversed(self._patches):
+            patch.stop()
+        self._tmp.cleanup()
 
     def test_invalid_json_returns_400_not_500(self):
         response = self.client.post(
@@ -128,6 +147,151 @@ class BodyLimitTests(unittest.TestCase):
         import asyncio
         response = asyncio.run(local_origin(Request(scope), call_next))
         self.assertEqual(response.status_code, 413)
+
+    def test_body_without_content_length_is_capped_too(self):
+        """chunked 请求（没有 Content-Length）也必须受同一个上限约束。
+
+        缺陷：中间件只在 `content-length` 头存在且是数字时才拦；
+        改用 chunked 传一个更大的 body 就能整个读进内存——上限形同虚设。
+        """
+        import asyncio
+
+        from fastapi import HTTPException
+        from starlette.requests import Request
+
+        from workbench.app import _json_body
+
+        payload = json.dumps({"content": "x" * (MAX_BODY_BYTES + 1024)}).encode("utf-8")
+        state = {"left": payload}
+
+        async def receive():
+            chunk = state["left"][:65536]
+            state["left"] = state["left"][len(chunk):]
+            return {"type": "http.request", "body": chunk,
+                    "more_body": bool(state["left"])}
+
+        scope = {
+            "type": "http", "method": "POST", "path": "/api/projects",
+            "headers": [(b"host", LOCAL_HOST.encode()),
+                        (b"origin", LOCAL_ORIGIN.encode())],
+            "query_string": b"", "scheme": "http", "server": ("127.0.0.1", 8765),
+        }
+
+        with self.assertRaises(HTTPException) as caught:
+            asyncio.run(_json_body(Request(scope, receive)))
+        self.assertEqual(caught.exception.status_code, 413)
+
+    def test_too_large_message_is_derived_from_the_constant(self):
+        """413 的文案必须跟着 ``MAX_BODY_BYTES`` 走，不能是另写一遍的字面量。
+
+        缺陷：中间件与 `_read_body` 各写了一遍 `"请求体超过 12 MB"`。两处今天恰好
+        都是 12 MB，所以看不出来；一旦把上限改小/改大，提示语仍会说 12 MB，
+        变成一个自相矛盾的错误信息，而且没有任何测试会发现。
+        """
+        from workbench.app import BODY_TOO_LARGE
+
+        mb = MAX_BODY_BYTES // 1024 // 1024
+        self.assertIn(str(mb), BODY_TOO_LARGE)
+        # 文案里出现的 MB 数字必须只有这一个来源
+        import re
+        claimed = re.findall(r"(\d+)\s*MB", BODY_TOO_LARGE)
+        self.assertEqual(claimed, [str(mb)])
+
+    def test_content_length_alone_is_enforced_inside_read_body(self):
+        """即使不经过中间件，`_read_body` 也必须自己拦下超限的 content-length。
+
+        缺陷：`_read_body` 在有 `content-length` 时直接把 `request.body()` 交出去，
+        完全依赖中间件先跑。通过 app 访问确实拦得住，但这条路径把安全前提
+        押在"调用方一定先过中间件"上，是不必要的耦合。
+        """
+        import asyncio
+
+        from fastapi import HTTPException
+        from starlette.requests import Request
+
+        from workbench.app import _read_body
+
+        async def receive():  # pragma: no cover - 不应被读到
+            return {"type": "http.request", "body": b"{}", "more_body": False}
+
+        scope = {
+            "type": "http", "method": "POST", "path": "/api/projects",
+            "headers": [(b"host", LOCAL_HOST.encode()),
+                        (b"origin", LOCAL_ORIGIN.encode()),
+                        (b"content-length", str(MAX_BODY_BYTES + 1).encode())],
+            "query_string": b"", "scheme": "http", "server": ("127.0.0.1", 8765),
+        }
+
+        with self.assertRaises(HTTPException) as caught:
+            asyncio.run(_read_body(Request(scope, receive)))
+        self.assertEqual(caught.exception.status_code, 413)
+        from workbench.app import BODY_TOO_LARGE
+        self.assertEqual(caught.exception.detail, BODY_TOO_LARGE)
+
+
+class SemanticFailureTests(unittest.TestCase):
+    """语义模型出错时必须降级成可操作的 503，而不是 500 或回显 Python 原文。
+
+    缺陷：降级分支调用了 `logging.getLogger(...)`，但模块没有 `import logging`，
+    于是真实异常被 NameError 顶掉：接口回 500 Internal Server Error，
+    服务端也没有留下任何日志。模型不可用时的"稍后重试"提示完全丢失。
+    """
+
+    def setUp(self) -> None:
+        self._tmp = tempfile.TemporaryDirectory()
+        self.dir = pathlib.Path(self._tmp.name)
+        self._patches = [
+            mock.patch.object(core, "DATA_DIR", self.dir),
+            mock.patch.object(core, "PROJECTS_DIR", self.dir / "projects"),
+        ]
+        for patch in self._patches:
+            patch.start()
+        # 默认 TestClient 会把服务端异常重新抛出，这里要看到真实响应码。
+        self.client = TestClient(app, raise_server_exceptions=False)
+
+    def tearDown(self) -> None:
+        for patch in reversed(self._patches):
+            patch.stop()
+        self._tmp.cleanup()
+
+    def test_semantic_model_failure_degrades_to_503_without_internals(self):
+        created = self.client.post("/api/projects", json={"name": "语义降级"})
+        self.assertEqual(created.status_code, 200)
+        project_id = created.json()["id"]
+        with mock.patch("workbench.app.search",
+                        side_effect=RuntimeError("C:/models/bge-m3 未找到")):
+            response = self.client.post(f"/api/projects/{project_id}/search",
+                                        json={"query": "张", "mode": "semantic"})
+        self.assertEqual(response.status_code, 503)
+        self.assertIn("语义模型", response.json()["detail"])
+        # 本机路径、异常类名都不能出现在响应里
+        self.assertNotIn("C:/models", response.text)
+        self.assertNotIn("NameError", response.text)
+        self.assertNotIn("RuntimeError", response.text)
+
+
+class InvalidProjectIdTests(unittest.TestCase):
+    """非法项目 ID 的写请求要与读请求一致：404，而不是 500。
+
+    缺陷：`_project()` 把 ValueError 映射成 404，但 `_mutate_project()` 只认
+    FileNotFoundError；同一条坏 ID 走 GET 是 404、走 PATCH 就变成 500。
+    """
+
+    def setUp(self) -> None:
+        self.client = TestClient(app, raise_server_exceptions=False)
+
+    def test_write_with_malformed_project_id_is_404(self):
+        response = self.client.patch("/api/projects/not-a-project-id/profiles/abc",
+                                     json={"notes": "x"})
+        self.assertEqual(response.status_code, 404)
+        self.assertEqual(response.json()["detail"], "无效的项目 ID")
+
+    def test_read_and_write_agree_on_malformed_project_id(self):
+        read = self.client.get("/api/projects/not-a-project-id")
+        write = self.client.patch("/api/projects/not-a-project-id/profiles/abc",
+                                  json={"notes": "x"})
+        self.assertEqual(read.status_code, 404)
+        self.assertEqual(write.status_code, read.status_code)
 
 
 if __name__ == "__main__":

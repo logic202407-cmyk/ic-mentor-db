@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import csv
 import json
+import logging
 import uuid
 from pathlib import Path
 
@@ -15,10 +16,12 @@ from starlette.concurrency import run_in_threadpool
 from .core import (
     ROOT, clean_text, create_project, import_profiles, list_projects,
     load_project, normalize_profile, now, parse_import, safe_url, save_project,
+    update_project,
 )
 from .search import MODEL_NAME, search
 from . import ai_hints, catalog, homepage_kind, investigation, relations, student_score
 from . import eval_report
+from . import storage
 from .openalex import OpenAlexUnavailable, author_candidates
 import requests
 
@@ -39,6 +42,9 @@ app.mount("/assets", StaticFiles(directory=WEB.parent / "assets"), name="assets"
 ALLOWED_HOSTS = {"127.0.0.1", "localhost", "::1", "testserver"}
 SAFE_METHODS = {"GET", "HEAD", "OPTIONS"}
 MAX_BODY_BYTES = 12 * 1024 * 1024   # 导入内容上限 10 MB，留出 JSON 包装余量
+# 413 的文案只写一处。此前中间件与 `_read_body` 各写了一遍字面量：今天两处都是
+# 12 MB 所以看不出来，但改了 `MAX_BODY_BYTES` 之后提示语不会跟着变，变成自相矛盾的错误信息。
+BODY_TOO_LARGE = f"请求体超过 {MAX_BODY_BYTES // 1024 // 1024} MB"
 
 
 def _host_only(value: str) -> str:
@@ -76,9 +82,33 @@ async def local_origin(request: Request, call_next):
     # 读进内存，再交给 core.parse_import 判断 10 MB——内存已经被占用了。
     length = request.headers.get("content-length", "")
     if length.isdigit() and int(length) > MAX_BODY_BYTES:
-        return JSONResponse({"detail": "请求体超过 12 MB"}, status_code=413)
+        return JSONResponse({"detail": BODY_TOO_LARGE}, status_code=413)
 
     return await call_next(request)
+
+
+async def _read_body(request: Request) -> bytes:
+    """按 ``MAX_BODY_BYTES`` 上限读取请求体，超限直接 413。
+
+    中间件只能看懂 ``content-length``；chunked 请求（没有这个头）会绕过它。
+    真实字节数只有读的时候才知道，所以这里边读边计数，超限立刻停手，
+    不把整个 body 先攒进内存。
+    """
+    length = request.headers.get("content-length", "")
+    if length.isdigit():
+        # 走 app 时中间件已经按同一个上限拦过；这里再复核一次，是为了让
+        # 「绕过中间件直接调用本函数」这条路径也不依赖调用方的自律。
+        if int(length) > MAX_BODY_BYTES:
+            raise HTTPException(status_code=413, detail=BODY_TOO_LARGE)
+        return await request.body()
+    chunks: list[bytes] = []
+    total = 0
+    async for chunk in request.stream():
+        total += len(chunk)
+        if total > MAX_BODY_BYTES:
+            raise HTTPException(status_code=413, detail=BODY_TOO_LARGE)
+        chunks.append(chunk)
+    return b"".join(chunks)
 
 
 async def _json_body(request: Request) -> dict:
@@ -87,8 +117,9 @@ async def _json_body(request: Request) -> dict:
     原先多处写成 `await request.json()` 且放在 try 之外，无效 JSON 会直接冒成 500
     并在 detail 里回显解析器原文（实测 4 处）。
     """
+    raw = await _read_body(request)
     try:
-        data = await request.json()
+        data = json.loads(raw)
     except (ValueError, UnicodeDecodeError) as error:
         raise HTTPException(status_code=400, detail="请求体不是合法 JSON") from error
     if not isinstance(data, dict):
@@ -99,7 +130,22 @@ async def _json_body(request: Request) -> dict:
 def _project(project_id: str) -> dict:
     try:
         return load_project(project_id)
+    except storage.DataCorruptError:
+        raise
     except (ValueError, FileNotFoundError) as error:
+        raise HTTPException(status_code=404, detail=str(error)) from error
+
+
+def _mutate_project(project_id: str, mutate):
+    try:
+        return update_project(project_id, mutate)
+    except storage.DataCorruptError:
+        raise
+    except FileNotFoundError as error:
+        raise HTTPException(status_code=404, detail=str(error)) from error
+    except ValueError as error:
+        # 非法项目 ID 由 core._project_path 抛 ValueError。读接口（_project）把同样的
+        # 值映射成 404，写接口如果不映射就会变成 500——同一份坏 URL 两种结果。
         raise HTTPException(status_code=404, detail=str(error)) from error
 
 
@@ -108,6 +154,17 @@ def _profile(project: dict, profile_id: str) -> dict:
         if profile["id"] == profile_id:
             return profile
     raise HTTPException(status_code=404, detail="找不到这位导师")
+
+
+@app.exception_handler(storage.DataCorruptError)
+async def _corrupt_data(request: Request, error: storage.DataCorruptError):
+    return JSONResponse({"detail": f"{error}；原文件未被覆盖，可联系维护者从 .bak 恢复"},
+                        status_code=500)
+
+
+@app.exception_handler(storage.LockTimeoutError)
+async def _lock_timeout(request: Request, error: storage.LockTimeoutError):
+    return JSONResponse({"detail": str(error)}, status_code=503)
 
 
 @app.get("/")
@@ -385,46 +442,54 @@ def get_project(project_id: str):
 
 @app.post("/api/projects/{project_id}/import")
 async def import_file(project_id: str, request: Request):
-    project = _project(project_id)
+    _project(project_id)
     data = await _json_body(request)
     try:
         rows = parse_import(str(data.get("filename", "")), str(data.get("content", "")))
-        return import_profiles(project, rows, str(data.get("filename", "导入文件")))
+        label = str(data.get("filename", "导入文件"))
+        return _mutate_project(
+            project_id, lambda project: import_profiles(project, rows, label, persist=False))
+    except storage.DataCorruptError:
+        raise
     except (ValueError, json.JSONDecodeError, csv.Error) as error:
         raise HTTPException(status_code=400, detail=str(error)) from error
 
 
 @app.post("/api/projects/{project_id}/profiles")
 async def add_profile(project_id: str, request: Request):
-    project = _project(project_id)
+    _project(project_id)
     profile = normalize_profile(await _json_body(request))
     if not profile:
         raise HTTPException(status_code=400, detail="请填写姓名和机构")
-    if any(all(existing.get(key) == profile.get(key) for key in ("name", "institution", "department", "homepage"))
-           for existing in project["profiles"]):
-        raise HTTPException(status_code=409, detail="这位导师已经在当前资料夹中，可按姓名查找")
-    project["profiles"].append(profile)
-    save_project(project)
-    return profile
+
+    def apply(project):
+        if any(all(existing.get(key) == profile.get(key)
+                   for key in ("name", "institution", "department", "homepage"))
+               for existing in project["profiles"]):
+            raise HTTPException(status_code=409, detail="这位导师已经在当前资料夹中，可按姓名查找")
+        project["profiles"].append(profile)
+        return profile
+
+    return _mutate_project(project_id, apply)
 
 
 @app.patch("/api/projects/{project_id}/profiles/{profile_id}")
 async def update_profile(project_id: str, profile_id: str, request: Request):
-    project = _project(project_id)
-    profile = _profile(project, profile_id)
     data = await _json_body(request)
-    if "notes" in data:
-        profile["notes"] = clean_text(data["notes"], 1000)
-    if "shortlisted" in data:
-        profile["shortlisted"] = bool(data["shortlisted"])
-    save_project(project)
-    return profile
+
+    def apply(project):
+        profile = _profile(project, profile_id)
+        if "notes" in data:
+            profile["notes"] = clean_text(data["notes"], 1000)
+        if "shortlisted" in data:
+            profile["shortlisted"] = bool(data["shortlisted"])
+        return profile
+
+    return _mutate_project(project_id, apply)
 
 
 @app.post("/api/projects/{project_id}/profiles/{profile_id}/sources")
 async def add_source(project_id: str, profile_id: str, request: Request):
-    project = _project(project_id)
-    profile = _profile(project, profile_id)
     data = await _json_body(request)
     url = safe_url(data.get("url"))
     if not url:
@@ -437,25 +502,31 @@ async def add_source(project_id: str, profile_id: str, request: Request):
         "status": "待人工核查",
         "added_at": now(),
     }
-    profile["sources"].append(source)
-    save_project(project)
-    return source
+
+    def apply(project):
+        profile = _profile(project, profile_id)
+        profile["sources"].append(source)
+        return source
+
+    return _mutate_project(project_id, apply)
 
 
 @app.patch("/api/projects/{project_id}/profiles/{profile_id}/sources/{source_id}")
 async def update_source(project_id: str, profile_id: str, source_id: str, request: Request):
-    project = _project(project_id)
-    profile = _profile(project, profile_id)
-    source = next((s for s in profile["sources"] if s["id"] == source_id), None)
-    if source is None:
-        raise HTTPException(status_code=404, detail="找不到这条来源")
     data = await _json_body(request)
     if data.get("status") not in {"待人工核查", "已人工核查"}:
         raise HTTPException(status_code=400, detail="无效的核查状态")
-    source["status"] = data["status"]
-    source["checked_at"] = now() if data["status"] == "已人工核查" else None
-    save_project(project)
-    return source
+
+    def apply(project):
+        profile = _profile(project, profile_id)
+        source = next((s for s in profile["sources"] if s["id"] == source_id), None)
+        if source is None:
+            raise HTTPException(status_code=404, detail="找不到这条来源")
+        source["status"] = data["status"]
+        source["checked_at"] = now() if data["status"] == "已人工核查" else None
+        return source
+
+    return _mutate_project(project_id, apply)
 
 
 @app.post("/api/projects/{project_id}/search")

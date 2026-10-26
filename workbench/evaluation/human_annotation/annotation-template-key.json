@@ -1,0 +1,1973 @@
+{
+  "schema": "mentor-workbench/human-annotation-key/v1",
+  "note": "内部评分键：含模型分数、自动判定与分层类别，标注者**不得查看**。盲标表（annotation-template.csv）不含其中任何一项。",
+  "blind_fields": [
+    "pair_id",
+    "a_name",
+    "a_institution",
+    "a_dept",
+    "a_discipline",
+    "a_home",
+    "a_page_kind",
+    "a_source_urls",
+    "b_name",
+    "b_institution",
+    "b_dept",
+    "b_discipline",
+    "b_home",
+    "b_page_kind",
+    "b_source_urls"
+  ],
+  "held_back_fields": [
+    "category",
+    "emb",
+    "program_label",
+    "program_verdict",
+    "reason",
+    "name",
+    "a_id",
+    "b_id"
+  ],
+  "items": {
+    "ec3bfa498e71c57e": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "unit_conflict_only",
+      "category": "distinct_personal",
+      "name": "王成",
+      "a_id": "official-3788d5ab6d666f65e43c",
+      "b_id": "official-61ce53f15131c05b0ae7"
+    },
+    "1a91794370b2f452": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "unit_conflict_only",
+      "category": "distinct_personal",
+      "name": "杨帆",
+      "a_id": "official-806cd76cf5f9063440bd",
+      "b_id": "official-c1b5fcb84541d18ce5ce"
+    },
+    "4841c794e63d3862": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "unit_conflict_only",
+      "category": "distinct_personal",
+      "name": "刘洋",
+      "a_id": "official-2c345264429435cd420c",
+      "b_id": "official-2c7c628185a031a74f2b"
+    },
+    "a82559fa06012f48": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "unit_conflict_only",
+      "category": "distinct_personal",
+      "name": "王晶",
+      "a_id": "official-3b34bbf9879d19994308",
+      "b_id": "official-fe5e726e820bcbbde6a9"
+    },
+    "00b7efd39498f81e": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "unit_conflict_only",
+      "category": "distinct_personal",
+      "name": "陈诚",
+      "a_id": "legacy-958b4326a99a31166151",
+      "b_id": "official-d7f57c69f212aec22dc1"
+    },
+    "f65e480bcb35272f": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "unit_conflict_only",
+      "category": "distinct_personal",
+      "name": "王涛",
+      "a_id": "legacy-428668480901a6729341",
+      "b_id": "official-c4b8b308e369201de84a"
+    },
+    "0ca37bced73159bf": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "unit_conflict_only",
+      "category": "distinct_personal",
+      "name": "王涛",
+      "a_id": "legacy-428668480901a6729341",
+      "b_id": "official-8867f8a1fb750338c9a4"
+    },
+    "f92b38f0a04e122c": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "unit_conflict_only",
+      "category": "distinct_personal",
+      "name": "吴豪",
+      "a_id": "legacy-79f361e7f9f02872ed02",
+      "b_id": "official-bcf37e320eb757cb61f3"
+    },
+    "9b7352b9f7b10d50": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "unit_conflict_only",
+      "category": "distinct_personal",
+      "name": "王斌",
+      "a_id": "official-0fe3b4e7dd51358fae86",
+      "b_id": "official-f75ea806e409ee4d5c05"
+    },
+    "e11732b71a9c8959": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "unit_conflict_only",
+      "category": "distinct_personal",
+      "name": "李鹏",
+      "a_id": "legacy-ef969828b14e0381a326",
+      "b_id": "official-4985e2a1ffebc9eb2daa"
+    },
+    "3244f377dc41fbb3": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "same_unit_cross_discipline",
+      "category": "distinct_personal",
+      "name": "万文杰",
+      "a_id": "legacy-fc4b2526490000dad1ed",
+      "b_id": "official-767dbe5377b4b47b0b0f"
+    },
+    "221ae9a48e21d30a": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "unit_conflict_only",
+      "category": "distinct_personal",
+      "name": "万文杰",
+      "a_id": "legacy-fc4b2526490000dad1ed",
+      "b_id": "official-297f822fca45cae5a4a3"
+    },
+    "ebf89ebdf2f93ca9": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "unit_conflict_only",
+      "category": "distinct_personal",
+      "name": "王磊",
+      "a_id": "legacy-b43f79914463af3a692d",
+      "b_id": "official-3ab09b534aec46551b4d"
+    },
+    "01b1548e5f76c197": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "unit_conflict_only",
+      "category": "distinct_personal",
+      "name": "刘世元",
+      "a_id": "legacy-65e56f1ece426ce7a656",
+      "b_id": "official-4f4d8ca1d5b3b827c28e"
+    },
+    "0c763438996a5118": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "unit_conflict_only",
+      "category": "distinct_personal",
+      "name": "刘磊",
+      "a_id": "official-bc0a615a53710017ab38",
+      "b_id": "official-29b43ad140273b3e1f93"
+    },
+    "ccdc2444e8693b51": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "unit_conflict_only",
+      "category": "distinct_personal",
+      "name": "张朝阳",
+      "a_id": "official-ea5994879b12ee1d4536",
+      "b_id": "official-9950043bc89b0dff10a0"
+    },
+    "e18f6a33ef5a3072": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "unit_conflict_only",
+      "category": "distinct_personal",
+      "name": "王丽",
+      "a_id": "official-54198a9ee875ef5e986b",
+      "b_id": "official-5d7acb3fcfbb8d69d649"
+    },
+    "52808f7ee443aee7": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "unit_conflict_only",
+      "category": "distinct_personal",
+      "name": "张涛",
+      "a_id": "official-2f8a66fad229378f9177",
+      "b_id": "official-55bee9d13b8b64bd301f"
+    },
+    "4fca8d871fc11444": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "unit_conflict_only",
+      "category": "distinct_personal",
+      "name": "马波",
+      "a_id": "legacy-21af0aa497637defb770",
+      "b_id": "official-3cea4db6a72bf4f72dce"
+    },
+    "03580cd17e52cac2": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "unit_conflict_only",
+      "category": "distinct_personal",
+      "name": "肖鸣飞",
+      "a_id": "legacy-74b8cfd95bb8dbc6b174",
+      "b_id": "official-4d035643c375a6b5a2ab"
+    },
+    "7b2e6378c5640944": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "unit_conflict_only",
+      "category": "distinct_personal",
+      "name": "马啸",
+      "a_id": "official-986429a6165ee5122a1c",
+      "b_id": "official-d32c45b849f9f7ec7cd1"
+    },
+    "98453e05da06e5b8": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "unit_conflict_only",
+      "category": "distinct_personal",
+      "name": "张鹏",
+      "a_id": "official-17f5fee2101fc63e6310",
+      "b_id": "official-73737f66c07f1a1821e3"
+    },
+    "4d0e4d628929e111": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "unit_conflict_only",
+      "category": "distinct_personal",
+      "name": "吴艳",
+      "a_id": "official-93b2ad0a52d66a6f15fc",
+      "b_id": "official-3941403de74a9d98575e"
+    },
+    "a963b52ccbdb958d": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "unit_conflict_only",
+      "category": "distinct_personal",
+      "name": "张荻",
+      "a_id": "official-68245a6cb85d6864fb49",
+      "b_id": "official-1b93461dee42f83fd8ca"
+    },
+    "6bb6cf8af5500958": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "unit_conflict_only",
+      "category": "distinct_personal",
+      "name": "王伟",
+      "a_id": "official-4640fecd8e7c13cb8bf3",
+      "b_id": "official-d029d99e2cf0762edf45"
+    },
+    "070bd0f858e23d94": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "unit_conflict_only",
+      "category": "distinct_personal",
+      "name": "王博",
+      "a_id": "official-bf81b58241df1b4b49a7",
+      "b_id": "official-023e161e84e29b9b8e68"
+    },
+    "ae8ed3de305a7269": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "unit_conflict_only",
+      "category": "distinct_personal",
+      "name": "张振",
+      "a_id": "official-e68f1711dc48750c32a6",
+      "b_id": "official-6613db10d01fe4a258cb"
+    },
+    "d79f1867d91d0089": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "unit_conflict_only",
+      "category": "distinct_personal",
+      "name": "罗欣",
+      "a_id": "official-94f43f4e17639a1ba139",
+      "b_id": "official-fba3bbdd9278fc5ff6e1"
+    },
+    "9d0e4a082840e56e": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "unit_conflict_only",
+      "category": "distinct_personal",
+      "name": "李红霞",
+      "a_id": "official-0514f2b765b51e2ae42c",
+      "b_id": "official-4e3f68291a9e86c80948"
+    },
+    "f9f5f3f22fbedde5": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "unit_conflict_only",
+      "category": "distinct_personal",
+      "name": "刘海龙",
+      "a_id": "official-46bda43eb4512fd5308c",
+      "b_id": "official-4d3a17b7491612cf05ce"
+    },
+    "75a9059ee31ff38b": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "unit_conflict_only",
+      "category": "distinct_personal",
+      "name": "李兵",
+      "a_id": "official-2540b83e76aaf1007ca9",
+      "b_id": "official-942ad3dc480a03cfc511"
+    },
+    "93ff798897f60e00": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "listing_page",
+      "category": "listing_page",
+      "name": "李永福",
+      "a_id": "legacy-94726d47f55088d431f6",
+      "b_id": "official-fb23fb559b9e26896de1"
+    },
+    "ff0231a8c5646918": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url+listing_page",
+      "category": "listing_page",
+      "name": "程林",
+      "a_id": "official-9d0e34ee08f1b4a9d383",
+      "b_id": "official-c8f7cb37e02ba2d7d22c"
+    },
+    "8bc98cee020d4541": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "listing_page",
+      "category": "listing_page",
+      "name": "王涛",
+      "a_id": "legacy-428668480901a6729341",
+      "b_id": "official-a97d440c8442c43c13c1"
+    },
+    "1f5157a8ea3979e4": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "listing_page",
+      "category": "listing_page",
+      "name": "王涛",
+      "a_id": "official-a97d440c8442c43c13c1",
+      "b_id": "official-c4b8b308e369201de84a"
+    },
+    "dadfe31a10e0fef9": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "listing_page",
+      "category": "listing_page",
+      "name": "王涛",
+      "a_id": "official-a97d440c8442c43c13c1",
+      "b_id": "official-8867f8a1fb750338c9a4"
+    },
+    "2df5c2e5d007fe50": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "listing_page",
+      "category": "listing_page",
+      "name": "刘庆文",
+      "a_id": "legacy-65bdac2fb97930e23397",
+      "b_id": "official-dfaf7baf0da1ea4b653c"
+    },
+    "a396c750079d83b8": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "listing_page",
+      "category": "listing_page",
+      "name": "张彤",
+      "a_id": "legacy-6fbe065a84833adaecb7",
+      "b_id": "official-617efd7cc7a384ab3ae4"
+    },
+    "76e9ac4bfe26bf9b": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "listing_page",
+      "category": "listing_page",
+      "name": "马麟",
+      "a_id": "legacy-f3babb9d38ae885906cc",
+      "b_id": "official-52afb34b00493f98dd77"
+    },
+    "54d1752d4fbce9ed": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "listing_page",
+      "category": "listing_page",
+      "name": "殷月伟",
+      "a_id": "legacy-bc02072626b197a77a44",
+      "b_id": "official-74c1ec9671ea68f9eb07"
+    },
+    "458265caefc9810c": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "listing_page",
+      "category": "listing_page",
+      "name": "沈胜春",
+      "a_id": "legacy-2ceed6785631a324eae5",
+      "b_id": "official-6eae8920100583cbbc39"
+    },
+    "39604f227c25e263": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "listing_page",
+      "category": "listing_page",
+      "name": "邹卫文",
+      "a_id": "legacy-1f0c60486f4db30bc011",
+      "b_id": "official-22abd51a239b2c287bc6"
+    },
+    "447459ede50ad8b7": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "listing_page",
+      "category": "listing_page",
+      "name": "李雨",
+      "a_id": "legacy-3657cb1de18be343c09d",
+      "b_id": "official-1655d1461fbd88d6f5a9"
+    },
+    "e1b99320efbdffe4": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "listing_page",
+      "category": "listing_page",
+      "name": "李敏",
+      "a_id": "legacy-340332ba34a432a4d385",
+      "b_id": "official-c83bcd0b74db1ebb565a"
+    },
+    "e94bb8307e1b21d4": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "listing_page",
+      "category": "listing_page",
+      "name": "李敏",
+      "a_id": "legacy-340332ba34a432a4d385",
+      "b_id": "official-c8e02359df785288b833"
+    },
+    "3af947b766d1c083": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "listing_page",
+      "category": "listing_page",
+      "name": "李敏",
+      "a_id": "official-c83bcd0b74db1ebb565a",
+      "b_id": "official-c8e02359df785288b833"
+    },
+    "d668023627fc1a3d": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "listing_page",
+      "category": "listing_page",
+      "name": "陈长鑫",
+      "a_id": "legacy-d98989c8aa49b007f51f",
+      "b_id": "official-58bb910af6d9fa840686"
+    },
+    "3abb263ee0409751": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "listing_page",
+      "category": "listing_page",
+      "name": "程秀兰",
+      "a_id": "legacy-699461be99eece63b538",
+      "b_id": "official-2459bea11d4a5a714f78"
+    },
+    "4e8dca6597933ce8": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "listing_page",
+      "category": "listing_page",
+      "name": "陈华",
+      "a_id": "official-d2e92763dc5daaefdb4c",
+      "b_id": "official-21b5477dbc7e5096a3bb"
+    },
+    "fa15247fcfba003b": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "listing_page",
+      "category": "listing_page",
+      "name": "李伟",
+      "a_id": "official-f3c254568bba623f9912",
+      "b_id": "official-2602384acac963327df3"
+    },
+    "e999287f07c6c782": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "listing_page",
+      "category": "listing_page",
+      "name": "吴开宇",
+      "a_id": "legacy-0043c73af30688fe7e3d",
+      "b_id": "official-4dbcb5b8f6558f16a0fb"
+    },
+    "bba1ada45687fccb": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "listing_page",
+      "category": "listing_page",
+      "name": "陈池来",
+      "a_id": "legacy-0d6cd722db98e132a279",
+      "b_id": "official-5f61fd536a3f40bead7a"
+    },
+    "8ebea76a1d591210": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "listing_page",
+      "category": "listing_page",
+      "name": "李新",
+      "a_id": "official-b6483aec4ed3fd038e65",
+      "b_id": "official-38006979e69903cf2bb5"
+    },
+    "37d6c04289924c78": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "listing_page",
+      "category": "listing_page",
+      "name": "张先得",
+      "a_id": "official-cf5e472caa220fd25fd9",
+      "b_id": "official-f80a533f275d87c3a6f5"
+    },
+    "4cc7acd0a4951e7f": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "listing_page",
+      "category": "listing_page",
+      "name": "吴晓东",
+      "a_id": "official-eff6e499d8eba985b383",
+      "b_id": "official-c771e4a4596f3be07a65"
+    },
+    "60fe5c188422f6c9": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "listing_page",
+      "category": "listing_page",
+      "name": "李向阳",
+      "a_id": "official-0d5a5f2b66a5b95df426",
+      "b_id": "official-2f020517e8c1c247092a"
+    },
+    "a2297f00fdbf27f9": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "listing_page",
+      "category": "listing_page",
+      "name": "刘亚东",
+      "a_id": "official-7dda99eddec1eda29f76",
+      "b_id": "official-bae101198d37d5e4f820"
+    },
+    "f717202889be38e3": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url+listing_page",
+      "category": "listing_page",
+      "name": "张宇",
+      "a_id": "official-dba391c8b6b51b3fd86d",
+      "b_id": "official-5e2bd43b26dbe4806ed2"
+    },
+    "80821126d26fab32": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "listing_page",
+      "category": "listing_page",
+      "name": "张鹏",
+      "a_id": "official-6277a87e824397a76180",
+      "b_id": "official-bdcdbe1c7a2c541106b8"
+    },
+    "4550956dcfc83824": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "listing_page",
+      "category": "listing_page",
+      "name": "王旭",
+      "a_id": "official-998ad62e29fab9240586",
+      "b_id": "official-0a06bf7310e473fb6c0d"
+    },
+    "341f68398bf60af9": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "listing_page",
+      "category": "listing_page",
+      "name": "陈掌星",
+      "a_id": "official-3ec209a0226375dc716f",
+      "b_id": "official-e5a45a6d3f7cf32db49f"
+    },
+    "005d5450ff94cf4a": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url+listing_page",
+      "category": "listing_page",
+      "name": "孙晓建",
+      "a_id": "official-0c04475fc1775e874ed1",
+      "b_id": "official-c160f74b10fe2ae3435f"
+    },
+    "cb2d5d783fc4a4d7": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "listing_page",
+      "category": "listing_page",
+      "name": "马壮",
+      "a_id": "official-74f4c1bda873ae39bb80",
+      "b_id": "official-54b0ad45b0ba4a4b096d"
+    },
+    "51f53e7dabad7ebb": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "listing_page",
+      "category": "listing_page",
+      "name": "毛红威",
+      "a_id": "official-03e0355f5d74d900bd51",
+      "b_id": "official-59d47499cf897a23be11"
+    },
+    "666cf69e39243168": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "张波",
+      "a_id": "official-49be695718929780fc54",
+      "b_id": "official-9d5bf3f088cb59586df4"
+    },
+    "45429dc03038d616": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "王勇",
+      "a_id": "official-210e268978227e7befd0",
+      "b_id": "official-98904673c9f0d8b60152"
+    },
+    "a866c4dd149f6367": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "刘晓东",
+      "a_id": "official-ef20f0597df4d759d92e",
+      "b_id": "official-cbcaf62bd9159bac1e89"
+    },
+    "236b0777c6dd36e4": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "张勇",
+      "a_id": "official-1d234367a76292ba748d",
+      "b_id": "official-113f7880acdd51504d76"
+    },
+    "0c7cc3ac075fb2e4": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "杨超",
+      "a_id": "legacy-a12659c423e618578f44",
+      "b_id": "official-ccaba0cf7012fb973213"
+    },
+    "56935db86d93f6e3": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "王浩",
+      "a_id": "official-64bfb689d9e19f021469",
+      "b_id": "official-362290be9430614900f3"
+    },
+    "cd6bcadb13fa1e0b": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "李平",
+      "a_id": "official-593d77787ac5761be39a",
+      "b_id": "official-1fcf0ecd9912569e5252"
+    },
+    "ba73a5625e7002b9": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "刘志伟",
+      "a_id": "official-664a8bbe98281a44170c",
+      "b_id": "official-700ca033cfcc091cde2b"
+    },
+    "fcd6c066b7ff60ba": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "李涛",
+      "a_id": "official-aee77a6d0185b53afbd3",
+      "b_id": "official-c0f37131ae143abdb78f"
+    },
+    "c0c7d7aa83df9cc9": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "刘宇",
+      "a_id": "official-f504626b311815338042",
+      "b_id": "official-c18efd0e751102102ae7"
+    },
+    "8e696ed31c97f4d0": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "王磊",
+      "a_id": "official-fe51005136125237fbe2",
+      "b_id": "official-61f9405e6d903e963cf9"
+    },
+    "05337b443cf5d72b": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "陈浩",
+      "a_id": "official-b034007dcdbe6b2cbcd4",
+      "b_id": "official-6d3933d62030629f786e"
+    },
+    "5a676be899240459": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "王晓东",
+      "a_id": "official-9a1e38ecf01a8b65836b",
+      "b_id": "official-9a14d1a09333a2600085"
+    },
+    "4ad789be9da76877": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "陈曦",
+      "a_id": "official-a1d2ad385a07201e6afa",
+      "b_id": "official-6f3987578406d7569d15"
+    },
+    "08b35c5768e273c3": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "杨静",
+      "a_id": "official-9764912c0ebf3c3ced8d",
+      "b_id": "official-01c15b568378b0ef4cbc"
+    },
+    "00afb22260dfe688": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "李伟",
+      "a_id": "official-fefd45ae6ffde6579f82",
+      "b_id": "official-a9aeb1c8d529972dc34a"
+    },
+    "5df73279c0bade20": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "刘冰",
+      "a_id": "official-021926ab54781ea14fe9",
+      "b_id": "official-c947ac2449e193616dc4"
+    },
+    "c240007d0ee93082": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "杨晓光",
+      "a_id": "official-f4a3bf844a7c865bc4b3",
+      "b_id": "official-b5e2671c5e0d68d2211c"
+    },
+    "d149196aebcf3fa6": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "杨晓光",
+      "a_id": "official-f4a3bf844a7c865bc4b3",
+      "b_id": "official-c01de1831521651d863b"
+    },
+    "713af2e77056f704": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "杨晓光",
+      "a_id": "official-b5e2671c5e0d68d2211c",
+      "b_id": "official-c01de1831521651d863b"
+    },
+    "3281a27bebd19bf2": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "李芳",
+      "a_id": "official-8e5ca6ee40a347f5621e",
+      "b_id": "official-ec51a1528c60945a8deb"
+    },
+    "3669fc1821c9fe57": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "李磊",
+      "a_id": "official-739e800d8c45e8bf81cf",
+      "b_id": "official-af503fb988ec04f51c62"
+    },
+    "5268be81dc3db5ec": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "田长麟",
+      "a_id": "official-3237ffaf1db2d79944c8",
+      "b_id": "official-a36ba54c6041cd45ddcc"
+    },
+    "301aa1a07bc5eb5a": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "李帆",
+      "a_id": "official-f92191810981fcee15f4",
+      "b_id": "official-e5db85116dce961c9924"
+    },
+    "94e4eeb85ee8233d": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "林辉锋",
+      "a_id": "official-718c96e35a19f8e1e7d8",
+      "b_id": "official-37bed929872425310b7e"
+    },
+    "ab1d28267c46b4f3": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "刘林海",
+      "a_id": "official-d7ac90ed7f62664af6fc",
+      "b_id": "official-7bc77e796b210950b2de"
+    },
+    "565c2ec8df11edec": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "李锐",
+      "a_id": "official-4a8e4b68d319bf865f23",
+      "b_id": "official-60074d6afb499ad3ddc5"
+    },
+    "35a55775a3a53c43": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "李锐",
+      "a_id": "official-4a8e4b68d319bf865f23",
+      "b_id": "official-bb3804f8206d2323aff7"
+    },
+    "86b53a718c94b570": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "李锐",
+      "a_id": "official-60074d6afb499ad3ddc5",
+      "b_id": "official-bb3804f8206d2323aff7"
+    },
+    "314be53709bcf934": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "董立河",
+      "a_id": "official-4f7e2d4618cb2aa8bc1b",
+      "b_id": "official-396e56195e89f434289a"
+    },
+    "8ec2f724c131c426": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "徐畅",
+      "a_id": "official-5400e631fe5a4c39fe0a",
+      "b_id": "official-03a1b2ea46045429eedd"
+    },
+    "e5e2ca8f1772f1bb": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "赵敏",
+      "a_id": "official-c894d0e8855a5e76276e",
+      "b_id": "official-2280c79d6b5e67319380"
+    },
+    "a786b6f7ab46dc01": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "陈昕",
+      "a_id": "official-9bd289d9b445d395234f",
+      "b_id": "official-1377837ce186ade5aff3"
+    },
+    "2e0d984431812a83": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "王迪",
+      "a_id": "official-f0c29634b0af9e83397b",
+      "b_id": "official-e699024269d2958f2166"
+    },
+    "052cc5e9d1108d3f": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "申清臣",
+      "a_id": "official-f430d476ff6ff27e80e4",
+      "b_id": "official-baad8d58ca9e1412b042"
+    },
+    "a8f3d185dce26696": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "吴昊",
+      "a_id": "official-9e4f4362684c153a4e4d",
+      "b_id": "official-8e85857514c09fd40acf"
+    },
+    "3e89f36794b3fbc4": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "王旭",
+      "a_id": "official-5ce515bf2f770c75afe2",
+      "b_id": "official-93006cafb47cec23485d"
+    },
+    "3d9b85b5d12b4c3c": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "王利",
+      "a_id": "official-2585d9ae78ca6125f72d",
+      "b_id": "official-f48630b9e00034de937f"
+    },
+    "86773accaaa41085": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "韩兆军",
+      "a_id": "official-866dd17db55cd8c592a7",
+      "b_id": "official-9b876c5df144a7ec7391"
+    },
+    "4989e1f8c1c9cb1f": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "金大勇",
+      "a_id": "official-f7ee7169b82d402d16b0",
+      "b_id": "official-909b983be149879b37ac"
+    },
+    "4c314632d9cf9df4": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "李润伟",
+      "a_id": "official-826a205b2cd5dc280c8a",
+      "b_id": "official-12fcf130ddaca1ddbcc1"
+    },
+    "2928f247c129ea12": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "温诗辉",
+      "a_id": "official-71f0d2d5f9323b7413da",
+      "b_id": "official-d181ee9fe4d095ca179b"
+    },
+    "2bca991acd90ddf9": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "原亚焜",
+      "a_id": "official-874ca7462ad82377c6f7",
+      "b_id": "official-2905d7701eb637b54c61"
+    },
+    "42d0014bc2f07407": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "赵予生",
+      "a_id": "official-52bc2031909ec4c67c2c",
+      "b_id": "official-175aa79433f45361565b"
+    },
+    "2bc331467fdf32d1": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "王飞",
+      "a_id": "official-26c4d261db1e709f005c",
+      "b_id": "official-c39bfd270423779cf9d6"
+    },
+    "c89f242dd07a25ee": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "严畅",
+      "a_id": "official-bb8504526ca2a08d679d",
+      "b_id": "official-2c8cd84c64d9cc21e3cc"
+    },
+    "3ca524dcf5f5a4ab": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "高波",
+      "a_id": "official-ccd700a6a275e05362ee",
+      "b_id": "official-c58c9c33979cb968f65b"
+    },
+    "62ed5c7f42273320": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "王伟",
+      "a_id": "official-bf561948b81d620741f6",
+      "b_id": "official-ee59f53a67b0cc21b429"
+    },
+    "c4f354600b62bc0a": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "陈斌",
+      "a_id": "official-0414cc279b39acd78afc",
+      "b_id": "official-8afc771bdf249a5aa644"
+    },
+    "edb6cfcec8732d82": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "邹一可",
+      "a_id": "official-c59a8bf3e8e08cd951c9",
+      "b_id": "official-07011a23ce891f8651bc"
+    },
+    "7ea99e76b3e52fc9": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "王锋",
+      "a_id": "official-22e56f3066665eac592c",
+      "b_id": "official-147259db5aea1942326f"
+    },
+    "a99b8d44b2b2515f": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "吴向东",
+      "a_id": "official-fb28f29e13c5c814dbd5",
+      "b_id": "official-985850fb89f117fd9b51"
+    },
+    "71e4d10f4ce31420": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "徐克飞",
+      "a_id": "official-d62ad2bed98379548e0e",
+      "b_id": "official-1ccd9db93219e35f7cd3"
+    },
+    "bc561992356fe823": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "蒋丽梅",
+      "a_id": "official-faa5fbbc22a4ffde1af7",
+      "b_id": "official-20813b5f0998a0019ca1"
+    },
+    "7e46ce0cc0be3c35": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "李祥俊",
+      "a_id": "official-a8543e05b69e6804a4fb",
+      "b_id": "official-7b17e2bb18167a607030"
+    },
+    "3e395f61ac48101d": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "许家星",
+      "a_id": "official-3d80709648751200e896",
+      "b_id": "official-179f8d80609d14a8b0fa"
+    },
+    "91693dbc99e9cfb4": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "章伟文",
+      "a_id": "official-076968d10db6cc457774",
+      "b_id": "official-8200d9612ea72d9e06e9"
+    },
+    "0a6c27c16ff38a32": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "李红",
+      "a_id": "official-5ec0e0598864e4e7fca9",
+      "b_id": "official-f7fada2b1e0821c0fce0"
+    },
+    "64b9bc5062713025": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "唐热风",
+      "a_id": "official-298a7647a18df2c1f9e6",
+      "b_id": "official-b6a20d01665052dbee32"
+    },
+    "41b6af7139f0e0ac": {
+      "emb": null,
+      "program_label": "unknown",
+      "program_verdict": "unknown",
+      "reason": "missing_url",
+      "category": "missing_homepage",
+      "name": "陈磊",
+      "a_id": "official-887b7ca57010ec994152",
+      "b_id": "official-8f841332b83ec0d28637"
+    },
+    "dd5cc4d222c383c3": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "王小平",
+      "a_id": "legacy-bbd027d3f77f058a61ac",
+      "b_id": "official-da71ad2800e533b76691"
+    },
+    "17197a5befd817eb": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "王军",
+      "a_id": "official-ac6b9c4a8992037af028",
+      "b_id": "official-02d2e267774018281e0e"
+    },
+    "a99570e9cfce6fab": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "金贤敏",
+      "a_id": "legacy-80c42934e2607f027a9e",
+      "b_id": "official-6a8821230848548f579d"
+    },
+    "8470fa473837d474": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "刘桐君",
+      "a_id": "legacy-7a8718b50cb55bb43577",
+      "b_id": "official-85dd08886ae139a19c9a"
+    },
+    "7beda0282e9201e5": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "桑红石",
+      "a_id": "legacy-3ee923e4160e3ea8e613",
+      "b_id": "official-8f0715c9296b5a579cbc"
+    },
+    "f507dab8e815d57b": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "金学军",
+      "a_id": "official-f3cc92a892ff8b5bc011",
+      "b_id": "official-2c48a45bb0bda57085ec"
+    },
+    "a6c4a1a2016c31b7": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "吕晖",
+      "a_id": "official-9311388ab2c4311eb536",
+      "b_id": "official-a1163882b0c162db19fd"
+    },
+    "9ba469afafc90db3": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "韦朝春",
+      "a_id": "official-9e25ef160557f1ff978a",
+      "b_id": "official-c6de12472e1d6cecf1b0"
+    },
+    "6e369c8be6e9f1f3": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "俞章盛",
+      "a_id": "official-45ff3ba8884c81241fd4",
+      "b_id": "official-5d6e928d0d951f3c2fc8"
+    },
+    "018637d597214142": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "徐斌",
+      "a_id": "official-080014b5809f605fd5cb",
+      "b_id": "official-26a3e6cf6b750f896d68"
+    },
+    "750e8e38d3740301": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "李翔",
+      "a_id": "official-09c81c517db51399fc1b",
+      "b_id": "official-e3d14d123ba3270a1f2e"
+    },
+    "3c2fee6ce4ac34a6": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "王帅",
+      "a_id": "official-4e314df33ea0fc654314",
+      "b_id": "official-24d2aebcd23876c919be"
+    },
+    "d32bfeca921ba215": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "汪阳东",
+      "a_id": "official-532d69a9c4316d55ae47",
+      "b_id": "official-f45ca17ba9a487c79678"
+    },
+    "f1c6a48b2436054c": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "谢磊",
+      "a_id": "official-dfc33b953275780f280f",
+      "b_id": "official-6a4feb2db077e07beab3"
+    },
+    "30c376464d6a0bad": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "谢磊",
+      "a_id": "official-dfc33b953275780f280f",
+      "b_id": "official-f88bcbcd3e68f78d5d8e"
+    },
+    "99725c1230194ec4": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "谢磊",
+      "a_id": "official-6a4feb2db077e07beab3",
+      "b_id": "official-f88bcbcd3e68f78d5d8e"
+    },
+    "652c7a88e66e111b": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "赵红波",
+      "a_id": "official-52ad56cc58fc7b9b3ba8",
+      "b_id": "official-cbbc1e99a45e40f1e489"
+    },
+    "8182780a43072026": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "程义",
+      "a_id": "official-e48f0fa749d688d0c913",
+      "b_id": "official-364dd32473289a37710b"
+    },
+    "7290f52b0bc42c72": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "陈永明",
+      "a_id": "official-9eb81b81cc9091e694d7",
+      "b_id": "official-9e5c5261ca9860fd4041"
+    },
+    "88cf9538bdb424e7": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "董中林",
+      "a_id": "official-c966bcbfbfd56bf64e4e",
+      "b_id": "official-b088decf12a41109f322"
+    },
+    "81d3284a05f63388": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "窦坤",
+      "a_id": "official-66b2594ae29a9240f189",
+      "b_id": "official-1f44011b0fc44ed72db1"
+    },
+    "2961ecbe00269169": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "方华婵",
+      "a_id": "official-b3d46d195d110e9ae8d7",
+      "b_id": "official-54e221bfcda674668943"
+    },
+    "8be5df4248eef859": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "范晓慧",
+      "a_id": "official-85c6b32aea0a4dbd8399",
+      "b_id": "official-19aec694f461c51d612e"
+    },
+    "d470215787117e1a": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "郭宇峰",
+      "a_id": "official-0ab5e8abb74fdf797f30",
+      "b_id": "official-957ff34341b4ca5f4c51"
+    },
+    "20334aea5b0c87c3": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "黄晓贤",
+      "a_id": "official-8fc8bc3862387d0e6b5a",
+      "b_id": "official-eb2930efc70e7dbdc654"
+    },
+    "4ffcfdf19e40df74": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "柯勇",
+      "a_id": "official-95dbe376bfb48a756f25",
+      "b_id": "official-90f08bae44e3566fadb6"
+    },
+    "232c03b05a0512d5": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "李光辉",
+      "a_id": "official-07f11f789488c36076d5",
+      "b_id": "official-49235112bc498236808a"
+    },
+    "11067c5ee7b595da": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "李骞",
+      "a_id": "official-ccb0a8e8c60833ddbe40",
+      "b_id": "official-8edde5a055d5830cb39a"
+    },
+    "8d8453439759142a": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "刘丝靓",
+      "a_id": "official-749765dffa7723b8bc98",
+      "b_id": "official-e97209fc55db155de3db"
+    },
+    "aa2d20f117ab5aed": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "李云",
+      "a_id": "official-9cbdf3f5c85270c77441",
+      "b_id": "official-c7f28543494f0100d54f"
+    },
+    "1b105b1e51cc48fe": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "李云",
+      "a_id": "official-9cbdf3f5c85270c77441",
+      "b_id": "official-4ecbcff2d906bd7a9453"
+    },
+    "be67300c7e4c6dd7": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "李云",
+      "a_id": "official-9cbdf3f5c85270c77441",
+      "b_id": "official-d33bbd328ec1a4b913f5"
+    },
+    "d58080db41c28aa8": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "李云",
+      "a_id": "official-c7f28543494f0100d54f",
+      "b_id": "official-4ecbcff2d906bd7a9453"
+    },
+    "3f4d7dd3e3098449": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "李云",
+      "a_id": "official-c7f28543494f0100d54f",
+      "b_id": "official-d33bbd328ec1a4b913f5"
+    },
+    "45048fe22c6f8b79": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "李云",
+      "a_id": "official-4ecbcff2d906bd7a9453",
+      "b_id": "official-d33bbd328ec1a4b913f5"
+    },
+    "d57ca2b5e4ac55be": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "卢洋",
+      "a_id": "official-138473c1815ca6804160",
+      "b_id": "official-0fe9026046cf5d0e1af6"
+    },
+    "69680a4dd06d26ae": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "闵小波",
+      "a_id": "official-ea583ab7b2d9ddca03f8",
+      "b_id": "official-ee0b9a9a60534c4a36ad"
+    },
+    "25072679b0acfb10": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "彭志伟",
+      "a_id": "official-903d9073e79022622243",
+      "b_id": "official-4a897eb790cf3af646f3"
+    },
+    "49fa3fd79b7deaae": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "饶明军",
+      "a_id": "official-a7383433b1416c3f2b54",
+      "b_id": "official-9e49acacaebcc2d17d64"
+    },
+    "63c9078b6d1616ce": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "宋云峰",
+      "a_id": "official-ec06c45c5d0ed405f028",
+      "b_id": "official-acd513402ea92bc41678"
+    },
+    "c175403df22e464a": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "颜旭",
+      "a_id": "official-0636ce851d37e98f8492",
+      "b_id": "official-d8a571e854080a909fdc"
+    },
+    "02de8a85064a53dc": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "张贵清",
+      "a_id": "official-c8d0fbae82c034412b59",
+      "b_id": "official-8805808c139918c692b7"
+    },
+    "e0be84ac62ddb9d0": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "张理源",
+      "a_id": "official-6a17d228bf050100a040",
+      "b_id": "official-d7f022279ec977b9c245"
+    },
+    "c97059f0776b68dd": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "张元波",
+      "a_id": "official-6d1fa93c044ff193ce15",
+      "b_id": "official-fb50c4ec306fdb40a1f1"
+    },
+    "4141f44a4c2586de": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "钟强",
+      "a_id": "official-0139039026ede28867c4",
+      "b_id": "official-5dfeea72cdacf89b81e2"
+    },
+    "08c79e88fa5f3e7b": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "朱建裕",
+      "a_id": "official-2f3812410306f6def67e",
+      "b_id": "official-a48730de464a274dca63"
+    },
+    "3f6191479326a64b": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "崔葵馨",
+      "a_id": "official-be8bfbcf40ea9eaa4211",
+      "b_id": "official-d471eb2c32682b2b4839"
+    },
+    "832834abbdce80e5": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "胡海龙",
+      "a_id": "official-508e30f3b63544f85f7b",
+      "b_id": "official-104204d2678417c21333"
+    },
+    "bb940cda65418a75": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "胡文吉豪",
+      "a_id": "official-69b61c56af0b8ff641c9",
+      "b_id": "official-7e6a0890bb52c7b49c0d"
+    },
+    "ef0afcee4ef1b2f4": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "胡文吉豪",
+      "a_id": "official-69b61c56af0b8ff641c9",
+      "b_id": "official-ff75242e46f04601e906"
+    },
+    "a2b2f3db2163bea7": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "胡文吉豪",
+      "a_id": "official-7e6a0890bb52c7b49c0d",
+      "b_id": "official-ff75242e46f04601e906"
+    },
+    "7c2e29be84909170": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "刘苏彪",
+      "a_id": "official-1221efe2565f758958ba",
+      "b_id": "official-e3aeb3fdf0ff571f69d1"
+    },
+    "b84c684a597f1e25": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "刘元东",
+      "a_id": "official-0587c17897fe96cb3d2a",
+      "b_id": "official-bde4d0206bba2f21ee0b"
+    },
+    "735a194a336adf53": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "赵子谦",
+      "a_id": "official-bb5c14d640fbe2d480b4",
+      "b_id": "official-f20aea68973887529155"
+    },
+    "ed3be27bf4146e4f": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "陈建宏",
+      "a_id": "official-69235935c616245198a7",
+      "b_id": "official-ccdebe7b92393768039a"
+    },
+    "09579902267d0482": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "邓红卫",
+      "a_id": "official-918b09ab36feef80ec14",
+      "b_id": "official-f2d315e24e7246abf5c6"
+    },
+    "7abf17a098e7200b": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "董陇军",
+      "a_id": "official-f4bfaf8da6a55324193b",
+      "b_id": "official-0dd1cde9a9c574b62cee"
+    },
+    "3d37bba473258cb6": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "黄麟淇",
+      "a_id": "official-a7971fd8124eca5c9779",
+      "b_id": "official-0a761112f7f12c331700"
+    },
+    "a4567a49fe2814ed": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "黄仁东",
+      "a_id": "official-fa7cfab660ea9e5b766b",
+      "b_id": "official-792a06a1420ed82f858b"
+    },
+    "fb4d86652e9f85ba": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "same_person",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_cross_dept",
+      "name": "胡清纯",
+      "a_id": "official-1d27f766a80e3eddc2e4",
+      "b_id": "official-c8c59c78fcde289f3f6d"
+    },
+    "aab0c2632280d1ba": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "unknown",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_unit_mismatch",
+      "name": "王涛",
+      "a_id": "official-c4b8b308e369201de84a",
+      "b_id": "official-8867f8a1fb750338c9a4"
+    },
+    "8d65b426a24ce524": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "unknown",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_unit_mismatch",
+      "name": "万文杰",
+      "a_id": "official-767dbe5377b4b47b0b0f",
+      "b_id": "official-297f822fca45cae5a4a3"
+    },
+    "3aa114552daf48f6": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "unknown",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_unit_mismatch",
+      "name": "胡洁",
+      "a_id": "official-7ad7b52892a11770bb00",
+      "b_id": "official-7d33da6dc1abc02a1ddf"
+    },
+    "3b3fcc23a42bef76": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "unknown",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_unit_mismatch",
+      "name": "金隼",
+      "a_id": "official-d0dcd16912aa1a87587c",
+      "b_id": "official-28ce720eddff87c9bb96"
+    },
+    "6fc4d68376b10fdb": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "unknown",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_unit_mismatch",
+      "name": "周尧",
+      "a_id": "official-164e621cb8ffabdd6385",
+      "b_id": "official-be507dbc017c68259c0c"
+    },
+    "6068545dc9615395": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "unknown",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_unit_mismatch",
+      "name": "洪亮",
+      "a_id": "official-cad72d65871f88874b64",
+      "b_id": "official-3acd7eadeb3d9a099b12"
+    },
+    "d9b743855eab735b": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "unknown",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_unit_mismatch",
+      "name": "张洁",
+      "a_id": "official-0d679751b8aacb50b295",
+      "b_id": "official-b7191992ee45cba0d704"
+    },
+    "ebb639caec97914f": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "unknown",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_unit_mismatch",
+      "name": "徐恒",
+      "a_id": "official-6f2647befd0f6ad16420",
+      "b_id": "official-bd55cf940d5f2d80b7e8"
+    },
+    "fefbb68631ee0c0d": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "unknown",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_unit_mismatch",
+      "name": "樊春海",
+      "a_id": "official-457a67066ed7ab93dcb8",
+      "b_id": "official-0be8ab3fb57ba6c34ecc"
+    },
+    "894f850f5bf999af": {
+      "emb": null,
+      "program_label": "same_person",
+      "program_verdict": "unknown",
+      "reason": "shared_dedicated_page",
+      "category": "shared_homepage_unit_mismatch",
+      "name": "贾金平",
+      "a_id": "official-67658172c7d8c0311f0a",
+      "b_id": "official-3daf0888d51796cc3394"
+    }
+  }
+}

@@ -16,6 +16,7 @@ from pathlib import Path
 from urllib.parse import quote
 
 from . import core
+from . import storage
 from . import scope
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -310,13 +311,25 @@ def public_counts() -> dict:
     }
 
 
-def coverage() -> dict:
+def coverage(bundle_only: bool = False) -> dict:
+    """覆盖率与资料计数。
+
+    `bundle_only=True` 时只读**随仓库提交的档案包**（dossiers.json.gz），
+    用于「对外材料事实」这类必须与仓库一致、不能受本机缓存影响的统计；
+    接口默认读本机档案（用户刚 enrich 过的内容应立即可见）。
+    """
     from . import public_research
     entries = static_catalog()[0]
     public = [p for p in entries if p.get('catalog_source') or p['id'].startswith('pilot-')]
     official = [p for p in public if not p.get('secondary_source')]
     counts = Counter(name for p in public for name in subject_names(p))
-    reports = [data for p in public if (data := public_research.load(p['id'])) and data['status'] in {'ready','catalog'}]
+    if bundle_only:
+        bundle = public_research._bundle()
+        reports = [data for p in public
+                   if (data := bundle.get(p['id'])) and data.get('status') in {'ready','catalog'}]
+    else:
+        reports = [data for p in public
+                   if (data := public_research.load(p['id'])) and data['status'] in {'ready','catalog'}]
     return {"total_records": len(entries), "official_records": len(official),
             "public_records": len(public), "secondary_records": len(public)-len(official),
             "public_institutions": len({p['institution'] for p in public}),
@@ -464,55 +477,77 @@ def _case_path(mentor_id: str) -> Path:
     return core.DATA_DIR / "investigations" / f"{name}.json"
 
 
+def _normalise_case(mentor_id: str, stored: dict) -> dict:
+    for section in CASE_SECTIONS:
+        stored.setdefault("section_status", {}).setdefault(section, "待核查")
+    stored.setdefault("openalex_author_id", "")
+    stored.setdefault("openalex_snapshot", None)
+    stored.setdefault("evidence", [])
+    stored.setdefault("manual_papers", [])
+    stored.setdefault("mentor_id", mentor_id)
+    return stored
+
+
 def load_case(mentor_id: str) -> dict:
+    """读档案。文件存在但损坏时抛 storage.DataCorruptError，**不静默当成空档案**。
+
+    静默返回空记录最危险：上层一次保存就会把损坏文件（可能只是最后半个字节坏了）
+    覆盖成一份"全新空白档案"，用户的调查记录就此消失。
+    """
     path = _case_path(mentor_id)
-    if path.exists():
-        try:
-            stored = json.loads(path.read_text(encoding="utf-8"))
-            if stored.get("mentor_id") == mentor_id:
-                for section in CASE_SECTIONS:
-                    stored.setdefault("section_status", {}).setdefault(section, "待核查")
-                stored.setdefault("openalex_author_id", "")
-                stored.setdefault("openalex_snapshot", None)
-                stored.setdefault("evidence", [])
-                stored.setdefault("manual_papers", [])
-                return stored
-        except (OSError, ValueError):
-            pass
-    return {"mentor_id": mentor_id, "section_status": {key: "待核查" for key in CASE_SECTIONS},
-            "notes": "", "evidence": [], "manual_papers": [], "openalex_author_id": "", "openalex_snapshot": None,
-            "updated_at": None}
+    if not path.exists():
+        return _normalise_case(mentor_id, {
+            "section_status": {}, "notes": "", "evidence": [],
+            "manual_papers": [], "openalex_author_id": "",
+            "openalex_snapshot": None, "updated_at": None})
+    stored = storage.read_json(path)
+    if stored.get("mentor_id") not in (None, mentor_id):
+        raise storage.DataCorruptError("档案的 mentor_id 与请求不一致，已拒绝读取")
+    return _normalise_case(mentor_id, stored)
 
 
 def _write_case(record: dict) -> None:
     path = _case_path(record["mentor_id"])
-    path.parent.mkdir(parents=True, exist_ok=True)
-    temporary = path.with_suffix(".tmp")
-    temporary.write_text(json.dumps(record, ensure_ascii=False, indent=2), encoding="utf-8")
-    temporary.replace(path)
+    record["updated_at"] = core.now()
+    record["revision"] = int(record.get("revision") or 0) + 1
+    with storage.file_lock(path):
+        storage.atomic_write_json(path, record)
+
+
+def mutate_case(mentor_id: str, mutate):
+    """锁内完成「读档案 → 修改 → 写回」，避免并发保存互相覆盖。"""
+    path = _case_path(mentor_id)
+    with storage.file_lock(path):
+        record = load_case(mentor_id)
+        result = mutate(record)
+        record["updated_at"] = core.now()
+        record["revision"] = int(record.get("revision") or 0) + 1
+        storage.atomic_write_json(path, record)
+        return record if result is None else result
 
 
 def update_case(mentor_id: str, changes: dict) -> dict:
     if entry_by_id(mentor_id) is None:
         raise ValueError("找不到这位导师")
-    record = load_case(mentor_id)
-    for section, status in changes.get("section_status", {}).items():
-        if section not in CASE_SECTIONS or status not in CASE_STATUSES:
-            raise ValueError("无效的调查项或状态")
-        record["section_status"][section] = status
-    if "notes" in changes:
-        record["notes"] = core.clean_text(changes["notes"], 3000)
-    if "openalex_author_id" in changes:
-        from .openalex import AUTHOR_ID
-        author_id = str(changes["openalex_author_id"])
-        if not AUTHOR_ID.fullmatch(author_id):
-            raise ValueError("无效的 OpenAlex 作者 ID")
-        if record.get("openalex_author_id") != author_id:
-            record["openalex_snapshot"] = None
-        record["openalex_author_id"] = author_id
-    record["updated_at"] = core.now()
-    _write_case(record)
-    return record
+
+    def apply(record: dict):
+        for section, status in changes.get("section_status", {}).items():
+            if section not in CASE_SECTIONS or status not in CASE_STATUSES:
+                raise ValueError("无效的调查项或状态")
+            record["section_status"][section] = status
+        if "notes" in changes:
+            record["notes"] = core.clean_text(changes["notes"], 3000)
+        if "openalex_author_id" in changes:
+            from .openalex import AUTHOR_ID
+            author_id = str(changes["openalex_author_id"])
+            if not AUTHOR_ID.fullmatch(author_id):
+                raise ValueError("无效的 OpenAlex 作者 ID")
+            if record.get("openalex_author_id") != author_id:
+                record["openalex_snapshot"] = None
+            record["openalex_author_id"] = author_id
+        return record
+
+    return mutate_case(mentor_id, apply)
 
 
 def add_evidence(mentor_id: str, data: dict) -> dict:
@@ -524,15 +559,16 @@ def add_evidence(mentor_id: str, data: dict) -> dict:
     claim = core.clean_text(data.get("claim"), 500)
     if category not in EVIDENCE_CATEGORIES or not title or not url:
         raise ValueError("请选择证据类别，并填写短标题和有效的 http(s) 来源链接")
-    record = load_case(mentor_id)
-    if len(record["evidence"]) >= 200:
-        raise ValueError("单人最多保存 200 条证据")
     item = {"id": uuid.uuid4().hex, "category": category, "title": title,
             "url": url, "claim": claim, "status": "待人工核查", "added_at": core.now()}
-    record["evidence"].append(item)
-    record["updated_at"] = core.now()
-    _write_case(record)
-    return record
+
+    def apply(record: dict):
+        if len(record["evidence"]) >= 200:
+            raise ValueError("单人最多保存 200 条证据")
+        record["evidence"].append(item)
+        return record
+
+    return mutate_case(mentor_id, apply)
 
 
 def update_evidence(mentor_id: str, evidence_id: str, status: str) -> dict:
@@ -540,28 +576,30 @@ def update_evidence(mentor_id: str, evidence_id: str, status: str) -> dict:
         raise ValueError("找不到这位导师")
     if status not in EVIDENCE_STATUSES:
         raise ValueError("无效的证据状态")
-    record = load_case(mentor_id)
-    item = next((entry for entry in record["evidence"] if entry["id"] == evidence_id), None)
-    if item is None:
-        raise ValueError("找不到这条证据")
-    item["status"] = status
-    item["checked_at"] = core.now() if status == "已人工核查" else None
-    record["updated_at"] = core.now()
-    _write_case(record)
-    return record
+
+    def apply(record: dict):
+        item = next((entry for entry in record["evidence"] if entry["id"] == evidence_id), None)
+        if item is None:
+            raise ValueError("找不到这条证据")
+        item["status"] = status
+        item["checked_at"] = core.now() if status == "已人工核查" else None
+        return record
+
+    return mutate_case(mentor_id, apply)
 
 
 def remove_evidence(mentor_id: str, evidence_id: str) -> dict:
     if entry_by_id(mentor_id) is None:
         raise ValueError("找不到这位导师")
-    record = load_case(mentor_id)
-    remaining = [entry for entry in record["evidence"] if entry["id"] != evidence_id]
-    if len(remaining) == len(record["evidence"]):
-        raise ValueError("找不到这条证据")
-    record["evidence"] = remaining
-    record["updated_at"] = core.now()
-    _write_case(record)
-    return record
+
+    def apply(record: dict):
+        remaining = [entry for entry in record["evidence"] if entry["id"] != evidence_id]
+        if len(remaining) == len(record["evidence"]):
+            raise ValueError("找不到这条证据")
+        record["evidence"] = remaining
+        return record
+
+    return mutate_case(mentor_id, apply)
 
 
 def refresh_openalex(mentor_id: str) -> dict:
@@ -573,14 +611,16 @@ def refresh_openalex(mentor_id: str) -> dict:
     from .openalex import works_snapshot
     author_id = record["openalex_author_id"]
     snapshot = works_snapshot(author_id)
-    record = load_case(mentor_id)
-    if record.get("openalex_author_id") != author_id:
-        raise ValueError("已更换作者，请重新读取论文")
-    record["openalex_snapshot"] = snapshot
-    record["openalex_snapshot"]["fetched_at"] = core.now()
-    record["updated_at"] = core.now()
-    _write_case(record)
-    return record
+
+    def apply(rec: dict):
+        # 网络请求期间作者可能被换掉：在锁内重新校验，避免把 A 的作品写进 B 的档案。
+        if rec.get("openalex_author_id") != author_id:
+            raise ValueError("已更换作者，请重新读取论文")
+        snapshot["fetched_at"] = core.now()
+        rec["openalex_snapshot"] = snapshot
+        return rec
+
+    return mutate_case(mentor_id, apply)
 
 
 def add_paper(mentor_id: str, data: dict) -> dict:
@@ -597,31 +637,38 @@ def add_paper(mentor_id: str, data: dict) -> dict:
         raise ValueError("DOI 格式不对，可填写 10. 开头的编号或 doi.org 链接")
     if year and (not year.isdigit() or not 1800 <= int(year) <= 2100):
         raise ValueError("请填写四位发表年份")
-    record = load_case(mentor_id)
-    if len(record["manual_papers"]) >= 100:
-        raise ValueError("每位导师最多补充 100 篇论文")
-    if any((doi and item.get("doi") == doi) or (not doi and item.get("url") == url and item["title"] == title)
-           for item in record["manual_papers"]):
-        raise ValueError("这篇论文已经添加过了")
-    record["manual_papers"].append({"id": uuid.uuid4().hex, "title": title, "doi": doi,
-        "year": int(year) if year else None, "url": url or "https://doi.org/" + quote(doi, safe="/"),
-        "venue": "", "added_at": core.now(), "status": "待人工核查"})
-    record["updated_at"] = core.now()
-    _write_case(record)
-    return record
+    paper = {"id": uuid.uuid4().hex, "title": title, "doi": doi,
+             "year": int(year) if year else None,
+             "url": url or "https://doi.org/" + quote(doi, safe="/"),
+             "venue": "", "added_at": core.now(), "status": "待人工核查"}
+
+    def apply(record: dict):
+        if len(record["manual_papers"]) >= 100:
+            raise ValueError("每位导师最多补充 100 篇论文")
+        duplicate = any(
+            (doi and item.get("doi") == doi)
+            or (not doi and item.get("url") == url and item["title"] == title)
+            for item in record["manual_papers"])
+        if duplicate:
+            raise ValueError("这篇论文已经添加过了")
+        record["manual_papers"].append(paper)
+        return record
+
+    return mutate_case(mentor_id, apply)
 
 
 def remove_paper(mentor_id: str, paper_id: str) -> dict:
     if entry_by_id(mentor_id) is None:
         raise ValueError("找不到这位导师")
-    record = load_case(mentor_id)
-    remaining = [item for item in record["manual_papers"] if item["id"] != paper_id]
-    if len(remaining) == len(record["manual_papers"]):
-        raise ValueError("找不到这篇手动添加的论文")
-    record["manual_papers"] = remaining
-    record["updated_at"] = core.now()
-    _write_case(record)
-    return record
+
+    def apply(record: dict):
+        remaining = [item for item in record["manual_papers"] if item["id"] != paper_id]
+        if len(remaining) == len(record["manual_papers"]):
+            raise ValueError("找不到这篇手动添加的论文")
+        record["manual_papers"] = remaining
+        return record
+
+    return mutate_case(mentor_id, apply)
 
 
 def report_markdown(mentor_id: str) -> str:

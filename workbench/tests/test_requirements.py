@@ -34,7 +34,13 @@ IMPORT_TO_DIST = {
 PROVIDED = {"starlette", "pydantic", "anyio", "click", "h11", "typing_extensions"}
 # 惰性导入（函数体内）或仅开发工具使用的第三方库：运行工作台不需要。
 LAZY_ONLY = {"pdfplumber"}          # collect_caas_catalog 的 main() 内惰性导入
-DEV_ONLY = {"markdown"}             # 仅 tools/make_aic_html.py，且用系统 Python 跑
+# 仅开发者本地跑一次性工具的依赖，运行工作台不需要，CI 也不执行。
+#   markdown          -> tools/make_aic_html.py（用系统 Python 跑）
+#   PIL / playwright  -> tools/generate_visual_assets.py：顶层过程式脚本，一次性生成
+#     workbench/web/assets/visuals/ 下的配图；它不被任何模块 import，也不在 CI 里跑，
+#     所以不进 requirements.txt（其中 playwright 还要额外装浏览器内核）。
+#     清单写在 requirements.txt 末尾的 Optional / development only 注释里。
+DEV_ONLY = {"markdown", "PIL", "playwright"}
 
 
 def declared() -> set[str]:

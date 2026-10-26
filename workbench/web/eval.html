@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>算法评测 · 导师调查工作台</title>
+  <title>算法评测 · 循证知途</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2311302e'/%3E%3Ctext x='16' y='23' font-size='19' text-anchor='middle' fill='%23ffffff' font-family='serif'%3E研%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="/assets/eval.css?v=20261024-eval2">
 </head>
@@ -12,16 +12,15 @@
 
 <header class="site-head">
   <div class="head-inner">
-    <a class="brand" href="/" aria-label="导师调查工作台首页">
-      <span class="seal" aria-hidden="true">研</span>
+    <a class="brand" href="/" aria-label="循证知途首页">
+      <span class="seal" aria-hidden="true">循</span>
       <span class="brand-text">
-        <b>导师调查工作台</b>
-        <span>Mentor Research Workbench · 工学</span>
+        <b>循证知途 · 算法评测看板</b>
+        <span>让导师调查更清晰、更有依据 · 算法评测产物集中呈现</span>
       </span>
     </a>
     <nav class="head-meta" aria-label="站点导航">
-      <a href="/">返回工作台</a>
-      <a href="/classic">资料整理视图</a>
+      <a href="/">返回导师检索</a>
       <a class="head-cta" href="/">开始调查<span aria-hidden="true">→</span></a>
     </nav>
   </div>
@@ -36,8 +35,7 @@
         <p class="eyebrow">评测产物 · Evaluation</p>
         <h1>算法评测</h1>
         <p class="page-lede">
-          本机实跑后写进仓库的评测产物都在这里：界面不重算、不补零，每个数字都能回到下方列出的产物文件。
-          某份产物尚未入库时，对应分区写「待产出」并给出复现入口，而不是用占位数字顶上。
+          实跑评测产物集中呈现：界面不重算、不补假零，所有指标均可回溯至产物文件。产物未生成时明确标注「待产出」并附复现命令。
         </p>
         <ul class="hero-chips" aria-label="评测口径">
           <li>弱监督标签</li>
@@ -58,7 +56,7 @@
   <nav class="sec-nav" aria-label="本页章节导航">
     <div class="sec-nav-inner">
       <span class="sec-nav-label" aria-hidden="true">目录</span>
-      <a href="#summarySection"><span class="sec-nav-num" aria-hidden="true">00</span>摘要</a>
+      <a href="#summarySection" class="is-active"><span class="sec-nav-num" aria-hidden="true">00</span>摘要</a>
       <a href="#retrievalSection"><span class="sec-nav-num" aria-hidden="true">01</span>检索</a>
       <a href="#directionsSection"><span class="sec-nav-num" aria-hidden="true">02</span>方向推断</a>
       <a href="#disambiguationSection"><span class="sec-nav-num" aria-hidden="true">03</span>同名消歧</a>
@@ -102,24 +100,27 @@
 
         <div class="kpi-grid" id="summaryCards"></div>
 
-        <div class="summary-pair">
-          <div class="notice notice--honesty" id="honestyBox">
-            <h3>口径：这批评测不是人工标注</h3>
-            <p id="honestyText"></p>
-            <p class="micro" id="honestyExtra"></p>
-          </div>
-          <div class="notice" id="reproduceBox">
-            <h3>复现</h3>
-            <p class="micro">在仓库根目录执行下面的命令即可重新产出这些产物（命令原文取自产物的复现说明字段）：</p>
-            <pre class="code-block" id="reproduceCommand"></pre>
-            <p class="micro" id="reproduceNote"></p>
-          </div>
+        <div class="notice notice--honesty" id="honestyBox">
+          <h3>口径：这批评测不是人工标注</h3>
+          <p id="honestyText"></p>
+          <p class="micro" id="honestyExtra"></p>
         </div>
 
-        <div class="source-panel">
-          <p class="source-note">本页数字均来自以下产物文件，页面不做任何重算：</p>
-          <ul class="source-list" id="sourceList"></ul>
-        </div>
+        <details class="eval-fold-details">
+          <summary>复现命令与产物路径详情</summary>
+          <div class="eval-fold-content">
+            <div class="notice" id="reproduceBox">
+              <h3>复现</h3>
+              <p class="micro">在仓库根目录执行下面的命令即可重新产出这些产物（命令原文取自产物的复现说明字段）：</p>
+              <pre class="code-block" id="reproduceCommand"></pre>
+              <p class="micro" id="reproduceNote"></p>
+            </div>
+            <div class="source-panel">
+              <p class="source-note">本页数字均来自以下产物文件，页面不做任何重算：</p>
+              <ul class="source-list" id="sourceList"></ul>
+            </div>
+          </div>
+        </details>
       </section>
 
       <!-- ───────────────────────── 01 检索 ───────────────────────── -->
@@ -136,9 +137,15 @@
           </div>
         </header>
 
+        <div class="method-segment-nav" role="tablist" aria-label="评测查询类别切换">
+          <button type="button" class="segment-btn active" role="tab" aria-selected="true" data-split="a">A 类 · 结构化查询</button>
+          <button type="button" class="segment-btn" role="tab" aria-selected="false" data-split="b">B 类 · 自然语言查询</button>
+          <button type="button" class="segment-btn" role="tab" aria-selected="false" data-split="both">并列查看</button>
+        </div>
+
         <div class="chart-stack">
 
-          <article class="chart-block">
+          <article class="chart-block method-panel" id="methodBlockA">
             <div class="chart-head">
               <h3 id="hMethodA">A 类 · 结构化查询 <em>test</em></h3>
               <p class="chart-note" id="noteMethodA"></p>
@@ -154,7 +161,7 @@
             </details>
           </article>
 
-          <article class="chart-block">
+          <article class="chart-block method-panel" id="methodBlockB">
             <div class="chart-head">
               <h3 id="hMethodB">B 类 · 自然语言查询 <em>test</em></h3>
               <p class="chart-note" id="noteMethodB"></p>
@@ -197,7 +204,10 @@
               <p class="chart-note" id="noteSweep"></p>
             </div>
             <figure class="chart" aria-labelledby="hSweep">
-              <div class="svg-wrap"><div id="chartSweep"></div></div>
+              <div class="svg-wrap">
+                <div id="chartSweep"></div>
+                <div class="chart-tooltip" id="sweepTooltip" hidden></div>
+              </div>
               <figcaption class="legend" id="legendSweep"></figcaption>
             </figure>
             <details class="data-fold">
@@ -272,7 +282,10 @@
             </p>
           </div>
         </header>
-        <p class="chart-note" id="failuresMeta"></p>
+        <div class="failures-toolbar">
+          <p class="chart-note" id="failuresMeta"></p>
+          <div class="failures-filters" id="failuresFilters" role="tablist" aria-label="失败分类过滤"></div>
+        </div>
         <div class="table-wrap table-wrap--failures">
           <table class="data-table" id="failuresTable">
             <caption>失败案例：查询、方法、类别、实际 Top-1 与说明</caption>

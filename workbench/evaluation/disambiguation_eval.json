@@ -1,74 +1,82 @@
 {
   "schema": "mentor-workbench/disambiguation-eval/v1",
-  "generated_at": "2026-10-24T01:30:42+08:00",
+  "generated_at": "2026-10-26T16:51:27+08:00",
   "how_to_reproduce": "python -m workbench.disambiguate_names --evaluate --gold",
   "protocol": {
     "same_person": "同一专属个人主页 + 同机构 + 站点归属与院系一致",
     "different_person": "两个互不相同的专属主页且院系/一级学科冲突（或跨机构）",
     "unknown": "名录页/缺主页/同院系同学科/站点归属不符 —— 不进入指标"
   },
-  "description": "同名消歧独立复核集：每对的判定可由 a/b 内的原始字段直接复现；verdict 是独立复核结论，auto_label 是模块自动协议给出的标签，两者不一致之处即为协议的残余风险。",
+  "description": "程序辅助核验集：判定字段可由 a/b 内的原始字段直接复现；verdict 由 adjudicate() 规则给出、auto_label 由 pair_label() 规则给出，两者都是程序，并非人工标注。人工金标准见 workbench/evaluation/human_annotation/。",
   "stats": {
     "groups": 1024,
     "pairs_total": 2564,
     "labels": {
-      "different_person": 963,
-      "unknown": 1517,
-      "same_person": 84
+      "different_person": 927,
+      "unknown": 1554,
+      "same_person": 83
     },
     "unknown_reasons": {
-      "missing_url": 1209,
-      "listing_page": 221,
-      "missing_url+listing_page": 87
+      "missing_url": 1205,
+      "listing_page": 227,
+      "missing_url+listing_page": 91,
+      "unit_conflict_only": 30,
+      "same_unit_cross_discipline": 1
     },
     "groups_with_missing_home": 578,
     "same_institution": {
-      "unknown": 135,
-      "different_person": 31,
-      "same_person": 84
+      "unknown": 167,
+      "same_person": 83
     },
     "cross_institution": {
-      "different_person": 932,
-      "unknown": 1382
+      "different_person": 927,
+      "unknown": 1387
     }
   },
   "primary": {
     "scope": "同校同名（主指标）",
-    "labelled_pairs": 115,
-    "positives": 84,
-    "negatives": 31,
-    "excluded_unknown": 135,
-    "auc_defined": true,
+    "labelled_pairs": 83,
+    "positives": 83,
+    "negatives": 0,
+    "excluded_unknown": 167,
+    "auc_defined": false,
     "auc": {
-      "institution_only": 0.5,
-      "embedding_only": 0.8218125960061444,
-      "embedding_clean_only": 0.8279569892473119
+      "institution_only": null,
+      "embedding_only": null,
+      "embedding_clean_only": null
     },
+    "metrics_available": {
+      "precision": false,
+      "recall": true,
+      "f1": false,
+      "auc": false
+    },
+    "metrics_note": "本口径缺少负例：精确率/召回率/F1/AUC 中依赖该类别的项按「不可计算」（null）处理，不用 0 或旧数字替代。这不是回归，而是弱判据被移除后的真实结果。",
     "baseline_institution": {
-      "tp": 84,
-      "fp": 31,
+      "tp": 83,
+      "fp": 0,
       "fn": 0,
       "tn": 0,
-      "precision": 0.7304347826086957,
+      "precision": null,
       "recall": 1.0,
-      "f1": 0.8442211055276382,
+      "f1": null,
       "support": {
-        "positives": 84,
-        "negatives": 31
+        "positives": 83,
+        "negatives": 0
       }
     },
     "baseline_embedding": {
       "confusion": {
         "tp": 50,
-        "fp": 4,
-        "fn": 34,
-        "tn": 27,
-        "precision": 0.9259259259259259,
-        "recall": 0.5952380952380952,
-        "f1": 0.7246376811594204,
+        "fp": 0,
+        "fn": 33,
+        "tn": 0,
+        "precision": null,
+        "recall": 0.6024096385542169,
+        "f1": null,
         "support": {
-          "positives": 84,
-          "negatives": 31
+          "positives": 83,
+          "negatives": 0
         }
       },
       "threshold": 0.85
@@ -77,252 +85,252 @@
       {
         "emb>=": 0.5,
         "same_inst_and_emb": {
-          "tp": 83,
-          "fp": 25,
+          "tp": 82,
+          "fp": 0,
           "fn": 1,
-          "tn": 6,
-          "precision": 0.7685185185185185,
-          "recall": 0.9880952380952381,
-          "f1": 0.8645833333333333,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.9879518072289156,
+          "f1": null,
           "support": {
-            "positives": 84,
-            "negatives": 31
+            "positives": 83,
+            "negatives": 0
           }
         },
         "emb_only": {
-          "tp": 83,
-          "fp": 25,
+          "tp": 82,
+          "fp": 0,
           "fn": 1,
-          "tn": 6,
-          "precision": 0.7685185185185185,
-          "recall": 0.9880952380952381,
-          "f1": 0.8645833333333333,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.9879518072289156,
+          "f1": null,
           "support": {
-            "positives": 84,
-            "negatives": 31
+            "positives": 83,
+            "negatives": 0
           }
         },
         "emb_clean_only": {
-          "tp": 83,
-          "fp": 28,
+          "tp": 82,
+          "fp": 0,
           "fn": 1,
-          "tn": 3,
-          "precision": 0.7477477477477478,
-          "recall": 0.9880952380952381,
-          "f1": 0.8512820512820515,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.9879518072289156,
+          "f1": null,
           "support": {
-            "positives": 84,
-            "negatives": 31
+            "positives": 83,
+            "negatives": 0
           }
         }
       },
       {
         "emb>=": 0.55,
         "same_inst_and_emb": {
-          "tp": 82,
-          "fp": 22,
+          "tp": 81,
+          "fp": 0,
           "fn": 2,
-          "tn": 9,
-          "precision": 0.7884615384615384,
-          "recall": 0.9761904761904762,
-          "f1": 0.8723404255319148,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.9759036144578314,
+          "f1": null,
           "support": {
-            "positives": 84,
-            "negatives": 31
+            "positives": 83,
+            "negatives": 0
           }
         },
         "emb_only": {
-          "tp": 82,
-          "fp": 22,
+          "tp": 81,
+          "fp": 0,
           "fn": 2,
-          "tn": 9,
-          "precision": 0.7884615384615384,
-          "recall": 0.9761904761904762,
-          "f1": 0.8723404255319148,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.9759036144578314,
+          "f1": null,
           "support": {
-            "positives": 84,
-            "negatives": 31
+            "positives": 83,
+            "negatives": 0
           }
         },
         "emb_clean_only": {
-          "tp": 83,
-          "fp": 25,
+          "tp": 82,
+          "fp": 0,
           "fn": 1,
-          "tn": 6,
-          "precision": 0.7685185185185185,
-          "recall": 0.9880952380952381,
-          "f1": 0.8645833333333333,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.9879518072289156,
+          "f1": null,
           "support": {
-            "positives": 84,
-            "negatives": 31
+            "positives": 83,
+            "negatives": 0
           }
         }
       },
       {
         "emb>=": 0.6,
         "same_inst_and_emb": {
-          "tp": 80,
-          "fp": 21,
+          "tp": 79,
+          "fp": 0,
           "fn": 4,
-          "tn": 10,
-          "precision": 0.7920792079207921,
-          "recall": 0.9523809523809523,
-          "f1": 0.8648648648648649,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.9518072289156626,
+          "f1": null,
           "support": {
-            "positives": 84,
-            "negatives": 31
+            "positives": 83,
+            "negatives": 0
           }
         },
         "emb_only": {
-          "tp": 80,
-          "fp": 21,
+          "tp": 79,
+          "fp": 0,
           "fn": 4,
-          "tn": 10,
-          "precision": 0.7920792079207921,
-          "recall": 0.9523809523809523,
-          "f1": 0.8648648648648649,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.9518072289156626,
+          "f1": null,
           "support": {
-            "positives": 84,
-            "negatives": 31
+            "positives": 83,
+            "negatives": 0
           }
         },
         "emb_clean_only": {
-          "tp": 82,
-          "fp": 17,
+          "tp": 81,
+          "fp": 0,
           "fn": 2,
-          "tn": 14,
-          "precision": 0.8282828282828283,
-          "recall": 0.9761904761904762,
-          "f1": 0.8961748633879781,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.9759036144578314,
+          "f1": null,
           "support": {
-            "positives": 84,
-            "negatives": 31
+            "positives": 83,
+            "negatives": 0
           }
         }
       },
       {
         "emb>=": 0.65,
         "same_inst_and_emb": {
-          "tp": 79,
-          "fp": 17,
+          "tp": 78,
+          "fp": 0,
           "fn": 5,
-          "tn": 14,
-          "precision": 0.8229166666666666,
-          "recall": 0.9404761904761905,
-          "f1": 0.8777777777777778,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.9397590361445783,
+          "f1": null,
           "support": {
-            "positives": 84,
-            "negatives": 31
+            "positives": 83,
+            "negatives": 0
           }
         },
         "emb_only": {
-          "tp": 79,
-          "fp": 17,
+          "tp": 78,
+          "fp": 0,
           "fn": 5,
-          "tn": 14,
-          "precision": 0.8229166666666666,
-          "recall": 0.9404761904761905,
-          "f1": 0.8777777777777778,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.9397590361445783,
+          "f1": null,
           "support": {
-            "positives": 84,
-            "negatives": 31
+            "positives": 83,
+            "negatives": 0
           }
         },
         "emb_clean_only": {
-          "tp": 79,
-          "fp": 16,
+          "tp": 78,
+          "fp": 0,
           "fn": 5,
-          "tn": 15,
-          "precision": 0.8315789473684211,
-          "recall": 0.9404761904761905,
-          "f1": 0.88268156424581,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.9397590361445783,
+          "f1": null,
           "support": {
-            "positives": 84,
-            "negatives": 31
+            "positives": 83,
+            "negatives": 0
           }
         }
       },
       {
         "emb>=": 0.7,
         "same_inst_and_emb": {
-          "tp": 76,
-          "fp": 13,
+          "tp": 75,
+          "fp": 0,
           "fn": 8,
-          "tn": 18,
-          "precision": 0.8539325842696629,
-          "recall": 0.9047619047619048,
-          "f1": 0.8786127167630058,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.9036144578313253,
+          "f1": null,
           "support": {
-            "positives": 84,
-            "negatives": 31
+            "positives": 83,
+            "negatives": 0
           }
         },
         "emb_only": {
-          "tp": 76,
-          "fp": 13,
+          "tp": 75,
+          "fp": 0,
           "fn": 8,
-          "tn": 18,
-          "precision": 0.8539325842696629,
-          "recall": 0.9047619047619048,
-          "f1": 0.8786127167630058,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.9036144578313253,
+          "f1": null,
           "support": {
-            "positives": 84,
-            "negatives": 31
+            "positives": 83,
+            "negatives": 0
           }
         },
         "emb_clean_only": {
-          "tp": 77,
-          "fp": 14,
+          "tp": 76,
+          "fp": 0,
           "fn": 7,
-          "tn": 17,
-          "precision": 0.8461538461538461,
-          "recall": 0.9166666666666666,
-          "f1": 0.8799999999999999,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.9156626506024096,
+          "f1": null,
           "support": {
-            "positives": 84,
-            "negatives": 31
+            "positives": 83,
+            "negatives": 0
           }
         }
       },
       {
         "emb>=": 0.75,
         "same_inst_and_emb": {
-          "tp": 71,
-          "fp": 11,
+          "tp": 70,
+          "fp": 0,
           "fn": 13,
-          "tn": 20,
-          "precision": 0.8658536585365854,
-          "recall": 0.8452380952380952,
-          "f1": 0.8554216867469879,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.8433734939759037,
+          "f1": null,
           "support": {
-            "positives": 84,
-            "negatives": 31
+            "positives": 83,
+            "negatives": 0
           }
         },
         "emb_only": {
-          "tp": 71,
-          "fp": 11,
+          "tp": 70,
+          "fp": 0,
           "fn": 13,
-          "tn": 20,
-          "precision": 0.8658536585365854,
-          "recall": 0.8452380952380952,
-          "f1": 0.8554216867469879,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.8433734939759037,
+          "f1": null,
           "support": {
-            "positives": 84,
-            "negatives": 31
+            "positives": 83,
+            "negatives": 0
           }
         },
         "emb_clean_only": {
-          "tp": 71,
-          "fp": 11,
+          "tp": 70,
+          "fp": 0,
           "fn": 13,
-          "tn": 20,
-          "precision": 0.8658536585365854,
-          "recall": 0.8452380952380952,
-          "f1": 0.8554216867469879,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.8433734939759037,
+          "f1": null,
           "support": {
-            "positives": 84,
-            "negatives": 31
+            "positives": 83,
+            "negatives": 0
           }
         }
       },
@@ -330,41 +338,41 @@
         "emb>=": 0.8,
         "same_inst_and_emb": {
           "tp": 64,
-          "fp": 7,
-          "fn": 20,
-          "tn": 24,
-          "precision": 0.9014084507042254,
-          "recall": 0.7619047619047619,
-          "f1": 0.8258064516129031,
+          "fp": 0,
+          "fn": 19,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.7710843373493976,
+          "f1": null,
           "support": {
-            "positives": 84,
-            "negatives": 31
+            "positives": 83,
+            "negatives": 0
           }
         },
         "emb_only": {
           "tp": 64,
-          "fp": 7,
-          "fn": 20,
-          "tn": 24,
-          "precision": 0.9014084507042254,
-          "recall": 0.7619047619047619,
-          "f1": 0.8258064516129031,
+          "fp": 0,
+          "fn": 19,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.7710843373493976,
+          "f1": null,
           "support": {
-            "positives": 84,
-            "negatives": 31
+            "positives": 83,
+            "negatives": 0
           }
         },
         "emb_clean_only": {
           "tp": 64,
-          "fp": 7,
-          "fn": 20,
-          "tn": 24,
-          "precision": 0.9014084507042254,
-          "recall": 0.7619047619047619,
-          "f1": 0.8258064516129031,
+          "fp": 0,
+          "fn": 19,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.7710843373493976,
+          "f1": null,
           "support": {
-            "positives": 84,
-            "negatives": 31
+            "positives": 83,
+            "negatives": 0
           }
         }
       },
@@ -372,41 +380,41 @@
         "emb>=": 0.85,
         "same_inst_and_emb": {
           "tp": 50,
-          "fp": 4,
-          "fn": 34,
-          "tn": 27,
-          "precision": 0.9259259259259259,
-          "recall": 0.5952380952380952,
-          "f1": 0.7246376811594204,
+          "fp": 0,
+          "fn": 33,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.6024096385542169,
+          "f1": null,
           "support": {
-            "positives": 84,
-            "negatives": 31
+            "positives": 83,
+            "negatives": 0
           }
         },
         "emb_only": {
           "tp": 50,
-          "fp": 4,
-          "fn": 34,
-          "tn": 27,
-          "precision": 0.9259259259259259,
-          "recall": 0.5952380952380952,
-          "f1": 0.7246376811594204,
+          "fp": 0,
+          "fn": 33,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.6024096385542169,
+          "f1": null,
           "support": {
-            "positives": 84,
-            "negatives": 31
+            "positives": 83,
+            "negatives": 0
           }
         },
         "emb_clean_only": {
           "tp": 50,
-          "fp": 4,
-          "fn": 34,
-          "tn": 27,
-          "precision": 0.9259259259259259,
-          "recall": 0.5952380952380952,
-          "f1": 0.7246376811594204,
+          "fp": 0,
+          "fn": 33,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.6024096385542169,
+          "f1": null,
           "support": {
-            "positives": 84,
-            "negatives": 31
+            "positives": 83,
+            "negatives": 0
           }
         }
       },
@@ -414,41 +422,41 @@
         "emb>=": 0.9,
         "same_inst_and_emb": {
           "tp": 30,
-          "fp": 2,
-          "fn": 54,
-          "tn": 29,
-          "precision": 0.9375,
-          "recall": 0.35714285714285715,
-          "f1": 0.5172413793103449,
+          "fp": 0,
+          "fn": 53,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.3614457831325301,
+          "f1": null,
           "support": {
-            "positives": 84,
-            "negatives": 31
+            "positives": 83,
+            "negatives": 0
           }
         },
         "emb_only": {
           "tp": 30,
-          "fp": 2,
-          "fn": 54,
-          "tn": 29,
-          "precision": 0.9375,
-          "recall": 0.35714285714285715,
-          "f1": 0.5172413793103449,
+          "fp": 0,
+          "fn": 53,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.3614457831325301,
+          "f1": null,
           "support": {
-            "positives": 84,
-            "negatives": 31
+            "positives": 83,
+            "negatives": 0
           }
         },
         "emb_clean_only": {
           "tp": 30,
-          "fp": 2,
-          "fn": 54,
-          "tn": 29,
-          "precision": 0.9375,
-          "recall": 0.35714285714285715,
-          "f1": 0.5172413793103449,
+          "fp": 0,
+          "fn": 53,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.3614457831325301,
+          "f1": null,
           "support": {
-            "positives": 84,
-            "negatives": 31
+            "positives": 83,
+            "negatives": 0
           }
         }
       }
@@ -456,41 +464,48 @@
   },
   "reviewed": {
     "scope": "同校同名（复核后）",
-    "labelled_pairs": 105,
-    "positives": 74,
-    "negatives": 31,
-    "excluded_unknown": 145,
-    "auc_defined": true,
+    "labelled_pairs": 73,
+    "positives": 73,
+    "negatives": 0,
+    "excluded_unknown": 177,
+    "auc_defined": false,
     "auc": {
-      "institution_only": 0.5,
-      "embedding_only": 0.8343504795117699,
-      "embedding_clean_only": 0.8430688753269399
+      "institution_only": null,
+      "embedding_only": null,
+      "embedding_clean_only": null
     },
+    "metrics_available": {
+      "precision": false,
+      "recall": true,
+      "f1": false,
+      "auc": false
+    },
+    "metrics_note": "本口径缺少负例：精确率/召回率/F1/AUC 中依赖该类别的项按「不可计算」（null）处理，不用 0 或旧数字替代。这不是回归，而是弱判据被移除后的真实结果。",
     "baseline_institution": {
-      "tp": 74,
-      "fp": 31,
+      "tp": 73,
+      "fp": 0,
       "fn": 0,
       "tn": 0,
-      "precision": 0.7047619047619048,
+      "precision": null,
       "recall": 1.0,
-      "f1": 0.8268156424581006,
+      "f1": null,
       "support": {
-        "positives": 74,
-        "negatives": 31
+        "positives": 73,
+        "negatives": 0
       }
     },
     "baseline_embedding": {
       "confusion": {
         "tp": 44,
-        "fp": 4,
-        "fn": 30,
-        "tn": 27,
-        "precision": 0.9166666666666666,
-        "recall": 0.5945945945945946,
-        "f1": 0.7213114754098361,
+        "fp": 0,
+        "fn": 29,
+        "tn": 0,
+        "precision": null,
+        "recall": 0.6027397260273972,
+        "f1": null,
         "support": {
-          "positives": 74,
-          "negatives": 31
+          "positives": 73,
+          "negatives": 0
         }
       },
       "threshold": 0.85
@@ -499,252 +514,252 @@
       {
         "emb>=": 0.5,
         "same_inst_and_emb": {
-          "tp": 74,
-          "fp": 25,
+          "tp": 73,
+          "fp": 0,
           "fn": 0,
-          "tn": 6,
-          "precision": 0.7474747474747475,
+          "tn": 0,
+          "precision": null,
           "recall": 1.0,
-          "f1": 0.8554913294797689,
+          "f1": null,
           "support": {
-            "positives": 74,
-            "negatives": 31
+            "positives": 73,
+            "negatives": 0
           }
         },
         "emb_only": {
-          "tp": 74,
-          "fp": 25,
+          "tp": 73,
+          "fp": 0,
           "fn": 0,
-          "tn": 6,
-          "precision": 0.7474747474747475,
+          "tn": 0,
+          "precision": null,
           "recall": 1.0,
-          "f1": 0.8554913294797689,
+          "f1": null,
           "support": {
-            "positives": 74,
-            "negatives": 31
+            "positives": 73,
+            "negatives": 0
           }
         },
         "emb_clean_only": {
-          "tp": 74,
-          "fp": 28,
+          "tp": 73,
+          "fp": 0,
           "fn": 0,
-          "tn": 3,
-          "precision": 0.7254901960784313,
+          "tn": 0,
+          "precision": null,
           "recall": 1.0,
-          "f1": 0.8409090909090908,
+          "f1": null,
           "support": {
-            "positives": 74,
-            "negatives": 31
+            "positives": 73,
+            "negatives": 0
           }
         }
       },
       {
         "emb>=": 0.55,
         "same_inst_and_emb": {
-          "tp": 73,
-          "fp": 22,
+          "tp": 72,
+          "fp": 0,
           "fn": 1,
-          "tn": 9,
-          "precision": 0.7684210526315789,
-          "recall": 0.9864864864864865,
-          "f1": 0.8639053254437868,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.9863013698630136,
+          "f1": null,
           "support": {
-            "positives": 74,
-            "negatives": 31
+            "positives": 73,
+            "negatives": 0
           }
         },
         "emb_only": {
-          "tp": 73,
-          "fp": 22,
+          "tp": 72,
+          "fp": 0,
           "fn": 1,
-          "tn": 9,
-          "precision": 0.7684210526315789,
-          "recall": 0.9864864864864865,
-          "f1": 0.8639053254437868,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.9863013698630136,
+          "f1": null,
           "support": {
-            "positives": 74,
-            "negatives": 31
+            "positives": 73,
+            "negatives": 0
           }
         },
         "emb_clean_only": {
-          "tp": 74,
-          "fp": 25,
+          "tp": 73,
+          "fp": 0,
           "fn": 0,
-          "tn": 6,
-          "precision": 0.7474747474747475,
+          "tn": 0,
+          "precision": null,
           "recall": 1.0,
-          "f1": 0.8554913294797689,
+          "f1": null,
           "support": {
-            "positives": 74,
-            "negatives": 31
+            "positives": 73,
+            "negatives": 0
           }
         }
       },
       {
         "emb>=": 0.6,
         "same_inst_and_emb": {
-          "tp": 72,
-          "fp": 21,
+          "tp": 71,
+          "fp": 0,
           "fn": 2,
-          "tn": 10,
-          "precision": 0.7741935483870968,
-          "recall": 0.972972972972973,
-          "f1": 0.8622754491017964,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.9726027397260274,
+          "f1": null,
           "support": {
-            "positives": 74,
-            "negatives": 31
+            "positives": 73,
+            "negatives": 0
           }
         },
         "emb_only": {
-          "tp": 72,
-          "fp": 21,
+          "tp": 71,
+          "fp": 0,
           "fn": 2,
-          "tn": 10,
-          "precision": 0.7741935483870968,
-          "recall": 0.972972972972973,
-          "f1": 0.8622754491017964,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.9726027397260274,
+          "f1": null,
           "support": {
-            "positives": 74,
-            "negatives": 31
+            "positives": 73,
+            "negatives": 0
           }
         },
         "emb_clean_only": {
-          "tp": 74,
-          "fp": 17,
+          "tp": 73,
+          "fp": 0,
           "fn": 0,
-          "tn": 14,
-          "precision": 0.8131868131868132,
+          "tn": 0,
+          "precision": null,
           "recall": 1.0,
-          "f1": 0.896969696969697,
+          "f1": null,
           "support": {
-            "positives": 74,
-            "negatives": 31
+            "positives": 73,
+            "negatives": 0
           }
         }
       },
       {
         "emb>=": 0.65,
         "same_inst_and_emb": {
-          "tp": 71,
-          "fp": 17,
+          "tp": 70,
+          "fp": 0,
           "fn": 3,
-          "tn": 14,
-          "precision": 0.8068181818181818,
-          "recall": 0.9594594594594594,
-          "f1": 0.8765432098765431,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.958904109589041,
+          "f1": null,
           "support": {
-            "positives": 74,
-            "negatives": 31
+            "positives": 73,
+            "negatives": 0
           }
         },
         "emb_only": {
-          "tp": 71,
-          "fp": 17,
+          "tp": 70,
+          "fp": 0,
           "fn": 3,
-          "tn": 14,
-          "precision": 0.8068181818181818,
-          "recall": 0.9594594594594594,
-          "f1": 0.8765432098765431,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.958904109589041,
+          "f1": null,
           "support": {
-            "positives": 74,
-            "negatives": 31
+            "positives": 73,
+            "negatives": 0
           }
         },
         "emb_clean_only": {
-          "tp": 71,
-          "fp": 16,
+          "tp": 70,
+          "fp": 0,
           "fn": 3,
-          "tn": 15,
-          "precision": 0.8160919540229885,
-          "recall": 0.9594594594594594,
-          "f1": 0.8819875776397516,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.958904109589041,
+          "f1": null,
           "support": {
-            "positives": 74,
-            "negatives": 31
+            "positives": 73,
+            "negatives": 0
           }
         }
       },
       {
         "emb>=": 0.7,
         "same_inst_and_emb": {
-          "tp": 70,
-          "fp": 13,
+          "tp": 69,
+          "fp": 0,
           "fn": 4,
-          "tn": 18,
-          "precision": 0.8433734939759037,
-          "recall": 0.9459459459459459,
-          "f1": 0.8917197452229301,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.9452054794520548,
+          "f1": null,
           "support": {
-            "positives": 74,
-            "negatives": 31
+            "positives": 73,
+            "negatives": 0
           }
         },
         "emb_only": {
-          "tp": 70,
-          "fp": 13,
+          "tp": 69,
+          "fp": 0,
           "fn": 4,
-          "tn": 18,
-          "precision": 0.8433734939759037,
-          "recall": 0.9459459459459459,
-          "f1": 0.8917197452229301,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.9452054794520548,
+          "f1": null,
           "support": {
-            "positives": 74,
-            "negatives": 31
+            "positives": 73,
+            "negatives": 0
           }
         },
         "emb_clean_only": {
-          "tp": 71,
-          "fp": 14,
+          "tp": 70,
+          "fp": 0,
           "fn": 3,
-          "tn": 17,
-          "precision": 0.8352941176470589,
-          "recall": 0.9594594594594594,
-          "f1": 0.8930817610062894,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.958904109589041,
+          "f1": null,
           "support": {
-            "positives": 74,
-            "negatives": 31
+            "positives": 73,
+            "negatives": 0
           }
         }
       },
       {
         "emb>=": 0.75,
         "same_inst_and_emb": {
-          "tp": 65,
-          "fp": 11,
+          "tp": 64,
+          "fp": 0,
           "fn": 9,
-          "tn": 20,
-          "precision": 0.8552631578947368,
-          "recall": 0.8783783783783784,
-          "f1": 0.8666666666666667,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.8767123287671232,
+          "f1": null,
           "support": {
-            "positives": 74,
-            "negatives": 31
+            "positives": 73,
+            "negatives": 0
           }
         },
         "emb_only": {
-          "tp": 65,
-          "fp": 11,
+          "tp": 64,
+          "fp": 0,
           "fn": 9,
-          "tn": 20,
-          "precision": 0.8552631578947368,
-          "recall": 0.8783783783783784,
-          "f1": 0.8666666666666667,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.8767123287671232,
+          "f1": null,
           "support": {
-            "positives": 74,
-            "negatives": 31
+            "positives": 73,
+            "negatives": 0
           }
         },
         "emb_clean_only": {
-          "tp": 65,
-          "fp": 11,
+          "tp": 64,
+          "fp": 0,
           "fn": 9,
-          "tn": 20,
-          "precision": 0.8552631578947368,
-          "recall": 0.8783783783783784,
-          "f1": 0.8666666666666667,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.8767123287671232,
+          "f1": null,
           "support": {
-            "positives": 74,
-            "negatives": 31
+            "positives": 73,
+            "negatives": 0
           }
         }
       },
@@ -752,41 +767,41 @@
         "emb>=": 0.8,
         "same_inst_and_emb": {
           "tp": 58,
-          "fp": 7,
-          "fn": 16,
-          "tn": 24,
-          "precision": 0.8923076923076924,
-          "recall": 0.7837837837837838,
-          "f1": 0.8345323741007195,
+          "fp": 0,
+          "fn": 15,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.7945205479452054,
+          "f1": null,
           "support": {
-            "positives": 74,
-            "negatives": 31
+            "positives": 73,
+            "negatives": 0
           }
         },
         "emb_only": {
           "tp": 58,
-          "fp": 7,
-          "fn": 16,
-          "tn": 24,
-          "precision": 0.8923076923076924,
-          "recall": 0.7837837837837838,
-          "f1": 0.8345323741007195,
+          "fp": 0,
+          "fn": 15,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.7945205479452054,
+          "f1": null,
           "support": {
-            "positives": 74,
-            "negatives": 31
+            "positives": 73,
+            "negatives": 0
           }
         },
         "emb_clean_only": {
           "tp": 58,
-          "fp": 7,
-          "fn": 16,
-          "tn": 24,
-          "precision": 0.8923076923076924,
-          "recall": 0.7837837837837838,
-          "f1": 0.8345323741007195,
+          "fp": 0,
+          "fn": 15,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.7945205479452054,
+          "f1": null,
           "support": {
-            "positives": 74,
-            "negatives": 31
+            "positives": 73,
+            "negatives": 0
           }
         }
       },
@@ -794,41 +809,41 @@
         "emb>=": 0.85,
         "same_inst_and_emb": {
           "tp": 44,
-          "fp": 4,
-          "fn": 30,
-          "tn": 27,
-          "precision": 0.9166666666666666,
-          "recall": 0.5945945945945946,
-          "f1": 0.7213114754098361,
+          "fp": 0,
+          "fn": 29,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.6027397260273972,
+          "f1": null,
           "support": {
-            "positives": 74,
-            "negatives": 31
+            "positives": 73,
+            "negatives": 0
           }
         },
         "emb_only": {
           "tp": 44,
-          "fp": 4,
-          "fn": 30,
-          "tn": 27,
-          "precision": 0.9166666666666666,
-          "recall": 0.5945945945945946,
-          "f1": 0.7213114754098361,
+          "fp": 0,
+          "fn": 29,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.6027397260273972,
+          "f1": null,
           "support": {
-            "positives": 74,
-            "negatives": 31
+            "positives": 73,
+            "negatives": 0
           }
         },
         "emb_clean_only": {
           "tp": 44,
-          "fp": 4,
-          "fn": 30,
-          "tn": 27,
-          "precision": 0.9166666666666666,
-          "recall": 0.5945945945945946,
-          "f1": 0.7213114754098361,
+          "fp": 0,
+          "fn": 29,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.6027397260273972,
+          "f1": null,
           "support": {
-            "positives": 74,
-            "negatives": 31
+            "positives": 73,
+            "negatives": 0
           }
         }
       },
@@ -836,41 +851,41 @@
         "emb>=": 0.9,
         "same_inst_and_emb": {
           "tp": 25,
-          "fp": 2,
-          "fn": 49,
-          "tn": 29,
-          "precision": 0.9259259259259259,
-          "recall": 0.33783783783783783,
-          "f1": 0.49504950495049505,
+          "fp": 0,
+          "fn": 48,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.3424657534246575,
+          "f1": null,
           "support": {
-            "positives": 74,
-            "negatives": 31
+            "positives": 73,
+            "negatives": 0
           }
         },
         "emb_only": {
           "tp": 25,
-          "fp": 2,
-          "fn": 49,
-          "tn": 29,
-          "precision": 0.9259259259259259,
-          "recall": 0.33783783783783783,
-          "f1": 0.49504950495049505,
+          "fp": 0,
+          "fn": 48,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.3424657534246575,
+          "f1": null,
           "support": {
-            "positives": 74,
-            "negatives": 31
+            "positives": 73,
+            "negatives": 0
           }
         },
         "emb_clean_only": {
           "tp": 25,
-          "fp": 2,
-          "fn": 49,
-          "tn": 29,
-          "precision": 0.9259259259259259,
-          "recall": 0.33783783783783783,
-          "f1": 0.49504950495049505,
+          "fp": 0,
+          "fn": 48,
+          "tn": 0,
+          "precision": null,
+          "recall": 0.3424657534246575,
+          "f1": null,
           "support": {
-            "positives": 74,
-            "negatives": 31
+            "positives": 73,
+            "negatives": 0
           }
         }
       }
@@ -878,27 +893,34 @@
   },
   "supplementary": {
     "scope": "跨校同名（简单负例，仅补充）",
-    "labelled_pairs": 932,
+    "labelled_pairs": 927,
     "positives": 0,
-    "negatives": 932,
-    "excluded_unknown": 1382,
+    "negatives": 927,
+    "excluded_unknown": 1387,
     "auc_defined": false,
     "auc": {
       "institution_only": null,
       "embedding_only": null,
       "embedding_clean_only": null
     },
+    "metrics_available": {
+      "precision": true,
+      "recall": false,
+      "f1": false,
+      "auc": false
+    },
+    "metrics_note": "本口径缺少正例：精确率/召回率/F1/AUC 中依赖该类别的项按「不可计算」（null）处理，不用 0 或旧数字替代。这不是回归，而是弱判据被移除后的真实结果。",
     "baseline_institution": {
       "tp": 0,
       "fp": 0,
       "fn": 0,
-      "tn": 932,
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0.0,
+      "tn": 927,
+      "precision": null,
+      "recall": null,
+      "f1": null,
       "support": {
         "positives": 0,
-        "negatives": 932
+        "negatives": 927
       }
     },
     "baseline_embedding": {
@@ -906,13 +928,13 @@
         "tp": 0,
         "fp": 89,
         "fn": 0,
-        "tn": 843,
+        "tn": 838,
         "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
+        "recall": null,
+        "f1": null,
         "support": {
           "positives": 0,
-          "negatives": 932
+          "negatives": 927
         }
       },
       "threshold": 0.85
@@ -924,39 +946,39 @@
           "tp": 0,
           "fp": 0,
           "fn": 0,
-          "tn": 932,
-          "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
+          "tn": 927,
+          "precision": null,
+          "recall": null,
+          "f1": null,
           "support": {
             "positives": 0,
-            "negatives": 932
+            "negatives": 927
           }
         },
         "emb_only": {
           "tp": 0,
-          "fp": 846,
+          "fp": 841,
           "fn": 0,
           "tn": 86,
           "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
+          "recall": null,
+          "f1": null,
           "support": {
             "positives": 0,
-            "negatives": 932
+            "negatives": 927
           }
         },
         "emb_clean_only": {
           "tp": 0,
-          "fp": 848,
+          "fp": 843,
           "fn": 0,
           "tn": 84,
           "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
+          "recall": null,
+          "f1": null,
           "support": {
             "positives": 0,
-            "negatives": 932
+            "negatives": 927
           }
         }
       },
@@ -966,39 +988,39 @@
           "tp": 0,
           "fp": 0,
           "fn": 0,
-          "tn": 932,
-          "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
+          "tn": 927,
+          "precision": null,
+          "recall": null,
+          "f1": null,
           "support": {
             "positives": 0,
-            "negatives": 932
+            "negatives": 927
           }
         },
         "emb_only": {
           "tp": 0,
-          "fp": 663,
+          "fp": 658,
           "fn": 0,
           "tn": 269,
           "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
+          "recall": null,
+          "f1": null,
           "support": {
             "positives": 0,
-            "negatives": 932
+            "negatives": 927
           }
         },
         "emb_clean_only": {
           "tp": 0,
-          "fp": 659,
+          "fp": 654,
           "fn": 0,
           "tn": 273,
           "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
+          "recall": null,
+          "f1": null,
           "support": {
             "positives": 0,
-            "negatives": 932
+            "negatives": 927
           }
         }
       },
@@ -1008,39 +1030,39 @@
           "tp": 0,
           "fp": 0,
           "fn": 0,
-          "tn": 932,
-          "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
+          "tn": 927,
+          "precision": null,
+          "recall": null,
+          "f1": null,
           "support": {
             "positives": 0,
-            "negatives": 932
+            "negatives": 927
           }
         },
         "emb_only": {
           "tp": 0,
           "fp": 492,
           "fn": 0,
-          "tn": 440,
+          "tn": 435,
           "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
+          "recall": null,
+          "f1": null,
           "support": {
             "positives": 0,
-            "negatives": 932
+            "negatives": 927
           }
         },
         "emb_clean_only": {
           "tp": 0,
-          "fp": 440,
+          "fp": 439,
           "fn": 0,
-          "tn": 492,
+          "tn": 488,
           "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
+          "recall": null,
+          "f1": null,
           "support": {
             "positives": 0,
-            "negatives": 932
+            "negatives": 927
           }
         }
       },
@@ -1050,39 +1072,39 @@
           "tp": 0,
           "fp": 0,
           "fn": 0,
-          "tn": 932,
-          "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
+          "tn": 927,
+          "precision": null,
+          "recall": null,
+          "f1": null,
           "support": {
             "positives": 0,
-            "negatives": 932
+            "negatives": 927
           }
         },
         "emb_only": {
           "tp": 0,
           "fp": 346,
           "fn": 0,
-          "tn": 586,
+          "tn": 581,
           "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
+          "recall": null,
+          "f1": null,
           "support": {
             "positives": 0,
-            "negatives": 932
+            "negatives": 927
           }
         },
         "emb_clean_only": {
           "tp": 0,
           "fp": 329,
           "fn": 0,
-          "tn": 603,
+          "tn": 598,
           "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
+          "recall": null,
+          "f1": null,
           "support": {
             "positives": 0,
-            "negatives": 932
+            "negatives": 927
           }
         }
       },
@@ -1092,39 +1114,39 @@
           "tp": 0,
           "fp": 0,
           "fn": 0,
-          "tn": 932,
-          "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
+          "tn": 927,
+          "precision": null,
+          "recall": null,
+          "f1": null,
           "support": {
             "positives": 0,
-            "negatives": 932
+            "negatives": 927
           }
         },
         "emb_only": {
           "tp": 0,
           "fp": 257,
           "fn": 0,
-          "tn": 675,
+          "tn": 670,
           "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
+          "recall": null,
+          "f1": null,
           "support": {
             "positives": 0,
-            "negatives": 932
+            "negatives": 927
           }
         },
         "emb_clean_only": {
           "tp": 0,
           "fp": 250,
           "fn": 0,
-          "tn": 682,
+          "tn": 677,
           "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
+          "recall": null,
+          "f1": null,
           "support": {
             "positives": 0,
-            "negatives": 932
+            "negatives": 927
           }
         }
       },
@@ -1134,39 +1156,39 @@
           "tp": 0,
           "fp": 0,
           "fn": 0,
-          "tn": 932,
-          "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
+          "tn": 927,
+          "precision": null,
+          "recall": null,
+          "f1": null,
           "support": {
             "positives": 0,
-            "negatives": 932
+            "negatives": 927
           }
         },
         "emb_only": {
           "tp": 0,
           "fp": 197,
           "fn": 0,
-          "tn": 735,
+          "tn": 730,
           "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
+          "recall": null,
+          "f1": null,
           "support": {
             "positives": 0,
-            "negatives": 932
+            "negatives": 927
           }
         },
         "emb_clean_only": {
           "tp": 0,
           "fp": 182,
           "fn": 0,
-          "tn": 750,
+          "tn": 745,
           "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
+          "recall": null,
+          "f1": null,
           "support": {
             "positives": 0,
-            "negatives": 932
+            "negatives": 927
           }
         }
       },
@@ -1176,39 +1198,39 @@
           "tp": 0,
           "fp": 0,
           "fn": 0,
-          "tn": 932,
-          "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
+          "tn": 927,
+          "precision": null,
+          "recall": null,
+          "f1": null,
           "support": {
             "positives": 0,
-            "negatives": 932
+            "negatives": 927
           }
         },
         "emb_only": {
           "tp": 0,
           "fp": 134,
           "fn": 0,
-          "tn": 798,
+          "tn": 793,
           "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
+          "recall": null,
+          "f1": null,
           "support": {
             "positives": 0,
-            "negatives": 932
+            "negatives": 927
           }
         },
         "emb_clean_only": {
           "tp": 0,
           "fp": 90,
           "fn": 0,
-          "tn": 842,
+          "tn": 837,
           "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
+          "recall": null,
+          "f1": null,
           "support": {
             "positives": 0,
-            "negatives": 932
+            "negatives": 927
           }
         }
       },
@@ -1218,39 +1240,39 @@
           "tp": 0,
           "fp": 0,
           "fn": 0,
-          "tn": 932,
-          "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
+          "tn": 927,
+          "precision": null,
+          "recall": null,
+          "f1": null,
           "support": {
             "positives": 0,
-            "negatives": 932
+            "negatives": 927
           }
         },
         "emb_only": {
           "tp": 0,
           "fp": 89,
           "fn": 0,
-          "tn": 843,
+          "tn": 838,
           "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
+          "recall": null,
+          "f1": null,
           "support": {
             "positives": 0,
-            "negatives": 932
+            "negatives": 927
           }
         },
         "emb_clean_only": {
           "tp": 0,
           "fp": 34,
           "fn": 0,
-          "tn": 898,
+          "tn": 893,
           "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
+          "recall": null,
+          "f1": null,
           "support": {
             "positives": 0,
-            "negatives": 932
+            "negatives": 927
           }
         }
       },
@@ -1260,39 +1282,39 @@
           "tp": 0,
           "fp": 0,
           "fn": 0,
-          "tn": 932,
-          "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
+          "tn": 927,
+          "precision": null,
+          "recall": null,
+          "f1": null,
           "support": {
             "positives": 0,
-            "negatives": 932
+            "negatives": 927
           }
         },
         "emb_only": {
           "tp": 0,
           "fp": 65,
           "fn": 0,
-          "tn": 867,
+          "tn": 862,
           "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
+          "recall": null,
+          "f1": null,
           "support": {
             "positives": 0,
-            "negatives": 932
+            "negatives": 927
           }
         },
         "emb_clean_only": {
           "tp": 0,
           "fp": 15,
           "fn": 0,
-          "tn": 917,
+          "tn": 912,
           "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
+          "recall": null,
+          "f1": null,
           "support": {
             "positives": 0,
-            "negatives": 932
+            "negatives": 927
           }
         }
       }
@@ -1300,41 +1322,48 @@
   },
   "combined": {
     "scope": "全部同名组合（含跨校）",
-    "labelled_pairs": 1047,
-    "positives": 84,
-    "negatives": 963,
-    "excluded_unknown": 1517,
+    "labelled_pairs": 1010,
+    "positives": 83,
+    "negatives": 927,
+    "excluded_unknown": 1554,
     "auc_defined": true,
     "auc": {
-      "institution_only": 0.9839044652128764,
-      "embedding_only": 0.8657098353360035,
-      "embedding_clean_only": 0.9111531424615537
+      "institution_only": 1.0,
+      "embedding_only": 0.8674568825463667,
+      "embedding_clean_only": 0.914596898922551
     },
+    "metrics_available": {
+      "precision": true,
+      "recall": true,
+      "f1": true,
+      "auc": true
+    },
+    "metrics_note": "",
     "baseline_institution": {
-      "tp": 84,
-      "fp": 31,
+      "tp": 83,
+      "fp": 0,
       "fn": 0,
-      "tn": 932,
-      "precision": 0.7304347826086957,
+      "tn": 927,
+      "precision": 1.0,
       "recall": 1.0,
-      "f1": 0.8442211055276382,
+      "f1": 1.0,
       "support": {
-        "positives": 84,
-        "negatives": 963
+        "positives": 83,
+        "negatives": 927
       }
     },
     "baseline_embedding": {
       "confusion": {
         "tp": 50,
-        "fp": 93,
-        "fn": 34,
-        "tn": 870,
-        "precision": 0.34965034965034963,
-        "recall": 0.5952380952380952,
-        "f1": 0.44052863436123346,
+        "fp": 89,
+        "fn": 33,
+        "tn": 838,
+        "precision": 0.3597122302158273,
+        "recall": 0.6024096385542169,
+        "f1": 0.4504504504504504,
         "support": {
-          "positives": 84,
-          "negatives": 963
+          "positives": 83,
+          "negatives": 927
         }
       },
       "threshold": 0.85
@@ -1343,252 +1372,252 @@
       {
         "emb>=": 0.5,
         "same_inst_and_emb": {
-          "tp": 83,
-          "fp": 25,
+          "tp": 82,
+          "fp": 0,
           "fn": 1,
-          "tn": 938,
-          "precision": 0.7685185185185185,
-          "recall": 0.9880952380952381,
-          "f1": 0.8645833333333333,
+          "tn": 927,
+          "precision": 1.0,
+          "recall": 0.9879518072289156,
+          "f1": 0.993939393939394,
           "support": {
-            "positives": 84,
-            "negatives": 963
+            "positives": 83,
+            "negatives": 927
           }
         },
         "emb_only": {
-          "tp": 83,
-          "fp": 871,
+          "tp": 82,
+          "fp": 841,
           "fn": 1,
-          "tn": 92,
-          "precision": 0.0870020964360587,
-          "recall": 0.9880952380952381,
-          "f1": 0.1599229287090559,
+          "tn": 86,
+          "precision": 0.08884073672806067,
+          "recall": 0.9879518072289156,
+          "f1": 0.16302186878727634,
           "support": {
-            "positives": 84,
-            "negatives": 963
+            "positives": 83,
+            "negatives": 927
           }
         },
         "emb_clean_only": {
-          "tp": 83,
-          "fp": 876,
+          "tp": 82,
+          "fp": 843,
           "fn": 1,
-          "tn": 87,
-          "precision": 0.08654848800834203,
-          "recall": 0.9880952380952381,
-          "f1": 0.1591562799616491,
+          "tn": 84,
+          "precision": 0.08864864864864865,
+          "recall": 0.9879518072289156,
+          "f1": 0.16269841269841268,
           "support": {
-            "positives": 84,
-            "negatives": 963
+            "positives": 83,
+            "negatives": 927
           }
         }
       },
       {
         "emb>=": 0.55,
         "same_inst_and_emb": {
-          "tp": 82,
-          "fp": 22,
+          "tp": 81,
+          "fp": 0,
           "fn": 2,
-          "tn": 941,
-          "precision": 0.7884615384615384,
-          "recall": 0.9761904761904762,
-          "f1": 0.8723404255319148,
+          "tn": 927,
+          "precision": 1.0,
+          "recall": 0.9759036144578314,
+          "f1": 0.9878048780487805,
           "support": {
-            "positives": 84,
-            "negatives": 963
+            "positives": 83,
+            "negatives": 927
           }
         },
         "emb_only": {
-          "tp": 82,
-          "fp": 685,
+          "tp": 81,
+          "fp": 658,
           "fn": 2,
-          "tn": 278,
-          "precision": 0.10691003911342895,
-          "recall": 0.9761904761904762,
-          "f1": 0.1927144535840188,
+          "tn": 269,
+          "precision": 0.10960757780784844,
+          "recall": 0.9759036144578314,
+          "f1": 0.19708029197080293,
           "support": {
-            "positives": 84,
-            "negatives": 963
+            "positives": 83,
+            "negatives": 927
           }
         },
         "emb_clean_only": {
-          "tp": 83,
-          "fp": 684,
+          "tp": 82,
+          "fp": 654,
           "fn": 1,
-          "tn": 279,
-          "precision": 0.10821382007822686,
-          "recall": 0.9880952380952381,
-          "f1": 0.19506462984723855,
+          "tn": 273,
+          "precision": 0.11141304347826086,
+          "recall": 0.9879518072289156,
+          "f1": 0.20024420024420023,
           "support": {
-            "positives": 84,
-            "negatives": 963
+            "positives": 83,
+            "negatives": 927
           }
         }
       },
       {
         "emb>=": 0.6,
         "same_inst_and_emb": {
-          "tp": 80,
-          "fp": 21,
+          "tp": 79,
+          "fp": 0,
           "fn": 4,
-          "tn": 942,
-          "precision": 0.7920792079207921,
-          "recall": 0.9523809523809523,
-          "f1": 0.8648648648648649,
+          "tn": 927,
+          "precision": 1.0,
+          "recall": 0.9518072289156626,
+          "f1": 0.9753086419753086,
           "support": {
-            "positives": 84,
-            "negatives": 963
+            "positives": 83,
+            "negatives": 927
           }
         },
         "emb_only": {
-          "tp": 80,
-          "fp": 513,
+          "tp": 79,
+          "fp": 492,
           "fn": 4,
-          "tn": 450,
-          "precision": 0.13490725126475547,
-          "recall": 0.9523809523809523,
-          "f1": 0.2363367799113737,
+          "tn": 435,
+          "precision": 0.138353765323993,
+          "recall": 0.9518072289156626,
+          "f1": 0.24159021406727832,
           "support": {
-            "positives": 84,
-            "negatives": 963
+            "positives": 83,
+            "negatives": 927
           }
         },
         "emb_clean_only": {
-          "tp": 82,
-          "fp": 457,
+          "tp": 81,
+          "fp": 439,
           "fn": 2,
-          "tn": 506,
-          "precision": 0.15213358070500926,
-          "recall": 0.9761904761904762,
-          "f1": 0.26324237560192615,
+          "tn": 488,
+          "precision": 0.15576923076923077,
+          "recall": 0.9759036144578314,
+          "f1": 0.26865671641791045,
           "support": {
-            "positives": 84,
-            "negatives": 963
+            "positives": 83,
+            "negatives": 927
           }
         }
       },
       {
         "emb>=": 0.65,
         "same_inst_and_emb": {
-          "tp": 79,
-          "fp": 17,
+          "tp": 78,
+          "fp": 0,
           "fn": 5,
-          "tn": 946,
-          "precision": 0.8229166666666666,
-          "recall": 0.9404761904761905,
-          "f1": 0.8777777777777778,
+          "tn": 927,
+          "precision": 1.0,
+          "recall": 0.9397590361445783,
+          "f1": 0.9689440993788819,
           "support": {
-            "positives": 84,
-            "negatives": 963
+            "positives": 83,
+            "negatives": 927
           }
         },
         "emb_only": {
-          "tp": 79,
-          "fp": 363,
+          "tp": 78,
+          "fp": 346,
           "fn": 5,
-          "tn": 600,
-          "precision": 0.17873303167420815,
-          "recall": 0.9404761904761905,
-          "f1": 0.30038022813688214,
+          "tn": 581,
+          "precision": 0.18396226415094338,
+          "recall": 0.9397590361445783,
+          "f1": 0.30769230769230765,
           "support": {
-            "positives": 84,
-            "negatives": 963
+            "positives": 83,
+            "negatives": 927
           }
         },
         "emb_clean_only": {
-          "tp": 79,
-          "fp": 345,
+          "tp": 78,
+          "fp": 329,
           "fn": 5,
-          "tn": 618,
-          "precision": 0.18632075471698112,
-          "recall": 0.9404761904761905,
-          "f1": 0.31102362204724404,
+          "tn": 598,
+          "precision": 0.19164619164619165,
+          "recall": 0.9397590361445783,
+          "f1": 0.3183673469387755,
           "support": {
-            "positives": 84,
-            "negatives": 963
+            "positives": 83,
+            "negatives": 927
           }
         }
       },
       {
         "emb>=": 0.7,
         "same_inst_and_emb": {
-          "tp": 76,
-          "fp": 13,
+          "tp": 75,
+          "fp": 0,
           "fn": 8,
-          "tn": 950,
-          "precision": 0.8539325842696629,
-          "recall": 0.9047619047619048,
-          "f1": 0.8786127167630058,
+          "tn": 927,
+          "precision": 1.0,
+          "recall": 0.9036144578313253,
+          "f1": 0.9493670886075949,
           "support": {
-            "positives": 84,
-            "negatives": 963
+            "positives": 83,
+            "negatives": 927
           }
         },
         "emb_only": {
-          "tp": 76,
-          "fp": 270,
+          "tp": 75,
+          "fp": 257,
           "fn": 8,
-          "tn": 693,
-          "precision": 0.21965317919075145,
-          "recall": 0.9047619047619048,
-          "f1": 0.3534883720930232,
+          "tn": 670,
+          "precision": 0.22590361445783133,
+          "recall": 0.9036144578313253,
+          "f1": 0.3614457831325301,
           "support": {
-            "positives": 84,
-            "negatives": 963
+            "positives": 83,
+            "negatives": 927
           }
         },
         "emb_clean_only": {
-          "tp": 77,
-          "fp": 264,
+          "tp": 76,
+          "fp": 250,
           "fn": 7,
-          "tn": 699,
-          "precision": 0.22580645161290322,
-          "recall": 0.9166666666666666,
-          "f1": 0.3623529411764706,
+          "tn": 677,
+          "precision": 0.2331288343558282,
+          "recall": 0.9156626506024096,
+          "f1": 0.37163814180929094,
           "support": {
-            "positives": 84,
-            "negatives": 963
+            "positives": 83,
+            "negatives": 927
           }
         }
       },
       {
         "emb>=": 0.75,
         "same_inst_and_emb": {
-          "tp": 71,
-          "fp": 11,
+          "tp": 70,
+          "fp": 0,
           "fn": 13,
-          "tn": 952,
-          "precision": 0.8658536585365854,
-          "recall": 0.8452380952380952,
-          "f1": 0.8554216867469879,
+          "tn": 927,
+          "precision": 1.0,
+          "recall": 0.8433734939759037,
+          "f1": 0.9150326797385622,
           "support": {
-            "positives": 84,
-            "negatives": 963
+            "positives": 83,
+            "negatives": 927
           }
         },
         "emb_only": {
-          "tp": 71,
-          "fp": 208,
+          "tp": 70,
+          "fp": 197,
           "fn": 13,
-          "tn": 755,
-          "precision": 0.25448028673835127,
-          "recall": 0.8452380952380952,
-          "f1": 0.39118457300275483,
+          "tn": 730,
+          "precision": 0.26217228464419473,
+          "recall": 0.8433734939759037,
+          "f1": 0.4,
           "support": {
-            "positives": 84,
-            "negatives": 963
+            "positives": 83,
+            "negatives": 927
           }
         },
         "emb_clean_only": {
-          "tp": 71,
-          "fp": 193,
+          "tp": 70,
+          "fp": 182,
           "fn": 13,
-          "tn": 770,
-          "precision": 0.2689393939393939,
-          "recall": 0.8452380952380952,
-          "f1": 0.40804597701149425,
+          "tn": 745,
+          "precision": 0.2777777777777778,
+          "recall": 0.8433734939759037,
+          "f1": 0.417910447761194,
           "support": {
-            "positives": 84,
-            "negatives": 963
+            "positives": 83,
+            "negatives": 927
           }
         }
       },
@@ -1596,41 +1625,41 @@
         "emb>=": 0.8,
         "same_inst_and_emb": {
           "tp": 64,
-          "fp": 7,
-          "fn": 20,
-          "tn": 956,
-          "precision": 0.9014084507042254,
-          "recall": 0.7619047619047619,
-          "f1": 0.8258064516129031,
+          "fp": 0,
+          "fn": 19,
+          "tn": 927,
+          "precision": 1.0,
+          "recall": 0.7710843373493976,
+          "f1": 0.870748299319728,
           "support": {
-            "positives": 84,
-            "negatives": 963
+            "positives": 83,
+            "negatives": 927
           }
         },
         "emb_only": {
           "tp": 64,
-          "fp": 141,
-          "fn": 20,
-          "tn": 822,
-          "precision": 0.3121951219512195,
-          "recall": 0.7619047619047619,
-          "f1": 0.4429065743944637,
+          "fp": 134,
+          "fn": 19,
+          "tn": 793,
+          "precision": 0.32323232323232326,
+          "recall": 0.7710843373493976,
+          "f1": 0.4555160142348754,
           "support": {
-            "positives": 84,
-            "negatives": 963
+            "positives": 83,
+            "negatives": 927
           }
         },
         "emb_clean_only": {
           "tp": 64,
-          "fp": 97,
-          "fn": 20,
-          "tn": 866,
-          "precision": 0.39751552795031053,
-          "recall": 0.7619047619047619,
-          "f1": 0.5224489795918368,
+          "fp": 90,
+          "fn": 19,
+          "tn": 837,
+          "precision": 0.4155844155844156,
+          "recall": 0.7710843373493976,
+          "f1": 0.5400843881856541,
           "support": {
-            "positives": 84,
-            "negatives": 963
+            "positives": 83,
+            "negatives": 927
           }
         }
       },
@@ -1638,41 +1667,41 @@
         "emb>=": 0.85,
         "same_inst_and_emb": {
           "tp": 50,
-          "fp": 4,
-          "fn": 34,
-          "tn": 959,
-          "precision": 0.9259259259259259,
-          "recall": 0.5952380952380952,
-          "f1": 0.7246376811594204,
+          "fp": 0,
+          "fn": 33,
+          "tn": 927,
+          "precision": 1.0,
+          "recall": 0.6024096385542169,
+          "f1": 0.7518796992481204,
           "support": {
-            "positives": 84,
-            "negatives": 963
+            "positives": 83,
+            "negatives": 927
           }
         },
         "emb_only": {
           "tp": 50,
-          "fp": 93,
-          "fn": 34,
-          "tn": 870,
-          "precision": 0.34965034965034963,
-          "recall": 0.5952380952380952,
-          "f1": 0.44052863436123346,
+          "fp": 89,
+          "fn": 33,
+          "tn": 838,
+          "precision": 0.3597122302158273,
+          "recall": 0.6024096385542169,
+          "f1": 0.4504504504504504,
           "support": {
-            "positives": 84,
-            "negatives": 963
+            "positives": 83,
+            "negatives": 927
           }
         },
         "emb_clean_only": {
           "tp": 50,
-          "fp": 38,
-          "fn": 34,
-          "tn": 925,
-          "precision": 0.5681818181818182,
-          "recall": 0.5952380952380952,
-          "f1": 0.5813953488372093,
+          "fp": 34,
+          "fn": 33,
+          "tn": 893,
+          "precision": 0.5952380952380952,
+          "recall": 0.6024096385542169,
+          "f1": 0.5988023952095809,
           "support": {
-            "positives": 84,
-            "negatives": 963
+            "positives": 83,
+            "negatives": 927
           }
         }
       },
@@ -1680,67 +1709,68 @@
         "emb>=": 0.9,
         "same_inst_and_emb": {
           "tp": 30,
-          "fp": 2,
-          "fn": 54,
-          "tn": 961,
-          "precision": 0.9375,
-          "recall": 0.35714285714285715,
-          "f1": 0.5172413793103449,
+          "fp": 0,
+          "fn": 53,
+          "tn": 927,
+          "precision": 1.0,
+          "recall": 0.3614457831325301,
+          "f1": 0.5309734513274336,
           "support": {
-            "positives": 84,
-            "negatives": 963
+            "positives": 83,
+            "negatives": 927
           }
         },
         "emb_only": {
           "tp": 30,
-          "fp": 67,
-          "fn": 54,
-          "tn": 896,
-          "precision": 0.30927835051546393,
-          "recall": 0.35714285714285715,
-          "f1": 0.3314917127071823,
+          "fp": 65,
+          "fn": 53,
+          "tn": 862,
+          "precision": 0.3157894736842105,
+          "recall": 0.3614457831325301,
+          "f1": 0.3370786516853933,
           "support": {
-            "positives": 84,
-            "negatives": 963
+            "positives": 83,
+            "negatives": 927
           }
         },
         "emb_clean_only": {
           "tp": 30,
-          "fp": 17,
-          "fn": 54,
-          "tn": 946,
-          "precision": 0.6382978723404256,
-          "recall": 0.35714285714285715,
-          "f1": 0.4580152671755725,
+          "fp": 15,
+          "fn": 53,
+          "tn": 912,
+          "precision": 0.6666666666666666,
+          "recall": 0.3614457831325301,
+          "f1": 0.46875000000000006,
           "support": {
-            "positives": 84,
-            "negatives": 963
+            "positives": 83,
+            "negatives": 927
           }
         }
       }
     ]
   },
   "gold_agreement": {
-    "reviewed_pairs": 140,
-    "labelled_candidates": 115,
-    "agreed": 105,
-    "agreement": 0.9130434782608695,
+    "protocol_status": "program-assisted",
+    "protocol_note": "auto_label 与 verdict 都由程序规则生成，二者同源；该一致率不代表人工核验准确率。人工金标准见 human_labels。",
+    "reviewed_pairs": 108,
+    "labelled_candidates": 83,
+    "agreed": 73,
+    "agreement": 0.8795180722891566,
     "by_auto_label": {
       "same_person": {
-        "auto": 84,
-        "agreed": 74,
-        "agreement": 0.8809523809523809
+        "auto": 83,
+        "agreed": 73,
+        "agreement": 0.8795180722891566
       },
       "different_person": {
-        "auto": 31,
-        "agreed": 31,
-        "agreement": 1.0
+        "auto": 0,
+        "agreed": 0,
+        "agreement": null
       }
     },
     "verdict_distribution": {
-      "different_person": 31,
       "unknown": 35,
-      "same_person": 74
+      "same_person": 73
     }
   },
   "risk_cases": [
@@ -1749,9 +1779,9 @@
       "institution": "西安交通大学",
       "emb": 0.9899,
       "emb_clean": 0.9899,
-      "label": "different_person",
-      "strength": "medium",
-      "reason": "distinct_pages_unit_conflict",
+      "label": "unknown",
+      "strength": "none",
+      "reason": "unit_conflict_only",
       "same_institution": true,
       "a": {
         "id": "official-3b34bbf9879d19994308",
@@ -1767,7 +1797,7 @@
         "home": "https://mec.xjtu.edu.cn/info/1261/11798.htm",
         "page": "personal"
       },
-      "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=True）"
+      "note": "两侧只有院系/一级学科不同：单位归属差异不足以判定身份，按「无法确认」处理，进人工核验"
     },
     {
       "name": "毛红威",
@@ -1849,9 +1879,9 @@
       "institution": "西安交通大学",
       "emb": 0.9742,
       "emb_clean": 0.9742,
-      "label": "different_person",
-      "strength": "medium",
-      "reason": "distinct_pages_unit_conflict",
+      "label": "unknown",
+      "strength": "none",
+      "reason": "unit_conflict_only",
       "same_institution": true,
       "a": {
         "id": "official-2540b83e76aaf1007ca9",
@@ -1867,7 +1897,7 @@
         "home": "https://gr.xjtu.edu.cn/en/web/lb",
         "page": "personal"
       },
-      "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=True）"
+      "note": "两侧只有院系/一级学科不同：单位归属差异不足以判定身份，按「无法确认」处理，进人工核验"
     },
     {
       "name": "叶智慧",
@@ -2024,9 +2054,9 @@
       "institution": "华中科技大学",
       "emb": 0.8883,
       "emb_clean": 0.8883,
-      "label": "different_person",
-      "strength": "medium",
-      "reason": "distinct_pages_unit_conflict",
+      "label": "unknown",
+      "strength": "none",
+      "reason": "unit_conflict_only",
       "same_institution": true,
       "a": {
         "id": "official-bf81b58241df1b4b49a7",
@@ -2042,7 +2072,7 @@
         "home": "http://faculty.hust.edu.cn/bowang/zh_CN/more/2538470/jsjjgd/index.htm",
         "page": "personal"
       },
-      "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=True）"
+      "note": "两侧只有院系/一级学科不同：单位归属差异不足以判定身份，按「无法确认」处理，进人工核验"
     }
   ],
   "risk_total": 124,
@@ -2243,22 +2273,22 @@
     "evidence": {
       "protocol": "专属页/名录页分级 + unknown 剔除",
       "pairs_total": 2564,
-      "labelled_same_institution": 115,
-      "labelled_cross_institution": 932,
-      "excluded_unknown": 135,
-      "auc_institution": 0.5,
-      "auc_embedding": 0.8218125960061444,
+      "labelled_same_institution": 83,
+      "labelled_cross_institution": 927,
+      "excluded_unknown": 167,
+      "auc_institution": null,
+      "auc_embedding": null,
       "baseline_institution": {
-        "tp": 84,
-        "fp": 31,
+        "tp": 83,
+        "fp": 0,
         "fn": 0,
         "tn": 0,
-        "precision": 0.7304347826086957,
+        "precision": null,
         "recall": 1.0,
-        "f1": 0.8442211055276382,
+        "f1": null,
         "support": {
-          "positives": 84,
-          "negatives": 31
+          "positives": 83,
+          "negatives": 0
         }
       }
     },

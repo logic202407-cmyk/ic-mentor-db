@@ -21,7 +21,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
 
 from workbench import catalog  # noqa: E402
-from workbench.collect_engineering_scale import discover_sources  # noqa: E402
+
 
 FIXTURES = Path(__file__).resolve().parent.parent / "tests" / "fixtures"
 
@@ -35,7 +35,7 @@ def build_facts() -> dict:
     # 口径直接复用 catalog.coverage()——报告与接口必须一致，不要各算一套。
     # 早先这里用 `origin == "public"` 判公开来源，取到 0 条（origin 是中文字符串），
     # 这种"自己另写一套口径"正是过期数字的来源。
-    cov = catalog.coverage()
+    cov = catalog.coverage(bundle_only=True)   # 对外数字以仓库档案包为准，避免受本机缓存影响
 
     # 机构分布只在工学学科内统计（报告引用的是工学规模）。
     per_disc: dict[str, Counter] = {}
@@ -59,6 +59,9 @@ def build_facts() -> dict:
 
     dir_pending = sum(1 for p in pairs if label_of(p) in ("", PENDING))
 
+    # 惰性导入：采集器链路里仍有模块级 bs4（历史代码），而统计事实这一步
+    # 不需要 HTML 解析器。放进函数里，未装 bs4 的环境（如轻量 CI）也能跑。
+    from workbench.collect_engineering_scale import discover_sources
     sources = discover_sources()
     fixtures = [p for p in FIXTURES.glob("*.html")]
 

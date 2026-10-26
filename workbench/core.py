@@ -12,10 +12,20 @@ from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlparse
 
+from . import storage
+
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = Path(os.environ.get("MENTOR_WORKBENCH_DATA", ROOT / ".workbench-data"))
 PROJECTS_DIR = DATA_DIR / "projects"
-EMAIL = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
+# 邮箱隐藏用的正则。两个要点：
+# ① **两侧量词必须有上界。** 原来的 `[...]+@[...]+\.[A-Za-z]{2,}` 在"很长且没有 @"
+#    的串上会退化：每个起点都把 `[...]+` 吃到尾再回退，实测 64,000 字符耗时
+#    4,633 ms；走 API 时更糟（写入端点都是 `async def`，卡的是整个事件循环，
+#    实测 PATCH 备注 24.35 s），而 MAX_BODY_BYTES 允许 12 MB —— 一次请求就能把
+#    本机服务冻到小时级。加界后同样输入 ~0.05 s。
+# ② 上界取 RFC 的现实上限（本地部分 64、域名 255、顶级域 24），正常邮箱一个不漏。
+EMAIL = re.compile(
+    r"(?<![A-Za-z0-9._%+-])[A-Za-z0-9._%+-]{1,255}@[A-Za-z0-9.-]{1,255}\.[A-Za-z]{2,24}")
 PROJECT_ID = re.compile(r"^[0-9a-f]{32}$")
 MAX_IMPORT_ROWS = 5000
 LEGACY_DIRECTIONS = {
@@ -48,7 +58,11 @@ def clean_text(value: object, limit: int = 500) -> str:
     if value is None:
         return ""
     text = re.sub(r"\s+", " ", str(value)).strip()
-    return EMAIL.sub("[联系方式见来源页面]", text)[:limit]
+    # 没有 "@" 就不可能有邮箱：直接跳过替换。既省掉一次全文扫描，也让"用户误粘贴
+    # 一长串字符"这种输入不付出正则代价（这条快路径与上面的有界量词是两重保险）。
+    if "@" in text:
+        text = EMAIL.sub("[联系方式见来源页面]", text)
+    return text[:limit]
 
 
 def safe_url(value: object) -> str:
@@ -150,12 +164,28 @@ def _project_path(project_id: str) -> Path:
 
 
 def save_project(project: dict) -> None:
+    """整份写回：加锁 + 唯一临时文件 + 原子替换；覆盖前保留 .bak。"""
     path = _project_path(project["id"])
-    path.parent.mkdir(parents=True, exist_ok=True)
     project["updated_at"] = now()
-    temporary = path.with_suffix(".tmp")
-    temporary.write_text(json.dumps(project, ensure_ascii=False, indent=2), encoding="utf-8")
-    temporary.replace(path)
+    project["revision"] = int(project.get("revision") or 0) + 1
+    with storage.file_lock(path):
+        storage.atomic_write_json(path, project)
+
+
+def update_project(project_id: str, mutate):
+    """在锁内完成「读取 → 修改 → 写回」，避免两次并发 PATCH 互相覆盖。
+
+    `mutate(project)` 原地修改即可；返回值会作为本函数的结果（返回 None 时回整份项目）。
+    读不到项目时抛 FileNotFoundError，文件损坏时抛 storage.DataCorruptError。
+    """
+    path = _project_path(project_id)
+    with storage.file_lock(path):
+        project = storage.read_json(path)
+        result = mutate(project)
+        project["updated_at"] = now()
+        project["revision"] = int(project.get("revision") or 0) + 1
+        storage.atomic_write_json(path, project)
+        return project if result is None else result
 
 
 def create_project(name: str) -> dict:
@@ -171,7 +201,7 @@ def load_project(project_id: str) -> dict:
     path = _project_path(project_id)
     if not path.exists():
         raise FileNotFoundError("找不到这个项目")
-    return json.loads(path.read_text(encoding="utf-8"))
+    return storage.read_json(path)
 
 
 def list_projects() -> list[dict]:
@@ -180,7 +210,7 @@ def list_projects() -> list[dict]:
     projects = []
     for path in PROJECTS_DIR.glob("*.json"):
         try:
-            data = json.loads(path.read_text(encoding="utf-8"))
+            data = storage.read_json(path)
             projects.append({
                 "id": data["id"], "name": data["name"],
                 "count": len(data.get("profiles", [])), "updated_at": data.get("updated_at", ""),
@@ -190,7 +220,8 @@ def list_projects() -> list[dict]:
     return sorted(projects, key=lambda x: x["updated_at"], reverse=True)
 
 
-def import_profiles(project: dict, rows: list[dict], imported_from: str = "导入文件") -> dict:
+def import_profiles(project: dict, rows: list[dict], imported_from: str = "导入文件",
+                   *, persist: bool = True) -> dict:
     # 同名同单位可能是不同院系的人；只有全部识别字段相同才自动去重。
     def identity(profile: dict) -> tuple[str, str, str, str]:
         return tuple(profile[key].casefold() for key in
@@ -211,5 +242,7 @@ def import_profiles(project: dict, rows: list[dict], imported_from: str = "导�
         project["profiles"].append(profile)
         existing.add(key)
         added += 1
-    save_project(project)
-    return {"added": added, "skipped": skipped, "duplicates": duplicates, "total": len(project["profiles"])}
+    if persist:
+        save_project(project)
+    return {"added": added, "skipped": skipped, "duplicates": duplicates,
+            "total": len(project["profiles"])}

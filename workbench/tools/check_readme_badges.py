@@ -61,50 +61,52 @@ def tracked_size() -> tuple[int, float]:
 
     口径要同时满足两个要求：
 
-    **① 与平台无关。** 大小取 git **blob 字节数**（`ls-tree -l`），不读工作区文件——
+    **① 与平台无关。** 大小取 git **blob 字节数**（`cat-file -s`），不读工作区文件——
     工作区体积受行尾影响（Windows CRLF / Linux LF 差 2 MB 以上），blob 则处处一致。
     并且必须 `-c core.quotepath=false`：git 默认把非 ASCII 路径转义成八进制
     （`启动.cmd` → `"\\345\\220\\257..."`），在别人的环境里匹配不到文件。
 
-    **② 与"即将提交的内容"一致。** 取 **HEAD 树 ∪ 索引**。只取单一口径都会错位，
-    本项目两种都踩过：
+    **② 与"即将提交的内容"一致。** 提交内容就是**索引**，所以这里直接以索引为准：
 
-    - 只用索引：新文件还没 `git add` 时不计入，`--fix` 写小一号；
-    - 只用 HEAD：新文件已 add 未提交时不计入，`--fix` 仍写小一号，提交后就差一个
-      （两次让 CI 变红）。
+    - 新文件已 `git add` 未提交 → 在索引里，计入；
+    - 文件已 `git rm --cached`（停止跟踪）→ 不在索引里，不计入。
 
-    取并集后，工作流很简单：**先 `git add` 新文件，再跑 `--fix`**，
-    写进 README 的就是提交后的数字；CI 里索引与 HEAD 相同，自然也对得上。
+    **为什么不再用「HEAD 树 ∪ 索引」。** 旧实现取两者并集，只能"补上新文件"，
+    无法"减去已删除文件"：本轮把 7 份参赛交付物 `git rm --cached` 之后，
+    `--fix` 写出的文件数是 **729**，真正提交完是 **722**，CI 立刻变红。
+    并集遇到**已暂存的删除**时会把 HEAD 里还有、索引里已删的文件继续算进去。
+    索引本身就是"将要提交的树"，用它当唯一口径既不需要并集，也没有这个盲区。
     """
     import subprocess
 
-    def _ls(*args: str) -> list[str]:
+    def _run(*args: str, stdin: str | None = None) -> str:
         proc = subprocess.run(
             ["git", "-c", "core.quotepath=false", *args],
             cwd=str(ROOT), capture_output=True, text=True,
-            encoding="utf-8", errors="replace")
-        return [r for r in proc.stdout.split("\0") if r.strip()]
+            encoding="utf-8", errors="replace", input=stdin)
+        return proc.stdout
 
-    entries: dict[str, int] = {}
-    # HEAD 树：已提交的文件与它们的 blob 大小
-    for record in _ls("ls-tree", "-r", "-l", "-z", "HEAD"):
-        head, _, path = record.strip().partition("\t")
-        fields = head.split()
-        if not path or len(fields) < 4:
+    oids: list[str] = []
+    # `<mode> <oid> <stage>\t<path>`；合并冲突时同一路径会有多条 stage
+    for record in _run("ls-files", "-s", "-z").split("\0"):
+        if not record.strip():
             continue
-        try:
-            entries[path] = int(fields[3])
-        except ValueError:
-            continue  # 符号链接等 size 为 "-"
-    # 索引：把已 add 未提交的文件补进来
-    for path in _ls("ls-files", "-z"):
-        if path in entries:
-            continue
-        p = ROOT / path
-        entries[path] = p.stat().st_size if p.is_file() else 0
+        fields = record.split()
+        if len(fields) >= 3:
+            oids.append(fields[1])
+    if not oids:
+        return 0, 0.0
 
-    total = sum(entries.values())
-    return len(entries), total / 1024 / 1024
+    total = 0
+    out = _run("cat-file", "--batch-check", stdin="\n".join(oids) + "\n")
+    for line in out.splitlines():
+        parts = line.split()
+        if len(parts) >= 3 and parts[1] == "blob":
+            try:
+                total += int(parts[2])
+            except ValueError:
+                continue  # size 为 "-" 的条目（如符号链接）
+    return len(oids), total / 1024 / 1024
 
 
 def actual_numbers() -> dict[str, int]:

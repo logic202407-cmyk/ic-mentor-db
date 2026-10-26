@@ -53,6 +53,28 @@ class CountingTests(unittest.TestCase):
         self.assertIn("records", nums)
         self.assertGreater(nums["records"], 1000)
 
+    def test_tracked_size_counts_exactly_the_index(self):
+        """文件数必须等于索引里的条目数——用并集口径时这条会红.
+
+        缺陷：`tracked_size()` 原先取「HEAD 树 ∪ 索引」。并集只能"补上新文件"，
+        不能"减去已删除文件"：把 7 份参赛交付物 `git rm --cached` 之后，`--fix`
+        写出的文件数是 729，真正提交完是 722，CI 立刻红。
+        这里直接拿 `git ls-files` 的条目数当基准，任何口径漂移都会被抓到。
+        """
+        import subprocess
+
+        from workbench.tools.check_readme_badges import tracked_size
+
+        proc = subprocess.run(
+            ["git", "-c", "core.quotepath=false", "ls-files", "-z"],
+            cwd=str(ROOT), capture_output=True, text=True,
+            encoding="utf-8", errors="replace")
+        listed = [r for r in proc.stdout.split("\0") if r.strip()]
+        files, mb = tracked_size()
+        self.assertEqual(files, len(listed),
+                         f"体积表口径的文件数 {files} != 索引条目数 {len(listed)}")
+        self.assertGreater(mb, 1.0)
+
 
 class ReadmeConsistencyTests(unittest.TestCase):
     """真仓库的徽章必须与实际一致——不一致时这条会红。"""

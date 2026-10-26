@@ -28,10 +28,25 @@
 
 - ``same_person``：**直接公开证据**。两条记录指向**同一个本人专属主页**（不是名录页、
   不是被多人共用的页面），且同机构。
-- ``different_person``：**直接冲突证据**。两条记录各有**专属主页且互不相同**，并且
-  院系或一级学科冲突；或者（更强的）分属不同机构。
+- ``different_person``：**直接冲突证据**。只有两类算数：
+  1. 分属**不同机构**（隶属关系本身直接冲突）；
+  2. 记录里存在**标识自然人本身**的字段冲突（出生年 / ORCID / 邮箱 / 英文名等）。
 - ``unknown``：证据不足。名录页/共用页、缺主页、同院系且同学科、主页站点归属与院系
-  不符等，一律进 ``unknown``，**不进入任何指标计算**，单独报告数量。
+  不符，以及**「同校 + 两张互不相同的专属主页 + 只有院系或一级学科不同」**
+  （reason=``unit_conflict_only``）——一律进 ``unknown``，**不进入任何指标计算**，
+  单独报告数量。
+
+为什么「只有院系/学科不同」不算直接冲突
+----------------------------------------
+同一个自然人可以跨学科研究、在两个院系兼任、或因院系调整/历史沿革在不同年份被录入到
+不同单位；反过来，同校同名的两个人也常常各在一个院系。**单位归属差异对这两种假设都是
+一致的**，因此它不能把身份「判死」，只能交给人工核验。上一版把这类组合一律判
+``different_person``，等于用隶属关系冒充身份证据。
+
+审计依据（2026-10-26，只读逐对核对）：同校同名 250 对里有 31 对曾被这条弱判据判成
+异人，逐对检查后 **0 对**存在超出单位归属的直接冲突证据（26 对院系与一级学科都不同、
+5 对仅院系不同），因此全部改判 ``unknown``；明细见
+``.work/2026-10-26-p3/identity-31-audit.csv``（本地过程文件，不随仓库提交）。
 
 「专属主页 vs 名录页」复用 :mod:`workbench.homepage_kind`（来源模块声明的 ``listing``），
 再叠加三条同样可复现的判据：
@@ -53,7 +68,7 @@
 ----
     python -m workbench.disambiguate_names --evaluate      # 新协议指标 + 旧协议对照
     python -m workbench.disambiguate_names --review        # 同校同名待核队列
-    python -m workbench.disambiguate_names --gold          # 写独立复核集 gold_pairs.json
+    python -m workbench.disambiguate_names --gold          # 写程序辅助核验集 gold_pairs.json
 
 产物
 ----
@@ -73,6 +88,7 @@ import re
 import sys
 from collections import Counter, defaultdict
 from itertools import combinations
+import pathlib
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
@@ -100,6 +116,26 @@ LISTING_TITLE_MARKERS = ("名录", "列表", "目录", "索引")
 GENERIC_LIST_FILES = frozenset({
     "list.htm", "list.html", "list.shtml", "more.htm", "default.htm",
 })
+#: 查询串/路径里出现这些片段，说明这是**列表页**而不是某个人的专属页。
+#:
+#: 真实假阳性（2026-10-26 审计）：``https://www.eias.ac.cn/?teachers_category=teachers-list``
+#: 被判成 personal，于是两条同校同名记录得出「同一专属主页 ⇒ 同一个人」——
+#: 这是「把不同人合并成一人」方向的实际错误，比弱判据更危险。
+#:
+#: 反例约束（务必保留）：``?id=``/``?aid=``/``?teacherId=`` 这类「查询串就是人 id」的形态
+#: 必须继续判为个人页。因此这里**只收明确表示"列表"的写法**，不收 ``directory``/``detail``：
+#: ``me.sjtu.edu.cn/teacher_directory1/hujie`` 与
+#: ``ji.sjtu.edu.cn/.../faculty-directory/faculty-detail/131/`` 都是逐人详情页。
+LISTING_URL_MARKERS = (
+    "teachers-list", "teacher-list", "faculty-list", "people-list",
+    "staff-list", "member-list", "person-list", "expert-list", "scholar-list",
+    "teachers_list", "teacher_list", "faculty_list", "people_list",
+    "staff_list", "member_list", "expert_list",
+    "teacherlist", "facultylist", "peoplelist", "stafflist", "expertlist",
+)
+#: 这些查询参数名的**取值**若含 ``list``，说明是按栏目/分类取列表页
+#: （如 ``?teachers_category=teachers-list``）。
+LISTING_QUERY_KEYS = ("category", "cat", "column", "col", "type", "kind", "class")
 #: 履历里的「学科归属」套话，与「这个人是谁」无关，编码时要去掉。
 PLACEHOLDER_MARKERS = (
     "学科归属按公开研究关键词",
@@ -116,6 +152,10 @@ UNKNOWN_NEEDS = {
     "listing_page": "homepage 是名录/列表页，不能作为身份证据",
     "missing_url+listing_page": "缺主页，且另一条也只是名录页",
     "same_unit_no_conflict": "两页不同但院系与一级学科都相同，缺少区分两人的直接证据",
+    "same_unit_cross_discipline": ("两侧院系核心相同、只是挂在不同一级学科下："
+                                   "同一人跨学科录入的典型形态，不足以判异人"),
+    "unit_conflict_only": ("两侧只有院系/一级学科不同：单位归属差异对「同一人跨院系/跨学科」"
+                           "与「同校同名两个人」都成立，不构成直接身份冲突证据，需人工核验"),
     "same_url_cross_institution": "同一 URL 出现在不同机构，需确认是否为页面复用",
 }
 
@@ -146,6 +186,35 @@ def canonical_home(url: str) -> str:
     return u.rstrip("/")
 
 
+def identity_home(url: str) -> str:
+    """判「是不是**同一个页面**」用的归一化：保留查询串。
+
+    为什么必须和 :func:`canonical_home` 分开
+    ----------------------------------------
+    ``canonical_home`` 会丢掉整个查询串。这用于「按标题/文件名识别名录页」没问题，
+    但当查询串本身就是页面标识时——``jiaoshi.php?aid=100``、
+    ``teacherBasic/preview?teacherId=31448``、``_redirect?articleId=464818`` 这类
+    CMS——把两条不同的个人页压成同一个 URL，就会让 :func:`pair_label` 得出
+    「同一个专属主页 ⇒ 同一个人」，也就是**仅凭姓名相同 + 同一站点模板就把两个
+    不同的人合并**。
+
+    这不是理论风险：全库实测 **473 条记录、471 个互不相同的个人页**，只因查询串不同
+    就被 ``canonical_home`` 压成 **11 个 URL**（中国林科院 111 页、南大电子 101 页、
+    中科大 dslx 72 页、同济 62 页、上海交大化学化工学院 58 页、华东师大 48 页 …）。
+    当前同名组里恰好没有落在这些 URL 上的两人组合，所以本次改动不改变任何标签；
+    但判等口径本身不成立，一旦出现同名就会直接合并两个人。
+
+    所以身份判等保留查询串，只抹掉协议、www、锚点与末尾斜杠这些装饰性差异。
+    """
+    u = (url or "").strip().lower()
+    if not u:
+        return ""
+    u = re.sub(r"^https?://", "", u)
+    u = re.sub(r"^www\.", "", u)
+    u = u.split("#")[0].replace("/?", "?")
+    return u.rstrip("/")
+
+
 def host_of(url: str) -> str:
     """取 URL 的主机名。"""
     u = (url or "").strip().lower()
@@ -153,6 +222,37 @@ def host_of(url: str) -> str:
         return ""
     u = re.sub(r"^https?://", "", u)
     return u.split("/")[0].split("?")[0]
+
+
+def listing_url_reason(url: str) -> str:
+    """URL 自身是否写着「这是列表页」；返回理由，不是列表则返回空串。
+
+    只用于识别**明确**的列表写法。判断"查询串是不是人 id"是另一件事，由
+    :func:`identity_home` 负责——两者方向相反，不能互相顶替。
+    """
+    u = (url or "").strip().lower()
+    if not u:
+        return ""
+    body, _, query = u.partition("?")
+    # 1) 明确的列表标记（``teachers-list`` / ``faculty_list`` …），路径或查询串都算
+    haystack = body + "?" + query
+    for marker in LISTING_URL_MARKERS:
+        if marker in haystack:
+            return "listing_url_marker"
+    # 2) 栏目/分类参数取值就是列表（``?teachers_category=teachers-list``）
+    for part in query.split("&"):
+        if not part:
+            continue
+        key, _, value = part.partition("=")
+        if not any(token in key for token in LISTING_QUERY_KEYS):
+            continue
+        if "list" in value:
+            return "listing_query_category"
+    # 3) 末段文件名以 list 开头（``list.htm`` / ``listm.htm`` / ``list_1.html``）
+    segment = body.rstrip("/").rsplit("/", 1)[-1]
+    if segment.startswith("list") or segment.startswith("more"):
+        return "listing_file_name"
+    return ""
 
 
 def _unit_core(name: str) -> str:
@@ -225,6 +325,8 @@ class PageIndex:
         path = re.sub(r"^https?://", "", url.strip().lower()).split("?")[0]
         if path.rstrip("/").rsplit("/", 1)[-1] in GENERIC_LIST_FILES:
             return PAGE_ROSTER
+        if listing_url_reason(url):
+            return PAGE_ROSTER
         return PAGE_PERSONAL
 
     def kind_reason(self, url: str) -> str:
@@ -241,6 +343,9 @@ class PageIndex:
         path = re.sub(r"^https?://", "", url.strip().lower()).split("?")[0]
         if path.rstrip("/").rsplit("/", 1)[-1] in GENERIC_LIST_FILES:
             return "generic_listing_file"
+        reason = listing_url_reason(url)
+        if reason:
+            return reason
         return "dedicated_page"
 
     # ── 判据 4：站点归属是否与记录自己的院系相符 ────────────────────────
@@ -275,7 +380,7 @@ def pair_label(a: dict, b: dict, pages: PageIndex) -> dict:
     home_b = (b.get("homepage") or "").strip()
     kind_a = pages.kind(home_a)
     kind_b = pages.kind(home_b)
-    canon_a, canon_b = canonical_home(home_a), canonical_home(home_b)
+    ident_a, ident_b = identity_home(home_a), identity_home(home_b)
 
     same_inst = a.get("institution") == b.get("institution")
     same_dept = a.get("department") == b.get("department")
@@ -302,7 +407,9 @@ def pair_label(a: dict, b: dict, pages: PageIndex) -> dict:
         return row
 
     # 2) 同一个专属页 + 同机构 → 直接公开证据
-    if canon_a and canon_a == canon_b:
+    # 判等用 identity_home（保留查询串）：查询串常常就是页面 id，抹掉它会把
+    # 「同一站点模板下的两个不同个人页」误判成同一页，从而把两个人合并。
+    if ident_a and ident_a == ident_b:
         if not same_inst:
             row.update(label=UNKNOWN, strength="none",
                        reason="same_url_cross_institution")
@@ -311,14 +418,37 @@ def pair_label(a: dict, b: dict, pages: PageIndex) -> dict:
         row.update(label=SAME, strength=strength, reason="shared_dedicated_page")
         return row
 
-    # 3) 两个互不相同的专属页 → 看单位是否冲突
+    # 3) 两个互不相同的专属页 → 只有隶属单位差异，不足以判定身份
+    # 所有者判定（2026-10-26）：仅有学科或院系差异**不构成**「直接身份冲突证据」。
+    # 同一位导师可能跨学科、兼任、历史学科调整或多院系关联；反过来同校同名的两个人
+    # 也常常各在一个院系。「单位归属差异」对这两种假设都成立，不能把身份判死。
+    # 逐对审计依据见模块 docstring（31 对中 0 对有超出单位归属的直接冲突证据）。
     if not same_inst:
+        # 不同机构仍保留为直接冲突：隶属关系本身互斥（兼任属少数情形，且属另一议题）。
         row.update(label=DIFFERENT, strength="strong",
                    reason="distinct_pages_cross_institution")
         return row
+
+    # 3a) 院系核心（去掉括号补充说明/研究所后缀）相同、只是挂在不同的学科下
+    #     ——这是「同一个人被两个学科列表重复录入」的实证（如 万文杰：物理与天文学院
+    #     0809 vs 0702）。单独给一个 reason，避免与「院系也不同」混为一谈。
+    core_a = _unit_core(a.get("department") or "")
+    core_b = _unit_core(b.get("department") or "")
+    same_unit_core = bool(core_a) and core_a == core_b
+    row["same_unit_core"] = same_unit_core
+    row["unit_core_a"] = core_a
+    row["unit_core_b"] = core_b
+    if same_unit_core:
+        if same_disc:
+            row.update(label=UNKNOWN, strength="none", reason="same_unit_no_conflict")
+        else:
+            row.update(label=UNKNOWN, strength="none",
+                       reason="same_unit_cross_discipline")
+        return row
+
+    # 3b) 院系不同（可能连学科也不同）→ 仍然只是单位归属差异
     if not same_dept or not same_disc:
-        row.update(label=DIFFERENT, strength="medium",
-                   reason="distinct_pages_unit_conflict")
+        row.update(label=UNKNOWN, strength="none", reason="unit_conflict_only")
         return row
     row.update(label=UNKNOWN, strength="none", reason="same_unit_no_conflict")
     return row
@@ -524,12 +654,33 @@ def evaluate(rows: list[dict]) -> dict:
 
 
 def confusion(rows: list[dict], predict) -> dict:
-    """混淆矩阵 + P/R/F1。"""
+    """混淆矩阵 + P/R/F1。
+
+    **缺哪一类、或缺预测，就把依赖它的指标置为 ``null``**，不留 0.0、也不留
+    "看起来很好"的 1.0：
+
+    - 精确率需要**负例**（否则 FP 恒为 0，精确率必然 1.0，是假的好看），
+      也需要**至少一个正类预测**（``tp+fp==0`` 时是 0/0，``prf`` 会落成 0.0，
+      那是"没预测"被显示成"预测得很差"，同样是假指标）；
+    - 召回率需要正例（否则无 FN 可言）；
+    - F1 需要两者都成立。
+
+    键**始终保留**（值为 null），因为冻结的前端按名字探测指标键；删键会让它退化成
+    「待产出」，反而误导成"没跑过评测"。
+    """
     m = prf(rows, predict)
+    support = m["support"]
+    predicted_positive = m["tp"] + m["fp"]
+    precision = (m["precision"]
+                 if support["negatives"] and predicted_positive else None)
+    recall = m["recall"] if support["positives"] else None
+    f1 = (2 * precision * recall / (precision + recall)
+          if precision is not None and recall is not None
+          and (precision + recall) else None)
     return {
         "tp": m["tp"], "fp": m["fp"], "fn": m["fn"], "tn": m["tn"],
-        "precision": m["precision"], "recall": m["recall"], "f1": m["f1"],
-        "support": m["support"],
+        "precision": precision, "recall": recall, "f1": f1,
+        "support": support,
     }
 
 
@@ -565,6 +716,18 @@ def evaluate_protocol(rows: list[dict], scope: str) -> dict:
             "embedding_clean_only": (
                 auc(labelled, "emb_clean") if defined else None),
         },
+        # 值可能为 null（见 confusion）：键始终保留，冻结前端才能显示「—」而不是「待产出」。
+        "metrics_available": {"precision": bool(negatives),
+                              "recall": bool(positives),
+                              "f1": defined, "auc": defined},
+        "metrics_note": (
+            "" if defined else
+            ("本口径缺少"
+             + ("正例" if not positives else "")
+             + ("与" if not positives and not negatives else "")
+             + ("负例" if not negatives else "")
+             + "：精确率/召回率/F1/AUC 中依赖该类别的项按「不可计算」（null）处理，"
+               "不用 0 或旧数字替代。这不是回归，而是弱判据被移除后的真实结果。")),
         "baseline_institution": confusion(labelled, lambda r: r["same_inst"]),
         "baseline_embedding": {
             "confusion": confusion(labelled, lambda r: r["emb"] >= 0.85),
@@ -613,10 +776,17 @@ def adjudicate(row: dict, pages: PageIndex) -> dict:
             note = "两条记录指向同一个本人专属主页，且站点归属与院系一致"
     elif auto == DIFFERENT:
         if row["same_inst"]:
-            note = ("两个互不相同的本人专属主页，且院系/一级学科冲突"
+            # 新协议下同校分支不再产出 different_person；保留分支以免旧产物误读。
+            note = ("两个互不相同的本人专属主页，且存在超出单位归属的直接冲突证据"
                     f"（院系相同={row['same_dept']}，一级学科相同={row['same_disc']}）")
         else:
             note = "两个互不相同的本人专属主页，且分属不同机构"
+    elif row.get("reason") == "unit_conflict_only":
+        note = ("两侧只有院系/一级学科不同：单位归属差异不足以判定身份，"
+                "按「无法确认」处理，进人工核验")
+    elif row.get("reason") == "same_unit_cross_discipline":
+        note = ("两侧院系核心相同、只是挂在不同一级学科下：属同一人跨学科录入的典型形态，"
+                "按「无法确认」处理，进人工核验")
     else:
         note = "证据不足以判定同人/异人"
 
@@ -651,11 +821,18 @@ def _quote(row_a: dict, row_b: dict) -> list[dict]:
 
 def gold_set(rows: list[dict], pages: PageIndex, seed: int = 42,
              unknown_sample: int = 25) -> list[dict]:
-    """构造小规模独立复核集。
+    """构造**程序辅助核验**样本集。
 
-    组成为：同校同名的**全部** ``same_person`` 与 ``different_person`` 候选（这是真正
-    有决策难度的全域，不做抽样），再从 ``unknown`` 里按固定种子抽样，保证三类都有
-    代表。总数由 ``unknown_sample`` 控制在 60–150 对。
+    重要：这里的 ``verdict`` 由 :func:`adjudicate` 的规则给出，而 ``auto_label`` 由
+    :func:`pair_label` 的规则给出——**两者都是程序，不是人工标注**。因此本集合只用于
+    「自动协议与规则复核是否一致」，不能当作 Precision/Recall 的人工金标准。
+
+    真正的独立标注走 :mod:`workbench.human_labels`：导出盲标表 → 人工填写
+    ``human_verdict``/``reviewer``/``reviewed_at`` → 导入后才计算指标；标注不足时
+    只记录状态，不报告指标。
+
+    组成为：同校同名的全部 ``same_person`` 与 ``different_person`` 候选（真正有决策
+    难度的全域，不做抽样），再从 ``unknown`` 里按固定种子抽样，保证三类都有代表。
     """
     same_inst = [r for r in rows if r["same_inst"]]
 
@@ -711,7 +888,11 @@ def gold_set(rows: list[dict], pages: PageIndex, seed: int = 42,
 
 
 def gold_agreement(gold: list[dict]) -> dict:
-    """复核集与自动协议的一致率（按类别）。"""
+    """自动协议与**规则复核**的一致率（按类别）。
+
+    两者同源（都读主页类型/站点归属/院系字段），所以这是一致性检查，
+    不是"人工验证自动协议"的准确率。
+    """
     clean = [g for g in gold if g["auto_label"] in (SAME, DIFFERENT)]
     agree = sum(1 for g in clean if g["verdict"] == g["auto_label"])
     per = {}
@@ -721,6 +902,9 @@ def gold_agreement(gold: list[dict]) -> dict:
         per[label] = {"auto": len(sub), "agreed": hit,
                       "agreement": (hit / len(sub)) if sub else None}
     return {
+        "protocol_status": "program-assisted",
+        "protocol_note": ("auto_label 与 verdict 都由程序规则生成，二者同源；"
+                          "该一致率不代表人工核验准确率。人工金标准见 human_labels。"),
         "reviewed_pairs": len(gold),
         "labelled_candidates": len(clean),
         "agreed": agree,
@@ -837,7 +1021,9 @@ def _build_report(stats: dict, primary: dict | None = None,
                   risky: list[dict] | None = None,
                   queue: list[dict] | None = None,
                   profiles_total: int = 0,
-                  reviewed: dict | None = None) -> list[str]:
+                  reviewed: dict | None = None,
+                  agreement: dict | None = None,
+                  human_status: dict | None = None) -> list[str]:
     lines = [
         "# 同名导师消歧：证据分级评测与待核清单",
         "",
@@ -851,9 +1037,10 @@ def _build_report(stats: dict, primary: dict | None = None,
         "| 判定 | 含义 | 对数 |",
         "|:--|:--|--:|",
         f"| `same_person` | 同一**专属**个人主页 + 同机构 | {stats['labels'][SAME]} |",
-        f"| `different_person` | 两页互不相同且院系/一级学科冲突，或分属不同机构 "
+        f"| `different_person` | 分属不同机构（或自然人标识字段冲突） "
         f"| {stats['labels'][DIFFERENT]} |",
-        f"| `unknown` | 证据不足，**不进入指标** | {stats['labels'][UNKNOWN]} |",
+        f"| `unknown` | 证据不足／仅有院系或学科差异，**不进入指标** "
+        f"| {stats['labels'][UNKNOWN]} |",
         "",
         "`unknown` 的成因分布：",
         "",
@@ -892,6 +1079,15 @@ def _build_report(stats: dict, primary: dict | None = None,
             f"R {_pct(primary['baseline_institution']['recall'])} / "
             f"F1 {_pct(primary['baseline_institution']['f1'])}",
             "",
+        ]
+        if primary.get("metrics_note"):
+            lines += [
+                f"> **指标不可计算**：{primary['metrics_note']}",
+                "> 这是移除弱判据（院系/学科差异不再判异人）之后的**真实结果**，"
+                "不是回归，也不是缺数据；不要用旧数字回填。",
+                "",
+            ]
+        lines += [
             "阈值消融（机构相同 **且** 嵌入 ≥ 阈值）：",
             "",
             "| 阈值 | TP | FP | FN | 精确率 | 召回率 | F1 |",
@@ -916,10 +1112,11 @@ def _build_report(stats: dict, primary: dict | None = None,
             downgraded = reviewed["excluded_unknown"] - primary["excluded_unknown"]
         lines += [
             "",
-            "## 复核后指标（独立复核集判定，主指标的最终口径）",
+            "## 规则复核后指标（程序判定，非人工金标准）",
             "",
-            "复核对「同一 URL 但站点归属与院系不符」的组合降级为 `unknown`——这类主页"
-            "很可能是按姓名匹配接错的，不能算直接证据。",
+            "复核规则对「同一 URL 但站点归属与院系不符」的组合降级为 `unknown`——这类"
+            "主页很可能是按姓名匹配接错的，不能算直接证据。**注意：这一节仍是程序复核，"
+            "不是人工标注**；人工金标准尚未完成，见文末「人工标注状态」。",
             "",
             f"样本 **{reviewed['labelled_pairs']}** 对"
             f"（同人 {reviewed['positives']} / 异人 {reviewed['negatives']}）；"
@@ -937,6 +1134,10 @@ def _build_report(stats: dict, primary: dict | None = None,
             f"{_pct(reviewed['baseline_institution']['recall'])} / "
             f"{_pct(reviewed['baseline_institution']['f1'])} |",
             "",
+        ]
+        if reviewed.get("metrics_note"):
+            lines += [f"> **指标不可计算**：{reviewed['metrics_note']}", ""]
+        lines += [
             "| 阈值 | TP | FP | FN | 精确率 | 召回率 | F1 |",
             "|--:|--:|--:|--:|--:|--:|--:|",
         ]
@@ -945,6 +1146,60 @@ def _build_report(stats: dict, primary: dict | None = None,
             lines.append(f"| {t['emb>=']:.2f} | {m['tp']} | {m['fp']} | {m['fn']} | "
                          f"{_pct(m['precision'])} | {_pct(m['recall'])} | "
                          f"{_pct(m['f1'])} |")
+
+    if reviewed is not None:
+        # 一致率必须来自本次运行，不能把某次跑出来的数字写死在文案里——
+        # 数据一变，报告就会继续复述一个不再成立的「实测值」。
+        if agreement and agreement.get("agreement") is not None:
+            agreement_line = (
+                "上面所有指标都来自**程序规则**：`pair_label`（自动判定）与 `adjudicate`"
+                "（规则复核）同源，因此本次实测的一致率 "
+                f"**{_pct(agreement['agreement'])}**"
+                f"（{agreement['agreed']}/{agreement['labelled_candidates']} 对，"
+                "与 `--gold` 写出的 `workbench/evaluation/gold_pairs.json` 同一批样本）"
+                "只是「两套规则是否一致」，不是人工验证的准确率。")
+        else:
+            agreement_line = (
+                "上面所有指标都来自**程序规则**：`pair_label`（自动判定）与`adjudicate`"
+                "（规则复核）同源，两者的一致率只能说明规则之间是否自洽，"
+                "不是人工验证的准确率。")
+        # 状态必须按磁盘上是否真的有人工判断来渲染，不能写死成「待完成」：
+        # 一旦跑过 --import-human，写死的「待完成」就成了假话。
+        collected = bool(human_status
+                         and human_status.get("protocol_status") == "human-collected")
+        if collected:
+            heading = "## 人工标注状态：**已收集人工判断**（人工金标准）"
+            status_line = (
+                f"本次同时读到 `human_labels.json`：人工独立判断 "
+                f"**{human_status.get('distinct_pairs')}** 对"
+                f"（同人 {human_status.get(SAME, 0)} / 异人 {human_status.get(DIFFERENT, 0)}"
+                f" / 未知 {human_status.get(UNKNOWN, 0)}；争议 "
+                f"{human_status.get('conflicts', 0)} 对）。"
+                "**上表仍是程序指标，不是人工准确率**；人工指标见 `human_metrics.json`。")
+        else:
+            heading = "## 人工标注状态：**待完成**"
+            status_line = ""
+        lines += ["", heading, "", agreement_line, ""]
+        if status_line:
+            lines += [status_line, ""]
+        lines += [
+            "仓库已提供人工盲标协议与工具：",
+            "",
+            "```bat",
+            ".venv\\Scripts\\python.exe -m workbench.disambiguate_names --export-human "
+            "workbench/evaluation/human_annotation/annotation-template.csv",
+            ".venv\\Scripts\\python.exe -m workbench.disambiguate_names --import-human "
+            "<标注完成的CSV> --min-human 30",
+            "```",
+            "",
+            "- 盲标表不含模型分数与自动判定；评分用键单独保存，标注者不可见；",
+            "- 导入校验要求每行都有 verdict / reviewer / reviewed_at，缺一项整批拒绝；",
+            "- 标注 ≥30 对且正负例各 ≥5 后，才计算人工金标准指标；在此之前"
+            "**不得**把本节数字写成人工验证结果。",
+            "",
+            "协议与字段说明：`workbench/evaluation/human_annotation/protocol.md`。",
+            "",
+        ]
 
     if supplementary is not None:
         lines += [
@@ -1049,11 +1304,34 @@ def main() -> int:
                     help="跑新协议评测，并给出旧 URL 协议对照")
     ap.add_argument("--review", action="store_true", help="产出同校同名待核队列")
     ap.add_argument("--gold", action="store_true",
-                    help="写出独立复核集 workbench/evaluation/gold_pairs.json")
+                    help="写出程序辅助核验集 workbench/evaluation/gold_pairs.json（非人工金标准）")
+    ap.add_argument("--export-human", metavar="CSV", default="",
+                    help="导出人工盲标表（不含模型分数）")
+    ap.add_argument("--import-human", metavar="CSV", default="",
+                    help="导入人工判断并（在样本足够时）重算指标")
+    ap.add_argument("--human-status", action="store_true", help="查看人工金标准状态")
+    ap.add_argument("--min-human", type=int, default=30,
+                    help="报告人工指标所需的最小标注对数（默认 30）")
     ap.add_argument("--limit", type=int, default=0,
                     help="旧协议对照评测最多取多少对（0=全部）")
     ap.add_argument("--seed", type=int, default=42)
     args = ap.parse_args()
+
+    from . import human_labels
+    if args.export_human or args.import_human or args.human_status:
+        if args.export_human:
+            result = human_labels.export(pathlib.Path(args.export_human))
+            print(f"盲标表 {result['template']}（{result['pairs']} 对；"
+                  f"{result['categories']}）；评分用键 {result['key']}")
+        if args.import_human:
+            summary = human_labels.import_labels(
+                pathlib.Path(args.import_human), out_dir=EVAL_DIR,
+                min_labels=args.min_human)
+            print(json.dumps(summary, ensure_ascii=False, indent=2))
+        if args.human_status:
+            print(json.dumps(human_labels.status(EVAL_DIR), ensure_ascii=False, indent=2))
+        if not (args.evaluate or args.review or args.gold):
+            return 0
     if not (args.evaluate or args.review or args.gold):
         args.evaluate = args.review = args.gold = True
 
@@ -1070,6 +1348,7 @@ def main() -> int:
           f"待核 {stats['labels'][UNKNOWN]}")
 
     primary = supplementary = legacy = comparison = reviewed = None
+    report_agreement = None
     risky: list[dict] = []
     queue: list[dict] = []
     with_feat: list[dict] = []
@@ -1204,12 +1483,15 @@ def main() -> int:
     if args.gold:
         gold = gold_set(rows, pages, seed=args.seed)
         agreement = gold_agreement(gold)
+        report_agreement = agreement
         payload = {
             "schema": "mentor-workbench/gold-pairs/v1",
+            "protocol_status": "program-assisted",
+            "human_gold_status": "pending",
             "description": (
-                "同名消歧独立复核集：每对的判定可由 a/b 内的原始字段直接复现；"
-                "verdict 是独立复核结论，auto_label 是模块自动协议给出的标签，"
-                "两者不一致之处即为协议的残余风险。"),
+                "程序辅助核验集：判定字段可由 a/b 内的原始字段直接复现；"
+                "verdict 由 adjudicate() 规则给出、auto_label 由 pair_label() 规则给出，"
+                "两者都是程序，并非人工标注。人工金标准见 workbench/evaluation/human_annotation/。"),
             "seed": args.seed,
             "protocol": {
                 "same_person": "同一专属个人主页 + 同机构 + 站点归属与院系一致",
@@ -1228,8 +1510,14 @@ def main() -> int:
               f"与自动协议一致率 {agreement['agreement']:.3f}"
               f" -> {EVAL_DIR / 'gold_pairs.json'}")
 
+    # 报告要引用「两套规则的一致率」时，必须现场算一遍；样本只依赖规则，不需要嵌入。
+    if reviewed is not None and report_agreement is None:
+        report_agreement = gold_agreement(gold_set(rows, pages, seed=args.seed))
+
     lines = _build_report(stats, primary, supplementary, legacy, comparison,
-                          risky, queue, len(profiles), reviewed)
+                          risky, queue, len(profiles), reviewed,
+                          report_agreement,
+                          human_labels.status(EVAL_DIR))
     (OUT_DIR / "report.md").write_text("\n".join(lines) + "\n",
                                        encoding="utf-8", newline="\n")
     print(f"报告 -> {OUT_DIR / 'report.md'}")

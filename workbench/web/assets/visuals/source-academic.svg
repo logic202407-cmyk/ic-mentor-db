@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 260" width="880" height="260" fill="none">
+  <defs>
+    <linearGradient id="srcGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#1e60d5"/>
+    </linearGradient>
+    <radialGradient id="srcGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#1e60d5" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="880" height="260" fill="url(#srcGlow)"/>
+
+  <!-- 4 大来源流线汇聚至中央账本 -->
+  <g stroke="#93c5fd" stroke-width="2" stroke-dasharray="4 4" opacity="0.7">
+    <path d="M140 130 C 260 130, 320 130, 410 130"/>
+    <path d="M740 130 C 620 130, 560 130, 470 130"/>
+  </g>
+
+  <!-- 左1: 学校官网 -->
+  <g transform="translate(70, 75)">
+    <rect x="0" y="0" width="130" height="110" rx="10" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>
+    <circle cx="65" cy="40" r="22" fill="#eff6ff"/>
+    <text x="65" y="47" font-size="22" text-anchor="middle">🏛️</text>
+    <text x="65" y="80" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#1e3a8a" text-anchor="middle">高校官方信息</text>
+    <text x="65" y="98" font-family="-apple-system, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">院系主页直录</text>
+  </g>
+
+  <!-- 左2: 招生简章 -->
+  <g transform="translate(230, 75)">
+    <rect x="0" y="0" width="130" height="110" rx="10" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>
+    <circle cx="65" cy="40" r="22" fill="#eff6ff"/>
+    <text x="65" y="47" font-size="22" text-anchor="middle">📑</text>
+    <text x="65" y="80" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#1e3a8a" text-anchor="middle">研究生招生目录</text>
+    <text x="65" y="98" font-family="-apple-system, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">年份严格标注</text>
+  </g>
+
+  <!-- 中央核心：证据核验节点 -->
+  <g transform="translate(390, 65)">
+    <circle cx="50" cy="65" r="50" fill="url(#srcGrad)"/>
+    <circle cx="50" cy="65" r="60" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4 3"/>
+    <!-- 盾牌印章 -->
+    <path d="M50 38 L70 48 V66 C70 80, 50 90, 50 90 C50 90, 30 80, 30 66 V48 Z" fill="#ffffff" opacity="0.95"/>
+    <path d="M42 64 L48 70 L58 58" stroke="#10b981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="50" y="145" font-family="-apple-system, sans-serif" font-size="13" font-weight="700" fill="#0f172a" text-anchor="middle">公开证据链路</text>
+  </g>
+
+  <!-- 右2: 学术论文库 -->
+  <g transform="translate(520, 75)">
+    <rect x="0" y="0" width="130" height="110" rx="10" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>
+    <circle cx="65" cy="40" r="22" fill="#eff6ff"/>
+    <text x="65" y="47" font-size="22" text-anchor="middle">🗄️</text>
+    <text x="65" y="80" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#1e3a8a" text-anchor="middle">公开文献数据库</text>
+    <text x="65" y="98" font-family="-apple-system, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">候选与归属分离</text>
+  </g>
+
+  <!-- 右1: 客观中立准则 -->
+  <g transform="translate(680, 75)">
+    <rect x="0" y="0" width="130" height="110" rx="10" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>
+    <circle cx="65" cy="40" r="22" fill="#eff6ff"/>
+    <text x="65" y="47" font-size="22" text-anchor="middle">⚖️</text>
+    <text x="65" y="80" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#1e3a8a" text-anchor="middle">学术中立声明</text>
+    <text x="65" y="98" font-family="-apple-system, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">不排名 · 不打分</text>
+  </g>
+</svg>

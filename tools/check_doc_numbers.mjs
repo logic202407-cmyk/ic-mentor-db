@@ -27,14 +27,18 @@ for (const [k, v] of Object.entries(FACT)) console.log(`  ${k.padEnd(12)} ${v}`)
 console.log(`  主页覆盖率   ${(FACT.有主页人数 / FACT.全库人数 * 100).toFixed(1)}%`);
 console.log(`  论文覆盖率   ${(FACT.有论文人数 / FACT.全库人数 * 100).toFixed(1)}%`);
 
-// 文档里"声称"的关键数字
+// 文档里"声称"的关键数字。
+// 这些是**原集成电路专题**的统计口径，对应文档已从根 README 迁到 docs/历史-集成电路专题.md
+// （根 README 现在介绍当前工作台，不再写这批数字）。校验对象随之改到迁移后的文档，
+// 否则这里会静默匹配不到、等于把检查关掉。
+const LEGACY_DOC = 'docs/历史-集成电路专题.md';
 const CLAIM = [
-  ['README.md', /\*\*(\d+) 人\*\*（(\d+) 校\/单位）/, ['全库人数', '校单位数']],
-  ['README.md', /检索到可核实论文 \| \*\*(\d+) 人（([\d.]+)%）\*\*/, ['有论文人数', null]],
-  ['README.md', /S 级）合计 \| \*\*(\d+) 篇\*\*（(\d+) 位导师有 S 级产出）/, ['S合计', '有S人数']],
-  ['README.md', /A 级）合计 \| \*\*(\d+) 篇\*\*/, ['A合计']],
-  ['README.md', /主页明确写了在招\*\* \| \*\*(\d+) 位/, ['在招']],
-  ['README.md', /抓取个人\/课题组主页 \| \*\*(\d+) 位\*\*（成功 (\d+)）/, ['抓取主页人数', null]],
+  [LEGACY_DOC, /\*\*(\d+) 人\*\*（(\d+) 校\/单位）/, ['全库人数', '校单位数']],
+  [LEGACY_DOC, /检索到可核实论文 \| \*\*(\d+) 人（([\d.]+)%）\*\*/, ['有论文人数', null]],
+  [LEGACY_DOC, /S 级）合计 \| \*\*(\d+) 篇\*\*（(\d+) 位导师有 S 级产出）/, ['S合计', '有S人数']],
+  [LEGACY_DOC, /A 级）合计 \| \*\*(\d+) 篇\*\*/, ['A合计']],
+  [LEGACY_DOC, /主页明确写了在招\*\* \| \*\*(\d+) 位/, ['在招']],
+  [LEGACY_DOC, /抓取个人\/课题组主页 \| \*\*(\d+) 位\*\*（成功 (\d+)）/, ['抓取主页人数', null]],
 ];
 
 let bad = 0;
@@ -55,7 +59,7 @@ for (const [file, re, keys] of CLAIM) {
 }
 
 // 百分比核对
-const t = fs.readFileSync(path.join(REPO, 'README.md'), 'utf8');
+const t = fs.readFileSync(path.join(REPO, LEGACY_DOC), 'utf8');
 const pctM = t.match(/检索到可核实论文 \| \*\*\d+ 人（([\d.]+)%）/);
 if (pctM) {
   const actual = FACT.有论文人数 / FACT.全库人数 * 100;
