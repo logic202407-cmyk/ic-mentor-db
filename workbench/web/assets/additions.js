@@ -211,20 +211,4 @@ function setupAddMentor() {
       return;
     }
   });
-
-  // 3. 数据来源多源汇聚交互 (Stream Convergence Hover Linkage)
-  const sourceBentoCards = document.querySelectorAll('#sourcesView .bento-card-item');
-  const sourcesWrap = document.querySelector('.sources-flow-art-wrap');
-  if (sourceBentoCards && sourcesWrap) {
-    sourceBentoCards.forEach(function(card, idx) {
-      card.addEventListener('mouseenter', function() {
-        sourcesWrap.classList.add('source-focus-flow');
-        sourcesWrap.dataset.activeStream = String(idx);
-      });
-      card.addEventListener('mouseleave', function() {
-        sourcesWrap.classList.remove('source-focus-flow');
-        delete sourcesWrap.dataset.activeStream;
-      });
-    });
-  }
 })();
