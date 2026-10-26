@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/代码许可-MIT-yellow.svg)](LICENSE)
 [![Data License](https://img.shields.io/badge/数据许可-见%20LICENSE--DATA-blue.svg)](LICENSE-DATA)
 [![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB.svg)](workbench/requirements.txt)
-[![Tests](https://img.shields.io/badge/tests-1078%20passed-brightgreen.svg)](workbench/tests)
+[![Tests](https://img.shields.io/badge/tests-1079%20passed-brightgreen.svg)](workbench/tests)
 [![Records](https://img.shields.io/badge/记录-15%2C719%20条-informational.svg)](CHANGELOG.md)
 [![Local Only](https://img.shields.io/badge/数据-仅存本机-success.svg)](SECURITY.md)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
@@ -275,7 +275,7 @@ py -3 -m venv .venv
 
 | 项目 | 体积 | 说明 |
 |:--|--:|:--|
-| 纳入 git 的文件（729 个） | **约 126 MB** | 按 git blob 大小统计（与平台无关）；大头是数据本体，见下方明细 |
+| 纳入 git 的文件（722 个） | **约 125 MB** | 按 git blob 大小统计（与平台无关）；大头是数据本体，见下方明细 |
 | `.git` | 约 67 MB | 历史提交 |
 | `.venv` | 约 211 MB | 虚拟环境，可由 `requirements.txt` 重建 |
 | `data/raw` | 约 890 MB | **抓取到的网页原文**，只在采集脚本里用；运行期不读它，已 gitignore |
