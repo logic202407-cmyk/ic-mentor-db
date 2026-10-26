@@ -22,7 +22,7 @@ def capture():
 
         # 1. 01-home.png
         print("1. Capturing 01-home.png...")
-        page.goto(f"{BASE_URL}/?view=home", wait_until="networkidle")
+        page.goto(f"{BASE_URL}/?view=home", wait_until="domcontentloaded")
         page.wait_for_selector("#homeView:not([hidden])")
         page.wait_for_selector(".hero-art-img")
         page.wait_for_timeout(500)
@@ -30,7 +30,7 @@ def capture():
 
         # 2. 02-dossier.png
         print("2. Capturing 02-dossier.png...")
-        page.goto(f"{BASE_URL}/?view=workspace&mentor=legacy-70d0b480a18a3704f200", wait_until="networkidle")
+        page.goto(f"{BASE_URL}/?view=workspace&mentor=legacy-70d0b480a18a3704f200", wait_until="domcontentloaded")
         page.wait_for_selector("#dossier:not([hidden])")
         page.wait_for_selector("#pane-identity:not([hidden])")
         page.wait_for_timeout(600)
@@ -45,7 +45,7 @@ def capture():
 
         # 4. 04-discipline.png
         print("4. Capturing 04-discipline.png...")
-        page.goto(f"{BASE_URL}/?view=discipline", wait_until="networkidle")
+        page.goto(f"{BASE_URL}/?view=discipline", wait_until="domcontentloaded")
         page.wait_for_selector("#disciplineNavView:not([hidden])")
         page.wait_for_selector(".discipline-card-btn")
         page.wait_for_timeout(500)
@@ -53,7 +53,7 @@ def capture():
 
         # 5. 05-records.png
         print("5. Capturing 05-records.png...")
-        page.goto(f"{BASE_URL}/?view=records", wait_until="networkidle")
+        page.goto(f"{BASE_URL}/?view=records", wait_until="domcontentloaded")
         page.wait_for_selector("#recordsView:not([hidden])")
         page.wait_for_selector(".records-empty-img")
         page.wait_for_timeout(500)
@@ -61,7 +61,7 @@ def capture():
 
         # 6. 06-sources.png
         print("6. Capturing 06-sources.png...")
-        page.goto(f"{BASE_URL}/?view=sources", wait_until="networkidle")
+        page.goto(f"{BASE_URL}/?view=sources", wait_until="domcontentloaded")
         page.wait_for_selector("#sourcesView:not([hidden])")
         page.wait_for_selector(".sources-flow-img")
         page.wait_for_timeout(500)
@@ -69,7 +69,7 @@ def capture():
 
         # 7. 07-eval.png
         print("7. Capturing 07-eval.png...")
-        page.goto(f"{BASE_URL}/eval", wait_until="networkidle")
+        page.goto(f"{BASE_URL}/eval", wait_until="domcontentloaded")
         page.wait_for_selector(".site-head")
         page.wait_for_selector(".page-hero")
         page.wait_for_timeout(800)

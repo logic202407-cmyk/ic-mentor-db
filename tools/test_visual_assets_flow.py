@@ -192,7 +192,7 @@ def run_visual_acceptance():
         shot_eval = SCREENSHOTS_DIR / "visual_08_eval_1440x900.png"
         page.screenshot(path=str(shot_eval))
         print(f"  [OK] 算法评测看板截图已保存: {shot_eval.name}")
-        page.screenshot(path=str(DOCS_SCREENSHOTS_DIR / "06-eval-overview.png"))
+        page.screenshot(path=str(DOCS_SCREENSHOTS_DIR / "07-eval.png"))
 
         context.close()
 

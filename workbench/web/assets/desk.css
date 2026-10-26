@@ -2677,20 +2677,28 @@ body{overflow-wrap:anywhere}
   box-shadow: 0 16px 36px -8px rgba(30, 96, 213, 0.16), 0 0 0 1px rgba(30, 96, 213, 0.12);
 }
 
+.sources-flow-art-wrap picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 .sources-flow-img {
   width: 100%;
   max-width: 720px;
   height: auto;
   display: block;
-  filter: drop-shadow(0 8px 20px rgba(30, 96, 213, 0.09));
-  animation: none;
-  transition: transform 0.35s var(--ease), filter 0.35s var(--ease);
+  margin: 0 auto;
+  filter: drop-shadow(0 10px 24px rgba(30, 96, 213, 0.10));
+  animation: subtleSourcesFloat 8s ease-in-out infinite alternate;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.35s var(--ease);
   will-change: transform, filter;
 }
 
 .sources-flow-img:hover {
-  transform: scale(1.008);
-  filter: drop-shadow(0 14px 28px rgba(30, 96, 213, 0.15));
+  transform: scale(1.02);
+  filter: drop-shadow(0 18px 36px rgba(30, 96, 213, 0.18));
 }
 
 /* 关于说明页：左文右图平衡排版 */
@@ -2946,69 +2954,5 @@ body{overflow-wrap:anywhere}
   }
   .records-visual-box {
     display: none;
-  }
-}
-
-
-/* ── 数据来源 Stream Convergence 汇聚辅助轨 ── */
-.sources-flow-art-wrap {
-  position: relative;
-}
-.sources-flow-art-wrap::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: 
-    radial-gradient(circle at 50% 50%, rgba(30, 96, 213, 0.06) 0%, transparent 65%),
-    linear-gradient(to right, rgba(30, 96, 213, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(30, 96, 213, 0.04) 1px, transparent 1px);
-  background-size: 100% 100%, 24px 24px, 24px 24px;
-  pointer-events: none;
-  border-radius: inherit;
-  opacity: 0.7;
-}
-.convergence-rail {
-  position: absolute;
-  pointer-events: none;
-  stroke: rgba(30, 96, 213, 0.22);
-  stroke-dasharray: 4 6;
-  animation: convergenceFlow 20s linear infinite;
-}
-@keyframes convergenceFlow {
-  to { stroke-dashoffset: -100; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .convergence-rail { animation: none !important; }
-}
-
-
-/* ── Stream Convergence 辅助画布与细线流光 ── */
-.convergence-rail-canvas {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 0;
-  overflow: visible;
-}
-.convergence-rail {
-  stroke: rgba(30, 96, 213, 0.28);
-  stroke-width: 1.2;
-  stroke-dasharray: 4 6;
-  animation: convergenceDash 24s linear infinite;
-}
-.sources-flow-art-wrap.source-focus-flow .convergence-rail {
-  stroke: rgba(30, 96, 213, 0.65);
-  stroke-width: 1.6;
-}
-@keyframes convergenceDash {
-  to {
-    stroke-dashoffset: -100;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .convergence-rail {
-    animation: none !important;
   }
 }
