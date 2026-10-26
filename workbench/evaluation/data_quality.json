@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26T14:24:06+08:00",
+  "generated_at": "2026-10-26T16:56:31+08:00",
   "records": {
     "total": 15719,
     "public_source": 12546,
@@ -12,8 +12,8 @@
     "max_same_name": 10
   },
   "homepage_kind": {
-    "personal": 7176,
-    "roster": 946,
+    "personal": 7172,
+    "roster": 950,
     "none": 4424
   },
   "coverage": {

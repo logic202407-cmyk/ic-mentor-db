@@ -1,13 +1,14 @@
 """Batch capture screenshots across viewports and views for UI verification.
-Saves all screenshots to D:\\ic-mentor-db\\reports\\screenshots\\
+Saves screenshots to reports/screenshots/ (repo-relative, derived from this file).
 """
 import os
+from pathlib import Path
 import subprocess
 import time
 
 EDGE_PATH = r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
 BASE_URL = "http://127.0.0.1:8765"
-OUT_DIR = r"D:\ic-mentor-db\reports\screenshots"
+OUT_DIR = str(Path(__file__).resolve().parent.parent / "reports" / "screenshots")  # 不写死盘符：克隆到任何位置都能跑
 os.makedirs(OUT_DIR, exist_ok=True)
 
 SHOTS = [

@@ -5,13 +5,13 @@
 **约定**
 
 - 请求与响应均为 JSON（`Content-Type: application/json`）；`/api/catalog/mentor/{id}/report.md` 返回 Markdown 文本。
-- 写请求（`POST` / `DELETE`）**必须带 `Origin` 头**，否则拒绝（本地 CSRF 防线）；`Host` 也做白名单校验。
+- 写请求（`POST` / `PATCH` / `DELETE`）**必须带 `Origin` 头**，否则拒绝（本地 CSRF 防线）；`Host` 也做白名单校验。
 - 请求体上限 12 MB；超限直接拒绝。
 - 语义检索相关接口在向量模型不可用时**不返回 500**：检索类回落到 BM25 并在结果里带 `fallback`；`/openalex/*` 这类外部接口失败只影响该请求。
 - 错误响应的 `detail` 是稳定的中文提示，**不回显 Python 异常原文**（原文只进服务端日志）。
-- 本表按 `workbench/app.py` 的路由声明自动核对；**字段级口径以源码为准**，本文件不重复声明字段（避免文档与实际字段漂移）。
+- 本表按 `workbench/app.py` 的路由声明核对；**字段级口径以源码为准**，本文件不重复声明字段（避免文档与实际字段漂移）。
 
-共 33 个 API 路由（另有 4 个页面路由：`/`、`/eval`、`/classic`、`/legacy/network`）。
+共 **37 个 API 路由**（GET 20 / POST 11 / PATCH 4 / DELETE 2；另有 4 个页面路由：`/`、`/eval`、`/classic`、`/legacy/network`）。
 
 ## 健康检查
 
@@ -50,7 +50,9 @@
 |:--|:--|:--|
 | GET | `/api/catalog/mentor/{mentor_id}/investigation` | 该导师的本地调查记录概览 |
 | POST | `/api/catalog/mentor/{mentor_id}/investigation` | 开始/更新调查记录 |
+| PATCH | `/api/catalog/mentor/{mentor_id}/case` | 局部更新该导师的调查档案字段 |
 | POST | `/api/catalog/mentor/{mentor_id}/evidence` | 追加一条证据 |
+| PATCH | `/api/catalog/mentor/{mentor_id}/evidence/{evidence_id}` | 修改一条已记录的证据 |
 | DELETE | `/api/catalog/mentor/{mentor_id}/evidence/{evidence_id}` | 删除一条证据 |
 | POST | `/api/catalog/mentor/{mentor_id}/papers` | 追加一条论文线索 |
 | DELETE | `/api/catalog/mentor/{mentor_id}/papers/{paper_id}` | 删除一条论文线索 |
@@ -82,7 +84,9 @@
 | GET | `/api/projects/{project_id}` | 项目详情 |
 | POST | `/api/projects/{project_id}/import` | 导入档案（CSV / JSON，字段白名单校验） |
 | POST | `/api/projects/{project_id}/profiles` | 向项目添加导师档案 |
+| PATCH | `/api/projects/{project_id}/profiles/{profile_id}` | 局部更新某个导师档案的字段 |
 | POST | `/api/projects/{project_id}/profiles/{profile_id}/sources` | 给档案添加来源 |
+| PATCH | `/api/projects/{project_id}/profiles/{profile_id}/sources/{source_id}` | 修改某条来源记录 |
 | POST | `/api/projects/{project_id}/search` | 检索导师。`mode` ∈ `semantic` / `keyword` / `bm25` / `hybrid` / `auto` |
 | GET | `/api/projects/{project_id}/export` | 导出调查记录 |
 

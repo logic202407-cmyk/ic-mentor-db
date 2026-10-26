@@ -214,5 +214,45 @@ class CorruptCopyNamingTests(TempDataDirCase):
         self.assertEqual(copies, ["{first", "{second"])
 
 
+class RestoreBackupTests(TempDataDirCase):
+    """``storage.restore_backup()``：单文件回滚到上一个版本。
+
+    它没有调用点，但属于"记录出问题时的最后一招"这类底层原语，本轮保留并补测试
+    钉住行为，而不是继续留一段没人验证过的代码。注意它只负责**同一个文件退回 .bak**；
+    整包恢复是 ``workbench.tools.backup_records.restore()``（zip + manifest）的职责，
+    两者粒度不同，不能互相替代。
+    """
+
+    def test_restores_previous_version_and_keeps_bak(self) -> None:
+        path = self.dir / "a.json"
+        storage.atomic_write_json(path, {"notes": "v1"})
+        storage.atomic_write_json(path, {"notes": "v2"})   # .bak = v1
+
+        self.assertTrue(storage.restore_backup(path))
+
+        self.assertEqual(json.loads(path.read_text(encoding="utf-8")), {"notes": "v1"})
+        # 回滚不能把 .bak 一起消耗掉，否则第二级回滚就没了
+        self.assertEqual(
+            json.loads(pathlib.Path(str(path) + ".bak").read_text(encoding="utf-8")),
+            {"notes": "v1"})
+
+    def test_returns_false_without_backup(self) -> None:
+        path = self.dir / "none.json"
+        storage.atomic_write_json(path, {"notes": "v1"})
+        self.assertFalse(storage.restore_backup(path))
+        self.assertEqual(json.loads(path.read_text(encoding="utf-8")), {"notes": "v1"})
+
+    def test_corrupt_backup_raises_and_leaves_file_untouched(self) -> None:
+        path = self.dir / "c.json"
+        storage.atomic_write_json(path, {"notes": "v1"})
+        storage.atomic_write_json(path, {"notes": "v2"})   # .bak = v1
+        pathlib.Path(str(path) + ".bak").write_text("{broken", encoding="utf-8")
+
+        with self.assertRaises(ValueError):   # DataCorruptError 也是 ValueError
+            storage.restore_backup(path)
+
+        self.assertEqual(json.loads(path.read_text(encoding="utf-8")), {"notes": "v2"})
+
+
 if __name__ == "__main__":
     unittest.main()

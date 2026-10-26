@@ -12,173 +12,30 @@
   "agreement": {
     "protocol_status": "program-assisted",
     "protocol_note": "auto_label 与 verdict 都由程序规则生成，二者同源；该一致率不代表人工核验准确率。人工金标准见 human_labels。",
-    "reviewed_pairs": 140,
-    "labelled_candidates": 115,
-    "agreed": 105,
-    "agreement": 0.9130434782608695,
+    "reviewed_pairs": 108,
+    "labelled_candidates": 83,
+    "agreed": 73,
+    "agreement": 0.8795180722891566,
     "by_auto_label": {
       "same_person": {
-        "auto": 84,
-        "agreed": 74,
-        "agreement": 0.8809523809523809
+        "auto": 83,
+        "agreed": 73,
+        "agreement": 0.8795180722891566
       },
       "different_person": {
-        "auto": 31,
-        "agreed": 31,
-        "agreement": 1.0
+        "auto": 0,
+        "agreed": 0,
+        "agreement": null
       }
     },
     "verdict_distribution": {
-      "different_person": 31,
       "unknown": 35,
-      "same_person": 74
+      "same_person": 73
     }
   },
   "pairs": [
     {
       "pair_id": "G0001",
-      "name": "万文杰",
-      "institution": "上海交通大学",
-      "a": {
-        "id": "legacy-fc4b2526490000dad1ed",
-        "department": "物理与天文学院 / 光子传输与通信全国重点实验室",
-        "first_level_discipline": "0809 电子科学与技术",
-        "homepage": "https://www.physics.sjtu.edu.cn/jsml/wanwenjie.html",
-        "page_kind": "personal"
-      },
-      "b": {
-        "id": "official-297f822fca45cae5a4a3",
-        "department": "浦江国际学院",
-        "first_level_discipline": "0809 电子科学与技术",
-        "homepage": "https://www.ji.sjtu.edu.cn/cn/about/faculty-staff/faculty-directory/faculty-detail/131/",
-        "page_kind": "personal"
-      },
-      "auto_label": "different_person",
-      "verdict": "different_person",
-      "evidence_strength": "medium",
-      "evidence": {
-        "rule": "distinct_pages_unit_conflict",
-        "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=True）",
-        "quoted_fields": [
-          {
-            "field": "institution",
-            "label": "机构",
-            "a": "上海交通大学",
-            "b": "上海交通大学",
-            "equal": true
-          },
-          {
-            "field": "department",
-            "label": "院系",
-            "a": "物理与天文学院 / 光子传输与通信全国重点实验室",
-            "b": "浦江国际学院",
-            "equal": false
-          },
-          {
-            "field": "first_level_discipline",
-            "label": "一级学科",
-            "a": "0809 电子科学与技术",
-            "b": "0809 电子科学与技术",
-            "equal": true
-          },
-          {
-            "field": "discipline",
-            "label": "学科",
-            "a": "光电子与硅光",
-            "b": "电子科学与技术",
-            "equal": false
-          },
-          {
-            "field": "homepage",
-            "label": "主页",
-            "a": "https://www.physics.sjtu.edu.cn/jsml/wanwenjie.html",
-            "b": "https://www.ji.sjtu.edu.cn/cn/about/faculty-staff/faculty-directory/faculty-detail/131/",
-            "equal": false
-          },
-          {
-            "field": "interests",
-            "label": "研究方向",
-            "a": "硅光/光电子集成、微纳光子学",
-            "b": "不分研究方向",
-            "equal": false
-          }
-        ]
-      },
-      "same_institution": true
-    },
-    {
-      "pair_id": "G0002",
-      "name": "万文杰",
-      "institution": "上海交通大学",
-      "a": {
-        "id": "legacy-fc4b2526490000dad1ed",
-        "department": "物理与天文学院 / 光子传输与通信全国重点实验室",
-        "first_level_discipline": "0809 电子科学与技术",
-        "homepage": "https://www.physics.sjtu.edu.cn/jsml/wanwenjie.html",
-        "page_kind": "personal"
-      },
-      "b": {
-        "id": "official-767dbe5377b4b47b0b0f",
-        "department": "物理与天文学院（含李政道研究所）",
-        "first_level_discipline": "0702 物理学",
-        "homepage": "https://www.ji.sjtu.edu.cn/cn/about/faculty-staff/faculty-directory/faculty-detail/131/",
-        "page_kind": "personal"
-      },
-      "auto_label": "different_person",
-      "verdict": "different_person",
-      "evidence_strength": "medium",
-      "evidence": {
-        "rule": "distinct_pages_unit_conflict",
-        "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
-        "quoted_fields": [
-          {
-            "field": "institution",
-            "label": "机构",
-            "a": "上海交通大学",
-            "b": "上海交通大学",
-            "equal": true
-          },
-          {
-            "field": "department",
-            "label": "院系",
-            "a": "物理与天文学院 / 光子传输与通信全国重点实验室",
-            "b": "物理与天文学院（含李政道研究所）",
-            "equal": false
-          },
-          {
-            "field": "first_level_discipline",
-            "label": "一级学科",
-            "a": "0809 电子科学与技术",
-            "b": "0702 物理学",
-            "equal": false
-          },
-          {
-            "field": "discipline",
-            "label": "学科",
-            "a": "光电子与硅光",
-            "b": "物理学",
-            "equal": false
-          },
-          {
-            "field": "homepage",
-            "label": "主页",
-            "a": "https://www.physics.sjtu.edu.cn/jsml/wanwenjie.html",
-            "b": "https://www.ji.sjtu.edu.cn/cn/about/faculty-staff/faculty-directory/faculty-detail/131/",
-            "equal": false
-          },
-          {
-            "field": "interests",
-            "label": "研究方向",
-            "a": "硅光/光电子集成、微纳光子学",
-            "b": "不分研究方向",
-            "equal": false
-          }
-        ]
-      },
-      "same_institution": true
-    },
-    {
-      "pair_id": "G0003",
       "name": "万文杰",
       "institution": "上海交通大学",
       "a": {
@@ -255,7 +112,7 @@
       "missing_evidence": "主页站点归属与院系不符，需人工确认该主页是否接错"
     },
     {
-      "pair_id": "G0004",
+      "pair_id": "G0002",
       "name": "俞章盛",
       "institution": "上海交通大学",
       "a": {
@@ -326,78 +183,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0005",
-      "name": "刘世元",
-      "institution": "华中科技大学",
-      "a": {
-        "id": "legacy-65e56f1ece426ce7a656",
-        "department": "集成电路学院",
-        "first_level_discipline": "0809 电子科学与技术",
-        "homepage": "https://ic.hust.edu.cn/info/1146/5670.htm",
-        "page_kind": "personal"
-      },
-      "b": {
-        "id": "official-4f4d8ca1d5b3b827c28e",
-        "department": "机械电子信息工程系",
-        "first_level_discipline": "0802 机械工程",
-        "homepage": "https://mse.hust.edu.cn/info/1148/1484.htm",
-        "page_kind": "personal"
-      },
-      "auto_label": "different_person",
-      "verdict": "different_person",
-      "evidence_strength": "medium",
-      "evidence": {
-        "rule": "distinct_pages_unit_conflict",
-        "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
-        "quoted_fields": [
-          {
-            "field": "institution",
-            "label": "机构",
-            "a": "华中科技大学",
-            "b": "华中科技大学",
-            "equal": true
-          },
-          {
-            "field": "department",
-            "label": "院系",
-            "a": "集成电路学院",
-            "b": "机械电子信息工程系",
-            "equal": false
-          },
-          {
-            "field": "first_level_discipline",
-            "label": "一级学科",
-            "a": "0809 电子科学与技术",
-            "b": "0802 机械工程",
-            "equal": false
-          },
-          {
-            "field": "discipline",
-            "label": "学科",
-            "a": "光电子与硅光",
-            "b": "机械工程",
-            "equal": false
-          },
-          {
-            "field": "homepage",
-            "label": "主页",
-            "a": "https://ic.hust.edu.cn/info/1146/5670.htm",
-            "b": "https://mse.hust.edu.cn/info/1148/1484.htm",
-            "equal": false
-          },
-          {
-            "field": "interests",
-            "label": "研究方向",
-            "a": "计算光刻、集成电路测量与检测、计算成像与计算测量、EUV掩模检测",
-            "b": "方向待补",
-            "equal": false
-          }
-        ]
-      },
-      "same_institution": true
-    },
-    {
-      "pair_id": "G0006",
+      "pair_id": "G0003",
       "name": "刘丝靓",
       "institution": "中南大学",
       "a": {
@@ -468,79 +254,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0007",
-      "name": "刘亚东",
-      "institution": "上海交通大学",
-      "a": {
-        "id": "official-7dda99eddec1eda29f76",
-        "department": "船舶海洋与建筑工程学院",
-        "first_level_discipline": "0824 船舶与海洋工程",
-        "homepage": "http://naoce.sjtu.edu.cn/teachers/5540.html",
-        "page_kind": "personal"
-      },
-      "b": {
-        "id": "official-bae101198d37d5e4f820",
-        "department": "电气工程学院",
-        "first_level_discipline": "0808 电气工程",
-        "homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
-        "page_kind": "roster"
-      },
-      "auto_label": "unknown",
-      "verdict": "unknown",
-      "evidence_strength": "none",
-      "evidence": {
-        "rule": "listing_page",
-        "note": "证据不足以判定同人/异人",
-        "quoted_fields": [
-          {
-            "field": "institution",
-            "label": "机构",
-            "a": "上海交通大学",
-            "b": "上海交通大学",
-            "equal": true
-          },
-          {
-            "field": "department",
-            "label": "院系",
-            "a": "船舶海洋与建筑工程学院",
-            "b": "电气工程学院",
-            "equal": false
-          },
-          {
-            "field": "first_level_discipline",
-            "label": "一级学科",
-            "a": "0824 船舶与海洋工程",
-            "b": "0808 电气工程",
-            "equal": false
-          },
-          {
-            "field": "discipline",
-            "label": "学科",
-            "a": "船舶与海洋工程",
-            "b": "电气工程",
-            "equal": false
-          },
-          {
-            "field": "homepage",
-            "label": "主页",
-            "a": "http://naoce.sjtu.edu.cn/teachers/5540.html",
-            "b": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
-            "equal": false
-          },
-          {
-            "field": "interests",
-            "label": "研究方向",
-            "a": "不分研究方向",
-            "b": "电气工程",
-            "equal": false
-          }
-        ]
-      },
-      "same_institution": true,
-      "missing_evidence": "homepage 是名录/列表页，不能作为身份证据"
-    },
-    {
-      "pair_id": "G0008",
+      "pair_id": "G0004",
       "name": "刘元东",
       "institution": "中南大学",
       "a": {
@@ -611,72 +325,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0009",
-      "name": "刘冰",
-      "institution": "北京师范大学",
-      "a": {
-        "id": "official-021926ab54781ea14fe9",
-        "department": "社会学院",
-        "first_level_discipline": "0303 社会学",
-        "homepage": "",
-        "page_kind": "none"
-      },
-      "b": {
-        "id": "official-c947ac2449e193616dc4",
-        "department": "心理学部",
-        "first_level_discipline": "0402 心理学",
-        "homepage": "",
-        "page_kind": "none"
-      },
-      "auto_label": "unknown",
-      "verdict": "unknown",
-      "evidence_strength": "none",
-      "evidence": {
-        "rule": "missing_url",
-        "note": "证据不足以判定同人/异人",
-        "quoted_fields": [
-          {
-            "field": "institution",
-            "label": "机构",
-            "a": "北京师范大学",
-            "b": "北京师范大学",
-            "equal": true
-          },
-          {
-            "field": "department",
-            "label": "院系",
-            "a": "社会学院",
-            "b": "心理学部",
-            "equal": false
-          },
-          {
-            "field": "first_level_discipline",
-            "label": "一级学科",
-            "a": "0303 社会学",
-            "b": "0402 心理学",
-            "equal": false
-          },
-          {
-            "field": "discipline",
-            "label": "学科",
-            "a": "社会学",
-            "b": "心理学",
-            "equal": false
-          },
-          {
-            "field": "interests",
-            "label": "研究方向",
-            "a": "社会治理与社会政策",
-            "b": "基础心理学与认知神经科学",
-            "equal": false
-          }
-        ]
-      },
-      "same_institution": true,
-      "missing_evidence": "至少一条记录没有 homepage，无法定位到具体的人"
-    },
-    {
-      "pair_id": "G0010",
+      "pair_id": "G0005",
       "name": "刘希灵",
       "institution": "中南大学",
       "a": {
@@ -747,79 +396,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0011",
-      "name": "刘庆文",
-      "institution": "上海交通大学",
-      "a": {
-        "id": "legacy-65bdac2fb97930e23397",
-        "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
-        "first_level_discipline": "0809 电子科学与技术",
-        "homepage": "https://faculty.sjtu.edu.cn/liuqingwen/zh_CN/index.htm",
-        "page_kind": "personal"
-      },
-      "b": {
-        "id": "official-dfaf7baf0da1ea4b653c",
-        "department": "集成电路学院",
-        "first_level_discipline": "0809 电子科学与技术",
-        "homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
-        "page_kind": "roster"
-      },
-      "auto_label": "unknown",
-      "verdict": "unknown",
-      "evidence_strength": "none",
-      "evidence": {
-        "rule": "listing_page",
-        "note": "证据不足以判定同人/异人",
-        "quoted_fields": [
-          {
-            "field": "institution",
-            "label": "机构",
-            "a": "上海交通大学",
-            "b": "上海交通大学",
-            "equal": true
-          },
-          {
-            "field": "department",
-            "label": "院系",
-            "a": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
-            "b": "集成电路学院",
-            "equal": false
-          },
-          {
-            "field": "first_level_discipline",
-            "label": "一级学科",
-            "a": "0809 电子科学与技术",
-            "b": "0809 电子科学与技术",
-            "equal": true
-          },
-          {
-            "field": "discipline",
-            "label": "学科",
-            "a": "光电子与硅光",
-            "b": "电子科学与技术",
-            "equal": false
-          },
-          {
-            "field": "homepage",
-            "label": "主页",
-            "a": "https://faculty.sjtu.edu.cn/liuqingwen/zh_CN/index.htm",
-            "b": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
-            "equal": false
-          },
-          {
-            "field": "interests",
-            "label": "研究方向",
-            "a": "硅光/光电子集成、光纤传感与光通信、MEMS/微机电系统、传感器与智能感知、通信基带与系统",
-            "b": "不分研究方向",
-            "equal": false
-          }
-        ]
-      },
-      "same_institution": true,
-      "missing_evidence": "homepage 是名录/列表页，不能作为身份证据"
-    },
-    {
-      "pair_id": "G0012",
+      "pair_id": "G0006",
       "name": "刘敦文",
       "institution": "中南大学",
       "a": {
@@ -890,7 +467,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0013",
+      "pair_id": "G0007",
       "name": "刘晓东",
       "institution": "中国科学院大学",
       "a": {
@@ -955,7 +532,79 @@
       "missing_evidence": "至少一条记录没有 homepage，无法定位到具体的人"
     },
     {
-      "pair_id": "G0014",
+      "pair_id": "G0008",
+      "name": "刘林海",
+      "institution": "北京师范大学",
+      "a": {
+        "id": "official-d7ac90ed7f62664af6fc",
+        "department": "历史学院",
+        "first_level_discipline": "0603 世界史",
+        "homepage": "https://history.bnu.edu.cn/szdw/e82220be512c48d5b436619df4b52907.htm",
+        "page_kind": "personal"
+      },
+      "b": {
+        "id": "official-7bc77e796b210950b2de",
+        "department": "中华文化研究院丨京师书院",
+        "first_level_discipline": "0603 世界史",
+        "homepage": "",
+        "page_kind": "none"
+      },
+      "auto_label": "unknown",
+      "verdict": "unknown",
+      "evidence_strength": "none",
+      "evidence": {
+        "rule": "missing_url",
+        "note": "证据不足以判定同人/异人",
+        "quoted_fields": [
+          {
+            "field": "institution",
+            "label": "机构",
+            "a": "北京师范大学",
+            "b": "北京师范大学",
+            "equal": true
+          },
+          {
+            "field": "department",
+            "label": "院系",
+            "a": "历史学院",
+            "b": "中华文化研究院丨京师书院",
+            "equal": false
+          },
+          {
+            "field": "first_level_discipline",
+            "label": "一级学科",
+            "a": "0603 世界史",
+            "b": "0603 世界史",
+            "equal": true
+          },
+          {
+            "field": "discipline",
+            "label": "学科",
+            "a": "世界史",
+            "b": "世界史",
+            "equal": true
+          },
+          {
+            "field": "homepage",
+            "label": "主页",
+            "a": "https://history.bnu.edu.cn/szdw/e82220be512c48d5b436619df4b52907.htm",
+            "b": "",
+            "equal": false
+          },
+          {
+            "field": "interests",
+            "label": "研究方向",
+            "a": "世界上古中古史教研室",
+            "b": "中西古史比较",
+            "equal": false
+          }
+        ]
+      },
+      "same_institution": true,
+      "missing_evidence": "至少一条记录没有 homepage，无法定位到具体的人"
+    },
+    {
+      "pair_id": "G0009",
       "name": "刘桐君",
       "institution": "华中科技大学",
       "a": {
@@ -1026,7 +675,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0015",
+      "pair_id": "G0010",
       "name": "刘洋",
       "institution": "中南大学",
       "a": {
@@ -1043,12 +692,12 @@
         "homepage": "http://faculty.csu.edu.cn/liuyang12345678/zh_CN/index.htm",
         "page_kind": "personal"
       },
-      "auto_label": "different_person",
-      "verdict": "different_person",
-      "evidence_strength": "medium",
+      "auto_label": "unknown",
+      "verdict": "unknown",
+      "evidence_strength": "none",
       "evidence": {
-        "rule": "distinct_pages_unit_conflict",
-        "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
+        "rule": "unit_conflict_only",
+        "note": "两侧只有院系/一级学科不同：单位归属差异不足以判定身份，按「无法确认」处理，进人工核验",
         "quoted_fields": [
           {
             "field": "institution",
@@ -1094,10 +743,11 @@
           }
         ]
       },
-      "same_institution": true
+      "same_institution": true,
+      "missing_evidence": "两侧只有院系/一级学科不同：单位归属差异对「同一人跨院系/跨学科」与「同校同名两个人」都成立，不构成直接身份冲突证据，需人工核验"
     },
     {
-      "pair_id": "G0016",
+      "pair_id": "G0011",
       "name": "刘海龙",
       "institution": "大连理工大学",
       "a": {
@@ -1114,12 +764,12 @@
         "homepage": "http://faculty.dlut.edu.cn/2009011125/zh_CN/index.htm",
         "page_kind": "personal"
       },
-      "auto_label": "different_person",
-      "verdict": "different_person",
-      "evidence_strength": "medium",
+      "auto_label": "unknown",
+      "verdict": "unknown",
+      "evidence_strength": "none",
       "evidence": {
-        "rule": "distinct_pages_unit_conflict",
-        "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
+        "rule": "unit_conflict_only",
+        "note": "两侧只有院系/一级学科不同：单位归属差异不足以判定身份，按「无法确认」处理，进人工核验",
         "quoted_fields": [
           {
             "field": "institution",
@@ -1165,81 +815,11 @@
           }
         ]
       },
-      "same_institution": true
+      "same_institution": true,
+      "missing_evidence": "两侧只有院系/一级学科不同：单位归属差异对「同一人跨院系/跨学科」与「同校同名两个人」都成立，不构成直接身份冲突证据，需人工核验"
     },
     {
-      "pair_id": "G0017",
-      "name": "刘磊",
-      "institution": "上海交通大学",
-      "a": {
-        "id": "official-bc0a615a53710017ab38",
-        "department": "船舶海洋与建筑工程学院",
-        "first_level_discipline": "0824 船舶与海洋工程",
-        "homepage": "https://naoce.sjtu.edu.cn/teachers/9523.html",
-        "page_kind": "personal"
-      },
-      "b": {
-        "id": "official-29b43ad140273b3e1f93",
-        "department": "材料科学与工程学院",
-        "first_level_discipline": "0805 材料科学与工程",
-        "homepage": "https://smse.sjtu.edu.cn/people/detail/138",
-        "page_kind": "personal"
-      },
-      "auto_label": "different_person",
-      "verdict": "different_person",
-      "evidence_strength": "medium",
-      "evidence": {
-        "rule": "distinct_pages_unit_conflict",
-        "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
-        "quoted_fields": [
-          {
-            "field": "institution",
-            "label": "机构",
-            "a": "上海交通大学",
-            "b": "上海交通大学",
-            "equal": true
-          },
-          {
-            "field": "department",
-            "label": "院系",
-            "a": "船舶海洋与建筑工程学院",
-            "b": "材料科学与工程学院",
-            "equal": false
-          },
-          {
-            "field": "first_level_discipline",
-            "label": "一级学科",
-            "a": "0824 船舶与海洋工程",
-            "b": "0805 材料科学与工程",
-            "equal": false
-          },
-          {
-            "field": "discipline",
-            "label": "学科",
-            "a": "船舶与海洋工程",
-            "b": "材料科学与工程",
-            "equal": false
-          },
-          {
-            "field": "homepage",
-            "label": "主页",
-            "a": "https://naoce.sjtu.edu.cn/teachers/9523.html",
-            "b": "https://smse.sjtu.edu.cn/people/detail/138",
-            "equal": false
-          },
-          {
-            "field": "interests",
-            "label": "研究方向",
-            "a": "不分研究方向",
-            "b": "不分研究方向",
-            "equal": true
-          }
-        ]
-      },
-      "same_institution": true
-    },
-    {
-      "pair_id": "G0018",
+      "pair_id": "G0012",
       "name": "刘苏彪",
       "institution": "中南大学",
       "a": {
@@ -1310,7 +890,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0019",
+      "pair_id": "G0013",
       "name": "卢洋",
       "institution": "中南大学",
       "a": {
@@ -1381,7 +961,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0020",
+      "pair_id": "G0014",
       "name": "卢运虎",
       "institution": "中国石油大学（北京）",
       "a": {
@@ -1453,72 +1033,7 @@
       "missing_evidence": "至少一条记录没有 homepage，无法定位到具体的人"
     },
     {
-      "pair_id": "G0021",
-      "name": "原亚焜",
-      "institution": "上海交通大学",
-      "a": {
-        "id": "official-874ca7462ad82377c6f7",
-        "department": "材料科学与工程学院",
-        "first_level_discipline": "0805 材料科学与工程",
-        "homepage": "",
-        "page_kind": "none"
-      },
-      "b": {
-        "id": "official-2905d7701eb637b54c61",
-        "department": "物理与天文学院（含李政道研究所）",
-        "first_level_discipline": "0702 物理学",
-        "homepage": "",
-        "page_kind": "none"
-      },
-      "auto_label": "unknown",
-      "verdict": "unknown",
-      "evidence_strength": "none",
-      "evidence": {
-        "rule": "missing_url",
-        "note": "证据不足以判定同人/异人",
-        "quoted_fields": [
-          {
-            "field": "institution",
-            "label": "机构",
-            "a": "上海交通大学",
-            "b": "上海交通大学",
-            "equal": true
-          },
-          {
-            "field": "department",
-            "label": "院系",
-            "a": "材料科学与工程学院",
-            "b": "物理与天文学院（含李政道研究所）",
-            "equal": false
-          },
-          {
-            "field": "first_level_discipline",
-            "label": "一级学科",
-            "a": "0805 材料科学与工程",
-            "b": "0702 物理学",
-            "equal": false
-          },
-          {
-            "field": "discipline",
-            "label": "学科",
-            "a": "材料科学与工程",
-            "b": "物理学",
-            "equal": false
-          },
-          {
-            "field": "interests",
-            "label": "研究方向",
-            "a": "不分研究方向",
-            "b": "不分研究方向",
-            "equal": true
-          }
-        ]
-      },
-      "same_institution": true,
-      "missing_evidence": "至少一条记录没有 homepage，无法定位到具体的人"
-    },
-    {
-      "pair_id": "G0022",
+      "pair_id": "G0015",
       "name": "吕晖",
       "institution": "上海交通大学",
       "a": {
@@ -1589,18 +1104,18 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0023",
-      "name": "吴玉军",
+      "pair_id": "G0016",
+      "name": "吴向东",
       "institution": "北京师范大学",
       "a": {
-        "id": "official-23a4241d044c23d6cdf2",
+        "id": "official-fb28f29e13c5c814dbd5",
         "department": "哲学学院",
         "first_level_discipline": "0101 哲学",
         "homepage": "",
         "page_kind": "none"
       },
       "b": {
-        "id": "official-7b7fa7d6ecd224e21339",
+        "id": "official-985850fb89f117fd9b51",
         "department": "中华文化研究院丨京师书院",
         "first_level_discipline": "0101 哲学",
         "homepage": "",
@@ -1644,8 +1159,8 @@
           {
             "field": "interests",
             "label": "研究方向",
-            "a": "政治哲学",
-            "b": "政治哲学",
+            "a": "马克思主义哲学",
+            "b": "马克思主义哲学",
             "equal": true
           }
         ]
@@ -1654,78 +1169,7 @@
       "missing_evidence": "至少一条记录没有 homepage，无法定位到具体的人"
     },
     {
-      "pair_id": "G0024",
-      "name": "吴艳",
-      "institution": "上海交通大学",
-      "a": {
-        "id": "official-93b2ad0a52d66a6f15fc",
-        "department": "机械与动力工程学院",
-        "first_level_discipline": "0827 核科学与技术",
-        "homepage": "https://me.sjtu.edu.cn/teacher_directory1/wuyan",
-        "page_kind": "personal"
-      },
-      "b": {
-        "id": "official-3941403de74a9d98575e",
-        "department": "农业与生物学院",
-        "first_level_discipline": "0832 食品科学与工程",
-        "homepage": "https://www.agri.sjtu.edu.cn/Data/View/2358",
-        "page_kind": "personal"
-      },
-      "auto_label": "different_person",
-      "verdict": "different_person",
-      "evidence_strength": "medium",
-      "evidence": {
-        "rule": "distinct_pages_unit_conflict",
-        "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
-        "quoted_fields": [
-          {
-            "field": "institution",
-            "label": "机构",
-            "a": "上海交通大学",
-            "b": "上海交通大学",
-            "equal": true
-          },
-          {
-            "field": "department",
-            "label": "院系",
-            "a": "机械与动力工程学院",
-            "b": "农业与生物学院",
-            "equal": false
-          },
-          {
-            "field": "first_level_discipline",
-            "label": "一级学科",
-            "a": "0827 核科学与技术",
-            "b": "0832 食品科学与工程",
-            "equal": false
-          },
-          {
-            "field": "discipline",
-            "label": "学科",
-            "a": "核科学与技术",
-            "b": "食品科学与工程",
-            "equal": false
-          },
-          {
-            "field": "homepage",
-            "label": "主页",
-            "a": "https://me.sjtu.edu.cn/teacher_directory1/wuyan",
-            "b": "https://www.agri.sjtu.edu.cn/Data/View/2358",
-            "equal": false
-          },
-          {
-            "field": "interests",
-            "label": "研究方向",
-            "a": "不分研究方向",
-            "b": "不分研究方向",
-            "equal": true
-          }
-        ]
-      },
-      "same_institution": true
-    },
-    {
-      "pair_id": "G0025",
+      "pair_id": "G0017",
       "name": "吴豪",
       "institution": "华中科技大学",
       "a": {
@@ -1742,12 +1186,12 @@
         "homepage": "https://mse.hust.edu.cn/info/1142/1347.htm",
         "page_kind": "personal"
       },
-      "auto_label": "different_person",
-      "verdict": "different_person",
-      "evidence_strength": "medium",
+      "auto_label": "unknown",
+      "verdict": "unknown",
+      "evidence_strength": "none",
       "evidence": {
-        "rule": "distinct_pages_unit_conflict",
-        "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
+        "rule": "unit_conflict_only",
+        "note": "两侧只有院系/一级学科不同：单位归属差异不足以判定身份，按「无法确认」处理，进人工核验",
         "quoted_fields": [
           {
             "field": "institution",
@@ -1793,10 +1237,11 @@
           }
         ]
       },
-      "same_institution": true
+      "same_institution": true,
+      "missing_evidence": "两侧只有院系/一级学科不同：单位归属差异对「同一人跨院系/跨学科」与「同校同名两个人」都成立，不构成直接身份冲突证据，需人工核验"
     },
     {
-      "pair_id": "G0026",
+      "pair_id": "G0018",
       "name": "周子龙",
       "institution": "中南大学",
       "a": {
@@ -1867,7 +1312,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0027",
+      "pair_id": "G0019",
       "name": "周尧",
       "institution": "上海交通大学",
       "a": {
@@ -1944,20 +1389,20 @@
       "missing_evidence": "主页站点归属与院系不符，需人工确认该主页是否接错"
     },
     {
-      "pair_id": "G0028",
-      "name": "孙晓建",
-      "institution": "上海交通大学",
+      "pair_id": "G0020",
+      "name": "唐热风",
+      "institution": "北京师范大学",
       "a": {
-        "id": "official-0c04475fc1775e874ed1",
-        "department": "生命科学技术学院（含系统生物医学研究院）",
-        "first_level_discipline": "0710 生物学",
-        "homepage": "https://daoshi.shsmu.edu.cn/Pages/IntroductionHome.aspx",
-        "page_kind": "roster"
+        "id": "official-298a7647a18df2c1f9e6",
+        "department": "哲学学院",
+        "first_level_discipline": "0101 哲学",
+        "homepage": "",
+        "page_kind": "none"
       },
       "b": {
-        "id": "official-c160f74b10fe2ae3435f",
-        "department": "瑞金医院",
-        "first_level_discipline": "1001 基础医学",
+        "id": "official-b6a20d01665052dbee32",
+        "department": "中华文化研究院丨京师书院",
+        "first_level_discipline": "0101 哲学",
         "homepage": "",
         "page_kind": "none"
       },
@@ -1965,58 +1410,51 @@
       "verdict": "unknown",
       "evidence_strength": "none",
       "evidence": {
-        "rule": "missing_url+listing_page",
+        "rule": "missing_url",
         "note": "证据不足以判定同人/异人",
         "quoted_fields": [
           {
             "field": "institution",
             "label": "机构",
-            "a": "上海交通大学",
-            "b": "上海交通大学",
+            "a": "北京师范大学",
+            "b": "北京师范大学",
             "equal": true
           },
           {
             "field": "department",
             "label": "院系",
-            "a": "生命科学技术学院（含系统生物医学研究院）",
-            "b": "瑞金医院",
+            "a": "哲学学院",
+            "b": "中华文化研究院丨京师书院",
             "equal": false
           },
           {
             "field": "first_level_discipline",
             "label": "一级学科",
-            "a": "0710 生物学",
-            "b": "1001 基础医学",
-            "equal": false
+            "a": "0101 哲学",
+            "b": "0101 哲学",
+            "equal": true
           },
           {
             "field": "discipline",
             "label": "学科",
-            "a": "生物学",
-            "b": "基础医学",
-            "equal": false
-          },
-          {
-            "field": "homepage",
-            "label": "主页",
-            "a": "https://daoshi.shsmu.edu.cn/Pages/IntroductionHome.aspx",
-            "b": "",
-            "equal": false
+            "a": "哲学",
+            "b": "哲学",
+            "equal": true
           },
           {
             "field": "interests",
             "label": "研究方向",
-            "a": "不分研究方向",
-            "b": "造血和血液肿瘤的基因转录和表观遗传调控机制；",
-            "equal": false
+            "a": "外国哲学",
+            "b": "外国哲学",
+            "equal": true
           }
         ]
       },
       "same_institution": true,
-      "missing_evidence": "缺主页，且另一条也只是名录页"
+      "missing_evidence": "至少一条记录没有 homepage，无法定位到具体的人"
     },
     {
-      "pair_id": "G0029",
+      "pair_id": "G0021",
       "name": "宋云峰",
       "institution": "中南大学",
       "a": {
@@ -2087,7 +1525,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0030",
+      "pair_id": "G0022",
       "name": "崔葵馨",
       "institution": "中南大学",
       "a": {
@@ -2158,7 +1596,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0031",
+      "pair_id": "G0023",
       "name": "张元波",
       "institution": "中南大学",
       "a": {
@@ -2229,149 +1667,79 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0032",
-      "name": "张振",
-      "institution": "同济大学",
+      "pair_id": "G0024",
+      "name": "张彤",
+      "institution": "东南大学",
       "a": {
-        "id": "official-e68f1711dc48750c32a6",
-        "department": "水利工程系（副教授/副研究员/高工）",
-        "first_level_discipline": "0815 水利工程",
-        "homepage": "https://geohyd.tongji.edu.cn/info/1296/2215.htm",
-        "page_kind": "personal"
+        "id": "legacy-6fbe065a84833adaecb7",
+        "department": "电子科学与工程学院 物理电子学系",
+        "first_level_discipline": "0809 电子科学与技术",
+        "homepage": "https://electronic.seu.edu.cn/zt/list.htm",
+        "page_kind": "roster"
       },
       "b": {
-        "id": "official-6613db10d01fe4a258cb",
-        "department": "航空航天与力学学院",
-        "first_level_discipline": "0801 力学",
-        "homepage": "https://aero-mech.tongji.edu.cn/3a/53/c22274a211539/page.htm",
+        "id": "official-617efd7cc7a384ab3ae4",
+        "department": "建筑系",
+        "first_level_discipline": "0813 建筑学",
+        "homepage": "https://arch.seu.edu.cn/zt/main.htm",
         "page_kind": "personal"
       },
-      "auto_label": "different_person",
-      "verdict": "different_person",
-      "evidence_strength": "medium",
+      "auto_label": "unknown",
+      "verdict": "unknown",
+      "evidence_strength": "none",
       "evidence": {
-        "rule": "distinct_pages_unit_conflict",
-        "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
+        "rule": "listing_page",
+        "note": "证据不足以判定同人/异人",
         "quoted_fields": [
           {
             "field": "institution",
             "label": "机构",
-            "a": "同济大学",
-            "b": "同济大学",
+            "a": "东南大学",
+            "b": "东南大学",
             "equal": true
           },
           {
             "field": "department",
             "label": "院系",
-            "a": "水利工程系（副教授/副研究员/高工）",
-            "b": "航空航天与力学学院",
+            "a": "电子科学与工程学院 物理电子学系",
+            "b": "建筑系",
             "equal": false
           },
           {
             "field": "first_level_discipline",
             "label": "一级学科",
-            "a": "0815 水利工程",
-            "b": "0801 力学",
+            "a": "0809 电子科学与技术",
+            "b": "0813 建筑学",
             "equal": false
           },
           {
             "field": "discipline",
             "label": "学科",
-            "a": "水利工程",
-            "b": "力学",
+            "a": "光电子与硅光",
+            "b": "建筑学",
             "equal": false
           },
           {
             "field": "homepage",
             "label": "主页",
-            "a": "https://geohyd.tongji.edu.cn/info/1296/2215.htm",
-            "b": "https://aero-mech.tongji.edu.cn/3a/53/c22274a211539/page.htm",
+            "a": "https://electronic.seu.edu.cn/zt/list.htm",
+            "b": "https://arch.seu.edu.cn/zt/main.htm",
             "equal": false
           },
           {
             "field": "interests",
             "label": "研究方向",
-            "a": "方向待补",
+            "a": "光电子与硅光、硅基光子集成、射频与微波、微波毫米波器件、半导体器件、MEMS与微纳传感",
             "b": "方向待补",
-            "equal": true
-          }
-        ]
-      },
-      "same_institution": true
-    },
-    {
-      "pair_id": "G0033",
-      "name": "张朝阳",
-      "institution": "上海交通大学",
-      "a": {
-        "id": "official-ea5994879b12ee1d4536",
-        "department": "机械与动力工程学院",
-        "first_level_discipline": "0807 动力工程及工程热物理",
-        "homepage": "https://speit.sjtu.edu.cn/faculty/10022",
-        "page_kind": "personal"
-      },
-      "b": {
-        "id": "official-9950043bc89b0dff10a0",
-        "department": "人文学院",
-        "first_level_discipline": "0602 中国史",
-        "homepage": "https://shss.sjtu.edu.cn/Web/FacultyDetail/108",
-        "page_kind": "personal"
-      },
-      "auto_label": "different_person",
-      "verdict": "different_person",
-      "evidence_strength": "medium",
-      "evidence": {
-        "rule": "distinct_pages_unit_conflict",
-        "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
-        "quoted_fields": [
-          {
-            "field": "institution",
-            "label": "机构",
-            "a": "上海交通大学",
-            "b": "上海交通大学",
-            "equal": true
-          },
-          {
-            "field": "department",
-            "label": "院系",
-            "a": "机械与动力工程学院",
-            "b": "人文学院",
-            "equal": false
-          },
-          {
-            "field": "first_level_discipline",
-            "label": "一级学科",
-            "a": "0807 动力工程及工程热物理",
-            "b": "0602 中国史",
-            "equal": false
-          },
-          {
-            "field": "discipline",
-            "label": "学科",
-            "a": "动力工程及工程热物理",
-            "b": "中国史",
-            "equal": false
-          },
-          {
-            "field": "homepage",
-            "label": "主页",
-            "a": "https://speit.sjtu.edu.cn/faculty/10022",
-            "b": "https://shss.sjtu.edu.cn/Web/FacultyDetail/108",
-            "equal": false
-          },
-          {
-            "field": "interests",
-            "label": "研究方向",
-            "a": "不分研究方向-巴黎卓越工程师学院",
-            "b": "中国古代史",
             "equal": false
           }
         ]
       },
-      "same_institution": true
+      "same_institution": true,
+      "missing_evidence": "homepage 是名录/列表页，不能作为身份证据"
     },
     {
-      "pair_id": "G0034",
+      "pair_id": "G0025",
       "name": "张洁",
       "institution": "上海交通大学",
       "a": {
@@ -2448,7 +1816,7 @@
       "missing_evidence": "主页站点归属与院系不符，需人工确认该主页是否接错"
     },
     {
-      "pair_id": "G0035",
+      "pair_id": "G0026",
       "name": "张涛",
       "institution": "西南石油大学",
       "a": {
@@ -2465,12 +1833,12 @@
         "homepage": "http://www.swpu.edu.cn/sgy/szdw/jsml/ltrg/js/zhangtao.htm",
         "page_kind": "personal"
       },
-      "auto_label": "different_person",
-      "verdict": "different_person",
-      "evidence_strength": "medium",
+      "auto_label": "unknown",
+      "verdict": "unknown",
+      "evidence_strength": "none",
       "evidence": {
-        "rule": "distinct_pages_unit_conflict",
-        "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=True）",
+        "rule": "unit_conflict_only",
+        "note": "两侧只有院系/一级学科不同：单位归属差异不足以判定身份，按「无法确认」处理，进人工核验",
         "quoted_fields": [
           {
             "field": "institution",
@@ -2516,10 +1884,11 @@
           }
         ]
       },
-      "same_institution": true
+      "same_institution": true,
+      "missing_evidence": "两侧只有院系/一级学科不同：单位归属差异对「同一人跨院系/跨学科」与「同校同名两个人」都成立，不构成直接身份冲突证据，需人工核验"
     },
     {
-      "pair_id": "G0036",
+      "pair_id": "G0027",
       "name": "张理源",
       "institution": "中南大学",
       "a": {
@@ -2590,78 +1959,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0037",
-      "name": "张荻",
-      "institution": "上海交通大学",
-      "a": {
-        "id": "official-68245a6cb85d6864fb49",
-        "department": "材料科学与工程学院",
-        "first_level_discipline": "0805 材料科学与工程",
-        "homepage": "http://faculty.sjtu.edu.cn/zhangdi",
-        "page_kind": "personal"
-      },
-      "b": {
-        "id": "official-1b93461dee42f83fd8ca",
-        "department": "设计学院",
-        "first_level_discipline": "1403 设计学",
-        "homepage": "http://faculty.sjtu.edu.cn/zhangdi12",
-        "page_kind": "personal"
-      },
-      "auto_label": "different_person",
-      "verdict": "different_person",
-      "evidence_strength": "medium",
-      "evidence": {
-        "rule": "distinct_pages_unit_conflict",
-        "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
-        "quoted_fields": [
-          {
-            "field": "institution",
-            "label": "机构",
-            "a": "上海交通大学",
-            "b": "上海交通大学",
-            "equal": true
-          },
-          {
-            "field": "department",
-            "label": "院系",
-            "a": "材料科学与工程学院",
-            "b": "设计学院",
-            "equal": false
-          },
-          {
-            "field": "first_level_discipline",
-            "label": "一级学科",
-            "a": "0805 材料科学与工程",
-            "b": "1403 设计学",
-            "equal": false
-          },
-          {
-            "field": "discipline",
-            "label": "学科",
-            "a": "材料科学与工程",
-            "b": "设计学",
-            "equal": false
-          },
-          {
-            "field": "homepage",
-            "label": "主页",
-            "a": "http://faculty.sjtu.edu.cn/zhangdi",
-            "b": "http://faculty.sjtu.edu.cn/zhangdi12",
-            "equal": false
-          },
-          {
-            "field": "interests",
-            "label": "研究方向",
-            "a": "不分研究方向",
-            "b": "智能设计理论与方法 02 （全日制）信息与交互设计 03 （全日制）设计历史与理论 04 （全日制）设计文化与视觉传播",
-            "equal": false
-          }
-        ]
-      },
-      "same_institution": true
-    },
-    {
-      "pair_id": "G0038",
+      "pair_id": "G0028",
       "name": "张贵清",
       "institution": "中南大学",
       "a": {
@@ -2732,7 +2030,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0039",
+      "pair_id": "G0029",
       "name": "张钦礼",
       "institution": "中南大学",
       "a": {
@@ -2803,78 +2101,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0040",
-      "name": "张鹏",
-      "institution": "上海交通大学",
-      "a": {
-        "id": "official-17f5fee2101fc63e6310",
-        "department": "机械与动力工程学院",
-        "first_level_discipline": "0807 动力工程及工程热物理",
-        "homepage": "https://me.sjtu.edu.cn/teacher_directory1/zhangpeng",
-        "page_kind": "personal"
-      },
-      "b": {
-        "id": "official-73737f66c07f1a1821e3",
-        "department": "材料科学与工程学院",
-        "first_level_discipline": "0805 材料科学与工程",
-        "homepage": "http://faculty.sjtu.edu.cn/zhangpeng12",
-        "page_kind": "personal"
-      },
-      "auto_label": "different_person",
-      "verdict": "different_person",
-      "evidence_strength": "medium",
-      "evidence": {
-        "rule": "distinct_pages_unit_conflict",
-        "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
-        "quoted_fields": [
-          {
-            "field": "institution",
-            "label": "机构",
-            "a": "上海交通大学",
-            "b": "上海交通大学",
-            "equal": true
-          },
-          {
-            "field": "department",
-            "label": "院系",
-            "a": "机械与动力工程学院",
-            "b": "材料科学与工程学院",
-            "equal": false
-          },
-          {
-            "field": "first_level_discipline",
-            "label": "一级学科",
-            "a": "0807 动力工程及工程热物理",
-            "b": "0805 材料科学与工程",
-            "equal": false
-          },
-          {
-            "field": "discipline",
-            "label": "学科",
-            "a": "动力工程及工程热物理",
-            "b": "材料科学与工程",
-            "equal": false
-          },
-          {
-            "field": "homepage",
-            "label": "主页",
-            "a": "https://me.sjtu.edu.cn/teacher_directory1/zhangpeng",
-            "b": "http://faculty.sjtu.edu.cn/zhangpeng12",
-            "equal": false
-          },
-          {
-            "field": "interests",
-            "label": "研究方向",
-            "a": "不分研究方向",
-            "b": "不分研究方向",
-            "equal": true
-          }
-        ]
-      },
-      "same_institution": true
-    },
-    {
-      "pair_id": "G0041",
+      "pair_id": "G0030",
       "name": "彭康",
       "institution": "中南大学",
       "a": {
@@ -2945,7 +2172,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0042",
+      "pair_id": "G0031",
       "name": "彭志伟",
       "institution": "中南大学",
       "a": {
@@ -3016,7 +2243,72 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0043",
+      "pair_id": "G0032",
+      "name": "徐克飞",
+      "institution": "北京师范大学",
+      "a": {
+        "id": "official-d62ad2bed98379548e0e",
+        "department": "哲学学院",
+        "first_level_discipline": "0101 哲学",
+        "homepage": "",
+        "page_kind": "none"
+      },
+      "b": {
+        "id": "official-1ccd9db93219e35f7cd3",
+        "department": "中华文化研究院丨京师书院",
+        "first_level_discipline": "0101 哲学",
+        "homepage": "",
+        "page_kind": "none"
+      },
+      "auto_label": "unknown",
+      "verdict": "unknown",
+      "evidence_strength": "none",
+      "evidence": {
+        "rule": "missing_url",
+        "note": "证据不足以判定同人/异人",
+        "quoted_fields": [
+          {
+            "field": "institution",
+            "label": "机构",
+            "a": "北京师范大学",
+            "b": "北京师范大学",
+            "equal": true
+          },
+          {
+            "field": "department",
+            "label": "院系",
+            "a": "哲学学院",
+            "b": "中华文化研究院丨京师书院",
+            "equal": false
+          },
+          {
+            "field": "first_level_discipline",
+            "label": "一级学科",
+            "a": "0101 哲学",
+            "b": "0101 哲学",
+            "equal": true
+          },
+          {
+            "field": "discipline",
+            "label": "学科",
+            "a": "哲学",
+            "b": "哲学",
+            "equal": true
+          },
+          {
+            "field": "interests",
+            "label": "研究方向",
+            "a": "马克思主义哲学",
+            "b": "马克思主义哲学",
+            "equal": true
+          }
+        ]
+      },
+      "same_institution": true,
+      "missing_evidence": "至少一条记录没有 homepage，无法定位到具体的人"
+    },
+    {
+      "pair_id": "G0033",
       "name": "徐恒",
       "institution": "上海交通大学",
       "a": {
@@ -3093,7 +2385,7 @@
       "missing_evidence": "主页站点归属与院系不符，需人工确认该主页是否接错"
     },
     {
-      "pair_id": "G0044",
+      "pair_id": "G0034",
       "name": "徐斌",
       "institution": "中南大学",
       "a": {
@@ -3164,79 +2456,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0045",
-      "name": "徐畅",
-      "institution": "北京师范大学",
-      "a": {
-        "id": "official-5400e631fe5a4c39fe0a",
-        "department": "历史学院",
-        "first_level_discipline": "0603 世界史",
-        "homepage": "https://history.bnu.edu.cn/szdw/854eb7f5393a494e9d281858309fdeb3.htm",
-        "page_kind": "personal"
-      },
-      "b": {
-        "id": "official-03a1b2ea46045429eedd",
-        "department": "中华文化研究院丨京师书院",
-        "first_level_discipline": "0602 中国史",
-        "homepage": "",
-        "page_kind": "none"
-      },
-      "auto_label": "unknown",
-      "verdict": "unknown",
-      "evidence_strength": "none",
-      "evidence": {
-        "rule": "missing_url",
-        "note": "证据不足以判定同人/异人",
-        "quoted_fields": [
-          {
-            "field": "institution",
-            "label": "机构",
-            "a": "北京师范大学",
-            "b": "北京师范大学",
-            "equal": true
-          },
-          {
-            "field": "department",
-            "label": "院系",
-            "a": "历史学院",
-            "b": "中华文化研究院丨京师书院",
-            "equal": false
-          },
-          {
-            "field": "first_level_discipline",
-            "label": "一级学科",
-            "a": "0603 世界史",
-            "b": "0602 中国史",
-            "equal": false
-          },
-          {
-            "field": "discipline",
-            "label": "学科",
-            "a": "世界史",
-            "b": "中国史",
-            "equal": false
-          },
-          {
-            "field": "homepage",
-            "label": "主页",
-            "a": "https://history.bnu.edu.cn/szdw/854eb7f5393a494e9d281858309fdeb3.htm",
-            "b": "",
-            "equal": false
-          },
-          {
-            "field": "interests",
-            "label": "研究方向",
-            "a": "史学理论与外国史学史教研室",
-            "b": "汉唐历史文化",
-            "equal": false
-          }
-        ]
-      },
-      "same_institution": true,
-      "missing_evidence": "至少一条记录没有 homepage，无法定位到具体的人"
-    },
-    {
-      "pair_id": "G0046",
+      "pair_id": "G0035",
       "name": "方华婵",
       "institution": "中南大学",
       "a": {
@@ -3307,7 +2527,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0047",
+      "pair_id": "G0036",
       "name": "朱建裕",
       "institution": "中南大学",
       "a": {
@@ -3378,7 +2598,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0048",
+      "pair_id": "G0037",
       "name": "李云",
       "institution": "中南大学",
       "a": {
@@ -3449,7 +2669,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0049",
+      "pair_id": "G0038",
       "name": "李云",
       "institution": "中南大学",
       "a": {
@@ -3520,7 +2740,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0050",
+      "pair_id": "G0039",
       "name": "李云",
       "institution": "中南大学",
       "a": {
@@ -3591,7 +2811,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0051",
+      "pair_id": "G0040",
       "name": "李云",
       "institution": "中南大学",
       "a": {
@@ -3662,7 +2882,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0052",
+      "pair_id": "G0041",
       "name": "李云",
       "institution": "中南大学",
       "a": {
@@ -3733,7 +2953,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0053",
+      "pair_id": "G0042",
       "name": "李云",
       "institution": "中南大学",
       "a": {
@@ -3804,7 +3024,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0054",
+      "pair_id": "G0043",
       "name": "李光辉",
       "institution": "中南大学",
       "a": {
@@ -3875,7 +3095,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0055",
+      "pair_id": "G0044",
       "name": "李兵",
       "institution": "西安交通大学",
       "a": {
@@ -3892,12 +3112,12 @@
         "homepage": "https://gr.xjtu.edu.cn/en/web/lb",
         "page_kind": "personal"
       },
-      "auto_label": "different_person",
-      "verdict": "different_person",
-      "evidence_strength": "medium",
+      "auto_label": "unknown",
+      "verdict": "unknown",
+      "evidence_strength": "none",
       "evidence": {
-        "rule": "distinct_pages_unit_conflict",
-        "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=True）",
+        "rule": "unit_conflict_only",
+        "note": "两侧只有院系/一级学科不同：单位归属差异不足以判定身份，按「无法确认」处理，进人工核验",
         "quoted_fields": [
           {
             "field": "institution",
@@ -3943,10 +3163,11 @@
           }
         ]
       },
-      "same_institution": true
+      "same_institution": true,
+      "missing_evidence": "两侧只有院系/一级学科不同：单位归属差异对「同一人跨院系/跨学科」与「同校同名两个人」都成立，不构成直接身份冲突证据，需人工核验"
     },
     {
-      "pair_id": "G0056",
+      "pair_id": "G0045",
       "name": "李启月",
       "institution": "中南大学",
       "a": {
@@ -4017,7 +3238,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0057",
+      "pair_id": "G0046",
       "name": "李孜军",
       "institution": "中南大学",
       "a": {
@@ -4088,164 +3309,85 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0058",
-      "name": "李敏",
-      "institution": "西安交通大学",
+      "pair_id": "G0047",
+      "name": "李海东",
+      "institution": "中国科学院大学",
       "a": {
-        "id": "legacy-340332ba34a432a4d385",
-        "department": "仪器科学与技术学院",
-        "first_level_discipline": "0809 电子科学与技术",
-        "homepage": "https://gr.xjtu.edu.cn/0020220087/zh_CN/index.htm",
-        "page_kind": "personal"
-      },
-      "b": {
-        "id": "official-c8e02359df785288b833",
-        "department": "装备智能诊断与控制研究所",
-        "first_level_discipline": "0802 机械工程",
-        "homepage": "https://mec.xjtu.edu.cn/szdw/jsml/zbznzdykzyjs.htm",
-        "page_kind": "roster"
-      },
-      "auto_label": "unknown",
-      "verdict": "unknown",
-      "evidence_strength": "none",
-      "evidence": {
-        "rule": "listing_page",
-        "note": "证据不足以判定同人/异人",
-        "quoted_fields": [
-          {
-            "field": "institution",
-            "label": "机构",
-            "a": "西安交通大学",
-            "b": "西安交通大学",
-            "equal": true
-          },
-          {
-            "field": "department",
-            "label": "院系",
-            "a": "仪器科学与技术学院",
-            "b": "装备智能诊断与控制研究所",
-            "equal": false
-          },
-          {
-            "field": "first_level_discipline",
-            "label": "一级学科",
-            "a": "0809 电子科学与技术",
-            "b": "0802 机械工程",
-            "equal": false
-          },
-          {
-            "field": "discipline",
-            "label": "学科",
-            "a": "微机电系统",
-            "b": "机械工程",
-            "equal": false
-          },
-          {
-            "field": "homepage",
-            "label": "主页",
-            "a": "https://gr.xjtu.edu.cn/0020220087/zh_CN/index.htm",
-            "b": "https://mec.xjtu.edu.cn/szdw/jsml/zbznzdykzyjs.htm",
-            "equal": false
-          },
-          {
-            "field": "interests",
-            "label": "研究方向",
-            "a": "MEMS与传感器芯片、生物医疗电子、柔性传感与可穿戴、微纳制造与封装",
-            "b": "方向待补",
-            "equal": false
-          }
-        ]
-      },
-      "same_institution": true,
-      "missing_evidence": "homepage 是名录/列表页，不能作为身份证据"
-    },
-    {
-      "pair_id": "G0059",
-      "name": "李敏",
-      "institution": "西安交通大学",
-      "a": {
-        "id": "official-c83bcd0b74db1ebb565a",
-        "department": "医工交叉研究所",
-        "first_level_discipline": "0802 机械工程",
-        "homepage": "https://mec.xjtu.edu.cn/szdw/jsml/ygjcyjs.htm",
-        "page_kind": "roster"
-      },
-      "b": {
-        "id": "official-c8e02359df785288b833",
-        "department": "装备智能诊断与控制研究所",
-        "first_level_discipline": "0802 机械工程",
-        "homepage": "https://mec.xjtu.edu.cn/szdw/jsml/zbznzdykzyjs.htm",
-        "page_kind": "roster"
-      },
-      "auto_label": "unknown",
-      "verdict": "unknown",
-      "evidence_strength": "none",
-      "evidence": {
-        "rule": "listing_page",
-        "note": "证据不足以判定同人/异人",
-        "quoted_fields": [
-          {
-            "field": "institution",
-            "label": "机构",
-            "a": "西安交通大学",
-            "b": "西安交通大学",
-            "equal": true
-          },
-          {
-            "field": "department",
-            "label": "院系",
-            "a": "医工交叉研究所",
-            "b": "装备智能诊断与控制研究所",
-            "equal": false
-          },
-          {
-            "field": "first_level_discipline",
-            "label": "一级学科",
-            "a": "0802 机械工程",
-            "b": "0802 机械工程",
-            "equal": true
-          },
-          {
-            "field": "discipline",
-            "label": "学科",
-            "a": "机械工程",
-            "b": "机械工程",
-            "equal": true
-          },
-          {
-            "field": "homepage",
-            "label": "主页",
-            "a": "https://mec.xjtu.edu.cn/szdw/jsml/ygjcyjs.htm",
-            "b": "https://mec.xjtu.edu.cn/szdw/jsml/zbznzdykzyjs.htm",
-            "equal": false
-          },
-          {
-            "field": "interests",
-            "label": "研究方向",
-            "a": "方向待补",
-            "b": "方向待补",
-            "equal": true
-          }
-        ]
-      },
-      "same_institution": true,
-      "missing_evidence": "homepage 是名录/列表页，不能作为身份证据"
-    },
-    {
-      "pair_id": "G0060",
-      "name": "李润伟",
-      "institution": "上海交通大学",
-      "a": {
-        "id": "official-826a205b2cd5dc280c8a",
-        "department": "材料科学与工程学院",
-        "first_level_discipline": "0805 材料科学与工程",
+        "id": "official-ba7ae0e1ef0011dddefa",
+        "department": "精密测量科学与技术创新研究院",
+        "first_level_discipline": "0702 物理学",
         "homepage": "",
         "page_kind": "none"
       },
       "b": {
-        "id": "official-12fcf130ddaca1ddbcc1",
-        "department": "物理与天文学院（含李政道研究所）",
-        "first_level_discipline": "0702 物理学",
+        "id": "official-7405e351794fafc440f0",
+        "department": "经济与管理学院",
+        "first_level_discipline": "1201 管理科学与工程",
+        "homepage": "",
+        "page_kind": "none"
+      },
+      "auto_label": "unknown",
+      "verdict": "unknown",
+      "evidence_strength": "none",
+      "evidence": {
+        "rule": "missing_url",
+        "note": "证据不足以判定同人/异人",
+        "quoted_fields": [
+          {
+            "field": "institution",
+            "label": "机构",
+            "a": "中国科学院大学",
+            "b": "中国科学院大学",
+            "equal": true
+          },
+          {
+            "field": "department",
+            "label": "院系",
+            "a": "精密测量科学与技术创新研究院",
+            "b": "经济与管理学院",
+            "equal": false
+          },
+          {
+            "field": "first_level_discipline",
+            "label": "一级学科",
+            "a": "0702 物理学",
+            "b": "1201 管理科学与工程",
+            "equal": false
+          },
+          {
+            "field": "discipline",
+            "label": "学科",
+            "a": "物理学",
+            "b": "管理科学与工程",
+            "equal": false
+          },
+          {
+            "field": "interests",
+            "label": "研究方向",
+            "a": "无线电物理",
+            "b": "仿真优化/随机估计/管理系统动态决策",
+            "equal": false
+          }
+        ]
+      },
+      "same_institution": true,
+      "missing_evidence": "至少一条记录没有 homepage，无法定位到具体的人"
+    },
+    {
+      "pair_id": "G0048",
+      "name": "李磊",
+      "institution": "上海交通大学",
+      "a": {
+        "id": "official-739e800d8c45e8bf81cf",
+        "department": "数学科学学院",
+        "first_level_discipline": "0701 数学",
+        "homepage": "https://ins.sjtu.edu.cn/people/leili/",
+        "page_kind": "personal"
+      },
+      "b": {
+        "id": "official-af503fb988ec04f51c62",
+        "department": "化学化工学院",
+        "first_level_discipline": "0703 化学",
         "homepage": "",
         "page_kind": "none"
       },
@@ -4266,22 +3408,29 @@
           {
             "field": "department",
             "label": "院系",
-            "a": "材料科学与工程学院",
-            "b": "物理与天文学院（含李政道研究所）",
+            "a": "数学科学学院",
+            "b": "化学化工学院",
             "equal": false
           },
           {
             "field": "first_level_discipline",
             "label": "一级学科",
-            "a": "0805 材料科学与工程",
-            "b": "0702 物理学",
+            "a": "0701 数学",
+            "b": "0703 化学",
             "equal": false
           },
           {
             "field": "discipline",
             "label": "学科",
-            "a": "材料科学与工程",
-            "b": "物理学",
+            "a": "数学",
+            "b": "化学",
+            "equal": false
+          },
+          {
+            "field": "homepage",
+            "label": "主页",
+            "a": "https://ins.sjtu.edu.cn/people/leili/",
+            "b": "",
             "equal": false
           },
           {
@@ -4297,78 +3446,7 @@
       "missing_evidence": "至少一条记录没有 homepage，无法定位到具体的人"
     },
     {
-      "pair_id": "G0061",
-      "name": "李红霞",
-      "institution": "大连理工大学",
-      "a": {
-        "id": "official-0514f2b765b51e2ae42c",
-        "department": "机械工程学院",
-        "first_level_discipline": "0802 机械工程",
-        "homepage": "http://faculty.dlut.edu.cn/2017011132/zh_CN/index.htm",
-        "page_kind": "personal"
-      },
-      "b": {
-        "id": "official-4e3f68291a9e86c80948",
-        "department": "船舶工程学院",
-        "first_level_discipline": "0824 船舶与海洋工程",
-        "homepage": "http://faculty.dlut.edu.cn/2008011115/zh_CN/index.htm",
-        "page_kind": "personal"
-      },
-      "auto_label": "different_person",
-      "verdict": "different_person",
-      "evidence_strength": "medium",
-      "evidence": {
-        "rule": "distinct_pages_unit_conflict",
-        "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
-        "quoted_fields": [
-          {
-            "field": "institution",
-            "label": "机构",
-            "a": "大连理工大学",
-            "b": "大连理工大学",
-            "equal": true
-          },
-          {
-            "field": "department",
-            "label": "院系",
-            "a": "机械工程学院",
-            "b": "船舶工程学院",
-            "equal": false
-          },
-          {
-            "field": "first_level_discipline",
-            "label": "一级学科",
-            "a": "0802 机械工程",
-            "b": "0824 船舶与海洋工程",
-            "equal": false
-          },
-          {
-            "field": "discipline",
-            "label": "学科",
-            "a": "机械工程",
-            "b": "船舶与海洋工程",
-            "equal": false
-          },
-          {
-            "field": "homepage",
-            "label": "主页",
-            "a": "http://faculty.dlut.edu.cn/2017011132/zh_CN/index.htm",
-            "b": "http://faculty.dlut.edu.cn/2008011115/zh_CN/index.htm",
-            "equal": false
-          },
-          {
-            "field": "interests",
-            "label": "研究方向",
-            "a": "方向待补",
-            "b": "方向待补",
-            "equal": true
-          }
-        ]
-      },
-      "same_institution": true
-    },
-    {
-      "pair_id": "G0062",
+      "pair_id": "G0049",
       "name": "李翔",
       "institution": "中南大学",
       "a": {
@@ -4439,7 +3517,72 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0063",
+      "pair_id": "G0050",
+      "name": "李芳",
+      "institution": "中国科学院大学",
+      "a": {
+        "id": "official-8e5ca6ee40a347f5621e",
+        "department": "大气物理研究所",
+        "first_level_discipline": "0706 大气科学",
+        "homepage": "",
+        "page_kind": "none"
+      },
+      "b": {
+        "id": "official-ec51a1528c60945a8deb",
+        "department": "半导体研究所",
+        "first_level_discipline": "0803 光学工程",
+        "homepage": "",
+        "page_kind": "none"
+      },
+      "auto_label": "unknown",
+      "verdict": "unknown",
+      "evidence_strength": "none",
+      "evidence": {
+        "rule": "missing_url",
+        "note": "证据不足以判定同人/异人",
+        "quoted_fields": [
+          {
+            "field": "institution",
+            "label": "机构",
+            "a": "中国科学院大学",
+            "b": "中国科学院大学",
+            "equal": true
+          },
+          {
+            "field": "department",
+            "label": "院系",
+            "a": "大气物理研究所",
+            "b": "半导体研究所",
+            "equal": false
+          },
+          {
+            "field": "first_level_discipline",
+            "label": "一级学科",
+            "a": "0706 大气科学",
+            "b": "0803 光学工程",
+            "equal": false
+          },
+          {
+            "field": "discipline",
+            "label": "学科",
+            "a": "大气科学",
+            "b": "光学工程",
+            "equal": false
+          },
+          {
+            "field": "interests",
+            "label": "研究方向",
+            "a": "地球系统模式研发及应用,陆气相互作用,气候和生态环境预测预估",
+            "b": "光纤传感技术及其在地球物理与海洋领域应用",
+            "equal": false
+          }
+        ]
+      },
+      "same_institution": true,
+      "missing_evidence": "至少一条记录没有 homepage，无法定位到具体的人"
+    },
+    {
+      "pair_id": "G0051",
       "name": "李雨",
       "institution": "上海交通大学",
       "a": {
@@ -4511,7 +3654,7 @@
       "missing_evidence": "homepage 是名录/列表页，不能作为身份证据"
     },
     {
-      "pair_id": "G0064",
+      "pair_id": "G0052",
       "name": "李骞",
       "institution": "中南大学",
       "a": {
@@ -4582,149 +3725,267 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0065",
-      "name": "李鹏",
-      "institution": "华中科技大学",
+      "pair_id": "G0053",
+      "name": "杜桂萍",
+      "institution": "北京师范大学",
       "a": {
-        "id": "legacy-ef969828b14e0381a326",
-        "department": "集成电路学院",
-        "first_level_discipline": "0809 电子科学与技术",
-        "homepage": "https://ic.hust.edu.cn/info/1146/3033.htm",
-        "page_kind": "personal"
+        "id": "official-306626512cc8a4a1fa5b",
+        "department": "文学院",
+        "first_level_discipline": "0501 中国语言文学",
+        "homepage": "",
+        "page_kind": "none"
       },
       "b": {
-        "id": "official-4985e2a1ffebc9eb2daa",
-        "department": "仪器科学与技术系",
-        "first_level_discipline": "0802 机械工程",
-        "homepage": "https://mse.hust.edu.cn/info/1149/14274.htm",
-        "page_kind": "personal"
+        "id": "official-eede7a8155d619ac0b42",
+        "department": "中华文化研究院丨京师书院",
+        "first_level_discipline": "0501 中国语言文学",
+        "homepage": "",
+        "page_kind": "none"
       },
-      "auto_label": "different_person",
-      "verdict": "different_person",
-      "evidence_strength": "medium",
+      "auto_label": "unknown",
+      "verdict": "unknown",
+      "evidence_strength": "none",
       "evidence": {
-        "rule": "distinct_pages_unit_conflict",
-        "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
+        "rule": "missing_url",
+        "note": "证据不足以判定同人/异人",
         "quoted_fields": [
           {
             "field": "institution",
             "label": "机构",
-            "a": "华中科技大学",
-            "b": "华中科技大学",
+            "a": "北京师范大学",
+            "b": "北京师范大学",
             "equal": true
           },
           {
             "field": "department",
             "label": "院系",
-            "a": "集成电路学院",
-            "b": "仪器科学与技术系",
+            "a": "文学院",
+            "b": "中华文化研究院丨京师书院",
             "equal": false
           },
           {
             "field": "first_level_discipline",
             "label": "一级学科",
-            "a": "0809 电子科学与技术",
-            "b": "0802 机械工程",
-            "equal": false
+            "a": "0501 中国语言文学",
+            "b": "0501 中国语言文学",
+            "equal": true
           },
           {
             "field": "discipline",
             "label": "学科",
-            "a": "电力电子",
-            "b": "机械工程",
-            "equal": false
-          },
-          {
-            "field": "homepage",
-            "label": "主页",
-            "a": "https://ic.hust.edu.cn/info/1146/3033.htm",
-            "b": "https://mse.hust.edu.cn/info/1149/14274.htm",
-            "equal": false
+            "a": "中国语言文学",
+            "b": "中国语言文学",
+            "equal": true
           },
           {
             "field": "interests",
             "label": "研究方向",
-            "a": "低维材料微纳传感器、MEMS传感器与微系统、原子尺度制造、近零功耗感知微系统",
-            "b": "方向待补",
-            "equal": false
+            "a": "元明清文学研究",
+            "b": "元明清文学研究",
+            "equal": true
           }
         ]
       },
-      "same_institution": true
+      "same_institution": true,
+      "missing_evidence": "至少一条记录没有 homepage，无法定位到具体的人"
     },
     {
-      "pair_id": "G0066",
-      "name": "杨帆",
-      "institution": "同济大学",
+      "pair_id": "G0054",
+      "name": "杨晓光",
+      "institution": "中国科学院大学",
       "a": {
-        "id": "official-806cd76cf5f9063440bd",
-        "department": "建筑与城市规划学院·城市规划系",
-        "first_level_discipline": "0833 城乡规划学",
-        "homepage": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=06091",
-        "page_kind": "personal"
+        "id": "official-b5e2671c5e0d68d2211c",
+        "department": "数学与系统科学研究院",
+        "first_level_discipline": "0202 应用经济学",
+        "homepage": "",
+        "page_kind": "none"
       },
       "b": {
-        "id": "official-c1b5fcb84541d18ce5ce",
-        "department": "航空航天与力学学院",
-        "first_level_discipline": "0801 力学",
-        "homepage": "https://aero-mech.tongji.edu.cn/3a/85/c22274a211589/page.htm",
-        "page_kind": "personal"
+        "id": "official-c01de1831521651d863b",
+        "department": "经济与管理学院",
+        "first_level_discipline": "0202 应用经济学",
+        "homepage": "",
+        "page_kind": "none"
       },
-      "auto_label": "different_person",
-      "verdict": "different_person",
-      "evidence_strength": "medium",
+      "auto_label": "unknown",
+      "verdict": "unknown",
+      "evidence_strength": "none",
       "evidence": {
-        "rule": "distinct_pages_unit_conflict",
-        "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
+        "rule": "missing_url",
+        "note": "证据不足以判定同人/异人",
         "quoted_fields": [
           {
             "field": "institution",
             "label": "机构",
-            "a": "同济大学",
-            "b": "同济大学",
+            "a": "中国科学院大学",
+            "b": "中国科学院大学",
             "equal": true
           },
           {
             "field": "department",
             "label": "院系",
-            "a": "建筑与城市规划学院·城市规划系",
-            "b": "航空航天与力学学院",
+            "a": "数学与系统科学研究院",
+            "b": "经济与管理学院",
             "equal": false
           },
           {
             "field": "first_level_discipline",
             "label": "一级学科",
-            "a": "0833 城乡规划学",
-            "b": "0801 力学",
+            "a": "0202 应用经济学",
+            "b": "0202 应用经济学",
+            "equal": true
+          },
+          {
+            "field": "discipline",
+            "label": "学科",
+            "a": "应用经济学",
+            "b": "应用经济学",
+            "equal": true
+          },
+          {
+            "field": "interests",
+            "label": "研究方向",
+            "a": "行为金融、数字经济",
+            "b": "金融风险管理/数字经济",
+            "equal": false
+          }
+        ]
+      },
+      "same_institution": true,
+      "missing_evidence": "至少一条记录没有 homepage，无法定位到具体的人"
+    },
+    {
+      "pair_id": "G0055",
+      "name": "杨晓光",
+      "institution": "中国科学院大学",
+      "a": {
+        "id": "official-f4a3bf844a7c865bc4b3",
+        "department": "半导体研究所",
+        "first_level_discipline": "0805 材料科学与工程",
+        "homepage": "",
+        "page_kind": "none"
+      },
+      "b": {
+        "id": "official-b5e2671c5e0d68d2211c",
+        "department": "数学与系统科学研究院",
+        "first_level_discipline": "0202 应用经济学",
+        "homepage": "",
+        "page_kind": "none"
+      },
+      "auto_label": "unknown",
+      "verdict": "unknown",
+      "evidence_strength": "none",
+      "evidence": {
+        "rule": "missing_url",
+        "note": "证据不足以判定同人/异人",
+        "quoted_fields": [
+          {
+            "field": "institution",
+            "label": "机构",
+            "a": "中国科学院大学",
+            "b": "中国科学院大学",
+            "equal": true
+          },
+          {
+            "field": "department",
+            "label": "院系",
+            "a": "半导体研究所",
+            "b": "数学与系统科学研究院",
+            "equal": false
+          },
+          {
+            "field": "first_level_discipline",
+            "label": "一级学科",
+            "a": "0805 材料科学与工程",
+            "b": "0202 应用经济学",
             "equal": false
           },
           {
             "field": "discipline",
             "label": "学科",
-            "a": "城乡规划学",
-            "b": "力学",
-            "equal": false
-          },
-          {
-            "field": "homepage",
-            "label": "主页",
-            "a": "https://upd-caup.tongji.edu.cn/3d/a9/c20527a343465/page.htm?id=06091",
-            "b": "https://aero-mech.tongji.edu.cn/3a/85/c22274a211589/page.htm",
+            "a": "材料科学与工程",
+            "b": "应用经济学",
             "equal": false
           },
           {
             "field": "interests",
             "label": "研究方向",
-            "a": "城市可持续发展规划设计与理论，城市规划政治学与空间规划治理，城市更新及产业空间发展，基于复杂和因果科学的智能规划，等",
-            "b": "方向待补",
+            "a": "低维结构材料与器件，硅光集成，量子信息",
+            "b": "行为金融、数字经济",
             "equal": false
           }
         ]
       },
-      "same_institution": true
+      "same_institution": true,
+      "missing_evidence": "至少一条记录没有 homepage，无法定位到具体的人"
     },
     {
-      "pair_id": "G0067",
+      "pair_id": "G0056",
+      "name": "杨晓光",
+      "institution": "中国科学院大学",
+      "a": {
+        "id": "official-f4a3bf844a7c865bc4b3",
+        "department": "半导体研究所",
+        "first_level_discipline": "0805 材料科学与工程",
+        "homepage": "",
+        "page_kind": "none"
+      },
+      "b": {
+        "id": "official-c01de1831521651d863b",
+        "department": "经济与管理学院",
+        "first_level_discipline": "0202 应用经济学",
+        "homepage": "",
+        "page_kind": "none"
+      },
+      "auto_label": "unknown",
+      "verdict": "unknown",
+      "evidence_strength": "none",
+      "evidence": {
+        "rule": "missing_url",
+        "note": "证据不足以判定同人/异人",
+        "quoted_fields": [
+          {
+            "field": "institution",
+            "label": "机构",
+            "a": "中国科学院大学",
+            "b": "中国科学院大学",
+            "equal": true
+          },
+          {
+            "field": "department",
+            "label": "院系",
+            "a": "半导体研究所",
+            "b": "经济与管理学院",
+            "equal": false
+          },
+          {
+            "field": "first_level_discipline",
+            "label": "一级学科",
+            "a": "0805 材料科学与工程",
+            "b": "0202 应用经济学",
+            "equal": false
+          },
+          {
+            "field": "discipline",
+            "label": "学科",
+            "a": "材料科学与工程",
+            "b": "应用经济学",
+            "equal": false
+          },
+          {
+            "field": "interests",
+            "label": "研究方向",
+            "a": "低维结构材料与器件，硅光集成，量子信息",
+            "b": "金融风险管理/数字经济",
+            "equal": false
+          }
+        ]
+      },
+      "same_institution": true,
+      "missing_evidence": "至少一条记录没有 homepage，无法定位到具体的人"
+    },
+    {
+      "pair_id": "G0057",
       "name": "杨珊",
       "institution": "中南大学",
       "a": {
@@ -4795,79 +4056,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0068",
-      "name": "杨超",
-      "institution": "上海交通大学",
-      "a": {
-        "id": "legacy-a12659c423e618578f44",
-        "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
-        "first_level_discipline": "0809 电子科学与技术",
-        "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/yangchao.html",
-        "page_kind": "personal"
-      },
-      "b": {
-        "id": "official-ccaba0cf7012fb973213",
-        "department": "材料科学与工程学院",
-        "first_level_discipline": "0805 材料科学与工程",
-        "homepage": "",
-        "page_kind": "none"
-      },
-      "auto_label": "unknown",
-      "verdict": "unknown",
-      "evidence_strength": "none",
-      "evidence": {
-        "rule": "missing_url",
-        "note": "证据不足以判定同人/异人",
-        "quoted_fields": [
-          {
-            "field": "institution",
-            "label": "机构",
-            "a": "上海交通大学",
-            "b": "上海交通大学",
-            "equal": true
-          },
-          {
-            "field": "department",
-            "label": "院系",
-            "a": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
-            "b": "材料科学与工程学院",
-            "equal": false
-          },
-          {
-            "field": "first_level_discipline",
-            "label": "一级学科",
-            "a": "0809 电子科学与技术",
-            "b": "0805 材料科学与工程",
-            "equal": false
-          },
-          {
-            "field": "discipline",
-            "label": "学科",
-            "a": "模拟电路",
-            "b": "材料科学与工程",
-            "equal": false
-          },
-          {
-            "field": "homepage",
-            "label": "主页",
-            "a": "https://icisee.sjtu.edu.cn/jiaoshiml/yangchao.html",
-            "b": "",
-            "equal": false
-          },
-          {
-            "field": "interests",
-            "label": "研究方向",
-            "a": "集成电路设计、模拟/混合信号集成电路、射频/毫米波集成电路、数字集成电路与SoC、EDA/设计自动化",
-            "b": "不分研究方向",
-            "equal": false
-          }
-        ]
-      },
-      "same_institution": true,
-      "missing_evidence": "至少一条记录没有 homepage，无法定位到具体的人"
-    },
-    {
-      "pair_id": "G0069",
+      "pair_id": "G0058",
       "name": "林杭",
       "institution": "中南大学",
       "a": {
@@ -4938,7 +4127,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0070",
+      "pair_id": "G0059",
       "name": "柯勇",
       "institution": "中南大学",
       "a": {
@@ -5009,7 +4198,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0071",
+      "pair_id": "G0060",
       "name": "桑红石",
       "institution": "华中科技大学",
       "a": {
@@ -5080,7 +4269,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0072",
+      "pair_id": "G0061",
       "name": "樊春海",
       "institution": "上海交通大学",
       "a": {
@@ -5157,7 +4346,7 @@
       "missing_evidence": "主页站点归属与院系不符，需人工确认该主页是否接错"
     },
     {
-      "pair_id": "G0073",
+      "pair_id": "G0062",
       "name": "汪阳东",
       "institution": "中国林业科学研究院",
       "a": {
@@ -5228,7 +4417,79 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0074",
+      "pair_id": "G0063",
+      "name": "沈胜春",
+      "institution": "中国科学技术大学",
+      "a": {
+        "id": "legacy-2ceed6785631a324eae5",
+        "department": "类脑智能技术及应用国家工程实验室 / 信息科学技术学院",
+        "first_level_discipline": "0809 电子科学与技术",
+        "homepage": "https://leinao.ustc.edu.cn/2026/0610/c25925a744108/page.htm",
+        "page_kind": "personal"
+      },
+      "b": {
+        "id": "official-6eae8920100583cbbc39",
+        "department": "物理学院",
+        "first_level_discipline": "0702 物理学",
+        "homepage": "http://emdp.ustc.edu.cn/ssctryjy/list.htm",
+        "page_kind": "roster"
+      },
+      "auto_label": "unknown",
+      "verdict": "unknown",
+      "evidence_strength": "none",
+      "evidence": {
+        "rule": "listing_page",
+        "note": "证据不足以判定同人/异人",
+        "quoted_fields": [
+          {
+            "field": "institution",
+            "label": "机构",
+            "a": "中国科学技术大学",
+            "b": "中国科学技术大学",
+            "equal": true
+          },
+          {
+            "field": "department",
+            "label": "院系",
+            "a": "类脑智能技术及应用国家工程实验室 / 信息科学技术学院",
+            "b": "物理学院",
+            "equal": false
+          },
+          {
+            "field": "first_level_discipline",
+            "label": "一级学科",
+            "a": "0809 电子科学与技术",
+            "b": "0702 物理学",
+            "equal": false
+          },
+          {
+            "field": "discipline",
+            "label": "学科",
+            "a": "电子器件与工艺",
+            "b": "物理学",
+            "equal": false
+          },
+          {
+            "field": "homepage",
+            "label": "主页",
+            "a": "https://leinao.ustc.edu.cn/2026/0610/c25925a744108/page.htm",
+            "b": "http://emdp.ustc.edu.cn/ssctryjy/list.htm",
+            "equal": false
+          },
+          {
+            "field": "interests",
+            "label": "研究方向",
+            "a": "铁性信息材料与器件、感存算一体、类脑人工智能",
+            "b": "01 磁电耦合和多铁性材料 02 自旋电子学 03 强关联功能氧化物薄膜",
+            "equal": false
+          }
+        ]
+      },
+      "same_institution": true,
+      "missing_evidence": "homepage 是名录/列表页，不能作为身份证据"
+    },
+    {
+      "pair_id": "G0064",
       "name": "洪亮",
       "institution": "上海交通大学",
       "a": {
@@ -5305,214 +4566,7 @@
       "missing_evidence": "主页站点归属与院系不符，需人工确认该主页是否接错"
     },
     {
-      "pair_id": "G0075",
-      "name": "温诗辉",
-      "institution": "上海交通大学",
-      "a": {
-        "id": "official-71f0d2d5f9323b7413da",
-        "department": "材料科学与工程学院",
-        "first_level_discipline": "0805 材料科学与工程",
-        "homepage": "",
-        "page_kind": "none"
-      },
-      "b": {
-        "id": "official-d181ee9fe4d095ca179b",
-        "department": "化学化工学院",
-        "first_level_discipline": "0703 化学",
-        "homepage": "",
-        "page_kind": "none"
-      },
-      "auto_label": "unknown",
-      "verdict": "unknown",
-      "evidence_strength": "none",
-      "evidence": {
-        "rule": "missing_url",
-        "note": "证据不足以判定同人/异人",
-        "quoted_fields": [
-          {
-            "field": "institution",
-            "label": "机构",
-            "a": "上海交通大学",
-            "b": "上海交通大学",
-            "equal": true
-          },
-          {
-            "field": "department",
-            "label": "院系",
-            "a": "材料科学与工程学院",
-            "b": "化学化工学院",
-            "equal": false
-          },
-          {
-            "field": "first_level_discipline",
-            "label": "一级学科",
-            "a": "0805 材料科学与工程",
-            "b": "0703 化学",
-            "equal": false
-          },
-          {
-            "field": "discipline",
-            "label": "学科",
-            "a": "材料科学与工程",
-            "b": "化学",
-            "equal": false
-          },
-          {
-            "field": "interests",
-            "label": "研究方向",
-            "a": "不分研究方向",
-            "b": "不分研究方向",
-            "equal": true
-          }
-        ]
-      },
-      "same_institution": true,
-      "missing_evidence": "至少一条记录没有 homepage，无法定位到具体的人"
-    },
-    {
-      "pair_id": "G0076",
-      "name": "王丽",
-      "institution": "中南大学",
-      "a": {
-        "id": "official-54198a9ee875ef5e986b",
-        "department": "材料科学与工程（学科列表）",
-        "first_level_discipline": "0805 材料科学与工程",
-        "homepage": "http://faculty.csu.edu.cn/wangli12/zh_CN/index.htm",
-        "page_kind": "personal"
-      },
-      "b": {
-        "id": "official-5d7acb3fcfbb8d69d649",
-        "department": "矿业工程（学科列表）",
-        "first_level_discipline": "0819 矿业工程",
-        "homepage": "http://faculty.csu.edu.cn/wangli2/zh_CN/index.htm",
-        "page_kind": "personal"
-      },
-      "auto_label": "different_person",
-      "verdict": "different_person",
-      "evidence_strength": "medium",
-      "evidence": {
-        "rule": "distinct_pages_unit_conflict",
-        "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
-        "quoted_fields": [
-          {
-            "field": "institution",
-            "label": "机构",
-            "a": "中南大学",
-            "b": "中南大学",
-            "equal": true
-          },
-          {
-            "field": "department",
-            "label": "院系",
-            "a": "材料科学与工程（学科列表）",
-            "b": "矿业工程（学科列表）",
-            "equal": false
-          },
-          {
-            "field": "first_level_discipline",
-            "label": "一级学科",
-            "a": "0805 材料科学与工程",
-            "b": "0819 矿业工程",
-            "equal": false
-          },
-          {
-            "field": "discipline",
-            "label": "学科",
-            "a": "材料科学与工程",
-            "b": "矿业工程",
-            "equal": false
-          },
-          {
-            "field": "homepage",
-            "label": "主页",
-            "a": "http://faculty.csu.edu.cn/wangli12/zh_CN/index.htm",
-            "b": "http://faculty.csu.edu.cn/wangli2/zh_CN/index.htm",
-            "equal": false
-          },
-          {
-            "field": "interests",
-            "label": "研究方向",
-            "a": "方向待补",
-            "b": "方向待补",
-            "equal": true
-          }
-        ]
-      },
-      "same_institution": true
-    },
-    {
-      "pair_id": "G0077",
-      "name": "王伟",
-      "institution": "上海交通大学",
-      "a": {
-        "id": "official-4640fecd8e7c13cb8bf3",
-        "department": "物理与天文学院（含李政道研究所）",
-        "first_level_discipline": "0702 物理学",
-        "homepage": "https://www.physics.sjtu.edu.cn/jsml/wangwei.html",
-        "page_kind": "personal"
-      },
-      "b": {
-        "id": "official-d029d99e2cf0762edf45",
-        "department": "航空航天学院",
-        "first_level_discipline": "0825 航空宇航科学与技术",
-        "homepage": "https://www.aero.sjtu.edu.cn/Data/View/4172",
-        "page_kind": "personal"
-      },
-      "auto_label": "different_person",
-      "verdict": "different_person",
-      "evidence_strength": "medium",
-      "evidence": {
-        "rule": "distinct_pages_unit_conflict",
-        "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
-        "quoted_fields": [
-          {
-            "field": "institution",
-            "label": "机构",
-            "a": "上海交通大学",
-            "b": "上海交通大学",
-            "equal": true
-          },
-          {
-            "field": "department",
-            "label": "院系",
-            "a": "物理与天文学院（含李政道研究所）",
-            "b": "航空航天学院",
-            "equal": false
-          },
-          {
-            "field": "first_level_discipline",
-            "label": "一级学科",
-            "a": "0702 物理学",
-            "b": "0825 航空宇航科学与技术",
-            "equal": false
-          },
-          {
-            "field": "discipline",
-            "label": "学科",
-            "a": "物理学",
-            "b": "航空宇航科学与技术",
-            "equal": false
-          },
-          {
-            "field": "homepage",
-            "label": "主页",
-            "a": "https://www.physics.sjtu.edu.cn/jsml/wangwei.html",
-            "b": "https://www.aero.sjtu.edu.cn/Data/View/4172",
-            "equal": false
-          },
-          {
-            "field": "interests",
-            "label": "研究方向",
-            "a": "不分研究方向",
-            "b": "不分研究方向",
-            "equal": true
-          }
-        ]
-      },
-      "same_institution": true
-    },
-    {
-      "pair_id": "G0078",
+      "pair_id": "G0065",
       "name": "王军",
       "institution": "中南大学",
       "a": {
@@ -5583,143 +4637,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0079",
-      "name": "王勇",
-      "institution": "中国科学院大学",
-      "a": {
-        "id": "official-210e268978227e7befd0",
-        "department": "精密测量科学与技术创新研究院",
-        "first_level_discipline": "0708 地球物理学",
-        "homepage": "",
-        "page_kind": "none"
-      },
-      "b": {
-        "id": "official-98904673c9f0d8b60152",
-        "department": "数学与系统科学研究院",
-        "first_level_discipline": "0701 数学",
-        "homepage": "",
-        "page_kind": "none"
-      },
-      "auto_label": "unknown",
-      "verdict": "unknown",
-      "evidence_strength": "none",
-      "evidence": {
-        "rule": "missing_url",
-        "note": "证据不足以判定同人/异人",
-        "quoted_fields": [
-          {
-            "field": "institution",
-            "label": "机构",
-            "a": "中国科学院大学",
-            "b": "中国科学院大学",
-            "equal": true
-          },
-          {
-            "field": "department",
-            "label": "院系",
-            "a": "精密测量科学与技术创新研究院",
-            "b": "数学与系统科学研究院",
-            "equal": false
-          },
-          {
-            "field": "first_level_discipline",
-            "label": "一级学科",
-            "a": "0708 地球物理学",
-            "b": "0701 数学",
-            "equal": false
-          },
-          {
-            "field": "discipline",
-            "label": "学科",
-            "a": "地球物理学",
-            "b": "数学",
-            "equal": false
-          },
-          {
-            "field": "interests",
-            "label": "研究方向",
-            "a": "地球重力学",
-            "b": "偏微分方程（五）",
-            "equal": false
-          }
-        ]
-      },
-      "same_institution": true,
-      "missing_evidence": "至少一条记录没有 homepage，无法定位到具体的人"
-    },
-    {
-      "pair_id": "G0080",
-      "name": "王博",
-      "institution": "华中科技大学",
-      "a": {
-        "id": "official-bf81b58241df1b4b49a7",
-        "department": "智能系统与系统工程系",
-        "first_level_discipline": "0811 控制科学与工程",
-        "homepage": "http://faculty.hust.edu.cn/WANGBo/zh_CN/index.htm",
-        "page_kind": "personal"
-      },
-      "b": {
-        "id": "official-023e161e84e29b9b8e68",
-        "department": "图像识别与智能科学系",
-        "first_level_discipline": "0811 控制科学与工程",
-        "homepage": "http://faculty.hust.edu.cn/bowang/zh_CN/more/2538470/jsjjgd/index.htm",
-        "page_kind": "personal"
-      },
-      "auto_label": "different_person",
-      "verdict": "different_person",
-      "evidence_strength": "medium",
-      "evidence": {
-        "rule": "distinct_pages_unit_conflict",
-        "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=True）",
-        "quoted_fields": [
-          {
-            "field": "institution",
-            "label": "机构",
-            "a": "华中科技大学",
-            "b": "华中科技大学",
-            "equal": true
-          },
-          {
-            "field": "department",
-            "label": "院系",
-            "a": "智能系统与系统工程系",
-            "b": "图像识别与智能科学系",
-            "equal": false
-          },
-          {
-            "field": "first_level_discipline",
-            "label": "一级学科",
-            "a": "0811 控制科学与工程",
-            "b": "0811 控制科学与工程",
-            "equal": true
-          },
-          {
-            "field": "discipline",
-            "label": "学科",
-            "a": "控制科学与工程",
-            "b": "控制科学与工程",
-            "equal": true
-          },
-          {
-            "field": "homepage",
-            "label": "主页",
-            "a": "http://faculty.hust.edu.cn/WANGBo/zh_CN/index.htm",
-            "b": "http://faculty.hust.edu.cn/bowang/zh_CN/more/2538470/jsjjgd/index.htm",
-            "equal": false
-          },
-          {
-            "field": "interests",
-            "label": "研究方向",
-            "a": "方向待补",
-            "b": "方向待补",
-            "equal": true
-          }
-        ]
-      },
-      "same_institution": true
-    },
-    {
-      "pair_id": "G0081",
+      "pair_id": "G0066",
       "name": "王小平",
       "institution": "华中科技大学",
       "a": {
@@ -5790,7 +4708,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0082",
+      "pair_id": "G0067",
       "name": "王帅",
       "institution": "中南大学",
       "a": {
@@ -5861,293 +4779,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0083",
-      "name": "王成",
-      "institution": "上海交通大学",
-      "a": {
-        "id": "official-3788d5ab6d666f65e43c",
-        "department": "机械与动力工程学院",
-        "first_level_discipline": "0802 机械工程",
-        "homepage": "https://me.sjtu.edu.cn/teacher_directory1/wangcheng",
-        "page_kind": "personal"
-      },
-      "b": {
-        "id": "official-61ce53f15131c05b0ae7",
-        "department": "数学科学学院",
-        "first_level_discipline": "0714 统计学",
-        "homepage": "http://math.sjtu.edu.cn/faculty/chengwang/",
-        "page_kind": "personal"
-      },
-      "auto_label": "different_person",
-      "verdict": "different_person",
-      "evidence_strength": "medium",
-      "evidence": {
-        "rule": "distinct_pages_unit_conflict",
-        "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
-        "quoted_fields": [
-          {
-            "field": "institution",
-            "label": "机构",
-            "a": "上海交通大学",
-            "b": "上海交通大学",
-            "equal": true
-          },
-          {
-            "field": "department",
-            "label": "院系",
-            "a": "机械与动力工程学院",
-            "b": "数学科学学院",
-            "equal": false
-          },
-          {
-            "field": "first_level_discipline",
-            "label": "一级学科",
-            "a": "0802 机械工程",
-            "b": "0714 统计学",
-            "equal": false
-          },
-          {
-            "field": "discipline",
-            "label": "学科",
-            "a": "机械工程",
-            "b": "统计学",
-            "equal": false
-          },
-          {
-            "field": "homepage",
-            "label": "主页",
-            "a": "https://me.sjtu.edu.cn/teacher_directory1/wangcheng",
-            "b": "http://math.sjtu.edu.cn/faculty/chengwang/",
-            "equal": false
-          },
-          {
-            "field": "interests",
-            "label": "研究方向",
-            "a": "不分研究方向",
-            "b": "不分研究方向",
-            "equal": true
-          }
-        ]
-      },
-      "same_institution": true
-    },
-    {
-      "pair_id": "G0084",
-      "name": "王斌",
-      "institution": "上海交通大学",
-      "a": {
-        "id": "official-0fe3b4e7dd51358fae86",
-        "department": "船舶海洋与建筑工程学院",
-        "first_level_discipline": "0824 船舶与海洋工程",
-        "homepage": "http://naoce.sjtu.edu.cn/teachers/5548.html",
-        "page_kind": "personal"
-      },
-      "b": {
-        "id": "official-f75ea806e409ee4d5c05",
-        "department": "航空航天学院",
-        "first_level_discipline": "0825 航空宇航科学与技术",
-        "homepage": "http://faculty.sjtu.edu.cn/wangbin1234",
-        "page_kind": "personal"
-      },
-      "auto_label": "different_person",
-      "verdict": "different_person",
-      "evidence_strength": "medium",
-      "evidence": {
-        "rule": "distinct_pages_unit_conflict",
-        "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
-        "quoted_fields": [
-          {
-            "field": "institution",
-            "label": "机构",
-            "a": "上海交通大学",
-            "b": "上海交通大学",
-            "equal": true
-          },
-          {
-            "field": "department",
-            "label": "院系",
-            "a": "船舶海洋与建筑工程学院",
-            "b": "航空航天学院",
-            "equal": false
-          },
-          {
-            "field": "first_level_discipline",
-            "label": "一级学科",
-            "a": "0824 船舶与海洋工程",
-            "b": "0825 航空宇航科学与技术",
-            "equal": false
-          },
-          {
-            "field": "discipline",
-            "label": "学科",
-            "a": "船舶与海洋工程",
-            "b": "航空宇航科学与技术",
-            "equal": false
-          },
-          {
-            "field": "homepage",
-            "label": "主页",
-            "a": "http://naoce.sjtu.edu.cn/teachers/5548.html",
-            "b": "http://faculty.sjtu.edu.cn/wangbin1234",
-            "equal": false
-          },
-          {
-            "field": "interests",
-            "label": "研究方向",
-            "a": "不分研究方向",
-            "b": "不分研究方向",
-            "equal": true
-          }
-        ]
-      },
-      "same_institution": true
-    },
-    {
-      "pair_id": "G0085",
-      "name": "王旭",
-      "institution": "上海交通大学",
-      "a": {
-        "id": "official-998ad62e29fab9240586",
-        "department": "电气工程学院",
-        "first_level_discipline": "0808 电气工程",
-        "homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
-        "page_kind": "roster"
-      },
-      "b": {
-        "id": "official-0a06bf7310e473fb6c0d",
-        "department": "农业与生物学院",
-        "first_level_discipline": "0902 园艺学",
-        "homepage": "https://www.agri.sjtu.edu.cn/Data/View/4372",
-        "page_kind": "personal"
-      },
-      "auto_label": "unknown",
-      "verdict": "unknown",
-      "evidence_strength": "none",
-      "evidence": {
-        "rule": "listing_page",
-        "note": "证据不足以判定同人/异人",
-        "quoted_fields": [
-          {
-            "field": "institution",
-            "label": "机构",
-            "a": "上海交通大学",
-            "b": "上海交通大学",
-            "equal": true
-          },
-          {
-            "field": "department",
-            "label": "院系",
-            "a": "电气工程学院",
-            "b": "农业与生物学院",
-            "equal": false
-          },
-          {
-            "field": "first_level_discipline",
-            "label": "一级学科",
-            "a": "0808 电气工程",
-            "b": "0902 园艺学",
-            "equal": false
-          },
-          {
-            "field": "discipline",
-            "label": "学科",
-            "a": "电气工程",
-            "b": "园艺学",
-            "equal": false
-          },
-          {
-            "field": "homepage",
-            "label": "主页",
-            "a": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
-            "b": "https://www.agri.sjtu.edu.cn/Data/View/4372",
-            "equal": false
-          },
-          {
-            "field": "interests",
-            "label": "研究方向",
-            "a": "电气工程",
-            "b": "不分研究方向",
-            "equal": false
-          }
-        ]
-      },
-      "same_institution": true,
-      "missing_evidence": "homepage 是名录/列表页，不能作为身份证据"
-    },
-    {
-      "pair_id": "G0086",
-      "name": "王晓东",
-      "institution": "上海交通大学",
-      "a": {
-        "id": "official-9a1e38ecf01a8b65836b",
-        "department": "材料科学与工程学院",
-        "first_level_discipline": "0805 材料科学与工程",
-        "homepage": "http://faculty.sjtu.edu.cn/wangxiaodong",
-        "page_kind": "personal"
-      },
-      "b": {
-        "id": "official-9a14d1a09333a2600085",
-        "department": "数学科学学院",
-        "first_level_discipline": "0701 数学",
-        "homepage": "",
-        "page_kind": "none"
-      },
-      "auto_label": "unknown",
-      "verdict": "unknown",
-      "evidence_strength": "none",
-      "evidence": {
-        "rule": "missing_url",
-        "note": "证据不足以判定同人/异人",
-        "quoted_fields": [
-          {
-            "field": "institution",
-            "label": "机构",
-            "a": "上海交通大学",
-            "b": "上海交通大学",
-            "equal": true
-          },
-          {
-            "field": "department",
-            "label": "院系",
-            "a": "材料科学与工程学院",
-            "b": "数学科学学院",
-            "equal": false
-          },
-          {
-            "field": "first_level_discipline",
-            "label": "一级学科",
-            "a": "0805 材料科学与工程",
-            "b": "0701 数学",
-            "equal": false
-          },
-          {
-            "field": "discipline",
-            "label": "学科",
-            "a": "材料科学与工程",
-            "b": "数学",
-            "equal": false
-          },
-          {
-            "field": "homepage",
-            "label": "主页",
-            "a": "http://faculty.sjtu.edu.cn/wangxiaodong",
-            "b": "",
-            "equal": false
-          },
-          {
-            "field": "interests",
-            "label": "研究方向",
-            "a": "不分研究方向",
-            "b": "不分研究方向",
-            "equal": true
-          }
-        ]
-      },
-      "same_institution": true,
-      "missing_evidence": "至少一条记录没有 homepage，无法定位到具体的人"
-    },
-    {
-      "pair_id": "G0087",
+      "pair_id": "G0068",
       "name": "王晶",
       "institution": "西安交通大学",
       "a": {
@@ -6164,12 +4796,12 @@
         "homepage": "https://mec.xjtu.edu.cn/info/1261/11798.htm",
         "page_kind": "personal"
       },
-      "auto_label": "different_person",
-      "verdict": "different_person",
-      "evidence_strength": "medium",
+      "auto_label": "unknown",
+      "verdict": "unknown",
+      "evidence_strength": "none",
       "evidence": {
-        "rule": "distinct_pages_unit_conflict",
-        "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=True）",
+        "rule": "unit_conflict_only",
+        "note": "两侧只有院系/一级学科不同：单位归属差异不足以判定身份，按「无法确认」处理，进人工核验",
         "quoted_fields": [
           {
             "field": "institution",
@@ -6215,10 +4847,11 @@
           }
         ]
       },
-      "same_institution": true
+      "same_institution": true,
+      "missing_evidence": "两侧只有院系/一级学科不同：单位归属差异对「同一人跨院系/跨学科」与「同校同名两个人」都成立，不构成直接身份冲突证据，需人工核验"
     },
     {
-      "pair_id": "G0088",
+      "pair_id": "G0069",
       "name": "王李管",
       "institution": "中南大学",
       "a": {
@@ -6289,149 +4922,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0089",
-      "name": "王涛",
-      "institution": "上海交通大学",
-      "a": {
-        "id": "legacy-428668480901a6729341",
-        "department": "自动化与感知学院 / 光子传输与通信全国重点实验室",
-        "first_level_discipline": "0809 电子科学与技术",
-        "homepage": "https://qsip.sjtu.edu.cn/",
-        "page_kind": "personal"
-      },
-      "b": {
-        "id": "official-8867f8a1fb750338c9a4",
-        "department": "生命科学技术学院（含系统生物医学研究院）",
-        "first_level_discipline": "0710 生物学",
-        "homepage": "https://life.sjtu.edu.cn/teacher/wangtao",
-        "page_kind": "personal"
-      },
-      "auto_label": "different_person",
-      "verdict": "different_person",
-      "evidence_strength": "medium",
-      "evidence": {
-        "rule": "distinct_pages_unit_conflict",
-        "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
-        "quoted_fields": [
-          {
-            "field": "institution",
-            "label": "机构",
-            "a": "上海交通大学",
-            "b": "上海交通大学",
-            "equal": true
-          },
-          {
-            "field": "department",
-            "label": "院系",
-            "a": "自动化与感知学院 / 光子传输与通信全国重点实验室",
-            "b": "生命科学技术学院（含系统生物医学研究院）",
-            "equal": false
-          },
-          {
-            "field": "first_level_discipline",
-            "label": "一级学科",
-            "a": "0809 电子科学与技术",
-            "b": "0710 生物学",
-            "equal": false
-          },
-          {
-            "field": "discipline",
-            "label": "学科",
-            "a": "电子器件与工艺",
-            "b": "生物学",
-            "equal": false
-          },
-          {
-            "field": "homepage",
-            "label": "主页",
-            "a": "https://qsip.sjtu.edu.cn/",
-            "b": "https://life.sjtu.edu.cn/teacher/wangtao",
-            "equal": false
-          },
-          {
-            "field": "interests",
-            "label": "研究方向",
-            "a": "量子信息器件、数字集成电路与SoC",
-            "b": "不分研究方向",
-            "equal": false
-          }
-        ]
-      },
-      "same_institution": true
-    },
-    {
-      "pair_id": "G0090",
-      "name": "王涛",
-      "institution": "上海交通大学",
-      "a": {
-        "id": "legacy-428668480901a6729341",
-        "department": "自动化与感知学院 / 光子传输与通信全国重点实验室",
-        "first_level_discipline": "0809 电子科学与技术",
-        "homepage": "https://qsip.sjtu.edu.cn/",
-        "page_kind": "personal"
-      },
-      "b": {
-        "id": "official-c4b8b308e369201de84a",
-        "department": "数学科学学院",
-        "first_level_discipline": "0714 统计学",
-        "homepage": "https://life.sjtu.edu.cn/teacher/wangtao",
-        "page_kind": "personal"
-      },
-      "auto_label": "different_person",
-      "verdict": "different_person",
-      "evidence_strength": "medium",
-      "evidence": {
-        "rule": "distinct_pages_unit_conflict",
-        "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
-        "quoted_fields": [
-          {
-            "field": "institution",
-            "label": "机构",
-            "a": "上海交通大学",
-            "b": "上海交通大学",
-            "equal": true
-          },
-          {
-            "field": "department",
-            "label": "院系",
-            "a": "自动化与感知学院 / 光子传输与通信全国重点实验室",
-            "b": "数学科学学院",
-            "equal": false
-          },
-          {
-            "field": "first_level_discipline",
-            "label": "一级学科",
-            "a": "0809 电子科学与技术",
-            "b": "0714 统计学",
-            "equal": false
-          },
-          {
-            "field": "discipline",
-            "label": "学科",
-            "a": "电子器件与工艺",
-            "b": "统计学",
-            "equal": false
-          },
-          {
-            "field": "homepage",
-            "label": "主页",
-            "a": "https://qsip.sjtu.edu.cn/",
-            "b": "https://life.sjtu.edu.cn/teacher/wangtao",
-            "equal": false
-          },
-          {
-            "field": "interests",
-            "label": "研究方向",
-            "a": "量子信息器件、数字集成电路与SoC",
-            "b": "不分研究方向",
-            "equal": false
-          }
-        ]
-      },
-      "same_institution": true
-    },
-    {
-      "pair_id": "G0091",
+      "pair_id": "G0070",
       "name": "王涛",
       "institution": "上海交通大学",
       "a": {
@@ -6508,143 +4999,7 @@
       "missing_evidence": "主页站点归属与院系不符，需人工确认该主页是否接错"
     },
     {
-      "pair_id": "G0092",
-      "name": "王磊",
-      "institution": "西安交通大学",
-      "a": {
-        "id": "legacy-b43f79914463af3a692d",
-        "department": "电子与信息学部 信息与通信工程学院",
-        "first_level_discipline": "0809 电子科学与技术",
-        "homepage": "https://gr.xjtu.edu.cn/lei.wang/zh_CN/index.htm",
-        "page_kind": "personal"
-      },
-      "b": {
-        "id": "official-3ab09b534aec46551b4d",
-        "department": "先进制造技术研究所",
-        "first_level_discipline": "0802 机械工程",
-        "homepage": "http://gr.xjtu.edu.cn/web/wlei292",
-        "page_kind": "personal"
-      },
-      "auto_label": "different_person",
-      "verdict": "different_person",
-      "evidence_strength": "medium",
-      "evidence": {
-        "rule": "distinct_pages_unit_conflict",
-        "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
-        "quoted_fields": [
-          {
-            "field": "institution",
-            "label": "机构",
-            "a": "西安交通大学",
-            "b": "西安交通大学",
-            "equal": true
-          },
-          {
-            "field": "department",
-            "label": "院系",
-            "a": "电子与信息学部 信息与通信工程学院",
-            "b": "先进制造技术研究所",
-            "equal": false
-          },
-          {
-            "field": "first_level_discipline",
-            "label": "一级学科",
-            "a": "0809 电子科学与技术",
-            "b": "0802 机械工程",
-            "equal": false
-          },
-          {
-            "field": "discipline",
-            "label": "学科",
-            "a": "射频与通信",
-            "b": "机械工程",
-            "equal": false
-          },
-          {
-            "field": "homepage",
-            "label": "主页",
-            "a": "https://gr.xjtu.edu.cn/lei.wang/zh_CN/index.htm",
-            "b": "http://gr.xjtu.edu.cn/web/wlei292",
-            "equal": false
-          },
-          {
-            "field": "interests",
-            "label": "研究方向",
-            "a": "微波与天线、通信芯片与基带、无线通信系统",
-            "b": "方向待补",
-            "equal": false
-          }
-        ]
-      },
-      "same_institution": true
-    },
-    {
-      "pair_id": "G0093",
-      "name": "申清臣",
-      "institution": "上海交通大学",
-      "a": {
-        "id": "official-f430d476ff6ff27e80e4",
-        "department": "机械与动力工程学院",
-        "first_level_discipline": "0807 动力工程及工程热物理",
-        "homepage": "",
-        "page_kind": "none"
-      },
-      "b": {
-        "id": "official-baad8d58ca9e1412b042",
-        "department": "材料科学与工程学院",
-        "first_level_discipline": "0805 材料科学与工程",
-        "homepage": "",
-        "page_kind": "none"
-      },
-      "auto_label": "unknown",
-      "verdict": "unknown",
-      "evidence_strength": "none",
-      "evidence": {
-        "rule": "missing_url",
-        "note": "证据不足以判定同人/异人",
-        "quoted_fields": [
-          {
-            "field": "institution",
-            "label": "机构",
-            "a": "上海交通大学",
-            "b": "上海交通大学",
-            "equal": true
-          },
-          {
-            "field": "department",
-            "label": "院系",
-            "a": "机械与动力工程学院",
-            "b": "材料科学与工程学院",
-            "equal": false
-          },
-          {
-            "field": "first_level_discipline",
-            "label": "一级学科",
-            "a": "0807 动力工程及工程热物理",
-            "b": "0805 材料科学与工程",
-            "equal": false
-          },
-          {
-            "field": "discipline",
-            "label": "学科",
-            "a": "动力工程及工程热物理",
-            "b": "材料科学与工程",
-            "equal": false
-          },
-          {
-            "field": "interests",
-            "label": "研究方向",
-            "a": "不分研究方向-宁波东方理工大学",
-            "b": "不分研究方向",
-            "equal": false
-          }
-        ]
-      },
-      "same_institution": true,
-      "missing_evidence": "至少一条记录没有 homepage，无法定位到具体的人"
-    },
-    {
-      "pair_id": "G0094",
+      "pair_id": "G0071",
       "name": "程义",
       "institution": "中南大学",
       "a": {
@@ -6715,79 +5070,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0095",
-      "name": "程秀兰",
-      "institution": "上海交通大学",
-      "a": {
-        "id": "legacy-699461be99eece63b538",
-        "department": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
-        "first_level_discipline": "0809 电子科学与技术",
-        "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/chengxiulan.html",
-        "page_kind": "personal"
-      },
-      "b": {
-        "id": "official-2459bea11d4a5a714f78",
-        "department": "集成电路学院",
-        "first_level_discipline": "0809 电子科学与技术",
-        "homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
-        "page_kind": "roster"
-      },
-      "auto_label": "unknown",
-      "verdict": "unknown",
-      "evidence_strength": "none",
-      "evidence": {
-        "rule": "listing_page",
-        "note": "证据不足以判定同人/异人",
-        "quoted_fields": [
-          {
-            "field": "institution",
-            "label": "机构",
-            "a": "上海交通大学",
-            "b": "上海交通大学",
-            "equal": true
-          },
-          {
-            "field": "department",
-            "label": "院系",
-            "a": "集成电路学院（信息与电子工程学院）· 电磁与智能系统研究所",
-            "b": "集成电路学院",
-            "equal": false
-          },
-          {
-            "field": "first_level_discipline",
-            "label": "一级学科",
-            "a": "0809 电子科学与技术",
-            "b": "0809 电子科学与技术",
-            "equal": true
-          },
-          {
-            "field": "discipline",
-            "label": "学科",
-            "a": "光电子与硅光",
-            "b": "电子科学与技术",
-            "equal": false
-          },
-          {
-            "field": "homepage",
-            "label": "主页",
-            "a": "https://icisee.sjtu.edu.cn/jiaoshiml/chengxiulan.html",
-            "b": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
-            "equal": false
-          },
-          {
-            "field": "interests",
-            "label": "研究方向",
-            "a": "处理器与体系结构、半导体器件与工艺、硅光/光电子集成、通信基带与系统",
-            "b": "不分研究方向",
-            "equal": false
-          }
-        ]
-      },
-      "same_institution": true,
-      "missing_evidence": "homepage 是名录/列表页，不能作为身份证据"
-    },
-    {
-      "pair_id": "G0096",
+      "pair_id": "G0072",
       "name": "窦坤",
       "institution": "中南大学",
       "a": {
@@ -6858,149 +5141,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0097",
-      "name": "罗欣",
-      "institution": "华中科技大学",
-      "a": {
-        "id": "official-94f43f4e17639a1ba139",
-        "department": "自主智能与智能控制系",
-        "first_level_discipline": "0811 控制科学与工程",
-        "homepage": "http://faculty.hust.edu.cn/luoxin6/zh_CN/index.htm",
-        "page_kind": "personal"
-      },
-      "b": {
-        "id": "official-fba3bbdd9278fc5ff6e1",
-        "department": "智能制造装备与技术全国重点实验室",
-        "first_level_discipline": "0802 机械工程",
-        "homepage": "https://mse.hust.edu.cn/info/1142/1349.htm",
-        "page_kind": "personal"
-      },
-      "auto_label": "different_person",
-      "verdict": "different_person",
-      "evidence_strength": "medium",
-      "evidence": {
-        "rule": "distinct_pages_unit_conflict",
-        "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
-        "quoted_fields": [
-          {
-            "field": "institution",
-            "label": "机构",
-            "a": "华中科技大学",
-            "b": "华中科技大学",
-            "equal": true
-          },
-          {
-            "field": "department",
-            "label": "院系",
-            "a": "自主智能与智能控制系",
-            "b": "智能制造装备与技术全国重点实验室",
-            "equal": false
-          },
-          {
-            "field": "first_level_discipline",
-            "label": "一级学科",
-            "a": "0811 控制科学与工程",
-            "b": "0802 机械工程",
-            "equal": false
-          },
-          {
-            "field": "discipline",
-            "label": "学科",
-            "a": "控制科学与工程",
-            "b": "机械工程",
-            "equal": false
-          },
-          {
-            "field": "homepage",
-            "label": "主页",
-            "a": "http://faculty.hust.edu.cn/luoxin6/zh_CN/index.htm",
-            "b": "https://mse.hust.edu.cn/info/1142/1349.htm",
-            "equal": false
-          },
-          {
-            "field": "interests",
-            "label": "研究方向",
-            "a": "方向待补",
-            "b": "方向待补",
-            "equal": true
-          }
-        ]
-      },
-      "same_institution": true
-    },
-    {
-      "pair_id": "G0098",
-      "name": "肖鸣飞",
-      "institution": "华中科技大学",
-      "a": {
-        "id": "legacy-74b8cfd95bb8dbc6b174",
-        "department": "集成电路学院",
-        "first_level_discipline": "0809 电子科学与技术",
-        "homepage": "https://ic.hust.edu.cn/info/1146/3406.htm",
-        "page_kind": "personal"
-      },
-      "b": {
-        "id": "official-4d035643c375a6b5a2ab",
-        "department": "仪器科学与技术系",
-        "first_level_discipline": "0802 机械工程",
-        "homepage": "https://mse.hust.edu.cn/info/1149/14551.htm",
-        "page_kind": "personal"
-      },
-      "auto_label": "different_person",
-      "verdict": "different_person",
-      "evidence_strength": "medium",
-      "evidence": {
-        "rule": "distinct_pages_unit_conflict",
-        "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
-        "quoted_fields": [
-          {
-            "field": "institution",
-            "label": "机构",
-            "a": "华中科技大学",
-            "b": "华中科技大学",
-            "equal": true
-          },
-          {
-            "field": "department",
-            "label": "院系",
-            "a": "集成电路学院",
-            "b": "仪器科学与技术系",
-            "equal": false
-          },
-          {
-            "field": "first_level_discipline",
-            "label": "一级学科",
-            "a": "0809 电子科学与技术",
-            "b": "0802 机械工程",
-            "equal": false
-          },
-          {
-            "field": "discipline",
-            "label": "学科",
-            "a": "电子器件与工艺",
-            "b": "机械工程",
-            "equal": false
-          },
-          {
-            "field": "homepage",
-            "label": "主页",
-            "a": "https://ic.hust.edu.cn/info/1146/3406.htm",
-            "b": "https://mse.hust.edu.cn/info/1149/14551.htm",
-            "equal": false
-          },
-          {
-            "field": "interests",
-            "label": "研究方向",
-            "a": "印刷电子器件制造、可印刷半导体电路与传感器、AI辅助半导体设计、神经形态电路",
-            "b": "方向待补",
-            "equal": false
-          }
-        ]
-      },
-      "same_institution": true
-    },
-    {
-      "pair_id": "G0099",
+      "pair_id": "G0073",
       "name": "胡文吉豪",
       "institution": "中南大学",
       "a": {
@@ -7071,7 +5212,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0100",
+      "pair_id": "G0074",
       "name": "胡文吉豪",
       "institution": "中南大学",
       "a": {
@@ -7142,7 +5283,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0101",
+      "pair_id": "G0075",
       "name": "胡文吉豪",
       "institution": "中南大学",
       "a": {
@@ -7213,7 +5354,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0102",
+      "pair_id": "G0076",
       "name": "胡洁",
       "institution": "上海交通大学",
       "a": {
@@ -7290,7 +5431,7 @@
       "missing_evidence": "主页站点归属与院系不符，需人工确认该主页是否接错"
     },
     {
-      "pair_id": "G0103",
+      "pair_id": "G0077",
       "name": "胡海龙",
       "institution": "中南大学",
       "a": {
@@ -7361,7 +5502,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0104",
+      "pair_id": "G0078",
       "name": "胡清纯",
       "institution": "中南大学",
       "a": {
@@ -7432,7 +5573,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0105",
+      "pair_id": "G0079",
       "name": "范晓慧",
       "institution": "中南大学",
       "a": {
@@ -7503,7 +5644,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0106",
+      "pair_id": "G0080",
       "name": "董中林",
       "institution": "中南大学",
       "a": {
@@ -7574,79 +5715,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0107",
-      "name": "董立河",
-      "institution": "北京师范大学",
-      "a": {
-        "id": "official-4f7e2d4618cb2aa8bc1b",
-        "department": "历史学院",
-        "first_level_discipline": "0603 世界史",
-        "homepage": "https://history.bnu.edu.cn/szdw/f7242bd4b6ff45078aec56fca7cc9070.htm",
-        "page_kind": "personal"
-      },
-      "b": {
-        "id": "official-396e56195e89f434289a",
-        "department": "文理学院",
-        "first_level_discipline": "0603 世界史",
-        "homepage": "",
-        "page_kind": "none"
-      },
-      "auto_label": "unknown",
-      "verdict": "unknown",
-      "evidence_strength": "none",
-      "evidence": {
-        "rule": "missing_url",
-        "note": "证据不足以判定同人/异人",
-        "quoted_fields": [
-          {
-            "field": "institution",
-            "label": "机构",
-            "a": "北京师范大学",
-            "b": "北京师范大学",
-            "equal": true
-          },
-          {
-            "field": "department",
-            "label": "院系",
-            "a": "历史学院",
-            "b": "文理学院",
-            "equal": false
-          },
-          {
-            "field": "first_level_discipline",
-            "label": "一级学科",
-            "a": "0603 世界史",
-            "b": "0603 世界史",
-            "equal": true
-          },
-          {
-            "field": "discipline",
-            "label": "学科",
-            "a": "世界史",
-            "b": "世界史",
-            "equal": true
-          },
-          {
-            "field": "homepage",
-            "label": "主页",
-            "a": "https://history.bnu.edu.cn/szdw/f7242bd4b6ff45078aec56fca7cc9070.htm",
-            "b": "",
-            "equal": false
-          },
-          {
-            "field": "interests",
-            "label": "研究方向",
-            "a": "史学理论与外国史学史教研室",
-            "b": "史学理论与外国史学史",
-            "equal": false
-          }
-        ]
-      },
-      "same_institution": true,
-      "missing_evidence": "至少一条记录没有 homepage，无法定位到具体的人"
-    },
-    {
-      "pair_id": "G0108",
+      "pair_id": "G0081",
       "name": "董陇军",
       "institution": "中南大学",
       "a": {
@@ -7717,72 +5786,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0109",
-      "name": "蒋丽梅",
-      "institution": "北京师范大学",
-      "a": {
-        "id": "official-faa5fbbc22a4ffde1af7",
-        "department": "哲学学院",
-        "first_level_discipline": "0101 哲学",
-        "homepage": "",
-        "page_kind": "none"
-      },
-      "b": {
-        "id": "official-20813b5f0998a0019ca1",
-        "department": "中华文化研究院丨京师书院",
-        "first_level_discipline": "0101 哲学",
-        "homepage": "",
-        "page_kind": "none"
-      },
-      "auto_label": "unknown",
-      "verdict": "unknown",
-      "evidence_strength": "none",
-      "evidence": {
-        "rule": "missing_url",
-        "note": "证据不足以判定同人/异人",
-        "quoted_fields": [
-          {
-            "field": "institution",
-            "label": "机构",
-            "a": "北京师范大学",
-            "b": "北京师范大学",
-            "equal": true
-          },
-          {
-            "field": "department",
-            "label": "院系",
-            "a": "哲学学院",
-            "b": "中华文化研究院丨京师书院",
-            "equal": false
-          },
-          {
-            "field": "first_level_discipline",
-            "label": "一级学科",
-            "a": "0101 哲学",
-            "b": "0101 哲学",
-            "equal": true
-          },
-          {
-            "field": "discipline",
-            "label": "学科",
-            "a": "哲学",
-            "b": "哲学",
-            "equal": true
-          },
-          {
-            "field": "interests",
-            "label": "研究方向",
-            "a": "中国哲学",
-            "b": "中国哲学",
-            "equal": true
-          }
-        ]
-      },
-      "same_institution": true,
-      "missing_evidence": "至少一条记录没有 homepage，无法定位到具体的人"
-    },
-    {
-      "pair_id": "G0110",
+      "pair_id": "G0082",
       "name": "蒋冲",
       "institution": "中南大学",
       "a": {
@@ -7853,7 +5857,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0111",
+      "pair_id": "G0083",
       "name": "谢磊",
       "institution": "中南大学",
       "a": {
@@ -7924,7 +5928,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0112",
+      "pair_id": "G0084",
       "name": "谢磊",
       "institution": "中南大学",
       "a": {
@@ -7995,7 +5999,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0113",
+      "pair_id": "G0085",
       "name": "谢磊",
       "institution": "中南大学",
       "a": {
@@ -8066,7 +6070,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0114",
+      "pair_id": "G0086",
       "name": "贾金平",
       "institution": "上海交通大学",
       "a": {
@@ -8143,7 +6147,7 @@
       "missing_evidence": "主页站点归属与院系不符，需人工确认该主页是否接错"
     },
     {
-      "pair_id": "G0115",
+      "pair_id": "G0087",
       "name": "赵子谦",
       "institution": "中南大学",
       "a": {
@@ -8214,7 +6218,79 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0116",
+      "pair_id": "G0088",
+      "name": "赵海宁",
+      "institution": "中国石油大学（北京）",
+      "a": {
+        "id": "official-210a5b7111119dc22c8a",
+        "department": "安全与海洋工程学院",
+        "first_level_discipline": "0820 石油与天然气工程",
+        "homepage": "",
+        "page_kind": "none"
+      },
+      "b": {
+        "id": "official-ef96a2417bb8b5ad344b",
+        "department": "海洋油气工程系",
+        "first_level_discipline": "0820 石油与天然气工程",
+        "homepage": "https://www.cup.edu.cn/oil/jsdw/szhyyqgcx/b8ed15ca7833442daae0ea6443feb3d5.htm",
+        "page_kind": "personal"
+      },
+      "auto_label": "unknown",
+      "verdict": "unknown",
+      "evidence_strength": "none",
+      "evidence": {
+        "rule": "missing_url",
+        "note": "证据不足以判定同人/异人",
+        "quoted_fields": [
+          {
+            "field": "institution",
+            "label": "机构",
+            "a": "中国石油大学（北京）",
+            "b": "中国石油大学（北京）",
+            "equal": true
+          },
+          {
+            "field": "department",
+            "label": "院系",
+            "a": "安全与海洋工程学院",
+            "b": "海洋油气工程系",
+            "equal": false
+          },
+          {
+            "field": "first_level_discipline",
+            "label": "一级学科",
+            "a": "0820 石油与天然气工程",
+            "b": "0820 石油与天然气工程",
+            "equal": true
+          },
+          {
+            "field": "discipline",
+            "label": "学科",
+            "a": "石油与天然气工程",
+            "b": "石油与天然气工程",
+            "equal": true
+          },
+          {
+            "field": "homepage",
+            "label": "主页",
+            "a": "",
+            "b": "https://www.cup.edu.cn/oil/jsdw/szhyyqgcx/b8ed15ca7833442daae0ea6443feb3d5.htm",
+            "equal": false
+          },
+          {
+            "field": "interests",
+            "label": "研究方向",
+            "a": "海洋油气工程理论与技术",
+            "b": "海洋油气工程理论与技术",
+            "equal": true
+          }
+        ]
+      },
+      "same_institution": true,
+      "missing_evidence": "至少一条记录没有 homepage，无法定位到具体的人"
+    },
+    {
+      "pair_id": "G0089",
       "name": "赵红波",
       "institution": "中南大学",
       "a": {
@@ -8285,7 +6361,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0117",
+      "pair_id": "G0090",
       "name": "邓红卫",
       "institution": "中南大学",
       "a": {
@@ -8356,7 +6432,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0118",
+      "pair_id": "G0091",
       "name": "郭宇峰",
       "institution": "中南大学",
       "a": {
@@ -8427,7 +6503,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0119",
+      "pair_id": "G0092",
       "name": "金学军",
       "institution": "上海交通大学",
       "a": {
@@ -8498,7 +6574,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0120",
+      "pair_id": "G0093",
       "name": "金贤敏",
       "institution": "上海交通大学",
       "a": {
@@ -8569,7 +6645,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0121",
+      "pair_id": "G0094",
       "name": "金隼",
       "institution": "上海交通大学",
       "a": {
@@ -8646,7 +6722,7 @@
       "missing_evidence": "主页站点归属与院系不符，需人工确认该主页是否接错"
     },
     {
-      "pair_id": "G0122",
+      "pair_id": "G0095",
       "name": "钟强",
       "institution": "中南大学",
       "a": {
@@ -8717,7 +6793,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0123",
+      "pair_id": "G0096",
       "name": "钟德云",
       "institution": "中南大学",
       "a": {
@@ -8788,7 +6864,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0124",
+      "pair_id": "G0097",
       "name": "闵小波",
       "institution": "中南大学",
       "a": {
@@ -8859,7 +6935,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0125",
+      "pair_id": "G0098",
       "name": "陈建宏",
       "institution": "中南大学",
       "a": {
@@ -8930,78 +7006,79 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0126",
-      "name": "陈掌星",
-      "institution": "上海交通大学",
+      "pair_id": "G0099",
+      "name": "陈志明",
+      "institution": "中国石油大学（北京）",
       "a": {
-        "id": "official-3ec209a0226375dc716f",
-        "department": "数学科学学院",
-        "first_level_discipline": "0701 数学",
-        "homepage": "https://www.eias.ac.cn/?teachers_category=teachers-list",
-        "page_kind": "personal"
+        "id": "official-4130b4fb67cb9b42420a",
+        "department": "安全与海洋工程学院",
+        "first_level_discipline": "0837 安全科学与工程",
+        "homepage": "",
+        "page_kind": "none"
       },
       "b": {
-        "id": "official-e5a45a6d3f7cf32db49f",
-        "department": "化学化工学院",
-        "first_level_discipline": "0703 化学",
-        "homepage": "https://www.eias.ac.cn/?teachers_category=teachers-list",
+        "id": "official-0a1001c649013ed45c7c",
+        "department": "油气田开发工程系",
+        "first_level_discipline": "0820 石油与天然气工程",
+        "homepage": "http://www.cup.edu.cn/oil/jsdw/yqtkfgcx/169500.htm",
         "page_kind": "personal"
       },
-      "auto_label": "same_person",
-      "verdict": "same_person",
-      "evidence_strength": "medium",
+      "auto_label": "unknown",
+      "verdict": "unknown",
+      "evidence_strength": "none",
       "evidence": {
-        "rule": "shared_dedicated_page",
-        "note": "两条记录指向同一个本人专属主页，且站点归属与院系一致",
+        "rule": "missing_url",
+        "note": "证据不足以判定同人/异人",
         "quoted_fields": [
           {
             "field": "institution",
             "label": "机构",
-            "a": "上海交通大学",
-            "b": "上海交通大学",
+            "a": "中国石油大学（北京）",
+            "b": "中国石油大学（北京）",
             "equal": true
           },
           {
             "field": "department",
             "label": "院系",
-            "a": "数学科学学院",
-            "b": "化学化工学院",
+            "a": "安全与海洋工程学院",
+            "b": "油气田开发工程系",
             "equal": false
           },
           {
             "field": "first_level_discipline",
             "label": "一级学科",
-            "a": "0701 数学",
-            "b": "0703 化学",
+            "a": "0837 安全科学与工程",
+            "b": "0820 石油与天然气工程",
             "equal": false
           },
           {
             "field": "discipline",
             "label": "学科",
-            "a": "数学",
-            "b": "化学",
+            "a": "安全科学与工程",
+            "b": "石油与天然气工程",
             "equal": false
           },
           {
             "field": "homepage",
             "label": "主页",
-            "a": "https://www.eias.ac.cn/?teachers_category=teachers-list",
-            "b": "https://www.eias.ac.cn/?teachers_category=teachers-list",
-            "equal": true
+            "a": "",
+            "b": "http://www.cup.edu.cn/oil/jsdw/yqtkfgcx/169500.htm",
+            "equal": false
           },
           {
             "field": "interests",
             "label": "研究方向",
-            "a": "不分研究方向",
-            "b": "不分研究方向",
-            "equal": true
+            "a": "安全监测与智能诊断",
+            "b": "油气藏渗流理论与开发技术；油气田化学与提高采收率；非常规油气工程理论与技术；油气工程信息化与智能化技术",
+            "equal": false
           }
         ]
       },
-      "same_institution": true
+      "same_institution": true,
+      "missing_evidence": "至少一条记录没有 homepage，无法定位到具体的人"
     },
     {
-      "pair_id": "G0127",
+      "pair_id": "G0100",
       "name": "陈永明",
       "institution": "中南大学",
       "a": {
@@ -9072,215 +7149,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0128",
-      "name": "陈磊",
-      "institution": "北京师范大学",
-      "a": {
-        "id": "official-887b7ca57010ec994152",
-        "department": "哲学学院",
-        "first_level_discipline": "0101 哲学",
-        "homepage": "",
-        "page_kind": "none"
-      },
-      "b": {
-        "id": "official-8f841332b83ec0d28637",
-        "department": "环境学院",
-        "first_level_discipline": "0830 环境科学与工程",
-        "homepage": "",
-        "page_kind": "none"
-      },
-      "auto_label": "unknown",
-      "verdict": "unknown",
-      "evidence_strength": "none",
-      "evidence": {
-        "rule": "missing_url",
-        "note": "证据不足以判定同人/异人",
-        "quoted_fields": [
-          {
-            "field": "institution",
-            "label": "机构",
-            "a": "北京师范大学",
-            "b": "北京师范大学",
-            "equal": true
-          },
-          {
-            "field": "department",
-            "label": "院系",
-            "a": "哲学学院",
-            "b": "环境学院",
-            "equal": false
-          },
-          {
-            "field": "first_level_discipline",
-            "label": "一级学科",
-            "a": "0101 哲学",
-            "b": "0830 环境科学与工程",
-            "equal": false
-          },
-          {
-            "field": "discipline",
-            "label": "学科",
-            "a": "哲学",
-            "b": "环境科学与工程",
-            "equal": false
-          },
-          {
-            "field": "interests",
-            "label": "研究方向",
-            "a": "逻辑学",
-            "b": "流域水环境过程",
-            "equal": false
-          }
-        ]
-      },
-      "same_institution": true,
-      "missing_evidence": "至少一条记录没有 homepage，无法定位到具体的人"
-    },
-    {
-      "pair_id": "G0129",
-      "name": "陈诚",
-      "institution": "上海交通大学",
-      "a": {
-        "id": "legacy-958b4326a99a31166151",
-        "department": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
-        "first_level_discipline": "0809 电子科学与技术",
-        "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/chencheng.html",
-        "page_kind": "personal"
-      },
-      "b": {
-        "id": "official-d7f57c69f212aec22dc1",
-        "department": "农业与生物学院",
-        "first_level_discipline": "0902 园艺学",
-        "homepage": "https://www.agri.sjtu.edu.cn/Data/View/5090",
-        "page_kind": "personal"
-      },
-      "auto_label": "different_person",
-      "verdict": "different_person",
-      "evidence_strength": "medium",
-      "evidence": {
-        "rule": "distinct_pages_unit_conflict",
-        "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
-        "quoted_fields": [
-          {
-            "field": "institution",
-            "label": "机构",
-            "a": "上海交通大学",
-            "b": "上海交通大学",
-            "equal": true
-          },
-          {
-            "field": "department",
-            "label": "院系",
-            "a": "集成电路学院（信息与电子工程学院）· 芯片设计与EDA研究所",
-            "b": "农业与生物学院",
-            "equal": false
-          },
-          {
-            "field": "first_level_discipline",
-            "label": "一级学科",
-            "a": "0809 电子科学与技术",
-            "b": "0902 园艺学",
-            "equal": false
-          },
-          {
-            "field": "discipline",
-            "label": "学科",
-            "a": "微机电系统",
-            "b": "园艺学",
-            "equal": false
-          },
-          {
-            "field": "homepage",
-            "label": "主页",
-            "a": "https://icisee.sjtu.edu.cn/jiaoshiml/chencheng.html",
-            "b": "https://www.agri.sjtu.edu.cn/Data/View/5090",
-            "equal": false
-          },
-          {
-            "field": "interests",
-            "label": "研究方向",
-            "a": "集成电路设计、EDA/设计自动化、MEMS/微机电系统、传感器与智能感知、生物医疗电子/脑机接口",
-            "b": "不分研究方向",
-            "equal": false
-          }
-        ]
-      },
-      "same_institution": true
-    },
-    {
-      "pair_id": "G0130",
-      "name": "陈长鑫",
-      "institution": "上海交通大学",
-      "a": {
-        "id": "legacy-d98989c8aa49b007f51f",
-        "department": "集成电路学院（信息与电子工程学院）· 纳电子材料与器件研究所",
-        "first_level_discipline": "0809 电子科学与技术",
-        "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/chenzhangxin.html",
-        "page_kind": "personal"
-      },
-      "b": {
-        "id": "official-58bb910af6d9fa840686",
-        "department": "集成电路学院",
-        "first_level_discipline": "0809 电子科学与技术",
-        "homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
-        "page_kind": "roster"
-      },
-      "auto_label": "unknown",
-      "verdict": "unknown",
-      "evidence_strength": "none",
-      "evidence": {
-        "rule": "listing_page",
-        "note": "证据不足以判定同人/异人",
-        "quoted_fields": [
-          {
-            "field": "institution",
-            "label": "机构",
-            "a": "上海交通大学",
-            "b": "上海交通大学",
-            "equal": true
-          },
-          {
-            "field": "department",
-            "label": "院系",
-            "a": "集成电路学院（信息与电子工程学院）· 纳电子材料与器件研究所",
-            "b": "集成电路学院",
-            "equal": false
-          },
-          {
-            "field": "first_level_discipline",
-            "label": "一级学科",
-            "a": "0809 电子科学与技术",
-            "b": "0809 电子科学与技术",
-            "equal": true
-          },
-          {
-            "field": "discipline",
-            "label": "学科",
-            "a": "电子器件与工艺",
-            "b": "电子科学与技术",
-            "equal": false
-          },
-          {
-            "field": "homepage",
-            "label": "主页",
-            "a": "https://icisee.sjtu.edu.cn/jiaoshiml/chenzhangxin.html",
-            "b": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
-            "equal": false
-          },
-          {
-            "field": "interests",
-            "label": "研究方向",
-            "a": "半导体器件与工艺、硅光/光电子集成",
-            "b": "不分研究方向",
-            "equal": false
-          }
-        ]
-      },
-      "same_institution": true,
-      "missing_evidence": "homepage 是名录/列表页，不能作为身份证据"
-    },
-    {
-      "pair_id": "G0131",
+      "pair_id": "G0101",
       "name": "陶明",
       "institution": "中南大学",
       "a": {
@@ -9351,7 +7220,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0132",
+      "pair_id": "G0102",
       "name": "韦朝春",
       "institution": "上海交通大学",
       "a": {
@@ -9422,7 +7291,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0133",
+      "pair_id": "G0103",
       "name": "颜旭",
       "institution": "中南大学",
       "a": {
@@ -9493,7 +7362,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0134",
+      "pair_id": "G0104",
       "name": "饶明军",
       "institution": "中南大学",
       "a": {
@@ -9564,170 +7433,28 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0135",
-      "name": "马啸",
-      "institution": "中国科学技术大学",
-      "a": {
-        "id": "official-986429a6165ee5122a1c",
-        "department": "数学科学学院",
-        "first_level_discipline": "0701 数学",
-        "homepage": "https://faculty.ustc.edu.cn/maxiao/zh_CN/index.htm",
-        "page_kind": "personal"
-      },
-      "b": {
-        "id": "official-d32c45b849f9f7ec7cd1",
-        "department": "人文与社会科学学院",
-        "first_level_discipline": "0712 科学技术史",
-        "homepage": "https://hsta.ustc.edu.cn/2024/0920/c2770a654132/pagem.htm",
-        "page_kind": "personal"
-      },
-      "auto_label": "different_person",
-      "verdict": "different_person",
-      "evidence_strength": "medium",
-      "evidence": {
-        "rule": "distinct_pages_unit_conflict",
-        "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
-        "quoted_fields": [
-          {
-            "field": "institution",
-            "label": "机构",
-            "a": "中国科学技术大学",
-            "b": "中国科学技术大学",
-            "equal": true
-          },
-          {
-            "field": "department",
-            "label": "院系",
-            "a": "数学科学学院",
-            "b": "人文与社会科学学院",
-            "equal": false
-          },
-          {
-            "field": "first_level_discipline",
-            "label": "一级学科",
-            "a": "0701 数学",
-            "b": "0712 科学技术史",
-            "equal": false
-          },
-          {
-            "field": "discipline",
-            "label": "学科",
-            "a": "数学",
-            "b": "科学技术史",
-            "equal": false
-          },
-          {
-            "field": "homepage",
-            "label": "主页",
-            "a": "https://faculty.ustc.edu.cn/maxiao/zh_CN/index.htm",
-            "b": "https://hsta.ustc.edu.cn/2024/0920/c2770a654132/pagem.htm",
-            "equal": false
-          },
-          {
-            "field": "interests",
-            "label": "研究方向",
-            "a": "动力系统",
-            "b": "科学技术史",
-            "equal": false
-          }
-        ]
-      },
-      "same_institution": true
-    },
-    {
-      "pair_id": "G0136",
-      "name": "马波",
-      "institution": "华中科技大学",
-      "a": {
-        "id": "legacy-21af0aa497637defb770",
-        "department": "集成电路学院",
-        "first_level_discipline": "0809 电子科学与技术",
-        "homepage": "https://ic.hust.edu.cn/info/1146/2420.htm",
-        "page_kind": "personal"
-      },
-      "b": {
-        "id": "official-3cea4db6a72bf4f72dce",
-        "department": "仪器科学与技术系",
-        "first_level_discipline": "0802 机械工程",
-        "homepage": "https://mse.hust.edu.cn/info/1149/12501.htm",
-        "page_kind": "personal"
-      },
-      "auto_label": "different_person",
-      "verdict": "different_person",
-      "evidence_strength": "medium",
-      "evidence": {
-        "rule": "distinct_pages_unit_conflict",
-        "note": "两个互不相同的本人专属主页，且院系/一级学科冲突（院系相同=False，一级学科相同=False）",
-        "quoted_fields": [
-          {
-            "field": "institution",
-            "label": "机构",
-            "a": "华中科技大学",
-            "b": "华中科技大学",
-            "equal": true
-          },
-          {
-            "field": "department",
-            "label": "院系",
-            "a": "集成电路学院",
-            "b": "仪器科学与技术系",
-            "equal": false
-          },
-          {
-            "field": "first_level_discipline",
-            "label": "一级学科",
-            "a": "0809 电子科学与技术",
-            "b": "0802 机械工程",
-            "equal": false
-          },
-          {
-            "field": "discipline",
-            "label": "学科",
-            "a": "微机电系统",
-            "b": "机械工程",
-            "equal": false
-          },
-          {
-            "field": "homepage",
-            "label": "主页",
-            "a": "https://ic.hust.edu.cn/info/1146/2420.htm",
-            "b": "https://mse.hust.edu.cn/info/1149/12501.htm",
-            "equal": false
-          },
-          {
-            "field": "interests",
-            "label": "研究方向",
-            "a": "MEMS芯片与智能传感器、三维微纳系统集成、先进微纳加工、医疗超声芯片",
-            "b": "方向待补",
-            "equal": false
-          }
-        ]
-      },
-      "same_institution": true
-    },
-    {
-      "pair_id": "G0137",
-      "name": "高波",
+      "pair_id": "G0105",
+      "name": "马麟",
       "institution": "上海交通大学",
       "a": {
-        "id": "official-ccd700a6a275e05362ee",
-        "department": "物理与天文学院（含李政道研究所）",
-        "first_level_discipline": "0702 物理学",
-        "homepage": "",
-        "page_kind": "none"
+        "id": "legacy-f3babb9d38ae885906cc",
+        "department": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+        "first_level_discipline": "0809 电子科学与技术",
+        "homepage": "https://icisee.sjtu.edu.cn/jiaoshiml/malin.html",
+        "page_kind": "personal"
       },
       "b": {
-        "id": "official-c58c9c33979cb968f65b",
-        "department": "航空航天学院",
-        "first_level_discipline": "0825 航空宇航科学与技术",
-        "homepage": "",
-        "page_kind": "none"
+        "id": "official-52afb34b00493f98dd77",
+        "department": "集成电路学院",
+        "first_level_discipline": "0809 电子科学与技术",
+        "homepage": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
+        "page_kind": "roster"
       },
       "auto_label": "unknown",
       "verdict": "unknown",
       "evidence_strength": "none",
       "evidence": {
-        "rule": "missing_url",
+        "rule": "listing_page",
         "note": "证据不足以判定同人/异人",
         "quoted_fields": [
           {
@@ -9740,38 +7467,45 @@
           {
             "field": "department",
             "label": "院系",
-            "a": "物理与天文学院（含李政道研究所）",
-            "b": "航空航天学院",
+            "a": "集成电路学院（信息与电子工程学院）· 光子学与通信研究所",
+            "b": "集成电路学院",
             "equal": false
           },
           {
             "field": "first_level_discipline",
             "label": "一级学科",
-            "a": "0702 物理学",
-            "b": "0825 航空宇航科学与技术",
-            "equal": false
+            "a": "0809 电子科学与技术",
+            "b": "0809 电子科学与技术",
+            "equal": true
           },
           {
             "field": "discipline",
             "label": "学科",
-            "a": "物理学",
-            "b": "航空宇航科学与技术",
+            "a": "光电子与硅光",
+            "b": "电子科学与技术",
+            "equal": false
+          },
+          {
+            "field": "homepage",
+            "label": "主页",
+            "a": "https://icisee.sjtu.edu.cn/jiaoshiml/malin.html",
+            "b": "https://www.seiee.sjtu.edu.cn/szgk_jsml.html",
             "equal": false
           },
           {
             "field": "interests",
             "label": "研究方向",
-            "a": "不分研究方向",
+            "a": "硅光/光电子集成、光纤传感与光通信、传感器与智能感知、电磁与天线",
             "b": "不分研究方向",
-            "equal": true
+            "equal": false
           }
         ]
       },
       "same_institution": true,
-      "missing_evidence": "至少一条记录没有 homepage，无法定位到具体的人"
+      "missing_evidence": "homepage 是名录/列表页，不能作为身份证据"
     },
     {
-      "pair_id": "G0138",
+      "pair_id": "G0106",
       "name": "黄仁东",
       "institution": "中南大学",
       "a": {
@@ -9842,7 +7576,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0139",
+      "pair_id": "G0107",
       "name": "黄晓贤",
       "institution": "中南大学",
       "a": {
@@ -9913,7 +7647,7 @@
       "same_institution": true
     },
     {
-      "pair_id": "G0140",
+      "pair_id": "G0108",
       "name": "黄麟淇",
       "institution": "中南大学",
       "a": {

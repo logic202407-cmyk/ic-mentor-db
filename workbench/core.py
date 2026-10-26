@@ -17,7 +17,15 @@ from . import storage
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = Path(os.environ.get("MENTOR_WORKBENCH_DATA", ROOT / ".workbench-data"))
 PROJECTS_DIR = DATA_DIR / "projects"
-EMAIL = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
+# 邮箱隐藏用的正则。两个要点：
+# ① **两侧量词必须有上界。** 原来的 `[...]+@[...]+\.[A-Za-z]{2,}` 在"很长且没有 @"
+#    的串上会退化：每个起点都把 `[...]+` 吃到尾再回退，实测 64,000 字符耗时
+#    4,633 ms；走 API 时更糟（写入端点都是 `async def`，卡的是整个事件循环，
+#    实测 PATCH 备注 24.35 s），而 MAX_BODY_BYTES 允许 12 MB —— 一次请求就能把
+#    本机服务冻到小时级。加界后同样输入 ~0.05 s。
+# ② 上界取 RFC 的现实上限（本地部分 64、域名 255、顶级域 24），正常邮箱一个不漏。
+EMAIL = re.compile(
+    r"(?<![A-Za-z0-9._%+-])[A-Za-z0-9._%+-]{1,255}@[A-Za-z0-9.-]{1,255}\.[A-Za-z]{2,24}")
 PROJECT_ID = re.compile(r"^[0-9a-f]{32}$")
 MAX_IMPORT_ROWS = 5000
 LEGACY_DIRECTIONS = {
@@ -50,7 +58,11 @@ def clean_text(value: object, limit: int = 500) -> str:
     if value is None:
         return ""
     text = re.sub(r"\s+", " ", str(value)).strip()
-    return EMAIL.sub("[联系方式见来源页面]", text)[:limit]
+    # 没有 "@" 就不可能有邮箱：直接跳过替换。既省掉一次全文扫描，也让"用户误粘贴
+    # 一长串字符"这种输入不付出正则代价（这条快路径与上面的有界量词是两重保险）。
+    if "@" in text:
+        text = EMAIL.sub("[联系方式见来源页面]", text)
+    return text[:limit]
 
 
 def safe_url(value: object) -> str:

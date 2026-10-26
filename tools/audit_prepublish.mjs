@@ -240,13 +240,16 @@ const badAuthor = uniqAuthors.filter((a) => !a.endsWith('users.noreply.github.co
 badAuthor.length ? add(issues, `提交记录含非匿名邮箱: ${badAuthor.join(', ')}`) : add(oks, `提交记录全部为匿名邮箱（${uniqAuthors.join(', ')}，共 ${authors.length} 次提交）`);
 
 // ── 15. 统计口径自洽 ──
-const readme = fs.readFileSync('README.md', 'utf8');
-const nMatch = readme.match(/\*\*(\d+) 人\*\*（(\d+) 校/);
+// 这批数字属于**原集成电路专题**，对应文档已从根 README 迁到 docs/历史-集成电路专题.md。
+// 根 README 现在介绍工作台（写的是"全库 15,719 条记录"，来源是 catalog.coverage()，
+// 与这里的 mentor_ranked.json 不是同一个量），所以校验对象跟着迁移，别在 README 里找旧文案。
+const legacyDoc = fs.readFileSync('docs/历史-集成电路专题.md', 'utf8');
+const nMatch = legacyDoc.match(/\*\*(\d+) 人\*\*（(\d+) 校/);
 if (nMatch) {
   const [, n, schools] = nMatch;
-  if (Number(n) !== ranked.length) add(issues, `README 声明 ${n} 人，实际 ${ranked.length} 人`);
-  else add(oks, `README 统计与实际一致（${n} 人 / ${schools} 校）`);
-} else add(warns, 'README 未找到人数统计行');
+  if (Number(n) !== ranked.length) add(issues, `历史文档声明 ${n} 人，实际 ${ranked.length} 人`);
+  else add(oks, `历史文档统计与实际一致（${n} 人 / ${schools} 校）`);
+} else add(warns, '历史文档未找到人数统计行');
 
 // ── 输出 ──
 console.log('\n========== 公开前最终检查 ==========\n');

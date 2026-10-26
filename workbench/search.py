@@ -12,6 +12,13 @@ Similarity is relevance to the user's query, never a measure of mentor quality.
    检索路径：最高余弦低于 ``SEMANTIC_EMPTY_TAU`` **且**全库没有任何字面命中时返回
    空结果。只加余弦阈值会误杀正常查询（评测：10.1% 的 test 查询被判空），加上
    「无字面命中」这个前置条件后误杀为 0——两组数字都来自 ``retrieval_eval`` 实跑。
+3. **没有研究条件就不出名单。** ``query_quality`` 先判查询里有没有研究条件；
+   「推荐几个导师」「随便推荐一些」这类只有请求语气的查询直接返回空，而不是让
+   BM25 顺着「导师」二字把全库当成结果端上来。拒绝原因与「无关查询」分开记录。
+4. **索引文件按内容寻址。** 文件名取文档内容指纹，不取 project id：同一份语料
+   换个项目 id 也复用同一份索引（旧实现按 project id 命名，全量目录的 30 MB
+   索引换个 id 就白建一次）。索引未压缩落盘（32 MB 级实测：压缩写 1.34 s /
+   未压缩 0.016 s，读 0.17 s / 0.036 s，文件只大 8%）。
 """
 
 from __future__ import annotations
@@ -19,8 +26,10 @@ from __future__ import annotations
 import hashlib
 import json
 import math
+import os
 import re
 import threading
+import time
 from collections import OrderedDict
 from pathlib import Path
 
@@ -30,6 +39,58 @@ from .core import DATA_DIR
 
 MODEL_NAME = "BAAI/bge-small-zh-v1.5"
 _model = None
+# "模型不可用"的判定只做一次：失败后把原因记下来，后续请求直接回落 BM25。
+_model_error: str | None = None
+
+# 离线开关：设成 1/true/yes/on 就不再尝试下载；已设 HF_HUB_OFFLINE 也算离线。
+OFFLINE_ENV = "IC_MENTOR_OFFLINE"
+MODEL_DOWNLOAD_TIMEOUT_ENV = "IC_MENTOR_MODEL_DOWNLOAD_TIMEOUT"
+DEFAULT_DOWNLOAD_TIMEOUT_S = 15.0
+
+
+class VectorModelUnavailable(RuntimeError):
+    """向量模型不可用（本地缓存缺失/损坏且不允许或无法下载）。
+
+    ``search()`` 会捕获它并回落到 BM25，把 ``fallback`` 文案带回给调用方——
+    不抛 500，静默返回空。
+    """
+
+
+def _offline_requested() -> bool:
+    truthy = {"1", "true", "yes", "on"}
+    if os.environ.get(OFFLINE_ENV, "").strip().lower() in truthy:
+        return True
+    return os.environ.get("HF_HUB_OFFLINE", "").strip().lower() in truthy
+
+
+def _download_timeout() -> float:
+    raw = os.environ.get(MODEL_DOWNLOAD_TIMEOUT_ENV, "").strip()
+    try:
+        value = float(raw)
+    except ValueError:
+        return DEFAULT_DOWNLOAD_TIMEOUT_S
+    return value if value > 0 else DEFAULT_DOWNLOAD_TIMEOUT_S
+
+
+def _bound_download_timeouts() -> None:
+    """把 huggingface_hub 的网络超时压到可控范围（环境里已显式设过就不覆盖）。"""
+    seconds = _download_timeout()
+    os.environ.setdefault("HF_HUB_ETAG_TIMEOUT", str(int(min(10, seconds))))
+    os.environ.setdefault("HF_HUB_DOWNLOAD_TIMEOUT", str(int(max(1, seconds))))
+
+
+def _model_cached(cache: Path) -> bool:
+    try:
+        return any(cache.rglob("*.onnx"))
+    except OSError:
+        return False
+
+
+def _new_embedder(cache: Path, local_only: bool):
+    from fastembed import TextEmbedding
+    return TextEmbedding(model_name=MODEL_NAME, cache_dir=str(cache),
+                         local_files_only=local_only)
+
 
 _CACHE_LOCK = threading.Lock()
 # 上限取 2 而不是更大：这是本地桌面工具，一份全量目录的缓存条目实测约 100 MB
@@ -57,6 +118,83 @@ def document(profile: dict) -> str:
 def _normalize_text(text: str) -> str:
     """``keyword_score`` 内部的归一化：去空白 + 小写。"""
     return re.sub(r"\s+", "", text.lower())
+
+
+# ── 查询质量：这条查询到底有没有研究条件？────────────────────────────────
+# 只有「请求语气 + 泛化对象词」的查询（「推荐几个导师」「帮我找老师」
+# 「随便推荐一些」）不含任何研究条件。以前它们被判成字面查询、走 BM25，
+# 于是顺着「导师」二字把一堆记录当成"推荐结果"端出来——那不是检索，是随机名单。
+QUERY_QUALITY_OK = "ok"
+QUERY_QUALITY_NO_RESEARCH_CONDITION = "no_research_condition"
+
+# 请求/动作词：表达"帮我找"，不表达"找什么"。
+_REQUEST_WORDS = (
+    "求推荐", "推荐一下", "推荐", "介绍", "帮我", "帮忙", "请", "求", "随便",
+    "看看", "看下", "看一下", "列举", "列出", "列", "给我", "给", "搜一下", "搜索",
+    "搜", "查一下", "查询", "查", "找一下", "找找", "找", "想找", "想做", "想",
+    "有没有", "有无", "哪些", "哪个", "哪位", "什么", "怎么", "怎么样", "如何",
+    "多少", "是否", "一下", "几个", "几位", "一些", "一点", "几个",
+)
+# 泛化对象词：说的是"哪类东西"，不是"研究什么"。
+_GENERIC_OBJECT_WORDS = (
+    "博士生导师", "硕士生导师", "博士生招生", "硕士生招生", "研究生招生",
+    "导师", "老师", "教授", "教师", "博导", "硕导", "研究员", "副研究员", "讲师",
+    "助理教授", "课题组", "团队", "学院", "学校", "大学", "研究院", "研究所",
+    "招生", "研究生", "博士生", "硕士生", "博士", "硕士", "本科生", "招生简章",
+    "专业", "方向", "领域", "学科", "资料", "信息", "名单", "列表", "排行",
+    "排名", "实力", "水平", "口碑", "评价", "好不好", "值得", "情况",
+)
+# 功能词/语气词：剥离后剩下的才是"查什么"。
+_FUNCTION_WORDS = (
+    "我们", "你们", "大家", "我", "你", "您", "他", "她", "它", "们",
+    "的是", "了", "吗", "呢", "吧", "啊", "的", "和", "与", "及", "或",
+    "是在", "在", "有", "没", "个", "位", "名", "条", "点", "下", "里", "中",
+    "就", "也", "还", "很", "太", "最", "更", "比较", "都", "并", "把", "被",
+    "对", "向", "把", "关于", "相关", "做", "搞", "从事", "研究", "了解",
+)
+_NO_RESEARCH_WORDS = tuple(sorted(
+    set(_REQUEST_WORDS) | set(_GENERIC_OBJECT_WORDS) | set(_FUNCTION_WORDS),
+    key=len, reverse=True))
+# 英文里不承载主题的停用词；"for"/"of" 这类不应让查询变成"有内容"。
+_ENGLISH_STOPWORDS = frozenset((
+    "for", "of", "the", "and", "to", "in", "on", "with", "about", "please",
+    "find", "me", "some", "any", "a", "an", "is", "are", "who", "what",
+))
+_CJK_CHAR = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff]")
+_LATIN_TOKEN = re.compile(r"[a-z0-9]+(?:[._+#-][a-z0-9]+)*")
+
+
+def query_quality(query: str) -> str:
+    """判定查询是否带有研究条件（``ok`` / ``no_research_condition``）。
+
+    规则：把请求语气词、泛化对象词、功能词整词剥离后，看还剩什么——
+
+    - 剩 ≥2 个汉字（如「硅光」「清华大学」「红烧肉」）→ ``ok``；
+    - 剩一个有意义的拉丁/数字词（``MEMS``、``RISC-V``、``6G``；纯数字不算）→ ``ok``；
+    - 什么都不剩（「推荐几个导师」「导师」「随便推荐一些」）→ ``no_research_condition``。
+
+    判定只看**查询文本**，不看检索结果，也不看任何评分——这是一个"能不能问"的
+    门槛，不是"谁更好"的排序。它刻意不处理"无害但无关"的查询（如「红烧肉的做法」）：
+    那类查询有主题，交给 `guarded_empty_decision` 按相关性判空，两类拒绝原因分开。
+    """
+    text = str(query or "").strip().lower()
+    if not text:
+        return QUERY_QUALITY_NO_RESEARCH_CONDITION
+    rest = text
+    for word in _NO_RESEARCH_WORDS:
+        if word in rest:
+            rest = rest.replace(word, " ")
+    if len(_CJK_CHAR.findall(rest)) >= 2:
+        return QUERY_QUALITY_OK
+    for token in _LATIN_TOKEN.findall(rest):
+        if token in _ENGLISH_STOPWORDS or token.isdigit():
+            continue
+        return QUERY_QUALITY_OK
+    return QUERY_QUALITY_NO_RESEARCH_CONDITION
+
+
+def is_informative_query(query: str) -> bool:
+    return query_quality(query) == QUERY_QUALITY_OK
 
 
 def _gram_score(query: str, text: str) -> float:
@@ -153,9 +291,14 @@ class _Corpus:
 
 
 def clear_cache() -> None:
-    """清空进程内文档/索引缓存（测试用；生产无需调用）。"""
+    """清空进程内文档/索引缓存，并允许下一次请求重新尝试加载模型。
+
+    生产无需调用；测试与"用户装好模型后重试"用它清掉"模型不可用"的记忆。
+    """
+    global _model_error
     with _CACHE_LOCK:
         _CORPUS_CACHE.clear()
+    _model_error = None
 
 
 def _corpus(project_id: str, profiles: list[dict]) -> _Corpus:
@@ -177,45 +320,179 @@ def _corpus(project_id: str, profiles: list[dict]) -> _Corpus:
 
 
 def _embedder():
-    global _model
-    if _model is None:
-        from fastembed import TextEmbedding
-        cache = DATA_DIR / "models"
-        cache.mkdir(parents=True, exist_ok=True)
-        _model = TextEmbedding(model_name=MODEL_NAME, cache_dir=str(cache))
+    """取嵌入模型；本地缓存优先、离线不联网、失败只付一次代价。
+
+    三条纪律（都对应实测到的"假死"）：
+    1. **本地有权重就只读本地**（``local_files_only=True``）：不联网做版本检查，
+       实测初始化从 1.707 s 降到 0.179 s，而且断网环境照常可用。
+    2. **不在缺模型时长时间阻塞**：``IC_MENTOR_OFFLINE=1``（或已设 ``HF_HUB_OFFLINE``）
+       时完全不尝试下载，直接抛 ``VectorModelUnavailable``；否则允许一次下载，但把
+       huggingface_hub 的 ETag/下载超时压到 ``DEFAULT_DOWNLOAD_TIMEOUT_S`` 量级
+       （实测无网环境原来会卡 71 s 才回落）。
+    3. **把"模型不可用"的判定记住**：第二次请求直接抛，不再重试、不再阻塞。
+       ``clear_cache()`` 会清掉这个判定（测试与显式重试用）。
+    """
+    global _model, _model_error
+    if _model is not None:
+        return _model
+    if _model_error is not None:
+        raise VectorModelUnavailable(_model_error)
+    cache = DATA_DIR / "models"
+    cache.mkdir(parents=True, exist_ok=True)
+    offline = _offline_requested()
+    if _model_cached(cache):
+        try:
+            _model = _new_embedder(cache, local_only=True)
+            return _model
+        except Exception as error:  # noqa: BLE001 - 缓存不完整时可能是下载不完整
+            if offline:
+                _model_error = (f"离线模式（{OFFLINE_ENV}）下本地缓存无法加载："
+                                f"{type(error).__name__}: {error}")
+                raise VectorModelUnavailable(_model_error) from error
+    elif offline:
+        _model_error = (f"离线模式（{OFFLINE_ENV}）且本地缓存 {cache} 里没有模型权重；"
+                        "未尝试下载，已跳过语义检索")
+        raise VectorModelUnavailable(_model_error)
+    _bound_download_timeouts()
+    try:
+        _model = _new_embedder(cache, local_only=offline)
+    except Exception as error:
+        _model_error = f"{type(error).__name__}: {error}"
+        raise
     return _model
 
 
-def _index_path(project_id: str) -> Path:
+def _index_path(digest: str) -> Path:
+    """索引文件按**文档内容指纹**寻址（不是 project id）。
+
+    旧实现用 ``{project_id}.npz``：同一份 15,719 条语料换个项目 id 就白建一次
+    116 s 的向量索引，磁盘上那份 30 MB 索引完全用不上。内容寻址后，谁先建谁建，
+    其余项目直接命中。
+    """
     directory = DATA_DIR / "indexes"
     directory.mkdir(parents=True, exist_ok=True)
-    return directory / f"{project_id}.npz"
+    return directory / f"{digest[:32]}.npz"
+
+
+# 内容寻址后每次内容变化都会产生新文件（全量目录一份约 30 MB），所以按最后写入
+# 时间只保留最近的若干个；删除失败的（别的进程正打开着）留到下次。
+_INDEX_KEEP_FILES = 6
+
+
+def _prune_indexes(directory: Path, keep: Path) -> None:
+    try:
+        candidates = sorted(directory.glob("*.npz"),
+                            key=lambda path: path.stat().st_mtime, reverse=True)
+    except OSError:
+        return
+    for stale in candidates[_INDEX_KEEP_FILES:]:
+        if stale == keep:
+            continue
+        try:
+            stale.unlink()
+        except OSError:
+            pass
+
+
+def _load_vectors(path: Path, corpus: "_Corpus") -> np.ndarray | None:
+    """读索引并校验；不存在/损坏/半写入/模型不符一律当**未命中**（返回 None）。
+
+    旧实现对损坏的 npz 直接抛异常，结果整条语义检索回落到 BM25 而且永远不再重建——
+    坏文件不删，每次请求都踩一遍。这里把它当缓存未命中处理，顺手删掉坏文件。
+    """
+    if not path.exists():
+        return None
+    try:
+        with np.load(path, allow_pickle=False) as saved:
+            vectors = saved["vectors"]
+            if (str(saved["fingerprint"]) != corpus.digest
+                    or str(saved["model"]) != MODEL_NAME):
+                return None
+            if vectors.ndim != 2 or len(vectors) != len(corpus.texts):
+                raise ValueError("索引形状与语料不一致")
+            return vectors
+    except Exception:  # noqa: BLE001 - 损坏/截断/格式变化都按未命中处理
+        try:
+            path.unlink()
+        except OSError:
+            pass
+        return None
+
+
+def _save_vectors(path: Path, corpus: "_Corpus", vectors: np.ndarray) -> None:
+    """**未压缩**落盘 + 唯一临时文件原子替换。
+
+    实测（15,719 × 512 float32）：``savez_compressed`` 写 1.342 s / 读 0.171 s，
+    未压缩写 0.016 s / 读 0.036 s，文件只从 29.8 MB 涨到 32.2 MB（+8%）。
+    冷启动在意的是读写耗时，不是这 2 MB。临时文件 + ``os.replace`` 保证不会留下
+    半写入的索引被后续进程当成有效缓存。
+    """
+    temporary = path.parent / f".{path.name}.{os.getpid()}.tmp"
+    with open(temporary, "wb") as handle:
+        np.savez(handle, vectors=vectors, fingerprint=corpus.digest, model=MODEL_NAME)
+    os.replace(temporary, path)
+    _prune_indexes(path.parent, keep=path)
 
 
 def _vectors(project: dict, profiles: list[dict]) -> np.ndarray:
-    """语料向量：进程内缓存 → 磁盘 npz → 真算，三级复用。返回已归一化矩阵。"""
+    """语料向量：进程内缓存 → 磁盘索引 → 真算，三级复用。返回已归一化矩阵。"""
     return _vectors_of(_corpus(project["id"], profiles), project)
+
+
+def _legacy_index_path(project_id: str) -> Path | None:
+    """旧命名（``{project_id}.npz``）的索引路径，用于一次性接管已有产物。"""
+    if not project_id:
+        return None
+    return DATA_DIR / "indexes" / f"{project_id}.npz"
 
 
 def _vectors_of(corpus: _Corpus, project: dict) -> np.ndarray:
     """``_vectors`` 的正文：接受已建好的 corpus，避免同一次请求里重复格式化文档。"""
     if corpus.vectors is not None:
         return corpus.vectors
-    path = _index_path(project["id"])
-    if path.exists():
-        with np.load(path, allow_pickle=False) as saved:
-            if (str(saved["fingerprint"]) == corpus.digest
-                    and str(saved["model"]) == MODEL_NAME):
-                corpus.vectors = saved["vectors"]
-                return corpus.vectors
+    path = _index_path(corpus.digest)
+    vectors = _load_vectors(path, corpus)
+    if vectors is None:
+        # 兼容迁移：旧版本按 project id 命名索引。内容指纹校验通过就接管并改成
+        # 内容寻址名，避免升级后白白重建一次（全量目录一次就是两分钟级）。
+        legacy = _legacy_index_path(corpus.project_id)
+        if legacy is not None and legacy != path and legacy.exists():
+            vectors = _load_vectors(legacy, corpus)
+            if vectors is not None:
+                _save_vectors(path, corpus, vectors)
+    if vectors is not None:
+        corpus.vectors = vectors
+        return corpus.vectors
     vectors = np.asarray(list(_embedder().embed(corpus.texts)), dtype=np.float32)
     if len(vectors) != len(corpus.texts):
         raise RuntimeError("模型返回的向量数量与导师数量不一致")
     norms = np.linalg.norm(vectors, axis=1, keepdims=True)
     vectors = vectors / np.maximum(norms, 1e-12)
-    np.savez_compressed(path, vectors=vectors, fingerprint=corpus.digest, model=MODEL_NAME)
+    _save_vectors(path, corpus, vectors)
     corpus.vectors = vectors
     return vectors
+
+
+def warm_index(project: dict) -> dict:
+    """预先构建并落盘向量索引（离线预热用；不改变任何检索行为）。
+
+    模型不可用时会抛异常——这是"预热"本身的前提。索引落在本地缓存目录
+    （``.workbench-data/indexes``，已 gitignore），不会进仓库。
+    """
+    started = time.perf_counter()
+    corpus = _corpus(str(project.get("id") or ""), project["profiles"])
+    path = _index_path(corpus.digest)
+    existed = path.exists()
+    vectors = _vectors_of(corpus, project)
+    return {
+        "path": str(path),
+        "documents": len(corpus.texts),
+        "digest": corpus.digest[:16],
+        "reused_existing_file": existed,
+        "bytes": path.stat().st_size if path.exists() else 0,
+        "bytes_in_memory": int(vectors.nbytes),
+        "seconds": round(time.perf_counter() - started, 3),
+    }
 
 
 SEARCH_MODES = {"semantic", "keyword", "bm25", "hybrid", "auto"}
@@ -229,7 +506,12 @@ def _looks_lexical(query: str) -> bool:
     `VLSI`、`MEMS`、`EDA` 这类英文缩写在中文嵌入模型里会坍缩成同一个向量
     （评测实测 30 个缩写只有 2 个不同向量），所以 `auto` 模式对它们优先走 BM25；
     其余情况走混合检索。
+
+    没有研究条件的查询不算"术语查询"：它们会被 ``search()`` 的质量门槛直接拒掉，
+    这里把这条约束也写进分流函数，避免"推荐几个导师"被判成术语 query。
     """
+    if not is_informative_query(query):
+        return False
     latin = re.findall(r"[A-Za-z][A-Za-z0-9.+#_-]*", query)
     if any(re.search(r"[A-Z]{2,}", token) for token in latin):
         return True
@@ -258,12 +540,19 @@ def search(project: dict, query: str, mode: str = "semantic", limit: int = 20,
     向量路径上还会做一次**低相关空判**（``guarded_empty_decision``）：查询与全库
     既没有字面命中、最高余弦又低于 ``SEMANTIC_EMPTY_TAU`` 时返回空列表而不是硬塞
     20 条无关记录。带学科/学校筛选时不做空判——评测口径只覆盖无筛选场景。
+
+    查询本身没有研究条件时（``query_quality``）直接返回空列表：不按任何规则
+    "随机给几个导师"，也不按优劣评分推荐。返回的每条结果都带 ``query_quality``
+    字段（向后兼容的新增字段，值为 ``ok``）。
     """
     query = query.strip()[:300]
     if not query:
         raise ValueError("请输入研究兴趣或检索问题")
     if mode not in SEARCH_MODES:
         raise ValueError("未知的检索方式")
+    quality = query_quality(query)
+    if quality != QUERY_QUALITY_OK:
+        return []          # 没有研究条件就不出名单：这是"能不能问"的门槛
     all_profiles = project["profiles"]
     profiles = [p for p in all_profiles
                 if (not discipline or discipline.lower() in p["discipline"].lower())
@@ -343,6 +632,7 @@ def search(project: dict, query: str, mode: str = "semantic", limit: int = 20,
             "requested_mode": mode,
             "fallback": fallback,
             "evidence_count": len(profiles[i].get("sources", [])),
+            "query_quality": quality,
         })
     return results
 

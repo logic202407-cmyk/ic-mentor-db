@@ -184,7 +184,17 @@ def read_json(path: Path, *, recover: bool = True):
 
 
 def restore_backup(path: Path) -> bool:
-    """把 ``<path>.bak`` 恢复到正式文件；成功返回 True。"""
+    """单文件回滚：把 ``<path>.bak`` 写回正式文件；成功返回 True，没有 .bak 返回 False。
+
+    它解决的是**同一个文件退回上一个版本**这一件事（``atomic_write_json`` 每次覆盖前
+    留下的 ``.bak``），粒度是单个记录文件；整包备份/恢复请用
+    ``workbench.tools.backup_records``（zip + manifest + 恢复前安全备份）。
+
+    当前没有任何 API、CLI 或测试调用它——它保留为维护者手工恢复用的底层原语，
+    不是对外接口，也不是 ``backup_records.restore()`` 的替代品。行为固定为：
+    .bak 不存在返回 False；.bak 读不出来时抛 ValueError（它是
+    :class:`DataCorruptError` 的基类），并且**不会**改动正式文件。
+    """
     path = Path(path)
     backup = Path(str(path) + ".bak")
     if not backup.exists():

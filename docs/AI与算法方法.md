@@ -44,7 +44,7 @@
 逐条带融合分、嵌入分、关键词分、次选方向与**相似度区间**，并注明「区间不是概率」。
 
 复现：`python -m workbench.infer_directions --validate 400 --ablate-text`。
-完整评测见 [方向推断评测](workbench/aic-submission/evidence/方向推断评测.md)。
+完整评测见 [方向推断评测](../workbench/aic-submission/evidence/方向推断评测.md)。
 
 ### 检索：把评测过的方法接进真实接口
 
@@ -58,19 +58,19 @@
 ### 两套人工评测：协议已备，标注待完成
 
 - **同名消歧**：盲标协议、193 对困难样本表与导入校验工具在
-  [`workbench/evaluation/human_annotation/`](workbench/evaluation/human_annotation/protocol.md)；
+  [`workbench/evaluation/human_annotation/`](../workbench/evaluation/human_annotation/protocol.md)；
   未达到「≥30 对且正负例各 ≥5」前不报告人工 Precision/Recall。
 - **检索相关性**：0–3 级人工标注协议与 7 类查询模板在
-  [`workbench/evaluation/retrieval_annotation/`](workbench/evaluation/retrieval_annotation/protocol.md)；
+  [`workbench/evaluation/retrieval_annotation/`](../workbench/evaluation/retrieval_annotation/protocol.md)；
   现有 226 条弱监督查询只作为工程回归，不作为真实用户准确率。
 - **用户任务验证**：6 项任务、错误编码与记录模板在
-  [`workbench/evaluation/user_tasks/`](workbench/evaluation/user_tasks/protocol.md)；
+  [`workbench/evaluation/user_tasks/`](../workbench/evaluation/user_tasks/protocol.md)；
   **尚未招募用户**，因此不报告完成时间、成功率或主观评分。
 
 ### 数据质量报告
 
 `python -m workbench.tools.data_quality` 生成
-[`reports/data-quality.md`](reports/data-quality.md) 与 `workbench/evaluation/data_quality.json`：
+[`reports/data-quality.md`](../reports/data-quality.md) 与 `workbench/evaluation/data_quality.json`：
 记录 ≠ 自然人（同名组、主页类型分布）、论文/招生/关系覆盖、缺失字段与采集月份。
 只读、不联网、不改数据。
 
@@ -106,7 +106,7 @@
 **系统不自动合并任何记录**。
 
 复现：`python -m workbench.disambiguate_names --evaluate --gold`。
-详见 [同名消歧评测](workbench/aic-submission/evidence/同名消歧评测.md)。
+详见 [同名消歧评测](../workbench/aic-submission/evidence/同名消歧评测.md)。
 
 ### 界面上能看到 AI 结果
 

@@ -198,5 +198,154 @@ class BackupNameTests(unittest.TestCase):
         self.assertEqual([p.name for p in self.backups.glob("*.partial")], [])
 
 
+def _craft_zip(root: pathlib.Path, entries: list[tuple[str, bytes, int | None]],
+               manifest_files: dict[str, bytes]) -> pathlib.Path:
+    """手写一个备份 zip：可含重复条目名、任意外部属性、任意 manifest 清单。"""
+    files = {name: {"sha256": hashlib.sha256(blob).hexdigest(), "bytes": len(blob)}
+             for name, blob in manifest_files.items()}
+    manifest = {"created_at": "2026-10-26T15:00:00+08:00", "source": "test",
+                "files": files,
+                "counts": {"projects": len(files), "investigations": 0}}
+    path = root / "crafted.zip"
+    with zipfile.ZipFile(path, "w", compression=zipfile.ZIP_DEFLATED) as archive:
+        for name, blob, attr in entries:
+            info = zipfile.ZipInfo(name)
+            if attr is not None:
+                info.external_attr = attr
+            archive.writestr(info, blob)
+        archive.writestr("manifest.json", json.dumps(manifest, ensure_ascii=False))
+    return path
+
+
+class ZipEntryHardeningTests(unittest.TestCase):
+    """ZIP 边界补齐：重复条目、非对象记录、压缩炸弹、符号链接条目、恢复中断。
+
+    这些是上一轮"条目名白名单"之外的边界：名字合法不代表包是良性的。
+    """
+
+    def setUp(self) -> None:
+        self._tmp = tempfile.TemporaryDirectory()
+        self.root = pathlib.Path(self._tmp.name)
+        self.data = self.root / "data"
+        (self.data / "projects").mkdir(parents=True)
+
+    def tearDown(self) -> None:
+        self._tmp.cleanup()
+
+    def test_duplicate_entry_names_are_rejected(self):
+        """同名条目不能算"已验证"：Python 取最后一份，别的工具可能展示第一份。"""
+        first = b'{"id": "a", "name": "first", "profiles": []}'
+        second = b'{"id": "a", "name": "second", "profiles": []}'
+        import warnings
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore")   # zipfile 会对重复名发 UserWarning
+            archive = _craft_zip(self.root,
+                                 [("projects/a.json", first, None),
+                                  ("projects/a.json", second, None)],
+                                 {"projects/a.json": second})
+        with self.assertRaises(ValueError) as caught:
+            tool.verify(archive)
+        self.assertIn("重复条目", str(caught.exception))
+        with self.assertRaises(ValueError):
+            tool.restore(archive, self.data)
+        self.assertFalse((self.data / "projects" / "a.json").exists())
+
+    def test_non_object_record_is_rejected(self):
+        """记录文件必须是 JSON 对象；写进数组会让 /api/projects 直接 500（实测）。"""
+        archive = _craft_zip(self.root, [("projects/list.json", b'[1, 2, 3]', None)],
+                             {"projects/list.json": b'[1, 2, 3]'})
+        with self.assertRaises(ValueError) as caught:
+            tool.verify(archive)
+        self.assertIn("记录对象", str(caught.exception))
+        with self.assertRaises(ValueError):
+            tool.restore(archive, self.data)
+        self.assertFalse((self.data / "projects" / "list.json").exists())
+
+    def test_oversized_entry_is_rejected_before_decompressing(self):
+        """压缩炸弹：按中央目录里的解压后大小先拒绝，不去 read() 撑内存。"""
+        payload = json.dumps({"id": "big", "blob": "a" * 2048}).encode("utf-8")
+        archive = _craft_zip(self.root, [("projects/big.json", payload, None)],
+                             {"projects/big.json": payload})
+        with mock.patch.object(tool, "MAX_ENTRY_BYTES", 1024):
+            with self.assertRaises(ValueError) as caught:
+                tool.verify(archive)
+            self.assertIn("上限", str(caught.exception))
+            with self.assertRaises(ValueError):
+                tool.restore(archive, self.data)
+        self.assertFalse((self.data / "projects" / "big.json").exists())
+
+    def test_total_size_cap_is_enforced(self):
+        payload = json.dumps({"id": "x", "blob": "a" * 2048}).encode("utf-8")
+        archive = _craft_zip(
+            self.root,
+            [("projects/a.json", payload, None), ("projects/b.json", payload, None)],
+            {"projects/a.json": payload, "projects/b.json": payload})
+        with mock.patch.object(tool, "MAX_TOTAL_BYTES", 2048):
+            with self.assertRaises(ValueError) as caught:
+                tool.verify(archive)
+            self.assertIn("压缩炸弹", str(caught.exception))
+
+    def test_symlink_entry_cannot_create_a_link(self):
+        """符号链接条目按普通 JSON 文件写出；路径型载荷直接被 JSON 校验挡掉。"""
+        payload = b'{"id": "link", "profiles": []}'
+        attrs = 0o120777 << 16
+        archive = _craft_zip(self.root, [("projects/link.json", payload, attrs)],
+                             {"projects/link.json": payload})
+        self.assertEqual(tool.verify(archive)["files"], 1)
+        result = tool.restore(archive, self.data)
+        self.assertEqual(result["restored"], 1)
+        target = self.data / "projects" / "link.json"
+        self.assertTrue(target.is_file())
+        self.assertFalse(target.is_symlink())
+        self.assertEqual(json.loads(target.read_text(encoding="utf-8")), json.loads(payload))
+
+        hostile = b"../../secret.txt"
+        hostile_dir = self.root / "hostile"
+        hostile_dir.mkdir()
+        hostile_zip = _craft_zip(hostile_dir, [("projects/link2.json", hostile, attrs)],
+                                 {"projects/link2.json": hostile})
+        with self.assertRaises(ValueError):
+            tool.verify(hostile_zip)
+
+    def test_restore_interruption_is_recoverable_from_safety_backup(self):
+        """写盘中断会停在一半，但恢复前安全备份一定已经存在（本轮补的文档承诺）。"""
+        storage.atomic_write_json(self.data / "projects" / "a.json",
+                                  {"id": "a" * 32, "name": "备份A", "profiles": []})
+        storage.atomic_write_json(self.data / "projects" / "b.json",
+                                  {"id": "b" * 32, "name": "备份B", "profiles": []})
+        archive = tool.backup(self.data, self.root / "backups")
+        storage.atomic_write_json(self.data / "projects" / "a.json",
+                                  {"id": "a" * 32, "name": "当前A", "profiles": []})
+        storage.atomic_write_json(self.data / "projects" / "b.json",
+                                  {"id": "b" * 32, "name": "当前B", "profiles": []})
+
+        real = storage.atomic_write_json
+        calls = {"n": 0}
+
+        def flaky(path, payload, **kwargs):
+            calls["n"] += 1
+            if calls["n"] == 2:
+                raise OSError("模拟写盘中断")
+            return real(path, payload, **kwargs)
+
+        with mock.patch.object(storage, "atomic_write_json", flaky):
+            with self.assertRaises(OSError):
+                tool.restore(archive, self.data)
+
+        # 已写的一份是备份内容，未写的一份仍是当前内容：说明中断会留下"部分恢复"
+        self.assertEqual(json.loads((self.data / "projects" / "a.json")
+                                    .read_text(encoding="utf-8-sig"))["name"], "备份A")
+        self.assertEqual(json.loads((self.data / "projects" / "b.json")
+                                    .read_text(encoding="utf-8-sig"))["name"], "当前B")
+        # 但恢复前的安全备份在写盘之前就已生成，且保存的是中断前的真实状态
+        safety = sorted((self.root / "backups" / "before-restore").glob("*.zip"))
+        self.assertTrue(safety)
+        with zipfile.ZipFile(safety[-1]) as archive_file:
+            self.assertEqual(json.loads(archive_file.read("projects/a.json")
+                                        .decode("utf-8"))["name"], "当前A")
+            self.assertEqual(json.loads(archive_file.read("projects/b.json")
+                                        .decode("utf-8"))["name"], "当前B")
+
+
 if __name__ == "__main__":
     unittest.main()

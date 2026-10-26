@@ -7,9 +7,11 @@
 一旦目录被清理或文件损坏，重建不了。这里提供最小可用的三件事：
 
 - ``--backup``：打包成一个 zip，内含 manifest（时间、条数、每个文件的 sha256）；
-- ``--verify``：只读校验 zip（JSON 可解析、摘要与清单一致）；
+- ``--verify``：只读校验 zip（条目名合法、无重复条目、JSON 是记录对象、摘要与清单一致）；
 - ``--restore``：先校验、再把现有记录另存一份 ``records-before-restore-*``，
-  然后逐文件原子写回；任何一份坏 JSON 都会让整次恢复中止，不做"恢复一半"。
+  然后逐文件原子写回。校验阶段能发现的问题（坏 JSON、坏摘要、非法条目）都会让整次
+  恢复在写盘前中止；若**写盘过程中**被中断（断电、磁盘满），可能停在"部分文件已恢复"，
+  此时用恢复前自动生成的安全备份再恢复一次即可回到原状。
 
 用法::
 
@@ -42,6 +44,10 @@ KINDS = ("projects", "investigations")
 DEFAULT_BACKUP_DIR = ROOT / "backups"
 MANIFEST = "manifest.json"
 ENTRY_FILE = re.compile(r"^[^/\\]+\.json$")
+# 单条记录都是几十 KB 级（5000 条导入上限也远小于这里），给足余量；
+# 上限存在的意义是：别让一份被改过的备份把解压结果整包塞进内存撑爆进程。
+MAX_ENTRY_BYTES = 64 * 1024 * 1024
+MAX_TOTAL_BYTES = 256 * 1024 * 1024
 
 
 def _stamp() -> str:
@@ -124,9 +130,28 @@ def backup(data_dir: Path | None = None, dest_dir: Path | None = None) -> Path:
     return target
 
 
-def verify(zip_path: Path) -> dict:
-    """校验压缩包：清单齐全、条目名合法、每个 JSON 可解析、摘要一致。返回统计。"""
+def _check_duplicate_entries(archive: zipfile.ZipFile) -> None:
+    """拒绝重复条目名。
+
+    ZIP 允许同名条目，Python 的 ``read()`` 取**最后一份**，而资源管理器/7-Zip 等
+    工具通常展示第一份——同一份备份在不同工具里内容不同，这种包不能算"已验证"。
+    正常备份永远不会产生重复条目。
+    """
+    seen: set[str] = set()
+    for info in archive.infolist():
+        if info.filename in seen:
+            raise ValueError(f"备份包含重复条目：{info.filename}")
+        seen.add(info.filename)
+
+
+def _load_validated(zip_path: Path) -> tuple[dict, dict[str, dict]]:
+    """打开备份并完成全部校验，返回 ``(manifest, {条目名: 记录})``。
+
+    ``verify()`` 与 ``restore()`` 共用这一份校验，避免两处规则随时间漂移；
+    ``restore()`` 因此能在写盘之前拿到全部记录，校验失败绝不落到半套数据。
+    """
     with zipfile.ZipFile(zip_path) as archive:
+        _check_duplicate_entries(archive)
         names = set(archive.namelist())
         if MANIFEST not in names:
             raise ValueError("备份缺少 manifest.json，无法确认完整性")
@@ -141,17 +166,41 @@ def verify(zip_path: Path) -> dict:
         missing = sorted(set(declared) - names)
         if missing:
             raise ValueError(f"备份缺少 {len(missing)} 个文件：{missing[:3]}")
+        payloads: dict[str, dict] = {}
+        total = 0
         for name, meta in declared.items():
             if not isinstance(meta, dict) or not isinstance(meta.get("sha256"), str):
                 raise ValueError(f"{name} 清单条目格式不正确")
+            # 用中央目录里的解压后大小先卡上限，别等 read() 把内容全解压进内存。
+            size = archive.getinfo(name).file_size
+            if size > MAX_ENTRY_BYTES:
+                raise ValueError(
+                    f"{name} 解压后 {size / 1048576:.1f} MB，超过单文件 "
+                    f"{MAX_ENTRY_BYTES // 1048576} MB 上限")
+            total += size
+            if total > MAX_TOTAL_BYTES:
+                raise ValueError(
+                    f"备份解压总量超过 {MAX_TOTAL_BYTES // 1048576} MB 上限，"
+                    "疑似压缩炸弹，已拒绝")
             blob = archive.read(name)
             if hashlib.sha256(blob).hexdigest() != meta.get("sha256"):
                 raise ValueError(f"{name} 摘要与清单不符（文件可能损坏）")
             try:
-                json.loads(blob.decode("utf-8-sig"))
+                payload = json.loads(blob.decode("utf-8-sig"))
             except ValueError as error:
                 raise ValueError(f"{name} 不是合法 JSON：{error}") from error
-    return {"files": len(declared), "counts": manifest.get("counts") or {},
+            if not isinstance(payload, dict):
+                # 记录文件一定是 JSON 对象；写进一个数组会让 /api/projects 这类
+                # 读接口直接 500（实测），所以在校验阶段就拒绝。
+                raise ValueError(f"{name} 不是记录对象：顶层应为 JSON 对象")
+            payloads[name] = payload
+    return manifest, payloads
+
+
+def verify(zip_path: Path) -> dict:
+    """校验压缩包：无重复条目、清单齐全、条目名合法、记录是对象、摘要一致。返回统计。"""
+    manifest, payloads = _load_validated(zip_path)
+    return {"files": len(payloads), "counts": manifest.get("counts") or {},
             "created_at": manifest.get("created_at")}
 
 
@@ -169,20 +218,12 @@ def list_backups() -> list[dict]:
 
 
 def restore(zip_path: Path, data_dir: Path | None = None) -> dict:
-    """恢复备份：先校验 → 保存当前记录 → 逐文件原子写回。"""
+    """恢复备份：先校验（含全部记录解析）→ 保存当前记录 → 逐文件原子写回。"""
     data_dir = Path(data_dir or core.DATA_DIR)
-    stats = verify(zip_path)
+    manifest, payloads = _load_validated(zip_path)
     safety = None
     if _entries(data_dir):
         safety = backup(data_dir, data_dir.parent / "backups" / "before-restore")
-    with zipfile.ZipFile(zip_path) as archive:
-        manifest = json.loads(archive.read(MANIFEST).decode("utf-8"))
-        # 校验阶段已经拒绝过非法条目名，这里再核一遍：restore 也可能被直接调用，
-        # 并且写文件之前就要确定所有名字都落在两个数据目录里。
-        names = [_checked_name(name) for name in (manifest.get("files") or {})]
-        # 先把所有内容解析完再落盘，任何一份读不出来都不会出现"恢复了一半"。
-        payloads = {name: json.loads(archive.read(name).decode("utf-8-sig"))
-                    for name in names}
     for kind in KINDS:
         (data_dir / kind).mkdir(parents=True, exist_ok=True)
     restored = 0
@@ -190,7 +231,7 @@ def restore(zip_path: Path, data_dir: Path | None = None) -> dict:
         storage.atomic_write_json(data_dir / name, payload)
         restored += 1
     return {"restored": restored, "safety_backup": str(safety) if safety else None,
-            "counts": stats.get("counts")}
+            "counts": manifest.get("counts") or {}}
 
 
 def main(argv: list[str] | None = None) -> int:

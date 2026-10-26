@@ -83,5 +83,58 @@ class AbsolutePathTests(unittest.TestCase):
         self.assertTrue(any(p.name == "app.py" for p in files))
 
 
+_MD_LINK = re.compile(r"\]\(([^)\s]+)\)")
+_SKIP = ("http://", "https://", "#", "mailto:", "/", "tel:")
+
+
+def tracked_markdown_files() -> list[pathlib.Path]:
+    proc = subprocess.run(
+        ["git", "-c", "core.quotepath=false", "ls-files", "-z", "*.md"],
+        cwd=str(ROOT), capture_output=True, text=True,
+        encoding="utf-8", errors="replace")
+    out = []
+    for rel in proc.stdout.split("\0"):
+        if not rel.strip():
+            continue
+        path = ROOT / rel
+        if path.is_file():
+            out.append(path)
+    return out
+
+
+class DocLinkTests(unittest.TestCase):
+    """受跟踪文档里的相对链接必须可达。
+
+    缺陷：第二轮把旧 README 的专题整段迁到 `docs/` 时，里面的相对链接仍按
+    「文件在仓库根」书写（`DISCLAIMER.md`、`LICENSE`、`docs/使用指南.md` 等），
+    搬进 `docs/` 后**30 处全部变成死链**，而没有任何测试会发现——
+    Markdown 链接断了不会让任何构建或测试变红。
+
+    这条测试覆盖全部受跟踪的 `.md`：外链、锚点跳过，其余按文件所在目录解析，
+    不存在即失败。它是「搬文档」这类改动的兜底网。
+    """
+
+    def test_relative_links_in_tracked_markdown_resolve(self):
+        broken: list[str] = []
+        files = tracked_markdown_files()
+        self.assertGreater(len(files), 5, "扫描不到 markdown，路径可能写错了")
+        for path in files:
+            try:
+                text = path.read_text(encoding="utf-8")
+            except OSError:
+                continue
+            for target in _MD_LINK.findall(text):
+                if target.startswith(_SKIP) or "://" in target:
+                    continue
+                plain = target.split("#")[0]
+                if not plain:
+                    continue
+                if not (path.parent / plain).exists():
+                    broken.append(f"{path.relative_to(ROOT)} -> {target}")
+        self.assertEqual(broken, [],
+                         "文档里有断链（相对路径要按文件所在目录写）：\n  "
+                         + "\n  ".join(broken))
+
+
 if __name__ == "__main__":
     unittest.main()

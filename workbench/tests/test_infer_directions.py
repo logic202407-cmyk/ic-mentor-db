@@ -295,6 +295,21 @@ class ThresholdNoteTests(unittest.TestCase):
             self.assertNotIn(literal, source,
                              f"报告文案里又出现写死的阈值：{literal}")
 
+    def test_coverage_note_does_not_conflate_embedding_table_with_fusion_threshold(self):
+        """「覆盖」段不得声称校准表的阈值与决策阈值一致——两者量纲不同。
+
+        缺陷：原文案写「接受多少条、接受里对了多少，见上面『阈值与拒绝』一节的实测表；
+        那张表的阈值与这里一致。」但那张表的横轴是**嵌入 Top-1 分数**，而决策阈值
+        `--min-score` 是**融合分**（关键词 0.30 + 嵌入 0.70）。读者会拿表里的 0.60 行
+        （154 条 / 38.5% / 20.1%）去对决策阈值 0.60（76 条 / 19.0% / 35.5%），
+        得到互相矛盾的结论——这正属于"对外数字写错"。
+        """
+        source = Path(infer_directions.__file__).read_text(encoding="utf-8")
+        self.assertNotIn("那张表的阈值与这里一致", source,
+                         "又出现把嵌入分表与融合分阈值混为一谈的措辞")
+        self.assertIn("不是同一个量纲", source,
+                      "报告应明确写出表(嵌入分)与阈值(融合分)量纲不同")
+
 
 if __name__ == "__main__":
     unittest.main()

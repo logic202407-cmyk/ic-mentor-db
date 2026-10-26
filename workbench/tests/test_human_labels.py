@@ -38,6 +38,92 @@ class ExportTests(unittest.TestCase):
             self.assertGreaterEqual(result["pairs"], 1)
 
 
+class BlindFieldLeakTests(unittest.TestCase):
+    """盲标表不得泄漏任何由程序判定派生的字段。
+
+    真实缺陷（2026-10-26）：盲标表里带着 ``category``，取值形如
+    ``shared_homepage_unit_mismatch`` / ``listing_page``——它由 ``adjudicate()`` 的
+    复核结论派生，等于把程序的身份判断写在标注者眼前，「盲标」名不副实。
+    """
+
+    @classmethod
+    def setUpClass(cls) -> None:
+        cls._tmp = tempfile.TemporaryDirectory()
+        cls.dir = pathlib.Path(cls._tmp.name)
+        cls.csv_path = cls.dir / "annotation.csv"
+        cls.result = human_labels.export(cls.csv_path, per_category=2)
+        cls.header = cls.csv_path.read_text(encoding="utf-8-sig").splitlines()[0].split(",")
+        cls.key = json.loads((cls.dir / "annotation-key.json").read_text(encoding="utf-8"))
+
+    @classmethod
+    def tearDownClass(cls) -> None:
+        cls._tmp.cleanup()
+
+    def test_header_has_no_program_derived_fields(self) -> None:
+        for leaked in ("category", "emb", "program_label", "program_verdict",
+                       "reason", "a_id", "b_id"):
+            self.assertNotIn(
+                leaked, self.header,
+                f"盲标表不得包含由程序判定派生的字段 {leaked}")
+
+    def test_header_keeps_the_public_evidence_fields(self) -> None:
+        for required in ("pair_id", "a_name", "b_name",
+                         "a_institution", "b_institution",
+                         "a_dept", "b_dept", "a_home", "b_home",
+                         "a_page_kind", "b_page_kind",
+                         "a_source_urls", "b_source_urls"):
+            self.assertIn(required, self.header)
+
+    def test_category_is_still_kept_in_the_key(self) -> None:
+        items = self.key["items"]
+        self.assertTrue(items)
+        first = next(iter(items.values()))
+        self.assertIn("category", first,
+                      "category 必须留在评分键里：分层抽样与统计需要")
+        self.assertTrue(first["category"])
+        self.assertIn("category", self.key["held_back_fields"])
+
+    def test_columns_equal_blind_plus_annotation(self) -> None:
+        self.assertEqual(
+            human_labels.COLUMNS,
+            list(human_labels.BLIND_FIELDS) + list(human_labels.ANNOTATION_FIELDS))
+        self.assertNotIn("category", human_labels.COLUMNS)
+
+    def test_key_marks_model_scores_as_held_back(self) -> None:
+        self.assertIn("emb", self.key["held_back_fields"])
+        self.assertIn("program_label", self.key["held_back_fields"])
+        first = next(iter(self.key["items"].values()))
+        self.assertIn("emb", first)
+        self.assertIn("program_label", first)
+
+
+class CategoryRecoveryTests(unittest.TestCase):
+    """盲标表不再带 category 后，导入仍要从评分键把它补回来（内部分层需要）。"""
+
+    def setUp(self) -> None:
+        self._tmp = tempfile.TemporaryDirectory()
+        self.dir = pathlib.Path(self._tmp.name)
+
+    def tearDown(self) -> None:
+        self._tmp.cleanup()
+
+    def test_import_recovers_category_and_name_from_key(self) -> None:
+        path = self.dir / "labels.csv"
+        _write_labels(path, [_label("p1", "same_person", "甲")])
+        _write_key(path, {"p1": {"emb": 0.91, "program_label": "same_person",
+                                 "program_verdict": "same_person",
+                                 "category": "shared_homepage",
+                                 "name": "张伟", "a_id": "a", "b_id": "b"}})
+        human_labels.import_labels(path, out_dir=self.dir / "out")
+        stored = json.loads((self.dir / "out" / "human_labels.json")
+                            .read_text(encoding="utf-8"))
+        label = stored["labels"][0]
+        self.assertEqual(label["category"], "shared_homepage")
+        self.assertEqual(label["name"], "张伟")
+        # 这些字段仍然只能来自 key，不能出现在盲标 CSV 里。
+        self.assertNotIn("category", path.read_text(encoding="utf-8-sig").splitlines()[0])
+
+
 class ImportGuardTests(unittest.TestCase):
 
     def setUp(self) -> None:

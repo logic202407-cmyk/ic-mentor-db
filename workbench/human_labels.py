@@ -9,9 +9,11 @@
 
 本模块把两件事分开：
 
-1. **导出**：只给证据（姓名/机构/院系/主页/主页类型/配对编号），
-   **不含模型分数与自动标签**，保证标注者盲标；
-   模型侧的 emb 与自动判定另存 `human_annotation_key.json`，只在评分时使用。
+1. **导出**：只给证据（配对编号、两侧姓名/机构/院系/学科/主页/主页类型/来源 URL），
+   **不含模型分数、不含自动标签、也不含 ``category``**，保证标注者盲标。
+   ``category`` 由 ``adjudicate()`` 的结论派生（形如 ``shared_homepage_unit_mismatch``、
+   ``listing_page``），给了它等于把程序的身份结论写在标注者眼前，因此只写进评分键
+   （内部分层抽样需要），不进盲标表。可见字段清单见 :data:`BLIND_FIELDS`。
 2. **导入**：要求每行都有 ``human_verdict``（same_person / different_person / unknown）、
    ``reviewer`` 与 ``reviewed_at``；缺一项即整批拒绝——
    这样才能挡住「用模型批量填一列然后冒充人工」的做法。
@@ -44,13 +46,34 @@ from .disambiguate_names import (
 VERDICTS = {SAME, DIFFERENT, UNKNOWN}
 CONFIDENCES = {"low", "medium", "high", ""}
 CONFIDENCE_ORDER = {"low": 0, "medium": 1, "high": 2}
-COLUMNS = [
-    "pair_id", "category", "name", "institution",
-    "a_id", "a_dept", "a_discipline", "a_home", "a_page_kind",
-    "b_id", "b_dept", "b_discipline", "b_home", "b_page_kind",
+
+#: 盲标者**可见**的全部字段：只有公开证据本身。
+#:
+#: 明确排除以下由程序判定派生的字段，否则「盲标」名不副实：
+#:
+#: - ``category``：由 :func:`_category` 依据 ``adjudicate()`` 的结论派生，
+#:   取值形如 ``shared_homepage_unit_mismatch`` / ``listing_page``——
+#:   等于把程序的身份结论写在标注者眼前；
+#: - ``emb`` / ``program_label`` / ``program_verdict``：模型分数与自动判定，
+#:   只存评分键文件，标注者不可见。
+#:
+#: ``a_page_kind`` / ``b_page_kind`` 保留：它是对「公开 URL 与来源标题」这条
+#: **可复核证据**的确定性归类（名录页 / 专属页 / 未收录），不是身份判断；
+#: 人工标注时正需要知道「这一页是不是本人专属页」。
+BLIND_FIELDS = [
+    "pair_id",
+    "a_name", "a_institution", "a_dept", "a_discipline",
+    "a_home", "a_page_kind", "a_source_urls",
+    "b_name", "b_institution", "b_dept", "b_discipline",
+    "b_home", "b_page_kind", "b_source_urls",
+]
+#: 标注者要填写的字段（缺任一必填项整批拒绝）。
+ANNOTATION_FIELDS = [
     "human_verdict", "human_confidence", "reviewer", "reviewed_at",
     "evidence_note",
 ]
+#: 盲标表的完整表头 = 可见证据 + 待填字段。**不含 category。**
+COLUMNS = BLIND_FIELDS + ANNOTATION_FIELDS
 MIN_LABELS = 30
 MIN_PER_CLASS = 5
 
@@ -58,6 +81,16 @@ MIN_PER_CLASS = 5
 def pair_id(a_id: str, b_id: str) -> str:
     joined = "\0".join(sorted([a_id, b_id]))
     return hashlib.sha256(joined.encode("utf-8")).hexdigest()[:16]
+
+
+def _source_urls(profile: dict) -> str:
+    """该记录登记过的来源 URL（分号分隔），供标注者自己打开核对。"""
+    urls = []
+    for source in profile.get("sources") or []:
+        url = (source or {}).get("url") or ""
+        if url and url not in urls:
+            urls.append(url)
+    return "；".join(urls[:5])
 
 
 def _category(row: dict, adjudged: dict) -> str:
@@ -86,27 +119,35 @@ def candidates(rows: list[dict], pages: PageIndex, per_category: int = 60) -> li
         if not row["same_inst"]:
             continue
         adj = adjudicate(row, pages)
+        category = _category(row, adj)
         item = {
             "pair_id": pair_id(row["i"]["id"], row["j"]["id"]),
-            "category": _category(row, adj),
-            "name": row["name"],
-            "institution": row["i"].get("institution") or "",
-            "a_id": row["i"]["id"], "a_dept": row["i"].get("department") or "",
+            # category 只写进 key（内部分层抽样用），**不写进盲标表**。
+            "category": category,
+            "a_name": row["i"].get("name") or row["name"],
+            "a_institution": row["i"].get("institution") or "",
+            "a_dept": row["i"].get("department") or "",
             "a_discipline": row["i"].get("first_level_discipline") or "",
             "a_home": row["i"].get("homepage") or "",
             "a_page_kind": row["page_a"],
-            "b_id": row["j"]["id"], "b_dept": row["j"].get("department") or "",
+            "a_source_urls": _source_urls(row["i"]),
+            "b_name": row["j"].get("name") or row["name"],
+            "b_institution": row["j"].get("institution") or "",
+            "b_dept": row["j"].get("department") or "",
             "b_discipline": row["j"].get("first_level_discipline") or "",
             "b_home": row["j"].get("homepage") or "",
             "b_page_kind": row["page_b"],
+            "b_source_urls": _source_urls(row["j"]),
             "human_verdict": "", "human_confidence": "", "reviewer": "",
             "reviewed_at": "", "evidence_note": "",
             "_program_label": row["label"],
             "_program_verdict": adj["verdict"],
             "_emb": row.get("emb"),
             "_reason": row.get("reason") or "",
+            # 记录 id 只留在 key 里，便于复核时回查原始记录；盲标表不出现 id。
+            "_a_id": row["i"]["id"], "_b_id": row["j"]["id"],
         }
-        buckets.setdefault(item["category"], []).append(item)
+        buckets.setdefault(category, []).append(item)
     chosen: list[dict] = []
     for category in sorted(buckets):
         chosen.extend(buckets[category][:per_category])
@@ -135,11 +176,18 @@ def export(path: Path, *, data_dir: Path | None = None, per_category: int = 60) 
             writer.writerow(item)
     key = {
         "schema": "mentor-workbench/human-annotation-key/v1",
-        "note": "盲标用：本文件含模型分数与自动判定，标注者不得查看。",
+        "note": ("内部评分键：含模型分数、自动判定与分层类别，标注者**不得查看**。"
+                 "盲标表（annotation-template.csv）不含其中任何一项。"),
+        "blind_fields": list(BLIND_FIELDS),
+        "held_back_fields": ["category", "emb", "program_label",
+                             "program_verdict", "reason", "name", "a_id", "b_id"],
         "items": {item["pair_id"]: {
             "emb": item["_emb"], "program_label": item["_program_label"],
             "program_verdict": item["_program_verdict"], "reason": item["_reason"],
-            "category": item["category"], "name": item["name"],
+            # category 留在 key 里：内部分层抽样与统计需要，但不给标注者看。
+            "category": item["category"],
+            "name": item["a_name"],
+            "a_id": item.get("_a_id", ""), "b_id": item.get("_b_id", ""),
         } for item in items},
     }
     key_path = path.with_name(path.stem + "-key.json")
@@ -250,6 +298,8 @@ def import_labels(path: Path, *, out_dir: Path, min_labels: int = MIN_LABELS) ->
             "reviewer": reviewer, "reviewed_at": reviewed_at,
             "confidence": confidence or None,
             "note": (row.get("evidence_note") or "").strip()[:500],
+            # 盲标表已不含 name/category（category 属程序派生，不能给标注者看）；
+            # 它们在内部分层与统计中仍需要，从评分键补齐。
             "name": row.get("name", ""), "category": row.get("category", ""),
         })
     if problems:
@@ -269,6 +319,9 @@ def import_labels(path: Path, *, out_dir: Path, min_labels: int = MIN_LABELS) ->
         item["emb"] = meta.get("emb")
         item["program_label"] = meta.get("program_label")
         item["program_verdict"] = meta.get("program_verdict")
+        # 盲标表不含这两个字段；分层统计仍需要，从评分键补齐（缺失则留空）。
+        item["name"] = item.get("name") or meta.get("name") or ""
+        item["category"] = item.get("category") or meta.get("category") or ""
 
     out_dir = Path(out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)

@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/代码许可-MIT-yellow.svg)](LICENSE)
 [![Data License](https://img.shields.io/badge/数据许可-见%20LICENSE--DATA-blue.svg)](LICENSE-DATA)
 [![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB.svg)](workbench/requirements.txt)
-[![Tests](https://img.shields.io/badge/tests-1079%20passed-brightgreen.svg)](workbench/tests)
+[![Tests](https://img.shields.io/badge/tests-1133%20passed-brightgreen.svg)](workbench/tests)
 [![Records](https://img.shields.io/badge/记录-15%2C719%20条-informational.svg)](CHANGELOG.md)
 [![Local Only](https://img.shields.io/badge/数据-仅存本机-success.svg)](SECURITY.md)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
@@ -56,25 +56,32 @@
 
 ```
 workbench/
-  app.py               FastAPI 应用与 25 个 API 路由；静态页面挂载；本地安全边界
+  app.py               FastAPI 应用与 37 个 API 路由；静态页面挂载；本地安全边界
+  core.py              数据目录与项目读写入口；文本清洗（邮箱/电话在此处隐去）
   catalog.py           导师档案、学科/高校/方向索引与覆盖统计
   storage.py           本地调查记录的读写：文件锁 + 原子替换 + 损坏恢复
   investigation.py     调查记录、证据与人工核查状态
-  search.py            关键词 / BM25 / 向量 / 混合 / 自动策略
+  relations.py         学术关系证据分层（L1 师承 / L2 共同指导 / L3 同门 / L4 共同署名）
+  scope.py             学科范围（默认 38 个工学一级学科，可含非工科）
+  search.py            关键词 / BM25 / 向量 / 混合 / 自动策略 + 索引缓存
   infer_directions.py  方向建议：关键词与嵌入分数级融合 + 低置信度拒绝
   disambiguate_names.py 同名消歧：证据分级 + 三态判定
   human_labels.py      人工标注的读取、校验与区分
+  ai_hints.py          AI 建议区块的读取与呈现（与官方事实严格分开）
   public_research.py   公开来源抓取结果的解析与落盘（离线快照可复现）
   openalex.py          论文元数据（可选联网，失败不影响本地查询）
+  sources/             53 个来源模块（每个对应一所学校的公开名录）
+  collect_*.py         采集脚本族（离线跑，不参与运行期）
+  reference/           随仓库分发的结构化档案与来源登记
   evaluation/          人工标注协议、检索标注协议、用户任务模板
   web/                 前端静态资源（HTML/CSS/JS/SVG/配图）
   tests/               单元测试与离线快照回归测试
   tools/               维护工具：数据质量、备份、编码体检、README 校验等
 ```
 
-**数据分层**：`data/raw/` 是抓到的网页原文（可回溯的底稿，已 gitignore）；`workbench/reference/` 是随仓库分发的结构化档案与来源登记；`.workbench-data/` 是运行期档案、页面缓存与嵌入模型（已 gitignore）。**克隆后不联网也能运行**，因为逐人档案与页面快照已随仓库打包。
+**数据分层**：`data/raw/` 下只有 24 个 `roster_*.json`（清洗后的官方名录，约 1.6 MB，**随仓库分发**）——抓到的网页原文不入库，采集脚本产物一律 gitignore；`workbench/reference/` 是随仓库分发的结构化档案与来源登记；`.workbench-data/` 是运行期档案、页面缓存与嵌入模型（已 gitignore）。**克隆后不联网也能运行**，因为逐人档案与页面快照已随仓库打包。
 
-**API**：以 `/api/catalog/*` 为主（导师检索、档案、证据、论文、论文线索、AI 建议、覆盖统计），`/api/projects/*` 管理本地调查项目与检索。共 **33 个 API 路由**，清单见 [docs/API.md](docs/API.md)。
+**API**：以 `/api/catalog/*` 为主（导师检索、档案、证据、论文、论文线索、AI 建议、覆盖统计），`/api/projects/*` 管理本地调查项目与检索。共 **37 个 API 路由**（GET 20 / POST 11 / PATCH 4 / DELETE 2），清单见 [docs/API.md](docs/API.md)。
 
 **技术选型**：Python 3.12 + FastAPI + uvicorn；前端为原生静态页面，无构建步骤；向量检索用开源模型 [`BAAI/bge-small-zh-v1.5`](https://huggingface.co/BAAI/bge-small-zh-v1.5) 经 `fastembed` **本地推理**，不调用任何在线大模型 API。
 
@@ -85,7 +92,7 @@ workbench/
 | 操作系统 | Windows 10/11（主测环境）；Linux/macOS 需手动执行等价命令 |
 | Python | 3.11 或以上（主测 3.12） |
 | Node.js | 可选，仅在跑前端竞态测试时需要 ≥ 20 |
-| 磁盘 | 仓库约 120 MB；运行期 `.workbench-data/` 另需约 400 MB（含嵌入模型缓存） |
+| 磁盘 | 仓库约 125 MB（git blob 合计）；运行期 `.workbench-data/` 另需约 200 MB（含嵌入模型缓存 91 MB，随采集与评测增长） |
 | 网络 | **运行不需要网络**。首次安装依赖、首次下载嵌入模型时需要 |
 
 ## 安装
@@ -212,7 +219,7 @@ py -3 -m venv .venv
 测试用标准库 `unittest`，不需要 pytest。
 
 ```bat
-:: 全部业务测试（不需要向量模型，约 2–3 分钟）
+:: 全部业务测试（不需要向量模型，约 3–6 分钟，随用例数增长）
 .venv\Scripts\python.exe -m unittest discover -s workbench/tests
 
 :: 只跑某一组
@@ -222,7 +229,7 @@ py -3 -m venv .venv
 | 测试分层 | 内容 | 是否需要模型 |
 |:--|:--|:--|
 | 快速校验 | 编码体检、README 徽章、数据文件可解析、编译检查 | 否 |
-| 全部业务测试 | 55 个测试模块，覆盖存储、安全、检索、消歧、来源解析、前端契约 | 否 |
+| 全部业务测试 | 56 个测试模块，覆盖存储、安全、检索、消歧、来源解析、前端契约 | 否 |
 | 模型专项 | 需要向量模型的语义检索与方向推断用例 | 是，本地已有模型缓存时才跑 |
 
 **CI**：`.github/workflows/validate.yml` 分三个 job——`validate`（旧专题数据与 HTML 产物校验）、`workbench`（零重依赖的轻量检查）、`full`（完整 Python 测试 + 前端竞态测试 + 事实一致性 + 数据质量报告）。**CI 刻意不安装 `fastembed`/`onnxruntime`**——那是几百 MB，模型相关测试只在本地跑，避免 CI 因下载模型而不稳。
@@ -275,24 +282,24 @@ py -3 -m venv .venv
 
 | 项目 | 体积 | 说明 |
 |:--|--:|:--|
-| 纳入 git 的文件（721 个） | **约 125 MB** | 按 git blob 大小统计（与平台无关）；大头是数据本体，见下方明细 |
-| `.git` | 约 67 MB | 历史提交 |
+| 纳入 git 的文件（722 个） | **约 125 MB** | 按 git blob 大小统计（与平台无关）；大头是数据本体，见下方明细 |
+| `.git` | 约 81 MB | 历史提交 |
 | `.venv` | 约 211 MB | 虚拟环境，可由 `requirements.txt` 重建 |
-| `data/raw` | 约 890 MB | **抓取到的网页原文**，只在采集脚本里用；运行期不读它，已 gitignore |
-| `.workbench-data/` | 约 400 MB | 运行期档案、页面缓存与嵌入模型，已 gitignore |
+| `data/raw` | 约 1.6 MB | 只有 24 份清洗后的 `roster_*.json`（**随仓库分发**）；抓到的网页原文不入库 |
+| `.workbench-data/` | 约 200 MB | 运行期档案、页面缓存与嵌入模型，已 gitignore；随采集与评测增长 |
 
 **最大的几个文件**：
 
 | 文件 | 体积 | 是什么 |
 |:--|--:|:--|
-| `data/processed/mentor_ranked.json` | 34.1 MB | 历史集成电路专题的语料与文献计量 |
-| `workbench/reference/admission_faculty.json` | 18.0 MB | 招生目录与院系对应 |
-| `workbench/reference/engineering_scale_faculty.json` | 9.9 MB | 工学各学科名录快照 |
+| `data/processed/mentor_ranked.json` | 32.8 MB | 历史集成电路专题的语料与文献计量 |
+| `workbench/reference/admission_faculty.json` | 17.6 MB | 招生目录与院系对应 |
+| `workbench/reference/engineering_scale_faculty.json` | 9.7 MB | 工学各学科名录快照 |
 | `workbench/reference/research/dossiers.json.gz` | 5.2 MB | **逐人档案打包**（clone 后界面靠它才有论文与招生记录） |
-| `workbench/reference/research_sources.json` | 3.6 MB | 来源登记表 |
-| `workbench/reference/ai/direction_suggestions.json` | 3.4 MB | **AI 方向建议产物**（clone 后「AI 建议」区块靠它） |
+| `workbench/reference/research_sources.json` | 3.5 MB | 来源登记表 |
+| `workbench/reference/ai/direction_suggestions.json` | 4.5 MB | **AI 方向建议产物**（clone 后「AI 建议」区块靠它） |
 
-> 上表前两列由 `workbench.tools.check_readme_badges` 自动校验（`--fix` 可就地改正）——这几个数字曾经与实际差了一大截，而没有人会去更新它们。
+> 表中体积按 1024 进制换算（即 MiB），与前两张表口径一致；前两列由 `workbench.tools.check_readme_badges` 自动校验（`--fix` 可就地改正）——这几个数字曾经与实际差了一大截，而没有人会去更新它们。
 
 **已做的瘦身**：删掉了可重生成的页面缓存与一次性侦察目录，释放 **372 MB**。这些删掉后应用功能不变——档案数据在 `.workbench-data/public-research/`，与页面缓存是两回事。
 **刻意保留**：`data/raw`（网页原文）是"数据可核验"的底稿，删了就无法回溯某条记录来自哪个页面；它已被 gitignore，不影响仓库体积。`.workbench-data/models/` 是语义检索的嵌入模型缓存，删掉会在首次检索时重新下载。

@@ -5,16 +5,16 @@
 
 用法::
 
-    # ANTIGRAVITY_UPLOAD_DIR 指向放原始 PNG 的目录（每次不同，故不作默认值）
-    set ANTIGRAVITY_UPLOAD_DIR=C:\\path\\to\\.user_uploaded
+    # ANTIGRAVITY_UPLOAD_DIR 指向放原始 PNG 的目录（每次生成都不同，故不作默认值）
+    set ANTIGRAVITY_UPLOAD_DIR=%USERPROFILE%\\...\\.user_uploaded
     .venv\\Scripts\\python.exe tools\\process_user_images.py
 
     # 或直接给参数
-    .venv\\Scripts\\python.exe tools\\process_user_images.py --src C:\\path\\to\\.user_uploaded
+    .venv\\Scripts\\python.exe tools\\process_user_images.py --src %USERPROFILE%\\...\\.user_uploaded
 
 为什么不用写死的路径
 --------------------
-这里原先写死了两位维护者的本机绝对路径（`C:\\Users\\<用户名>\\...` 与 `D:\\ic-mentor-db\\...`）。
+这里原先写死了两位维护者的本机绝对路径（形如「本机用户目录 + 本仓库所在盘符」）。
 那既把本机用户目录泄进了公开仓库，也违反了本项目「脚本以自身位置解析仓库根目录、
 不含硬编码绝对路径」的约定。输入目录改为环境变量/参数传入，输出目录由本文件位置推导。
 """

@@ -28,10 +28,25 @@
 
 - ``same_person``：**直接公开证据**。两条记录指向**同一个本人专属主页**（不是名录页、
   不是被多人共用的页面），且同机构。
-- ``different_person``：**直接冲突证据**。两条记录各有**专属主页且互不相同**，并且
-  院系或一级学科冲突；或者（更强的）分属不同机构。
+- ``different_person``：**直接冲突证据**。只有两类算数：
+  1. 分属**不同机构**（隶属关系本身直接冲突）；
+  2. 记录里存在**标识自然人本身**的字段冲突（出生年 / ORCID / 邮箱 / 英文名等）。
 - ``unknown``：证据不足。名录页/共用页、缺主页、同院系且同学科、主页站点归属与院系
-  不符等，一律进 ``unknown``，**不进入任何指标计算**，单独报告数量。
+  不符，以及**「同校 + 两张互不相同的专属主页 + 只有院系或一级学科不同」**
+  （reason=``unit_conflict_only``）——一律进 ``unknown``，**不进入任何指标计算**，
+  单独报告数量。
+
+为什么「只有院系/学科不同」不算直接冲突
+----------------------------------------
+同一个自然人可以跨学科研究、在两个院系兼任、或因院系调整/历史沿革在不同年份被录入到
+不同单位；反过来，同校同名的两个人也常常各在一个院系。**单位归属差异对这两种假设都是
+一致的**，因此它不能把身份「判死」，只能交给人工核验。上一版把这类组合一律判
+``different_person``，等于用隶属关系冒充身份证据。
+
+审计依据（2026-10-26，只读逐对核对）：同校同名 250 对里有 31 对曾被这条弱判据判成
+异人，逐对检查后 **0 对**存在超出单位归属的直接冲突证据（26 对院系与一级学科都不同、
+5 对仅院系不同），因此全部改判 ``unknown``；明细见
+``.work/2026-10-26-p3/identity-31-audit.csv``（本地过程文件，不随仓库提交）。
 
 「专属主页 vs 名录页」复用 :mod:`workbench.homepage_kind`（来源模块声明的 ``listing``），
 再叠加三条同样可复现的判据：
@@ -101,6 +116,26 @@ LISTING_TITLE_MARKERS = ("名录", "列表", "目录", "索引")
 GENERIC_LIST_FILES = frozenset({
     "list.htm", "list.html", "list.shtml", "more.htm", "default.htm",
 })
+#: 查询串/路径里出现这些片段，说明这是**列表页**而不是某个人的专属页。
+#:
+#: 真实假阳性（2026-10-26 审计）：``https://www.eias.ac.cn/?teachers_category=teachers-list``
+#: 被判成 personal，于是两条同校同名记录得出「同一专属主页 ⇒ 同一个人」——
+#: 这是「把不同人合并成一人」方向的实际错误，比弱判据更危险。
+#:
+#: 反例约束（务必保留）：``?id=``/``?aid=``/``?teacherId=`` 这类「查询串就是人 id」的形态
+#: 必须继续判为个人页。因此这里**只收明确表示"列表"的写法**，不收 ``directory``/``detail``：
+#: ``me.sjtu.edu.cn/teacher_directory1/hujie`` 与
+#: ``ji.sjtu.edu.cn/.../faculty-directory/faculty-detail/131/`` 都是逐人详情页。
+LISTING_URL_MARKERS = (
+    "teachers-list", "teacher-list", "faculty-list", "people-list",
+    "staff-list", "member-list", "person-list", "expert-list", "scholar-list",
+    "teachers_list", "teacher_list", "faculty_list", "people_list",
+    "staff_list", "member_list", "expert_list",
+    "teacherlist", "facultylist", "peoplelist", "stafflist", "expertlist",
+)
+#: 这些查询参数名的**取值**若含 ``list``，说明是按栏目/分类取列表页
+#: （如 ``?teachers_category=teachers-list``）。
+LISTING_QUERY_KEYS = ("category", "cat", "column", "col", "type", "kind", "class")
 #: 履历里的「学科归属」套话，与「这个人是谁」无关，编码时要去掉。
 PLACEHOLDER_MARKERS = (
     "学科归属按公开研究关键词",
@@ -117,6 +152,10 @@ UNKNOWN_NEEDS = {
     "listing_page": "homepage 是名录/列表页，不能作为身份证据",
     "missing_url+listing_page": "缺主页，且另一条也只是名录页",
     "same_unit_no_conflict": "两页不同但院系与一级学科都相同，缺少区分两人的直接证据",
+    "same_unit_cross_discipline": ("两侧院系核心相同、只是挂在不同一级学科下："
+                                   "同一人跨学科录入的典型形态，不足以判异人"),
+    "unit_conflict_only": ("两侧只有院系/一级学科不同：单位归属差异对「同一人跨院系/跨学科」"
+                           "与「同校同名两个人」都成立，不构成直接身份冲突证据，需人工核验"),
     "same_url_cross_institution": "同一 URL 出现在不同机构，需确认是否为页面复用",
 }
 
@@ -183,6 +222,37 @@ def host_of(url: str) -> str:
         return ""
     u = re.sub(r"^https?://", "", u)
     return u.split("/")[0].split("?")[0]
+
+
+def listing_url_reason(url: str) -> str:
+    """URL 自身是否写着「这是列表页」；返回理由，不是列表则返回空串。
+
+    只用于识别**明确**的列表写法。判断"查询串是不是人 id"是另一件事，由
+    :func:`identity_home` 负责——两者方向相反，不能互相顶替。
+    """
+    u = (url or "").strip().lower()
+    if not u:
+        return ""
+    body, _, query = u.partition("?")
+    # 1) 明确的列表标记（``teachers-list`` / ``faculty_list`` …），路径或查询串都算
+    haystack = body + "?" + query
+    for marker in LISTING_URL_MARKERS:
+        if marker in haystack:
+            return "listing_url_marker"
+    # 2) 栏目/分类参数取值就是列表（``?teachers_category=teachers-list``）
+    for part in query.split("&"):
+        if not part:
+            continue
+        key, _, value = part.partition("=")
+        if not any(token in key for token in LISTING_QUERY_KEYS):
+            continue
+        if "list" in value:
+            return "listing_query_category"
+    # 3) 末段文件名以 list 开头（``list.htm`` / ``listm.htm`` / ``list_1.html``）
+    segment = body.rstrip("/").rsplit("/", 1)[-1]
+    if segment.startswith("list") or segment.startswith("more"):
+        return "listing_file_name"
+    return ""
 
 
 def _unit_core(name: str) -> str:
@@ -255,6 +325,8 @@ class PageIndex:
         path = re.sub(r"^https?://", "", url.strip().lower()).split("?")[0]
         if path.rstrip("/").rsplit("/", 1)[-1] in GENERIC_LIST_FILES:
             return PAGE_ROSTER
+        if listing_url_reason(url):
+            return PAGE_ROSTER
         return PAGE_PERSONAL
 
     def kind_reason(self, url: str) -> str:
@@ -271,6 +343,9 @@ class PageIndex:
         path = re.sub(r"^https?://", "", url.strip().lower()).split("?")[0]
         if path.rstrip("/").rsplit("/", 1)[-1] in GENERIC_LIST_FILES:
             return "generic_listing_file"
+        reason = listing_url_reason(url)
+        if reason:
+            return reason
         return "dedicated_page"
 
     # ── 判据 4：站点归属是否与记录自己的院系相符 ────────────────────────
@@ -343,14 +418,37 @@ def pair_label(a: dict, b: dict, pages: PageIndex) -> dict:
         row.update(label=SAME, strength=strength, reason="shared_dedicated_page")
         return row
 
-    # 3) 两个互不相同的专属页 → 看单位是否冲突
+    # 3) 两个互不相同的专属页 → 只有隶属单位差异，不足以判定身份
+    # 所有者判定（2026-10-26）：仅有学科或院系差异**不构成**「直接身份冲突证据」。
+    # 同一位导师可能跨学科、兼任、历史学科调整或多院系关联；反过来同校同名的两个人
+    # 也常常各在一个院系。「单位归属差异」对这两种假设都成立，不能把身份判死。
+    # 逐对审计依据见模块 docstring（31 对中 0 对有超出单位归属的直接冲突证据）。
     if not same_inst:
+        # 不同机构仍保留为直接冲突：隶属关系本身互斥（兼任属少数情形，且属另一议题）。
         row.update(label=DIFFERENT, strength="strong",
                    reason="distinct_pages_cross_institution")
         return row
+
+    # 3a) 院系核心（去掉括号补充说明/研究所后缀）相同、只是挂在不同的学科下
+    #     ——这是「同一个人被两个学科列表重复录入」的实证（如 万文杰：物理与天文学院
+    #     0809 vs 0702）。单独给一个 reason，避免与「院系也不同」混为一谈。
+    core_a = _unit_core(a.get("department") or "")
+    core_b = _unit_core(b.get("department") or "")
+    same_unit_core = bool(core_a) and core_a == core_b
+    row["same_unit_core"] = same_unit_core
+    row["unit_core_a"] = core_a
+    row["unit_core_b"] = core_b
+    if same_unit_core:
+        if same_disc:
+            row.update(label=UNKNOWN, strength="none", reason="same_unit_no_conflict")
+        else:
+            row.update(label=UNKNOWN, strength="none",
+                       reason="same_unit_cross_discipline")
+        return row
+
+    # 3b) 院系不同（可能连学科也不同）→ 仍然只是单位归属差异
     if not same_dept or not same_disc:
-        row.update(label=DIFFERENT, strength="medium",
-                   reason="distinct_pages_unit_conflict")
+        row.update(label=UNKNOWN, strength="none", reason="unit_conflict_only")
         return row
     row.update(label=UNKNOWN, strength="none", reason="same_unit_no_conflict")
     return row
@@ -556,12 +654,33 @@ def evaluate(rows: list[dict]) -> dict:
 
 
 def confusion(rows: list[dict], predict) -> dict:
-    """混淆矩阵 + P/R/F1。"""
+    """混淆矩阵 + P/R/F1。
+
+    **缺哪一类、或缺预测，就把依赖它的指标置为 ``null``**，不留 0.0、也不留
+    "看起来很好"的 1.0：
+
+    - 精确率需要**负例**（否则 FP 恒为 0，精确率必然 1.0，是假的好看），
+      也需要**至少一个正类预测**（``tp+fp==0`` 时是 0/0，``prf`` 会落成 0.0，
+      那是"没预测"被显示成"预测得很差"，同样是假指标）；
+    - 召回率需要正例（否则无 FN 可言）；
+    - F1 需要两者都成立。
+
+    键**始终保留**（值为 null），因为冻结的前端按名字探测指标键；删键会让它退化成
+    「待产出」，反而误导成"没跑过评测"。
+    """
     m = prf(rows, predict)
+    support = m["support"]
+    predicted_positive = m["tp"] + m["fp"]
+    precision = (m["precision"]
+                 if support["negatives"] and predicted_positive else None)
+    recall = m["recall"] if support["positives"] else None
+    f1 = (2 * precision * recall / (precision + recall)
+          if precision is not None and recall is not None
+          and (precision + recall) else None)
     return {
         "tp": m["tp"], "fp": m["fp"], "fn": m["fn"], "tn": m["tn"],
-        "precision": m["precision"], "recall": m["recall"], "f1": m["f1"],
-        "support": m["support"],
+        "precision": precision, "recall": recall, "f1": f1,
+        "support": support,
     }
 
 
@@ -597,6 +716,18 @@ def evaluate_protocol(rows: list[dict], scope: str) -> dict:
             "embedding_clean_only": (
                 auc(labelled, "emb_clean") if defined else None),
         },
+        # 值可能为 null（见 confusion）：键始终保留，冻结前端才能显示「—」而不是「待产出」。
+        "metrics_available": {"precision": bool(negatives),
+                              "recall": bool(positives),
+                              "f1": defined, "auc": defined},
+        "metrics_note": (
+            "" if defined else
+            ("本口径缺少"
+             + ("正例" if not positives else "")
+             + ("与" if not positives and not negatives else "")
+             + ("负例" if not negatives else "")
+             + "：精确率/召回率/F1/AUC 中依赖该类别的项按「不可计算」（null）处理，"
+               "不用 0 或旧数字替代。这不是回归，而是弱判据被移除后的真实结果。")),
         "baseline_institution": confusion(labelled, lambda r: r["same_inst"]),
         "baseline_embedding": {
             "confusion": confusion(labelled, lambda r: r["emb"] >= 0.85),
@@ -645,10 +776,17 @@ def adjudicate(row: dict, pages: PageIndex) -> dict:
             note = "两条记录指向同一个本人专属主页，且站点归属与院系一致"
     elif auto == DIFFERENT:
         if row["same_inst"]:
-            note = ("两个互不相同的本人专属主页，且院系/一级学科冲突"
+            # 新协议下同校分支不再产出 different_person；保留分支以免旧产物误读。
+            note = ("两个互不相同的本人专属主页，且存在超出单位归属的直接冲突证据"
                     f"（院系相同={row['same_dept']}，一级学科相同={row['same_disc']}）")
         else:
             note = "两个互不相同的本人专属主页，且分属不同机构"
+    elif row.get("reason") == "unit_conflict_only":
+        note = ("两侧只有院系/一级学科不同：单位归属差异不足以判定身份，"
+                "按「无法确认」处理，进人工核验")
+    elif row.get("reason") == "same_unit_cross_discipline":
+        note = ("两侧院系核心相同、只是挂在不同一级学科下：属同一人跨学科录入的典型形态，"
+                "按「无法确认」处理，进人工核验")
     else:
         note = "证据不足以判定同人/异人"
 
@@ -899,9 +1037,10 @@ def _build_report(stats: dict, primary: dict | None = None,
         "| 判定 | 含义 | 对数 |",
         "|:--|:--|--:|",
         f"| `same_person` | 同一**专属**个人主页 + 同机构 | {stats['labels'][SAME]} |",
-        f"| `different_person` | 两页互不相同且院系/一级学科冲突，或分属不同机构 "
+        f"| `different_person` | 分属不同机构（或自然人标识字段冲突） "
         f"| {stats['labels'][DIFFERENT]} |",
-        f"| `unknown` | 证据不足，**不进入指标** | {stats['labels'][UNKNOWN]} |",
+        f"| `unknown` | 证据不足／仅有院系或学科差异，**不进入指标** "
+        f"| {stats['labels'][UNKNOWN]} |",
         "",
         "`unknown` 的成因分布：",
         "",
@@ -940,6 +1079,15 @@ def _build_report(stats: dict, primary: dict | None = None,
             f"R {_pct(primary['baseline_institution']['recall'])} / "
             f"F1 {_pct(primary['baseline_institution']['f1'])}",
             "",
+        ]
+        if primary.get("metrics_note"):
+            lines += [
+                f"> **指标不可计算**：{primary['metrics_note']}",
+                "> 这是移除弱判据（院系/学科差异不再判异人）之后的**真实结果**，"
+                "不是回归，也不是缺数据；不要用旧数字回填。",
+                "",
+            ]
+        lines += [
             "阈值消融（机构相同 **且** 嵌入 ≥ 阈值）：",
             "",
             "| 阈值 | TP | FP | FN | 精确率 | 召回率 | F1 |",
@@ -986,6 +1134,10 @@ def _build_report(stats: dict, primary: dict | None = None,
             f"{_pct(reviewed['baseline_institution']['recall'])} / "
             f"{_pct(reviewed['baseline_institution']['f1'])} |",
             "",
+        ]
+        if reviewed.get("metrics_note"):
+            lines += [f"> **指标不可计算**：{reviewed['metrics_note']}", ""]
+        lines += [
             "| 阈值 | TP | FP | FN | 精确率 | 召回率 | F1 |",
             "|--:|--:|--:|--:|--:|--:|--:|",
         ]
