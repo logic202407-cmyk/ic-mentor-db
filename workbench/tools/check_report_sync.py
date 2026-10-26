@@ -43,7 +43,7 @@ import pathlib
 import re
 import sys
 
-BASE = pathlib.Path("workbench/aic-submission")
+BASE = pathlib.Path("workbench/evaluation/records")
 MARKER = re.compile(r"<!--\s*source-sha256:\s*([0-9a-f]{64})\s*-->")
 SKIP_REASON = "未随仓库发布，已跳过"
 

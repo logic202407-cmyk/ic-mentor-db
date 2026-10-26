@@ -85,29 +85,50 @@ BUNDLE_PATH = Path(__file__).parent / 'reference' / 'research' / 'dossiers.json.
 USE_BUNDLE = True
 _bundle_cache = None
 _bundle_loaded = False
+_bundle_lock = threading.Lock()
 
 
 def _bundle():
-    """仓库内的档案打包（gzip JSONL）。只在需要时读一次。"""
+    """仓库内的档案打包（gzip JSONL）。只在需要时读一次。
+
+    并发安全：服务启动后的第一批请求是同时打进来的，而读完 6,498 条 gzip 需要一点时间。
+    旧实现**先把 `_bundle_loaded` 置真再去读**——这期间另一个线程看到「已加载」就直接返回
+    仍是 `None` 的缓存，`load()` 随即在 `.get()` 上抛 `AttributeError`，接口 500。
+    实测：8 线程同时首访，**7 个拿到 None**；干净 clone 上首页并发请求正好会踩中。
+
+    现在三条保证：
+    1) 只有**读完并把表放好之后**才置 `_bundle_loaded`；
+    2) 加锁，后来的线程等第一个读完直接复用，不各读一遍；
+    3) 跳过不是对象的行——`json.loads` 成功但不是 dict 时 `.get` 会抛 `AttributeError`，
+       旧实现里这个异常不在 `except` 覆盖范围内，同样会留下 None 缓存。
+    """
     global _bundle_cache, _bundle_loaded
-    if _bundle_loaded:
+    if _bundle_cache is not None:
         return _bundle_cache
-    _bundle_loaded = True
-    table = {}
-    try:
-        with gzip.open(BUNDLE_PATH, 'rt', encoding='utf-8') as fh:
-            for line in fh:
-                line = line.strip()
-                if not line:
-                    continue
-                item = json.loads(line)
-                mid = item.get('id')
-                if mid:
-                    table[mid] = item
-    except (OSError, ValueError):
+    with _bundle_lock:
+        if _bundle_cache is not None:
+            return _bundle_cache
         table = {}
-    _bundle_cache = table
-    return table
+        try:
+            with gzip.open(BUNDLE_PATH, 'rt', encoding='utf-8') as fh:
+                for line in fh:
+                    line = line.strip()
+                    if not line:
+                        continue
+                    try:
+                        item = json.loads(line)
+                    except ValueError:
+                        continue
+                    if not isinstance(item, dict):
+                        continue
+                    mid = item.get('id')
+                    if mid:
+                        table[mid] = item
+        except OSError:
+            table = {}
+        _bundle_cache = table
+        _bundle_loaded = True
+        return table
 
 
 def bundle_size():

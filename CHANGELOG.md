@@ -130,7 +130,7 @@
 ## [Unreleased] — 2026-10-26
 
 这一版的主题是**把「自称可靠」换成「可复核」**：修掉一批会伪造可信度的问题（人工标注样本量翻倍、
-未测指标显示为 0、采集缺口被当成事实缺失），并把公开仓库从「参赛交付物仓库」收回成正常的开源项目仓库。
+未测指标显示为 0、采集缺口被当成事实缺失），并把公开仓库从「交付物仓库」收回成正常的开源项目仓库。
 
 ### 数据可信度（P0）
 
@@ -180,9 +180,9 @@
 ### 工程与仓库治理
 
 - **公开仓库收回为正常开源项目仓库**：技术报告三件产物（md/html/1.2 MB pdf）、演示视频脚本、
-  录制提词稿、录制 URL 清单、提交材料 README 共 7 份**参赛专用交付物停止跟踪**（`git rm --cached`，
+  录制提词稿、录制 URL 清单、提交材料 README 共 7 份**非源码交付材料停止跟踪**（`git rm --cached`，
   **本地原件保留、字节未变**），并由 `.gitignore` 阻止再次误提交。仍在跟踪的是评测文档
-  (`aic-submission/evidence/*.md`) 与开源合规清单。
+  (`evaluation/records/evidence/*.md`) 与开源合规清单。
 - **校验工具在产物缺失时显式 SKIP 而不是假装通过**：`check_report_sync` / `check_pdf_limits` /
   `pdf_layout_check` / `make_teleprompter` / `make_evidence_log` / `check_facts_consistency` 在
   干净 clone 上输出 `状态: SKIP — …未随仓库发布，已跳过（不是校验通过）` 并返回 0；
@@ -414,7 +414,7 @@
   400 条留出验证：关键词 Top-1 64.0%、嵌入 9.0%、**混合 66.2%**。
   消融显示嵌入只在"无字面线索"的 37% 上强于关键词（16.8% vs 10.7%）——
   **嵌入单用低于关键词这个不利结果照实报告**。低于阈值的 455 条留空不填。
-  详见 `workbench/aic-submission/evidence/方向推断评测.md`。
+  详见 `workbench/evaluation/records/evidence/方向推断评测.md`。
 - **同名消歧（新增）**：`workbench/disambiguate_names.py` 用**个人主页 URL 当真值**
   （同 URL 必同人、不同 URL 必异人；`homepage` 只作标签不进特征）。535 对样本上
   AUC「仅机构」0.952、「仅嵌入」0.849；**机构相同 + 嵌入 ≥0.7** 把精确率从基线
@@ -422,7 +422,7 @@
   不猜。同校内同名 96 对产出待核清单。**失败模式照实记录**：嵌入相似度高不能覆盖
   "主页不同"这个硬事实（西安交大王晶 0.990 实为两人，同院系履历模板化所致），
   故定死**主页判等 > 嵌入相似度**，系统不自动合并。
-  详见 `workbench/aic-submission/evidence/同名消歧评测.md`。
+  详见 `workbench/evaluation/records/evidence/同名消歧评测.md`。
 - `--enrich` 定向补跑：**1,477 位**教师读到履历，其中 **514 位**读到论文目录。
 
 ### 界面

@@ -38,8 +38,8 @@ import re
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent.parent
-SCRIPT = ROOT / "workbench/aic-submission/演示视频脚本.md"
-DEFAULT_OUT = ROOT / "workbench/aic-submission/录制提词稿.txt"
+SCRIPT = ROOT / "workbench/evaluation/records/演示视频脚本.md"
+DEFAULT_OUT = ROOT / "workbench/evaluation/records/录制提词稿.txt"
 SKIP_REASON = "未随仓库发布，已跳过"
 
 ROW = re.compile(r"^\|\s*(\d+)\s*\|\s*([0-9:–\-]+)\s*\|\s*(.*?)\s*\|\s*(.*?)\s*\|\s*$")

@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/代码许可-MIT-yellow.svg)](LICENSE)
 [![Data License](https://img.shields.io/badge/数据许可-见%20LICENSE--DATA-blue.svg)](LICENSE-DATA)
 [![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB.svg)](workbench/requirements.txt)
-[![Tests](https://img.shields.io/badge/tests-1133%20passed-brightgreen.svg)](workbench/tests)
+[![Tests](https://img.shields.io/badge/tests-1135%20passed-brightgreen.svg)](workbench/tests)
 [![Records](https://img.shields.io/badge/记录-15%2C719%20条-informational.svg)](CHANGELOG.md)
 [![Local Only](https://img.shields.io/badge/数据-仅存本机-success.svg)](SECURITY.md)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
@@ -31,17 +31,19 @@
 
 ## 界面
 
-> 以下为真实运行截图（1440×900）。首页右侧产品预览中的姓名与分数是**虚构演示数据**，界面已标注；档案与评测图来自公开来源记录与真实评测产物。设计规范见 [docs/DESIGN.md](docs/DESIGN.md)。
+> 以下为本机真实运行截图（统一 1440×900，Chromium 实际渲染，非设计稿）。评测页的数字来自仓库内的评测产物；本地档案页展示的是**合成演示资料**，不是任何真实调查记录。设计规范见 [docs/DESIGN.md](docs/DESIGN.md)。
 
-| 首页门户 | 导师档案 |
+| 首页总览 | 导师检索与档案 |
 |:--:|:--:|
-| ![首页](docs/screenshots/01-home.png) | ![导师档案](docs/screenshots/02-dossier.png) |
-| **公开来源证据**（状态为文字胶囊，不靠颜色） | **学术关系证据图**（仅绘制有证据的关联） |
-| ![证据卡](docs/screenshots/03-evidence.png) | ![关系图](docs/screenshots/04-network.png) |
-| **课题组公开信息观察**（四维事实，无综合分） | **算法评测看板**（数字来自产物） |
-| ![观察](docs/screenshots/05-observation.png) | ![评测](docs/screenshots/06-eval-overview.png) |
+| ![首页总览](docs/screenshots/01-home.png) | ![导师检索与档案](docs/screenshots/02-dossier.png) |
+| **公开来源与证据核查**（每条事实带出处与「待人工核查」状态） | **学科导航**（38 个工学一级学科，按学科快速过滤） |
+| ![公开来源与证据核查](docs/screenshots/03-evidence.png) | ![学科导航](docs/screenshots/04-discipline.png) |
+| **调查记录**（只存本机，可导出） | **数据来源与核验原则** |
+| ![调查记录](docs/screenshots/05-records.png) | ![数据来源](docs/screenshots/06-sources.png) |
 
-![检索方法对比：五种方法在 A/B 两类查询上的 nDCG、Recall、MRR](docs/screenshots/07-eval-retrieval.png)
+**算法评测看板**（只读展示检索 / 方向推断 / 同名消歧的实测产物，并明确标注"这批评测不是人工标注"）：
+
+![算法评测看板](docs/screenshots/07-eval.png)
 
 ## 项目特点：为什么这样设计
 
@@ -178,7 +180,7 @@ py -3 -m venv .venv
 
 **关于覆盖均衡的一点说明：38 个工学学科的最大单一机构占比现已全部低于 60%。** 如果某学科 90% 的记录来自同一所学校，学生在上面看到的"不同学校导师"其实是同校几位老师，**跨校比较是假的**。所以我们把"最大单一机构占比 < 60%"定成硬标准，逐学科执行、逐学科公示。历史扩充过程（含被我们自己推翻的判断）见 [数据扩充记录](docs/数据扩充记录.md)。
 
-**开源来源与致谢：**本项目的**导师调查方法论**参考了开源项目 **[Academic Detective · 学术侦探](https://github.com/yadnuses/Academic-Detective)**（MIT，官网 <https://www.academic-detective.top/>）的七步调查框架；`tools/skill_heuristics.py` 按原样调用其 `analysis.common_heuristics` 异常规则模块（通过 `ACADEMIC_SKILL_SCRIPTS` 环境变量指向其安装位置，未设置时安全跳过）。**本仓库未纳入该项目的任何代码**，工作台的调查档案、同名核对、课题组公开信息观察与关系分析均为本项目自行实现；工作台读入的同级目录 `academic-investigations/` 是该项目的产出，仅摘录其中的事实性内容，不继承其评分与评价。完整清单见 [开源及第三方资源使用清单](workbench/aic-submission/开源及第三方资源使用清单.md)。
+**开源来源与致谢：**本项目的**导师调查方法论**参考了开源项目 **[Academic Detective · 学术侦探](https://github.com/yadnuses/Academic-Detective)**（MIT，官网 <https://www.academic-detective.top/>）的七步调查框架；`tools/skill_heuristics.py` 按原样调用其 `analysis.common_heuristics` 异常规则模块（通过 `ACADEMIC_SKILL_SCRIPTS` 环境变量指向其安装位置，未设置时安全跳过）。**本仓库未纳入该项目的任何代码**，工作台的调查档案、同名核对、课题组公开信息观察与关系分析均为本项目自行实现；工作台读入的同级目录 `academic-investigations/` 是该项目的产出，仅摘录其中的事实性内容，不继承其评分与评价。完整清单见 [开源及第三方资源使用清单](workbench/evaluation/records/开源及第三方资源使用清单.md)。
 
 ## 算法与可靠性
 
@@ -265,7 +267,7 @@ py -3 -m venv .venv
 | 口径与不衡量什么 | [DISCLAIMER.md](DISCLAIMER.md) |
 | 接口清单 | [docs/API.md](docs/API.md) |
 | 维护者上手 | [docs/维护指南.md](docs/维护指南.md)、[docs/开发审计记录](docs/development-audit.md) |
-| 第三方方法与资源 | [开源及第三方资源使用清单](workbench/aic-submission/开源及第三方资源使用清单.md) |
+| 第三方方法与资源 | [开源及第三方资源使用清单](workbench/evaluation/records/开源及第三方资源使用清单.md) |
 
 ## 开源许可
 
@@ -282,7 +284,7 @@ py -3 -m venv .venv
 
 | 项目 | 体积 | 说明 |
 |:--|--:|:--|
-| 纳入 git 的文件（722 个） | **约 125 MB** | 按 git blob 大小统计（与平台无关）；大头是数据本体，见下方明细 |
+| 纳入 git 的文件（675 个） | **约 114 MB** | 按 git blob 大小统计（与平台无关）；大头是数据本体，见下方明细 |
 | `.git` | 约 81 MB | 历史提交 |
 | `.venv` | 约 211 MB | 虚拟环境，可由 `requirements.txt` 重建 |
 | `data/raw` | 约 1.6 MB | 只有 24 份清洗后的 `roster_*.json`（**随仓库分发**）；抓到的网页原文不入库 |
