@@ -97,5 +97,8 @@ workbench/evaluation/human_annotation/human_labels.json
 /workbench/aic-submission/录制提词稿.txt
 /workbench/aic-submission/录制URL清单.md
 /workbench/aic-submission/README.md
+# 参赛就绪度自查底稿：整篇是赛事材料（赛道规则、提交清单、截止时间），
+# 与公开代码维护无关，2026-10-26 起停止跟踪；原件保留在所有者本机。
+/workbench/competition_readiness.md
 # 本地会话过程文件（验证脚本、原始截图、任务快照、补丁），只在所有者机器保留
 /.work/
