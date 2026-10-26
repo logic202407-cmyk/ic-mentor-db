@@ -100,8 +100,12 @@ img,svg{max-width:100%}
 .head-cta{
   display:inline-flex;align-items:center;gap:7px;height:34px;padding:0 15px;border-radius:8px;
   background:#1e60d5;color:#fff!important;font-size:13px;letter-spacing:.02em;
+  box-shadow:0 1px 2px rgba(15,23,42,.08),0 3px 8px -2px rgba(30,96,213,.15);
+  transition:transform .16s cubic-bezier(.16,1,.3,1),box-shadow .16s cubic-bezier(.16,1,.3,1),background .16s;
+  user-select:none;
 }
-.head-cta:hover{background:#1d4ed8;text-decoration:none}
+.head-cta:hover{background:#1d4ed8;text-decoration:none;transform:translateY(-1.5px);box-shadow:0 6px 16px -2px rgba(30,96,213,.25)}
+.head-cta:active{transform:translateY(1px) scale(.985)}
 .head-cta span{font-size:14px;line-height:1}
 
 /* ── 页首：标题 + 数据版本 ──────────────────────────────────── */
