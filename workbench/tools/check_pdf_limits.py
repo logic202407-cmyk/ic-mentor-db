@@ -28,7 +28,7 @@ import argparse
 import pathlib
 import sys
 
-DEFAULT_PDF = "workbench/aic-submission/技术报告.pdf"
+DEFAULT_PDF = "workbench/evaluation/records/技术报告.pdf"
 SKIP_REASON = "未随仓库发布，已跳过"
 
 

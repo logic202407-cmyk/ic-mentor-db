@@ -170,7 +170,7 @@ class RealPdfTests(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        cls.pdf = ROOT / "workbench/aic-submission/技术报告.pdf"
+        cls.pdf = ROOT / "workbench/evaluation/records/技术报告.pdf"
         cls.fills = page_bottom_fill(cls.pdf, dpi=60) if cls.pdf.is_file() else []
 
     def setUp(self):

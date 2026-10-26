@@ -395,7 +395,7 @@ def check_license_scope(root: Path) -> Check:
         return check
     text = path.read_text(encoding="utf-8", errors="replace")
     dirs = ["data/", "reports/", "docs/", "workbench/reference", "workbench/sources",
-            "workbench/examples", "workbench/aic-submission"]
+            "workbench/examples", "workbench/evaluation/records"]
     missing = []
     for name in dirs:
         exists = (root / name.rstrip("/")).exists()

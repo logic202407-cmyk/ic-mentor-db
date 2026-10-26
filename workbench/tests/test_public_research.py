@@ -387,4 +387,76 @@ class FooterBoilerplateTests(unittest.TestCase):
             self.assertNotIn(marker, blob)
 
 
+class BundleConcurrencyTests(unittest.TestCase):
+    """档案打包的首次加载必须并发安全。
+
+    缺陷：`_bundle()` 旧实现**先把 `_bundle_loaded` 置真再去读** 6,498 条 gzip。
+    这期间另一个线程看到「已加载」就直接返回仍是 `None` 的缓存，`load()` 随即在
+    `.get()` 上抛 `AttributeError` —— 接口 500。
+
+    这不是理论问题：服务启动后首页会同时打多个请求，干净 clone（没有逐人档案、
+    全靠打包兜底）上正好会踩中。实测 8 线程同时首访，**7 个拿到 None**。
+    """
+
+    def setUp(self):
+        # 复位到"刚启动、还没人读过打包"的状态
+        self._saved = (research._bundle_cache, research._bundle_loaded)
+        research._bundle_cache = None
+        research._bundle_loaded = False
+
+    def tearDown(self):
+        research._bundle_cache, research._bundle_loaded = self._saved
+
+    def test_concurrent_first_access_never_yields_none(self):
+        import threading
+
+        results = []
+        barrier = threading.Barrier(8)
+
+        def worker():
+            barrier.wait()
+            try:
+                results.append(("ok", research._bundle()))
+            except Exception as exc:  # noqa: BLE001
+                results.append(("exc", exc))
+
+        threads = [threading.Thread(target=worker) for _ in range(8)]
+        for t in threads:
+            t.start()
+        for t in threads:
+            t.join()
+
+        errors = [payload for status, payload in results if status == "exc"]
+        self.assertEqual(errors, [], f"并发首访抛异常：{errors[:3]}")
+
+        values = [payload for status, payload in results if status == "ok"]
+        self.assertEqual(len(values), 8)
+        nones = [v for v in values if not isinstance(v, dict)]
+        self.assertEqual(nones, [], "并发首访拿到了 None/非 dict 的缓存")
+        # 8 个线程应看到**同一份**表，而不是各读一份
+        self.assertTrue(all(v is values[0] for v in values),
+                        "并发首访读出了多份不同的表，缓存没生效")
+
+    def test_non_object_line_is_skipped_not_fatal(self):
+        """打包里混入非对象行（例如一个数组）时，不能把整份缓存搞成 None。"""
+        import gzip
+        import json as _json
+        import tempfile as _tempfile
+
+        with _tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "dossiers.json.gz"
+            with gzip.open(path, "wt", encoding="utf-8") as fh:
+                fh.write(_json.dumps({"id": "a", "biography": "x"}, ensure_ascii=False) + "\n")
+                fh.write("[1, 2, 3]\n")          # 合法 JSON 但不是对象
+                fh.write("not json at all\n")     # 非法 JSON
+                fh.write(_json.dumps({"id": "b"}, ensure_ascii=False) + "\n")
+            with patch.object(research, "BUNDLE_PATH", path):
+                research._bundle_cache = None
+                research._bundle_loaded = False
+                table = research._bundle()
+        self.assertIsInstance(table, dict)
+        self.assertIn("a", table)
+        self.assertIn("b", table)
+
+
 if __name__=='__main__':unittest.main()

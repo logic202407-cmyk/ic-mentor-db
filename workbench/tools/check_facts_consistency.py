@@ -57,8 +57,8 @@ SKIP_REASON = "未随仓库发布，已跳过"
 # 参赛专用交付物：仓库已停止跟踪，干净 clone 上不存在。缺失时整组跳过。
 # 未列出的文件（根 README.md）缺失仍然算问题——那是长期开源仓库的必需文档。
 OPTIONAL_FILES: frozenset[str] = frozenset({
-    "workbench/aic-submission/技术报告.md",
-    "workbench/aic-submission/README.md",
+    "workbench/evaluation/records/技术报告.md",
+    "workbench/evaluation/records/README.md",
 })
 
 
@@ -98,31 +98,31 @@ CLAIMS: list[dict] = [
     # 注意：这里不用裸的「全库…条」，因为同一章里还有「全库有 4,936 条记录的研究方向待补」
     # 这种**不同量纲**的句子。误杀一次，维护者就会把整条检查关掉——所以宁可把上下文
     # 写窄，也不要写宽。
-    {"file": "workbench/aic-submission/技术报告.md", "name": "全库记录",
+    {"file": "workbench/evaluation/records/技术报告.md", "name": "全库记录",
      "context": r"工作台目录含", "pattern": r"工作台目录含\s*[*]{0,2}([\d,]{3,})", "fact": "records_total"},
-    {"file": "workbench/aic-submission/技术报告.md", "name": "工学条目",
+    {"file": "workbench/evaluation/records/技术报告.md", "name": "工学条目",
      "context": r"工学", "pattern": r"工学\s*38\s*个一级学科\s*[*]{0,2}([\d,]{3,})", "fact": "engineering_records"},
-    {"file": "workbench/aic-submission/技术报告.md", "name": "公开来源记录",
+    {"file": "workbench/evaluation/records/技术报告.md", "name": "公开来源记录",
      "context": r"公开来源", "pattern": r"公开来源\s*[*]{0,2}([\d,]{3,})", "fact": "records_public"},
-    {"file": "workbench/aic-submission/技术报告.md", "name": "公开来源机构",
+    {"file": "workbench/evaluation/records/技术报告.md", "name": "公开来源机构",
      "context": r"涉及", "pattern": r"涉及\s*[*]{0,2}(\d+)\s*[*]{0,2}\s*所", "fact": "institutions_public"},
-    {"file": "workbench/aic-submission/技术报告.md", "name": "方向待补条数",
+    {"file": "workbench/evaluation/records/技术报告.md", "name": "方向待补条数",
      "context": r"方向待补", "pattern": r"全库有\s*[*]{0,2}([\d,]{3,})", "fact": "dir_pending"},
     # 测试数**故意不在这里校验**。它会随着"新增一个测试"就变，而正文写死一个数字
     # 会让每次加测试都要改文档。权威载体是 README 顶部徽章（由 check_readme_badges
     # 用 AST 统计并支持 --fix）。正文只说"全部通过"，不承诺具体项数。
 
     # ── 提交材料 README：复现性核验表（P0-4 的原发地）──────────────────
-    {"file": "workbench/aic-submission/README.md", "name": "全库记录 / 公开来源 / 机构",
+    {"file": "workbench/evaluation/records/README.md", "name": "全库记录 / 公开来源 / 机构",
      "context": r"全库记录", "pattern": r"全库记录\s*/\s*公开来源\s*/\s*机构[^\n]*?([\d,]+)\s*/\s*([\d,]+)\s*/\s*(\d+)",
      "fact": ["records_total", "records_public", "institutions_public"]},
-    {"file": "workbench/aic-submission/README.md", "name": "可读档案 / 论文 / 师承 / 招生",
+    {"file": "workbench/evaluation/records/README.md", "name": "可读档案 / 论文 / 师承 / 招生",
      "context": r"可读档案",
      "pattern": r"可读档案\s*/\s*论文\s*/\s*师承\s*/\s*招生[^\n]*?([\d,]+)\s*/\s*([\d,]+)\s*/\s*(\d+)\s*/\s*([\d,]+)",
      "fact": ["readable_profiles", "papers", "relations", "recruitment"]},
-    {"file": "workbench/aic-submission/README.md", "name": "逐人档案份数",
+    {"file": "workbench/evaluation/records/README.md", "name": "逐人档案份数",
      "context": r"档案", "pattern": r"([\d,]{3,})\s*份档案", "fact": "dossiers"},
-    {"file": "workbench/aic-submission/README.md", "name": "方向建议可写入条数",
+    {"file": "workbench/evaluation/records/README.md", "name": "方向建议可写入条数",
      "context": r"可写入", "pattern": r"可写入\s*([\d,]{3,})", "fact": "ai_would_apply"},
 
     # ── 根 README：当前进度那一段 ─────────────────────────────────────

@@ -30,8 +30,8 @@ from workbench.tools.make_teleprompter import parse, seconds_of
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent.parent
 SKIP_PHRASE = "未随仓库发布，已跳过"
-REAL_SCRIPT = ROOT / "workbench/aic-submission/演示视频脚本.md"
-REAL_OUT = ROOT / "workbench/aic-submission/录制提词稿.txt"
+REAL_SCRIPT = ROOT / "workbench/evaluation/records/演示视频脚本.md"
+REAL_OUT = ROOT / "workbench/evaluation/records/录制提词稿.txt"
 
 # 与真实脚本同格式：表头、分隔行、普通行、加粗时长行。
 SAMPLE_SCRIPT = """# 演示视频脚本

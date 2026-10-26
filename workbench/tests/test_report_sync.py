@@ -185,8 +185,8 @@ class MissingArtifactTests(unittest.TestCase):
 class RepoLocalCopyTests(unittest.TestCase):
     """所有者本机保留原件时的整体校验（干净 clone 上按本地副本判定是否跑）。"""
 
-    HTML = ROOT / "workbench/aic-submission/技术报告.html"
-    PDF = ROOT / "workbench/aic-submission/技术报告.pdf"
+    HTML = ROOT / "workbench/evaluation/records/技术报告.html"
+    PDF = ROOT / "workbench/evaluation/records/技术报告.pdf"
 
     def test_report_artifacts_are_in_sync_on_this_machine(self):
         # encoding/errors 必须显式指定：被测脚本会输出中文，Windows 默认按 GBK 解码，
@@ -201,7 +201,7 @@ class RepoLocalCopyTests(unittest.TestCase):
             "报告产物不同步：先跑 make_aic_html.py 再跑 make_aic_pdf.ps1\n"
             + (result.stdout or "") + (result.stderr or ""),
         )
-        if not (ROOT / "workbench/aic-submission/技术报告.md").is_file():
+        if not (ROOT / "workbench/evaluation/records/技术报告.md").is_file():
             # 干净 clone：本机没有原件，命令走的是 SKIP 分支，这同样是正确行为。
             self.assertIn(SKIP_PHRASE, result.stdout or "")
 
@@ -284,7 +284,7 @@ class PdfLimitTests(unittest.TestCase):
 class RepoPdfLimitTests(unittest.TestCase):
     """本机保留真实 PDF 时仍然钉住赛题硬限制（干净 clone 上按本地副本决定是否跑）。"""
 
-    PDF = ROOT / "workbench/aic-submission/技术报告.pdf"
+    PDF = ROOT / "workbench/evaluation/records/技术报告.pdf"
 
     def test_real_pdf_within_page_limit(self):
         if not self.PDF.is_file():

@@ -90,7 +90,7 @@ class FactsConsistencyTests(unittest.TestCase):
 class OptionalFileTests(unittest.TestCase):
     """参赛交付物缺失 → 显式跳过；根 README 缺失 → 仍然是问题。"""
 
-    SUBMISSION = "workbench/aic-submission/技术报告.md"
+    SUBMISSION = "workbench/evaluation/records/技术报告.md"
 
     def test_missing_optional_file_is_skipped(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -146,7 +146,7 @@ class OptionalFileTests(unittest.TestCase):
         self.assertIn("README.md", files, "根 README 的声明不应消失")
         self.assertNotIn("README.md", facts.OPTIONAL_FILES,
                          "根 README 是必需文档，不能标成可选")
-        submission = {f for f in files if f.startswith("workbench/aic-submission/")}
+        submission = {f for f in files if f.startswith("workbench/evaluation/records/")}
         self.assertEqual(submission, set(facts.OPTIONAL_FILES),
                          "工作量声明表引用的参赛交付物与 OPTIONAL_FILES 不一致")
 

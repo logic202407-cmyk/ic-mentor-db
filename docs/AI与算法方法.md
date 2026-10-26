@@ -44,7 +44,7 @@
 逐条带融合分、嵌入分、关键词分、次选方向与**相似度区间**，并注明「区间不是概率」。
 
 复现：`python -m workbench.infer_directions --validate 400 --ablate-text`。
-完整评测见 [方向推断评测](../workbench/aic-submission/evidence/方向推断评测.md)。
+完整评测见 [方向推断评测](../workbench/evaluation/records/evidence/方向推断评测.md)。
 
 ### 检索：把评测过的方法接进真实接口
 
@@ -106,7 +106,7 @@
 **系统不自动合并任何记录**。
 
 复现：`python -m workbench.disambiguate_names --evaluate --gold`。
-详见 [同名消歧评测](../workbench/aic-submission/evidence/同名消歧评测.md)。
+详见 [同名消歧评测](../workbench/evaluation/records/evidence/同名消歧评测.md)。
 
 ### 界面上能看到 AI 结果
 

@@ -6,7 +6,7 @@ it writes progress dots to stderr), and writes a single UTF-8 log.
 
 Why the log is still published while other AIC files are not
 ------------------------------------------------------------
-`aic-submission/evidence/*.md` stays tracked: those are the evaluation /
+`evaluation/records/evidence/*.md` stays tracked: those are the evaluation /
 audit records a reader needs to judge the work. The参赛专用 deliverables
 (report md/html/pdf, video script, teleprompter) are no longer tracked.
 
@@ -38,7 +38,7 @@ import sys
 
 ROOT = pathlib.Path(".").resolve()
 PY = ROOT / ".venv" / "Scripts" / "python.exe"
-OUT = ROOT / "workbench" / "aic-submission" / "evidence" / "测试与审计记录.md"
+OUT = ROOT / "workbench" / "evaluation" / "records" / "evidence" / "测试与审计记录.md"
 SKIP_REASON = "未随仓库发布，已跳过"
 
 NOISE = re.compile(r"^\s*System\.Management\.Automation\.RemoteException\s*$")
