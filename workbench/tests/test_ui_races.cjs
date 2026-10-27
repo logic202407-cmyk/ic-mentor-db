@@ -31,6 +31,41 @@ function setup(...names) {
   }
   return {context,state,calls,$:context.$};
 }
+
+function setupResearch() {
+  const fixture = setup();
+  Object.assign(fixture.context, {
+    setView(){}, setSearchMode(){},
+    openMentor: async id => { fixture.context.opened = id; },
+  });
+  const start = html.indexOf('async function lookupResearch()');
+  const end = html.indexOf('\nfunction changeWorkspaceMode', start);
+  vm.runInContext(html.slice(start, end), fixture.context);
+  return fixture;
+}
+
+test('research responses cannot replace a newer direction or open its old mentor', async()=>{
+  const {context,$,calls,state} = setupResearch();
+  $('nameInput').value='计算机视觉'; const first=context.lookupResearch();
+  $('nameInput').value='机器学习'; const second=context.lookupResearch();
+  assert.match(calls[1].url,/\/api\/catalog\/research\?/);
+  calls[1].resolve([{id:'current'}]); await second;
+  calls[0].resolve([{id:'old'}]); await first;
+  assert.equal(state.candidates[0].id,'current');
+  assert.equal(context.opened,'current');
+});
+
+test('empty and failed research leave no stale candidates', async()=>{
+  const {context,$,calls,state}=setupResearch();
+  $('nameInput').value='不存在的方向';
+  state.candidates=[{id:'stale'}];
+  const empty=context.lookupResearch();calls[0].resolve([]);await empty;
+  assert.equal(state.candidates.length,0);
+  assert.match(context.lastMessage,/暂无匹配/);
+  const failed=context.lookupResearch();calls[1].reject(Error('服务不可用'));await failed;
+  assert.equal(state.candidates.length,0);
+  assert.equal(context.lastMessage,'服务不可用');
+});
 test('choosing a discipline immediately lists mentors across schools',async()=>{
   const {context,$,calls,state}=setup('chooseDiscipline','chooseInstitution','chooseDirection');
   $('disciplineSelect').value='0833 城乡规划学';

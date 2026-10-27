@@ -96,11 +96,12 @@ class InformationArchitectureTests(unittest.TestCase):
             self.assertIn(f'aria-controls="pane-{pane}"', self.markup,
                           f"tab 与控制的分区没有关联：{pane}")
 
-    def test_tabs_are_real_tabs(self) -> None:
-        nav = self.markup[self.markup.find('class="dossier-tabs"'):]
-        nav = nav[:nav.find("</nav>")]
-        self.assertEqual(nav.count('role="tab"'), len(PANES))
-        self.assertEqual(nav.count('aria-selected='), len(PANES))
+    def test_sections_use_accessible_disclosure_buttons(self) -> None:
+        for pane in PANES:
+            expanded = 'true' if pane == 'identity' else 'false'
+            self.assertIn(f'data-pane="{pane}" aria-expanded="{expanded}"', self.markup)
+            self.assertIn(f'id="pane-{pane}" role="region" aria-labelledby="tab-{pane}"', self.markup)
+        self.assertNotIn('id="auxSidebar"', self.markup)
 
     def test_required_regions_exist(self) -> None:
         for marker in ('id="aiHints"', 'id="scoreBlock"', 'id="landing"', 'id="dossier"',

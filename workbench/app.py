@@ -206,6 +206,17 @@ def catalog_scope():
     return catalog.scope_info()
 
 
+@app.get("/api/catalog/research")
+def catalog_research(q: str = "", discipline: str = "", institution: str = "",
+                     direction: str = "", project_id: str = "",
+                     include_non_engineering: bool = False, admission_signal: bool = False):
+    try:
+        return catalog.search_research(q, discipline, institution, direction, project_id,
+                                       include_non_engineering, admission_signal)
+    except (ValueError, FileNotFoundError) as error:
+        raise HTTPException(status_code=404, detail=str(error)) from error
+
+
 @app.get("/api/catalog/relations/summary")
 def catalog_relations_summary():
     return relations.summary()

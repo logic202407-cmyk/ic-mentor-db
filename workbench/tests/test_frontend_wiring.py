@@ -68,15 +68,15 @@ class ContainerWiringTests(unittest.TestCase):
         src = read_desk()
         self.assertEqual(src.count('<div id="aiHints"'), 1)
 
-    def test_container_is_inside_dossier_after_nav(self):
+    def test_container_is_inside_basic_introduction(self):
         src = read_desk()
         dossier = src.find('<article id="dossier"')
-        nav_end = src.find("</nav>", src.find('class="dossier-tabs"'))
+        region = src.find('id="region-identity"')
         container = src.find('<div id="aiHints"')
         self.assertGreater(dossier, -1)
-        self.assertGreater(nav_end, -1)
-        # 容器应位于 dossier 内、tab 导航之后（先看"是谁"，再看 AI 建议）
-        self.assertGreater(container, nav_end)
+        self.assertGreater(region, dossier)
+        self.assertGreater(container, region)
+        self.assertLess(container, src.find('id="pane-identity"'))
 
     def test_render_ai_hints_is_called_on_open(self):
         src = read_desk()

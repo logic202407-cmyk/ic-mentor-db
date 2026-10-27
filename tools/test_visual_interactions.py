@@ -85,7 +85,7 @@ def test_interactions():
         page.wait_for_selector(".records-empty-img")
         
         # Test 3D tilt on records empty
-        rec_box = page.locator(".records-empty-img").bounding_box()
+        rec_box = page.locator(".records-empty-img").first.bounding_box()
         assert rec_box is not None, "Records empty visual missing"
         page.mouse.move(rec_box["x"] + 20, rec_box["y"] + 20)
         page.wait_for_timeout(150)
@@ -94,7 +94,7 @@ def test_interactions():
         assert "perspective" in rec_transform, "Records empty should have 3D tilt"
         
         # Test click on records illustration to trigger friendly privacy note
-        page.locator(".records-empty-img").click(force=True)
+        page.locator(".records-empty-img").first.click(force=True)
         page.wait_for_timeout(200)
         toast_text = page.locator("#resultStatus").text_content()
         print(f"Records toast message shown: {toast_text}")

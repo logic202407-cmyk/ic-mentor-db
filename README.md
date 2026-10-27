@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/代码许可-MIT-yellow.svg)](LICENSE)
 [![Data License](https://img.shields.io/badge/数据许可-见%20LICENSE--DATA-blue.svg)](LICENSE-DATA)
 [![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB.svg)](workbench/requirements.txt)
-[![Tests](https://img.shields.io/badge/tests-1135%20passed-brightgreen.svg)](workbench/tests)
+[![Tests](https://img.shields.io/badge/tests-1139%20passed-brightgreen.svg)](workbench/tests)
 [![Records](https://img.shields.io/badge/记录-15%2C719%20条-informational.svg)](CHANGELOG.md)
 [![Local Only](https://img.shields.io/badge/数据-仅存本机-success.svg)](SECURITY.md)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
@@ -35,9 +35,9 @@
 
 | 首页总览 | 导师检索与档案 |
 |:--:|:--:|
-| ![首页总览](docs/screenshots/01-home.png) | ![导师检索与档案](docs/screenshots/02-dossier.png) |
+| ![首页总览](docs/screenshots/01-home.png) | ![导师双栏检索与渐进式档案（2026-10-27）](docs/screenshots/02-dossier.png) |
 | **公开来源与证据核查**（每条事实带出处与「待人工核查」状态） | **学科导航**（38 个工学一级学科，按学科快速过滤） |
-| ![公开来源与证据核查](docs/screenshots/03-evidence.png) | ![学科导航](docs/screenshots/04-discipline.png) |
+| ![导师档案内展开的公开来源与证据核查（2026-10-27）](docs/screenshots/03-evidence.png) | ![学科导航](docs/screenshots/04-discipline.png) |
 | **调查记录**（只存本机，可导出） | **数据来源与核验原则** |
 | ![调查记录](docs/screenshots/05-records.png) | ![数据来源](docs/screenshots/06-sources.png) |
 
@@ -58,7 +58,7 @@
 
 ```
 workbench/
-  app.py               FastAPI 应用与 37 个 API 路由；静态页面挂载；本地安全边界
+  app.py               FastAPI 应用与 38 个 API 路由；静态页面挂载；本地安全边界
   core.py              数据目录与项目读写入口；文本清洗（邮箱/电话在此处隐去）
   catalog.py           导师档案、学科/高校/方向索引与覆盖统计
   storage.py           本地调查记录的读写：文件锁 + 原子替换 + 损坏恢复
@@ -83,7 +83,7 @@ workbench/
 
 **数据分层**：`data/raw/` 下只有 24 个 `roster_*.json`（清洗后的官方名录，约 1.6 MB，**随仓库分发**）——抓到的网页原文不入库，采集脚本产物一律 gitignore；`workbench/reference/` 是随仓库分发的结构化档案与来源登记；`.workbench-data/` 是运行期档案、页面缓存与嵌入模型（已 gitignore）。**克隆后不联网也能运行**，因为逐人档案与页面快照已随仓库打包。
 
-**API**：以 `/api/catalog/*` 为主（导师检索、档案、证据、论文、论文线索、AI 建议、覆盖统计），`/api/projects/*` 管理本地调查项目与检索。共 **37 个 API 路由**（GET 20 / POST 11 / PATCH 4 / DELETE 2），清单见 [docs/API.md](docs/API.md)。
+**API**：以 `/api/catalog/*` 为主（导师检索、档案、证据、论文、论文线索、AI 建议、覆盖统计），`/api/projects/*` 管理本地调查项目与检索。共 **38 个 API 路由**（GET 21 / POST 11 / PATCH 4 / DELETE 2），清单见 [docs/API.md](docs/API.md)。
 
 **技术选型**：Python 3.12 + FastAPI + uvicorn；前端为原生静态页面，无构建步骤；向量检索用开源模型 [`BAAI/bge-small-zh-v1.5`](https://huggingface.co/BAAI/bge-small-zh-v1.5) 经 `fastembed` **本地推理**，不调用任何在线大模型 API。
 
@@ -136,10 +136,12 @@ py -3 -m venv .venv
 
 1. **首页**选一级学科（默认工学 38 个）→ 选高校 → 选方向，或直接在顶部输入姓名；
 2. 同名候选中**逐条核对学校与院系**，选定后进入导师档案；
-3. 档案分七个分区：资料汇总、身份信息、论文、招生信息、学术关系、课题组观察、核查记录；
+3. 工作台左侧为导师列表，右侧为档案；基本介绍默认展开，论文成果、招生信息、团队信息与公开来源按需展开。团队保留关系与公开信息观察，公开来源内可保存证据、笔记和核查进度；
 4. 在「公开来源证据」里点开任一来源回到原页面核对；
 5. 把自己的核查结论记进「核查记录」，保存在本机；
 6. 需要带走时导出调查记录（Markdown）。
+
+“热门方向”可展开查看六个快捷入口，点击后自动切换至方向模式。该模式只匹配已收录的研究方向与学科字段（支持明确的中英文同义词），可与学科、高校、具体方向和历史招生线索条件组合；没有匹配数据时如实显示空状态，不以姓名或无关相似结果补位。
 
 更有针对性的教程（指标怎么读、六步核对法、FAQ）见 **[docs/使用指南.md](docs/使用指南.md)**；口径与"不衡量什么"见 **[DISCLAIMER.md](DISCLAIMER.md)**。
 
@@ -284,7 +286,7 @@ py -3 -m venv .venv
 
 | 项目 | 体积 | 说明 |
 |:--|--:|:--|
-| 纳入 git 的文件（676 个） | **约 114 MB** | 按 git blob 大小统计（与平台无关）；大头是数据本体，见下方明细 |
+| 纳入 git 的文件（678 个） | **约 114 MB** | 按 git blob 大小统计（与平台无关）；大头是数据本体，见下方明细 |
 | `.git` | 约 81 MB | 历史提交 |
 | `.venv` | 约 211 MB | 虚拟环境，可由 `requirements.txt` 重建 |
 | `data/raw` | 约 1.6 MB | 只有 24 份清洗后的 `roster_*.json`（**随仓库分发**）；抓到的网页原文不入库 |

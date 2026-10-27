@@ -67,12 +67,10 @@ def run_acceptance_tests():
         page.evaluate("clearDossier()")
         page.wait_for_timeout(300)
 
-        # 断言: 占位卡片显示，完整度统计卡片隐藏
-        placeholder_hidden = page.evaluate("document.getElementById('auxEmptyPlaceholder').hidden")
-        completeness_hidden = page.evaluate("document.getElementById('auxCompletenessCard').hidden")
-        assert not placeholder_hidden, "未选导师时，auxEmptyPlaceholder 必须显示"
-        assert completeness_hidden, "未选导师时，auxCompletenessCard 必须隐藏，严禁展示写死数据"
-        print("  [OK] 未选导师时辅助栏已正确隐藏硬编码数据，展示指引占位")
+        assert page.locator('#workspaceIntro').is_visible()
+        assert page.locator('.ws-empty-img').is_visible()
+        assert page.locator('#auxSidebar').count() == 0
+        print("  [OK] 未选导师时保留原有插画指引，工作台没有独立辅助栏")
 
         empty_shot = SCREENSHOTS_DIR / "v6_desktop_workspace_empty.png"
         page.screenshot(path=str(empty_shot))
@@ -96,17 +94,12 @@ def run_acceptance_tests():
         mentor_name = page.locator("#mentorTitle").inner_text()
         print(f"  打开导师档案: {mentor_name}")
 
-        # 校验右侧辅助栏
-        completeness_hidden_after = page.evaluate("document.getElementById('auxCompletenessCard').hidden")
-        assert not completeness_hidden_after, "打开导师后，auxCompletenessCard 必须展示真实统计"
-        verified_num = page.locator("#auxVerifiedNum").inner_text()
-        updated_date = page.locator("#auxUpdatedDate").inner_text()
-        print(f"  右侧辅助栏真实统计: 已核验 {verified_num} 条，更新日期: {updated_date}")
-
-        # 校验 5 项紧凑摘要状态栏
-        ribbon_count = page.locator(".entry-cards-row.compact-ribbon .entry-feature-card.compact-pill").count()
-        assert ribbon_count == 5, f"紧凑指标条应包含5个项，实际: {ribbon_count}"
-        print("  [OK] 紧凑摘要指标条渲染正确 (5项)")
+        assert '公开来源' in page.locator('#dossierSourceCount').inner_text()
+        assert page.locator('.section-toggle').count() == 5
+        assert page.locator('#tab-identity').get_attribute('aria-expanded') == 'true'
+        for pane in ('papers', 'admission', 'network', 'investigation'):
+            assert page.locator('#tab-' + pane).get_attribute('aria-expanded') == 'false'
+        print("  [OK] 来源统计真实，五个档案模块默认只展开基本介绍")
 
         mentor_shot = SCREENSHOTS_DIR / "v6_desktop_workspace_mentor.png"
         page.screenshot(path=str(mentor_shot))

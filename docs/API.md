@@ -11,7 +11,7 @@
 - 错误响应的 `detail` 是稳定的中文提示，**不回显 Python 异常原文**（原文只进服务端日志）。
 - 本表按 `workbench/app.py` 的路由声明核对；**字段级口径以源码为准**，本文件不重复声明字段（避免文档与实际字段漂移）。
 
-共 **37 个 API 路由**（GET 20 / POST 11 / PATCH 4 / DELETE 2；另有 4 个页面路由：`/`、`/eval`、`/classic`、`/legacy/network`）。
+共 **38 个 API 路由**（GET 21 / POST 11 / PATCH 4 / DELETE 2；另有 4 个页面路由：`/`、`/eval`、`/classic`、`/legacy/network`）。
 
 ## 健康检查
 
@@ -24,6 +24,7 @@
 | 方法 | 路径 | 说明 |
 |:--|:--|:--|
 | GET | `/api/catalog/name` | 按姓名查同名候选（身份核对入口） |
+| GET | `/api/catalog/research` | 按已收录研究方向与学科查导师：`q`、`discipline`、`institution`、`direction`、`project_id`、`include_non_engineering`、`admission_signal` 可组合；关键词无匹配时返回空数组，含明确中英文同义词，不使用姓名、AI 推断或相似结果兜底 |
 | GET | `/api/catalog/scope` | 学科范围（默认工学 38 个一级学科 / 含非工科） |
 | GET | `/api/catalog/disciplines` | 一级学科列表与各学科记录数 |
 | GET | `/api/catalog/institutions` | 机构（高校/院所）列表 |
@@ -32,7 +33,7 @@
 | GET | `/api/catalog/summary` | 首页用的汇总数字（**不含逐项明细**，明细见 `coverage`） |
 | GET | `/api/catalog/coverage` | 覆盖统计：全库、工学、公开来源、机构数、学科分布 |
 | GET | `/api/catalog/relations/summary` | 学术关系汇总（L1–L4 证据分层） |
-| GET | `/api/catalog/mentor/{mentor_id}` | 导师完整档案（七个分区） |
+| GET | `/api/catalog/mentor/{mentor_id}` | 导师完整档案（前端按五个折叠模块呈现） |
 | GET | `/api/catalog/mentor/{mentor_id}/report.md` | 导出该导师档案为 Markdown |
 
 ## AI 建议（待复核）
