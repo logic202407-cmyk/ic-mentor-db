@@ -27,7 +27,8 @@ function renderArchiveText(text) {
 async function renderInvestigation() {
   const mentor = state.mentor;
   const request = ++investigationRequest;
-  const pane = $('pane-investigation');
+  const pane = $('investigationTools');
+  if (!pane || !mentor) return;
   investigationData = null;
   pane.innerHTML = '<p class="quiet" role="status">正在加载…</p>';
   try {
@@ -75,7 +76,9 @@ function renderReviewGuide(guide) {
   if (!container) return;
   const pending = guide.items.filter(item=>['待核查','需补证据'].includes(item.status));
   const completed = guide.items.filter(item=>!['待核查','需补证据'].includes(item.status));
-  const row = item => `<div class="review-task"><div><strong>${esc(item.section)}</strong><span class="review-task-status">${esc(item.status)}</span><p>${esc(item.instruction)}</p><small>${esc(item.available)}。</small></div><div class="review-task-actions"><button class="button ghost slim" type="button" data-review-pane="${esc(item.pane)}">${esc(item.action)}</button><button class="button light slim" type="button" data-review-category="${esc(item.category)}">保存网页</button></div></div>`;
+  const paneFor = item => item.pane === 'overview'
+    ? ({'身份与任职':'identity','研究方向':'identity','招生与培养':'admission'}[item.section] || 'investigation') : item.pane;
+  const row = item => `<div class="review-task"><div><strong>${esc(item.section)}</strong><span class="review-task-status">${esc(item.status)}</span><p>${esc(item.instruction)}</p><small>${esc(item.available)}。</small></div><div class="review-task-actions"><button class="button ghost slim" type="button" data-review-pane="${esc(paneFor(item))}">${esc(item.action)}</button><button class="button light slim" type="button" data-review-category="${esc(item.category)}">保存网页</button></div></div>`;
   container.innerHTML = `<h3>还要确认的事</h3><p class="pane-intro">已核对 ${guide.reviewed} 项，还有 ${guide.pending} 项待确认。</p>${pending.length ? pending.slice(0,3).map(row).join('') : '<p class="quiet">已完成当前核对。资料有更新时可以再查。</p>'}${pending.length>3 ? `<details class="remaining-review"><summary>还有 ${pending.length-3} 项</summary>${pending.slice(3).map(row).join('')}</details>` : ''}${completed.length ? `<details class="remaining-review"><summary>已处理 ${completed.length} 项</summary>${completed.map(row).join('')}</details>` : ''}<button class="button ghost slim" type="button" data-review-pane="check">修改进度</button>`;
   container.querySelectorAll('[data-review-pane]').forEach(button=>button.onclick=()=>setPane(button.dataset.reviewPane));
   container.querySelectorAll('[data-review-category]').forEach(button=>button.onclick=()=>{

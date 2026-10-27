@@ -225,6 +225,48 @@ def subject_names(profile: dict) -> set[str]:
         row['first_level_discipline'] for row in profile.get('discipline_assignments', [])}
 
 
+RESEARCH_ALIASES = {
+    "人工智能": ("artificial intelligence",),
+    "计算机视觉": ("computer vision",),
+    "机器学习": ("machine learning",),
+    "自然语言处理": ("natural language processing",),
+    "数据挖掘": ("data mining",),
+    "数字电路": ("digital circuit", "数字集成电路"),
+}
+
+
+def search_research(query: str = "", discipline: str = "", institution: str = "",
+                    direction: str = "", project_id: str = "",
+                    include_non_engineering: bool = False,
+                    admission_signal: bool = False) -> list[dict]:
+    """Conservative phrase retrieval over recorded research and discipline fields.
+
+    Names, institutions and inferred AI hints are never research evidence. Each
+    query must match a recorded phrase (or its explicit bilingual equivalent);
+    no semantic nearest-neighbour fallback can force unrelated results.
+    """
+    query = core.clean_text(query, 80).casefold()
+    terms = (query, *RESEARCH_ALIASES.get(query, ())) if query else ()
+    found = []
+    for profile in all_entries(project_id, include_non_engineering):
+        subjects = subject_names(profile)
+        if discipline and discipline not in subjects:
+            continue
+        if institution and institution != "__all__" and profile["institution"] != institution:
+            continue
+        if direction and direction != "__all__" and direction not in subject_directions(profile, discipline):
+            continue
+        if admission_signal and not profile.get("admission_catalog"):
+            continue
+        fields = [profile.get("interests", ""), profile.get("direction_group", ""),
+                  *subjects, *(row.get("direction", "") for row in profile.get("discipline_assignments", []))]
+        evidence = "；".join(str(field or "") for field in fields).casefold()
+        if terms and not any(term in evidence for term in terms):
+            continue
+        found.append(profile)
+    return [card(p) for p in sorted(found, key=lambda p: (p["name"], p["institution"], p["department"]))]
+
+
 def visible_subject_names(profile: dict, include_non_engineering: bool = False) -> set[str]:
     """Discipline labels to count for this entry under the current scope.
 

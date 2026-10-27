@@ -2941,6 +2941,123 @@ body{overflow-wrap:anywhere}
   margin-bottom: 22px;
 }
 
+/* Workspace: quiet two-column reading surface; other views keep their styles. */
+#workspaceView { gap: 16px; }
+#workspaceView .search-filter-card { padding: 18px 22px 12px; gap: 12px; box-shadow: none; border-color: #e2e8f0; border-radius: 14px; }
+#workspaceView .card-search-input-row { gap: 12px; }
+#workspaceView .search-box-inner { min-height: 50px; border-color: #d4deec; background: #fff; }
+#workspaceView #nameInput { font-size: 16px; color: #1e293b; caret-color: #1e60d5; }
+#workspaceView input::placeholder { color: #596b83; opacity: 1; }
+#workspaceView .quiet, #workspaceView .micro { color: #596b83; }
+#workspaceView .results-status-msg:not(.error), #workspaceView #candidateCount, #workspaceView .card-title { color: #596b83; }
+#workspaceView .card-search-btn:hover { color: #fff; }
+#workspaceView .card-search-btn { min-height: 50px; min-width: 104px; border-radius: 8px; box-shadow: none; }
+#workspaceView .filter-selects-row { gap: 10px; }
+#workspaceView .filter-selects-row .field { min-height: 38px; height: 38px; font-size: 13px; color: #475569; }
+#workspaceView .filter-tags-row { min-height: 26px; gap: 16px; align-items: flex-start; flex-wrap: wrap; border: 0; padding-top: 0; margin-top: 0; }
+#workspaceView .popular-directions { flex: 1; min-width: 140px; }
+#workspaceView .popular-directions summary, #workspaceView .workspace-help summary { cursor: pointer; font-size: 12px; color: #52627a; width: fit-content; padding: 4px 0; }
+#workspaceView .popular-direction-options { display: flex; gap: 8px; flex-wrap: wrap; padding: 10px 0 2px; }
+#workspaceView .quick-tag-chip { background: #eef4fd; border: 1px solid transparent; color: #1c57b8; box-shadow: none; font-size: 12px; padding: 5px 12px; }
+#workspaceView .quick-tag-chip:hover { background: #e1ecfc; border-color: #b7cff3; transform: none; }
+#workspaceView .scope-toggle-label { margin: 2px 0 0; font-size: 12px; color: #52627a; }
+#workspaceView .workspace-help { position: relative; }
+#workspaceView .workspace-help p { position: absolute; right: 0; top: 24px; width: min(330px, 76vw); z-index: 5; margin: 0; padding: 16px; border: 1px solid #d8e2ef; border-radius: 10px; background: #fff; box-shadow: 0 8px 24px -8px #314c7033; color: #475569; font-size: 13px; line-height: 1.8; }
+#workspaceView .workspace-split { display: grid; grid-template-columns: minmax(280px, 1fr) minmax(0, 2fr); gap: 18px; align-items: start; }
+#workspaceView .workspace-split > * { min-width: 0; }
+#workspaceView .results-header-bar { padding: 2px 2px 0; }
+#workspaceView .results-header-bar strong { font-size: 18px; }
+#workspaceView .results-status-msg { line-height: 1.6; min-height: 20px; padding: 0 2px; }
+#workspaceView .mentor-cards-scroll { max-height: calc(100vh - 370px); min-height: 160px; gap: 8px; padding: 2px 4px 3px 1px; overscroll-behavior: contain; }
+#workspaceView .mentor-card-item { padding: 16px 14px; gap: 12px; box-shadow: none; border-radius: 12px; transition: border-color 160ms ease, background-color 160ms ease; }
+#workspaceView .mentor-card-item:hover { transform: none; border-color: #abc4e9; background: #f8fbff; box-shadow: none; }
+#workspaceView .mentor-card-item.selected { background: #f0f6ff; border-color: #2869df; box-shadow: inset 0 0 0 1px #2869df; }
+#workspaceView .mentor-card-item::before { display: none; }
+#workspaceView .initial-avatar { width: 42px; height: 46px; flex: 0 0 42px; font-size: 23px; background: #edf4ff; color: #1e60d5; border: 0; box-shadow: none; }
+#workspaceView .card-name-title strong { font-size: 16px; }
+#workspaceView .card-school-dept { font-size: 12px; line-height: 1.6; color: #52627a; }
+#workspaceView .card-tags-list { gap: 5px; margin-top: 7px; }
+#workspaceView .card-tag.tag-direction { background: transparent; color: #345f98; padding: 0; font-size: 12px; }
+#workspaceView .card-tags-list .card-tag + .card-tag::before { content: '·'; padding-right: 5px; color: #9aaac0; }
+#workspaceView .card-foot-meta { margin-top: 9px; font-size: 11px; color: #687991; gap: 8px; }
+#workspaceView .card-foot-meta > span:last-child { margin-left: auto; }
+#workspaceView .tag-admission-year, #workspaceView .tag-admission-history { background: transparent; color: #52627a; padding: 0; font-size: 11px; }
+#workspaceView .sourcebox { box-shadow: none; background: transparent; padding: 10px 12px; border-color: #e0e7f0; }
+#workspaceView #dossier { background: #fff; border: 1px solid #e1e8f2; border-radius: 14px; padding: 20px; min-width: 0; }
+#workspaceView .breadcrumb { margin: 0 0 16px; color: #67768e; font-size: 11px; }
+#workspaceView .breadcrumb, #workspaceView #mentorBackgroundRow { display: none; }
+#workspaceView .dossier-header-card { padding: 0 0 22px; background: transparent; border: 0; border-radius: 0; box-shadow: none; display: flex; flex-direction: column; align-items: stretch; gap: 16px; }
+#workspaceView .dossier-header-main { flex: auto; gap: 16px; }
+#workspaceView .dossier-large-avatar { width: 56px; height: 60px; flex: 0 0 56px; border: 0; border-radius: 10px; box-shadow: none; font-size: 28px; }
+#workspaceView .dossier-name-row { gap: 8px; flex-wrap: wrap; }
+#workspaceView #mentorTitle { font-size: 25px; line-height: 1.3; letter-spacing: -.02em; }
+#workspaceView .pill-title { background: #f2f5f9; color: #596b83; border: 0; font-size: 11px; }
+#workspaceView .pill-status { color: #167350; background: #eef9f3; border: 0; font-size: 11px; }
+#workspaceView .dossier-meta-line { font-size: 13px; color: #52627a; line-height: 1.7; }
+#workspaceView .dossier-top-right-stats { width: auto; flex: auto; border: 0; padding: 0; display: flex; flex-direction: row; flex-wrap: wrap; gap: 6px 14px; align-items: center; justify-content: flex-start; }
+#workspaceView .stat-source-count, #workspaceView .stat-update-date { font-size: 11px; color: #67768e; }
+#workspaceView .dossier-action-btns { margin-left: auto; margin-top: 0; display: flex; gap: 8px; flex-wrap: wrap; }
+#workspaceView .dossier-action-btns .button { font-size: 12px; min-height: 36px; padding: 8px 12px; border-radius: 7px; box-shadow: none; }
+#workspaceView .dossier-sections { display: flex; flex-direction: column; gap: 8px; }
+#workspaceView .dossier-section { min-width: 0; border: 1px solid #e1e8f2; border-radius: 10px; overflow: clip; }
+#workspaceView .section-heading { margin: 0; font-size: 15px; }
+#workspaceView .section-toggle { width: 100%; display: flex; align-items: center; gap: 12px; text-align: left; min-height: 44px; padding: 10px 16px; background: #fff; color: #30425e; font: inherit; font-weight: 600; border: 0; border-radius: 0; cursor: pointer; transition: background-color 180ms ease, color 180ms ease; }
+#workspaceView .section-toggle:hover { background: #f5f8fd; }
+#workspaceView .section-toggle > svg { width: 20px; height: 20px; flex: 0 0 20px; }
+#workspaceView .section-toggle .section-chevron { width: 14px; height: 14px; flex-basis: 14px; margin-left: auto; transition: transform 240ms cubic-bezier(.16,1,.3,1); }
+#workspaceView .is-open > .section-heading .section-toggle { background: #f2f7ff; color: #1959c1; }
+#workspaceView .is-open .section-chevron { transform: rotate(90deg); }
+#workspaceView .section-region { overflow: hidden; }
+#workspaceView .section-region[hidden] { display: none; }
+#workspaceView .pane-card { padding: 18px; background: transparent; border: 0; border-radius: 0; box-shadow: none; font-size: 14px; line-height: 1.75; }
+#workspaceView .pane-section-title { font-size: 13px; color: #30425e; margin-bottom: 6px; }
+#workspaceView .pane-section-title > span { display: none; }
+#workspaceView .bio-paragraph { font-size: 14px; line-height: 1.85; color: #52627a; max-width: 72ch; }
+#workspaceView .interest-chip { font-size: 12px; color: #345f98; background: #eef4fd; border: 0; padding: 4px 10px; }
+#workspaceView #pane-identity { display: grid; gap: 0; padding: 4px 18px; }
+#workspaceView #pane-identity .pane-section { display: grid; grid-template-columns: 125px minmax(0, 1fr); align-items: start; gap: 12px; padding: 10px 0; margin: 0 !important; border-bottom: 1px solid #edf1f7; }
+#workspaceView #pane-identity .pane-section:last-child { border-bottom: 0; }
+#workspaceView #pane-identity .pane-section-title { margin: 0; padding: 0; border: 0; line-height: 1.85; }
+#workspaceView #pane-identity p, #workspaceView #pane-identity ul, #workspaceView #pane-identity .interests-chips-wrap { margin: 0; }
+#workspaceView .pane a { overflow-wrap: anywhere; text-underline-offset: 3px; }
+#workspaceView .review-status-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; padding-top: 12px; }
+#workspaceView .review-status-grid label, #workspaceView .evidence-status-label { display: grid; gap: 4px; font-size: 12px; color: #52627a; }
+#workspaceView .evidence-status-label .field { min-height: 32px; padding: 4px 8px; }
+#workspaceView :focus-visible { outline: 2px solid #1e60d5; outline-offset: 3px; }
+#workspaceView ::selection { background: #d7e7ff; color: #123e80; }
+#workspaceView .workspace-help:focus-within, #workspaceView .popular-directions:focus-within { border-radius: 4px; }
+@media (max-width: 1240px) {
+  #workspaceView .workspace-split { grid-template-columns: minmax(250px, 1fr) minmax(0, 2fr); gap: 14px; }
+  #workspaceView .dossier-action-btns { margin-left: 0; width: 100%; }
+}
+@media (max-width: 960px) {
+  #workspaceView .workspace-split { grid-template-columns: 1fr; }
+  #workspaceView .mentor-cards-scroll { max-height: 340px; }
+  #workspaceView .dossier-header-main { flex: auto; }
+  #workspaceView .dossier-top-right-stats { width: auto; padding: 0; border: 0; }
+  #workspaceView .mobile-back-row { margin-bottom: 16px; }
+}
+@media (max-width: 480px) {
+  #workspaceView .search-filter-card { padding: 14px 12px 10px; }
+  #workspaceView .tab-pill-btn { font-size: 12px; padding: 8px 12px; }
+  #workspaceView .card-search-input-row { gap: 8px; }
+  #workspaceView .card-search-btn { min-width: 62px; padding: 10px 12px; }
+  #workspaceView #nameInput { font-size: 14px; }
+  #workspaceView .search-box-inner { padding-left: 10px; }
+  #workspaceView .filter-selects-row { grid-template-columns: 1fr 1fr; }
+  #workspaceView .filter-tags-row { gap: 10px; }
+  #workspaceView #dossier { padding: 14px 12px; }
+  #workspaceView .dossier-header-main { gap: 12px; }
+  #workspaceView .dossier-large-avatar { flex-basis: 42px; width: 42px; height: 48px; font-size: 23px; }
+  #workspaceView #mentorTitle { font-size: 22px; }
+  #workspaceView .pane-card { padding: 14px; }
+  #workspaceView .section-toggle { padding: 12px; }
+  #workspaceView #pane-identity .pane-section { grid-template-columns: 1fr; gap: 6px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #workspaceView *, #workspaceView *::before, #workspaceView *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+}
+
 .records-visual-box {
   display: flex;
   align-items: center;
